@@ -48,11 +48,5 @@
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DTO_QuanLy\DTO_QuanLy.csproj">
-      <Project>{080ce435-21c4-4cde-bed0-bbbbdc11f68b}</Project>
-      <Name>DTO_QuanLy</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
