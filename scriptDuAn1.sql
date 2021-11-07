@@ -621,3 +621,9 @@ AS
         END
 	END
 -- exec sp_SupplierSearch 'Dong A'
+
+
+-- update voucher
+-- add quantity
+alter table vouchers
+Add Quantity int not null
