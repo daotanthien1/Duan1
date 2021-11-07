@@ -102,3 +102,17 @@ C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.Co
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlIngredient.UC_Supplier.resources
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlIngredient.UC_typeOfIngredient.resources
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlIngredient.UC_Unit.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlEmployees.UC_employee.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlEmployees.UC_TypeOfEmployee.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmCustomer.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmEmployees.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlCustomers.UC_Customer.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlCustomers.UC_Table.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmVoucher.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlVouchers.UC_sale.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlVouchers.UC_TypeOfVoucher.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlVouchers.UC_Voucher.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmStatistic.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.Statistic_bill_ingredient.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.UC_Statistic_bill_beverage.resources
+C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.UC_Statistic_revenue.resources
