@@ -37,8 +37,8 @@ namespace RJCodeAdvance
             this.bt1 = new Guna.UI2.WinForms.Guna2Button();
             this.imageSlide = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_Shift1 = new RJCodeAdvance.ControlScheme.UC_Shift();
             this.uC_Schedule1 = new RJCodeAdvance.ControlScheme.UC_Schedule();
+            this.uC_Shift1 = new RJCodeAdvance.ControlScheme.UC_Shift();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlide)).BeginInit();
@@ -163,15 +163,6 @@ namespace RJCodeAdvance
             this.panel2.Size = new System.Drawing.Size(1000, 569);
             this.panel2.TabIndex = 1;
             // 
-            // uC_Shift1
-            // 
-            this.uC_Shift1.BackColor = System.Drawing.Color.White;
-            this.uC_Shift1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Shift1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Shift1.Name = "uC_Shift1";
-            this.uC_Shift1.Size = new System.Drawing.Size(1000, 569);
-            this.uC_Shift1.TabIndex = 1;
-            // 
             // uC_Schedule1
             // 
             this.uC_Schedule1.BackColor = System.Drawing.Color.White;
@@ -180,6 +171,15 @@ namespace RJCodeAdvance
             this.uC_Schedule1.Name = "uC_Schedule1";
             this.uC_Schedule1.Size = new System.Drawing.Size(1000, 569);
             this.uC_Schedule1.TabIndex = 0;
+            // 
+            // uC_Shift1
+            // 
+            this.uC_Shift1.BackColor = System.Drawing.Color.White;
+            this.uC_Shift1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Shift1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Shift1.Name = "uC_Shift1";
+            this.uC_Shift1.Size = new System.Drawing.Size(1000, 569);
+            this.uC_Shift1.TabIndex = 1;
             // 
             // FrmScheme
             // 
@@ -207,9 +207,9 @@ namespace RJCodeAdvance
         private System.Windows.Forms.PictureBox imageSlide;
         private Guna.UI2.WinForms.Guna2Button bt2;
         private System.Windows.Forms.Panel panel2;
-        private ControlScheme.UC_Shift uC_Shift1;
-        private ControlScheme.UC_Schedule uC_Schedule1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private ControlScheme.UC_Schedule uC_Schedule1;
+        private ControlScheme.UC_Shift uC_Shift1;
     }
 }

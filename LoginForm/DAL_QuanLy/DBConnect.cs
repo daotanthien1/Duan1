@@ -12,6 +12,6 @@ namespace DAL_QuanLy
     {
         //static string constr = ConfigurationManager.ConnectionStrings["QLBH"].ToString();
         //protected SqlConnection _conn = new SqlConnection(constr);
-        protected SqlConnection _conn = new SqlConnection(@"Data Source=DESKTOP-KDN9D6V\SQLEXPRESS01;Initial Catalog=DuAn1;Integrated Security=True");
+        protected SqlConnection _conn = new SqlConnection(@"Data Source=DESKTOP-KDN9D6V\SQLEXPRESS01;Initial Catalog=DuAnMot;Integrated Security=True");
     }
 }
