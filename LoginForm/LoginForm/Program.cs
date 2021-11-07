@@ -1,8 +1,8 @@
-﻿using RJCodeAdvance;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using RJCodeAdvance;
 using System.Windows.Forms;
 
 namespace LoginForm
@@ -17,7 +17,7 @@ namespace LoginForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmStatistic());
+            Application.Run(new FrmLogin());
         }
     }
 }

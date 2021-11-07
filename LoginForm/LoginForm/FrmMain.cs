@@ -15,6 +15,12 @@ namespace RJCodeAdvance
         public FrmMain()
         {
             InitializeComponent();
+            
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
