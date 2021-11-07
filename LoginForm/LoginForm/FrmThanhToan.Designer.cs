@@ -34,6 +34,7 @@ namespace RJCodeAdvance
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btBan1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btBan12 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btBan11 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btBan10 = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -50,20 +51,19 @@ namespace RJCodeAdvance
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.gunaGradient2Panel1 = new Guna.UI.WinForms.GunaGradient2Panel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.cbDoUong = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.btThem = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btBan1 = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.btVoucher = new Guna.UI2.WinForms.Guna2Button();
-            this.btChuyenBan = new Guna.UI2.WinForms.Guna2Button();
-            this.cbChuyenBan = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btGopBan = new Guna.UI2.WinForms.Guna2Button();
-            this.txtGopBan = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btThanhToan = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSoLuong = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtVoucher = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtThanhToan = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtVoucher = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSoLuong = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btThanhToan = new Guna.UI2.WinForms.Guna2Button();
+            this.txtGopBan = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btGopBan = new Guna.UI2.WinForms.Guna2Button();
+            this.cbChuyenBan = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btChuyenBan = new Guna.UI2.WinForms.Guna2Button();
+            this.btVoucher = new Guna.UI2.WinForms.Guna2Button();
+            this.btThem = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.cbDoUong = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.gunaGradient2Panel1.SuspendLayout();
@@ -95,6 +95,30 @@ namespace RJCodeAdvance
             this.guna2CustomGradientPanel1.ShadowDecoration.Parent = this.guna2CustomGradientPanel1;
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(485, 619);
             this.guna2CustomGradientPanel1.TabIndex = 0;
+            // 
+            // btBan1
+            // 
+            this.btBan1.Animated = true;
+            this.btBan1.AnimatedGIF = true;
+            this.btBan1.BorderRadius = 5;
+            this.btBan1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
+            this.btBan1.CheckedState.Parent = this.btBan1;
+            this.btBan1.CustomImages.Parent = this.btBan1;
+            this.btBan1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btBan1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btBan1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btBan1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btBan1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btBan1.DisabledState.Parent = this.btBan1;
+            this.btBan1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btBan1.ForeColor = System.Drawing.Color.White;
+            this.btBan1.HoverState.Parent = this.btBan1;
+            this.btBan1.Location = new System.Drawing.Point(21, 37);
+            this.btBan1.Name = "btBan1";
+            this.btBan1.ShadowDecoration.Parent = this.btBan1;
+            this.btBan1.Size = new System.Drawing.Size(105, 100);
+            this.btBan1.TabIndex = 12;
+            this.btBan1.Text = "Bàn 1";
             // 
             // btBan12
             // 
@@ -459,214 +483,115 @@ namespace RJCodeAdvance
             this.gunaGradient2Panel1.Size = new System.Drawing.Size(666, 288);
             this.gunaGradient2Panel1.TabIndex = 5;
             // 
-            // gunaLabel3
+            // txtThanhToan
             // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(13, 79);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(65, 19);
-            this.gunaLabel3.TabIndex = 5;
-            this.gunaLabel3.Text = "Đồ uống";
+            this.txtThanhToan.Animated = true;
+            this.txtThanhToan.BorderColor = System.Drawing.Color.Red;
+            this.txtThanhToan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtThanhToan.DefaultText = "";
+            this.txtThanhToan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThanhToan.DisabledState.Parent = this.txtThanhToan;
+            this.txtThanhToan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThanhToan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThanhToan.FocusedState.Parent = this.txtThanhToan;
+            this.txtThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.txtThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtThanhToan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThanhToan.HoverState.Parent = this.txtThanhToan;
+            this.txtThanhToan.Location = new System.Drawing.Point(465, 152);
+            this.txtThanhToan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtThanhToan.Name = "txtThanhToan";
+            this.txtThanhToan.PasswordChar = '\0';
+            this.txtThanhToan.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtThanhToan.PlaceholderText = "";
+            this.txtThanhToan.SelectedText = "";
+            this.txtThanhToan.ShadowDecoration.Parent = this.txtThanhToan;
+            this.txtThanhToan.Size = new System.Drawing.Size(182, 45);
+            this.txtThanhToan.TabIndex = 20;
             // 
-            // cbDoUong
+            // txtVoucher
             // 
-            this.cbDoUong.BackColor = System.Drawing.Color.Transparent;
-            this.cbDoUong.BorderColor = System.Drawing.Color.Red;
-            this.cbDoUong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbDoUong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDoUong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbDoUong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbDoUong.FocusedState.Parent = this.cbDoUong;
-            this.cbDoUong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.cbDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.cbDoUong.HoverState.Parent = this.cbDoUong;
-            this.cbDoUong.ItemHeight = 30;
-            this.cbDoUong.Items.AddRange(new object[] {
-            "Trà sữa trân châu",
-            "Trà sữa truyền thống",
-            "Trà tắc",
-            "Trà đào"});
-            this.cbDoUong.ItemsAppearance.Parent = this.cbDoUong;
-            this.cbDoUong.Location = new System.Drawing.Point(17, 101);
-            this.cbDoUong.Name = "cbDoUong";
-            this.cbDoUong.ShadowDecoration.Parent = this.cbDoUong;
-            this.cbDoUong.Size = new System.Drawing.Size(288, 36);
-            this.cbDoUong.TabIndex = 6;
+            this.txtVoucher.Animated = true;
+            this.txtVoucher.BorderColor = System.Drawing.Color.Red;
+            this.txtVoucher.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtVoucher.DefaultText = "";
+            this.txtVoucher.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtVoucher.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtVoucher.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtVoucher.DisabledState.Parent = this.txtVoucher;
+            this.txtVoucher.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtVoucher.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtVoucher.FocusedState.Parent = this.txtVoucher;
+            this.txtVoucher.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.txtVoucher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtVoucher.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtVoucher.HoverState.Parent = this.txtVoucher;
+            this.txtVoucher.Location = new System.Drawing.Point(123, 152);
+            this.txtVoucher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtVoucher.Name = "txtVoucher";
+            this.txtVoucher.PasswordChar = '\0';
+            this.txtVoucher.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtVoucher.PlaceholderText = "";
+            this.txtVoucher.SelectedText = "";
+            this.txtVoucher.ShadowDecoration.Parent = this.txtVoucher;
+            this.txtVoucher.Size = new System.Drawing.Size(182, 45);
+            this.txtVoucher.TabIndex = 19;
             // 
-            // gunaLabel4
+            // txtSoLuong
             // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(356, 79);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(69, 19);
-            this.gunaLabel4.TabIndex = 7;
-            this.gunaLabel4.Text = "Số lượng";
+            this.txtSoLuong.Animated = true;
+            this.txtSoLuong.BorderColor = System.Drawing.Color.Red;
+            this.txtSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSoLuong.DefaultText = "";
+            this.txtSoLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSoLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSoLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoLuong.DisabledState.Parent = this.txtSoLuong;
+            this.txtSoLuong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSoLuong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoLuong.FocusedState.Parent = this.txtSoLuong;
+            this.txtSoLuong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.txtSoLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.txtSoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSoLuong.HoverState.Parent = this.txtSoLuong;
+            this.txtSoLuong.Location = new System.Drawing.Point(360, 100);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.PasswordChar = '\0';
+            this.txtSoLuong.PlaceholderForeColor = System.Drawing.Color.Red;
+            this.txtSoLuong.PlaceholderText = "";
+            this.txtSoLuong.SelectedText = "";
+            this.txtSoLuong.ShadowDecoration.Parent = this.txtSoLuong;
+            this.txtSoLuong.Size = new System.Drawing.Size(175, 37);
+            this.txtSoLuong.TabIndex = 18;
             // 
-            // btThem
+            // btThanhToan
             // 
-            this.btThem.Animated = true;
-            this.btThem.BorderColor = System.Drawing.Color.DarkSlateGray;
-            this.btThem.BorderRadius = 3;
-            this.btThem.BorderThickness = 1;
-            this.btThem.CheckedState.Parent = this.btThem;
-            this.btThem.CustomImages.Parent = this.btThem;
-            this.btThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btThem.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btThem.DisabledState.Parent = this.btThem;
-            this.btThem.FillColor = System.Drawing.Color.Red;
-            this.btThem.FillColor2 = System.Drawing.Color.White;
-            this.btThem.FocusedColor = System.Drawing.Color.Silver;
-            this.btThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThem.ForeColor = System.Drawing.Color.Black;
-            this.btThem.HoverState.Parent = this.btThem;
-            this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
-            this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btThem.Location = new System.Drawing.Point(542, 100);
-            this.btThem.Name = "btThem";
-            this.btThem.ShadowDecoration.Parent = this.btThem;
-            this.btThem.Size = new System.Drawing.Size(112, 36);
-            this.btThem.TabIndex = 9;
-            this.btThem.Text = "      Thêm món";
-            // 
-            // btBan1
-            // 
-            this.btBan1.Animated = true;
-            this.btBan1.AnimatedGIF = true;
-            this.btBan1.BorderRadius = 5;
-            this.btBan1.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDotDot;
-            this.btBan1.CheckedState.Parent = this.btBan1;
-            this.btBan1.CustomImages.Parent = this.btBan1;
-            this.btBan1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btBan1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btBan1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btBan1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btBan1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btBan1.DisabledState.Parent = this.btBan1;
-            this.btBan1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btBan1.ForeColor = System.Drawing.Color.White;
-            this.btBan1.HoverState.Parent = this.btBan1;
-            this.btBan1.Location = new System.Drawing.Point(21, 37);
-            this.btBan1.Name = "btBan1";
-            this.btBan1.ShadowDecoration.Parent = this.btBan1;
-            this.btBan1.Size = new System.Drawing.Size(105, 100);
-            this.btBan1.TabIndex = 12;
-            this.btBan1.Text = "Bàn 1";
-            // 
-            // btVoucher
-            // 
-            this.btVoucher.Animated = true;
-            this.btVoucher.AnimatedGIF = true;
-            this.btVoucher.BorderColor = System.Drawing.Color.Red;
-            this.btVoucher.BorderRadius = 6;
-            this.btVoucher.BorderThickness = 1;
-            this.btVoucher.CheckedState.Parent = this.btVoucher;
-            this.btVoucher.CustomImages.Parent = this.btVoucher;
-            this.btVoucher.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btVoucher.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btVoucher.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btVoucher.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btVoucher.DisabledState.Parent = this.btVoucher;
-            this.btVoucher.FillColor = System.Drawing.Color.Purple;
-            this.btVoucher.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btVoucher.ForeColor = System.Drawing.Color.White;
-            this.btVoucher.HoverState.Parent = this.btVoucher;
-            this.btVoucher.Location = new System.Drawing.Point(17, 152);
-            this.btVoucher.Name = "btVoucher";
-            this.btVoucher.ShadowDecoration.BorderRadius = 10;
-            this.btVoucher.ShadowDecoration.Parent = this.btVoucher;
-            this.btVoucher.Size = new System.Drawing.Size(91, 45);
-            this.btVoucher.TabIndex = 10;
-            this.btVoucher.Text = "Voucher";
-            // 
-            // btChuyenBan
-            // 
-            this.btChuyenBan.Animated = true;
-            this.btChuyenBan.AnimatedGIF = true;
-            this.btChuyenBan.BorderColor = System.Drawing.Color.Red;
-            this.btChuyenBan.BorderRadius = 6;
-            this.btChuyenBan.BorderThickness = 1;
-            this.btChuyenBan.CheckedState.Parent = this.btChuyenBan;
-            this.btChuyenBan.CustomImages.Parent = this.btChuyenBan;
-            this.btChuyenBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btChuyenBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btChuyenBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btChuyenBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btChuyenBan.DisabledState.Parent = this.btChuyenBan;
-            this.btChuyenBan.FillColor = System.Drawing.Color.Purple;
-            this.btChuyenBan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btChuyenBan.ForeColor = System.Drawing.Color.White;
-            this.btChuyenBan.HoverState.Parent = this.btChuyenBan;
-            this.btChuyenBan.Location = new System.Drawing.Point(17, 214);
-            this.btChuyenBan.Name = "btChuyenBan";
-            this.btChuyenBan.ShadowDecoration.BorderRadius = 10;
-            this.btChuyenBan.ShadowDecoration.Parent = this.btChuyenBan;
-            this.btChuyenBan.Size = new System.Drawing.Size(91, 36);
-            this.btChuyenBan.TabIndex = 12;
-            this.btChuyenBan.Text = "Chuyển bàn";
-            // 
-            // cbChuyenBan
-            // 
-            this.cbChuyenBan.BackColor = System.Drawing.Color.Transparent;
-            this.cbChuyenBan.BorderColor = System.Drawing.Color.Red;
-            this.cbChuyenBan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbChuyenBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbChuyenBan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbChuyenBan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbChuyenBan.FocusedState.Parent = this.cbChuyenBan;
-            this.cbChuyenBan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.cbChuyenBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.cbChuyenBan.HoverState.Parent = this.cbChuyenBan;
-            this.cbChuyenBan.ItemHeight = 30;
-            this.cbChuyenBan.Items.AddRange(new object[] {
-            "Bàn 1",
-            "Bàn 2",
-            "Bàn 3",
-            "Bàn 4",
-            "Bàn 5",
-            "Bàn 6",
-            "Bàn 7",
-            "Bàn 8",
-            "Bàn 9",
-            "Bàn 10",
-            "Bàn 11",
-            "Bàn 12"});
-            this.cbChuyenBan.ItemsAppearance.Parent = this.cbChuyenBan;
-            this.cbChuyenBan.Location = new System.Drawing.Point(123, 214);
-            this.cbChuyenBan.Name = "cbChuyenBan";
-            this.cbChuyenBan.ShadowDecoration.Parent = this.cbChuyenBan;
-            this.cbChuyenBan.Size = new System.Drawing.Size(182, 36);
-            this.cbChuyenBan.TabIndex = 13;
-            // 
-            // btGopBan
-            // 
-            this.btGopBan.Animated = true;
-            this.btGopBan.AnimatedGIF = true;
-            this.btGopBan.BorderColor = System.Drawing.Color.Red;
-            this.btGopBan.BorderRadius = 6;
-            this.btGopBan.BorderThickness = 1;
-            this.btGopBan.CheckedState.Parent = this.btGopBan;
-            this.btGopBan.CustomImages.Parent = this.btGopBan;
-            this.btGopBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btGopBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btGopBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btGopBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btGopBan.DisabledState.Parent = this.btGopBan;
-            this.btGopBan.FillColor = System.Drawing.Color.Purple;
-            this.btGopBan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btGopBan.ForeColor = System.Drawing.Color.White;
-            this.btGopBan.HoverState.Parent = this.btGopBan;
-            this.btGopBan.Location = new System.Drawing.Point(360, 214);
-            this.btGopBan.Name = "btGopBan";
-            this.btGopBan.ShadowDecoration.BorderRadius = 10;
-            this.btGopBan.ShadowDecoration.Parent = this.btGopBan;
-            this.btGopBan.Size = new System.Drawing.Size(91, 36);
-            this.btGopBan.TabIndex = 14;
-            this.btGopBan.Text = "Gộp bàn";
+            this.btThanhToan.Animated = true;
+            this.btThanhToan.AnimatedGIF = true;
+            this.btThanhToan.BorderColor = System.Drawing.Color.Red;
+            this.btThanhToan.BorderRadius = 6;
+            this.btThanhToan.BorderThickness = 1;
+            this.btThanhToan.CheckedState.Parent = this.btThanhToan;
+            this.btThanhToan.CustomImages.Parent = this.btThanhToan;
+            this.btThanhToan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btThanhToan.DisabledState.Parent = this.btThanhToan;
+            this.btThanhToan.FillColor = System.Drawing.Color.Purple;
+            this.btThanhToan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btThanhToan.HoverState.Parent = this.btThanhToan;
+            this.btThanhToan.Location = new System.Drawing.Point(360, 152);
+            this.btThanhToan.Name = "btThanhToan";
+            this.btThanhToan.ShadowDecoration.BorderRadius = 10;
+            this.btThanhToan.ShadowDecoration.Parent = this.btThanhToan;
+            this.btThanhToan.Size = new System.Drawing.Size(91, 45);
+            this.btThanhToan.TabIndex = 16;
+            this.btThanhToan.Text = "Thanh toán";
             // 
             // txtGopBan
             // 
@@ -701,115 +626,190 @@ namespace RJCodeAdvance
             this.txtGopBan.Size = new System.Drawing.Size(182, 36);
             this.txtGopBan.TabIndex = 15;
             // 
-            // btThanhToan
+            // btGopBan
             // 
-            this.btThanhToan.Animated = true;
-            this.btThanhToan.AnimatedGIF = true;
-            this.btThanhToan.BorderColor = System.Drawing.Color.Red;
-            this.btThanhToan.BorderRadius = 6;
-            this.btThanhToan.BorderThickness = 1;
-            this.btThanhToan.CheckedState.Parent = this.btThanhToan;
-            this.btThanhToan.CustomImages.Parent = this.btThanhToan;
-            this.btThanhToan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btThanhToan.DisabledState.Parent = this.btThanhToan;
-            this.btThanhToan.FillColor = System.Drawing.Color.Purple;
-            this.btThanhToan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btThanhToan.HoverState.Parent = this.btThanhToan;
-            this.btThanhToan.Location = new System.Drawing.Point(360, 152);
-            this.btThanhToan.Name = "btThanhToan";
-            this.btThanhToan.ShadowDecoration.BorderRadius = 10;
-            this.btThanhToan.ShadowDecoration.Parent = this.btThanhToan;
-            this.btThanhToan.Size = new System.Drawing.Size(91, 45);
-            this.btThanhToan.TabIndex = 16;
-            this.btThanhToan.Text = "Thanh toán";
+            this.btGopBan.Animated = true;
+            this.btGopBan.AnimatedGIF = true;
+            this.btGopBan.BorderColor = System.Drawing.Color.Red;
+            this.btGopBan.BorderRadius = 6;
+            this.btGopBan.BorderThickness = 1;
+            this.btGopBan.CheckedState.Parent = this.btGopBan;
+            this.btGopBan.CustomImages.Parent = this.btGopBan;
+            this.btGopBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btGopBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btGopBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btGopBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btGopBan.DisabledState.Parent = this.btGopBan;
+            this.btGopBan.FillColor = System.Drawing.Color.Purple;
+            this.btGopBan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btGopBan.ForeColor = System.Drawing.Color.White;
+            this.btGopBan.HoverState.Parent = this.btGopBan;
+            this.btGopBan.Location = new System.Drawing.Point(360, 214);
+            this.btGopBan.Name = "btGopBan";
+            this.btGopBan.ShadowDecoration.BorderRadius = 10;
+            this.btGopBan.ShadowDecoration.Parent = this.btGopBan;
+            this.btGopBan.Size = new System.Drawing.Size(91, 36);
+            this.btGopBan.TabIndex = 14;
+            this.btGopBan.Text = "Gộp bàn";
             // 
-            // txtSoLuong
+            // cbChuyenBan
             // 
-            this.txtSoLuong.Animated = true;
-            this.txtSoLuong.BorderColor = System.Drawing.Color.Red;
-            this.txtSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSoLuong.DefaultText = "";
-            this.txtSoLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSoLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSoLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSoLuong.DisabledState.Parent = this.txtSoLuong;
-            this.txtSoLuong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSoLuong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoLuong.FocusedState.Parent = this.txtSoLuong;
-            this.txtSoLuong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.txtSoLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtSoLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoLuong.HoverState.Parent = this.txtSoLuong;
-            this.txtSoLuong.Location = new System.Drawing.Point(360, 100);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.PasswordChar = '\0';
-            this.txtSoLuong.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.txtSoLuong.PlaceholderText = "";
-            this.txtSoLuong.SelectedText = "";
-            this.txtSoLuong.ShadowDecoration.Parent = this.txtSoLuong;
-            this.txtSoLuong.Size = new System.Drawing.Size(175, 37);
-            this.txtSoLuong.TabIndex = 18;
+            this.cbChuyenBan.BackColor = System.Drawing.Color.Transparent;
+            this.cbChuyenBan.BorderColor = System.Drawing.Color.Red;
+            this.cbChuyenBan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbChuyenBan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbChuyenBan.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbChuyenBan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbChuyenBan.FocusedState.Parent = this.cbChuyenBan;
+            this.cbChuyenBan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.cbChuyenBan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.cbChuyenBan.HoverState.Parent = this.cbChuyenBan;
+            this.cbChuyenBan.ItemHeight = 30;
+            this.cbChuyenBan.Items.AddRange(new object[] {
+            "Bàn 1",
+            "Bàn 2",
+            "Bàn 3",
+            "Bàn 4",
+            "Bàn 5",
+            "Bàn 6",
+            "Bàn 7",
+            "Bàn 8",
+            "Bàn 9",
+            "Bàn 10",
+            "Bàn 11",
+            "Bàn 12"});
+            this.cbChuyenBan.ItemsAppearance.Parent = this.cbChuyenBan;
+            this.cbChuyenBan.Location = new System.Drawing.Point(123, 214);
+            this.cbChuyenBan.Name = "cbChuyenBan";
+            this.cbChuyenBan.ShadowDecoration.Parent = this.cbChuyenBan;
+            this.cbChuyenBan.Size = new System.Drawing.Size(182, 36);
+            this.cbChuyenBan.TabIndex = 13;
             // 
-            // txtVoucher
+            // btChuyenBan
             // 
-            this.txtVoucher.Animated = true;
-            this.txtVoucher.BorderColor = System.Drawing.Color.Red;
-            this.txtVoucher.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtVoucher.DefaultText = "";
-            this.txtVoucher.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtVoucher.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtVoucher.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtVoucher.DisabledState.Parent = this.txtVoucher;
-            this.txtVoucher.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtVoucher.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtVoucher.FocusedState.Parent = this.txtVoucher;
-            this.txtVoucher.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.txtVoucher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtVoucher.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtVoucher.HoverState.Parent = this.txtVoucher;
-            this.txtVoucher.Location = new System.Drawing.Point(123, 152);
-            this.txtVoucher.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtVoucher.Name = "txtVoucher";
-            this.txtVoucher.PasswordChar = '\0';
-            this.txtVoucher.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.txtVoucher.PlaceholderText = "";
-            this.txtVoucher.SelectedText = "";
-            this.txtVoucher.ShadowDecoration.Parent = this.txtVoucher;
-            this.txtVoucher.Size = new System.Drawing.Size(182, 45);
-            this.txtVoucher.TabIndex = 19;
+            this.btChuyenBan.Animated = true;
+            this.btChuyenBan.AnimatedGIF = true;
+            this.btChuyenBan.BorderColor = System.Drawing.Color.Red;
+            this.btChuyenBan.BorderRadius = 6;
+            this.btChuyenBan.BorderThickness = 1;
+            this.btChuyenBan.CheckedState.Parent = this.btChuyenBan;
+            this.btChuyenBan.CustomImages.Parent = this.btChuyenBan;
+            this.btChuyenBan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btChuyenBan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btChuyenBan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btChuyenBan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btChuyenBan.DisabledState.Parent = this.btChuyenBan;
+            this.btChuyenBan.FillColor = System.Drawing.Color.Purple;
+            this.btChuyenBan.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btChuyenBan.ForeColor = System.Drawing.Color.White;
+            this.btChuyenBan.HoverState.Parent = this.btChuyenBan;
+            this.btChuyenBan.Location = new System.Drawing.Point(17, 214);
+            this.btChuyenBan.Name = "btChuyenBan";
+            this.btChuyenBan.ShadowDecoration.BorderRadius = 10;
+            this.btChuyenBan.ShadowDecoration.Parent = this.btChuyenBan;
+            this.btChuyenBan.Size = new System.Drawing.Size(91, 36);
+            this.btChuyenBan.TabIndex = 12;
+            this.btChuyenBan.Text = "Chuyển bàn";
             // 
-            // txtThanhToan
+            // btVoucher
             // 
-            this.txtThanhToan.Animated = true;
-            this.txtThanhToan.BorderColor = System.Drawing.Color.Red;
-            this.txtThanhToan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThanhToan.DefaultText = "";
-            this.txtThanhToan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtThanhToan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThanhToan.DisabledState.Parent = this.txtThanhToan;
-            this.txtThanhToan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThanhToan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThanhToan.FocusedState.Parent = this.txtThanhToan;
-            this.txtThanhToan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.txtThanhToan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtThanhToan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThanhToan.HoverState.Parent = this.txtThanhToan;
-            this.txtThanhToan.Location = new System.Drawing.Point(465, 152);
-            this.txtThanhToan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtThanhToan.Name = "txtThanhToan";
-            this.txtThanhToan.PasswordChar = '\0';
-            this.txtThanhToan.PlaceholderForeColor = System.Drawing.Color.Red;
-            this.txtThanhToan.PlaceholderText = "";
-            this.txtThanhToan.SelectedText = "";
-            this.txtThanhToan.ShadowDecoration.Parent = this.txtThanhToan;
-            this.txtThanhToan.Size = new System.Drawing.Size(182, 45);
-            this.txtThanhToan.TabIndex = 20;
+            this.btVoucher.Animated = true;
+            this.btVoucher.AnimatedGIF = true;
+            this.btVoucher.BorderColor = System.Drawing.Color.Red;
+            this.btVoucher.BorderRadius = 6;
+            this.btVoucher.BorderThickness = 1;
+            this.btVoucher.CheckedState.Parent = this.btVoucher;
+            this.btVoucher.CustomImages.Parent = this.btVoucher;
+            this.btVoucher.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btVoucher.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btVoucher.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btVoucher.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btVoucher.DisabledState.Parent = this.btVoucher;
+            this.btVoucher.FillColor = System.Drawing.Color.Purple;
+            this.btVoucher.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btVoucher.ForeColor = System.Drawing.Color.White;
+            this.btVoucher.HoverState.Parent = this.btVoucher;
+            this.btVoucher.Location = new System.Drawing.Point(17, 152);
+            this.btVoucher.Name = "btVoucher";
+            this.btVoucher.ShadowDecoration.BorderRadius = 10;
+            this.btVoucher.ShadowDecoration.Parent = this.btVoucher;
+            this.btVoucher.Size = new System.Drawing.Size(91, 45);
+            this.btVoucher.TabIndex = 10;
+            this.btVoucher.Text = "Voucher";
+            // 
+            // btThem
+            // 
+            this.btThem.Animated = true;
+            this.btThem.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.btThem.BorderRadius = 3;
+            this.btThem.BorderThickness = 1;
+            this.btThem.CheckedState.Parent = this.btThem;
+            this.btThem.CustomImages.Parent = this.btThem;
+            this.btThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btThem.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btThem.DisabledState.Parent = this.btThem;
+            this.btThem.FillColor = System.Drawing.Color.Red;
+            this.btThem.FillColor2 = System.Drawing.Color.White;
+            this.btThem.FocusedColor = System.Drawing.Color.Silver;
+            this.btThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThem.ForeColor = System.Drawing.Color.Black;
+            this.btThem.HoverState.Parent = this.btThem;
+            this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
+            this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btThem.Location = new System.Drawing.Point(542, 100);
+            this.btThem.Name = "btThem";
+            this.btThem.ShadowDecoration.Parent = this.btThem;
+            this.btThem.Size = new System.Drawing.Size(112, 36);
+            this.btThem.TabIndex = 9;
+            this.btThem.Text = "      Thêm món";
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel4.Location = new System.Drawing.Point(356, 79);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(69, 19);
+            this.gunaLabel4.TabIndex = 7;
+            this.gunaLabel4.Text = "Số lượng";
+            // 
+            // cbDoUong
+            // 
+            this.cbDoUong.BackColor = System.Drawing.Color.Transparent;
+            this.cbDoUong.BorderColor = System.Drawing.Color.Red;
+            this.cbDoUong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbDoUong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbDoUong.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDoUong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbDoUong.FocusedState.Parent = this.cbDoUong;
+            this.cbDoUong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.cbDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.cbDoUong.HoverState.Parent = this.cbDoUong;
+            this.cbDoUong.ItemHeight = 30;
+            this.cbDoUong.Items.AddRange(new object[] {
+            "Trà sữa trân châu",
+            "Trà sữa truyền thống",
+            "Trà tắc",
+            "Trà đào"});
+            this.cbDoUong.ItemsAppearance.Parent = this.cbDoUong;
+            this.cbDoUong.Location = new System.Drawing.Point(17, 101);
+            this.cbDoUong.Name = "cbDoUong";
+            this.cbDoUong.ShadowDecoration.Parent = this.cbDoUong;
+            this.cbDoUong.Size = new System.Drawing.Size(288, 36);
+            this.cbDoUong.TabIndex = 6;
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel3.Location = new System.Drawing.Point(13, 79);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(65, 19);
+            this.gunaLabel3.TabIndex = 5;
+            this.gunaLabel3.Text = "Đồ uống";
             // 
             // guna2DataGridView1
             // 
@@ -828,7 +828,7 @@ namespace RJCodeAdvance
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ColumnHeadersHeight = 4;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -856,7 +856,7 @@ namespace RJCodeAdvance
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
             this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -867,7 +867,7 @@ namespace RJCodeAdvance
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // FrmMain
+            // FrmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -876,7 +876,7 @@ namespace RJCodeAdvance
             this.Controls.Add(this.gunaGradient2Panel1);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "FrmMain";
+            this.Name = "FrmThanhToan";
             this.Text = "FrmMain";
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.gunaGradient2Panel1.ResumeLayout(false);
