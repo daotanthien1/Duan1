@@ -157,7 +157,7 @@ namespace DAL_QuanLy
                 _conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "SearchNhanVien";
+                cmd.CommandText = "SEARCH_EMPLOYEE";
                 cmd.Parameters.AddWithValue("Employee_Name", name);
                 cmd.Connection = _conn;
                 DataTable dtEmployee = new DataTable();
@@ -169,5 +169,6 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+        
     }
 }
