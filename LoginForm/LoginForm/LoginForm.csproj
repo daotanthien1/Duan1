@@ -165,6 +165,156 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlBeverages\UC_beverages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlBeverages\UC_beverages.Designer.cs">
+      <DependentUpon>UC_beverages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlBeverages\UC_TypeOfBeverage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlBeverages\UC_TypeOfBeverage.Designer.cs">
+      <DependentUpon>UC_TypeOfBeverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlCustomers\UC_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCustomers\UC_Customer.Designer.cs">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlCustomers\UC_Table.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlCustomers\UC_Table.Designer.cs">
+      <DependentUpon>UC_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlEmployees\UC_employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlEmployees\UC_employee.Designer.cs">
+      <DependentUpon>UC_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlEmployees\UC_TypeOfEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlEmployees\UC_TypeOfEmployee.Designer.cs">
+      <DependentUpon>UC_TypeOfEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_ingredient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_ingredient.Designer.cs">
+      <DependentUpon>UC_ingredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Input_Ingredient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Input_Ingredient.Designer.cs">
+      <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Supplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Supplier.Designer.cs">
+      <DependentUpon>UC_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_typeOfIngredient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_typeOfIngredient.Designer.cs">
+      <DependentUpon>UC_typeOfIngredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Unit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Unit.Designer.cs">
+      <DependentUpon>UC_Unit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlScheme\UC_Schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlScheme\UC_Schedule.Designer.cs">
+      <DependentUpon>UC_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlScheme\UC_Shift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlScheme\UC_Shift.Designer.cs">
+      <DependentUpon>UC_Shift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlStatistic\Statistic_bill_ingredient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlStatistic\Statistic_bill_ingredient.Designer.cs">
+      <DependentUpon>Statistic_bill_ingredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlStatistic\UC_Statistic_bill_beverage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlStatistic\UC_Statistic_bill_beverage.Designer.cs">
+      <DependentUpon>UC_Statistic_bill_beverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlStatistic\UC_Statistic_revenue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlStatistic\UC_Statistic_revenue.Designer.cs">
+      <DependentUpon>UC_Statistic_revenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlVouchers\UC_sale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlVouchers\UC_sale.Designer.cs">
+      <DependentUpon>UC_sale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlVouchers\UC_TypeOfVoucher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlVouchers\UC_TypeOfVoucher.Designer.cs">
+      <DependentUpon>UC_TypeOfVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlVouchers\UC_Voucher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlVouchers\UC_Voucher.Designer.cs">
+      <DependentUpon>UC_Voucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBeverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBeverage.designer.cs">
+      <DependentUpon>FrmBeverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePassword.designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCustomer.designer.cs">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmployees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployees.designer.cs">
+      <DependentUpon>FrmEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForgotPassword.designer.cs">
+      <DependentUpon>FrmForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIngredient.designer.cs">
+      <DependentUpon>FrmIngredient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,16 +324,127 @@
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMain.Designer.cs">
+    <Compile Include="FrmMain.designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScheme.designer.cs">
+      <DependentUpon>FrmScheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStatistic.designer.cs">
+      <DependentUpon>FrmStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThanhToan.designer.cs">
+      <DependentUpon>FrmThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVoucher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVoucher.designer.cs">
+      <DependentUpon>FrmVoucher.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ControlBeverages\UC_beverages.resx">
+      <DependentUpon>UC_beverages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlBeverages\UC_TypeOfBeverage.resx">
+      <DependentUpon>UC_TypeOfBeverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlCustomers\UC_Customer.resx">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlCustomers\UC_Table.resx">
+      <DependentUpon>UC_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlEmployees\UC_employee.resx">
+      <DependentUpon>UC_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlEmployees\UC_TypeOfEmployee.resx">
+      <DependentUpon>UC_TypeOfEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_ingredient.resx">
+      <DependentUpon>UC_ingredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_Input_Ingredient.resx">
+      <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_Supplier.resx">
+      <DependentUpon>UC_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_typeOfIngredient.resx">
+      <DependentUpon>UC_typeOfIngredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_Unit.resx">
+      <DependentUpon>UC_Unit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlScheme\UC_Schedule.resx">
+      <DependentUpon>UC_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlScheme\UC_Shift.resx">
+      <DependentUpon>UC_Shift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlStatistic\Statistic_bill_ingredient.resx">
+      <DependentUpon>Statistic_bill_ingredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlStatistic\UC_Statistic_bill_beverage.resx">
+      <DependentUpon>UC_Statistic_bill_beverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlStatistic\UC_Statistic_revenue.resx">
+      <DependentUpon>UC_Statistic_revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlVouchers\UC_sale.resx">
+      <DependentUpon>UC_sale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlVouchers\UC_TypeOfVoucher.resx">
+      <DependentUpon>UC_TypeOfVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlVouchers\UC_Voucher.resx">
+      <DependentUpon>UC_Voucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBeverage.resx">
+      <DependentUpon>FrmBeverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCustomer.resx">
+      <DependentUpon>FrmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployees.resx">
+      <DependentUpon>FrmEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForgotPassword.resx">
+      <DependentUpon>FrmForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngredient.resx">
+      <DependentUpon>FrmIngredient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScheme.resx">
+      <DependentUpon>FrmScheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStatistic.resx">
+      <DependentUpon>FrmStatistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThanhToan.resx">
+      <DependentUpon>FrmThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVoucher.resx">
+      <DependentUpon>FrmVoucher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

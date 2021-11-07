@@ -17,7 +17,10 @@ namespace LoginForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmScheme());
+            // 2 cột xoay để lát gì vậy
+            //làm màu :)))
+            //
         }
     }
 }

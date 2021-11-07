@@ -86,6 +86,296 @@ C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\bin\Debug\DTO_QuanLy.dll
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\bin\Debug\BUS_QuanLy.pdb
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\bin\Debug\DAL_QuanLy.pdb
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\bin\Debug\DTO_QuanLy.pdb
+<<<<<<< HEAD
+D:\Duan1\LoginForm\LoginForm\bin\Debug\RJCodeAdvance.RJControls.exe.config
+D:\Duan1\LoginForm\LoginForm\bin\Debug\RJCodeAdvance.RJControls.exe
+D:\Duan1\LoginForm\LoginForm\bin\Debug\RJCodeAdvance.RJControls.pdb
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Charts.WinForms.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Dataviz.WinForms.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRating.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShapes.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.Deprecated.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\BUS_QuanLy.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\DAL_QuanLy.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\DTO_QuanLy.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Guna.UI2.dll
+D:\Duan1\LoginForm\LoginForm\bin\Debug\BUS_QuanLy.pdb
+D:\Duan1\LoginForm\LoginForm\bin\Debug\DAL_QuanLy.pdb
+D:\Duan1\LoginForm\LoginForm\bin\Debug\DTO_QuanLy.pdb
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Charts.WinForms.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Dataviz.WinForms.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRating.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShapes.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
+D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
+D:\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csprojAssemblyReference.cache
+D:\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.FrmLogin.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.Properties.Resources.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.GenerateResource.cache
+D:\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.CoreCompileInputs.cache
+D:\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.CopyComplete
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.RJControls.exe
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.RJControls.pdb
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmMain.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmQuenMatKhau.resources
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.AssemblyReference.cache
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.FrmLogin.resources
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmMain.resources
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.Properties.Resources.resources
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.GenerateResource.cache
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.CoreCompileInputs.cache
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.RJControls.exe
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.RJControls.pdb
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\RJCodeAdvance.RJControls.exe.config
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\RJCodeAdvance.RJControls.exe
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\RJCodeAdvance.RJControls.pdb
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Charts.WinForms.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Dataviz.WinForms.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRating.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShapes.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.Deprecated.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\BUS_QuanLy.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\DAL_QuanLy.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\DTO_QuanLy.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Guna.UI2.dll
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\BUS_QuanLy.pdb
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\DAL_QuanLy.pdb
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\DTO_QuanLy.pdb
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Charts.WinForms.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Dataviz.WinForms.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRating.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShapes.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
+D:\My project\C#\DuAn1\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.CopyComplete
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\RJCodeAdvance.RJControls.exe.config
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\RJCodeAdvance.RJControls.exe
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\RJCodeAdvance.RJControls.pdb
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Charts.WinForms.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Dataviz.WinForms.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRating.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShapes.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.Deprecated.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\BUS_QuanLy.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\DAL_QuanLy.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\DTO_QuanLy.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Guna.UI2.dll
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\BUS_QuanLy.pdb
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\DAL_QuanLy.pdb
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\DTO_QuanLy.pdb
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Charts.WinForms.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Dataviz.WinForms.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.1.5.3.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuButton.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCheckBox.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDataGridView.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDatePicker.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuDropdown.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuFormDock.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGauge.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuGroupBox.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRadioButton.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuRating.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSeparator.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuShapes.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSlider.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csprojAssemblyReference.cache
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlBeverages.UC_beverages.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlBeverages.UC_TypeOfBeverage.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlCustomers.UC_Customer.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlCustomers.UC_Table.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlEmployees.UC_employee.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlEmployees.UC_TypeOfEmployee.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlIngredient.UC_ingredient.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlIngredient.UC_Input_Ingredient.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlIngredient.UC_Supplier.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlIngredient.UC_typeOfIngredient.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlIngredient.UC_Unit.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlScheme.UC_Schedule.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlScheme.UC_Shift.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.Statistic_bill_ingredient.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.UC_Statistic_bill_beverage.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.UC_Statistic_revenue.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlVouchers.UC_sale.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlVouchers.UC_TypeOfVoucher.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlVouchers.UC_Voucher.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmBeverage.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmChangePassword.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmCustomer.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmEmployees.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmForgotPassword.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmIngredient.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.FrmLogin.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmMain.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmScheme.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmStatistic.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmThanhToan.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmVoucher.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.Properties.Resources.resources
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.GenerateResource.cache
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.CoreCompileInputs.cache
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.CopyComplete
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.RJControls.exe
+C:\Users\TranVanTiep\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.RJControls.pdb
+=======
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmMain.resources
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmForgotPassword.resources
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmChangePassword.resources
@@ -116,3 +406,4 @@ C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.Fr
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.Statistic_bill_ingredient.resources
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.UC_Statistic_bill_beverage.resources
 C:\Users\TranVanTiep\source\repos\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.UC_Statistic_revenue.resources
+>>>>>>> 8815004603e8f5ee408d01358dfe7334a2d97375
