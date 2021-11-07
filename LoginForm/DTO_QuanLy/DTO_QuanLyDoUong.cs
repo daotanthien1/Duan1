@@ -17,6 +17,12 @@ namespace DTO_QuanLy
         public DTO_QuanLyDoUong()
         {
         }
+        //delete & search
+        public DTO_QuanLyDoUong(string name)
+        {
+            this.name = name;
+        }
+
         //insert
         public DTO_QuanLyDoUong(string name, double price, int id_Type, string image)
         {

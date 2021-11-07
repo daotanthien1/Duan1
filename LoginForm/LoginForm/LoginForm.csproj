@@ -218,6 +218,10 @@
       <Project>{06e442c7-d6b4-462f-8e4b-e84a9769d60f}</Project>
       <Name>DAL_QuanLy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DTO_QuanLy\DTO_QuanLy.csproj">
+      <Project>{4560AE1D-4434-4BC1-AE7F-23E417E2C8A5}</Project>
+      <Name>DTO_QuanLy</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Recover-a-Forgotten-Password-using-old-password.png" />
