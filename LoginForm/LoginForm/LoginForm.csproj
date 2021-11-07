@@ -165,11 +165,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmLogin.cs">
+    <Compile Include="ControlBeverages\UC_beverages.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlBeverages\UC_beverages.Designer.cs">
+      <DependentUpon>UC_beverages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlBeverages\UC_TypeOfBeverage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlBeverages\UC_TypeOfBeverage.Designer.cs">
+      <DependentUpon>UC_TypeOfBeverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_ingredient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_ingredient.Designer.cs">
+      <DependentUpon>UC_ingredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Input_Ingredient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Input_Ingredient.Designer.cs">
+      <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Supplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Supplier.Designer.cs">
+      <DependentUpon>UC_Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_typeOfIngredient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_typeOfIngredient.Designer.cs">
+      <DependentUpon>UC_typeOfIngredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Unit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_Unit.Designer.cs">
+      <DependentUpon>UC_Unit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlScheme\UC_Schedule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlScheme\UC_Schedule.Designer.cs">
+      <DependentUpon>UC_Schedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlScheme\UC_Shift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlScheme\UC_Shift.Designer.cs">
+      <DependentUpon>UC_Shift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIngredient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <Compile Include="FrmIngredient.Designer.cs">
+      <DependentUpon>FrmIngredient.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -177,13 +231,94 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmScheme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScheme.Designer.cs">
+      <DependentUpon>FrmScheme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBeverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBeverage.Designer.cs">
+      <DependentUpon>FrmBeverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmForgotPassword.Designer.cs">
+      <DependentUpon>FrmForgotPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThanhToan.Designer.cs">
+      <DependentUpon>FrmThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="ControlBeverages\UC_beverages.resx">
+      <DependentUpon>UC_beverages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlBeverages\UC_TypeOfBeverage.resx">
+      <DependentUpon>UC_TypeOfBeverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_ingredient.resx">
+      <DependentUpon>UC_ingredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_Input_Ingredient.resx">
+      <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_Supplier.resx">
+      <DependentUpon>UC_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_typeOfIngredient.resx">
+      <DependentUpon>UC_typeOfIngredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_Unit.resx">
+      <DependentUpon>UC_Unit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlScheme\UC_Schedule.resx">
+      <DependentUpon>UC_Schedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlScheme\UC_Shift.resx">
+      <DependentUpon>UC_Shift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIngredient.resx">
+      <DependentUpon>FrmIngredient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScheme.resx">
+      <DependentUpon>FrmScheme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBeverage.resx">
+      <DependentUpon>FrmBeverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmForgotPassword.resx">
+      <DependentUpon>FrmForgotPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThanhToan.resx">
+      <DependentUpon>FrmThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -219,15 +354,9 @@
       <Name>DAL_QuanLy</Name>
     </ProjectReference>
     <ProjectReference Include="..\DTO_QuanLy\DTO_QuanLy.csproj">
-      <Project>{4560AE1D-4434-4BC1-AE7F-23E417E2C8A5}</Project>
+      <Project>{080ce435-21c4-4cde-bed0-bbbbdc11f68b}</Project>
       <Name>DTO_QuanLy</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Recover-a-Forgotten-Password-using-old-password.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

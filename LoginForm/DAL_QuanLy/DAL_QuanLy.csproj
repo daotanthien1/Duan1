@@ -44,14 +44,12 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DAL_NhanVien.cs" />
-    <Compile Include="DAL_QuanLyDoUong.cs" />
-    <Compile Include="DAL_Role.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO_QuanLy\DTO_QuanLy.csproj">
-      <Project>{4560AE1D-4434-4BC1-AE7F-23E417E2C8A5}</Project>
+      <Project>{080ce435-21c4-4cde-bed0-bbbbdc11f68b}</Project>
       <Name>DTO_QuanLy</Name>
     </ProjectReference>
   </ItemGroup>

@@ -26,7 +26,6 @@ namespace LoginForm
             {
                 txtPassword.PasswordChar = '*';
             }
-           
         }
 
         private void btClose_Click(object sender, EventArgs e)
@@ -78,17 +77,16 @@ namespace LoginForm
             if (busNhanVien.NhanVienDangNhap(nv)) // khi đăng nhập thành công
             {
                 MessageBox.Show("Đăng nhập thành công");
-                this.Close();
-                FrmMain frmMain = new FrmMain();
+                this.Hide();
+                FrmThanhToan frmMain = new FrmThanhToan();
                 frmMain.ShowDialog();
-                
+                this.Show();
             }
             else
             {
                 MessageBox.Show("Đăng nhập không thành công, kiểm tra lại email hoặc mật khẩu");
-                txtUserName.Text = null;
-                txtPassword.Text = null;
-                txtUserName.Focus();
+                txtUserName.Text = "User Name";
+                txtPassword.Text = "Password";
             }
         }
     }

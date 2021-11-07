@@ -128,7 +128,7 @@ namespace DTO_QuanLy
             this.Name = name;
             this.Salary = salary;
         }
-        
+
         public DTO_NhanVien()
         {
         }

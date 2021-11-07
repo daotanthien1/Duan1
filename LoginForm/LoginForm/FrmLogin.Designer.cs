@@ -112,7 +112,7 @@ namespace LoginForm
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Fuchsia;
-            this.gunaLabel2.Location = new System.Drawing.Point(388, 168);
+            this.gunaLabel2.Location = new System.Drawing.Point(388, 167);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(74, 17);
             this.gunaLabel2.TabIndex = 4;
