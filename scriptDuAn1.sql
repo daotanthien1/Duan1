@@ -627,3 +627,77 @@ AS
 -- add quantity
 alter table vouchers
 Add Quantity int not null
+-- proc for tale shifts
+-- proc add shifts
+Go
+create proc InsertDataShifts
+@Id_shift int, @TimeBegin varchar(50), @TimeEnd varchar(50)
+as
+	begin
+		if(not exists(select * from Shifts where Id_shift = @Id_shift))
+		begin
+			insert into Shifts(TimeBegin,TimeEnd, Id_shift) 
+			values(@TimeBegin, @TimeEnd, @Id_shift)
+		end
+	end
+Go
+-- proc delete data table shifts
+create proc DeleteDataShifts
+@Id_shift int
+as
+	begin
+		delete from Shifts where Id_shift = @Id_shift
+	end
+go
+-- proc update data table shifts
+create proc UpdateDataShifts
+@Id_shift int, @TimeBegin varchar(50), @TimeEnd varchar(50)
+as
+	begin
+		Update Shifts set TimeBegin = @TimeBegin, TimeEnd = @TimeEnd where Id_shift = @Id_shift
+	end
+go
+-- proc search data table shifts
+create proc SearchDataShifts
+@Id_shift int
+as
+	begin
+		set nocount on;
+		select Id_shift, TimeBegin, TimeEnd from Shifts where Id_shift = @Id_shift
+	end
+-- proc get data table shifts
+create proc GetDataShifts
+as
+	begin
+		select * from Shifts
+	end
+go
+
+-- proc Insert data Schedules
+create proc InsertDataSchedule
+@day int, @Id_employee int, @Id_shift int
+as
+	begin
+		if(not exists(select * from Schedules where Id_employee = @Id_employee and Id_shift = @Id_shift and Days = @day))
+			begin
+					insert into Schedules(Id_employee, Id_shift, Days)
+					values(@Id_employee, @Id_shift, @day)
+			end
+	end
+go
+-- proc delete data schedules
+create proc DeleteDataSchedule
+@Id_shift int, @Id_employee int, @day int
+as
+	begin
+		delete from Schedules where Id_shift = @Id_shift and Id_employee = @Id_employee and Days = @day
+	end
+go
+-- proc update data schedules
+create proc UpdateDataSchedule
+@Id_shift int, @Id_employee int, @day int, @Id_schedule int
+as
+	begin
+		update Schedules set Id_employee = @Id_employee, Id_shift = @Id_shift, Days = @day where Id_schedule = @Id_schedule
+	end
+go
