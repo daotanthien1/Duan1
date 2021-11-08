@@ -673,7 +673,29 @@ as
 		select * from Shifts
 	end
 go
-
+-- get data schedule
+CREATE proc getDataSchedule
+as
+	begin
+		select b.Id_schedule, a.Name, b.Days, c.Id_shift from Employees a
+		inner join Schedules b on a.Id_employee = b.Id_employee
+		inner join Shifts c on b.Id_shift = c.Id_shift
+	end
+go
+-- load Name
+create proc loadName
+as
+	begin
+		select Name, Id_employee from Employees
+	end
+go
+-- load shift
+create proc loadIdShift
+as
+	begin
+		select Id_shift from Shifts
+	end
+go
 -- proc Insert data Schedules
 create proc InsertDataSchedule
 @day int, @Id_employee int, @Id_shift int

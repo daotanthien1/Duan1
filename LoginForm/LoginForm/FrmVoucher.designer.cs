@@ -33,14 +33,14 @@ namespace RJCodeAdvance
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bt3 = new Guna.UI2.WinForms.Guna2Button();
             this.bt2 = new Guna.UI2.WinForms.Guna2Button();
             this.bt1 = new Guna.UI2.WinForms.Guna2Button();
             this.imageSlide = new System.Windows.Forms.PictureBox();
-            this.bt3 = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.uC_Voucher1 = new RJCodeAdvance.ControlVouchers.UC_Voucher();
-            this.uC_TypeOfVoucher1 = new RJCodeAdvance.ControlVouchers.UC_TypeOfVoucher();
             this.uC_sale1 = new RJCodeAdvance.ControlVouchers.UC_sale();
+            this.uC_TypeOfVoucher1 = new RJCodeAdvance.ControlVouchers.UC_TypeOfVoucher();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlide)).BeginInit();
@@ -82,6 +82,37 @@ namespace RJCodeAdvance
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(213, 530);
             this.panel1.TabIndex = 8;
+            // 
+            // bt3
+            // 
+            this.bt3.BackColor = System.Drawing.Color.Transparent;
+            this.bt3.BorderRadius = 22;
+            this.bt3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.bt3.CheckedState.FillColor = System.Drawing.Color.White;
+            this.bt3.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.bt3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.bt3.CheckedState.Parent = this.bt3;
+            this.bt3.CustomImages.Parent = this.bt3;
+            this.bt3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bt3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bt3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bt3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bt3.DisabledState.Parent = this.bt3;
+            this.bt3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.bt3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt3.ForeColor = System.Drawing.Color.White;
+            this.bt3.HoverState.Parent = this.bt3;
+            this.bt3.Image = ((System.Drawing.Image)(resources.GetObject("bt3.Image")));
+            this.bt3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bt3.ImageSize = new System.Drawing.Size(25, 25);
+            this.bt3.Location = new System.Drawing.Point(27, 264);
+            this.bt3.Name = "bt3";
+            this.bt3.ShadowDecoration.Parent = this.bt3;
+            this.bt3.Size = new System.Drawing.Size(186, 43);
+            this.bt3.TabIndex = 8;
+            this.bt3.Text = "Sale";
+            this.bt3.UseTransparentBackground = true;
+            this.bt3.CheckedChanged += new System.EventHandler(this.bt1_CheckedChanged);
             // 
             // bt2
             // 
@@ -156,37 +187,6 @@ namespace RJCodeAdvance
             this.imageSlide.TabIndex = 6;
             this.imageSlide.TabStop = false;
             // 
-            // bt3
-            // 
-            this.bt3.BackColor = System.Drawing.Color.Transparent;
-            this.bt3.BorderRadius = 22;
-            this.bt3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.bt3.CheckedState.FillColor = System.Drawing.Color.White;
-            this.bt3.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.bt3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.bt3.CheckedState.Parent = this.bt3;
-            this.bt3.CustomImages.Parent = this.bt3;
-            this.bt3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bt3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bt3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bt3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bt3.DisabledState.Parent = this.bt3;
-            this.bt3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.bt3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt3.ForeColor = System.Drawing.Color.White;
-            this.bt3.HoverState.Parent = this.bt3;
-            this.bt3.Image = ((System.Drawing.Image)(resources.GetObject("bt3.Image")));
-            this.bt3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bt3.ImageSize = new System.Drawing.Size(25, 25);
-            this.bt3.Location = new System.Drawing.Point(27, 264);
-            this.bt3.Name = "bt3";
-            this.bt3.ShadowDecoration.Parent = this.bt3;
-            this.bt3.Size = new System.Drawing.Size(186, 43);
-            this.bt3.TabIndex = 8;
-            this.bt3.Text = "Sale";
-            this.bt3.UseTransparentBackground = true;
-            this.bt3.CheckedChanged += new System.EventHandler(this.bt1_CheckedChanged);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -207,14 +207,6 @@ namespace RJCodeAdvance
             this.uC_Voucher1.Size = new System.Drawing.Size(1100, 530);
             this.uC_Voucher1.TabIndex = 0;
             // 
-            // uC_TypeOfVoucher1
-            // 
-            this.uC_TypeOfVoucher1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_TypeOfVoucher1.Location = new System.Drawing.Point(0, 0);
-            this.uC_TypeOfVoucher1.Name = "uC_TypeOfVoucher1";
-            this.uC_TypeOfVoucher1.Size = new System.Drawing.Size(1100, 530);
-            this.uC_TypeOfVoucher1.TabIndex = 1;
-            // 
             // uC_sale1
             // 
             this.uC_sale1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -223,6 +215,14 @@ namespace RJCodeAdvance
             this.uC_sale1.Size = new System.Drawing.Size(1100, 530);
             this.uC_sale1.TabIndex = 2;
             // 
+            // uC_TypeOfVoucher1
+            // 
+            this.uC_TypeOfVoucher1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_TypeOfVoucher1.Location = new System.Drawing.Point(0, 0);
+            this.uC_TypeOfVoucher1.Name = "uC_TypeOfVoucher1";
+            this.uC_TypeOfVoucher1.Size = new System.Drawing.Size(1100, 530);
+            this.uC_TypeOfVoucher1.TabIndex = 1;
+            // 
             // FrmVoucher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,8 +230,8 @@ namespace RJCodeAdvance
             this.ClientSize = new System.Drawing.Size(1313, 530);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmVoucher";
+            this.Load += new System.EventHandler(this.FrmVoucher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

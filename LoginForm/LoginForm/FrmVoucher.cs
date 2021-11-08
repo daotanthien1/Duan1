@@ -39,5 +39,10 @@ namespace RJCodeAdvance
                 uC_sale1.BringToFront();
             }
         }
+
+        private void FrmVoucher_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
