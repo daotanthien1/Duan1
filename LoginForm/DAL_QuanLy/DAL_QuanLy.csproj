@@ -48,6 +48,7 @@
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_QuanLyDoUong.cs" />
     <Compile Include="DAL_Role.cs" />
+    <Compile Include="DAL_TypesOfBeverage.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

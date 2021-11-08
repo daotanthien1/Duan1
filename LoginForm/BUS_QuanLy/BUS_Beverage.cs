@@ -20,13 +20,17 @@ namespace BUS_QuanLy
         {
             return quanLyDoUong.UpdateDoUong(ql);
         }
-        public bool DeleteDoUong(string name)
+        public bool DeleteDoUong(int id)
         {
-            return quanLyDoUong.DeleteDoUong(name);
+            return quanLyDoUong.DeleteDoUong(id);
         }
         public DataTable SearchDoUong(string name)
         {
             return quanLyDoUong.SearchDoUong(name);
+        }
+        public DataTable getBeverage()
+        {
+            return quanLyDoUong.getBeverage();
         }
     }
 }

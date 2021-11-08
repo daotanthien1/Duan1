@@ -11,7 +11,25 @@ namespace DAL_QuanLy
 {
     public class DAL_QuanLyDoUong : DBConnect
     {
+        public DataTable getBeverage()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_GetBeverage";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
 
+            finally
+            {
+                _conn.Close();
+            }
+        }
         public bool InsertDoUong(DTO_QuanLyDoUong du)
         {
             try
@@ -60,7 +78,7 @@ namespace DAL_QuanLy
             return false;
         }
 
-        public bool DeleteDoUong(string name)
+        public bool DeleteDoUong(int id)
         {
             try
             {
@@ -69,7 +87,7 @@ namespace DAL_QuanLy
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "sp_BeverageDelete";
-                cmd.Parameters.AddWithValue("Name", name);
+                cmd.Parameters.AddWithValue("id_beverage", id);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }

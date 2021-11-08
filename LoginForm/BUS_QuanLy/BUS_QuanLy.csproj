@@ -46,6 +46,7 @@
     <Compile Include="BUS_LichLamViec.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_Role.cs" />
+    <Compile Include="BUS_TypesOfBeverage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

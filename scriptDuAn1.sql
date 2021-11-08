@@ -319,6 +319,18 @@ GO
 
 
 -- Beverage
+-- get beverage
+if OBJECT_ID ('sp_GetBeverage') is not null 
+drop proc sp_GetBeverage
+go 
+create proc sp_GetBeverage
+as
+begin
+            SELECT name,price,id_type,id_beverage,image
+            FROM   beverages
+
+end
+
 -- beverage insert
 if OBJECT_ID ('sp_BeverageInsert') is not null 
 drop proc sp_BeverageInsert
