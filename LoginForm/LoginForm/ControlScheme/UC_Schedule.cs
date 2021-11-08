@@ -104,6 +104,10 @@ namespace RJCodeAdvance.ControlScheme
             cbCaLam.DataSource = schedules.getDataId();
             cbCaLam.DisplayMember = "Id_shift";
             cbCaLam.ValueMember = "Id_shift";
+
+            cbSearch.DataSource = schedules.getDataName();
+            cbSearch.DisplayMember = "Name";
+            cbSearch.ValueMember = "Id_employee";
         }
         // reset form
         void resetForm()
@@ -316,6 +320,24 @@ namespace RJCodeAdvance.ControlScheme
             else
             {
                 resetForm();
+            }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(cbSearch.SelectedValue.ToString());
+            DataTable schedule = schedules.searchSchedules(id);
+            if (schedule.Rows.Count > 0)
+            {
+                guna2DataGridView1.DataSource = schedule;
+                guna2DataGridView1.Columns[0].HeaderText = "ID";
+                guna2DataGridView1.Columns[1].HeaderText = "Tên nhân viên";
+                guna2DataGridView1.Columns[2].HeaderText = "Ngày làm";
+                guna2DataGridView1.Columns[3].HeaderText = "ca";
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy lịch làm nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

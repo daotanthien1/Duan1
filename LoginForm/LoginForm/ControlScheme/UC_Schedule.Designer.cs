@@ -45,7 +45,6 @@ namespace RJCodeAdvance.ControlScheme
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearchNhanVien = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2CircleProgressBar3 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2CircleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
@@ -63,6 +62,7 @@ namespace RJCodeAdvance.ControlScheme
             this.t4 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.t3 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             this.guna2CircleProgressBar3.SuspendLayout();
             this.guna2CircleProgressBar2.SuspendLayout();
@@ -293,33 +293,7 @@ namespace RJCodeAdvance.ControlScheme
             this.btTimKiem.Size = new System.Drawing.Size(127, 35);
             this.btTimKiem.TabIndex = 25;
             this.btTimKiem.Text = "Tìm kiếm";
-            // 
-            // txtSearchNhanVien
-            // 
-            this.txtSearchNhanVien.Animated = true;
-            this.txtSearchNhanVien.BorderColor = System.Drawing.Color.Red;
-            this.txtSearchNhanVien.BorderRadius = 15;
-            this.txtSearchNhanVien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchNhanVien.DefaultText = "";
-            this.txtSearchNhanVien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchNhanVien.DisabledState.Parent = this.txtSearchNhanVien;
-            this.txtSearchNhanVien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchNhanVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchNhanVien.FocusedState.Parent = this.txtSearchNhanVien;
-            this.txtSearchNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtSearchNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchNhanVien.HoverState.Parent = this.txtSearchNhanVien;
-            this.txtSearchNhanVien.Location = new System.Drawing.Point(162, 397);
-            this.txtSearchNhanVien.Name = "txtSearchNhanVien";
-            this.txtSearchNhanVien.PasswordChar = '\0';
-            this.txtSearchNhanVien.PlaceholderText = "Nhập tên nhân viên";
-            this.txtSearchNhanVien.SelectedText = "";
-            this.txtSearchNhanVien.ShadowDecoration.Parent = this.txtSearchNhanVien;
-            this.txtSearchNhanVien.Size = new System.Drawing.Size(251, 36);
-            this.txtSearchNhanVien.TabIndex = 24;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // panel1
             // 
@@ -454,7 +428,7 @@ namespace RJCodeAdvance.ControlScheme
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ColumnHeadersHeight = 4;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -482,7 +456,7 @@ namespace RJCodeAdvance.ControlScheme
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
             this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -661,10 +635,36 @@ namespace RJCodeAdvance.ControlScheme
             this.label1.TabIndex = 42;
             this.label1.Text = "label1";
             // 
+            // cbSearch
+            // 
+            this.cbSearch.BackColor = System.Drawing.Color.Transparent;
+            this.cbSearch.BorderColor = System.Drawing.Color.Red;
+            this.cbSearch.BorderRadius = 15;
+            this.cbSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSearch.FocusedState.Parent = this.cbSearch;
+            this.cbSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSearch.HoverState.Parent = this.cbSearch;
+            this.cbSearch.ItemHeight = 30;
+            this.cbSearch.Items.AddRange(new object[] {
+            "Ca 1",
+            "Ca 2",
+            "Ca 3"});
+            this.cbSearch.ItemsAppearance.Parent = this.cbSearch;
+            this.cbSearch.Location = new System.Drawing.Point(154, 398);
+            this.cbSearch.Name = "cbSearch";
+            this.cbSearch.ShadowDecoration.Parent = this.cbSearch;
+            this.cbSearch.Size = new System.Drawing.Size(259, 36);
+            this.cbSearch.TabIndex = 43;
+            // 
             // UC_Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cbSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.t3);
             this.Controls.Add(this.t4);
@@ -682,7 +682,6 @@ namespace RJCodeAdvance.ControlScheme
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.btTimKiem);
-            this.Controls.Add(this.txtSearchNhanVien);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.cbCaLam);
             this.Controls.Add(this.guna2HtmlLabel2);
@@ -713,7 +712,6 @@ namespace RJCodeAdvance.ControlScheme
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button btThem;
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearchNhanVien;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar3;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
@@ -731,5 +729,6 @@ namespace RJCodeAdvance.ControlScheme
         private Guna.UI2.WinForms.Guna2RadioButton t4;
         private Guna.UI2.WinForms.Guna2RadioButton t3;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSearch;
     }
 }

@@ -665,6 +665,7 @@ as
 		set nocount on;
 		select Id_shift, TimeBegin, TimeEnd from Shifts where Id_shift = @Id_shift
 	end
+go
 -- proc get data table shifts
 create proc GetDataShifts
 as
@@ -701,3 +702,13 @@ as
 		update Schedules set Id_employee = @Id_employee, Id_shift = @Id_shift, Days = @day where Id_schedule = @Id_schedule
 	end
 go
+-- proc search schedules
+create proc searchSchedules
+@Id_employee int
+as
+	begin
+		set nocount on;
+		select b.Id_schedule, a.Name, b.Days, c.Id_shift from Employees a
+		inner join Schedules b on a.Id_employee = b.Id_employee and a.Id_employee = @Id_employee
+		inner join Shifts c on b.Id_shift = c.Id_shift
+	end

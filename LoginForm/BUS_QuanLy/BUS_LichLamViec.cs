@@ -36,5 +36,9 @@ namespace BUS_QuanLy
         {
             return schedules.UpdateSchedule(schedule);
         }
+        public DataTable searchSchedules(int id)
+        {
+            return schedules.searchSchedules(id);
+        }
     }
 }

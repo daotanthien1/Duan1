@@ -135,6 +135,26 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
             return false;
-        }        
+        }
+        // search lịch làm việc
+        public DataTable searchSchedules(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "searchSchedules";
+                cmd.Parameters.AddWithValue("Id_employee", id);
+                DataTable dtSchedule = new DataTable();
+                dtSchedule.Load(cmd.ExecuteReader());
+                return dtSchedule;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }
