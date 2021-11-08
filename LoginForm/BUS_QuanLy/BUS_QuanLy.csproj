@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BUS_Beverage.cs" />
     <Compile Include="BUS_CaLamViec.cs" />
+    <Compile Include="BUS_LichLamViec.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_Role.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

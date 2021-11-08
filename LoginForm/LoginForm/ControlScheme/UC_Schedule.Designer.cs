@@ -31,20 +31,12 @@ namespace RJCodeAdvance.ControlScheme
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Schedule));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.t3 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.t4 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.t5 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.t6 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.t7 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.cn = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.t2 = new Guna.UI2.WinForms.Guna2CheckBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cbCaLam = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtTenNhanVien = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -52,12 +44,7 @@ namespace RJCodeAdvance.ControlScheme
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearchNhanVien = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2CircleProgressBar3 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2CircleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
@@ -65,145 +52,23 @@ namespace RJCodeAdvance.ControlScheme
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
+            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.cbTenNhanVien = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.t2 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.cn = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.t7 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.t6 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.t5 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.t4 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.t3 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1.SuspendLayout();
             this.guna2CircleProgressBar3.SuspendLayout();
             this.guna2CircleProgressBar2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // t3
-            // 
-            this.t3.AutoSize = true;
-            this.t3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t3.CheckedState.BorderRadius = 0;
-            this.t3.CheckedState.BorderThickness = 0;
-            this.t3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t3.ForeColor = System.Drawing.Color.Black;
-            this.t3.Location = new System.Drawing.Point(183, 62);
-            this.t3.Name = "t3";
-            this.t3.Size = new System.Drawing.Size(54, 17);
-            this.t3.TabIndex = 23;
-            this.t3.Text = "Thứ 3";
-            this.t3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t3.UncheckedState.BorderRadius = 0;
-            this.t3.UncheckedState.BorderThickness = 0;
-            this.t3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t3.CheckedChanged += new System.EventHandler(this.t3_CheckedChanged);
-            // 
-            // t4
-            // 
-            this.t4.AutoSize = true;
-            this.t4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t4.CheckedState.BorderRadius = 0;
-            this.t4.CheckedState.BorderThickness = 0;
-            this.t4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t4.ForeColor = System.Drawing.Color.Black;
-            this.t4.Location = new System.Drawing.Point(266, 62);
-            this.t4.Name = "t4";
-            this.t4.Size = new System.Drawing.Size(54, 17);
-            this.t4.TabIndex = 22;
-            this.t4.Text = "Thứ 4";
-            this.t4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t4.UncheckedState.BorderRadius = 0;
-            this.t4.UncheckedState.BorderThickness = 0;
-            this.t4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t4.CheckedChanged += new System.EventHandler(this.t4_CheckedChanged);
-            // 
-            // t5
-            // 
-            this.t5.AutoSize = true;
-            this.t5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t5.CheckedState.BorderRadius = 0;
-            this.t5.CheckedState.BorderThickness = 0;
-            this.t5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t5.ForeColor = System.Drawing.Color.Black;
-            this.t5.Location = new System.Drawing.Point(348, 62);
-            this.t5.Name = "t5";
-            this.t5.Size = new System.Drawing.Size(54, 17);
-            this.t5.TabIndex = 21;
-            this.t5.Text = "Thứ 5";
-            this.t5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t5.UncheckedState.BorderRadius = 0;
-            this.t5.UncheckedState.BorderThickness = 0;
-            this.t5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t5.CheckedChanged += new System.EventHandler(this.t5_CheckedChanged);
-            // 
-            // t6
-            // 
-            this.t6.AutoSize = true;
-            this.t6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t6.CheckedState.BorderRadius = 0;
-            this.t6.CheckedState.BorderThickness = 0;
-            this.t6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t6.ForeColor = System.Drawing.Color.Black;
-            this.t6.Location = new System.Drawing.Point(430, 62);
-            this.t6.Name = "t6";
-            this.t6.Size = new System.Drawing.Size(54, 17);
-            this.t6.TabIndex = 20;
-            this.t6.Text = "Thứ 6";
-            this.t6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t6.UncheckedState.BorderRadius = 0;
-            this.t6.UncheckedState.BorderThickness = 0;
-            this.t6.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t6.CheckedChanged += new System.EventHandler(this.t6_CheckedChanged);
-            // 
-            // t7
-            // 
-            this.t7.AutoSize = true;
-            this.t7.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t7.CheckedState.BorderRadius = 0;
-            this.t7.CheckedState.BorderThickness = 0;
-            this.t7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t7.ForeColor = System.Drawing.Color.Black;
-            this.t7.Location = new System.Drawing.Point(516, 62);
-            this.t7.Name = "t7";
-            this.t7.Size = new System.Drawing.Size(54, 17);
-            this.t7.TabIndex = 19;
-            this.t7.Text = "Thứ 7";
-            this.t7.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t7.UncheckedState.BorderRadius = 0;
-            this.t7.UncheckedState.BorderThickness = 0;
-            this.t7.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t7.CheckedChanged += new System.EventHandler(this.t7_CheckedChanged);
-            // 
-            // cn
-            // 
-            this.cn.AutoSize = true;
-            this.cn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cn.CheckedState.BorderRadius = 0;
-            this.cn.CheckedState.BorderThickness = 0;
-            this.cn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cn.ForeColor = System.Drawing.Color.Black;
-            this.cn.Location = new System.Drawing.Point(610, 62);
-            this.cn.Name = "cn";
-            this.cn.Size = new System.Drawing.Size(69, 17);
-            this.cn.TabIndex = 18;
-            this.cn.Text = "Chủ nhật";
-            this.cn.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cn.UncheckedState.BorderRadius = 0;
-            this.cn.UncheckedState.BorderThickness = 0;
-            this.cn.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cn.CheckedChanged += new System.EventHandler(this.cn_CheckedChanged);
-            // 
-            // t2
-            // 
-            this.t2.AutoSize = true;
-            this.t2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t2.CheckedState.BorderRadius = 0;
-            this.t2.CheckedState.BorderThickness = 0;
-            this.t2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t2.ForeColor = System.Drawing.Color.Black;
-            this.t2.Location = new System.Drawing.Point(101, 62);
-            this.t2.Name = "t2";
-            this.t2.Size = new System.Drawing.Size(54, 17);
-            this.t2.TabIndex = 17;
-            this.t2.Text = "Thứ 2";
-            this.t2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t2.UncheckedState.BorderRadius = 0;
-            this.t2.UncheckedState.BorderThickness = 0;
-            this.t2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t2.CheckedChanged += new System.EventHandler(this.t2_CheckedChanged);
             // 
             // guna2HtmlLabel3
             // 
@@ -227,14 +92,10 @@ namespace RJCodeAdvance.ControlScheme
             this.cbCaLam.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCaLam.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbCaLam.FocusedState.Parent = this.cbCaLam;
-            this.cbCaLam.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCaLam.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cbCaLam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbCaLam.HoverState.Parent = this.cbCaLam;
             this.cbCaLam.ItemHeight = 30;
-            this.cbCaLam.Items.AddRange(new object[] {
-            "Ca 1",
-            "Ca 2",
-            "Ca 3"});
             this.cbCaLam.ItemsAppearance.Parent = this.cbCaLam;
             this.cbCaLam.Location = new System.Drawing.Point(515, 7);
             this.cbCaLam.Name = "cbCaLam";
@@ -254,34 +115,6 @@ namespace RJCodeAdvance.ControlScheme
             this.guna2HtmlLabel2.TabIndex = 14;
             this.guna2HtmlLabel2.Text = "Ca làm";
             this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
-            // 
-            // txtTenNhanVien
-            // 
-            this.txtTenNhanVien.Animated = true;
-            this.txtTenNhanVien.BorderColor = System.Drawing.Color.Red;
-            this.txtTenNhanVien.BorderRadius = 15;
-            this.txtTenNhanVien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenNhanVien.DefaultText = "";
-            this.txtTenNhanVien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenNhanVien.DisabledState.Parent = this.txtTenNhanVien;
-            this.txtTenNhanVien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenNhanVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNhanVien.FocusedState.Parent = this.txtTenNhanVien;
-            this.txtTenNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtTenNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.txtTenNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNhanVien.HoverState.Parent = this.txtTenNhanVien;
-            this.txtTenNhanVien.Location = new System.Drawing.Point(111, 7);
-            this.txtTenNhanVien.Name = "txtTenNhanVien";
-            this.txtTenNhanVien.PasswordChar = '\0';
-            this.txtTenNhanVien.PlaceholderText = "Nhập tên nhân viên";
-            this.txtTenNhanVien.SelectedText = "";
-            this.txtTenNhanVien.ShadowDecoration.Parent = this.txtTenNhanVien;
-            this.txtTenNhanVien.Size = new System.Drawing.Size(251, 36);
-            this.txtTenNhanVien.TabIndex = 13;
-            this.txtTenNhanVien.TextChanged += new System.EventHandler(this.txtTenNhanVien_TextChanged);
             // 
             // guna2HtmlLabel1
             // 
@@ -350,6 +183,7 @@ namespace RJCodeAdvance.ControlScheme
             this.guna2Button5.Size = new System.Drawing.Size(128, 45);
             this.guna2Button5.TabIndex = 30;
             this.guna2Button5.Text = "Lưu";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button4
             // 
@@ -376,6 +210,7 @@ namespace RJCodeAdvance.ControlScheme
             this.guna2Button4.Size = new System.Drawing.Size(128, 45);
             this.guna2Button4.TabIndex = 29;
             this.guna2Button4.Text = "Sửa";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 
@@ -402,6 +237,7 @@ namespace RJCodeAdvance.ControlScheme
             this.guna2Button3.Size = new System.Drawing.Size(128, 45);
             this.guna2Button3.TabIndex = 28;
             this.guna2Button3.Text = "Xóa";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // btThem
             // 
@@ -429,81 +265,7 @@ namespace RJCodeAdvance.ControlScheme
             this.btThem.Size = new System.Drawing.Size(128, 45);
             this.btThem.TabIndex = 27;
             this.btThem.Text = "Thêm";
-            // 
-            // guna2DataGridView1
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.guna2DataGridView1.ColumnHeadersHeight = 20;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.guna2DataGridView1.EnableHeadersVisualStyles = false;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(12, 124);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(691, 254);
-            this.guna2DataGridView1.TabIndex = 26;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 20;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tên nhân viên";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Ngày làm";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Ca";
-            this.Column3.Name = "Column3";
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // btTimKiem
             // 
@@ -531,33 +293,7 @@ namespace RJCodeAdvance.ControlScheme
             this.btTimKiem.Size = new System.Drawing.Size(127, 35);
             this.btTimKiem.TabIndex = 25;
             this.btTimKiem.Text = "Tìm kiếm";
-            // 
-            // txtSearchNhanVien
-            // 
-            this.txtSearchNhanVien.Animated = true;
-            this.txtSearchNhanVien.BorderColor = System.Drawing.Color.Red;
-            this.txtSearchNhanVien.BorderRadius = 15;
-            this.txtSearchNhanVien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchNhanVien.DefaultText = "";
-            this.txtSearchNhanVien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchNhanVien.DisabledState.Parent = this.txtSearchNhanVien;
-            this.txtSearchNhanVien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchNhanVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchNhanVien.FocusedState.Parent = this.txtSearchNhanVien;
-            this.txtSearchNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtSearchNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchNhanVien.HoverState.Parent = this.txtSearchNhanVien;
-            this.txtSearchNhanVien.Location = new System.Drawing.Point(162, 397);
-            this.txtSearchNhanVien.Name = "txtSearchNhanVien";
-            this.txtSearchNhanVien.PasswordChar = '\0';
-            this.txtSearchNhanVien.PlaceholderText = "Nhập tên nhân viên";
-            this.txtSearchNhanVien.SelectedText = "";
-            this.txtSearchNhanVien.ShadowDecoration.Parent = this.txtSearchNhanVien;
-            this.txtSearchNhanVien.Size = new System.Drawing.Size(251, 36);
-            this.txtSearchNhanVien.TabIndex = 24;
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // panel1
             // 
@@ -675,19 +411,261 @@ namespace RJCodeAdvance.ControlScheme
             this.guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
             this.guna2CircleProgressBar1.Value = 25;
             // 
+            // guna2DataGridView1
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.guna2DataGridView1.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.guna2DataGridView1.EnableHeadersVisualStyles = false;
+            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.Location = new System.Drawing.Point(31, 126);
+            this.guna2DataGridView1.Name = "guna2DataGridView1";
+            this.guna2DataGridView1.RowHeadersVisible = false;
+            this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.guna2DataGridView1.Size = new System.Drawing.Size(648, 258);
+            this.guna2DataGridView1.TabIndex = 33;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
+            // 
+            // cbTenNhanVien
+            // 
+            this.cbTenNhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.cbTenNhanVien.BorderColor = System.Drawing.Color.Red;
+            this.cbTenNhanVien.BorderRadius = 15;
+            this.cbTenNhanVien.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTenNhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTenNhanVien.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTenNhanVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTenNhanVien.FocusedState.Parent = this.cbTenNhanVien;
+            this.cbTenNhanVien.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTenNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbTenNhanVien.HoverState.Parent = this.cbTenNhanVien;
+            this.cbTenNhanVien.ItemHeight = 30;
+            this.cbTenNhanVien.Items.AddRange(new object[] {
+            "Ca 1",
+            "Ca 2",
+            "Ca 3"});
+            this.cbTenNhanVien.ItemsAppearance.Parent = this.cbTenNhanVien;
+            this.cbTenNhanVien.Location = new System.Drawing.Point(111, 7);
+            this.cbTenNhanVien.Name = "cbTenNhanVien";
+            this.cbTenNhanVien.ShadowDecoration.Parent = this.cbTenNhanVien;
+            this.cbTenNhanVien.Size = new System.Drawing.Size(259, 36);
+            this.cbTenNhanVien.TabIndex = 34;
+            // 
+            // t2
+            // 
+            this.t2.AutoSize = true;
+            this.t2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t2.CheckedState.BorderThickness = 0;
+            this.t2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t2.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t2.CheckedState.InnerOffset = -4;
+            this.t2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t2.Location = new System.Drawing.Point(111, 63);
+            this.t2.Name = "t2";
+            this.t2.Size = new System.Drawing.Size(59, 20);
+            this.t2.TabIndex = 35;
+            this.t2.Text = "Thứ 2";
+            this.t2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t2.UncheckedState.BorderThickness = 2;
+            this.t2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // cn
+            // 
+            this.cn.AutoSize = true;
+            this.cn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cn.CheckedState.BorderThickness = 0;
+            this.cn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cn.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.cn.CheckedState.InnerOffset = -4;
+            this.cn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cn.Location = new System.Drawing.Point(596, 63);
+            this.cn.Name = "cn";
+            this.cn.Size = new System.Drawing.Size(85, 20);
+            this.cn.TabIndex = 36;
+            this.cn.Text = "Chủ nhật";
+            this.cn.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cn.UncheckedState.BorderThickness = 2;
+            this.cn.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.cn.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // t7
+            // 
+            this.t7.AutoSize = true;
+            this.t7.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t7.CheckedState.BorderThickness = 0;
+            this.t7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t7.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t7.CheckedState.InnerOffset = -4;
+            this.t7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t7.Location = new System.Drawing.Point(515, 63);
+            this.t7.Name = "t7";
+            this.t7.Size = new System.Drawing.Size(59, 20);
+            this.t7.TabIndex = 37;
+            this.t7.Text = "Thứ 7";
+            this.t7.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t7.UncheckedState.BorderThickness = 2;
+            this.t7.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t7.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // t6
+            // 
+            this.t6.AutoSize = true;
+            this.t6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t6.CheckedState.BorderThickness = 0;
+            this.t6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t6.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t6.CheckedState.InnerOffset = -4;
+            this.t6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t6.Location = new System.Drawing.Point(434, 63);
+            this.t6.Name = "t6";
+            this.t6.Size = new System.Drawing.Size(59, 20);
+            this.t6.TabIndex = 38;
+            this.t6.Text = "Thứ 6";
+            this.t6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t6.UncheckedState.BorderThickness = 2;
+            this.t6.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t6.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // t5
+            // 
+            this.t5.AutoSize = true;
+            this.t5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t5.CheckedState.BorderThickness = 0;
+            this.t5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t5.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t5.CheckedState.InnerOffset = -4;
+            this.t5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t5.Location = new System.Drawing.Point(362, 63);
+            this.t5.Name = "t5";
+            this.t5.Size = new System.Drawing.Size(59, 20);
+            this.t5.TabIndex = 39;
+            this.t5.Text = "Thứ 5";
+            this.t5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t5.UncheckedState.BorderThickness = 2;
+            this.t5.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t5.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // t4
+            // 
+            this.t4.AutoSize = true;
+            this.t4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t4.CheckedState.BorderThickness = 0;
+            this.t4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t4.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t4.CheckedState.InnerOffset = -4;
+            this.t4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t4.Location = new System.Drawing.Point(278, 63);
+            this.t4.Name = "t4";
+            this.t4.Size = new System.Drawing.Size(59, 20);
+            this.t4.TabIndex = 40;
+            this.t4.Text = "Thứ 4";
+            this.t4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t4.UncheckedState.BorderThickness = 2;
+            this.t4.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t4.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // t3
+            // 
+            this.t3.AutoSize = true;
+            this.t3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t3.CheckedState.BorderThickness = 0;
+            this.t3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t3.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t3.CheckedState.InnerOffset = -4;
+            this.t3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t3.Location = new System.Drawing.Point(198, 63);
+            this.t3.Name = "t3";
+            this.t3.Size = new System.Drawing.Size(59, 20);
+            this.t3.TabIndex = 41;
+            this.t3.Text = "Thứ 3";
+            this.t3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t3.UncheckedState.BorderThickness = 2;
+            this.t3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(31, 92);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "label1";
+            // 
+            // cbSearch
+            // 
+            this.cbSearch.BackColor = System.Drawing.Color.Transparent;
+            this.cbSearch.BorderColor = System.Drawing.Color.Red;
+            this.cbSearch.BorderRadius = 15;
+            this.cbSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSearch.FocusedState.Parent = this.cbSearch;
+            this.cbSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSearch.HoverState.Parent = this.cbSearch;
+            this.cbSearch.ItemHeight = 30;
+            this.cbSearch.Items.AddRange(new object[] {
+            "Ca 1",
+            "Ca 2",
+            "Ca 3"});
+            this.cbSearch.ItemsAppearance.Parent = this.cbSearch;
+            this.cbSearch.Location = new System.Drawing.Point(154, 398);
+            this.cbSearch.Name = "cbSearch";
+            this.cbSearch.ShadowDecoration.Parent = this.cbSearch;
+            this.cbSearch.Size = new System.Drawing.Size(259, 36);
+            this.cbSearch.TabIndex = 43;
+            // 
             // UC_Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.guna2Button6);
-            this.Controls.Add(this.guna2Button5);
-            this.Controls.Add(this.guna2Button4);
-            this.Controls.Add(this.guna2Button3);
-            this.Controls.Add(this.btThem);
-            this.Controls.Add(this.guna2DataGridView1);
-            this.Controls.Add(this.btTimKiem);
-            this.Controls.Add(this.txtSearchNhanVien);
+            this.Controls.Add(this.cbSearch);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.t3);
             this.Controls.Add(this.t4);
             this.Controls.Add(this.t5);
@@ -695,38 +673,37 @@ namespace RJCodeAdvance.ControlScheme
             this.Controls.Add(this.t7);
             this.Controls.Add(this.cn);
             this.Controls.Add(this.t2);
+            this.Controls.Add(this.cbTenNhanVien);
+            this.Controls.Add(this.guna2DataGridView1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.guna2Button6);
+            this.Controls.Add(this.guna2Button5);
+            this.Controls.Add(this.guna2Button4);
+            this.Controls.Add(this.guna2Button3);
+            this.Controls.Add(this.btThem);
+            this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.cbCaLam);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "UC_Schedule";
             this.Size = new System.Drawing.Size(1000, 569);
             this.Load += new System.EventHandler(this.UC_Schedule_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.guna2CircleProgressBar3.ResumeLayout(false);
             this.guna2CircleProgressBar2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2CheckBox t3;
-        private Guna.UI2.WinForms.Guna2CheckBox t4;
-        private Guna.UI2.WinForms.Guna2CheckBox t5;
-        private Guna.UI2.WinForms.Guna2CheckBox t6;
-        private Guna.UI2.WinForms.Guna2CheckBox t7;
-        private Guna.UI2.WinForms.Guna2CheckBox cn;
-        private Guna.UI2.WinForms.Guna2CheckBox t2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2ComboBox cbCaLam;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2TextBox txtTenNhanVien;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
@@ -734,12 +711,7 @@ namespace RJCodeAdvance.ControlScheme
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button btThem;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearchNhanVien;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar3;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar2;
@@ -747,5 +719,16 @@ namespace RJCodeAdvance.ControlScheme
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbTenNhanVien;
+        private Guna.UI2.WinForms.Guna2RadioButton t2;
+        private Guna.UI2.WinForms.Guna2RadioButton cn;
+        private Guna.UI2.WinForms.Guna2RadioButton t7;
+        private Guna.UI2.WinForms.Guna2RadioButton t6;
+        private Guna.UI2.WinForms.Guna2RadioButton t5;
+        private Guna.UI2.WinForms.Guna2RadioButton t4;
+        private Guna.UI2.WinForms.Guna2RadioButton t3;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSearch;
     }
 }
