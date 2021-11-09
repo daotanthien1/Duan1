@@ -1,6 +1,7 @@
 ﻿using BUS_QuanLy;
 using DTO_QuanLy;
 using RJCodeAdvance;
+using RJCodeAdvance.ControlScheme;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,7 @@ namespace LoginForm
 
         private void txtUserName_Enter(object sender, EventArgs e)
         {
-            if(txtUserName.Text == "User Name")
+            if (txtUserName.Text == "User Name")
             {
                 txtUserName.Text = "";
                 txtUserName.ForeColor = Color.Black;
@@ -77,11 +78,12 @@ namespace LoginForm
             nv.password = txtPassword.Text;
             if (busNhanVien.NhanVienDangNhap(nv)) // khi đăng nhập thành công
             {
+                UC_Schedule.mail = nv.email;
                 MessageBox.Show("Đăng nhập thành công");
-                this.Close();
-                FrmMain frmMain = new FrmMain();
+                this.Hide();
+                FrmScheme frmMain = new FrmScheme();
                 frmMain.ShowDialog();
-                
+                this.Show();
             }
             else
             {

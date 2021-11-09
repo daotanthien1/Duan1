@@ -179,7 +179,7 @@ namespace RJCodeAdvance
             this.uC_Schedule1.Location = new System.Drawing.Point(0, 0);
             this.uC_Schedule1.Name = "uC_Schedule1";
             this.uC_Schedule1.Size = new System.Drawing.Size(1000, 569);
-            this.uC_Schedule1.TabIndex = 0;
+            this.uC_Schedule1.TabIndex = 2;
             // 
             // FrmScheme
             // 
@@ -207,9 +207,9 @@ namespace RJCodeAdvance
         private System.Windows.Forms.PictureBox imageSlide;
         private Guna.UI2.WinForms.Guna2Button bt2;
         private System.Windows.Forms.Panel panel2;
-        private ControlScheme.UC_Shift uC_Shift1;
-        private ControlScheme.UC_Schedule uC_Schedule1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private ControlScheme.UC_Shift uC_Shift1;
+        private ControlScheme.UC_Schedule uC_Schedule1;
     }
 }
