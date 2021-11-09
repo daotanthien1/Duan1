@@ -32,6 +32,7 @@ namespace RJCodeAdvance.ControlBeverages
         BUS_Beverage busBe = new BUS_Beverage();
         void ResetValue()
         {
+            picHinh.Image = default;
             txtTenDoUong.Enabled = false;
             txtTenDoUong.Text = "";
             cbDoUong.Enabled = false;
@@ -104,6 +105,7 @@ namespace RJCodeAdvance.ControlBeverages
             txtHinh.Enabled = true;
             btLuu.Enabled = true;
             btFile.Enabled = true;
+            picHinh.Image = default;
         }
         void loadComBoBox()
         {
@@ -137,6 +139,7 @@ namespace RJCodeAdvance.ControlBeverages
                         {
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
                         }
+                        
                         MessageBox.Show("Thành công");
                         loadDGV();
                     }
@@ -169,7 +172,16 @@ namespace RJCodeAdvance.ControlBeverages
                     cbDoUong.Text = dgvBeverage.CurrentRow.Cells["Id_Type"].Value.ToString();
                     txtHinh.Text = dgvBeverage.CurrentRow.Cells["Image"].Value.ToString();
                     checkUrlImage = txtHinh.Text;
-                    picHinh.Image = Image.FromFile(dgvBeverage.CurrentRow.Cells["Image"].Value.ToString());
+                    fileName = Path.GetFileName(dgvBeverage.CurrentRow.Cells["Image"].Value.ToString());
+                    if (File.Exists(dgvBeverage.CurrentRow.Cells["Image"].Value.ToString()))
+                    {
+                        picHinh.Image = Image.FromFile(dgvBeverage.CurrentRow.Cells["Image"].Value.ToString());
+                    }
+                    else
+                    {
+                        picHinh.Image = default;
+                    }
+                    
                 }
                 else
                 {
