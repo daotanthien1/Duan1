@@ -746,3 +746,43 @@ as
 		inner join Schedules b on a.Id_employee = b.Id_employee and a.Id_employee = @Id_employee
 		inner join Shifts c on b.Id_shift = c.Id_shift
 	end
+
+--- CUSTOMERS --
+-- CUSTOMERS UPDATE
+if OBJECT_ID ('sp_CustomerUpdate') is not null 
+drop proc sp_CustomerUpdate
+go 
+create PROCEDURE sp_CustomerUpdate(
+                                          @Email   NVARCHAR(55),
+                                          @Gender       NVARCHAR(10),
+                                          @idCustomers       int,
+                                          @reward int)
+AS
+  BEGIN
+
+        BEGIN
+			update Customers
+			set Email = @Email,
+				Gender = @Gender,
+				Reward = @reward
+			where Id_customer = @idCustomers
+
+        END
+END
+-- exec sp_CustomerUpdate 'a@b','nu',1,231232
+
+-- Search Supplier
+if OBJECT_ID ('sp_CustomerSearch') is not null 
+drop proc sp_CustomerSearch
+go 
+create PROCEDURE sp_CustomerSearch(@Email NVARCHAR(50))
+AS
+  BEGIN
+
+        BEGIN
+			set nocount on;
+			select Email, Gender,Id_customer,Reward
+			from Customers where Email like '%' + @Email + '%'
+        END
+END
+-- exec sp_CustomerSearch 'a@b'
