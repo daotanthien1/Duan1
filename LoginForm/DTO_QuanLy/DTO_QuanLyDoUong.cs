@@ -17,10 +17,15 @@ namespace DTO_QuanLy
         public DTO_QuanLyDoUong()
         {
         }
-        //delete & search
+        //search
         public DTO_QuanLyDoUong(string name)
         {
             this.name = name;
+        }
+
+        public DTO_QuanLyDoUong(int id_Beverage)
+        {
+            this.id_Beverage = id_Beverage;
         }
 
         //insert

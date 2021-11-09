@@ -17,7 +17,7 @@ namespace LoginForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmScheme());
+            Application.Run(new FrmBeverage());
             // 2 cột xoay để lát gì vậy
             //làm màu :)))
             //
