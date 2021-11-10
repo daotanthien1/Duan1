@@ -410,10 +410,23 @@ AS
 
 -- TypeOfBeverage
 -- TypeOfBeverage insert
-if OBJECT_ID ('sp_TypeOfBeverageInsertDeleteSearch') is not null 
-drop proc sp_TypeOfBeverageInsertDeleteSearch
-go 
-create PROCEDURE sp_TypeOfBeverageInsertDeleteSearch(   @Name   NVARCHAR(55),
+create PROCEDURE sp_TypeOfBeverageDelete(   @ID   int)
+AS
+  BEGIN
+	
+        BEGIN
+			delete TypesOfBeverage
+			where Id_type = @ID
+        END
+	END
+create PROCEDURE sp_TypeOfBeverageGet 
+										
+AS
+  BEGIN
+		select id_type, name from typesofbeverage
+	END
+
+create PROCEDURE sp_TypeOfBeverageInsertSearch(   @Name   NVARCHAR(55),
 										@StatementType nvarchar(20) = '')
 AS
   BEGIN
@@ -422,22 +435,12 @@ AS
 			insert into TypesOfBeverage(Name)
 			values(@Name)
         END
-	IF @StatementType = 'Delete'
-        BEGIN
-			delete TypesOfBeverage
-			where Name like '%'+@Name+'%'
-        END
 	IF @StatementType = 'Search'
         BEGIN
 			select Id_type, Name 
 			from TypesOfBeverage where Name like '%'+@Name+'%'
         END
 	END
--- exec sp_TypeOfBeverageInsertDeleteSearch 'Tra Sua','Delete'
-
-if OBJECT_ID ('sp_TypeOfBeverageUpdate') is not null 
-drop proc sp_TypeOfBeverageUpdate
-go 
 create PROCEDURE sp_TypeOfBeverageUpdate (  @Name   NVARCHAR(55),
 											@id_type int)
 										
@@ -786,3 +789,15 @@ AS
         END
 END
 -- exec sp_CustomerSearch 'a@b'
+-- get
+if OBJECT_ID ('sp_GetCustomers') is not null 
+drop proc sp_GetCustomers
+go 
+create proc sp_GetCustomers
+as
+begin
+            SELECT email,gender,id_customer,reward
+            FROM   customers
+
+end
+-- exec sp_getcustomers
