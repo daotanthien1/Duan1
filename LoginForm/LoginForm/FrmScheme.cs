@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace RJCodeAdvance
 {
-    public partial class FrmScheme : Form
+    public partial class UC_Vouchers : Form
     {
-        public FrmScheme()
+        public UC_Vouchers()
         {
             InitializeComponent();
         }
