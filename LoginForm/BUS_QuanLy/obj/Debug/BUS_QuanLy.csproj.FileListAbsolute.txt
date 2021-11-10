@@ -15,7 +15,11 @@ D:\Duan1\LoginForm\BUS_QuanLy\bin\Debug\DAL_QuanLy.dll
 D:\Duan1\LoginForm\BUS_QuanLy\bin\Debug\DTO_QuanLy.dll
 D:\Duan1\LoginForm\BUS_QuanLy\bin\Debug\DAL_QuanLy.pdb
 D:\Duan1\LoginForm\BUS_QuanLy\bin\Debug\DTO_QuanLy.pdb
+<<<<<<< HEAD
 D:\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.csproj.AssemblyReference.cache
+=======
+D:\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.csprojAssemblyReference.cache
+>>>>>>> 3e6db755dbcfe842393a6b86cd723860457a7fbc
 D:\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.csproj.CoreCompileInputs.cache
 D:\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.csproj.CopyComplete
 D:\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.dll

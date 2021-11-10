@@ -189,7 +189,12 @@ D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToggleSwitch.xml
 D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
 D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 D:\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
+<<<<<<< HEAD
 D:\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csproj.AssemblyReference.cache
+=======
+D:\Duan1\LoginForm\LoginForm\obj\Debug\LoginForm.csprojAssemblyReference.cache
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlBeverages.UC_beverages.resources
+>>>>>>> 3e6db755dbcfe842393a6b86cd723860457a7fbc
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlBeverages.UC_TypeOfBeverage.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlCustomers.UC_Customer.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlCustomers.UC_Table.resources
@@ -208,6 +213,8 @@ D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.UC_Statist
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlVouchers.UC_sale.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlVouchers.UC_TypeOfVoucher.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlVouchers.UC_Voucher.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmBeverage.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmChangePassword.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmCustomer.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmEmployees.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmForgotPassword.resources
@@ -235,7 +242,6 @@ D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlIngredient.UC_ingred
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlIngredient.UC_Input_Ingredient_OLD.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlVouchers.UC_Voucher_OLD.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmBeverageCP.resources
-D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmChangePassword.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmConfigurationSale.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmIngredientType.resources
 D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmSchedule2.resources

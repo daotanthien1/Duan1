@@ -35,5 +35,10 @@ namespace RJCodeAdvance
                 uC_TypeOfEmployee1.BringToFront();
             }
         }
+
+        private void uC_employee1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

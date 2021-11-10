@@ -77,6 +77,26 @@ namespace DAL_QuanLy
             }
             return false;
         }
+        public bool TaoMatKhauMoi(string email, string np)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "CREATE_NEW_PASS";
+                cmd.Parameters.AddWithValue("email", email);
+                cmd.Parameters.AddWithValue("matkhaumoi", np);
+                if (Convert.ToInt32(cmd.ExecuteScalar()) > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
 
         public bool InsertNhanVien(DTO_NhanVien nv)
         {

@@ -154,8 +154,6 @@ namespace RJCodeAdvance
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.uC_beverages1);
-            this.guna2Panel1.Controls.Add(this.uC_TypeOfBeverage1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(213, 0);
             this.guna2Panel1.Name = "guna2Panel1";
