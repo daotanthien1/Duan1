@@ -43,6 +43,9 @@
   <ItemGroup>
     <Compile Include="DTO_CaLamViec.cs" />
     <Compile Include="DTO_LichLamViec.cs" />
+    <Compile Include="DTO_LoaiNguyenLieu.cs" />
+    <Compile Include="DTO_NguyenLieu.cs" />
+    <Compile Include="DTO_NhaCungCap.cs" />
     <Compile Include="DTO_NhanVien.cs" />
     <Compile Include="DTO_QuanLyDoUong.cs" />
     <Compile Include="DTO_Role.cs" />

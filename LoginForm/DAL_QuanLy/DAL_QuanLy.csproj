@@ -45,6 +45,9 @@
     <Compile Include="Class1.cs" />
     <Compile Include="DAL_CaLamViec.cs" />
     <Compile Include="DAL_LichLamViec.cs" />
+    <Compile Include="DAL_LoaiNguyenLieu.cs" />
+    <Compile Include="DAL_NguyenLieu.cs" />
+    <Compile Include="DAL_NhaCungCap.cs" />
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_QuanLyDoUong.cs" />
     <Compile Include="DAL_Role.cs" />

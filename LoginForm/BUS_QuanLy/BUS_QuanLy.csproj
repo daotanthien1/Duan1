@@ -44,6 +44,9 @@
     <Compile Include="BUS_Beverage.cs" />
     <Compile Include="BUS_CaLamViec.cs" />
     <Compile Include="BUS_LichLamViec.cs" />
+    <Compile Include="BUS_LoaiNguyenLieu.cs" />
+    <Compile Include="BUS_NguyenLieu.cs" />
+    <Compile Include="BUS_NhaCungCap.cs" />
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_Role.cs" />
     <Compile Include="BUS_TypesOfBeverage.cs" />
