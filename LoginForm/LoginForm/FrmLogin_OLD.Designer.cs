@@ -361,7 +361,7 @@ namespace LoginForm
             this.gunaCircleButton2.Size = new System.Drawing.Size(47, 43);
             this.gunaCircleButton2.TabIndex = 12;
             // 
-            // FrmLogin
+            // FrmLogin_OLD_OLD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -378,9 +378,9 @@ namespace LoginForm
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmLogin";
+            this.Name = "FrmLogin_OLD_OLD";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmLogin";
+            this.Text = "FrmLogin_OLD_OLD";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -37,7 +37,7 @@ namespace RJCodeAdvance
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_Customer1 = new RJCodeAdvance.ControlCustomers.UC_Customer();
+            this.uC_Customer1 = new RJCodeAdvance.ControlCustomers.UC_Customer_OLD();
             this.uC_Table1 = new RJCodeAdvance.ControlCustomers.UC_Table();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlide)).BeginInit();
@@ -207,7 +207,7 @@ namespace RJCodeAdvance
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private ControlCustomers.UC_Customer uC_Customer1;
+        private ControlCustomers.UC_Customer_OLD uC_Customer1;
         private ControlCustomers.UC_Table uC_Table1;
     }
 }

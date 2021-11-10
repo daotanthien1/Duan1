@@ -16,5 +16,11 @@ namespace RJCodeAdvance.ControlVouchers
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            VoucherType frm = new VoucherType();
+            frm.ShowDialog();
+        }
     }
 }

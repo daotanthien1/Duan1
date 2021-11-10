@@ -37,7 +37,7 @@ namespace RJCodeAdvance
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_employee1 = new RJCodeAdvance.ControlEmployees.UC_employee();
+            this.uC_employee1 = new RJCodeAdvance.ControlEmployees.UC_employee_OLD();
             this.uC_TypeOfEmployee1 = new RJCodeAdvance.ControlEmployees.UC_TypeOfEmployee();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -207,7 +207,7 @@ namespace RJCodeAdvance
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private ControlEmployees.UC_employee uC_employee1;
+        private ControlEmployees.UC_employee_OLD uC_employee1;
         private ControlEmployees.UC_TypeOfEmployee uC_TypeOfEmployee1;
     }
 }

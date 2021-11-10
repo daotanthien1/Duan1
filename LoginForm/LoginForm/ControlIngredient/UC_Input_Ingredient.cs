@@ -16,5 +16,11 @@ namespace RJCodeAdvance.ControlIngredient
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Unit frm = new Unit();
+            frm.ShowDialog();
+        }
     }
 }

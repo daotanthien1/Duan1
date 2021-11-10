@@ -38,7 +38,7 @@ namespace RJCodeAdvance
             this.bt1 = new Guna.UI2.WinForms.Guna2Button();
             this.imageSlide = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_Voucher1 = new RJCodeAdvance.ControlVouchers.UC_Voucher();
+            this.uC_Voucher1 = new RJCodeAdvance.ControlVouchers.UC_Voucher_OLD();
             this.uC_sale1 = new RJCodeAdvance.ControlVouchers.UC_sale();
             this.uC_TypeOfVoucher1 = new RJCodeAdvance.ControlVouchers.UC_TypeOfVoucher();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -251,7 +251,7 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2Button bt1;
         private System.Windows.Forms.PictureBox imageSlide;
         private System.Windows.Forms.Panel panel2;
-        private ControlVouchers.UC_Voucher uC_Voucher1;
+        private ControlVouchers.UC_Voucher_OLD uC_Voucher1;
         private ControlVouchers.UC_sale uC_sale1;
         private ControlVouchers.UC_TypeOfVoucher uC_TypeOfVoucher1;
     }

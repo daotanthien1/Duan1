@@ -16,5 +16,31 @@ namespace RJCodeAdvance.ControlCustomers
         {
             InitializeComponent();
         }
+
+        private void guna2RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            FrmTable frm = new FrmTable();
+            frm.ShowDialog();
+        }
     }
 }
