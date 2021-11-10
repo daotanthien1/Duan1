@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_QuanLy
+namespace DTO_QuanLy
 {
     public class Class1
     {

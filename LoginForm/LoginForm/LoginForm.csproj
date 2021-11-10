@@ -472,24 +472,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BUS_QuanLy\BUS_QuanLy.csproj">
-      <Project>{c9de61f5-364d-469a-ab43-0297d1742c6a}</Project>
-      <Name>BUS_QuanLy</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DAL_QuanLy\DAL_QuanLy.csproj">
-      <Project>{06e442c7-d6b4-462f-8e4b-e84a9769d60f}</Project>
-      <Name>DAL_QuanLy</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DTO_QuanLy\DTO_QuanLy.csproj">
-      <Project>{4560AE1D-4434-4BC1-AE7F-23E417E2C8A5}</Project>
-      <Name>DTO_QuanLy</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Recover-a-Forgotten-Password-using-old-password.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS_QuanLy\BUS_QuanLy.csproj">
+      <Project>{2f00dc72-79f6-4d3e-ad09-6816e750ef40}</Project>
+      <Name>BUS_QuanLy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL_QuanLy\DAL_QuanLy.csproj">
+      <Project>{8a4df38c-2f59-4b2f-aff8-0ba049385280}</Project>
+      <Name>DAL_QuanLy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO_QuanLy\DTO_QuanLy.csproj">
+      <Project>{d7bd9f00-e135-4edc-95bc-2f4570c78af6}</Project>
+      <Name>DTO_QuanLy</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

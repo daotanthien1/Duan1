@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{06E442C7-D6B4-462F-8E4B-E84A9769D60F}</ProjectGuid>
+    <ProjectGuid>{8A4DF38C-2F59-4B2F-AFF8-0BA049385280}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL_QuanLy</RootNamespace>
@@ -45,24 +45,20 @@
     <Compile Include="Class1.cs" />
     <Compile Include="DAL_CaLamViec.cs" />
     <Compile Include="DAL_LichLamViec.cs" />
-<<<<<<< HEAD
-    <Compile Include="DAL_LoaiVoucher.cs" />
-=======
     <Compile Include="DAL_LoaiNguyenLieu.cs" />
+    <Compile Include="DAL_LoaiVoucher.cs" />
     <Compile Include="DAL_NguyenLieu.cs" />
     <Compile Include="DAL_NhaCungCap.cs" />
->>>>>>> 49b0d67c16c887fadd380e3d24ea1751a8ec9b9e
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_QuanLyDoUong.cs" />
     <Compile Include="DAL_Role.cs" />
     <Compile Include="DAL_TypesOfBeverage.cs" />
-    <Compile Include="DAL_Vouchers.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DTO_QuanLy\DTO_QuanLy.csproj">
-      <Project>{4560AE1D-4434-4BC1-AE7F-23E417E2C8A5}</Project>
+      <Project>{d7bd9f00-e135-4edc-95bc-2f4570c78af6}</Project>
       <Name>DTO_QuanLy</Name>
     </ProjectReference>
   </ItemGroup>

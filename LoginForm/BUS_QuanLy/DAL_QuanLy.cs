@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL_QuanLy
+namespace BUS_QuanLy
 {
-    public class Class1
+    class DAL_QuanLy
     {
     }
 }

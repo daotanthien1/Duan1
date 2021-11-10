@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4560AE1D-4434-4BC1-AE7F-23E417E2C8A5}</ProjectGuid>
+    <ProjectGuid>{D7BD9F00-E135-4EDC-95BC-2F4570C78AF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DTO_QuanLy</RootNamespace>
@@ -41,20 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class1.cs" />
     <Compile Include="DTO_CaLamViec.cs" />
     <Compile Include="DTO_LichLamViec.cs" />
-<<<<<<< HEAD
-    <Compile Include="DTO_LoaiVoucher.cs" />
-=======
     <Compile Include="DTO_LoaiNguyenLieu.cs" />
+    <Compile Include="DTO_LoaiVoucher.cs" />
     <Compile Include="DTO_NguyenLieu.cs" />
     <Compile Include="DTO_NhaCungCap.cs" />
->>>>>>> 49b0d67c16c887fadd380e3d24ea1751a8ec9b9e
     <Compile Include="DTO_NhanVien.cs" />
     <Compile Include="DTO_QuanLyDoUong.cs" />
     <Compile Include="DTO_Role.cs" />
     <Compile Include="DTO_TypesOfBeverage.cs" />
-    <Compile Include="DTO_Vouchers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -54,15 +54,15 @@ namespace RJCodeAdvance.ControlScheme
             this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cbTenNhanVien = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.t2 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.cn = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.t7 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.t6 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.t5 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.t4 = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.t3 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.cbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.t2 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.t3 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.t4 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.t5 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.t6 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.t7 = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.cn = new Guna.UI2.WinForms.Guna2CheckBox();
             this.panel1.SuspendLayout();
             this.guna2CircleProgressBar3.SuspendLayout();
             this.guna2CircleProgressBar2.SuspendLayout();
@@ -130,8 +130,7 @@ namespace RJCodeAdvance.ControlScheme
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 40;
-            this.guna2Elipse1.TargetControl = this;
+            this.guna2Elipse1.BorderRadius = 22;
             // 
             // guna2Button6
             // 
@@ -304,9 +303,9 @@ namespace RJCodeAdvance.ControlScheme
             this.panel1.Controls.Add(this.guna2HtmlLabel4);
             this.panel1.Controls.Add(this.guna2CircleProgressBar1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(725, 0);
+            this.panel1.Location = new System.Drawing.Point(730, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(270, 560);
+            this.panel1.Size = new System.Drawing.Size(270, 569);
             this.panel1.TabIndex = 32;
             // 
             // guna2CircleProgressBar3
@@ -494,6 +493,139 @@ namespace RJCodeAdvance.ControlScheme
             this.cbTenNhanVien.Size = new System.Drawing.Size(259, 36);
             this.cbTenNhanVien.TabIndex = 34;
             // 
+            // t2
+            // 
+            this.t2.AutoSize = true;
+            this.t2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t2.CheckedState.BorderThickness = 0;
+            this.t2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t2.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t2.CheckedState.InnerOffset = -4;
+            this.t2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t2.Location = new System.Drawing.Point(111, 63);
+            this.t2.Name = "t2";
+            this.t2.Size = new System.Drawing.Size(59, 20);
+            this.t2.TabIndex = 35;
+            this.t2.Text = "Thứ 2";
+            this.t2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t2.UncheckedState.BorderThickness = 2;
+            this.t2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // cn
+            // 
+            this.cn.AutoSize = true;
+            this.cn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cn.CheckedState.BorderThickness = 0;
+            this.cn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cn.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.cn.CheckedState.InnerOffset = -4;
+            this.cn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cn.Location = new System.Drawing.Point(596, 63);
+            this.cn.Name = "cn";
+            this.cn.Size = new System.Drawing.Size(85, 20);
+            this.cn.TabIndex = 36;
+            this.cn.Text = "Chủ nhật";
+            this.cn.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.cn.UncheckedState.BorderThickness = 2;
+            this.cn.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.cn.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // t7
+            // 
+            this.t7.AutoSize = true;
+            this.t7.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t7.CheckedState.BorderThickness = 0;
+            this.t7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t7.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t7.CheckedState.InnerOffset = -4;
+            this.t7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t7.Location = new System.Drawing.Point(515, 63);
+            this.t7.Name = "t7";
+            this.t7.Size = new System.Drawing.Size(59, 20);
+            this.t7.TabIndex = 37;
+            this.t7.Text = "Thứ 7";
+            this.t7.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t7.UncheckedState.BorderThickness = 2;
+            this.t7.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t7.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // t6
+            // 
+            this.t6.AutoSize = true;
+            this.t6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t6.CheckedState.BorderThickness = 0;
+            this.t6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t6.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t6.CheckedState.InnerOffset = -4;
+            this.t6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t6.Location = new System.Drawing.Point(434, 63);
+            this.t6.Name = "t6";
+            this.t6.Size = new System.Drawing.Size(59, 20);
+            this.t6.TabIndex = 38;
+            this.t6.Text = "Thứ 6";
+            this.t6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t6.UncheckedState.BorderThickness = 2;
+            this.t6.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t6.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // t5
+            // 
+            this.t5.AutoSize = true;
+            this.t5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t5.CheckedState.BorderThickness = 0;
+            this.t5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t5.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t5.CheckedState.InnerOffset = -4;
+            this.t5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t5.Location = new System.Drawing.Point(362, 63);
+            this.t5.Name = "t5";
+            this.t5.Size = new System.Drawing.Size(59, 20);
+            this.t5.TabIndex = 39;
+            this.t5.Text = "Thứ 5";
+            this.t5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t5.UncheckedState.BorderThickness = 2;
+            this.t5.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t5.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // t4
+            // 
+            this.t4.AutoSize = true;
+            this.t4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t4.CheckedState.BorderThickness = 0;
+            this.t4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t4.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t4.CheckedState.InnerOffset = -4;
+            this.t4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t4.Location = new System.Drawing.Point(278, 63);
+            this.t4.Name = "t4";
+            this.t4.Size = new System.Drawing.Size(59, 20);
+            this.t4.TabIndex = 40;
+            this.t4.Text = "Thứ 4";
+            this.t4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t4.UncheckedState.BorderThickness = 2;
+            this.t4.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t4.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // t3
+            // 
+            this.t3.AutoSize = true;
+            this.t3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t3.CheckedState.BorderThickness = 0;
+            this.t3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.t3.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.t3.CheckedState.InnerOffset = -4;
+            this.t3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t3.Location = new System.Drawing.Point(198, 63);
+            this.t3.Name = "t3";
+            this.t3.Size = new System.Drawing.Size(59, 20);
+            this.t3.TabIndex = 41;
+            this.t3.Text = "Thứ 3";
+            this.t3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.t3.UncheckedState.BorderThickness = 2;
+            this.t3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.t3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -528,145 +660,19 @@ namespace RJCodeAdvance.ControlScheme
             this.cbSearch.Size = new System.Drawing.Size(259, 36);
             this.cbSearch.TabIndex = 43;
             // 
-            // t2
-            // 
-            this.t2.AutoSize = true;
-            this.t2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t2.CheckedState.BorderRadius = 0;
-            this.t2.CheckedState.BorderThickness = 0;
-            this.t2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t2.Location = new System.Drawing.Point(111, 62);
-            this.t2.Name = "t2";
-            this.t2.Size = new System.Drawing.Size(60, 20);
-            this.t2.TabIndex = 44;
-            this.t2.Text = "Thứ 2";
-            this.t2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t2.UncheckedState.BorderRadius = 0;
-            this.t2.UncheckedState.BorderThickness = 0;
-            this.t2.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // t3
-            // 
-            this.t3.AutoSize = true;
-            this.t3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t3.CheckedState.BorderRadius = 0;
-            this.t3.CheckedState.BorderThickness = 0;
-            this.t3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t3.Location = new System.Drawing.Point(190, 62);
-            this.t3.Name = "t3";
-            this.t3.Size = new System.Drawing.Size(60, 20);
-            this.t3.TabIndex = 45;
-            this.t3.Text = "Thứ 3";
-            this.t3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t3.UncheckedState.BorderRadius = 0;
-            this.t3.UncheckedState.BorderThickness = 0;
-            this.t3.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // t4
-            // 
-            this.t4.AutoSize = true;
-            this.t4.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t4.CheckedState.BorderRadius = 0;
-            this.t4.CheckedState.BorderThickness = 0;
-            this.t4.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t4.Location = new System.Drawing.Point(272, 62);
-            this.t4.Name = "t4";
-            this.t4.Size = new System.Drawing.Size(60, 20);
-            this.t4.TabIndex = 46;
-            this.t4.Text = "Thứ 4";
-            this.t4.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t4.UncheckedState.BorderRadius = 0;
-            this.t4.UncheckedState.BorderThickness = 0;
-            this.t4.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // t5
-            // 
-            this.t5.AutoSize = true;
-            this.t5.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t5.CheckedState.BorderRadius = 0;
-            this.t5.CheckedState.BorderThickness = 0;
-            this.t5.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t5.Location = new System.Drawing.Point(353, 62);
-            this.t5.Name = "t5";
-            this.t5.Size = new System.Drawing.Size(60, 20);
-            this.t5.TabIndex = 47;
-            this.t5.Text = "Thứ 5";
-            this.t5.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t5.UncheckedState.BorderRadius = 0;
-            this.t5.UncheckedState.BorderThickness = 0;
-            this.t5.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // t6
-            // 
-            this.t6.AutoSize = true;
-            this.t6.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t6.CheckedState.BorderRadius = 0;
-            this.t6.CheckedState.BorderThickness = 0;
-            this.t6.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t6.Location = new System.Drawing.Point(434, 62);
-            this.t6.Name = "t6";
-            this.t6.Size = new System.Drawing.Size(60, 20);
-            this.t6.TabIndex = 48;
-            this.t6.Text = "Thứ 6";
-            this.t6.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t6.UncheckedState.BorderRadius = 0;
-            this.t6.UncheckedState.BorderThickness = 0;
-            this.t6.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // t7
-            // 
-            this.t7.AutoSize = true;
-            this.t7.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t7.CheckedState.BorderRadius = 0;
-            this.t7.CheckedState.BorderThickness = 0;
-            this.t7.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.t7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.t7.Location = new System.Drawing.Point(515, 62);
-            this.t7.Name = "t7";
-            this.t7.Size = new System.Drawing.Size(60, 20);
-            this.t7.TabIndex = 49;
-            this.t7.Text = "Thứ 7";
-            this.t7.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.t7.UncheckedState.BorderRadius = 0;
-            this.t7.UncheckedState.BorderThickness = 0;
-            this.t7.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
-            // cn
-            // 
-            this.cn.AutoSize = true;
-            this.cn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cn.CheckedState.BorderRadius = 0;
-            this.cn.CheckedState.BorderThickness = 0;
-            this.cn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cn.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cn.Location = new System.Drawing.Point(595, 62);
-            this.cn.Name = "cn";
-            this.cn.Size = new System.Drawing.Size(86, 20);
-            this.cn.TabIndex = 50;
-            this.cn.Text = "Chủ nhật";
-            this.cn.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.cn.UncheckedState.BorderRadius = 0;
-            this.cn.UncheckedState.BorderThickness = 0;
-            this.cn.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            // 
             // UC_Schedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.cn);
-            this.Controls.Add(this.t7);
-            this.Controls.Add(this.t6);
-            this.Controls.Add(this.t5);
-            this.Controls.Add(this.t4);
-            this.Controls.Add(this.t3);
-            this.Controls.Add(this.t2);
             this.Controls.Add(this.cbSearch);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.t3);
+            this.Controls.Add(this.t4);
+            this.Controls.Add(this.t5);
+            this.Controls.Add(this.t6);
+            this.Controls.Add(this.t7);
+            this.Controls.Add(this.cn);
+            this.Controls.Add(this.t2);
             this.Controls.Add(this.cbTenNhanVien);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.panel1);
@@ -681,7 +687,7 @@ namespace RJCodeAdvance.ControlScheme
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "UC_Schedule";
-            this.Size = new System.Drawing.Size(995, 560);
+            this.Size = new System.Drawing.Size(1000, 569);
             this.Load += new System.EventHandler(this.UC_Schedule_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -715,14 +721,14 @@ namespace RJCodeAdvance.ControlScheme
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2ComboBox cbTenNhanVien;
+        private Guna.UI2.WinForms.Guna2RadioButton t2;
+        private Guna.UI2.WinForms.Guna2RadioButton cn;
+        private Guna.UI2.WinForms.Guna2RadioButton t7;
+        private Guna.UI2.WinForms.Guna2RadioButton t6;
+        private Guna.UI2.WinForms.Guna2RadioButton t5;
+        private Guna.UI2.WinForms.Guna2RadioButton t4;
+        private Guna.UI2.WinForms.Guna2RadioButton t3;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cbSearch;
-        private Guna.UI2.WinForms.Guna2CheckBox cn;
-        private Guna.UI2.WinForms.Guna2CheckBox t7;
-        private Guna.UI2.WinForms.Guna2CheckBox t6;
-        private Guna.UI2.WinForms.Guna2CheckBox t5;
-        private Guna.UI2.WinForms.Guna2CheckBox t4;
-        private Guna.UI2.WinForms.Guna2CheckBox t3;
-        private Guna.UI2.WinForms.Guna2CheckBox t2;
     }
 }
