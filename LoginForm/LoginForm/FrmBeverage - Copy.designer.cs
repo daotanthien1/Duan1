@@ -425,6 +425,7 @@ namespace RJCodeAdvance
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(213, 0);
             this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
             this.panel2.Size = new System.Drawing.Size(1100, 661);
             this.panel2.TabIndex = 6;
             // 
@@ -432,72 +433,72 @@ namespace RJCodeAdvance
             // 
             this.uC_Beverages21.BackColor = System.Drawing.Color.White;
             this.uC_Beverages21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Beverages21.Location = new System.Drawing.Point(0, 0);
+            this.uC_Beverages21.Location = new System.Drawing.Point(0, 10);
             this.uC_Beverages21.Name = "uC_Beverages21";
-            this.uC_Beverages21.Size = new System.Drawing.Size(1100, 661);
+            this.uC_Beverages21.Size = new System.Drawing.Size(1090, 641);
             this.uC_Beverages21.TabIndex = 0;
             // 
             // uC_Order1
             // 
             this.uC_Order1.BackColor = System.Drawing.Color.White;
             this.uC_Order1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Order1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Order1.Location = new System.Drawing.Point(0, 10);
             this.uC_Order1.Name = "uC_Order1";
-            this.uC_Order1.Size = new System.Drawing.Size(1100, 661);
+            this.uC_Order1.Size = new System.Drawing.Size(1090, 641);
             this.uC_Order1.TabIndex = 1;
             // 
             // uC_Customer1
             // 
             this.uC_Customer1.BackColor = System.Drawing.Color.White;
             this.uC_Customer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Customer1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Customer1.Location = new System.Drawing.Point(0, 10);
             this.uC_Customer1.Name = "uC_Customer1";
-            this.uC_Customer1.Size = new System.Drawing.Size(1100, 661);
+            this.uC_Customer1.Size = new System.Drawing.Size(1090, 641);
             this.uC_Customer1.TabIndex = 2;
             // 
             // uC_employee1
             // 
             this.uC_employee1.BackColor = System.Drawing.Color.White;
             this.uC_employee1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_employee1.Location = new System.Drawing.Point(0, 0);
+            this.uC_employee1.Location = new System.Drawing.Point(0, 10);
             this.uC_employee1.Name = "uC_employee1";
-            this.uC_employee1.Size = new System.Drawing.Size(1100, 661);
+            this.uC_employee1.Size = new System.Drawing.Size(1090, 641);
             this.uC_employee1.TabIndex = 3;
             // 
             // uC_ingredient1
             // 
             this.uC_ingredient1.BackColor = System.Drawing.Color.White;
             this.uC_ingredient1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_ingredient1.Location = new System.Drawing.Point(0, 0);
+            this.uC_ingredient1.Location = new System.Drawing.Point(0, 10);
             this.uC_ingredient1.Name = "uC_ingredient1";
-            this.uC_ingredient1.Size = new System.Drawing.Size(1100, 661);
+            this.uC_ingredient1.Size = new System.Drawing.Size(1090, 641);
             this.uC_ingredient1.TabIndex = 4;
             // 
             // uC_Input_Ingredient1
             // 
             this.uC_Input_Ingredient1.BackColor = System.Drawing.Color.White;
             this.uC_Input_Ingredient1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Input_Ingredient1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Input_Ingredient1.Location = new System.Drawing.Point(0, 10);
             this.uC_Input_Ingredient1.Name = "uC_Input_Ingredient1";
-            this.uC_Input_Ingredient1.Size = new System.Drawing.Size(1100, 661);
+            this.uC_Input_Ingredient1.Size = new System.Drawing.Size(1090, 641);
             this.uC_Input_Ingredient1.TabIndex = 5;
             // 
             // uC_Statistic1
             // 
             this.uC_Statistic1.BackColor = System.Drawing.Color.White;
             this.uC_Statistic1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Statistic1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Statistic1.Location = new System.Drawing.Point(0, 10);
             this.uC_Statistic1.Name = "uC_Statistic1";
-            this.uC_Statistic1.Size = new System.Drawing.Size(1100, 661);
+            this.uC_Statistic1.Size = new System.Drawing.Size(1090, 641);
             this.uC_Statistic1.TabIndex = 6;
             // 
             // uC_Voucher1
             // 
             this.uC_Voucher1.BackColor = System.Drawing.Color.White;
             this.uC_Voucher1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Voucher1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Voucher1.Location = new System.Drawing.Point(0, 10);
             this.uC_Voucher1.Name = "uC_Voucher1";
-            this.uC_Voucher1.Size = new System.Drawing.Size(1100, 661);
+            this.uC_Voucher1.Size = new System.Drawing.Size(1090, 641);
             this.uC_Voucher1.TabIndex = 7;
             // 
             // FrmBeverageCP
