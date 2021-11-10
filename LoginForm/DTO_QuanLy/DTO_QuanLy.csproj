@@ -43,10 +43,18 @@
   <ItemGroup>
     <Compile Include="DTO_CaLamViec.cs" />
     <Compile Include="DTO_LichLamViec.cs" />
+<<<<<<< HEAD
+    <Compile Include="DTO_LoaiVoucher.cs" />
+=======
+    <Compile Include="DTO_LoaiNguyenLieu.cs" />
+    <Compile Include="DTO_NguyenLieu.cs" />
+    <Compile Include="DTO_NhaCungCap.cs" />
+>>>>>>> 49b0d67c16c887fadd380e3d24ea1751a8ec9b9e
     <Compile Include="DTO_NhanVien.cs" />
     <Compile Include="DTO_QuanLyDoUong.cs" />
     <Compile Include="DTO_Role.cs" />
     <Compile Include="DTO_TypesOfBeverage.cs" />
+    <Compile Include="DTO_Vouchers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

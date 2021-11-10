@@ -44,9 +44,17 @@
     <Compile Include="BUS_Beverage.cs" />
     <Compile Include="BUS_CaLamViec.cs" />
     <Compile Include="BUS_LichLamViec.cs" />
+<<<<<<< HEAD
+    <Compile Include="BUS_LoaiVoucher.cs" />
+=======
+    <Compile Include="BUS_LoaiNguyenLieu.cs" />
+    <Compile Include="BUS_NguyenLieu.cs" />
+    <Compile Include="BUS_NhaCungCap.cs" />
+>>>>>>> 49b0d67c16c887fadd380e3d24ea1751a8ec9b9e
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_Role.cs" />
     <Compile Include="BUS_TypesOfBeverage.cs" />
+    <Compile Include="BUS_Vouchers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

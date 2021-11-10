@@ -749,6 +749,121 @@ as
 		inner join Schedules b on a.Id_employee = b.Id_employee and a.Id_employee = @Id_employee
 		inner join Shifts c on b.Id_shift = c.Id_shift
 	end
+<<<<<<< HEAD
+go
+-- proc for table TypeOfVoucher
+-- proc get data
+create proc getDataTypeVouchers
+as
+	begin 
+		select ID_Type,CONCAT(CAST(Sale AS varchar(10)),'%') from TypesVoucher
+	end
+go
+-- proc insert data TypeVoucher
+create proc InsertDataTypeVoucher
+@Sale float
+as
+	begin
+			if(not exists(select * from TypesVoucher where Sale = @Sale))
+			begin
+				insert into TypesVoucher(Sale) values (@Sale)
+			end
+	end
+go
+-- proc delete data TypeVoucher
+create proc DeleteDataTypeVoucher
+@Id int
+as
+	begin 
+		delete from TypesVoucher where ID_Type = @Id
+	end
+go
+-- proc Update data TypeVoucher
+create proc UpdateDatatypeVoucher
+@Id int, @Sale float
+as
+	begin
+		if(not exists(select * from TypesVoucher where Sale = @Sale))
+			begin
+				Update TypesVoucher set Sale = @Sale where ID_Type = @Id
+			end
+	end
+go
+-- proc search data TypeVoucher
+create proc SearchDataTypeVoucher
+@Sale float
+as
+	begin
+		set nocount on;
+		select * from TypesVoucher where Sale = @Sale
+	end
+go
+
+-- proc for table Voucher
+-- proc insert data table
+go
+create proc loadTypeVoucher
+as
+	begin
+		select ID_Type, Sale from TypesVoucher
+	end
+go
+-- proc insert data Voucher
+create proc insertDataVoucher
+@Id_voucher varchar(6), @DayBegin date, @DayEnd date,  @mail varchar(50), @Id_type int, @Status int
+as
+	begin
+		declare @Id_employee int
+		if(not exists (select Id_voucher from Vouchers where Id_voucher = @Id_voucher))
+		begin
+			select @Id_employee = Id_employee from Employees where Email = @mail
+			insert into Vouchers(Id_voucher, DateBegin, DateEnd,Id_employee ,ID_Type, Status) values (@Id_voucher, @DayBegin, @DayEnd,@Id_employee ,@Id_type, @Status)
+		end
+	end
+go
+-- get Sale for Voucher
+create proc getSaleForVoucher
+as
+	begin
+		select ID_Type, Sale from TypesVoucher
+	end
+go
+-- get data of voucher
+create proc getDataVoucher
+as
+	begin
+		select a.Id_voucher, a.DateBegin, a.DateEnd, CONCAT(CAST(b.Sale AS varchar(10)),'%'), a.Status from Vouchers a 
+		inner join TypesVoucher b on a.ID_Type = b.ID_Type
+	end
+go
+-- get count Sale in vouchers
+create proc getCountSaleVoucher
+@Id_type int
+as
+	begin
+		select count(ID_Type) from Vouchers where ID_Type = @Id_type
+	end
+go
+-- search Sale in Voucher
+create proc SearchDataVoucher
+@Id_type int
+as
+	begin
+		set nocount on;
+		select Id_voucher, DateBegin, DateEnd, ID_Type, Status from Vouchers where ID_Type = @Id_type
+	end
+go
+-- delete voucher in number sale
+create proc DeleteDataVoucher
+@Id_type varchar(50)
+as
+	begin
+		delete Vouchers where Id_voucher = @Id_type
+	end
+
+
+
+=======
 
 --- CUSTOMERS --
 -- CUSTOMERS UPDATE
@@ -789,6 +904,7 @@ AS
         END
 END
 -- exec sp_CustomerSearch 'a@b'
+<<<<<<< HEAD
 -- get
 if OBJECT_ID ('sp_GetCustomers') is not null 
 drop proc sp_GetCustomers
@@ -801,3 +917,6 @@ begin
 
 end
 -- exec sp_getcustomers
+=======
+>>>>>>> 49b0d67c16c887fadd380e3d24ea1751a8ec9b9e
+>>>>>>> 2b1ac3e10ff863361620016471a3165e6327a9aa
