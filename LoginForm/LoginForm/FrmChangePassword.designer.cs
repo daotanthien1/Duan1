@@ -166,7 +166,6 @@ namespace RJCodeAdvance
             this.txtMatKhauMoi.ShadowDecoration.Parent = this.txtMatKhauMoi;
             this.txtMatKhauMoi.Size = new System.Drawing.Size(317, 36);
             this.txtMatKhauMoi.TabIndex = 6;
-            this.txtMatKhauMoi.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             // 
             // label5
             // 
@@ -229,6 +228,7 @@ namespace RJCodeAdvance
             this.btDoiMatKhau.Size = new System.Drawing.Size(148, 45);
             this.btDoiMatKhau.TabIndex = 9;
             this.btDoiMatKhau.Text = "Đổi mật khẩu";
+            this.btDoiMatKhau.Click += new System.EventHandler(this.btDoiMatKhau_Click);
             // 
             // btThoat
             // 
@@ -253,6 +253,7 @@ namespace RJCodeAdvance
             this.btThoat.Size = new System.Drawing.Size(140, 45);
             this.btThoat.TabIndex = 10;
             this.btThoat.Text = "Thoát";
+            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // FrmChangePassword
             // 
