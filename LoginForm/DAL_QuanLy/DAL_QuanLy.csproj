@@ -45,7 +45,13 @@
     <Compile Include="Class1.cs" />
     <Compile Include="DAL_CaLamViec.cs" />
     <Compile Include="DAL_LichLamViec.cs" />
+<<<<<<< HEAD
     <Compile Include="DAL_LoaiVoucher.cs" />
+=======
+    <Compile Include="DAL_LoaiNguyenLieu.cs" />
+    <Compile Include="DAL_NguyenLieu.cs" />
+    <Compile Include="DAL_NhaCungCap.cs" />
+>>>>>>> 49b0d67c16c887fadd380e3d24ea1751a8ec9b9e
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_QuanLyDoUong.cs" />
     <Compile Include="DAL_Role.cs" />
