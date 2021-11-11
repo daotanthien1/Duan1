@@ -6,7 +6,46 @@ using System.Threading.Tasks;
 
 namespace DTO_QuanLy
 {
-    class DTO_LoaiVoucher
+    public class DTO_LoaiVoucher
     {
+        private int Id;
+        private float sale;
+        private int v;
+
+        public int id
+        {
+            get
+            {
+                return Id;
+            }
+            set
+            {
+                Id = value;
+            }
+        }
+        public float Sale
+        {
+            get
+            {
+                return sale;
+            }
+            set
+            {
+                sale = value;
+            }
+        }
+        public DTO_LoaiVoucher(int id, float Sale)
+        {
+            this.Id = id;
+            this.sale = Sale;
+        }
+        public DTO_LoaiVoucher(float Sale)
+        {
+            this.sale = Sale;
+        }
+        public DTO_LoaiVoucher(int v)
+        {
+            this.v = v;
+        }
     }
 }

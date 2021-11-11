@@ -846,7 +846,7 @@ go
 create proc getDataVoucher
 as
 	begin
-		select a.Id_voucher, a.DateBegin, a.DateEnd, CONCAT(CAST(b.Sale AS varchar(10)),'%'), a.Status from Vouchers a 
+		select a.Id_voucher, a.DateBegin, a.DateEnd, b.Sale, a.Status from Vouchers a 
 		inner join TypesVoucher b on a.ID_Type = b.ID_Type
 	end
 go
@@ -869,10 +869,10 @@ as
 go
 -- delete voucher in number sale
 create proc DeleteDataVoucher
-@Id_type varchar(50)
+@Id_type int, @DayBegin varchar(50), @DayEnd varchar(50)
 as
 	begin
-		delete Vouchers where Id_voucher = @Id_type
+		delete Vouchers where ID_Type = @Id_type and DateBegin = @DayBegin and DateEnd = @DayEnd
 	end
 
 

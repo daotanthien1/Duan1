@@ -38,9 +38,7 @@ namespace RJCodeAdvance
             this.bt1 = new Guna.UI2.WinForms.Guna2Button();
             this.imageSlide = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_Voucher1 = new RJCodeAdvance.ControlVouchers.UC_Voucher_OLD();
-            this.uC_sale1 = new RJCodeAdvance.ControlVouchers.UC_sale();
-            this.uC_TypeOfVoucher1 = new RJCodeAdvance.ControlVouchers.UC_TypeOfVoucher();
+            this.uC_Voucher1 = new RJCodeAdvance.ControlVouchers.UC_Voucher();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlide)).BeginInit();
@@ -191,8 +189,6 @@ namespace RJCodeAdvance
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.uC_Voucher1);
-            this.panel2.Controls.Add(this.uC_sale1);
-            this.panel2.Controls.Add(this.uC_TypeOfVoucher1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(213, 0);
             this.panel2.Name = "panel2";
@@ -201,27 +197,12 @@ namespace RJCodeAdvance
             // 
             // uC_Voucher1
             // 
+            this.uC_Voucher1.BackColor = System.Drawing.Color.White;
             this.uC_Voucher1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uC_Voucher1.Location = new System.Drawing.Point(0, 0);
             this.uC_Voucher1.Name = "uC_Voucher1";
             this.uC_Voucher1.Size = new System.Drawing.Size(1100, 530);
             this.uC_Voucher1.TabIndex = 0;
-            // 
-            // uC_sale1
-            // 
-            this.uC_sale1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_sale1.Location = new System.Drawing.Point(0, 0);
-            this.uC_sale1.Name = "uC_sale1";
-            this.uC_sale1.Size = new System.Drawing.Size(1100, 530);
-            this.uC_sale1.TabIndex = 2;
-            // 
-            // uC_TypeOfVoucher1
-            // 
-            this.uC_TypeOfVoucher1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_TypeOfVoucher1.Location = new System.Drawing.Point(0, 0);
-            this.uC_TypeOfVoucher1.Name = "uC_TypeOfVoucher1";
-            this.uC_TypeOfVoucher1.Size = new System.Drawing.Size(1100, 530);
-            this.uC_TypeOfVoucher1.TabIndex = 1;
             // 
             // FrmVoucher
             // 
@@ -251,8 +232,6 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2Button bt1;
         private System.Windows.Forms.PictureBox imageSlide;
         private System.Windows.Forms.Panel panel2;
-        private ControlVouchers.UC_Voucher_OLD uC_Voucher1;
-        private ControlVouchers.UC_sale uC_sale1;
-        private ControlVouchers.UC_TypeOfVoucher uC_TypeOfVoucher1;
+        private ControlVouchers.UC_Voucher uC_Voucher1;
     }
 }
