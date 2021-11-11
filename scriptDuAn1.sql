@@ -49,9 +49,10 @@ Go
 
 create table Shifts
 (
+	name nvarchar(50) not null,
 	TimeBegin VARCHAR(10) not null,
 	TimeEnd VARCHAR(10) not null,
-	Id_shift int primary key,
+	Id_shift int primary key identity,
 );
 Go
 

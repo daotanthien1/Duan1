@@ -18,7 +18,7 @@ namespace RJCodeAdvance.ControlVouchers
         {
             InitializeComponent();
         }
-        public static string mail;
+        public static string mail = "tiep@gmail.co";
         public string id;
         BUS_Vouchers vouchers = new BUS_Vouchers();
         private void guna2Button1_Click(object sender, EventArgs e)
