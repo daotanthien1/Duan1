@@ -49,10 +49,9 @@ Go
 
 create table Shifts
 (
-	name nvarchar(50) not null,
 	TimeBegin VARCHAR(10) not null,
 	TimeEnd VARCHAR(10) not null,
-	Id_shift int primary key identity,
+	Id_shift int primary key,
 );
 Go
 
@@ -470,6 +469,18 @@ AS
 -- ****** SimpleForMe ******
 
 -- INGREDIENT
+-- Get Ingredient
+if OBJECT_ID ('sp_GetIngredient') is not null 
+drop proc sp_GetIngredient
+go 
+create proc sp_GetIngredient
+as
+begin
+    SELECT Id_ingredient, Name, Id_supplier, Id_type, Price
+    FROM Ingredients
+end
+go
+
 -- Insert Ingredient
 if OBJECT_ID ('sp_IngredientInsert') is not null 
 drop proc sp_IngredientInsert
@@ -535,6 +546,18 @@ AS
 -- exec sp_IngredientSearch 'Bot ngot'
 
 -- TYPE OF INGREDIENT
+-- Get Type of Ingredient
+if OBJECT_ID ('sp_GetTypeOfIngredient') is not null 
+drop proc sp_GetTypeOfIngredient
+go 
+create proc sp_GetTypeOfIngredient
+as
+begin
+    SELECT Id_type, Name
+    FROM TypesOfIngredient
+end
+go
+
 -- Insert Type of Ingredient
 if OBJECT_ID ('sp_TypeOfIngredientInsert') is not null 
 drop proc sp_TypeOfIngredientInsert
@@ -591,6 +614,20 @@ AS
 -- exec sp_TypeOfIngredientSearch 'Dau'
 
 -- SUPPLIER
+-- Get Supplier
+if OBJECT_ID ('sp_GetSupplier') is not null 
+drop proc sp_GetSupplier
+go 
+create proc sp_GetSupplier
+as
+begin
+    SELECT Name, Id_supplier, Email, Address
+    FROM Suppliers
+end
+go
+
+
+
 -- Insert Supplier
 if OBJECT_ID ('sp_SupplierInsert') is not null 
 drop proc sp_SupplierInsert
