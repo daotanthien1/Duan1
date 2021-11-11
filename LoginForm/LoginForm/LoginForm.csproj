@@ -175,35 +175,11 @@
     <Compile Include="ControlCustomers\UC_Customer.Designer.cs">
       <DependentUpon>UC_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlCustomers\UC_Customer_OLD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlCustomers\UC_Customer_OLD.Designer.cs">
-      <DependentUpon>UC_Customer_OLD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlCustomers\UC_Table.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlCustomers\UC_Table.Designer.cs">
-      <DependentUpon>UC_Table.cs</DependentUpon>
-    </Compile>
     <Compile Include="ControlEmployees\UC_employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ControlEmployees\UC_employee.designer.cs">
       <DependentUpon>UC_employee.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlEmployees\UC_employee_OLD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlEmployees\UC_employee_OLD.Designer.cs">
-      <DependentUpon>UC_employee_OLD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlEmployees\UC_TypeOfEmployee.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlEmployees\UC_TypeOfEmployee.Designer.cs">
-      <DependentUpon>UC_TypeOfEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlIngredient\UC_ingredient.cs">
       <SubType>UserControl</SubType>
@@ -211,53 +187,17 @@
     <Compile Include="ControlIngredient\UC_ingredient.designer.cs">
       <DependentUpon>UC_ingredient.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlIngredient\UC_ingredient_OLD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlIngredient\UC_ingredient_OLD.Designer.cs">
-      <DependentUpon>UC_ingredient_OLD.cs</DependentUpon>
-    </Compile>
     <Compile Include="ControlIngredient\UC_Input_Ingredient.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ControlIngredient\UC_Input_Ingredient.designer.cs">
       <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlIngredient\UC_Input_Ingredient_OLD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlIngredient\UC_Input_Ingredient_OLD.Designer.cs">
-      <DependentUpon>UC_Input_Ingredient_OLD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlIngredient\UC_Supplier.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlIngredient\UC_Supplier.Designer.cs">
-      <DependentUpon>UC_Supplier.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlIngredient\UC_typeOfIngredient.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlIngredient\UC_typeOfIngredient.Designer.cs">
-      <DependentUpon>UC_typeOfIngredient.cs</DependentUpon>
-    </Compile>
     <Compile Include="ControlIngredient\UC_Unit.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ControlIngredient\UC_Unit.Designer.cs">
       <DependentUpon>UC_Unit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlScheme\UC_Schedule.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlScheme\UC_Schedule.Designer.cs">
-      <DependentUpon>UC_Schedule.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlScheme\UC_Shift.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlScheme\UC_Shift.Designer.cs">
-      <DependentUpon>UC_Shift.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlStatistic\Statistic_bill_ingredient.cs">
       <SubType>UserControl</SubType>
@@ -331,29 +271,11 @@
     <Compile Include="FrmConfigurationSale.designer.cs">
       <DependentUpon>FrmConfigurationSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCustomer.designer.cs">
-      <DependentUpon>FrmCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmEmployees.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmEmployees.designer.cs">
-      <DependentUpon>FrmEmployees.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmForgotPassword.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmForgotPassword.designer.cs">
       <DependentUpon>FrmForgotPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmIngredient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmIngredient.designer.cs">
-      <DependentUpon>FrmIngredient.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIngredientType.cs">
       <SubType>Form</SubType>
@@ -361,41 +283,17 @@
     <Compile Include="FrmIngredientType.designer.cs">
       <DependentUpon>FrmIngredientType.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin_OLD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLogin_OLD.Designer.cs">
-      <DependentUpon>FrmLogin_OLD.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMain.designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmSchedule2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmSchedule2.designer.cs">
       <DependentUpon>FrmSchedule2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmScheme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmScheme.designer.cs">
-      <DependentUpon>FrmScheme.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmShift2.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmShift2.designer.cs">
       <DependentUpon>FrmShift2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmStatistic.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmStatistic.designer.cs">
-      <DependentUpon>FrmStatistic.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSupplier.cs">
       <SubType>Form</SubType>
@@ -409,12 +307,6 @@
     <Compile Include="FrmTable.designer.cs">
       <DependentUpon>FrmTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmThanhToan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmThanhToan.designer.cs">
-      <DependentUpon>FrmThanhToan.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmTypeOfBeverage2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -426,12 +318,6 @@
     </Compile>
     <Compile Include="FrmVaiTro.designer.cs">
       <DependentUpon>FrmVaiTro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmVoucher.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmVoucher.designer.cs">
-      <DependentUpon>FrmVoucher.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginNew.cs">
       <SubType>Form</SubType>
@@ -462,47 +348,17 @@
     <EmbeddedResource Include="ControlCustomers\UC_Customer.resx">
       <DependentUpon>UC_Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlCustomers\UC_Customer_OLD.resx">
-      <DependentUpon>UC_Customer_OLD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlCustomers\UC_Table.resx">
-      <DependentUpon>UC_Table.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ControlEmployees\UC_employee.resx">
       <DependentUpon>UC_employee.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlEmployees\UC_employee_OLD.resx">
-      <DependentUpon>UC_employee_OLD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlEmployees\UC_TypeOfEmployee.resx">
-      <DependentUpon>UC_TypeOfEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlIngredient\UC_ingredient.resx">
       <DependentUpon>UC_ingredient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlIngredient\UC_ingredient_OLD.resx">
-      <DependentUpon>UC_ingredient_OLD.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ControlIngredient\UC_Input_Ingredient.resx">
       <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlIngredient\UC_Input_Ingredient_OLD.resx">
-      <DependentUpon>UC_Input_Ingredient_OLD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlIngredient\UC_Supplier.resx">
-      <DependentUpon>UC_Supplier.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlIngredient\UC_typeOfIngredient.resx">
-      <DependentUpon>UC_typeOfIngredient.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ControlIngredient\UC_Unit.resx">
       <DependentUpon>UC_Unit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlScheme\UC_Schedule.resx">
-      <DependentUpon>UC_Schedule.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlScheme\UC_Shift.resx">
-      <DependentUpon>UC_Shift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlStatistic\Statistic_bill_ingredient.resx">
       <DependentUpon>Statistic_bill_ingredient.cs</DependentUpon>
@@ -537,38 +393,17 @@
     <EmbeddedResource Include="FrmConfigurationSale.resx">
       <DependentUpon>FrmConfigurationSale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCustomer.resx">
-      <DependentUpon>FrmCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmEmployees.resx">
-      <DependentUpon>FrmEmployees.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmForgotPassword.resx">
       <DependentUpon>FrmForgotPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmIngredient.resx">
-      <DependentUpon>FrmIngredient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngredientType.resx">
       <DependentUpon>FrmIngredientType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin_OLD.resx">
-      <DependentUpon>FrmLogin_OLD.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmSchedule2.resx">
       <DependentUpon>FrmSchedule2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmScheme.resx">
-      <DependentUpon>FrmScheme.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmShift2.resx">
       <DependentUpon>FrmShift2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmStatistic.resx">
-      <DependentUpon>FrmStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSupplier.resx">
       <DependentUpon>FrmSupplier.cs</DependentUpon>
@@ -576,17 +411,11 @@
     <EmbeddedResource Include="FrmTable.resx">
       <DependentUpon>FrmTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmThanhToan.resx">
-      <DependentUpon>FrmThanhToan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmTypeOfBeverage2.resx">
       <DependentUpon>FrmTypeOfBeverage2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVaiTro.resx">
       <DependentUpon>FrmVaiTro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmVoucher.resx">
-      <DependentUpon>FrmVoucher.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginNew.resx">
       <DependentUpon>LoginNew.cs</DependentUpon>
