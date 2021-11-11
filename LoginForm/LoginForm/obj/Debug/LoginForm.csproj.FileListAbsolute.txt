@@ -402,3 +402,5 @@ C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\LoginForm\obj\Debug\Log
 C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.RJControls.exe
 C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.RJControls.pdb
 >>>>>>> c46aa3f4b0e24529a26a0f9a277f3e6908f8f9e0
+C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\LoginForm\bin\Debug\Bunifu.Licensing.dll
+C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.RJControls.exe.config
