@@ -31,9 +31,16 @@ namespace RJCodeAdvance
         public string id;
         public static string mail;
         BUS_LichLamViec schedules = new BUS_LichLamViec();
+        private void F2_UpdateEventHandler(object sender, FrmShift2.UpdateEventArgs args)
+        {
+            cbCaLam.DataSource = schedules.getDataId();
+            cbCaLam.DisplayMember = "Id_shift";
+            cbCaLam.ValueMember = "Id_shift";
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            FrmShift2 frm = new FrmShift2();
+            FrmShift2 frm = new FrmShift2(this);
+            frm.UpdateEventHandler += F2_UpdateEventHandler;
             frm.ShowDialog();
         }
         // load form
