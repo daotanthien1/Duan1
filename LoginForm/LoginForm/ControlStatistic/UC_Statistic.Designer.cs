@@ -30,7 +30,7 @@ namespace RJCodeAdvance.ControlStatistic
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Statistic_bill_beverage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Statistic));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -198,7 +198,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.btTuan.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTuan.ForeColor = System.Drawing.Color.White;
             this.btTuan.HoverState.Parent = this.btTuan;
-            this.btTuan.Image = ((System.Drawing.Image)(resources.GetObject("btTuan.Image")));
+            //this.btTuan.Image = ((System.Drawing.Image)(resources.GetObject("btTuan.Image")));
             this.btTuan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btTuan.Location = new System.Drawing.Point(35, 165);
             this.btTuan.Name = "btTuan";
@@ -225,7 +225,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThang.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThang.ForeColor = System.Drawing.Color.White;
             this.btThang.HoverState.Parent = this.btThang;
-            this.btThang.Image = ((System.Drawing.Image)(resources.GetObject("btThang.Image")));
+            //this.btThang.Image = ((System.Drawing.Image)(resources.GetObject("btThang.Image")));
             this.btThang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btThang.Location = new System.Drawing.Point(168, 165);
             this.btThang.Name = "btThang";
@@ -252,7 +252,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.btNam.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btNam.ForeColor = System.Drawing.Color.White;
             this.btNam.HoverState.Parent = this.btNam;
-            this.btNam.Image = ((System.Drawing.Image)(resources.GetObject("btNam.Image")));
+            //this.btNam.Image = ((System.Drawing.Image)(resources.GetObject("btNam.Image")));
             this.btNam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btNam.Location = new System.Drawing.Point(301, 165);
             this.btNam.Name = "btNam";
@@ -279,7 +279,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThongKe.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThongKe.ForeColor = System.Drawing.Color.White;
             this.btThongKe.HoverState.Parent = this.btThongKe;
-            this.btThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btThongKe.Image")));
+           // this.btThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btThongKe.Image")));
             this.btThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btThongKe.Location = new System.Drawing.Point(871, 60);
             this.btThongKe.Name = "btThongKe";
@@ -539,7 +539,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            //this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
             this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button1.Location = new System.Drawing.Point(38, 159);
             this.guna2Button1.Name = "guna2Button1";
@@ -566,7 +566,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
+            //this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
             this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button2.Location = new System.Drawing.Point(171, 159);
             this.guna2Button2.Name = "guna2Button2";
@@ -593,7 +593,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
+            //this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button3.Location = new System.Drawing.Point(304, 159);
             this.guna2Button3.Name = "guna2Button3";
@@ -620,7 +620,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
+            //this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button4.Location = new System.Drawing.Point(874, 54);
             this.guna2Button4.Name = "guna2Button4";
@@ -866,7 +866,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
             this.guna2Button5.HoverState.Parent = this.guna2Button5;
-            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
+            //this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button5.Location = new System.Drawing.Point(51, 161);
             this.guna2Button5.Name = "guna2Button5";
@@ -893,7 +893,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.HoverState.Parent = this.guna2Button6;
-            this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
+            //this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button6.Location = new System.Drawing.Point(174, 161);
             this.guna2Button6.Name = "guna2Button6";
@@ -920,7 +920,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.HoverState.Parent = this.guna2Button7;
-            this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
+           // this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button7.Location = new System.Drawing.Point(285, 161);
             this.guna2Button7.Name = "guna2Button7";
@@ -947,7 +947,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
             this.guna2Button8.HoverState.Parent = this.guna2Button8;
-            this.guna2Button8.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button8.Image")));
+            //this.guna2Button8.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button8.Image")));
             this.guna2Button8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.guna2Button8.Location = new System.Drawing.Point(887, 56);
             this.guna2Button8.Name = "guna2Button8";

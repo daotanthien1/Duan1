@@ -193,59 +193,17 @@
     <Compile Include="ControlIngredient\UC_Input_Ingredient.designer.cs">
       <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlIngredient\UC_Unit.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlIngredient\UC_Unit.Designer.cs">
-      <DependentUpon>UC_Unit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlStatistic\Statistic_bill_ingredient.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlStatistic\Statistic_bill_ingredient.Designer.cs">
-      <DependentUpon>Statistic_bill_ingredient.cs</DependentUpon>
-    </Compile>
     <Compile Include="ControlStatistic\UC_Statistic.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ControlStatistic\UC_Statistic.Designer.cs">
       <DependentUpon>UC_Statistic.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControlStatistic\UC_Statistic_bill_beverage.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlStatistic\UC_Statistic_bill_beverage.Designer.cs">
-      <DependentUpon>UC_Statistic_bill_beverage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlStatistic\UC_Statistic_revenue.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlStatistic\UC_Statistic_revenue.Designer.cs">
-      <DependentUpon>UC_Statistic_revenue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlVouchers\UC_sale.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlVouchers\UC_sale.Designer.cs">
-      <DependentUpon>UC_sale.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlVouchers\UC_TypeOfVoucher.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlVouchers\UC_TypeOfVoucher.Designer.cs">
-      <DependentUpon>UC_TypeOfVoucher.cs</DependentUpon>
-    </Compile>
     <Compile Include="ControlVouchers\UC_Voucher.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ControlVouchers\UC_Voucher.Designer.cs">
       <DependentUpon>UC_Voucher.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ControlVouchers\UC_Voucher_OLD.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ControlVouchers\UC_Voucher_OLD.Designer.cs">
-      <DependentUpon>UC_Voucher_OLD.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBeverage - Copy.cs">
       <SubType>Form</SubType>
@@ -357,29 +315,8 @@
     <EmbeddedResource Include="ControlIngredient\UC_Input_Ingredient.resx">
       <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControlIngredient\UC_Unit.resx">
-      <DependentUpon>UC_Unit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlStatistic\Statistic_bill_ingredient.resx">
-      <DependentUpon>Statistic_bill_ingredient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlStatistic\UC_Statistic_bill_beverage.resx">
-      <DependentUpon>UC_Statistic_bill_beverage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlStatistic\UC_Statistic_revenue.resx">
-      <DependentUpon>UC_Statistic_revenue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlVouchers\UC_sale.resx">
-      <DependentUpon>UC_sale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlVouchers\UC_TypeOfVoucher.resx">
-      <DependentUpon>UC_TypeOfVoucher.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ControlVouchers\UC_Voucher.resx">
       <DependentUpon>UC_Voucher.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ControlVouchers\UC_Voucher_OLD.resx">
-      <DependentUpon>UC_Voucher_OLD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBeverage - Copy.resx">
       <DependentUpon>FrmBeverage - Copy.cs</DependentUpon>
