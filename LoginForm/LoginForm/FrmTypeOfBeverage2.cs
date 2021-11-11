@@ -58,14 +58,14 @@ namespace RJCodeAdvance
             TxtTimKiem.Text = "";
             btnXoa.Enabled = false;
             btnSua.Enabled = false;
-            BtnLuu.Enabled = false;
+            btLuu.Enabled = false;
         }
 
         private void btThem_Click(object sender, EventArgs e)
         {
             ResetValue();
             txtLoaiDoUong.Enabled = true;
-            BtnLuu.Enabled = true;
+            btLuu.Enabled = true;
         }
 
 
@@ -124,11 +124,6 @@ namespace RJCodeAdvance
             }
         }
 
-        private void btLuu(object sender, EventArgs e)
-        {
-
-        }
-
         private void btThoat(object sender, EventArgs e)
         {
             this.Close();
@@ -136,7 +131,45 @@ namespace RJCodeAdvance
 
         private void btLuu_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (check())
+                {
+                    string name = txtLoaiDoUong.Text;
+                    if (BUS_TypesOfBeverage.InsertDoUong(name))
+                    {
+                        loadDGV();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
+        private void dgvLoaiDoUong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvLoaiDoUong.Rows.Count > 1)
+                {
+                    btLuu.Enabled = false;
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
+                    txtLoaiDoUong.Enabled = true;
+                    txtLoaiDoUong.Text = dgvLoaiDoUong.CurrentRow.Cells["Name"].Value.ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }
