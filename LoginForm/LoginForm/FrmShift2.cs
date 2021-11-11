@@ -14,11 +14,21 @@ namespace RJCodeAdvance
 {
     public partial class FrmShift2 : Form
     {
-        public FrmShift2()
+        public FrmShift2(FrmSchedule2 frm1)
         {
             InitializeComponent();
         }
-
+        public delegate void UpdateDelegate(Object sender, UpdateEventArgs args);
+        public event UpdateDelegate UpdateEventHandler;
+        public class UpdateEventArgs : EventArgs
+        {
+            public string Data { get; set; }
+        }
+        protected void insert()
+        {
+            UpdateEventArgs args = new UpdateEventArgs();
+            UpdateEventHandler.Invoke(this, args);
+        }
         private void guna2Button6_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -32,9 +42,9 @@ namespace RJCodeAdvance
         void loadDate()
         {
             guna2DataGridView1.DataSource = shift.getShifts();
-            guna2DataGridView1.Columns[0].HeaderText = "Tên ca";
-            guna2DataGridView1.Columns[1].HeaderText = "Thời gian bắt đầu";
-            guna2DataGridView1.Columns[2].HeaderText = "Thời gian kết thúc";
+            guna2DataGridView1.Columns[2].HeaderText = "Tên ca";
+            guna2DataGridView1.Columns[0].HeaderText = "Thời gian bắt đầu";
+            guna2DataGridView1.Columns[1].HeaderText = "Thời gian kết thúc";
         }
         // reset value
         void restValue()
@@ -85,6 +95,7 @@ namespace RJCodeAdvance
                     restValue();
                 }
             }
+            insert();
         }
         //xóa
         private void btXoa2_Click(object sender, EventArgs e)
@@ -106,6 +117,7 @@ namespace RJCodeAdvance
             else
             {
             }
+            insert();
         }
         // click datagridview
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -151,6 +163,7 @@ namespace RJCodeAdvance
             else
             {
             }
+            insert();
         }
         //tìm kiếm
         private void btTimKiem_Click(object sender, EventArgs e)

@@ -15,11 +15,22 @@ namespace RJCodeAdvance
 {
     public partial class VoucherType : Form
     {
-        public VoucherType()
+        public VoucherType(UC_Voucher frm1)
         {
             InitializeComponent();
         }
         BUS_LoaiVoucher typeVouchers = new BUS_LoaiVoucher();
+        public delegate void UpdateDelegate(Object sender, UpdateEventArgs args);
+        public event UpdateDelegate UpdateEventHandler;
+        public class UpdateEventArgs : EventArgs
+        {
+            public string Data { get; set; }
+        }
+        protected void insert()
+        {
+            UpdateEventArgs args = new UpdateEventArgs();
+            UpdateEventHandler.Invoke(this, args);
+        }
         // bt lưu
         private void guna2Button5_Click(object sender, EventArgs e)
         {
@@ -42,6 +53,7 @@ namespace RJCodeAdvance
                     resetValue();
                 }
             }
+            insert();
         }
         public string id;
         // click datagribview
@@ -107,6 +119,7 @@ namespace RJCodeAdvance
             {
                 resetValue();
             }
+            insert();
         }
         //sửa
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -130,6 +143,7 @@ namespace RJCodeAdvance
             {
                 resetValue();
             }
+            insert();
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)

@@ -18,12 +18,23 @@ namespace RJCodeAdvance.ControlVouchers
         {
             InitializeComponent();
         }
-        public static string mail = "tiep@gmail.co";
+        public static string mail = "a";
         public string id;
         BUS_Vouchers vouchers = new BUS_Vouchers();
+        private void F2_UpdateEventHandler(object sender, VoucherType.UpdateEventArgs args)
+        {
+            cbSale.DataSource = vouchers.getSale();
+            cbSale.DisplayMember = "Sale";
+            cbSale.ValueMember = "ID_Type";
+
+            cbSearch.DataSource = vouchers.getSale();
+            cbSearch.DisplayMember = "Sale";
+            cbSearch.ValueMember = "ID_Type";
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            VoucherType frm = new VoucherType();
+            VoucherType frm = new VoucherType(this);
+            frm.UpdateEventHandler += F2_UpdateEventHandler;
             frm.ShowDialog();
         }
 
@@ -35,6 +46,7 @@ namespace RJCodeAdvance.ControlVouchers
         private void UC_Voucher_Load(object sender, EventArgs e)
         {
             loadData();
+            guna2DataGridView1.DataSource = vouchers.getData();
         }
         // load data
         void loadData()
