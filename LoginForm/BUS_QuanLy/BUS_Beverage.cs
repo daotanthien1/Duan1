@@ -32,5 +32,9 @@ namespace BUS_QuanLy
         {
             return quanLyDoUong.getBeverage();
         }
+        public DataTable getBeverageType()
+        {
+            return quanLyDoUong.getBeverageType();
+        }
     }
 }
