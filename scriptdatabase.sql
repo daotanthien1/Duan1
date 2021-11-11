@@ -1,86 +1,88 @@
 USE [master]
 GO
-/****** Object:  Database [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF]    Script Date: 11/11/2021 5:31:06 PM ******/
-CREATE DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF]
+/****** Object:  Database [D:\database\DUAN1.MDF]    Script Date: 11/11/2021 8:40:24 PM ******/
+CREATE DATABASE [D:\database\DUAN1.MDF]
  CONTAINMENT = NONE
  ON  PRIMARY 
-( NAME = N'DuAn1', FILENAME = N'C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\LoginForm\bin\Debug\DuAn1.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+( NAME = N'DuAn1', FILENAME = N'D:\database\DuAn1.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
  LOG ON 
-( NAME = N'DuAn1_log', FILENAME = N'C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\LoginForm\bin\Debug\DuAn1_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+( NAME = N'DuAn1_log', FILENAME = N'D:\database\DuAn1_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
  WITH CATALOG_COLLATION = DATABASE_DEFAULT
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET COMPATIBILITY_LEVEL = 150
+ALTER DATABASE [D:\database\DUAN1.MDF] SET COMPATIBILITY_LEVEL = 150
 GO
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
-EXEC [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF].[dbo].[sp_fulltext_database] @action = 'enable'
+EXEC [D:\database\DUAN1.MDF].[dbo].[sp_fulltext_database] @action = 'enable'
 end
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET ANSI_NULL_DEFAULT OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET ANSI_NULL_DEFAULT OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET ANSI_NULLS OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET ANSI_NULLS OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET ANSI_PADDING OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET ANSI_PADDING OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET ANSI_WARNINGS OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET ANSI_WARNINGS OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET ARITHABORT OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET ARITHABORT OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET AUTO_CLOSE ON 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET AUTO_CLOSE ON 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET AUTO_SHRINK OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET AUTO_SHRINK OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET AUTO_UPDATE_STATISTICS ON 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET AUTO_UPDATE_STATISTICS ON 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET CURSOR_CLOSE_ON_COMMIT OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET CURSOR_CLOSE_ON_COMMIT OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET CURSOR_DEFAULT  GLOBAL 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET CURSOR_DEFAULT  GLOBAL 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET CONCAT_NULL_YIELDS_NULL OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET CONCAT_NULL_YIELDS_NULL OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET NUMERIC_ROUNDABORT OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET NUMERIC_ROUNDABORT OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET QUOTED_IDENTIFIER OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET QUOTED_IDENTIFIER OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET RECURSIVE_TRIGGERS OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET RECURSIVE_TRIGGERS OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET  ENABLE_BROKER 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET  ENABLE_BROKER 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET DATE_CORRELATION_OPTIMIZATION OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET DATE_CORRELATION_OPTIMIZATION OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET TRUSTWORTHY OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET TRUSTWORTHY OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET ALLOW_SNAPSHOT_ISOLATION OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET PARAMETERIZATION SIMPLE 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET PARAMETERIZATION SIMPLE 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET READ_COMMITTED_SNAPSHOT OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET READ_COMMITTED_SNAPSHOT OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET HONOR_BROKER_PRIORITY OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET HONOR_BROKER_PRIORITY OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET RECOVERY FULL 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET RECOVERY FULL 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET  MULTI_USER 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET  MULTI_USER 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET PAGE_VERIFY CHECKSUM  
+ALTER DATABASE [D:\database\DUAN1.MDF] SET PAGE_VERIFY CHECKSUM  
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET DB_CHAINING OFF 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET DB_CHAINING OFF 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET TARGET_RECOVERY_TIME = 60 SECONDS 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET DELAYED_DURABILITY = DISABLED 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET DELAYED_DURABILITY = DISABLED 
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+ALTER DATABASE [D:\database\DUAN1.MDF] SET ACCELERATED_DATABASE_RECOVERY = OFF  
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET QUERY_STORE = OFF
+EXEC sys.sp_db_vardecimal_storage_format N'D:\database\DUAN1.MDF', N'ON'
 GO
-USE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF]
+ALTER DATABASE [D:\database\DUAN1.MDF] SET QUERY_STORE = OFF
 GO
-/****** Object:  Table [dbo].[Beverages]    Script Date: 11/11/2021 5:31:07 PM ******/
+USE [D:\database\DUAN1.MDF]
+GO
+/****** Object:  Table [dbo].[Beverages]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -97,7 +99,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Bills]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[Bills]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -114,7 +116,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Bills_detail]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[Bills_detail]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -129,7 +131,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Customers]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[Customers]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -145,7 +147,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Employees]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[Employees]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -166,7 +168,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Ingredients]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[Ingredients]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -183,7 +185,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[InputBills]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[InputBills]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -198,7 +200,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[InputBillsDetaill]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[InputBillsDetaill]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -215,7 +217,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Roles]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[Roles]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -229,7 +231,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Schedules]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[Schedules]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -245,7 +247,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Shifts]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[Shifts]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -254,13 +256,14 @@ CREATE TABLE [dbo].[Shifts](
 	[TimeBegin] [varchar](10) NOT NULL,
 	[TimeEnd] [varchar](10) NOT NULL,
 	[Id_shift] [int] NOT NULL,
+	[name] [nvarchar](20) NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id_shift] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Suppliers]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[Suppliers]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -276,7 +279,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[tables]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[tables]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -291,7 +294,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TypesOfBeverage]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[TypesOfBeverage]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -305,7 +308,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TypesOfIngredient]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[TypesOfIngredient]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -319,7 +322,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TypesVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[TypesVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -333,7 +336,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[units]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[units]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -347,7 +350,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Vouchers]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  Table [dbo].[Vouchers]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -359,7 +362,6 @@ CREATE TABLE [dbo].[Vouchers](
 	[Id_employee] [int] NOT NULL,
 	[ID_Type] [int] NOT NULL,
 	[Status] [int] NOT NULL,
-	[Quantity] [int] NOT NULL,
 PRIMARY KEY CLUSTERED 
 (
 	[Id_voucher] ASC
@@ -463,7 +465,7 @@ REFERENCES [dbo].[TypesVoucher] ([ID_Type])
 GO
 ALTER TABLE [dbo].[Vouchers] CHECK CONSTRAINT [FK_Id_TypeVoucher_voucher]
 GO
-/****** Object:  StoredProcedure [dbo].[CHANGE_PASSWORD]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[CHANGE_PASSWORD]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -486,7 +488,7 @@ BEGIN
 		return -1
 END
 GO
-/****** Object:  StoredProcedure [dbo].[DELETE_DATA_FROM_EMPLOYEE]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[DELETE_DATA_FROM_EMPLOYEE]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -499,7 +501,7 @@ BEGIN
 		where Email = @Email
 END
 GO
-/****** Object:  StoredProcedure [dbo].[DeleteDataSchedule]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[DeleteDataSchedule]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -512,7 +514,7 @@ as
 		delete from Schedules where Id_shift = @Id_shift and Id_employee = @Id_employee and Days = @day
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[DeleteDataShifts]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[DeleteDataShifts]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -525,7 +527,7 @@ as
 		delete from Shifts where Id_shift = @Id_shift
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[DeleteDataTypeVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[DeleteDataTypeVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -538,29 +540,19 @@ as
 		delete from TypesVoucher where ID_Type = @Id
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[DeleteDataVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[DeleteDataVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
--- delete voucher in number sale
-create proc [dbo].[DeleteDataVoucher]
-@Id_type varchar(50)
+  create proc [dbo].[DeleteDataVoucher]
+@Id_type int, @DayBegin varchar(50), @DayEnd varchar(50)
 as
 	begin
-		delete Vouchers where Id_voucher = @Id_type
+		delete Vouchers where ID_Type = @Id_type and DateBegin = @DayBegin and DateEnd = @DayEnd
 	end
-
-
-
-
-
---- CUSTOMERS --
--- CUSTOMERS UPDATE
-if OBJECT_ID ('sp_CustomerUpdate') is not null 
-drop proc sp_CustomerUpdate
 GO
-/****** Object:  StoredProcedure [dbo].[FORGOT_PASSWORD]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[FORGOT_PASSWORD]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -578,7 +570,7 @@ else
 select @STATUS
 END
 GO
-/****** Object:  StoredProcedure [dbo].[getCountSaleVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[getCountSaleVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -591,7 +583,7 @@ as
 		select count(ID_Type) from Vouchers where ID_Type = @Id_type
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[getDataSchedule]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[getDataSchedule]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -605,7 +597,7 @@ as
 		inner join Shifts c on b.Id_shift = c.Id_shift
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[GetDataShifts]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[GetDataShifts]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -617,7 +609,7 @@ as
 		select * from Shifts
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[getDataTypeVouchers]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[getDataTypeVouchers]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -630,7 +622,7 @@ as
 		select ID_Type,CONCAT(CAST(Sale AS varchar(10)),'%') from TypesVoucher
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[getDataVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[getDataVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -643,7 +635,7 @@ as
 		inner join TypesVoucher b on a.ID_Type = b.ID_Type
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[getSaleForVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[getSaleForVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -655,7 +647,7 @@ as
 		select ID_Type, Sale from TypesVoucher
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[INSERT_DATA_TO_EMPLOYEE]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[INSERT_DATA_TO_EMPLOYEE]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -676,7 +668,7 @@ BEGIN
 		VALUES(@Id_role,@Gender,@Email,@Address,@Password,@DayOfBirth,@Name,@Salary)
 END
 GO
-/****** Object:  StoredProcedure [dbo].[InsertDataSchedule]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertDataSchedule]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -693,7 +685,7 @@ as
 			end
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[InsertDataShifts]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertDataShifts]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -709,7 +701,7 @@ as
 		end
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[InsertDataTypeVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[InsertDataTypeVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -725,7 +717,7 @@ as
 			end
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[insertDataVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[insertDataVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -743,7 +735,7 @@ as
 		end
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[loadIdShift]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[loadIdShift]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -755,7 +747,7 @@ as
 		select Id_shift from Shifts
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[loadName]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[loadName]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -767,7 +759,7 @@ as
 		select Name, Id_employee from Employees
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[loadTypeVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[loadTypeVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -778,7 +770,7 @@ as
 		select ID_Type, Sale from TypesVoucher
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[LOGIN]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[LOGIN]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -797,7 +789,7 @@ BEGIN
 	SELECT @STATUS
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SEARCH_EMPLOYEE]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[SEARCH_EMPLOYEE]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -812,7 +804,7 @@ BEGIN
 		where Name like '%' + @Name + '%'
 END
 GO
-/****** Object:  StoredProcedure [dbo].[SearchDataShifts]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[SearchDataShifts]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -826,7 +818,7 @@ as
 		select Id_shift, TimeBegin, TimeEnd from Shifts where Id_shift = @Id_shift
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[SearchDataTypeVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[SearchDataTypeVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -840,7 +832,7 @@ as
 		select * from TypesVoucher where Sale = @Sale
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[SearchDataVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[SearchDataVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -854,7 +846,7 @@ as
 		select Id_voucher, DateBegin, DateEnd, ID_Type, Status from Vouchers where ID_Type = @Id_type
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[searchSchedules]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[searchSchedules]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -871,7 +863,7 @@ as
 	end
 
 GO
-/****** Object:  StoredProcedure [dbo].[sp_BeverageDelete]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_BeverageDelete]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -886,7 +878,7 @@ AS
         END
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_BeverageInsert]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_BeverageInsert]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -905,7 +897,7 @@ AS
         END
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_BeverageSearch]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_BeverageSearch]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -922,7 +914,7 @@ AS
         END
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_BeverageUpdate]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_BeverageUpdate]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -947,7 +939,7 @@ AS
         END
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_CustomerSearch]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_CustomerSearch]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -963,7 +955,7 @@ AS
         END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_CustomerUpdate]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_CustomerUpdate]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -986,7 +978,7 @@ AS
         END
 END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_GetBeverage]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_GetBeverage]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -999,7 +991,7 @@ begin
 
 end
 GO
-/****** Object:  StoredProcedure [dbo].[sp_GetCustomers]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_GetCustomers]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1012,7 +1004,7 @@ begin
 
 end
 GO
-/****** Object:  StoredProcedure [dbo].[sp_IngredientDelete]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_IngredientDelete]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1024,7 +1016,7 @@ AS
 		where Id_ingredient = @Id_ingredient
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_IngredientInsert]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_IngredientInsert]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1040,7 +1032,7 @@ AS
 		values(@Name,@Id_supplier,@Id_type,@Price)
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_IngredientSearch]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_IngredientSearch]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1056,7 +1048,7 @@ AS
         END
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_IngredientUpdate]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_IngredientUpdate]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1076,7 +1068,7 @@ AS
 		where Id_ingredient = @Id_ingredient
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_SupplierDelete]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_SupplierDelete]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1088,7 +1080,7 @@ AS
 		where Id_supplier = @Id_supplier
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_SupplierInsert]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_SupplierInsert]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1103,7 +1095,7 @@ AS
 		values(@Name, @Email, @Address)
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_SupplierSearch]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_SupplierSearch]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1119,7 +1111,7 @@ AS
         END
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_SupplierUpdate]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_SupplierUpdate]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1137,7 +1129,7 @@ AS
 		where Id_supplier = @Id_supplier
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_TypeOfBeverageDelete]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_TypeOfBeverageDelete]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1152,7 +1144,7 @@ AS
         END
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_TypeOfBeverageGet]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_TypeOfBeverageGet]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1164,7 +1156,7 @@ AS
 		select id_type, name from typesofbeverage
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_TypeOfBeverageInsertSearch]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_TypeOfBeverageInsertSearch]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1185,7 +1177,7 @@ AS
         END
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_TypeOfBeverageUpdate]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_TypeOfBeverageUpdate]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1200,7 +1192,7 @@ AS
 		where Id_type = @id_type
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_TypeOfIngredientDelete]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_TypeOfIngredientDelete]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1212,7 +1204,7 @@ AS
 		where Id_type = @Id_type
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_TypeOfIngredientInsert]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_TypeOfIngredientInsert]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1225,7 +1217,7 @@ AS
 		values(@Name)
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_TypeOfIngredientSearch]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_TypeOfIngredientSearch]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1241,7 +1233,7 @@ AS
         END
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[sp_TypeOfIngredientUpdate]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[sp_TypeOfIngredientUpdate]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1255,7 +1247,7 @@ AS
 		where Id_type = @Id_type
 	END
 GO
-/****** Object:  StoredProcedure [dbo].[UPDATE_DATA_TO_EMPLOYEE]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[UPDATE_DATA_TO_EMPLOYEE]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1275,7 +1267,7 @@ BEGIN
 		
 END
 GO
-/****** Object:  StoredProcedure [dbo].[UpdateDataSchedule]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[UpdateDataSchedule]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1288,7 +1280,7 @@ as
 		update Schedules set Id_employee = @Id_employee, Id_shift = @Id_shift, Days = @day where Id_schedule = @Id_schedule
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[UpdateDataShifts]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[UpdateDataShifts]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1301,7 +1293,7 @@ as
 		Update Shifts set TimeBegin = @TimeBegin, TimeEnd = @TimeEnd where Id_shift = @Id_shift
 	end
 GO
-/****** Object:  StoredProcedure [dbo].[UpdateDatatypeVoucher]    Script Date: 11/11/2021 5:31:07 PM ******/
+/****** Object:  StoredProcedure [dbo].[UpdateDatatypeVoucher]    Script Date: 11/11/2021 8:40:25 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -1319,5 +1311,5 @@ as
 GO
 USE [master]
 GO
-ALTER DATABASE [C:\USERS\TUNGNH230802\ONEDRIVE\WORKSPACE\DUAN1\LOGINFORM\LOGINFORM\BIN\DEBUG\DUAN1.MDF] SET  READ_WRITE 
+ALTER DATABASE [D:\database\DUAN1.MDF] SET  READ_WRITE 
 GO
