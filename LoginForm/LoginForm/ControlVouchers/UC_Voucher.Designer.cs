@@ -30,12 +30,11 @@ namespace RJCodeAdvance.ControlVouchers
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Voucher));
             this.label1 = new System.Windows.Forms.Label();
-            this.cbSale = new Guna.UI2.WinForms.Guna2ComboBox();
             this.rdChua = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdDung = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,7 +45,7 @@ namespace RJCodeAdvance.ControlVouchers
             this.cbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.txtSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -56,10 +55,12 @@ namespace RJCodeAdvance.ControlVouchers
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.guna2NumericUpDown2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.txtThem = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.cbSale = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.gunaColorTransition1 = new Guna.UI.WinForms.GunaColorTransition(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThem)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,31 +73,6 @@ namespace RJCodeAdvance.ControlVouchers
             this.label1.Size = new System.Drawing.Size(74, 16);
             this.label1.TabIndex = 89;
             this.label1.Text = "Giảm giá:";
-            // 
-            // cbSale
-            // 
-            this.cbSale.BackColor = System.Drawing.Color.Transparent;
-            this.cbSale.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.cbSale.BorderRadius = 15;
-            this.cbSale.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbSale.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSale.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSale.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSale.FocusedState.Parent = this.cbSale;
-            this.cbSale.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbSale.HoverState.Parent = this.cbSale;
-            this.cbSale.ItemHeight = 30;
-            this.cbSale.Items.AddRange(new object[] {
-            "20%",
-            "50%",
-            "100%"});
-            this.cbSale.ItemsAppearance.Parent = this.cbSale;
-            this.cbSale.Location = new System.Drawing.Point(82, 50);
-            this.cbSale.Name = "cbSale";
-            this.cbSale.ShadowDecoration.Parent = this.cbSale;
-            this.cbSale.Size = new System.Drawing.Size(162, 36);
-            this.cbSale.TabIndex = 90;
             // 
             // rdChua
             // 
@@ -163,10 +139,11 @@ namespace RJCodeAdvance.ControlVouchers
             this.dayStart.BorderThickness = 1;
             this.dayStart.Checked = true;
             this.dayStart.CheckedState.Parent = this.dayStart;
+            this.dayStart.CustomFormat = "yyyy/MM/dd";
             this.dayStart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.dayStart.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayStart.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.dayStart.ForeColor = System.Drawing.Color.White;
-            this.dayStart.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dayStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dayStart.HoverState.Parent = this.dayStart;
             this.dayStart.Location = new System.Drawing.Point(82, 130);
             this.dayStart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -196,10 +173,11 @@ namespace RJCodeAdvance.ControlVouchers
             this.dayEnd.BorderThickness = 1;
             this.dayEnd.Checked = true;
             this.dayEnd.CheckedState.Parent = this.dayEnd;
+            this.dayEnd.CustomFormat = "yyyy/MM/dd";
             this.dayEnd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.dayEnd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayEnd.ForeColor = System.Drawing.Color.White;
-            this.dayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dayEnd.HoverState.Parent = this.dayEnd;
             this.dayEnd.Location = new System.Drawing.Point(555, 130);
             this.dayEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -259,35 +237,33 @@ namespace RJCodeAdvance.ControlVouchers
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.guna2DataGridView1.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.guna2DataGridView1.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle9;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(40, 237);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.guna2DataGridView1.Size = new System.Drawing.Size(1037, 266);
             this.guna2DataGridView1.TabIndex = 120;
@@ -303,7 +279,7 @@ namespace RJCodeAdvance.ControlVouchers
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 4;
+            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 25;
             this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -312,21 +288,22 @@ namespace RJCodeAdvance.ControlVouchers
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
             // 
-            // guna2NumericUpDown1
+            // txtSoLuong
             // 
-            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown1.BorderRadius = 3;
-            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown1.DisabledState.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.FocusedState.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.Black;
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(977, 206);
-            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.ShadowDecoration.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(100, 25);
-            this.guna2NumericUpDown1.TabIndex = 121;
+            this.txtSoLuong.BackColor = System.Drawing.Color.Transparent;
+            this.txtSoLuong.BorderRadius = 3;
+            this.txtSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSoLuong.DisabledState.Parent = this.txtSoLuong;
+            this.txtSoLuong.FocusedState.Parent = this.txtSoLuong;
+            this.txtSoLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSoLuong.ForeColor = System.Drawing.Color.Black;
+            this.txtSoLuong.Location = new System.Drawing.Point(977, 206);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.ShadowDecoration.Parent = this.txtSoLuong;
+            this.txtSoLuong.Size = new System.Drawing.Size(100, 25);
+            this.txtSoLuong.TabIndex = 121;
             // 
             // guna2Elipse1
             // 
@@ -404,12 +381,13 @@ namespace RJCodeAdvance.ControlVouchers
             this.guna2Button5.HoverState.Parent = this.guna2Button5;
             this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button5.Location = new System.Drawing.Point(617, 581);
+            this.guna2Button5.Location = new System.Drawing.Point(476, 581);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(128, 45);
             this.guna2Button5.TabIndex = 117;
             this.guna2Button5.Text = "Lưu";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button4
             // 
@@ -429,12 +407,15 @@ namespace RJCodeAdvance.ControlVouchers
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button4.Location = new System.Drawing.Point(476, 581);
+            this.guna2Button4.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.guna2Button4.Location = new System.Drawing.Point(617, 581);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
             this.guna2Button4.Size = new System.Drawing.Size(128, 45);
             this.guna2Button4.TabIndex = 116;
-            this.guna2Button4.Text = "Sửa";
+            this.guna2Button4.Text = "Danh Sách";
+            this.guna2Button4.TextOffset = new System.Drawing.Point(-2, 0);
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 
@@ -460,6 +441,7 @@ namespace RJCodeAdvance.ControlVouchers
             this.guna2Button3.Size = new System.Drawing.Size(128, 45);
             this.guna2Button3.TabIndex = 115;
             this.guna2Button3.Text = "Xóa";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // btThem
             // 
@@ -486,6 +468,7 @@ namespace RJCodeAdvance.ControlVouchers
             this.btThem.Size = new System.Drawing.Size(128, 45);
             this.btThem.TabIndex = 114;
             this.btThem.Text = "Thêm";
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // btTimKiem
             // 
@@ -513,6 +496,7 @@ namespace RJCodeAdvance.ControlVouchers
             this.btTimKiem.Size = new System.Drawing.Size(127, 35);
             this.btTimKiem.TabIndex = 109;
             this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // label5
             // 
@@ -525,30 +509,64 @@ namespace RJCodeAdvance.ControlVouchers
             this.label5.TabIndex = 123;
             this.label5.Text = "Số lượng:";
             // 
-            // guna2NumericUpDown2
+            // txtThem
             // 
-            this.guna2NumericUpDown2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2NumericUpDown2.BorderRadius = 3;
-            this.guna2NumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2NumericUpDown2.DisabledState.Parent = this.guna2NumericUpDown2;
-            this.guna2NumericUpDown2.FocusedState.Parent = this.guna2NumericUpDown2;
-            this.guna2NumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown2.ForeColor = System.Drawing.Color.Black;
-            this.guna2NumericUpDown2.Location = new System.Drawing.Point(920, 50);
-            this.guna2NumericUpDown2.Name = "guna2NumericUpDown2";
-            this.guna2NumericUpDown2.ShadowDecoration.Parent = this.guna2NumericUpDown2;
-            this.guna2NumericUpDown2.Size = new System.Drawing.Size(157, 36);
-            this.guna2NumericUpDown2.TabIndex = 124;
+            this.txtThem.BackColor = System.Drawing.Color.Transparent;
+            this.txtThem.BorderRadius = 3;
+            this.txtThem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtThem.DisabledState.Parent = this.txtThem;
+            this.txtThem.FocusedState.Parent = this.txtThem;
+            this.txtThem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtThem.ForeColor = System.Drawing.Color.Black;
+            this.txtThem.Location = new System.Drawing.Point(920, 50);
+            this.txtThem.Name = "txtThem";
+            this.txtThem.ShadowDecoration.Parent = this.txtThem;
+            this.txtThem.Size = new System.Drawing.Size(157, 36);
+            this.txtThem.TabIndex = 124;
+            // 
+            // cbSale
+            // 
+            this.cbSale.BackColor = System.Drawing.Color.Transparent;
+            this.cbSale.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.cbSale.BorderRadius = 15;
+            this.cbSale.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSale.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSale.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSale.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSale.FocusedState.Parent = this.cbSale;
+            this.cbSale.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSale.HoverState.Parent = this.cbSale;
+            this.cbSale.ItemHeight = 30;
+            this.cbSale.Items.AddRange(new object[] {
+            "20%",
+            "50%",
+            "100%"});
+            this.cbSale.ItemsAppearance.Parent = this.cbSale;
+            this.cbSale.Location = new System.Drawing.Point(82, 50);
+            this.cbSale.Name = "cbSale";
+            this.cbSale.ShadowDecoration.Parent = this.cbSale;
+            this.cbSale.Size = new System.Drawing.Size(162, 36);
+            this.cbSale.TabIndex = 90;
+            // 
+            // gunaColorTransition1
+            // 
+            this.gunaColorTransition1.ColorArray = new System.Drawing.Color[] {
+        System.Drawing.Color.Red,
+        System.Drawing.Color.Blue,
+        System.Drawing.Color.Orange};
+            this.gunaColorTransition1.EndColor = System.Drawing.Color.Blue;
+            this.gunaColorTransition1.StartColor = System.Drawing.Color.Red;
             // 
             // UC_Voucher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2NumericUpDown2);
+            this.Controls.Add(this.txtThem);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.guna2NumericUpDown1);
+            this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.guna2Button6);
             this.Controls.Add(this.guna2Button5);
@@ -569,9 +587,10 @@ namespace RJCodeAdvance.ControlVouchers
             this.Controls.Add(this.label1);
             this.Name = "UC_Voucher";
             this.Size = new System.Drawing.Size(1100, 651);
+            this.Load += new System.EventHandler(this.UC_Voucher_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtThem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -580,7 +599,6 @@ namespace RJCodeAdvance.ControlVouchers
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ComboBox cbSale;
         private Guna.UI2.WinForms.Guna2RadioButton rdChua;
         private Guna.UI2.WinForms.Guna2RadioButton rdDung;
         private System.Windows.Forms.Label label4;
@@ -597,10 +615,12 @@ namespace RJCodeAdvance.ControlVouchers
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button btThem;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown txtSoLuong;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown2;
+        private Guna.UI2.WinForms.Guna2NumericUpDown txtThem;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2ComboBox cbSale;
+        private Guna.UI.WinForms.GunaColorTransition gunaColorTransition1;
     }
 }

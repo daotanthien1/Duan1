@@ -32,11 +32,11 @@ namespace RJCodeAdvance
             }
             if (bt2.Checked)
             {
-                uC_TypeOfVoucher1.BringToFront();
+                //VoucherType.showw();
             }
             if (bt3.Checked)
             {
-                uC_sale1.BringToFront();
+               // uC_sale1.BringToFront();
             }
         }
 
