@@ -117,5 +117,23 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+
+        public DataTable getBeverageType()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "select id_type, Name from typesofbeverage";
+                cmd.Connection = _conn;
+                DataTable dtDoUong = new DataTable();
+                dtDoUong.Load(cmd.ExecuteReader());
+                return dtDoUong;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }

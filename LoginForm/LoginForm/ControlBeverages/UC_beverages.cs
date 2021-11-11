@@ -23,12 +23,6 @@ namespace RJCodeAdvance.ControlBeverages
             InitializeComponent();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            FrmTypeOfBeverage2 frm = new FrmTypeOfBeverage2();
-            frm.ShowDialog();
-        }
-
         private void UC_Beverages2_Load(object sender, EventArgs e)
         {
             ResetValue();
@@ -104,22 +98,13 @@ namespace RJCodeAdvance.ControlBeverages
         }
         void loadComBoBox()
         {
-            using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["QLBH"].ConnectionString))
-            {
-                cbDoUong.Items.Clear();
-                string query = "select id_type, Name from typesofbeverage";
-                SqlDataAdapter da = new SqlDataAdapter(query, conn);
-                conn.Open();
-                DataSet ds = new DataSet();
-                da.Fill(ds, "typesofbeverage");
-                cbDoUong.DisplayMember = "Name";
-                cbDoUong.ValueMember = "id_type";
-                cbDoUong.DataSource = ds.Tables["typesofbeverage"];
-            }
-
-
-
+            cbDoUong.Items.Clear();
+            cbDoUong.DataSource = busBe.getBeverageType();        
+            cbDoUong.DisplayMember = "Name";
+            cbDoUong.ValueMember = "id_type";
         }
+
+
         private void btThem_Click(object sender, EventArgs e)
         {
             ResetValue();
@@ -296,6 +281,12 @@ namespace RJCodeAdvance.ControlBeverages
                 MessageBox.Show("Không tìm thấy sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             ResetValue();
+        }
+
+        private void bntLoaiDoUong_Click(object sender, EventArgs e)
+        {
+            FrmTypeOfBeverage2 frm = new FrmTypeOfBeverage2();
+            frm.ShowDialog();
         }
     }
 }

@@ -14,6 +14,6 @@ namespace DAL_QuanLy
         //protected SqlConnection _conn = new SqlConnection(
         //@"Data Source = LAPTOP-1IIUP3CK\TANTHIEN; Initial Catalog = QLBANHANG ; Integrated Security = True");
         protected SqlConnection _conn = new SqlConnection(ConfigurationManager.ConnectionStrings["QLBH"].ConnectionString);
-
+        //Data Source=DESKTOP-2V5F3CA\TUNGNH230802;Initial Catalog=DuAn1;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False
     }
 }

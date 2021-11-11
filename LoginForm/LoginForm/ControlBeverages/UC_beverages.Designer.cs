@@ -30,12 +30,12 @@ namespace RJCodeAdvance.ControlBeverages
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Beverages2));
             this.dgvElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.dgvBeverage = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -57,6 +57,8 @@ namespace RJCodeAdvance.ControlBeverages
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.picHinh = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btFile = new Guna.UI2.WinForms.Guna2Button();
+            this.bntLoaiDoUong = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBeverage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
@@ -69,39 +71,40 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             // dgvBeverage
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvBeverage.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgvBeverage.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvBeverage.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBeverage.BackgroundColor = System.Drawing.Color.Gray;
             this.dgvBeverage.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBeverage.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBeverage.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBeverage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBeverage.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvBeverage.ColumnHeadersHeight = 27;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBeverage.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBeverage.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvBeverage.EnableHeadersVisualStyles = false;
             this.dgvBeverage.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvBeverage.Location = new System.Drawing.Point(64, 277);
+            this.dgvBeverage.Location = new System.Drawing.Point(48, 225);
+            this.dgvBeverage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvBeverage.Name = "dgvBeverage";
             this.dgvBeverage.RowHeadersVisible = false;
             this.dgvBeverage.RowHeadersWidth = 51;
             this.dgvBeverage.RowTemplate.Height = 24;
             this.dgvBeverage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBeverage.Size = new System.Drawing.Size(1364, 332);
+            this.dgvBeverage.Size = new System.Drawing.Size(1023, 270);
             this.dgvBeverage.TabIndex = 81;
             this.dgvBeverage.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvBeverage.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -145,11 +148,10 @@ namespace RJCodeAdvance.ControlBeverages
             "Trà đào",
             "Trà tắc"});
             this.cbDoUong.ItemsAppearance.Parent = this.cbDoUong;
-            this.cbDoUong.Location = new System.Drawing.Point(593, 95);
-            this.cbDoUong.Margin = new System.Windows.Forms.Padding(4);
+            this.cbDoUong.Location = new System.Drawing.Point(445, 77);
             this.cbDoUong.Name = "cbDoUong";
             this.cbDoUong.ShadowDecoration.Parent = this.cbDoUong;
-            this.cbDoUong.Size = new System.Drawing.Size(352, 36);
+            this.cbDoUong.Size = new System.Drawing.Size(181, 36);
             this.cbDoUong.TabIndex = 2;
             // 
             // txtHinh
@@ -170,14 +172,13 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtHinh.ForeColor = System.Drawing.Color.Black;
             this.txtHinh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHinh.HoverState.Parent = this.txtHinh;
-            this.txtHinh.Location = new System.Drawing.Point(593, 190);
-            this.txtHinh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHinh.Location = new System.Drawing.Point(445, 154);
             this.txtHinh.Name = "txtHinh";
             this.txtHinh.PasswordChar = '\0';
             this.txtHinh.PlaceholderText = "Hình";
             this.txtHinh.SelectedText = "";
             this.txtHinh.ShadowDecoration.Parent = this.txtHinh;
-            this.txtHinh.Size = new System.Drawing.Size(353, 44);
+            this.txtHinh.Size = new System.Drawing.Size(315, 36);
             this.txtHinh.TabIndex = 3;
             // 
             // txtGia
@@ -198,14 +199,13 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtGia.ForeColor = System.Drawing.Color.Black;
             this.txtGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGia.HoverState.Parent = this.txtGia;
-            this.txtGia.Location = new System.Drawing.Point(64, 190);
-            this.txtGia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGia.Location = new System.Drawing.Point(48, 154);
             this.txtGia.Name = "txtGia";
             this.txtGia.PasswordChar = '\0';
             this.txtGia.PlaceholderText = "Giá";
             this.txtGia.SelectedText = "";
             this.txtGia.ShadowDecoration.Parent = this.txtGia;
-            this.txtGia.Size = new System.Drawing.Size(377, 44);
+            this.txtGia.Size = new System.Drawing.Size(283, 36);
             this.txtGia.TabIndex = 1;
             // 
             // txtTenDoUong
@@ -226,14 +226,13 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtTenDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTenDoUong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDoUong.HoverState.Parent = this.txtTenDoUong;
-            this.txtTenDoUong.Location = new System.Drawing.Point(64, 96);
-            this.txtTenDoUong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenDoUong.Location = new System.Drawing.Point(48, 78);
             this.txtTenDoUong.Name = "txtTenDoUong";
             this.txtTenDoUong.PasswordChar = '\0';
             this.txtTenDoUong.PlaceholderText = "Tên đồ uống";
             this.txtTenDoUong.SelectedText = "";
             this.txtTenDoUong.ShadowDecoration.Parent = this.txtTenDoUong;
-            this.txtTenDoUong.Size = new System.Drawing.Size(377, 44);
+            this.txtTenDoUong.Size = new System.Drawing.Size(283, 36);
             this.txtTenDoUong.TabIndex = 0;
             // 
             // label4
@@ -241,10 +240,9 @@ namespace RJCodeAdvance.ControlBeverages
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label4.Location = new System.Drawing.Point(593, 166);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(445, 135);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 21);
+            this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 50;
             this.label4.Text = "Hình:";
             // 
@@ -253,10 +251,9 @@ namespace RJCodeAdvance.ControlBeverages
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(593, 70);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(445, 57);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 21);
+            this.label3.Size = new System.Drawing.Size(95, 16);
             this.label3.TabIndex = 49;
             this.label3.Text = "Loại đồ uống:";
             // 
@@ -265,10 +262,9 @@ namespace RJCodeAdvance.ControlBeverages
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(64, 166);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(48, 135);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 21);
+            this.label2.Size = new System.Drawing.Size(32, 16);
             this.label2.TabIndex = 48;
             this.label2.Text = "Giá:";
             // 
@@ -277,48 +273,46 @@ namespace RJCodeAdvance.ControlBeverages
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(64, 70);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(48, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 21);
+            this.label1.Size = new System.Drawing.Size(92, 16);
             this.label1.TabIndex = 47;
             this.label1.Text = "Tên đồ uống:";
             // 
             // guna2DataGridView2
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.guna2DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.guna2DataGridView2.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle18;
             this.guna2DataGridView2.EnableHeadersVisualStyles = false;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(679, 433);
-            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(509, 352);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.RowHeadersWidth = 51;
             this.guna2DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(11, 10);
+            this.guna2DataGridView2.Size = new System.Drawing.Size(8, 8);
             this.guna2DataGridView2.TabIndex = 66;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -359,14 +353,13 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtSearchDoUong.ForeColor = System.Drawing.Color.BlueViolet;
             this.txtSearchDoUong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchDoUong.HoverState.Parent = this.txtSearchDoUong;
-            this.txtSearchDoUong.Location = new System.Drawing.Point(511, 642);
-            this.txtSearchDoUong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearchDoUong.Location = new System.Drawing.Point(383, 522);
             this.txtSearchDoUong.Name = "txtSearchDoUong";
             this.txtSearchDoUong.PasswordChar = '\0';
             this.txtSearchDoUong.PlaceholderText = "Nhập tên đồ uống cần tìm";
             this.txtSearchDoUong.SelectedText = "";
             this.txtSearchDoUong.ShadowDecoration.Parent = this.txtSearchDoUong;
-            this.txtSearchDoUong.Size = new System.Drawing.Size(304, 44);
+            this.txtSearchDoUong.Size = new System.Drawing.Size(228, 36);
             this.txtSearchDoUong.TabIndex = 4;
             // 
             // btThoat
@@ -388,11 +381,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.btThoat.HoverState.Parent = this.btThoat;
             this.btThoat.Image = ((System.Drawing.Image)(resources.GetObject("btThoat.Image")));
             this.btThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThoat.Location = new System.Drawing.Point(1029, 721);
-            this.btThoat.Margin = new System.Windows.Forms.Padding(4);
+            this.btThoat.Location = new System.Drawing.Point(772, 586);
             this.btThoat.Name = "btThoat";
             this.btThoat.ShadowDecoration.Parent = this.btThoat;
-            this.btThoat.Size = new System.Drawing.Size(171, 55);
+            this.btThoat.Size = new System.Drawing.Size(128, 45);
             this.btThoat.TabIndex = 10;
             this.btThoat.Text = "Thoát";
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
@@ -415,11 +407,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.btLuu.HoverState.Parent = this.btLuu;
             this.btLuu.Image = ((System.Drawing.Image)(resources.GetObject("btLuu.Image")));
             this.btLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLuu.Location = new System.Drawing.Point(843, 721);
-            this.btLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btLuu.Location = new System.Drawing.Point(632, 586);
             this.btLuu.Name = "btLuu";
             this.btLuu.ShadowDecoration.Parent = this.btLuu;
-            this.btLuu.Size = new System.Drawing.Size(171, 55);
+            this.btLuu.Size = new System.Drawing.Size(128, 45);
             this.btLuu.TabIndex = 9;
             this.btLuu.Text = "Lưu";
             this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
@@ -442,11 +433,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.btSua.HoverState.Parent = this.btSua;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua.Location = new System.Drawing.Point(655, 721);
-            this.btSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btSua.Location = new System.Drawing.Point(491, 586);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
-            this.btSua.Size = new System.Drawing.Size(171, 55);
+            this.btSua.Size = new System.Drawing.Size(128, 45);
             this.btSua.TabIndex = 8;
             this.btSua.Text = "Sửa";
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
@@ -469,11 +459,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.btXoa.HoverState.Parent = this.btXoa;
             this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
             this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btXoa.Location = new System.Drawing.Point(468, 721);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btXoa.Location = new System.Drawing.Point(351, 586);
             this.btXoa.Name = "btXoa";
             this.btXoa.ShadowDecoration.Parent = this.btXoa;
-            this.btXoa.Size = new System.Drawing.Size(171, 55);
+            this.btXoa.Size = new System.Drawing.Size(128, 45);
             this.btXoa.TabIndex = 7;
             this.btXoa.Text = "Xóa";
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
@@ -497,11 +486,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(281, 721);
-            this.btThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btThem.Location = new System.Drawing.Point(211, 586);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
-            this.btThem.Size = new System.Drawing.Size(171, 55);
+            this.btThem.Size = new System.Drawing.Size(128, 45);
             this.btThem.TabIndex = 6;
             this.btThem.Text = "Thêm";
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
@@ -525,11 +513,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(823, 642);
-            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btTimKiem.Location = new System.Drawing.Point(617, 522);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
-            this.btTimKiem.Size = new System.Drawing.Size(169, 44);
+            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
             this.btTimKiem.TabIndex = 5;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
@@ -540,11 +527,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.picHinh.BorderRadius = 5;
             this.picHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picHinh.ImageRotate = 0F;
-            this.picHinh.Location = new System.Drawing.Point(1235, 70);
-            this.picHinh.Margin = new System.Windows.Forms.Padding(4);
+            this.picHinh.Location = new System.Drawing.Point(926, 57);
             this.picHinh.Name = "picHinh";
             this.picHinh.ShadowDecoration.Parent = this.picHinh;
-            this.picHinh.Size = new System.Drawing.Size(193, 163);
+            this.picHinh.Size = new System.Drawing.Size(145, 133);
             this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHinh.TabIndex = 55;
             this.picHinh.TabStop = false;
@@ -569,19 +555,51 @@ namespace RJCodeAdvance.ControlBeverages
             this.btFile.HoverState.Parent = this.btFile;
             this.btFile.Image = ((System.Drawing.Image)(resources.GetObject("btFile.Image")));
             this.btFile.ImageSize = new System.Drawing.Size(35, 35);
-            this.btFile.Location = new System.Drawing.Point(1153, 70);
-            this.btFile.Margin = new System.Windows.Forms.Padding(4);
+            this.btFile.Location = new System.Drawing.Point(865, 57);
             this.btFile.Name = "btFile";
             this.btFile.ShadowDecoration.Parent = this.btFile;
-            this.btFile.Size = new System.Drawing.Size(56, 61);
+            this.btFile.Size = new System.Drawing.Size(42, 50);
             this.btFile.TabIndex = 83;
             this.btFile.Click += new System.EventHandler(this.btFile_Click_1);
             // 
+            // bntLoaiDoUong
+            // 
+            this.bntLoaiDoUong.Animated = true;
+            this.bntLoaiDoUong.BorderColor = System.Drawing.Color.White;
+            this.bntLoaiDoUong.BorderRadius = 6;
+            this.bntLoaiDoUong.BorderThickness = 1;
+            this.bntLoaiDoUong.CheckedState.Parent = this.bntLoaiDoUong;
+            this.bntLoaiDoUong.CustomBorderColor = System.Drawing.Color.Gray;
+            this.bntLoaiDoUong.CustomImages.Parent = this.bntLoaiDoUong;
+            this.bntLoaiDoUong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bntLoaiDoUong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bntLoaiDoUong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bntLoaiDoUong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bntLoaiDoUong.DisabledState.Parent = this.bntLoaiDoUong;
+            this.bntLoaiDoUong.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntLoaiDoUong.ForeColor = System.Drawing.Color.White;
+            this.bntLoaiDoUong.HoverState.Parent = this.bntLoaiDoUong;
+            this.bntLoaiDoUong.Image = ((System.Drawing.Image)(resources.GetObject("bntLoaiDoUong.Image")));
+            this.bntLoaiDoUong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.bntLoaiDoUong.Location = new System.Drawing.Point(632, 77);
+            this.bntLoaiDoUong.Name = "bntLoaiDoUong";
+            this.bntLoaiDoUong.ShadowDecoration.Parent = this.bntLoaiDoUong;
+            this.bntLoaiDoUong.Size = new System.Drawing.Size(128, 37);
+            this.bntLoaiDoUong.TabIndex = 84;
+            this.bntLoaiDoUong.Text = "Thêm";
+            this.bntLoaiDoUong.Click += new System.EventHandler(this.bntLoaiDoUong_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 26;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // UC_Beverages2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.bntLoaiDoUong);
             this.Controls.Add(this.btFile);
             this.Controls.Add(this.dgvBeverage);
             this.Controls.Add(this.txtSearchDoUong);
@@ -601,9 +619,8 @@ namespace RJCodeAdvance.ControlBeverages
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Beverages2";
-            this.Size = new System.Drawing.Size(1461, 801);
+            this.Size = new System.Drawing.Size(1096, 651);
             this.Load += new System.EventHandler(this.UC_Beverages2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBeverage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
@@ -635,5 +652,7 @@ namespace RJCodeAdvance.ControlBeverages
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
         private Guna.UI2.WinForms.Guna2DataGridView dgvBeverage;
         internal Guna.UI2.WinForms.Guna2Button btFile;
+        private Guna.UI2.WinForms.Guna2Button bntLoaiDoUong;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
