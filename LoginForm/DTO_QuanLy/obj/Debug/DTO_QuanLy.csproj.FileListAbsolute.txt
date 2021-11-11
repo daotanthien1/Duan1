@@ -14,3 +14,9 @@ D:\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.csproj.CoreCompileInputs.cach
 D:\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.dll
 D:\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.pdb
 D:\My project\C#\DA1\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.csproj.AssemblyReference.cache
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\bin\Debug\DTO_QuanLy.dll
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\bin\Debug\DTO_QuanLy.pdb
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.csproj.AssemblyReference.cache
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.csproj.CoreCompileInputs.cache
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.dll
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.pdb
