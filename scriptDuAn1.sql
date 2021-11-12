@@ -866,6 +866,8 @@ as
 =======
 
 --- CUSTOMERS --
+alter table Customers
+Add Name nvarchar(50),
 -- CUSTOMERS UPDATE
 if OBJECT_ID ('sp_CustomerUpdate') is not null 
 drop proc sp_CustomerUpdate
@@ -874,17 +876,21 @@ create PROCEDURE sp_CustomerUpdate(
                                           @Email   NVARCHAR(55),
                                           @Gender       NVARCHAR(10),
                                           @idCustomers       int,
-                                          @reward int)
+                                          @reward int,
+										  @name nvarchar(50))
 AS
   BEGIN
-
         BEGIN
-			update Customers
-			set Email = @Email,
+			if(not exists (select * from Customers where Email = @Email))
+			begin
+				update Customers
+				set
+				Email = @Email,
 				Gender = @Gender,
-				Reward = @reward
-			where Id_customer = @idCustomers
-
+				Reward = @reward,
+				Name = @name
+				where Id_customer = @idCustomers
+			end
         END
 END
 -- exec sp_CustomerUpdate 'a@b','nu',1,231232
@@ -899,7 +905,7 @@ AS
 
         BEGIN
 			set nocount on;
-			select Email, Gender,Id_customer,Reward
+			select Name, Email, Gender,Id_customer,Reward
 			from Customers where Email like '%' + @Email + '%'
         END
 END
@@ -912,11 +918,53 @@ go
 create proc sp_GetCustomers
 as
 begin
-            SELECT email,gender,id_customer,reward
-            FROM   customers
-
+      select  Name, Email, Gender,Id_customer,Reward  from Customers
 end
 -- exec sp_getcustomers
+-- proc table
+-- get data table
+
+CREATE proc getDataTable
+as
+	begin
+		select * from tables
+	end
+go
+-- insert data table
+create proc InsertDataTable
+@name nvarchar(50), @Status nvarchar(20)
+as
+	begin
+		insert into tables (name, Status) values(@name, @Status)
+	end
+go
+-- Delete data table
+create proc DeleteTable
+@id int
+as
+	begin
+		delete tables where ID_Table = @id
+	end
+go
+-- search data table
+create proc SearchTable
+@name nvarchar(50)
+as
+	begin
+		select * from tables where name like + '%' + @name + '%'
+	end
+go
+-- update data table
+create proc UpdateTable
+@name nvarchar(50), @Status nvarchar(20), @id int
+as
+	begin
+		if(not exists(select * from tables where name = @name))
+		begin
+			update tables set name = @name, Status = @Status where ID_Table = @id
+		end
+	end
+go
 =======
 >>>>>>> 49b0d67c16c887fadd380e3d24ea1751a8ec9b9e
 >>>>>>> 2b1ac3e10ff863361620016471a3165e6327a9aa
