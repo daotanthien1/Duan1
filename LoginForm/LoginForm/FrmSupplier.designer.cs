@@ -37,14 +37,14 @@ namespace RJCodeAdvance
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenNCC = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txbTim = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btThoat = new Guna.UI2.WinForms.Guna2Button();
             this.btLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btSua = new Guna.UI2.WinForms.Guna2Button();
@@ -68,7 +68,7 @@ namespace RJCodeAdvance
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox2.Location = new System.Drawing.Point(1025, 15);
-            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(49, 32);
@@ -83,39 +83,39 @@ namespace RJCodeAdvance
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.Location = new System.Drawing.Point(1083, 15);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(49, 32);
             this.guna2ControlBox1.TabIndex = 130;
             // 
-            // guna2TextBox1
+            // txtTenNCC
             // 
-            this.guna2TextBox1.Animated = true;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.DarkOrchid;
-            this.guna2TextBox1.BorderRadius = 15;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.HotPink;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(28, 66);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Tên Nhà cung cấp";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(403, 44);
-            this.guna2TextBox1.TabIndex = 122;
+            this.txtTenNCC.Animated = true;
+            this.txtTenNCC.BorderColor = System.Drawing.Color.DarkOrchid;
+            this.txtTenNCC.BorderRadius = 15;
+            this.txtTenNCC.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenNCC.DefaultText = "";
+            this.txtTenNCC.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenNCC.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNCC.DisabledState.Parent = this.txtTenNCC;
+            this.txtTenNCC.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNCC.FocusedState.Parent = this.txtTenNCC;
+            this.txtTenNCC.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtTenNCC.ForeColor = System.Drawing.Color.HotPink;
+            this.txtTenNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNCC.HoverState.Parent = this.txtTenNCC;
+            this.txtTenNCC.Location = new System.Drawing.Point(28, 66);
+            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenNCC.Name = "txtTenNCC";
+            this.txtTenNCC.PasswordChar = '\0';
+            this.txtTenNCC.PlaceholderText = "Tên Nhà cung cấp";
+            this.txtTenNCC.SelectedText = "";
+            this.txtTenNCC.ShadowDecoration.Parent = this.txtTenNCC;
+            this.txtTenNCC.Size = new System.Drawing.Size(403, 44);
+            this.txtTenNCC.TabIndex = 122;
             // 
             // dgv
             // 
@@ -146,7 +146,7 @@ namespace RJCodeAdvance
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv.Location = new System.Drawing.Point(28, 226);
-            this.dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv.Margin = new System.Windows.Forms.Padding(4);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
@@ -174,6 +174,7 @@ namespace RJCodeAdvance
             this.dgv.ThemeStyle.RowsStyle.Height = 22;
             this.dgv.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             // 
             // guna2HtmlLabel6
             // 
@@ -181,39 +182,39 @@ namespace RJCodeAdvance
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(28, 37);
-            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel6.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(153, 21);
             this.guna2HtmlLabel6.TabIndex = 120;
             this.guna2HtmlLabel6.Text = "Tên Nhà cung cấp:";
             // 
-            // guna2TextBox3
+            // txtEmail
             // 
-            this.guna2TextBox3.Animated = true;
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.DarkOrchid;
-            this.guna2TextBox3.BorderRadius = 15;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.HotPink;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(503, 66);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "Nhập Email";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(403, 44);
-            this.guna2TextBox3.TabIndex = 133;
+            this.txtEmail.Animated = true;
+            this.txtEmail.BorderColor = System.Drawing.Color.DarkOrchid;
+            this.txtEmail.BorderRadius = 15;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.Parent = this.txtEmail;
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.FocusedState.Parent = this.txtEmail;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtEmail.ForeColor = System.Drawing.Color.HotPink;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.HoverState.Parent = this.txtEmail;
+            this.txtEmail.Location = new System.Drawing.Point(503, 66);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "Nhập Email";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.ShadowDecoration.Parent = this.txtEmail;
+            this.txtEmail.Size = new System.Drawing.Size(403, 44);
+            this.txtEmail.TabIndex = 133;
             // 
             // guna2HtmlLabel1
             // 
@@ -221,39 +222,39 @@ namespace RJCodeAdvance
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(503, 37);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(54, 21);
             this.guna2HtmlLabel1.TabIndex = 132;
             this.guna2HtmlLabel1.Text = "Email:";
             // 
-            // guna2TextBox4
+            // txtDiaChi
             // 
-            this.guna2TextBox4.Animated = true;
-            this.guna2TextBox4.BorderColor = System.Drawing.Color.DarkOrchid;
-            this.guna2TextBox4.BorderRadius = 15;
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.guna2TextBox4.ForeColor = System.Drawing.Color.HotPink;
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Location = new System.Drawing.Point(28, 148);
-            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "Địa chỉ";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(403, 44);
-            this.guna2TextBox4.TabIndex = 135;
+            this.txtDiaChi.Animated = true;
+            this.txtDiaChi.BorderColor = System.Drawing.Color.DarkOrchid;
+            this.txtDiaChi.BorderRadius = 15;
+            this.txtDiaChi.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDiaChi.DefaultText = "";
+            this.txtDiaChi.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDiaChi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDiaChi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiaChi.DisabledState.Parent = this.txtDiaChi;
+            this.txtDiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDiaChi.FocusedState.Parent = this.txtDiaChi;
+            this.txtDiaChi.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtDiaChi.ForeColor = System.Drawing.Color.HotPink;
+            this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDiaChi.HoverState.Parent = this.txtDiaChi;
+            this.txtDiaChi.Location = new System.Drawing.Point(28, 148);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.PasswordChar = '\0';
+            this.txtDiaChi.PlaceholderText = "Địa chỉ";
+            this.txtDiaChi.SelectedText = "";
+            this.txtDiaChi.ShadowDecoration.Parent = this.txtDiaChi;
+            this.txtDiaChi.Size = new System.Drawing.Size(403, 44);
+            this.txtDiaChi.TabIndex = 135;
             // 
             // guna2HtmlLabel2
             // 
@@ -261,38 +262,38 @@ namespace RJCodeAdvance
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(28, 118);
-            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(64, 21);
             this.guna2HtmlLabel2.TabIndex = 134;
             this.guna2HtmlLabel2.Text = "Địa chỉ:";
             // 
-            // txbTim
+            // txtSearch
             // 
-            this.txbTim.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txbTim.BorderRadius = 16;
-            this.txbTim.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbTim.DefaultText = "";
-            this.txbTim.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbTim.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbTim.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbTim.DisabledState.Parent = this.txbTim;
-            this.txbTim.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbTim.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbTim.FocusedState.Parent = this.txbTim;
-            this.txbTim.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txbTim.ForeColor = System.Drawing.Color.BlueViolet;
-            this.txbTim.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbTim.HoverState.Parent = this.txbTim;
-            this.txbTim.Location = new System.Drawing.Point(340, 481);
-            this.txbTim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txbTim.Name = "txbTim";
-            this.txbTim.PasswordChar = '\0';
-            this.txbTim.PlaceholderText = "Nhập tên nhân viên cần tìm";
-            this.txbTim.SelectedText = "";
-            this.txbTim.ShadowDecoration.Parent = this.txbTim;
-            this.txbTim.Size = new System.Drawing.Size(304, 44);
-            this.txbTim.TabIndex = 142;
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtSearch.BorderRadius = 16;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.Parent = this.txtSearch;
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.HoverState.Parent = this.txtSearch;
+            this.txtSearch.Location = new System.Drawing.Point(340, 481);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Nhập tên nhân viên cần tìm";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
+            this.txtSearch.Size = new System.Drawing.Size(304, 44);
+            this.txtSearch.TabIndex = 142;
             // 
             // btThoat
             // 
@@ -314,7 +315,7 @@ namespace RJCodeAdvance
             this.btThoat.Image = ((System.Drawing.Image)(resources.GetObject("btThoat.Image")));
             this.btThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btThoat.Location = new System.Drawing.Point(859, 560);
-            this.btThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btThoat.Name = "btThoat";
             this.btThoat.ShadowDecoration.Parent = this.btThoat;
             this.btThoat.Size = new System.Drawing.Size(171, 55);
@@ -341,7 +342,7 @@ namespace RJCodeAdvance
             this.btLuu.Image = ((System.Drawing.Image)(resources.GetObject("btLuu.Image")));
             this.btLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btLuu.Location = new System.Drawing.Point(672, 560);
-            this.btLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btLuu.Name = "btLuu";
             this.btLuu.ShadowDecoration.Parent = this.btLuu;
             this.btLuu.Size = new System.Drawing.Size(171, 55);
@@ -368,7 +369,7 @@ namespace RJCodeAdvance
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btSua.Location = new System.Drawing.Point(484, 560);
-            this.btSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btSua.Margin = new System.Windows.Forms.Padding(4);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
             this.btSua.Size = new System.Drawing.Size(171, 55);
@@ -395,7 +396,7 @@ namespace RJCodeAdvance
             this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
             this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btXoa.Location = new System.Drawing.Point(297, 560);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btXoa.Name = "btXoa";
             this.btXoa.ShadowDecoration.Parent = this.btXoa;
             this.btXoa.Size = new System.Drawing.Size(171, 55);
@@ -423,7 +424,7 @@ namespace RJCodeAdvance
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btThem.Location = new System.Drawing.Point(111, 560);
-            this.btThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThem.Margin = new System.Windows.Forms.Padding(4);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(171, 55);
@@ -451,7 +452,7 @@ namespace RJCodeAdvance
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btTimKiem.Location = new System.Drawing.Point(652, 481);
-            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
             this.btTimKiem.Size = new System.Drawing.Size(169, 44);
@@ -465,27 +466,28 @@ namespace RJCodeAdvance
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlueViolet;
             this.ClientSize = new System.Drawing.Size(1148, 630);
-            this.Controls.Add(this.txbTim);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btLuu);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.btTimKiem);
-            this.Controls.Add(this.guna2TextBox4);
+            this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.guna2TextBox3);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtTenNCC);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSupplier";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSupplier";
+            this.Load += new System.EventHandler(this.FrmSupplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -495,16 +497,16 @@ namespace RJCodeAdvance
         #endregion
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenNCC;
         private Guna.UI2.WinForms.Guna2DataGridView dgv;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2TextBox txbTim;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Button btThoat;
         private Guna.UI2.WinForms.Guna2Button btLuu;
         private Guna.UI2.WinForms.Guna2Button btSua;

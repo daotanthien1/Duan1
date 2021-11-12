@@ -12,6 +12,10 @@ namespace BUS_QuanLy
     public class BUS_NhaCungCap
     {
         DAL_NhaCungCap quanlyNhaCungCap = new DAL_NhaCungCap();
+        public DataTable getSupplier()
+        {
+            return quanlyNhaCungCap.getSupplier();
+        }
         public bool InsertNhaCungCap(DTO_NhaCungCap ncc)
         {
             return quanlyNhaCungCap.InsertNhaCungCap(ncc);
