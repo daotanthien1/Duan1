@@ -153,6 +153,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.cbDoUong.ShadowDecoration.Parent = this.cbDoUong;
             this.cbDoUong.Size = new System.Drawing.Size(181, 36);
             this.cbDoUong.TabIndex = 2;
+            this.cbDoUong.Click += new System.EventHandler(this.cbDoUong_Click);
             // 
             // txtHinh
             // 

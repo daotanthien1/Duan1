@@ -1,5 +1,6 @@
 ﻿using BUS_QuanLy;
 using DTO_QuanLy;
+using RJCodeAdvance.ControlBeverages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,11 +15,22 @@ namespace RJCodeAdvance
 {
     public partial class FrmTypeOfBeverage2 : Form
     {
-        public FrmTypeOfBeverage2()
+        public FrmTypeOfBeverage2(UC_Beverages2 frm1)
         {
             InitializeComponent();
         }
         BUS_TypesOfBeverage BUS_TypesOfBeverage = new BUS_TypesOfBeverage();
+        public delegate void UpdateDelegate(Object sender, UpdateEventArgs args);
+        public event UpdateDelegate UpdateEventHandler;
+        public class UpdateEventArgs : EventArgs
+        {
+            public string Data { get; set; }
+        }
+        protected void insert()
+        {
+            UpdateEventArgs args = new UpdateEventArgs();
+            UpdateEventHandler.Invoke(this, args);
+        }
         void loadDGV()
         {
             dgvLoaiDoUong.DataSource = BUS_TypesOfBeverage.getBeverage(); 
@@ -101,6 +113,7 @@ namespace RJCodeAdvance
             {
                 ResetValue();
             }
+            insert();
         }
 
         private void btSua(object sender, EventArgs e)
@@ -122,6 +135,7 @@ namespace RJCodeAdvance
             {
                 MessageBox.Show(ex.Message);
             }
+            insert();
         }
 
         private void btThoat(object sender, EventArgs e)
@@ -146,6 +160,7 @@ namespace RJCodeAdvance
             {
                 MessageBox.Show(ex.Message);
             }
+            insert();
         }
 
         private void dgvLoaiDoUong_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -170,6 +185,11 @@ namespace RJCodeAdvance
             {
 
             }
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

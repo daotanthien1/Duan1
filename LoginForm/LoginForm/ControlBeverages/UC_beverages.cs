@@ -22,7 +22,12 @@ namespace RJCodeAdvance.ControlBeverages
         {
             InitializeComponent();
         }
-
+        private void F2_UpdateEventHandler(object sender, FrmTypeOfBeverage2.UpdateEventArgs args)
+        {
+            cbDoUong.DataSource = busBe.getBeverageType();
+            cbDoUong.DisplayMember = "Name";
+            cbDoUong.ValueMember = "id_type";
+        }
         private void UC_Beverages2_Load(object sender, EventArgs e)
         {
             ResetValue();
@@ -98,7 +103,6 @@ namespace RJCodeAdvance.ControlBeverages
         }
         void loadComBoBox()
         {
-            cbDoUong.Items.Clear();
             cbDoUong.DataSource = busBe.getBeverageType();        
             cbDoUong.DisplayMember = "Name";
             cbDoUong.ValueMember = "id_type";
@@ -285,8 +289,14 @@ namespace RJCodeAdvance.ControlBeverages
 
         private void bntLoaiDoUong_Click(object sender, EventArgs e)
         {
-            FrmTypeOfBeverage2 frm = new FrmTypeOfBeverage2();
+            FrmTypeOfBeverage2 frm = new FrmTypeOfBeverage2(this);
+            frm.UpdateEventHandler += F2_UpdateEventHandler;
             frm.ShowDialog();
+        }
+
+        private void cbDoUong_Click(object sender, EventArgs e)
+        {
+            loadComBoBox();
         }
     }
 }

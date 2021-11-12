@@ -344,7 +344,7 @@ begin
             FROM   beverages
 
 end
-
+go
 -- beverage insert
 if OBJECT_ID ('sp_BeverageInsert') is not null 
 drop proc sp_BeverageInsert
@@ -424,7 +424,7 @@ AS
 
 -- TypeOfBeverage
 -- TypeOfBeverage insert
-create PROCEDURE sp_TypeOfBeverageDelete(   @ID   int)
+create PROCEDURE sp_TypeOfBeverageDelete(@ID int)
 AS
   BEGIN
 	
@@ -433,13 +433,14 @@ AS
 			where Id_type = @ID
         END
 	END
+go
 create PROCEDURE sp_TypeOfBeverageGet 
 										
 AS
   BEGIN
 		select id_type, name from typesofbeverage
 	END
-
+go
 create PROCEDURE sp_TypeOfBeverageInsertSearch(   @Name   NVARCHAR(55),
 										@StatementType nvarchar(20) = '')
 AS
@@ -455,6 +456,7 @@ AS
 			from TypesOfBeverage where Name like '%'+@Name+'%'
         END
 	END
+go
 create PROCEDURE sp_TypeOfBeverageUpdate (  @Name   NVARCHAR(55),
 											@id_type int)
 										
@@ -970,5 +972,46 @@ begin
 end
 -- exec sp_getcustomers
 =======
->>>>>>> 49b0d67c16c887fadd380e3d24ea1751a8ec9b9e
->>>>>>> 2b1ac3e10ff863361620016471a3165e6327a9aa
+-- create proc for table
+-- proc get table
+go
+create proc getDataTable
+as
+	begin
+		select * from tables
+	end
+go
+--proc insert table
+create proc InsertDataTable
+@name nvarchar(50), @Status nvarchar(20)
+as
+	begin
+		insert into tables (name, Status) values(@name, @Status)
+	end
+go
+-- proc update table
+create proc UpdateTable
+@name nvarchar(50), @Status nvarchar(20), @id int
+as
+	begin
+		if(not exists(select * from tables where name = @name))
+		begin
+			update tables set name = @name, Status = @Status where ID_Table = @id
+		end
+	end
+go
+-- proc delete table
+create proc DeleteTable
+@id int
+as
+	begin
+		delete tables where ID_Table = @id
+	end
+go
+-- search name table
+create proc SearchTable
+@name nvarchar(50)
+as
+	begin
+		select * from tables where name like + '%' + @name + '%'
+	end

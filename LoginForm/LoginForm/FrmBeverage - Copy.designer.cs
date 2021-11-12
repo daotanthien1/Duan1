@@ -414,14 +414,14 @@ namespace RJCodeAdvance
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.uC_Order1);
+            this.panel2.Controls.Add(this.uC_Beverages21);
             this.panel2.Controls.Add(this.uC_Voucher1);
             this.panel2.Controls.Add(this.uC_Statistic1);
             this.panel2.Controls.Add(this.uC_Input_Ingredient1);
             this.panel2.Controls.Add(this.uC_ingredient1);
             this.panel2.Controls.Add(this.uC_employee1);
             this.panel2.Controls.Add(this.uC_Customer1);
-            this.panel2.Controls.Add(this.uC_Order1);
-            this.panel2.Controls.Add(this.uC_Beverages21);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(213, 0);
             this.panel2.Name = "panel2";
