@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DTO_CaLamViec.cs" />
+    <Compile Include="DTO_Customer.cs" />
     <Compile Include="DTO_LichLamViec.cs" />
     <Compile Include="DTO_LoaiNguyenLieu.cs" />
     <Compile Include="DTO_LoaiVoucher.cs" />

@@ -43,7 +43,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.txbEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTenNhanVien = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -216,7 +216,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.txbEmail.Location = new System.Drawing.Point(617, 71);
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.PasswordChar = '\0';
-            this.txbEmail.PlaceholderText = "Tên nhân viên";
+            this.txbEmail.PlaceholderText = "Email";
             this.txbEmail.SelectedText = "";
             this.txbEmail.ShadowDecoration.Parent = this.txbEmail;
             this.txbEmail.Size = new System.Drawing.Size(330, 36);
@@ -244,32 +244,32 @@ namespace RJCodeAdvance.ControlCustomers
             this.label4.TabIndex = 133;
             this.label4.Text = "Giới tính:";
             // 
-            // txtTenNhanVien
+            // txtName
             // 
-            this.txtTenNhanVien.Animated = true;
-            this.txtTenNhanVien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtTenNhanVien.BorderRadius = 16;
-            this.txtTenNhanVien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenNhanVien.DefaultText = "";
-            this.txtTenNhanVien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenNhanVien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenNhanVien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenNhanVien.DisabledState.Parent = this.txtTenNhanVien;
-            this.txtTenNhanVien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenNhanVien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNhanVien.FocusedState.Parent = this.txtTenNhanVien;
-            this.txtTenNhanVien.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtTenNhanVien.ForeColor = System.Drawing.Color.Black;
-            this.txtTenNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNhanVien.HoverState.Parent = this.txtTenNhanVien;
-            this.txtTenNhanVien.Location = new System.Drawing.Point(52, 71);
-            this.txtTenNhanVien.Name = "txtTenNhanVien";
-            this.txtTenNhanVien.PasswordChar = '\0';
-            this.txtTenNhanVien.PlaceholderText = "Tên nhân viên";
-            this.txtTenNhanVien.SelectedText = "";
-            this.txtTenNhanVien.ShadowDecoration.Parent = this.txtTenNhanVien;
-            this.txtTenNhanVien.Size = new System.Drawing.Size(346, 36);
-            this.txtTenNhanVien.TabIndex = 132;
+            this.txtName.Animated = true;
+            this.txtName.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtName.BorderRadius = 16;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.DefaultText = "";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.Parent = this.txtName;
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.FocusedState.Parent = this.txtName;
+            this.txtName.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.HoverState.Parent = this.txtName;
+            this.txtName.Location = new System.Drawing.Point(52, 71);
+            this.txtName.Name = "txtName";
+            this.txtName.PasswordChar = '\0';
+            this.txtName.PlaceholderText = "Tên khách hàng";
+            this.txtName.SelectedText = "";
+            this.txtName.ShadowDecoration.Parent = this.txtName;
+            this.txtName.Size = new System.Drawing.Size(346, 36);
+            this.txtName.TabIndex = 132;
             // 
             // label1
             // 
@@ -420,7 +420,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.Controls.Add(this.txbEmail);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtTenNhanVien);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.Name = "UC_Customer";
             this.Size = new System.Drawing.Size(1096, 651);
@@ -443,7 +443,7 @@ namespace RJCodeAdvance.ControlCustomers
         private Guna.UI2.WinForms.Guna2TextBox txbEmail;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtTenNhanVien;
+        private Guna.UI2.WinForms.Guna2TextBox txtName;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
