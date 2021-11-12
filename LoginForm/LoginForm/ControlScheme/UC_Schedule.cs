@@ -115,49 +115,48 @@ namespace RJCodeAdvance.ControlScheme
             guna2Button3.Enabled = false;
             guna2Button4.Enabled = false;
             guna2Button5.Enabled = false;
-
         }
         // bt lưu schedule
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            string day = "";
+            int day = 0;
             if (t2.Checked)
             {
-                day += "2";
+                day = 2;
             }
             if (t3.Checked)
             {
-                day += "3";
+                day = 3;
             }
             if (t4.Checked)
             {
-                day += "4";
+                day = 4;
             }
             if (t5.Checked)
             {
-                day += "5";
+                day = 5;
             }
             if (t6.Checked)
             {
-                day += "6";
+                day = 6;
             }
             if (t7.Checked)
             {
-                day += "7";
+                day = 7;
             }
             if (cn.Checked)
             {
-                day += "8";
+                day = 8;
             }
 
-            if(day == "")
+            if(day < 2)
             {
                 MessageBox.Show("Vui lòng chọn ngày làm", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
             {
-                DTO_LichLamViec schedule = new DTO_LichLamViec(int.Parse(cbTenNhanVien.SelectedValue.ToString()), int.Parse(cbCaLam.SelectedValue.ToString()), int.Parse(day));
+                DTO_LichLamViec schedule = new DTO_LichLamViec(int.Parse(cbTenNhanVien.SelectedValue.ToString()), int.Parse(cbCaLam.SelectedValue.ToString()), day);
                 if (schedules.InsertSchedule(schedule))
                 {
                     MessageBox.Show("Insert thành công");
@@ -179,7 +178,7 @@ namespace RJCodeAdvance.ControlScheme
         // click datagribview
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            t2.Checked = t3.Checked = t4.Checked = t5.Checked = t6.Checked = t7.Checked = cn.Checked = false;
+
             if(guna2DataGridView1.Rows.Count > 1)
             {
                 guna2Button5.Enabled = false;
@@ -190,71 +189,72 @@ namespace RJCodeAdvance.ControlScheme
                 cbTenNhanVien.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
                 cbCaLam.Text = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
                 string day = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString();
-                if (day.Contains("2"))
+                if (day == "2")
                 {
                     t2.Checked = true;
                 }
-                if (day.Contains("3"))
+                if (day == "3")
                 {
                     t3.Checked = true;
                 }
-                if (day.Contains("4"))
+                if (day == "4")
                 {
                     t4.Checked = true;
                 }
-                if (day.Contains("5"))
+                if (day == "5")
                 {
                     t5.Checked = true;
                 }
-                if (day.Contains("6"))
+                if (day == "6")
                 {
                     t6.Checked = true;
                 }
-                if (day.Contains("7"))
+                if (day == "7")
                 {
                     t7.Checked = true;
                 }
-                if (day.Contains("8"))
+                if (day == "8")
                 {
                     cn.Checked = true;
                 }
+               
             }
         }
         // click bt Xóa
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            string day = "";
+            int day = 0;
             if (t2.Checked)
             {
-                day += "2";
+                day = 2;
             }
             if (t3.Checked)
             {
-                day += "3";
+                day = 3;
             }
             if (t4.Checked)
             {
-                day += "4";
+                day = 4;
             }
             if (t5.Checked)
             {
-                day += "5";
+                day = 5;
             }
             if (t6.Checked)
             {
-                day += "6";
+                day = 6;
             }
             if (t7.Checked)
             {
-                day += "7";
+                day = 7;
             }
             if (cn.Checked)
             {
-                day += "8";
+                day = 8;
             }
             if (MessageBox.Show("Bạn chắc chắn muốn xóa lịch này", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (schedules.DeleteDataSchedule(int.Parse(cbCaLam.SelectedValue.ToString()), int.Parse(cbTenNhanVien.SelectedValue.ToString()), int.Parse(day)))
+                if (schedules.DeleteDataSchedule(int.Parse(cbCaLam.SelectedValue.ToString()), int.Parse(cbTenNhanVien.SelectedValue.ToString()), day))
                 {
                     MessageBox.Show("Xóa thành công");
                     resetForm();
@@ -273,36 +273,36 @@ namespace RJCodeAdvance.ControlScheme
         // click bt sửa
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            string day = "";
+            int day = 0;
             if (t2.Checked)
             {
-                day += "2";
+                day = 2;
             }
             if (t3.Checked)
             {
-                day += "3";
+                day = 3;
             }
             if (t4.Checked)
             {
-                day += "4";
+                day = 4;
             }
             if (t5.Checked)
             {
-                day += "5";
+                day = 5;
             }
             if (t6.Checked)
             {
-                day += "6";
+                day = 6;
             }
             if (t7.Checked)
             {
-                day += "7";
+                day = 7;
             }
             if (cn.Checked)
             {
-                day += "8";
+                day = 8;
             }
-            DTO_LichLamViec schedule = new DTO_LichLamViec(int.Parse(label1.Text),int.Parse(cbTenNhanVien.SelectedValue.ToString()), int.Parse(cbCaLam.SelectedValue.ToString()), int.Parse(day));
+            DTO_LichLamViec schedule = new DTO_LichLamViec(int.Parse(label1.Text),int.Parse(cbTenNhanVien.SelectedValue.ToString()), int.Parse(cbCaLam.SelectedValue.ToString()), day);
             if (MessageBox.Show("Bạn chắc chắn muốn sửa lịch này", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 

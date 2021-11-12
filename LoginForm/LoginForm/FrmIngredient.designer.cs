@@ -40,8 +40,8 @@ namespace RJCodeAdvance
             this.bt4 = new Guna.UI2.WinForms.Guna2Button();
             this.bt5 = new Guna.UI2.WinForms.Guna2Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.uC_Input_Ingredient1 = new RJCodeAdvance.ControlIngredient.UC_Input_Ingredient();
-            this.uC_ingredient1 = new RJCodeAdvance.ControlIngredient.UC_ingredient();
+            this.uC_Input_Ingredient1 = new RJCodeAdvance.ControlIngredient.UC_Input_Ingredient_OLD();
+            this.uC_ingredient1 = new RJCodeAdvance.ControlIngredient.UC_ingredient_OLD();
             this.uC_typeOfIngredient1 = new RJCodeAdvance.ControlIngredient.UC_typeOfIngredient();
             this.uC_Supplier1 = new RJCodeAdvance.ControlIngredient.UC_Supplier();
             this.uC_Unit1 = new RJCodeAdvance.ControlIngredient.UC_Unit();
@@ -344,10 +344,10 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2Button bt3;
         private Guna.UI2.WinForms.Guna2Button bt2;
         private System.Windows.Forms.Panel panel2;
-        private ControlIngredient.UC_Input_Ingredient uC_Input_Ingredient1;
+        private ControlIngredient.UC_Input_Ingredient_OLD uC_Input_Ingredient1;
         private ControlIngredient.UC_Unit uC_Unit1;
         private ControlIngredient.UC_Supplier uC_Supplier1;
         private ControlIngredient.UC_typeOfIngredient uC_typeOfIngredient1;
-        private ControlIngredient.UC_ingredient uC_ingredient1;
+        private ControlIngredient.UC_ingredient_OLD uC_ingredient1;
     }
 }

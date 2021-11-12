@@ -33,7 +33,6 @@ namespace RJCodeAdvance
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btDangNhap = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btGuiMatKhau = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -89,29 +88,6 @@ namespace RJCodeAdvance
             this.txtEmail.Size = new System.Drawing.Size(289, 41);
             this.txtEmail.TabIndex = 2;
             // 
-            // btDangNhap
-            // 
-            this.btDangNhap.Animated = true;
-            this.btDangNhap.BorderRadius = 5;
-            this.btDangNhap.BorderThickness = 1;
-            this.btDangNhap.CheckedState.Parent = this.btDangNhap;
-            this.btDangNhap.CustomImages.Parent = this.btDangNhap;
-            this.btDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btDangNhap.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btDangNhap.DisabledState.Parent = this.btDangNhap;
-            this.btDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btDangNhap.HoverState.Parent = this.btDangNhap;
-            this.btDangNhap.Location = new System.Drawing.Point(112, 127);
-            this.btDangNhap.Name = "btDangNhap";
-            this.btDangNhap.ShadowDecoration.Parent = this.btDangNhap;
-            this.btDangNhap.Size = new System.Drawing.Size(105, 35);
-            this.btDangNhap.TabIndex = 3;
-            this.btDangNhap.Text = "Đăng nhập";
-            // 
             // btGuiMatKhau
             // 
             this.btGuiMatKhau.Animated = true;
@@ -128,12 +104,13 @@ namespace RJCodeAdvance
             this.btGuiMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btGuiMatKhau.ForeColor = System.Drawing.Color.White;
             this.btGuiMatKhau.HoverState.Parent = this.btGuiMatKhau;
-            this.btGuiMatKhau.Location = new System.Drawing.Point(232, 128);
+            this.btGuiMatKhau.Location = new System.Drawing.Point(175, 128);
             this.btGuiMatKhau.Name = "btGuiMatKhau";
             this.btGuiMatKhau.ShadowDecoration.Parent = this.btGuiMatKhau;
             this.btGuiMatKhau.Size = new System.Drawing.Size(169, 35);
             this.btGuiMatKhau.TabIndex = 4;
             this.btGuiMatKhau.Text = "Gửi mật khẩu về email";
+            this.btGuiMatKhau.Click += new System.EventHandler(this.btGuiMatKhau_Click);
             // 
             // guna2PictureBox1
             // 
@@ -155,7 +132,6 @@ namespace RJCodeAdvance
             this.ClientSize = new System.Drawing.Size(553, 251);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.btGuiMatKhau);
-            this.Controls.Add(this.btDangNhap);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
@@ -173,7 +149,6 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btDangNhap;
         private Guna.UI2.WinForms.Guna2GradientTileButton btGuiMatKhau;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }

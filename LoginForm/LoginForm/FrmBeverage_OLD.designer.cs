@@ -1,7 +1,7 @@
 ﻿
 namespace RJCodeAdvance
 {
-    partial class FrmBeverage
+    partial class FrmBeverage_OLD
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace RJCodeAdvance
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBeverage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBeverage_OLD));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,7 +37,7 @@ namespace RJCodeAdvance
             this.imageSlide = new System.Windows.Forms.PictureBox();
             this.bt2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.uC_beverages1 = new RJCodeAdvance.ControlBeverages.UC_beverages();
+            this.uC_beverages1 = new RJCodeAdvance.ControlBeverages.UC_beverages_OLD();
             this.uC_TypeOfBeverage1 = new RJCodeAdvance.ControlBeverages.UC_TypeOfBeverage();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -154,8 +154,6 @@ namespace RJCodeAdvance
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.uC_beverages1);
-            this.guna2Panel1.Controls.Add(this.uC_TypeOfBeverage1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel1.Location = new System.Drawing.Point(213, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -210,7 +208,7 @@ namespace RJCodeAdvance
         private System.Windows.Forms.PictureBox imageSlide;
         private Guna.UI2.WinForms.Guna2Button bt2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private ControlBeverages.UC_beverages uC_beverages1;
+        private ControlBeverages.UC_beverages_OLD uC_beverages1;
         private ControlBeverages.UC_TypeOfBeverage uC_TypeOfBeverage1;
     }
 }

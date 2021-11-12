@@ -86,5 +86,16 @@ namespace RJCodeAdvance.ControlEmployees
         {
 
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            FrmVaiTro frm = new FrmVaiTro();
+            frm.ShowDialog();
+        }
+
+        private void UC_employee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

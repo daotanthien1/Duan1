@@ -209,6 +209,20 @@ else
 select @STATUS
 END
 GO
+/****** Object:  StoredProcedure [dbo].[CREATE_NEW_PASS]    Script Date: 11/5/2021 1:39:53 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[CREATE_NEW_PASS] 
+@Email nvarchar(50),
+@Password nvarchar(50)
+AS
+BEGIN
+Update Empolyee SET Password = @Password
+where Email = @Email
+END
 
 /****** Object:  StoredProcedure [dbo].[CHANGE_PASSWORD]    Script Date: 11/5/2021 1:39:53 PM ******/
 SET ANSI_NULLS ON

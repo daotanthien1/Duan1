@@ -16,5 +16,17 @@ namespace RJCodeAdvance.ControlIngredient
         {
             InitializeComponent();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            FrmIngredientType frm = new FrmIngredientType();
+            frm.ShowDialog(); 
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            FrmSupplier frm = new FrmSupplier();
+            frm.ShowDialog();
+        }
     }
 }

@@ -2,7 +2,6 @@
 using DTO_QuanLy;
 using RJCodeAdvance;
 using RJCodeAdvance.ControlScheme;
-using RJCodeAdvance.ControlVouchers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,10 +78,10 @@ namespace LoginForm
             nv.password = txtPassword.Text;
             if (busNhanVien.NhanVienDangNhap(nv)) // khi đăng nhập thành công
             {
-                UC_Voucher.mail = nv.email;
+                UC_Schedule.mail = nv.email;
                 MessageBox.Show("Đăng nhập thành công");
                 this.Hide();
-                FrmVoucher frmMain = new FrmVoucher();
+                FrmScheme frmMain = new FrmScheme();
                 frmMain.ShowDialog();
                 this.Show();
             }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace RJCodeAdvance
 {
-    public partial class FrmBeverage : Form
+    public partial class FrmBeverage_OLD : Form
     {
-        public FrmBeverage()
+        public FrmBeverage_OLD()
         {
             InitializeComponent();
         }
