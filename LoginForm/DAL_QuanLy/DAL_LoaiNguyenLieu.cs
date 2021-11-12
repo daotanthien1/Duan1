@@ -11,6 +11,24 @@ namespace DAL_QuanLy
 {
     public class DAL_LoaiNguyenLieu : DBConnect
     {
+        public DataTable getTypeOfIngredient()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_GetTypeOfIngredient";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
         public bool InsertLoaiNguyenLieu(DTO_LoaiNguyenLieu lnl)
         {
             try

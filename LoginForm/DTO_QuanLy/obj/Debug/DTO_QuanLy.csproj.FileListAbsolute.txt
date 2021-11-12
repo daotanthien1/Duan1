@@ -14,3 +14,15 @@ D:\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.csproj.CoreCompileInputs.cach
 D:\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.dll
 D:\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.pdb
 D:\My project\C#\DA1\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.csproj.AssemblyReference.cache
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\bin\Debug\DTO_QuanLy.dll
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\bin\Debug\DTO_QuanLy.pdb
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.csproj.AssemblyReference.cache
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.csproj.CoreCompileInputs.cache
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.dll
+D:\DU AN 1\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.pdb
+C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\DTO_QuanLy\bin\Debug\DTO_QuanLy.dll
+C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\DTO_QuanLy\bin\Debug\DTO_QuanLy.pdb
+C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.csproj.AssemblyReference.cache
+C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.csproj.CoreCompileInputs.cache
+C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.dll
+C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\DTO_QuanLy\obj\Debug\DTO_QuanLy.pdb

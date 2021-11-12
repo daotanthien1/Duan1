@@ -17,7 +17,7 @@ namespace LoginForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmBeverageCP());
+            Application.Run(new FrmSupplier());
         }
     }
 }

@@ -35,3 +35,14 @@ C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BU
 C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.csproj.CopyComplete
 C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.dll
 C:\Users\tungnh230802\OneDrive\WorkSpace\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.pdb
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\bin\Debug\BUS_QuanLy.dll
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\bin\Debug\BUS_QuanLy.pdb
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\bin\Debug\DAL_QuanLy.dll
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\bin\Debug\DTO_QuanLy.dll
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\bin\Debug\DAL_QuanLy.pdb
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\bin\Debug\DTO_QuanLy.pdb
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.csproj.AssemblyReference.cache
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.csproj.CoreCompileInputs.cache
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.csproj.CopyComplete
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.dll
+D:\DU AN 1\Duan1\LoginForm\BUS_QuanLy\obj\Debug\BUS_QuanLy.pdb

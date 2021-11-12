@@ -12,6 +12,10 @@ namespace BUS_QuanLy
     public class BUS_LoaiNguyenLieu
     {
         DAL_LoaiNguyenLieu quanlyLoaiNguyenLieu = new DAL_LoaiNguyenLieu();
+        public DataTable getTypeOfIngredient()
+        {
+            return quanlyLoaiNguyenLieu.getTypeOfIngredient();
+        }
         public bool InsertLoaiNguyenLieu(DTO_LoaiNguyenLieu lnl)
         {
             return quanlyLoaiNguyenLieu.InsertLoaiNguyenLieu(lnl);

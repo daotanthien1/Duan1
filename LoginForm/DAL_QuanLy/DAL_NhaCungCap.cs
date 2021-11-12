@@ -11,6 +11,24 @@ namespace DAL_QuanLy
 {
     public class DAL_NhaCungCap : DBConnect
     {
+        public DataTable getSupplier()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_GetSupplier";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
         public bool InsertNhaCungCap(DTO_NhaCungCap ncc)
         {
             try
