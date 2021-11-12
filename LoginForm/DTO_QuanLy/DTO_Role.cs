@@ -32,9 +32,14 @@ namespace DTO_QuanLy
                 Name = value;
             }
         }
+
         public DTO_Role(int id_role, string name)
         {
             this.Id_role = id_role;
+            this.Name = name;
+        }
+        public DTO_Role(string name)
+        {
             this.Name = name;
         }
         public DTO_Role() { }

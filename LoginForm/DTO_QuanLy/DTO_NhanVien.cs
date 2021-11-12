@@ -128,9 +128,24 @@ namespace DTO_QuanLy
             this.Name = name;
             this.Salary = salary;
         }
-        
+        public DTO_NhanVien(int id_role, string name, int gender, string email, string address, string dayofbrith, float salary)
+        {
+            this.Id_role = id_role;
+            this.Name = name;
+            this.Gender = gender;
+            this.Email = email;
+            this.Address = address;
+            this.DayOfBirth = dayofbrith;
+            this.Salary = salary;
+        }
+        public DTO_NhanVien(int id_role)
+        {
+            this.ID_Role = id_role;
+        }
         public DTO_NhanVien()
         {
+
         }
     }
 }
+

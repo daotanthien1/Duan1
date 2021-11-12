@@ -29,7 +29,11 @@ namespace BUS_QuanLy
         public bool NhanVienDoiMatKhau(string email, string oldPassWord, string newPassWord)
         {
             return dalNhanVien.NhanVienDoiMatKhau(email,oldPassWord, newPassWord);
-        }     
+        }
+        public DataTable HienThiDuLieuNhanVien()
+        {
+            return dalNhanVien.GetNhanVien();
+        }
         public bool InsertNhanVien(DTO_NhanVien nv)
         {
             return dalNhanVien.InsertNhanVien(nv);
@@ -46,7 +50,10 @@ namespace BUS_QuanLy
         {
             return dalNhanVien.SearchNhanVien(name);
         }
-        
+        public DataTable ThemVaiTro()
+        {
+            return dalNhanVien.ThemVaiTro();
+        }
         //Mã hóa MD5
         public string encryption(string password)
         {

@@ -98,6 +98,26 @@ namespace DAL_QuanLy
             return false;
         }
 
+        public DataTable GetNhanVien()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "GETNHANVIEN";
+                cmd.Connection = _conn;
+                DataTable dtNV = new DataTable();
+                dtNV.Load(cmd.ExecuteReader());
+                return dtNV;
+            }
+            finally
+            {
+                //Đóng kết nối
+                _conn.Close();
+            }
+        }
+
         public bool InsertNhanVien(DTO_NhanVien nv)
         {
             try
@@ -189,6 +209,24 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
-        
+        public DataTable ThemVaiTro()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "INSERT_VAITRO";
+                DataTable dtVT = new DataTable();
+                dtVT.Load(cmd.ExecuteReader());
+                return dtVT;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
     }
 }

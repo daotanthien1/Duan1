@@ -205,17 +205,11 @@
     <Compile Include="ControlVouchers\UC_Voucher.Designer.cs">
       <DependentUpon>UC_Voucher.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmBeverage - Copy.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmBeverage - Copy.designer.cs">
-      <DependentUpon>FrmBeverage - Copy.cs</DependentUpon>
+    <Compile Include="FrmMain.designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmChangePassword.cs">
       <SubType>Form</SubType>
@@ -223,23 +217,11 @@
     <Compile Include="FrmChangePassword.designer.cs">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmChangePassword_OLD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmChangePassword_OLD.designer.cs">
-      <DependentUpon>FrmChangePassword_OLD.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmConfigurationSale.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmConfigurationSale.designer.cs">
       <DependentUpon>FrmConfigurationSale.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmForgotPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmForgotPassword.designer.cs">
-      <DependentUpon>FrmForgotPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmIngredientType.cs">
       <SubType>Form</SubType>
@@ -247,17 +229,17 @@
     <Compile Include="FrmIngredientType.designer.cs">
       <DependentUpon>FrmIngredientType.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSchedule2.cs">
+    <Compile Include="FrmSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSchedule2.designer.cs">
-      <DependentUpon>FrmSchedule2.cs</DependentUpon>
+    <Compile Include="FrmSchedule.designer.cs">
+      <DependentUpon>FrmSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmShift2.cs">
+    <Compile Include="FrmShift.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmShift2.designer.cs">
-      <DependentUpon>FrmShift2.cs</DependentUpon>
+    <Compile Include="FrmShift.designer.cs">
+      <DependentUpon>FrmShift.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSupplier.cs">
       <SubType>Form</SubType>
@@ -271,11 +253,11 @@
     <Compile Include="FrmTable.designer.cs">
       <DependentUpon>FrmTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTypeOfBeverage2.cs">
+    <Compile Include="FrmTypeOfBeverage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTypeOfBeverage2.designer.cs">
-      <DependentUpon>FrmTypeOfBeverage2.cs</DependentUpon>
+    <Compile Include="FrmTypeOfBeverage.designer.cs">
+      <DependentUpon>FrmTypeOfBeverage.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVaiTro.cs">
       <SubType>Form</SubType>
@@ -283,25 +265,25 @@
     <Compile Include="FrmVaiTro.designer.cs">
       <DependentUpon>FrmVaiTro.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginNew.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginNew.Designer.cs">
-      <DependentUpon>LoginNew.cs</DependentUpon>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Unit.cs">
+    <Compile Include="FrmUnit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Unit.designer.cs">
-      <DependentUpon>Unit.cs</DependentUpon>
+    <Compile Include="FrmUnit.designer.cs">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
     </Compile>
-    <Compile Include="VoucherType.cs">
+    <Compile Include="FrmVoucherType.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VoucherType.designer.cs">
-      <DependentUpon>VoucherType.cs</DependentUpon>
+    <Compile Include="FrmVoucherType.designer.cs">
+      <DependentUpon>FrmVoucherType.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ControlBeverages\UC_beverages.resx">
       <DependentUpon>UC_beverages.cs</DependentUpon>
@@ -321,35 +303,29 @@
     <EmbeddedResource Include="ControlIngredient\UC_Input_Ingredient.resx">
       <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlStatistic\UC_Statistic.resx">
+      <DependentUpon>UC_Statistic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlVouchers\UC_Voucher.resx">
       <DependentUpon>UC_Voucher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmBeverage - Copy.resx">
-      <DependentUpon>FrmBeverage - Copy.cs</DependentUpon>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmChangePassword.resx">
       <DependentUpon>FrmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmChangePassword_OLD.resx">
-      <DependentUpon>FrmChangePassword_OLD.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmConfigurationSale.resx">
       <DependentUpon>FrmConfigurationSale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmForgotPassword.resx">
-      <DependentUpon>FrmForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmIngredientType.resx">
       <DependentUpon>FrmIngredientType.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSchedule2.resx">
-      <DependentUpon>FrmSchedule2.cs</DependentUpon>
+    <EmbeddedResource Include="FrmSchedule.resx">
+      <DependentUpon>FrmSchedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmShift2.resx">
-      <DependentUpon>FrmShift2.cs</DependentUpon>
+    <EmbeddedResource Include="FrmShift.resx">
+      <DependentUpon>FrmShift.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSupplier.resx">
       <DependentUpon>FrmSupplier.cs</DependentUpon>
@@ -357,14 +333,14 @@
     <EmbeddedResource Include="FrmTable.resx">
       <DependentUpon>FrmTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTypeOfBeverage2.resx">
-      <DependentUpon>FrmTypeOfBeverage2.cs</DependentUpon>
+    <EmbeddedResource Include="FrmTypeOfBeverage.resx">
+      <DependentUpon>FrmTypeOfBeverage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVaiTro.resx">
       <DependentUpon>FrmVaiTro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginNew.resx">
-      <DependentUpon>LoginNew.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -376,11 +352,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Unit.resx">
-      <DependentUpon>Unit.cs</DependentUpon>
+    <EmbeddedResource Include="FrmUnit.resx">
+      <DependentUpon>FrmUnit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VoucherType.resx">
-      <DependentUpon>VoucherType.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVoucherType.resx">
+      <DependentUpon>FrmVoucherType.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

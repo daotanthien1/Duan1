@@ -49,7 +49,6 @@ namespace RJCodeAdvance.ControlBeverages
             this.label1 = new System.Windows.Forms.Label();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtSearchDoUong = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btThoat = new Guna.UI2.WinForms.Guna2Button();
             this.btLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btSua = new Guna.UI2.WinForms.Guna2Button();
             this.btXoa = new Guna.UI2.WinForms.Guna2Button();
@@ -140,7 +139,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.cbDoUong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbDoUong.FocusedState.Parent = this.cbDoUong;
             this.cbDoUong.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.cbDoUong.HoverState.Parent = this.cbDoUong;
             this.cbDoUong.ItemHeight = 30;
             this.cbDoUong.Items.AddRange(new object[] {
@@ -170,7 +169,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtHinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHinh.FocusedState.Parent = this.txtHinh;
             this.txtHinh.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtHinh.ForeColor = System.Drawing.Color.Black;
+            this.txtHinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtHinh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHinh.HoverState.Parent = this.txtHinh;
             this.txtHinh.Location = new System.Drawing.Point(445, 154);
@@ -197,7 +196,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGia.FocusedState.Parent = this.txtGia;
             this.txtGia.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtGia.ForeColor = System.Drawing.Color.Black;
+            this.txtGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGia.HoverState.Parent = this.txtGia;
             this.txtGia.Location = new System.Drawing.Point(48, 154);
@@ -351,7 +350,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtSearchDoUong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchDoUong.FocusedState.Parent = this.txtSearchDoUong;
             this.txtSearchDoUong.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearchDoUong.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtSearchDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtSearchDoUong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchDoUong.HoverState.Parent = this.txtSearchDoUong;
             this.txtSearchDoUong.Location = new System.Drawing.Point(383, 522);
@@ -362,33 +361,6 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtSearchDoUong.ShadowDecoration.Parent = this.txtSearchDoUong;
             this.txtSearchDoUong.Size = new System.Drawing.Size(228, 36);
             this.txtSearchDoUong.TabIndex = 4;
-            // 
-            // btThoat
-            // 
-            this.btThoat.Animated = true;
-            this.btThoat.BorderColor = System.Drawing.Color.White;
-            this.btThoat.BorderRadius = 6;
-            this.btThoat.BorderThickness = 1;
-            this.btThoat.CheckedState.Parent = this.btThoat;
-            this.btThoat.CustomImages.Parent = this.btThoat;
-            this.btThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btThoat.DisabledState.Parent = this.btThoat;
-            this.btThoat.FillColor = System.Drawing.Color.Tomato;
-            this.btThoat.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoat.ForeColor = System.Drawing.Color.White;
-            this.btThoat.HoverState.Parent = this.btThoat;
-            this.btThoat.Image = ((System.Drawing.Image)(resources.GetObject("btThoat.Image")));
-            this.btThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThoat.Location = new System.Drawing.Point(772, 586);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.ShadowDecoration.Parent = this.btThoat;
-            this.btThoat.Size = new System.Drawing.Size(128, 45);
-            this.btThoat.TabIndex = 10;
-            this.btThoat.Text = "Thoát";
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btLuu
             // 
@@ -408,7 +380,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btLuu.HoverState.Parent = this.btLuu;
             this.btLuu.Image = ((System.Drawing.Image)(resources.GetObject("btLuu.Image")));
             this.btLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLuu.Location = new System.Drawing.Point(632, 586);
+            this.btLuu.Location = new System.Drawing.Point(671, 591);
             this.btLuu.Name = "btLuu";
             this.btLuu.ShadowDecoration.Parent = this.btLuu;
             this.btLuu.Size = new System.Drawing.Size(128, 45);
@@ -434,7 +406,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btSua.HoverState.Parent = this.btSua;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua.Location = new System.Drawing.Point(491, 586);
+            this.btSua.Location = new System.Drawing.Point(530, 591);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
             this.btSua.Size = new System.Drawing.Size(128, 45);
@@ -460,7 +432,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btXoa.HoverState.Parent = this.btXoa;
             this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
             this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btXoa.Location = new System.Drawing.Point(351, 586);
+            this.btXoa.Location = new System.Drawing.Point(390, 591);
             this.btXoa.Name = "btXoa";
             this.btXoa.ShadowDecoration.Parent = this.btXoa;
             this.btXoa.Size = new System.Drawing.Size(128, 45);
@@ -487,7 +459,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(211, 586);
+            this.btThem.Location = new System.Drawing.Point(250, 591);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(128, 45);
@@ -604,7 +576,6 @@ namespace RJCodeAdvance.ControlBeverages
             this.Controls.Add(this.btFile);
             this.Controls.Add(this.dgvBeverage);
             this.Controls.Add(this.txtSearchDoUong);
-            this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btLuu);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
@@ -645,7 +616,6 @@ namespace RJCodeAdvance.ControlBeverages
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView2;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchDoUong;
-        private Guna.UI2.WinForms.Guna2Button btThoat;
         private Guna.UI2.WinForms.Guna2Button btLuu;
         private Guna.UI2.WinForms.Guna2Button btSua;
         private Guna.UI2.WinForms.Guna2Button btXoa;

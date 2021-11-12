@@ -19,8 +19,7 @@ namespace DAL_QuanLy
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "INSERT_DATA_TO_ROLE";
-                cmd.Parameters.AddWithValue("Id_role", ro.ID_Role);
+                cmd.CommandText = "INSERT_DATA_TO_ROLES";
                 cmd.Parameters.AddWithValue("Name", ro.name);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -37,10 +36,11 @@ namespace DAL_QuanLy
             {
                 _conn.Open();
                 SqlCommand cmd = new SqlCommand();
-                cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "UPDATE_DATA_TO_ROLE";
-                cmd.Parameters.AddWithValue("Name", ro.name);
+                cmd.CommandText = "UPDATE_DATA_TO_ROLES";
+                cmd.Parameters.AddWithValue("@id_role", ro.ID_Role);
+                cmd.Parameters.AddWithValue("@name", ro.name);
+                cmd.Connection = _conn;
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -50,7 +50,7 @@ namespace DAL_QuanLy
             }
             return false;
         }
-        public bool DeleteRoleNhanVien(int id_role)
+        public bool DeleteRoleNhanVien(string name)
         {
             try
             {
@@ -58,8 +58,8 @@ namespace DAL_QuanLy
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "DELETE_DATA_FROM_ROLE";
-                cmd.Parameters.AddWithValue("Id_role", id_role);
+                cmd.CommandText = "DELETE_DATA_FROM_ROLES";
+                cmd.Parameters.AddWithValue("@name", name);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -69,19 +69,37 @@ namespace DAL_QuanLy
             }
             return false;
         }
-        public DataTable SearchRoleNhanVien(int id_role)
+        public DataTable GetRoles()
         {
             try
             {
                 _conn.Open();
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "SEARCH_ROLE";
-                cmd.Parameters.AddWithValue("Employee_role", id_role);
+                cmd.CommandText = "GET_ROLES";
                 cmd.Connection = _conn;
-                DataTable dtEmployee = new DataTable();
-                dtEmployee.Load(cmd.ExecuteReader());
-                return dtEmployee;
+                DataTable dtR = new DataTable();
+                dtR.Load(cmd.ExecuteReader());
+                return dtR;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public DataTable SearchRoleNhanVien(string name)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SEARCH_ROLES";
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Connection = _conn;
+                DataTable dtRoles = new DataTable();
+                dtRoles.Load(cmd.ExecuteReader());
+                return dtRoles;
             }
             finally
             {

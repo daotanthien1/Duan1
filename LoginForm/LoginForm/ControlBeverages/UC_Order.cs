@@ -37,7 +37,7 @@ namespace RJCodeAdvance.ControlBeverages
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FrmSchedule2 Frm = new FrmSchedule2();
+            FrmSchedule Frm = new FrmSchedule();
             Frm.ShowDialog();
         }
 

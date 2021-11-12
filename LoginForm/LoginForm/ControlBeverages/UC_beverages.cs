@@ -22,7 +22,7 @@ namespace RJCodeAdvance.ControlBeverages
         {
             InitializeComponent();
         }
-        private void F2_UpdateEventHandler(object sender, FrmTypeOfBeverage2.UpdateEventArgs args)
+        private void F2_UpdateEventHandler(object sender, FrmTypeOfBeverage.UpdateEventArgs args)
         {
             cbDoUong.DataSource = busBe.getBeverageType();
             cbDoUong.DisplayMember = "Name";
@@ -289,7 +289,7 @@ namespace RJCodeAdvance.ControlBeverages
 
         private void bntLoaiDoUong_Click(object sender, EventArgs e)
         {
-            FrmTypeOfBeverage2 frm = new FrmTypeOfBeverage2(this);
+            FrmTypeOfBeverage frm = new FrmTypeOfBeverage(this);
             frm.UpdateEventHandler += F2_UpdateEventHandler;
             frm.ShowDialog();
         }

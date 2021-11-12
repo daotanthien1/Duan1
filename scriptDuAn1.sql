@@ -150,6 +150,7 @@ Go
 create table Customers
 (
 	Email nvarchar(50) not null,
+	name nvarchar(50) not null,
 	Gender nvarchar(10) not null, -- nam || nữ
 	Id_customer int primary key identity,
 	Reward int not null default(0) -- điểm khách hàng thân thiết

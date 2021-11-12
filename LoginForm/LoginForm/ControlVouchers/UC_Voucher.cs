@@ -21,7 +21,7 @@ namespace RJCodeAdvance.ControlVouchers
         public static string mail = "a";
         public string id;
         BUS_Vouchers vouchers = new BUS_Vouchers();
-        private void F2_UpdateEventHandler(object sender, VoucherType.UpdateEventArgs args)
+        private void F2_UpdateEventHandler(object sender, FrmVoucherType.UpdateEventArgs args)
         {
             cbSale.DataSource = vouchers.getSale();
             cbSale.DisplayMember = "Sale";
@@ -33,7 +33,7 @@ namespace RJCodeAdvance.ControlVouchers
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            VoucherType frm = new VoucherType(this);
+            FrmVoucherType frm = new FrmVoucherType(this);
             frm.UpdateEventHandler += F2_UpdateEventHandler;
             frm.ShowDialog();
         }

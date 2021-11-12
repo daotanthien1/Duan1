@@ -19,7 +19,7 @@ namespace RJCodeAdvance.ControlIngredient
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Unit frm = new Unit();
+            FrmUnit frm = new FrmUnit();
             frm.ShowDialog();
         }
     }

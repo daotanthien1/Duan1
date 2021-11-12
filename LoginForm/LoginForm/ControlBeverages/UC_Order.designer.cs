@@ -94,6 +94,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -716,19 +717,20 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             this.panel2.Controls.Add(this.listBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(331, 342);
+            this.panel2.Location = new System.Drawing.Point(331, 385);
             this.panel2.Name = "panel2";
             this.panel2.Padding = new System.Windows.Forms.Padding(10);
-            this.panel2.Size = new System.Drawing.Size(765, 309);
+            this.panel2.Size = new System.Drawing.Size(765, 266);
             this.panel2.TabIndex = 1;
             // 
             // listBox1
             // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.Control;
             this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(10, 10);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(745, 289);
+            this.listBox1.Size = new System.Drawing.Size(745, 246);
             this.listBox1.TabIndex = 0;
             // 
             // panel3
@@ -760,7 +762,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.panel3.Controls.Add(this.label1);
             this.panel3.Location = new System.Drawing.Point(331, 53);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(769, 332);
+            this.panel3.Size = new System.Drawing.Size(769, 326);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -1112,7 +1114,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.guna2NumericUpDown1.DisabledState.Parent = this.guna2NumericUpDown1;
             this.guna2NumericUpDown1.FocusedState.Parent = this.guna2NumericUpDown1;
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.Black;
+            this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.guna2NumericUpDown1.Location = new System.Drawing.Point(565, 37);
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
             this.guna2NumericUpDown1.ShadowDecoration.Parent = this.guna2NumericUpDown1;
@@ -1242,6 +1244,11 @@ namespace RJCodeAdvance.ControlBeverages
             this.pictureBox4.TabIndex = 62;
             this.pictureBox4.TabStop = false;
             // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 26;
+            this.guna2Elipse2.TargetControl = this.listBox1;
+            // 
             // UC_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1335,5 +1342,6 @@ namespace RJCodeAdvance.ControlBeverages
         private Guna.UI2.WinForms.Guna2Button guna2Button32;
         private Guna.UI2.WinForms.Guna2Button guna2Button31;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

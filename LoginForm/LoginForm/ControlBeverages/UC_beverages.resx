@@ -121,17 +121,6 @@
     <value>40, 8</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btThoat.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAURJREFUSEvd
-        lc1Kw0AURiOltC8nCFUUdOHC0o3g0hdQdyIVQXSlC6GL9hXqSygqor6BCxVctem5M3dIxPlpA1nogQPh
-        3m9mkpmQZP+bPM9buIUjfMF3Va6HuIktjS8GA1fxDVO8YkeHpSHcwL6MXJATbOg0YQidmXg1+jqNHwIr
-        NudlqsaQ/rJO9xMabQzt+QS3VbmOIWfy++Apbpi2n7HGJLeLqSdZ03gBxYHtBTnWqGT3bCnIjUYLKD7b
-        XpRLXNL8Doae5NFMWobip+0luUC3SBd9i3yYSctQ/LK9JOfoFujh3As82V6UQ41Lft+WvDxorIBi6pBP
-        MXXnDu8hx17TW5x3csH7mjYxtk2yJbFtcdyh/5tEo75PhYPAkYlW40CnCUOo3s+1g3A9P5wyDJRfprxd
-        13iP36pcX+E6Vvtl/hGybAadHQC9Nh59oAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="btLuu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAANdJREFUSEvt

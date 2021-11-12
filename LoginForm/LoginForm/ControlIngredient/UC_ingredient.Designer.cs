@@ -46,13 +46,13 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btThemNCC = new Guna.UI2.WinForms.Guna2Button();
             this.btThemNL = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btThoat = new Guna.UI2.WinForms.Guna2Button();
             this.btLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btSua = new Guna.UI2.WinForms.Guna2Button();
             this.btXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,10 +61,9 @@ namespace RJCodeAdvance.ControlIngredient
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(67, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(50, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 19);
+            this.label1.Size = new System.Drawing.Size(116, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên nguyên liệu:";
             // 
@@ -73,10 +72,9 @@ namespace RJCodeAdvance.ControlIngredient
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(67, 138);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(50, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 19);
+            this.label2.Size = new System.Drawing.Size(36, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Giá:";
             // 
@@ -85,10 +83,9 @@ namespace RJCodeAdvance.ControlIngredient
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(821, 31);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(616, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 19);
+            this.label3.Size = new System.Drawing.Size(121, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Loại nguyên liệu:";
             // 
@@ -97,10 +94,9 @@ namespace RJCodeAdvance.ControlIngredient
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label4.Location = new System.Drawing.Point(825, 138);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(619, 112);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(131, 19);
+            this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nhà cung cấp:";
             // 
@@ -119,17 +115,16 @@ namespace RJCodeAdvance.ControlIngredient
             this.txtTenIngredient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenIngredient.FocusedState.Parent = this.txtTenIngredient;
             this.txtTenIngredient.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtTenIngredient.ForeColor = System.Drawing.Color.Black;
+            this.txtTenIngredient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTenIngredient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenIngredient.HoverState.Parent = this.txtTenIngredient;
-            this.txtTenIngredient.Location = new System.Drawing.Point(71, 66);
-            this.txtTenIngredient.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenIngredient.Location = new System.Drawing.Point(53, 54);
             this.txtTenIngredient.Name = "txtTenIngredient";
             this.txtTenIngredient.PasswordChar = '\0';
             this.txtTenIngredient.PlaceholderText = "Tên nguyên liệu";
             this.txtTenIngredient.SelectedText = "";
             this.txtTenIngredient.ShadowDecoration.Parent = this.txtTenIngredient;
-            this.txtTenIngredient.Size = new System.Drawing.Size(411, 44);
+            this.txtTenIngredient.Size = new System.Drawing.Size(308, 36);
             this.txtTenIngredient.TabIndex = 32;
             // 
             // txtGia
@@ -147,17 +142,16 @@ namespace RJCodeAdvance.ControlIngredient
             this.txtGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGia.FocusedState.Parent = this.txtGia;
             this.txtGia.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtGia.ForeColor = System.Drawing.Color.Black;
+            this.txtGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGia.HoverState.Parent = this.txtGia;
-            this.txtGia.Location = new System.Drawing.Point(71, 165);
-            this.txtGia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGia.Location = new System.Drawing.Point(53, 134);
             this.txtGia.Name = "txtGia";
             this.txtGia.PasswordChar = '\0';
             this.txtGia.PlaceholderText = "Giá";
             this.txtGia.SelectedText = "";
             this.txtGia.ShadowDecoration.Parent = this.txtGia;
-            this.txtGia.Size = new System.Drawing.Size(411, 44);
+            this.txtGia.Size = new System.Drawing.Size(308, 36);
             this.txtGia.TabIndex = 33;
             // 
             // cbLoaiIngredient
@@ -171,7 +165,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.cbLoaiIngredient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLoaiIngredient.FocusedState.Parent = this.cbLoaiIngredient;
             this.cbLoaiIngredient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbLoaiIngredient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbLoaiIngredient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.cbLoaiIngredient.HoverState.Parent = this.cbLoaiIngredient;
             this.cbLoaiIngredient.ItemHeight = 30;
             this.cbLoaiIngredient.Items.AddRange(new object[] {
@@ -179,11 +173,10 @@ namespace RJCodeAdvance.ControlIngredient
             "Ca 2",
             "Ca 3"});
             this.cbLoaiIngredient.ItemsAppearance.Parent = this.cbLoaiIngredient;
-            this.cbLoaiIngredient.Location = new System.Drawing.Point(821, 66);
-            this.cbLoaiIngredient.Margin = new System.Windows.Forms.Padding(4);
+            this.cbLoaiIngredient.Location = new System.Drawing.Point(616, 54);
             this.cbLoaiIngredient.Name = "cbLoaiIngredient";
             this.cbLoaiIngredient.ShadowDecoration.Parent = this.cbLoaiIngredient;
-            this.cbLoaiIngredient.Size = new System.Drawing.Size(360, 36);
+            this.cbLoaiIngredient.Size = new System.Drawing.Size(271, 36);
             this.cbLoaiIngredient.TabIndex = 34;
             // 
             // cbNhaCC
@@ -197,7 +190,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.cbNhaCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbNhaCC.FocusedState.Parent = this.cbNhaCC;
             this.cbNhaCC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNhaCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbNhaCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.cbNhaCC.HoverState.Parent = this.cbNhaCC;
             this.cbNhaCC.ItemHeight = 30;
             this.cbNhaCC.Items.AddRange(new object[] {
@@ -205,11 +198,10 @@ namespace RJCodeAdvance.ControlIngredient
             "Ca 2",
             "Ca 3"});
             this.cbNhaCC.ItemsAppearance.Parent = this.cbNhaCC;
-            this.cbNhaCC.Location = new System.Drawing.Point(829, 165);
-            this.cbNhaCC.Margin = new System.Windows.Forms.Padding(4);
+            this.cbNhaCC.Location = new System.Drawing.Point(622, 134);
             this.cbNhaCC.Name = "cbNhaCC";
             this.cbNhaCC.ShadowDecoration.Parent = this.cbNhaCC;
-            this.cbNhaCC.Size = new System.Drawing.Size(352, 36);
+            this.cbNhaCC.Size = new System.Drawing.Size(265, 36);
             this.cbNhaCC.TabIndex = 35;
             // 
             // dgv
@@ -240,13 +232,12 @@ namespace RJCodeAdvance.ControlIngredient
             this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv.Location = new System.Drawing.Point(36, 231);
-            this.dgv.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv.Location = new System.Drawing.Point(27, 224);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1383, 395);
+            this.dgv.Size = new System.Drawing.Size(1037, 285);
             this.dgv.TabIndex = 104;
             this.dgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -295,11 +286,10 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThemNCC.HoverState.Parent = this.btThemNCC;
             this.btThemNCC.Image = ((System.Drawing.Image)(resources.GetObject("btThemNCC.Image")));
             this.btThemNCC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThemNCC.Location = new System.Drawing.Point(1203, 165);
-            this.btThemNCC.Margin = new System.Windows.Forms.Padding(4);
+            this.btThemNCC.Location = new System.Drawing.Point(902, 134);
             this.btThemNCC.Name = "btThemNCC";
             this.btThemNCC.ShadowDecoration.Parent = this.btThemNCC;
-            this.btThemNCC.Size = new System.Drawing.Size(171, 44);
+            this.btThemNCC.Size = new System.Drawing.Size(128, 36);
             this.btThemNCC.TabIndex = 106;
             this.btThemNCC.Text = "Thêm";
             this.btThemNCC.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -323,69 +313,13 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThemNL.HoverState.Parent = this.btThemNL;
             this.btThemNL.Image = ((System.Drawing.Image)(resources.GetObject("btThemNL.Image")));
             this.btThemNL.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThemNL.Location = new System.Drawing.Point(1203, 66);
-            this.btThemNL.Margin = new System.Windows.Forms.Padding(4);
+            this.btThemNL.Location = new System.Drawing.Point(902, 54);
             this.btThemNL.Name = "btThemNL";
             this.btThemNL.ShadowDecoration.Parent = this.btThemNL;
-            this.btThemNL.Size = new System.Drawing.Size(171, 44);
+            this.btThemNL.Size = new System.Drawing.Size(128, 36);
             this.btThemNL.TabIndex = 105;
             this.btThemNL.Text = "Thêm";
             this.btThemNL.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtSearch.BorderRadius = 16;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.Parent = this.txtSearch;
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.ForeColor = System.Drawing.Color.BlueViolet;
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(492, 651);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Nhập tên nhân viên cần tìm";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(304, 44);
-            this.txtSearch.TabIndex = 113;
-            // 
-            // btThoat
-            // 
-            this.btThoat.Animated = true;
-            this.btThoat.BorderColor = System.Drawing.Color.White;
-            this.btThoat.BorderRadius = 6;
-            this.btThoat.BorderThickness = 1;
-            this.btThoat.CheckedState.Parent = this.btThoat;
-            this.btThoat.CustomImages.Parent = this.btThoat;
-            this.btThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btThoat.DisabledState.Parent = this.btThoat;
-            this.btThoat.FillColor = System.Drawing.Color.Tomato;
-            this.btThoat.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThoat.ForeColor = System.Drawing.Color.White;
-            this.btThoat.HoverState.Parent = this.btThoat;
-            this.btThoat.Image = ((System.Drawing.Image)(resources.GetObject("btThoat.Image")));
-            this.btThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThoat.Location = new System.Drawing.Point(1011, 730);
-            this.btThoat.Margin = new System.Windows.Forms.Padding(4);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.ShadowDecoration.Parent = this.btThoat;
-            this.btThoat.Size = new System.Drawing.Size(171, 55);
-            this.btThoat.TabIndex = 112;
-            this.btThoat.Text = "Thoát";
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
             // btLuu
             // 
@@ -405,11 +339,10 @@ namespace RJCodeAdvance.ControlIngredient
             this.btLuu.HoverState.Parent = this.btLuu;
             this.btLuu.Image = ((System.Drawing.Image)(resources.GetObject("btLuu.Image")));
             this.btLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLuu.Location = new System.Drawing.Point(824, 730);
-            this.btLuu.Margin = new System.Windows.Forms.Padding(4);
+            this.btLuu.Location = new System.Drawing.Point(676, 594);
             this.btLuu.Name = "btLuu";
             this.btLuu.ShadowDecoration.Parent = this.btLuu;
-            this.btLuu.Size = new System.Drawing.Size(171, 55);
+            this.btLuu.Size = new System.Drawing.Size(128, 45);
             this.btLuu.TabIndex = 111;
             this.btLuu.Text = "Lưu";
             this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
@@ -432,11 +365,10 @@ namespace RJCodeAdvance.ControlIngredient
             this.btSua.HoverState.Parent = this.btSua;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua.Location = new System.Drawing.Point(636, 730);
-            this.btSua.Margin = new System.Windows.Forms.Padding(4);
+            this.btSua.Location = new System.Drawing.Point(535, 594);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
-            this.btSua.Size = new System.Drawing.Size(171, 55);
+            this.btSua.Size = new System.Drawing.Size(128, 45);
             this.btSua.TabIndex = 110;
             this.btSua.Text = "Sửa";
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
@@ -459,11 +391,10 @@ namespace RJCodeAdvance.ControlIngredient
             this.btXoa.HoverState.Parent = this.btXoa;
             this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
             this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btXoa.Location = new System.Drawing.Point(449, 730);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btXoa.Location = new System.Drawing.Point(395, 594);
             this.btXoa.Name = "btXoa";
             this.btXoa.ShadowDecoration.Parent = this.btXoa;
-            this.btXoa.Size = new System.Drawing.Size(171, 55);
+            this.btXoa.Size = new System.Drawing.Size(128, 45);
             this.btXoa.TabIndex = 109;
             this.btXoa.Text = "Xóa";
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
@@ -487,11 +418,10 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(263, 730);
-            this.btThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btThem.Location = new System.Drawing.Point(255, 594);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
-            this.btThem.Size = new System.Drawing.Size(171, 55);
+            this.btThem.Size = new System.Drawing.Size(128, 45);
             this.btThem.TabIndex = 108;
             this.btThem.Text = "Thêm";
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
@@ -515,22 +445,51 @@ namespace RJCodeAdvance.ControlIngredient
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(804, 651);
-            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.btTimKiem.Location = new System.Drawing.Point(603, 529);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
-            this.btTimKiem.Size = new System.Drawing.Size(169, 44);
+            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
             this.btTimKiem.TabIndex = 107;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtSearch.BorderRadius = 16;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.Parent = this.txtSearch;
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.HoverState.Parent = this.txtSearch;
+            this.txtSearch.Location = new System.Drawing.Point(369, 529);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Nhập tên nhân viên cần tìm";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
+            this.txtSearch.Size = new System.Drawing.Size(228, 36);
+            this.txtSearch.TabIndex = 113;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 26;
+            this.guna2Elipse2.TargetControl = this.dgv;
+            // 
             // UC_ingredient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btLuu);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
@@ -547,9 +506,8 @@ namespace RJCodeAdvance.ControlIngredient
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_ingredient";
-            this.Size = new System.Drawing.Size(1467, 801);
+            this.Size = new System.Drawing.Size(1100, 651);
             this.Load += new System.EventHandler(this.UC_ingredient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.ResumeLayout(false);
@@ -571,12 +529,12 @@ namespace RJCodeAdvance.ControlIngredient
         private Guna.UI2.WinForms.Guna2Button btThemNL;
         private Guna.UI2.WinForms.Guna2Button btThemNCC;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2Button btThoat;
         private Guna.UI2.WinForms.Guna2Button btLuu;
         private Guna.UI2.WinForms.Guna2Button btSua;
         private Guna.UI2.WinForms.Guna2Button btXoa;
         private Guna.UI2.WinForms.Guna2Button btThem;
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }

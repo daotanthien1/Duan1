@@ -22,13 +22,17 @@ namespace BUS_QuanLy
         {
             return dalRole.UpdateRoleNhanVien(ro);
         }
-        public bool DeleteRoleNhanVien(int id_role)
+        public bool DeleteRoleNhanVien(string name)
         {
-            return dalRole.DeleteRoleNhanVien(id_role);
+            return dalRole.DeleteRoleNhanVien(name);
         }
-        public DataTable SearchRoleNhanVien(int id_role)
+        public DataTable HienThiDuLieuRoles()
         {
-            return dalRole.SearchRoleNhanVien(id_role);
+            return dalRole.GetRoles();
+        }
+        public DataTable SearchRoleNhanVien(string name)
+        {
+            return dalRole.SearchRoleNhanVien(name);
         }
     }
 }
