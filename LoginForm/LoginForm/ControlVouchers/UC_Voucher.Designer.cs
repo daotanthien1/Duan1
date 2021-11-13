@@ -49,7 +49,7 @@ namespace RJCodeAdvance.ControlVouchers
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btDanhSach = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
@@ -365,33 +365,33 @@ namespace RJCodeAdvance.ControlVouchers
             this.guna2Button5.Text = "Lưu";
             this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
-            // guna2Button4
+            // btDanhSach
             // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.BorderColor = System.Drawing.Color.White;
-            this.guna2Button4.BorderRadius = 6;
-            this.guna2Button4.BorderThickness = 1;
-            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
-            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.DisabledState.Parent = this.guna2Button4;
-            this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
-            this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button4.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.guna2Button4.Location = new System.Drawing.Point(677, 581);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
-            this.guna2Button4.Size = new System.Drawing.Size(128, 45);
-            this.guna2Button4.TabIndex = 116;
-            this.guna2Button4.Text = "Danh Sách";
-            this.guna2Button4.TextOffset = new System.Drawing.Point(-2, 0);
-            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.btDanhSach.Animated = true;
+            this.btDanhSach.BorderColor = System.Drawing.Color.White;
+            this.btDanhSach.BorderRadius = 6;
+            this.btDanhSach.BorderThickness = 1;
+            this.btDanhSach.CheckedState.Parent = this.btDanhSach;
+            this.btDanhSach.CustomImages.Parent = this.btDanhSach;
+            this.btDanhSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btDanhSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btDanhSach.DisabledState.Parent = this.btDanhSach;
+            this.btDanhSach.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDanhSach.ForeColor = System.Drawing.Color.White;
+            this.btDanhSach.HoverState.Parent = this.btDanhSach;
+            this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
+            this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btDanhSach.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.btDanhSach.Location = new System.Drawing.Point(677, 581);
+            this.btDanhSach.Name = "btDanhSach";
+            this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
+            this.btDanhSach.Size = new System.Drawing.Size(128, 45);
+            this.btDanhSach.TabIndex = 116;
+            this.btDanhSach.Text = "Danh Sách";
+            this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
+            this.btDanhSach.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 
@@ -549,7 +549,7 @@ namespace RJCodeAdvance.ControlVouchers
             this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.guna2Button5);
-            this.Controls.Add(this.guna2Button4);
+            this.Controls.Add(this.btDanhSach);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.label3);
@@ -590,7 +590,7 @@ namespace RJCodeAdvance.ControlVouchers
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btDanhSach;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button btThem;
         private Guna.UI2.WinForms.Guna2NumericUpDown txtSoLuong;

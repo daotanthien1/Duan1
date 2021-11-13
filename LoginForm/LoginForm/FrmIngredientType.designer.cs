@@ -48,6 +48,7 @@ namespace RJCodeAdvance
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btDanhSacch = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,7 +100,7 @@ namespace RJCodeAdvance
             this.txtTenLoaiNL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenLoaiNL.FocusedState.Parent = this.txtTenLoaiNL;
             this.txtTenLoaiNL.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtTenLoaiNL.ForeColor = System.Drawing.Color.HotPink;
+            this.txtTenLoaiNL.ForeColor = System.Drawing.Color.BlueViolet;
             this.txtTenLoaiNL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenLoaiNL.HoverState.Parent = this.txtTenLoaiNL;
             this.txtTenLoaiNL.Location = new System.Drawing.Point(28, 86);
@@ -128,7 +129,7 @@ namespace RJCodeAdvance
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv.ColumnHeadersHeight = 4;
+            this.dgv.ColumnHeadersHeight = 25;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -141,7 +142,6 @@ namespace RJCodeAdvance
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv.Location = new System.Drawing.Point(28, 184);
             this.dgv.Name = "dgv";
-            this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(800, 180);
@@ -158,7 +158,7 @@ namespace RJCodeAdvance
             this.dgv.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgv.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgv.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgv.ThemeStyle.HeaderStyle.Height = 25;
             this.dgv.ThemeStyle.ReadOnly = false;
             this.dgv.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -369,12 +369,38 @@ namespace RJCodeAdvance
             // 
             this.guna2Elipse2.TargetControl = this.dgv;
             // 
+            // btDanhSacch
+            // 
+            this.btDanhSacch.Animated = true;
+            this.btDanhSacch.BorderColor = System.Drawing.Color.White;
+            this.btDanhSacch.BorderRadius = 6;
+            this.btDanhSacch.BorderThickness = 1;
+            this.btDanhSacch.CheckedState.Parent = this.btDanhSacch;
+            this.btDanhSacch.CustomImages.Parent = this.btDanhSacch;
+            this.btDanhSacch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSacch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSacch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btDanhSacch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btDanhSacch.DisabledState.Parent = this.btDanhSacch;
+            this.btDanhSacch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDanhSacch.ForeColor = System.Drawing.Color.White;
+            this.btDanhSacch.HoverState.Parent = this.btDanhSacch;
+            this.btDanhSacch.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSacch.Image")));
+            this.btDanhSacch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btDanhSacch.Location = new System.Drawing.Point(94, 391);
+            this.btDanhSacch.Name = "btDanhSacch";
+            this.btDanhSacch.ShadowDecoration.Parent = this.btDanhSacch;
+            this.btDanhSacch.Size = new System.Drawing.Size(134, 36);
+            this.btDanhSacch.TabIndex = 139;
+            this.btDanhSacch.Text = "Danh sách";
+            // 
             // FrmIngredientType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlueViolet;
             this.ClientSize = new System.Drawing.Size(861, 512);
+            this.Controls.Add(this.btDanhSacch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btLuu);
@@ -414,5 +440,6 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2Button btThem;
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Button btDanhSacch;
     }
 }

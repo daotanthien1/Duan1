@@ -66,7 +66,6 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             // dgvElipse
             // 
-            this.dgvElipse.BorderRadius = 26;
             this.dgvElipse.TargetControl = this.dgvBeverage;
             // 
             // dgvBeverage
@@ -565,6 +564,7 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             // guna2Elipse1
             // 
+            this.guna2Elipse1.BorderRadius = 26;
             this.guna2Elipse1.TargetControl = this;
             // 
             // btDanhSach
@@ -580,18 +580,19 @@ namespace RJCodeAdvance.ControlBeverages
             this.btDanhSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btDanhSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btDanhSach.DisabledState.Parent = this.btDanhSach;
-            this.btDanhSach.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDanhSach.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDanhSach.ForeColor = System.Drawing.Color.White;
             this.btDanhSach.HoverState.Parent = this.btDanhSach;
             this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
             this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btDanhSach.Location = new System.Drawing.Point(783, 592);
+            this.btDanhSach.ImageOffset = new System.Drawing.Point(-2, 0);
+            this.btDanhSach.Location = new System.Drawing.Point(779, 592);
             this.btDanhSach.Name = "btDanhSach";
             this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
             this.btDanhSach.Size = new System.Drawing.Size(128, 45);
-            this.btDanhSach.TabIndex = 85;
+            this.btDanhSach.TabIndex = 117;
             this.btDanhSach.Text = "Danh Sách";
-            this.btDanhSach.Click += new System.EventHandler(this.btDanhSach_Click);
+            this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
             // 
             // UC_Beverages2
             // 
