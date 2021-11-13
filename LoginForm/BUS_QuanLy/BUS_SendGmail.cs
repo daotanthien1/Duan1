@@ -15,7 +15,7 @@ namespace BUS_QuanLy
             try
             {
                 var fromAddress = new MailAddress("trasuaqlmeta@gmail.com");
-                var toAddress = new MailAddress("tungnh230802@gmail.com");
+                var toAddress = new MailAddress(email);
                 const string fromPassword = "fm2fD89V";
     
                 var smtp = new SmtpClient
