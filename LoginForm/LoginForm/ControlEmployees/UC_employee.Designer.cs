@@ -470,7 +470,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnLuu.HoverState.Parent = this.btnLuu;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnLuu.Location = new System.Drawing.Point(676, 584);
+            this.btnLuu.Location = new System.Drawing.Point(612, 584);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
             this.btnLuu.Size = new System.Drawing.Size(128, 45);
@@ -496,7 +496,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnSua.HoverState.Parent = this.btnSua;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnSua.Location = new System.Drawing.Point(535, 584);
+            this.btnSua.Location = new System.Drawing.Point(471, 584);
             this.btnSua.Name = "btnSua";
             this.btnSua.ShadowDecoration.Parent = this.btnSua;
             this.btnSua.Size = new System.Drawing.Size(128, 45);
@@ -522,7 +522,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnXoa.HoverState.Parent = this.btnXoa;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnXoa.Location = new System.Drawing.Point(395, 584);
+            this.btnXoa.Location = new System.Drawing.Point(331, 584);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
             this.btnXoa.Size = new System.Drawing.Size(128, 45);
@@ -549,7 +549,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(255, 584);
+            this.btThem.Location = new System.Drawing.Point(191, 584);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(128, 45);
@@ -606,7 +606,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btLoad.HoverState.Parent = this.btLoad;
             this.btLoad.Image = ((System.Drawing.Image)(resources.GetObject("btLoad.Image")));
             this.btLoad.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLoad.Location = new System.Drawing.Point(810, 584);
+            this.btLoad.Location = new System.Drawing.Point(746, 584);
             this.btLoad.Name = "btLoad";
             this.btLoad.ShadowDecoration.Parent = this.btLoad;
             this.btLoad.Size = new System.Drawing.Size(128, 45);

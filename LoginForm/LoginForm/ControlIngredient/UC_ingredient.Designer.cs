@@ -53,6 +53,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btDanhSach = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -339,7 +340,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btLuu.HoverState.Parent = this.btLuu;
             this.btLuu.Image = ((System.Drawing.Image)(resources.GetObject("btLuu.Image")));
             this.btLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLuu.Location = new System.Drawing.Point(676, 594);
+            this.btLuu.Location = new System.Drawing.Point(610, 594);
             this.btLuu.Name = "btLuu";
             this.btLuu.ShadowDecoration.Parent = this.btLuu;
             this.btLuu.Size = new System.Drawing.Size(128, 45);
@@ -365,7 +366,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btSua.HoverState.Parent = this.btSua;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua.Location = new System.Drawing.Point(535, 594);
+            this.btSua.Location = new System.Drawing.Point(469, 594);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
             this.btSua.Size = new System.Drawing.Size(128, 45);
@@ -391,7 +392,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btXoa.HoverState.Parent = this.btXoa;
             this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
             this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btXoa.Location = new System.Drawing.Point(395, 594);
+            this.btXoa.Location = new System.Drawing.Point(329, 594);
             this.btXoa.Name = "btXoa";
             this.btXoa.ShadowDecoration.Parent = this.btXoa;
             this.btXoa.Size = new System.Drawing.Size(128, 45);
@@ -418,7 +419,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(255, 594);
+            this.btThem.Location = new System.Drawing.Point(189, 594);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(128, 45);
@@ -481,14 +482,39 @@ namespace RJCodeAdvance.ControlIngredient
             // 
             // guna2Elipse2
             // 
-            this.guna2Elipse2.BorderRadius = 26;
             this.guna2Elipse2.TargetControl = this.dgv;
+            // 
+            // btDanhSach
+            // 
+            this.btDanhSach.Animated = true;
+            this.btDanhSach.BorderColor = System.Drawing.Color.White;
+            this.btDanhSach.BorderRadius = 6;
+            this.btDanhSach.BorderThickness = 1;
+            this.btDanhSach.CheckedState.Parent = this.btDanhSach;
+            this.btDanhSach.CustomImages.Parent = this.btDanhSach;
+            this.btDanhSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btDanhSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btDanhSach.DisabledState.Parent = this.btDanhSach;
+            this.btDanhSach.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDanhSach.ForeColor = System.Drawing.Color.White;
+            this.btDanhSach.HoverState.Parent = this.btDanhSach;
+            this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
+            this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btDanhSach.Location = new System.Drawing.Point(744, 594);
+            this.btDanhSach.Name = "btDanhSach";
+            this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
+            this.btDanhSach.Size = new System.Drawing.Size(128, 45);
+            this.btDanhSach.TabIndex = 114;
+            this.btDanhSach.Text = "Danh Sách";
             // 
             // UC_ingredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btDanhSach);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btLuu);
             this.Controls.Add(this.btSua);
@@ -536,5 +562,6 @@ namespace RJCodeAdvance.ControlIngredient
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Button btDanhSach;
     }
 }

@@ -536,7 +536,6 @@ namespace RJCodeAdvance.ControlVouchers
             // 
             // guna2Elipse2
             // 
-            this.guna2Elipse2.BorderRadius = 26;
             this.guna2Elipse2.TargetControl = this.guna2DataGridView1;
             // 
             // UC_Voucher

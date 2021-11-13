@@ -87,11 +87,11 @@ namespace RJCodeAdvance
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(29, 183);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(29, 198);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(801, 180);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(801, 165);
             this.guna2DataGridView1.TabIndex = 49;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -450,7 +450,7 @@ namespace RJCodeAdvance
             // 
             this.guna2Elipse2.TargetControl = this.guna2DataGridView1;
             // 
-            // FrmShift2
+            // FrmShift
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -473,7 +473,7 @@ namespace RJCodeAdvance
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmShift2";
+            this.Name = "FrmShift";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmShift2";
             this.Load += new System.EventHandler(this.FrmShift2_Load);

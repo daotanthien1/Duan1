@@ -58,6 +58,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btFile = new Guna.UI2.WinForms.Guna2Button();
             this.bntLoaiDoUong = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btDanhSach = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBeverage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picHinh)).BeginInit();
@@ -380,7 +381,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btLuu.HoverState.Parent = this.btLuu;
             this.btLuu.Image = ((System.Drawing.Image)(resources.GetObject("btLuu.Image")));
             this.btLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLuu.Location = new System.Drawing.Point(671, 591);
+            this.btLuu.Location = new System.Drawing.Point(639, 592);
             this.btLuu.Name = "btLuu";
             this.btLuu.ShadowDecoration.Parent = this.btLuu;
             this.btLuu.Size = new System.Drawing.Size(128, 45);
@@ -406,7 +407,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btSua.HoverState.Parent = this.btSua;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua.Location = new System.Drawing.Point(530, 591);
+            this.btSua.Location = new System.Drawing.Point(498, 592);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
             this.btSua.Size = new System.Drawing.Size(128, 45);
@@ -432,7 +433,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btXoa.HoverState.Parent = this.btXoa;
             this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
             this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btXoa.Location = new System.Drawing.Point(390, 591);
+            this.btXoa.Location = new System.Drawing.Point(358, 592);
             this.btXoa.Name = "btXoa";
             this.btXoa.ShadowDecoration.Parent = this.btXoa;
             this.btXoa.Size = new System.Drawing.Size(128, 45);
@@ -459,7 +460,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(250, 591);
+            this.btThem.Location = new System.Drawing.Point(218, 592);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(128, 45);
@@ -566,11 +567,38 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // btDanhSach
+            // 
+            this.btDanhSach.Animated = true;
+            this.btDanhSach.BorderColor = System.Drawing.Color.White;
+            this.btDanhSach.BorderRadius = 6;
+            this.btDanhSach.BorderThickness = 1;
+            this.btDanhSach.CheckedState.Parent = this.btDanhSach;
+            this.btDanhSach.CustomImages.Parent = this.btDanhSach;
+            this.btDanhSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btDanhSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btDanhSach.DisabledState.Parent = this.btDanhSach;
+            this.btDanhSach.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDanhSach.ForeColor = System.Drawing.Color.White;
+            this.btDanhSach.HoverState.Parent = this.btDanhSach;
+            this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
+            this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btDanhSach.Location = new System.Drawing.Point(783, 592);
+            this.btDanhSach.Name = "btDanhSach";
+            this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
+            this.btDanhSach.Size = new System.Drawing.Size(128, 45);
+            this.btDanhSach.TabIndex = 85;
+            this.btDanhSach.Text = "Danh Sách";
+            this.btDanhSach.Click += new System.EventHandler(this.btDanhSach_Click);
+            // 
             // UC_Beverages2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btDanhSach);
             this.Controls.Add(this.bntLoaiDoUong);
             this.Controls.Add(this.btFile);
             this.Controls.Add(this.dgvBeverage);
@@ -624,5 +652,6 @@ namespace RJCodeAdvance.ControlBeverages
         internal Guna.UI2.WinForms.Guna2Button btFile;
         private Guna.UI2.WinForms.Guna2Button bntLoaiDoUong;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Button btDanhSach;
     }
 }

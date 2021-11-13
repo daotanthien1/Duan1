@@ -55,6 +55,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThanhToan = new Guna.UI2.WinForms.Guna2Button();
             this.btThemNguyenLieu = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btDanhSach = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -353,7 +354,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2Button5.HoverState.Parent = this.guna2Button5;
             this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button5.Location = new System.Drawing.Point(683, 582);
+            this.guna2Button5.Location = new System.Drawing.Point(607, 586);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(128, 45);
@@ -378,7 +379,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button4.Location = new System.Drawing.Point(542, 582);
+            this.guna2Button4.Location = new System.Drawing.Point(466, 586);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
             this.guna2Button4.Size = new System.Drawing.Size(128, 45);
@@ -403,7 +404,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
             this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button3.Location = new System.Drawing.Point(402, 582);
+            this.guna2Button3.Location = new System.Drawing.Point(326, 586);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
             this.guna2Button3.Size = new System.Drawing.Size(128, 45);
@@ -429,7 +430,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(262, 582);
+            this.btThem.Location = new System.Drawing.Point(186, 586);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(128, 45);
@@ -518,14 +519,39 @@ namespace RJCodeAdvance.ControlIngredient
             // 
             // guna2Elipse2
             // 
-            this.guna2Elipse2.BorderRadius = 26;
             this.guna2Elipse2.TargetControl = this.guna2DataGridView1;
+            // 
+            // btDanhSach
+            // 
+            this.btDanhSach.Animated = true;
+            this.btDanhSach.BorderColor = System.Drawing.Color.White;
+            this.btDanhSach.BorderRadius = 6;
+            this.btDanhSach.BorderThickness = 1;
+            this.btDanhSach.CheckedState.Parent = this.btDanhSach;
+            this.btDanhSach.CustomImages.Parent = this.btDanhSach;
+            this.btDanhSach.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSach.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btDanhSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btDanhSach.DisabledState.Parent = this.btDanhSach;
+            this.btDanhSach.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDanhSach.ForeColor = System.Drawing.Color.White;
+            this.btDanhSach.HoverState.Parent = this.btDanhSach;
+            this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
+            this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btDanhSach.Location = new System.Drawing.Point(751, 586);
+            this.btDanhSach.Name = "btDanhSach";
+            this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
+            this.btDanhSach.Size = new System.Drawing.Size(128, 45);
+            this.btDanhSach.TabIndex = 100;
+            this.btDanhSach.Text = "Danh Sách";
             // 
             // UC_Input_Ingredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btDanhSach);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.guna2ComboBox1);
             this.Controls.Add(this.guna2NumericUpDown1);
@@ -578,5 +604,6 @@ namespace RJCodeAdvance.ControlIngredient
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Button btDanhSach;
     }
 }
