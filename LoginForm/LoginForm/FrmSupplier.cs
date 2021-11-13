@@ -109,12 +109,8 @@ namespace RJCodeAdvance
 
         private void btThoat_Click(object sender, EventArgs e)
         {
-            DialogResult dlr = MessageBox.Show("Bạn muốn thoát chương trình?",
-                  "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
+
+            this.Close();
         }
 
         private void FrmSupplier_Load(object sender, EventArgs e)

@@ -298,5 +298,10 @@ namespace RJCodeAdvance.ControlBeverages
         {
             loadComBoBox();
         }
+
+        private void btDanhSach_Click(object sender, EventArgs e)
+        {
+            loadDGV();
+        }
     }
 }

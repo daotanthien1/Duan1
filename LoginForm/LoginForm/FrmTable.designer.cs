@@ -51,6 +51,7 @@ namespace RJCodeAdvance
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btDanhSacch = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -429,12 +430,38 @@ namespace RJCodeAdvance
             // 
             this.guna2Elipse2.TargetControl = this.guna2DataGridView1;
             // 
+            // btDanhSacch
+            // 
+            this.btDanhSacch.Animated = true;
+            this.btDanhSacch.BorderColor = System.Drawing.Color.White;
+            this.btDanhSacch.BorderRadius = 6;
+            this.btDanhSacch.BorderThickness = 1;
+            this.btDanhSacch.CheckedState.Parent = this.btDanhSacch;
+            this.btDanhSacch.CustomImages.Parent = this.btDanhSacch;
+            this.btDanhSacch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSacch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btDanhSacch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btDanhSacch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btDanhSacch.DisabledState.Parent = this.btDanhSacch;
+            this.btDanhSacch.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDanhSacch.ForeColor = System.Drawing.Color.White;
+            this.btDanhSacch.HoverState.Parent = this.btDanhSacch;
+            this.btDanhSacch.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSacch.Image")));
+            this.btDanhSacch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btDanhSacch.Location = new System.Drawing.Point(92, 382);
+            this.btDanhSacch.Name = "btDanhSacch";
+            this.btDanhSacch.ShadowDecoration.Parent = this.btDanhSacch;
+            this.btDanhSacch.Size = new System.Drawing.Size(134, 36);
+            this.btDanhSacch.TabIndex = 140;
+            this.btDanhSacch.Text = "Danh sách";
+            // 
             // FrmTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlueViolet;
             this.ClientSize = new System.Drawing.Size(861, 512);
+            this.Controls.Add(this.btDanhSacch);
             this.Controls.Add(this.rdCoNguoi);
             this.Controls.Add(this.rdTrong);
             this.Controls.Add(this.label4);
@@ -480,5 +507,6 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2RadioButton rdTrong;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2Button btDanhSacch;
     }
 }

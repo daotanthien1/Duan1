@@ -22,13 +22,15 @@ namespace RJCodeAdvance.ControlIngredient
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             FrmIngredientType frm = new FrmIngredientType();
-            frm.ShowDialog(); 
+            frm.ShowDialog();
+            loadComBoBox();
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             FrmSupplier frm = new FrmSupplier();
             frm.ShowDialog();
+            loadComBoBox();
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)
@@ -123,15 +125,6 @@ namespace RJCodeAdvance.ControlIngredient
             }
         }
 
-        private void btThoat_Click(object sender, EventArgs e)
-        {
-            DialogResult dlr = MessageBox.Show("Bạn muốn thoát chương trình?",
-                  "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
 
         private void UC_ingredient_Load(object sender, EventArgs e)
         {
@@ -198,12 +191,10 @@ namespace RJCodeAdvance.ControlIngredient
         }
         void loadComBoBox()
         {
-            cbLoaiIngredient.Items.Clear();
             cbLoaiIngredient.DataSource = busIg.getIngredientType();
             cbLoaiIngredient.DisplayMember = "Name";
             cbLoaiIngredient.ValueMember = "Id_type";
 
-            cbNhaCC.Items.Clear();
             cbNhaCC.DataSource = busIg.getSupplier();
             cbNhaCC.DisplayMember = "Name";
             cbNhaCC.ValueMember = "Id_supplier";
