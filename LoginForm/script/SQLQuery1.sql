@@ -1,15 +1,23 @@
-﻿select * from employees
-
+﻿select * from tables
 go
 
-CREATE PROCEDURE [dbo].[LOGIN] @EMAIL VARCHAR(50), @PASSWORD VARCHAR(100)
-AS 
-BEGIN
-	DECLARE @STATUS INT
-	IF EXISTS(SELECT * FROM Employees 
-	WHERE Email = @EMAIL AND Password = @PASSWORD)
-		SET @STATUS = 1
-	ELSE 
-		SET @STATUS = 0
-	SELECT @STATUS
-END
+-- update data table
+-- drop proc UpdateTable
+create proc [dbo].[UpdateTable]
+@name nvarchar(50), @Status nvarchar(20), @id int
+as
+	begin
+			update tables set name = @name, Status = @Status where ID_Table = @id
+	end
+
+-- order ==================================================================
+select * from tables
+insert into Customers (Email, name,Gender) values
+('tungnh230802@gmail.com','tung','nam')
+select *from Customers
+select * from Employees
+
+select * from TypesOfBeverage
+select * from Beverages
+insert into Bills (DateCheckIn,DateCheckOut,Id_table,Id_customer,Id_employee)
+values(GETDATE(), null, 3,1,3)

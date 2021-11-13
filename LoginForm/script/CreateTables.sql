@@ -1,0 +1,480 @@
+USE [master]
+GO
+/****** Object:  Database [DuAn1]    Script Date: 11/14/2021 3:50:25 AM ******/
+CREATE DATABASE [DuAn1]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'DuAn1', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.TUNGNH230802\MSSQL\DATA\DuAn1.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'DuAn1_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL15.TUNGNH230802\MSSQL\DATA\DuAn1_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+ WITH CATALOG_COLLATION = DATABASE_DEFAULT
+GO
+ALTER DATABASE [DuAn1] SET COMPATIBILITY_LEVEL = 150
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [DuAn1].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [DuAn1] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [DuAn1] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [DuAn1] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [DuAn1] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [DuAn1] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [DuAn1] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [DuAn1] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [DuAn1] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [DuAn1] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [DuAn1] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [DuAn1] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [DuAn1] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [DuAn1] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [DuAn1] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [DuAn1] SET  ENABLE_BROKER 
+GO
+ALTER DATABASE [DuAn1] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [DuAn1] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [DuAn1] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [DuAn1] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [DuAn1] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [DuAn1] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [DuAn1] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [DuAn1] SET RECOVERY FULL 
+GO
+ALTER DATABASE [DuAn1] SET  MULTI_USER 
+GO
+ALTER DATABASE [DuAn1] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [DuAn1] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [DuAn1] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [DuAn1] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+ALTER DATABASE [DuAn1] SET DELAYED_DURABILITY = DISABLED 
+GO
+ALTER DATABASE [DuAn1] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+GO
+EXEC sys.sp_db_vardecimal_storage_format N'DuAn1', N'ON'
+GO
+ALTER DATABASE [DuAn1] SET QUERY_STORE = OFF
+GO
+USE [DuAn1]
+GO
+/****** Object:  Table [dbo].[Beverages]    Script Date: 11/14/2021 3:50:25 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Beverages](
+	[Name] [nvarchar](55) NOT NULL,
+	[Price] [float] NOT NULL,
+	[Id_type] [int] NOT NULL,
+	[Id_beverage] [int] IDENTITY(1,1) NOT NULL,
+	[Image] [nvarchar](500) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_beverage] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Bills]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Bills](
+	[Id_employee] [int] NOT NULL,
+	[Id_bill] [int] IDENTITY(1,1) NOT NULL,
+	[Id_customer] [int] NOT NULL,
+	[Id_table] [int] NOT NULL,
+	[DateCheckIn] [datetime] NOT NULL,
+	[DateCheckOut] [datetime] NULL,
+	[status] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_bill] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Bills_detail]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Bills_detail](
+	[Id_bill_detaill] [int] IDENTITY(1,1) NOT NULL,
+	[Id_bill] [int] NOT NULL,
+	[Quantity] [int] NOT NULL,
+	[Id_beverage] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_bill_detaill] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Customers]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Customers](
+	[Email] [nvarchar](50) NOT NULL,
+	[name] [nvarchar](50) NOT NULL,
+	[Gender] [nvarchar](10) NOT NULL,
+	[Id_customer] [int] IDENTITY(1,1) NOT NULL,
+	[Reward] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_customer] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Employees]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Employees](
+	[Id_role] [int] NOT NULL,
+	[Gender] [int] NOT NULL,
+	[Email] [nvarchar](50) NOT NULL,
+	[Address] [nvarchar](100) NOT NULL,
+	[Password] [varchar](100) NULL,
+	[DayOfBirth] [date] NOT NULL,
+	[Id_employee] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+	[Salary] [float] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_employee] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Ingredients]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Ingredients](
+	[Id_ingredient] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](100) NOT NULL,
+	[Id_supplier] [int] NOT NULL,
+	[Id_type] [int] NOT NULL,
+	[Price] [float] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_ingredient] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[InputBills]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[InputBills](
+	[ID_Bill] [int] IDENTITY(1,1) NOT NULL,
+	[DateCheckIn] [datetime] NOT NULL,
+	[ID_employee] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID_Bill] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[InputBillsDetaill]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[InputBillsDetaill](
+	[Id_BillDetaill] [int] IDENTITY(1,1) NOT NULL,
+	[quantity] [float] NOT NULL,
+	[Id_unit] [int] NOT NULL,
+	[Id_Ingredient] [int] NOT NULL,
+	[ID_Bill] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_BillDetaill] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Roles]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Roles](
+	[Id_role] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](20) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_role] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Schedules]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Schedules](
+	[Id_schedule] [int] IDENTITY(1,1) NOT NULL,
+	[Id_employee] [int] NOT NULL,
+	[Id_shift] [int] NOT NULL,
+	[Days] [int] NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_schedule] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Shifts]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Shifts](
+	[TimeBegin] [varchar](10) NOT NULL,
+	[TimeEnd] [varchar](10) NOT NULL,
+	[name] [nvarchar](50) NOT NULL,
+	[Id_shift] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_shift] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Suppliers]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Suppliers](
+	[Name] [nvarchar](50) NOT NULL,
+	[Id_supplier] [int] IDENTITY(1,1) NOT NULL,
+	[Email] [nvarchar](50) NOT NULL,
+	[Address] [nvarchar](100) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_supplier] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[tables]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tables](
+	[ID_Table] [int] IDENTITY(1,1) NOT NULL,
+	[name] [nvarchar](50) NOT NULL,
+	[Status] [nvarchar](20) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID_Table] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[TypesOfBeverage]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TypesOfBeverage](
+	[Id_type] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_type] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[TypesOfIngredient]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TypesOfIngredient](
+	[Id_type] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_type] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[TypesVoucher]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TypesVoucher](
+	[ID_Type] [int] IDENTITY(1,1) NOT NULL,
+	[Sale] [float] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID_Type] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[units]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[units](
+	[ID_unit] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](20) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[ID_unit] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Vouchers]    Script Date: 11/14/2021 3:50:26 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Vouchers](
+	[Id_voucher] [varchar](6) NOT NULL,
+	[DateBegin] [date] NOT NULL,
+	[DateEnd] [date] NULL,
+	[Id_employee] [int] NOT NULL,
+	[ID_Type] [int] NOT NULL,
+	[Status] [int] NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id_voucher] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Bills] ADD  DEFAULT (getdate()) FOR [DateCheckIn]
+GO
+ALTER TABLE [dbo].[Bills] ADD  DEFAULT ((0)) FOR [status]
+GO
+ALTER TABLE [dbo].[Customers] ADD  DEFAULT ((0)) FOR [Reward]
+GO
+ALTER TABLE [dbo].[Employees] ADD  DEFAULT ('1292201552198220877194054219216496220885') FOR [Password]
+GO
+ALTER TABLE [dbo].[InputBills] ADD  DEFAULT (getdate()) FOR [DateCheckIn]
+GO
+ALTER TABLE [dbo].[tables] ADD  DEFAULT (N'trống') FOR [Status]
+GO
+ALTER TABLE [dbo].[Vouchers] ADD  DEFAULT (getdate()) FOR [DateBegin]
+GO
+ALTER TABLE [dbo].[Vouchers] ADD  DEFAULT ((0)) FOR [Status]
+GO
+ALTER TABLE [dbo].[Beverages]  WITH CHECK ADD  CONSTRAINT [FK_Id_type_Beverages] FOREIGN KEY([Id_type])
+REFERENCES [dbo].[TypesOfBeverage] ([Id_type])
+GO
+ALTER TABLE [dbo].[Beverages] CHECK CONSTRAINT [FK_Id_type_Beverages]
+GO
+ALTER TABLE [dbo].[Bills]  WITH CHECK ADD  CONSTRAINT [FK_Id_customer] FOREIGN KEY([Id_customer])
+REFERENCES [dbo].[Customers] ([Id_customer])
+GO
+ALTER TABLE [dbo].[Bills] CHECK CONSTRAINT [FK_Id_customer]
+GO
+ALTER TABLE [dbo].[Bills]  WITH CHECK ADD  CONSTRAINT [FK_Id_employee_Employee] FOREIGN KEY([Id_employee])
+REFERENCES [dbo].[Employees] ([Id_employee])
+GO
+ALTER TABLE [dbo].[Bills] CHECK CONSTRAINT [FK_Id_employee_Employee]
+GO
+ALTER TABLE [dbo].[Bills]  WITH CHECK ADD  CONSTRAINT [FK_Id_table] FOREIGN KEY([Id_table])
+REFERENCES [dbo].[tables] ([ID_Table])
+GO
+ALTER TABLE [dbo].[Bills] CHECK CONSTRAINT [FK_Id_table]
+GO
+ALTER TABLE [dbo].[Bills_detail]  WITH CHECK ADD  CONSTRAINT [FK_Id_beverage_Bill_detail] FOREIGN KEY([Id_beverage])
+REFERENCES [dbo].[Beverages] ([Id_beverage])
+GO
+ALTER TABLE [dbo].[Bills_detail] CHECK CONSTRAINT [FK_Id_beverage_Bill_detail]
+GO
+ALTER TABLE [dbo].[Bills_detail]  WITH CHECK ADD  CONSTRAINT [FK_Id_bill_BillDetail] FOREIGN KEY([Id_bill])
+REFERENCES [dbo].[Bills] ([Id_bill])
+GO
+ALTER TABLE [dbo].[Bills_detail] CHECK CONSTRAINT [FK_Id_bill_BillDetail]
+GO
+ALTER TABLE [dbo].[Employees]  WITH CHECK ADD  CONSTRAINT [fk_idRole] FOREIGN KEY([Id_role])
+REFERENCES [dbo].[Roles] ([Id_role])
+GO
+ALTER TABLE [dbo].[Employees] CHECK CONSTRAINT [fk_idRole]
+GO
+ALTER TABLE [dbo].[Ingredients]  WITH CHECK ADD  CONSTRAINT [FK_ID_supplier] FOREIGN KEY([Id_supplier])
+REFERENCES [dbo].[Suppliers] ([Id_supplier])
+GO
+ALTER TABLE [dbo].[Ingredients] CHECK CONSTRAINT [FK_ID_supplier]
+GO
+ALTER TABLE [dbo].[Ingredients]  WITH CHECK ADD  CONSTRAINT [FK_ID_Type] FOREIGN KEY([Id_type])
+REFERENCES [dbo].[TypesOfIngredient] ([Id_type])
+GO
+ALTER TABLE [dbo].[Ingredients] CHECK CONSTRAINT [FK_ID_Type]
+GO
+ALTER TABLE [dbo].[InputBills]  WITH CHECK ADD  CONSTRAINT [FK_ID_employee] FOREIGN KEY([ID_employee])
+REFERENCES [dbo].[Employees] ([Id_employee])
+GO
+ALTER TABLE [dbo].[InputBills] CHECK CONSTRAINT [FK_ID_employee]
+GO
+ALTER TABLE [dbo].[InputBillsDetaill]  WITH CHECK ADD  CONSTRAINT [FK_ID_ingredient] FOREIGN KEY([Id_Ingredient])
+REFERENCES [dbo].[Ingredients] ([Id_ingredient])
+GO
+ALTER TABLE [dbo].[InputBillsDetaill] CHECK CONSTRAINT [FK_ID_ingredient]
+GO
+ALTER TABLE [dbo].[InputBillsDetaill]  WITH CHECK ADD  CONSTRAINT [FK_ID_InputBills] FOREIGN KEY([ID_Bill])
+REFERENCES [dbo].[InputBills] ([ID_Bill])
+GO
+ALTER TABLE [dbo].[InputBillsDetaill] CHECK CONSTRAINT [FK_ID_InputBills]
+GO
+ALTER TABLE [dbo].[InputBillsDetaill]  WITH CHECK ADD  CONSTRAINT [FK_ID_unit] FOREIGN KEY([Id_unit])
+REFERENCES [dbo].[units] ([ID_unit])
+GO
+ALTER TABLE [dbo].[InputBillsDetaill] CHECK CONSTRAINT [FK_ID_unit]
+GO
+ALTER TABLE [dbo].[Schedules]  WITH CHECK ADD  CONSTRAINT [FK_Id_employee_schedule] FOREIGN KEY([Id_employee])
+REFERENCES [dbo].[Employees] ([Id_employee])
+GO
+ALTER TABLE [dbo].[Schedules] CHECK CONSTRAINT [FK_Id_employee_schedule]
+GO
+ALTER TABLE [dbo].[Schedules]  WITH CHECK ADD  CONSTRAINT [FK_Id_Shift] FOREIGN KEY([Id_shift])
+REFERENCES [dbo].[Shifts] ([Id_shift])
+GO
+ALTER TABLE [dbo].[Schedules] CHECK CONSTRAINT [FK_Id_Shift]
+GO
+ALTER TABLE [dbo].[Vouchers]  WITH CHECK ADD  CONSTRAINT [FK_Id_employe_voucher] FOREIGN KEY([Id_employee])
+REFERENCES [dbo].[Employees] ([Id_employee])
+GO
+ALTER TABLE [dbo].[Vouchers] CHECK CONSTRAINT [FK_Id_employe_voucher]
+GO
+ALTER TABLE [dbo].[Vouchers]  WITH CHECK ADD  CONSTRAINT [FK_Id_TypeVoucher_voucher] FOREIGN KEY([ID_Type])
+REFERENCES [dbo].[TypesVoucher] ([ID_Type])
+GO
+ALTER TABLE [dbo].[Vouchers] CHECK CONSTRAINT [FK_Id_TypeVoucher_voucher]
+GO
+USE [master]
+GO
+ALTER DATABASE [DuAn1] SET  READ_WRITE 
+GO
+

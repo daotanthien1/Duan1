@@ -14,7 +14,7 @@ Go
 create table Employees
 (
 	Id_role int NOT NULL,
-	Gender nvarchar(10) NOT NULL, -- nam || nữ
+	Gender INT NOT NULL, -- nam || nữ
 	Email nvarchar(50) NOT NULL,
 	Address nvarchar(100) NOT NULL,
 	Password varchar(100) DEFAULT('1292201552198220877194054219216496220885'),
@@ -51,6 +51,7 @@ create table Shifts
 (
 	TimeBegin VARCHAR(10) not null,
 	TimeEnd VARCHAR(10) not null,
+	name nvarchar(50) not null,
 	Id_shift int primary key,
 );
 Go
@@ -101,12 +102,14 @@ create table InputBills
 	ID_employee int not null,
 	Constraint FK_ID_employee foreign key (ID_employee) references employees(ID_employee)
 )
+go
 
 Create table units -- đơn vị (vd:kg,lít,..)
 (
 	ID_unit int identity primary key,
 	Name nvarchar(20)
 )
+go
 
 Create table InputBillsDetaill
 (
@@ -119,6 +122,7 @@ Create table InputBillsDetaill
 	Constraint FK_ID_ingredient foreign key(Id_Ingredient) references Ingredients(Id_Ingredient),
 	Constraint FK_ID_InputBills foreign key(ID_Bill) references InputBills(ID_Bill),
 )
+go
 
 create table TypesOfBeverage
 (
@@ -135,15 +139,6 @@ create table Beverages
 	Id_beverage int primary key identity,
 	Image nvarchar(500) not null,
 	constraint FK_Id_type_Beverages foreign key (Id_type) references TypesOfBeverage (Id_type)
-);
-Go
-
-create table Bills_detail
-(
-	Id_bill int primary key identity,
-	Quantity int not null,
-	Id_beverage int not null,
-	constraint FK_Id_beverage_Bill_detail foreign key(Id_beverage) references Beverages(Id_beverage)
 );
 Go
 
@@ -169,13 +164,30 @@ create table Bills(
 	Id_bill int primary key identity,
 	Id_customer int not null,
 	Id_table int  not null,
-	DateCheckIn date  not null,
+	DateCheckIn datetime  not null default(getdate()),
+	DateCheckOut datetime null,
+	status int default(0),
 	Constraint FK_Id_employee_Employee foreign key (Id_employee) references Employees(Id_employee),
-	Constraint FK_Id_bill_BillDetail foreign key(Id_bill) references Bills_detail (Id_bill),
 	constraint FK_Id_customer foreign key(Id_customer) references Customers(Id_customer),
 	constraint FK_Id_table foreign key(Id_table) references tables(Id_table)
 );
 go
+
+create table Bills_detail
+(
+	Id_bill_detaill int primary key identity,
+	Id_bill int not null,
+	Quantity int not null,
+	Id_beverage int not null,
+	constraint FK_Id_beverage_Bill_detail foreign key(Id_beverage) references Beverages(Id_beverage),
+	Constraint FK_Id_bill_BillDetail foreign key(Id_bill) references Bills (Id_bill),
+
+);
+Go
+
+
+
+
 
 -- drop proc dbo.LOGIN
 CREATE PROCEDURE [dbo].[LOGIN] @EMAIL VARCHAR(50), @PASSWORD NVARCHAR(100)
