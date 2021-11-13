@@ -42,7 +42,7 @@ namespace RJCodeAdvance
                 if (busNV.NhanVienQuenMatKhau(txtEmail.Text))
                 {
                     StringBuilder builder = new StringBuilder();
-                    builder.Append(RandomString(4, true));
+                    builder.Append(RandomString(2, true));
                     builder.Append(RandomNumber(1000, 9999));
                     builder.Append(RandomString(2, false));
                     string matkhaumoi = busNV.encryption(builder.ToString());
