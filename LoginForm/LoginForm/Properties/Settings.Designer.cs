@@ -58,5 +58,29 @@ namespace RJCodeAdvance.Properties {
                 this["RememberMe"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string rewards {
+            get {
+                return ((string)(this["rewards"]));
+            }
+            set {
+                this["rewards"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string vouchers {
+            get {
+                return ((string)(this["vouchers"]));
+            }
+            set {
+                this["vouchers"] = value;
+            }
+        }
     }
 }

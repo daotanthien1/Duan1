@@ -36,5 +36,21 @@ namespace BUS_QuanLy
         {
             return vouchers.deleteVoucher(id,a,b);
         }
+        public DataTable getConfigurationSale(int id)
+        {
+            return vouchers.getConfigurationSale(id);
+        }
+        public DataTable getEmailSendVoucher(int reward)
+        {
+            return vouchers.getEmailSendVoucher(reward);
+        }
+        public DataTable getVoucherSendMail(int voucher)
+        {
+            return vouchers.getVoucherSendMail(voucher);
+        }
+        public bool UpdateVoucherForSend(DTO_Vouchers voucher)
+        {
+            return vouchers.UpdateVoucherForSend(voucher);
+        }
     }
 }

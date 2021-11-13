@@ -12,6 +12,10 @@ namespace BUS_QuanLy
     public class BUS_Customer
     {
         DAL_Customer Customer = new DAL_Customer();
+        public bool UpdateCustomerAfterSendVoucher(DTO_Customer voucher)
+        {
+            return Customer.UpdateCustomerAfterSendVoucher(voucher);
+        }
         public DataTable getData()
         {
             return Customer.getData();

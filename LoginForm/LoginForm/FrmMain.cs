@@ -1,4 +1,6 @@
-﻿using Guna.UI2.WinForms;
+﻿using BUS_QuanLy;
+using DTO_QuanLy;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,6 +51,48 @@ namespace RJCodeAdvance
                 uC_Voucher1.BringToFront();
             if (btnThongKe.Checked) 
                 uC_Statistic1.BringToFront();
+        }
+        BUS_Vouchers vouchers = new BUS_Vouchers();
+        BUS_Customer customer = new BUS_Customer();
+        void sendVoucher()
+        {
+            if (Properties.Settings.Default.rewards == "")
+            {
+                Properties.Settings.Default.rewards = "9999";
+            }
+            if (Properties.Settings.Default.vouchers == "")
+            {
+                Properties.Settings.Default.vouchers = "3";
+            }
+            DataTable dt = vouchers.getEmailSendVoucher(int.Parse(Properties.Settings.Default.rewards.ToString()));
+            int row = 0;
+            string id_voucher;
+            string email;
+            DataTable voucher = vouchers.getVoucherSendMail(int.Parse(Properties.Settings.Default.vouchers.ToString()));
+            if (dt.Rows.Count > 0)
+            {
+                dataGridView1.DataSource = dt;
+                dataGridView2.DataSource = voucher;
+                do
+                {
+                    email = dataGridView1.Rows[row].Cells[0].Value.ToString();
+                    id_voucher = dataGridView2.Rows[row].Cells[0].Value.ToString();
+                    DTO_Vouchers dto = new DTO_Vouchers(id_voucher);
+                    DTO_Customer DTO = new DTO_Customer(email);
+                    string subject = "Bạn đã nhận được voucher khuyến mãi " + FrmConfigurationSale.Sale + "% của shop META <3";
+                    string body = $"Vocher:{id_voucher}";
+                    if (BUS_SendGmail.SendMail(email, subject, body))
+                    {
+                        vouchers.UpdateVoucherForSend(dto);
+                        customer.UpdateCustomerAfterSendVoucher(DTO);
+                        row += 1;
+                    }
+                } while (row == dt.Rows.Count - 1);
+            }
+        }
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            sendVoucher();
         }
     }
 }

@@ -29,6 +29,83 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+        public DataTable getConfigurationSale(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "getConfigurationSale";
+                cmd.Parameters.AddWithValue("id", id);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public DataTable getEmailSendVoucher(int reward)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "getEmailSendVoucher";
+                cmd.Parameters.AddWithValue("reward", reward);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public DataTable getVoucherSendMail(int voucher)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "getVoucherSendMail";
+                cmd.Parameters.AddWithValue("id_type", voucher);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public bool UpdateVoucherForSend(DTO_Vouchers vouchers)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "UpdateVoucherForSend";
+                cmd.Parameters.AddWithValue("Id_voucher", vouchers.id_vouchers);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
         public DataTable getData()
         {
             try

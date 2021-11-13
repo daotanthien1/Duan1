@@ -100,6 +100,7 @@ namespace RJCodeAdvance
             this.cbSale.ShadowDecoration.Parent = this.cbSale;
             this.cbSale.Size = new System.Drawing.Size(293, 36);
             this.cbSale.TabIndex = 152;
+            this.cbSale.Click += new System.EventHandler(this.cbSale_Click);
             // 
             // txtLuong
             // 
@@ -208,8 +209,9 @@ namespace RJCodeAdvance
             this.guna2Button5.Size = new System.Drawing.Size(128, 45);
             this.guna2Button5.TabIndex = 154;
             this.guna2Button5.Text = "Lưu";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
-            // FormConfigurationSale
+            // FrmConfigurationSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -225,9 +227,10 @@ namespace RJCodeAdvance
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2ControlBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormConfigurationSale";
+            this.Name = "FrmConfigurationSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConfigurationSale";
+            this.Load += new System.EventHandler(this.FrmConfigurationSale_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

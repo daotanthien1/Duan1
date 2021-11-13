@@ -11,6 +11,25 @@ namespace DAL_QuanLy
 {
     public class DAL_Customer : DBConnect
     {
+        public bool UpdateCustomerAfterSendVoucher(DTO_Customer vouchers)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "UpdateCustomerAfterSendVoucher";
+                cmd.Parameters.AddWithValue("email", vouchers.Email);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
         public DataTable getData()
         {
             try

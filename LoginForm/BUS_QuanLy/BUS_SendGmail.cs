@@ -12,7 +12,7 @@ namespace BUS_QuanLy
     {
         public static bool SendMail(string email, string subject, string body)
         {
-            try
+            try 
             {
                 var fromAddress = new MailAddress("trasuaqlmeta@gmail.com");
                 var toAddress = new MailAddress(email);

@@ -76,5 +76,10 @@ namespace DTO_QuanLy
             this.reward = reward;
             this.id = id;
         }
+
+        public DTO_Customer(string email)
+        {
+            this.email = email;
+        }
     }
 }

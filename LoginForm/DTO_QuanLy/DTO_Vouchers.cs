@@ -15,6 +15,7 @@ namespace DTO_QuanLy
         private int Id_type;
         private int Status;
         private string mail;
+
         public string id_vouchers
         {
             get
@@ -108,6 +109,11 @@ namespace DTO_QuanLy
             this.DayEnd = dayEnd;
             this.mail = mail;
             this.Status = Status;
+        }
+
+        public DTO_Vouchers(string id_voucher)
+        {
+            this.Id_Vouchers = id_voucher;
         }
     }
 }

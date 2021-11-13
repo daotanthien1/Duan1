@@ -117,7 +117,7 @@ namespace RJCodeAdvance
                 txtPassword.Focus();
             }
           
-        }
+        } 
 
         private void LoginNew_Load(object sender, EventArgs e)
         {

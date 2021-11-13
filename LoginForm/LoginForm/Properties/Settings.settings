@@ -11,5 +11,11 @@
     <Setting Name="RememberMe" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
+    <Setting Name="rewards" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="vouchers" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
