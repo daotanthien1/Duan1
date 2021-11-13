@@ -10,6 +10,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -97,15 +98,16 @@ namespace RJCodeAdvance
 
         private void btLogin_Click(object sender, EventArgs e)
         {
+            SaveSettings();
             DTO_NhanVien nv = new DTO_NhanVien();
             nv.email = txtEmail.Text;
             nv.password = busNV.encryption(txtPassword.Text);
-            nv.password = txtPassword.Text;
+            //nv.password = txtPassword.Text;
             if (busNV.NhanVienDangNhap(nv)) // khi đăng nhập thành công
             {
                 this.Hide();
-                FrmBeverageCP frmMain = new FrmBeverageCP();
-                frmMain.ShowDialog();
+                FrmBeverageCP frmcp = new FrmBeverageCP();
+                frmcp.ShowDialog();
                 this.Show();
             }
             else
@@ -114,13 +116,51 @@ namespace RJCodeAdvance
                 txtPassword.Text = null;
                 txtPassword.Focus();
             }
+          
         }
 
         private void LoginNew_Load(object sender, EventArgs e)
         {
+
+            ReadSettings();
+
             if (txtPassword.PasswordChar == '\0')
             {
                 txtPassword.PasswordChar = '*';
+            }
+        }
+
+        private void ReadSettings()
+        {
+            if (Properties.Settings.Default.RememberMe == "true")
+            {
+                txtEmail.Text = Properties.Settings.Default.user;
+                txtPassword.Text = Properties.Settings.Default.pass;
+                toggleNhoTaiKhoan.Checked = true;
+            }
+            else
+            {
+                txtEmail.Text = "";
+                txtPassword.Text = "";
+                toggleNhoTaiKhoan.Checked = false;
+
+            }
+        }
+        private void SaveSettings()
+        {
+            if (toggleNhoTaiKhoan.Checked)
+            {
+                Properties.Settings.Default.user = this.txtEmail.Text;
+                Properties.Settings.Default.pass = this.txtPassword.Text;
+                Properties.Settings.Default.RememberMe = "true";
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                Properties.Settings.Default.user = this.txtEmail.Text;
+                Properties.Settings.Default.pass = "";
+                Properties.Settings.Default.RememberMe = "false";
+                Properties.Settings.Default.Save();
             }
         }
     }
