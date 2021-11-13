@@ -131,7 +131,6 @@ namespace DAL_QuanLy
                 cmd.Parameters.AddWithValue("Gender", nv.GenDer);
                 cmd.Parameters.AddWithValue("Email", nv.email);
                 cmd.Parameters.AddWithValue("Address", nv.address);
-                cmd.Parameters.AddWithValue("Password", nv.password);
                 cmd.Parameters.AddWithValue("DayOfBirth", nv.dayOfBirth);
                 cmd.Parameters.AddWithValue("Name", nv.name);
                 cmd.Parameters.AddWithValue("Salary", nv.salary);
@@ -154,11 +153,13 @@ namespace DAL_QuanLy
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "UPDATE_DATA_TO_EMPLOYEE";
+                cmd.Parameters.AddWithValue("Id_role", nv.ID_Role);
                 cmd.Parameters.AddWithValue("Gender", nv.GenDer);
                 cmd.Parameters.AddWithValue("Email", nv.email);
                 cmd.Parameters.AddWithValue("Address", nv.address);
                 cmd.Parameters.AddWithValue("DayOfBirth", nv.dayOfBirth);
                 cmd.Parameters.AddWithValue("Name", nv.name);
+                cmd.Parameters.AddWithValue("Salary", nv.salary);
                 cmd.Connection = _conn;
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;

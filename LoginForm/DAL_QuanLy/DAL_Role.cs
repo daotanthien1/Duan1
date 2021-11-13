@@ -50,7 +50,7 @@ namespace DAL_QuanLy
             }
             return false;
         }
-        public bool DeleteRoleNhanVien(string name)
+        public bool DeleteRoleNhanVien(int id_role)
         {
             try
             {
@@ -59,7 +59,7 @@ namespace DAL_QuanLy
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "DELETE_DATA_FROM_ROLES";
-                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@id_role", id_role);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }

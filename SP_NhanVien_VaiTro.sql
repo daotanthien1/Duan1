@@ -196,18 +196,22 @@ GO
 
 exec UPDATE_DATA_TO_ROLES 34,'con à'
 /****** Object:  StoredProcedure [dbo].[DELETE_DATA_FROM_ROLES]    Script Date: 11/5/2021 1:39:53 PM ******/
+Insert into Roles
+values
+(N'Quản lý'),
+(N'Nhân viên')
 
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE PROCEDURE [dbo].[DELETE_DATA_FROM_ROLES]
-@name nvarchar(20)
+@id_role int
 AS
 BEGIN
 		DELETE FROM Roles
-		where LOWER(Name) like N'%' + lower(@name) + '%'
+		where Id_role = @id_role
+		DBCC CHECKIDENT ('Roles', RESEED, 2) -- Reset identity to 2
 END
 GO
 

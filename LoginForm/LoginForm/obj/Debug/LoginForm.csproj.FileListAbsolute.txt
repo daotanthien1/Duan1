@@ -662,3 +662,10 @@ C:\Users\tungnh230802\OneDrive\WorkSpace\duan2\Duan1\LoginForm\LoginForm\obj\Deb
 C:\Users\tungnh230802\OneDrive\WorkSpace\duan2\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmLogin.resources
 C:\Users\tungnh230802\OneDrive\WorkSpace\duan2\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmUnit.resources
 C:\Users\tungnh230802\OneDrive\WorkSpace\duan2\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmVoucherType.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.ControlStatistic.UC_Statistic.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmSchedule.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmShift.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmTypeOfBeverage.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmLogin.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmUnit.resources
+D:\Duan1\LoginForm\LoginForm\obj\Debug\RJCodeAdvance.FrmVoucherType.resources

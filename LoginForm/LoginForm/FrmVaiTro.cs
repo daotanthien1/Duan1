@@ -19,7 +19,11 @@ namespace RJCodeAdvance
         {
             InitializeComponent();
         }
-
+        private void FrmVaiTro_Load(object sender, EventArgs e)
+        {
+            ResetValue();
+            ShowData_GridViewVaiTro();
+        }
         private void btThem_Click(object sender, EventArgs e)
         {
             txtVaiTro.Text = null;
@@ -53,11 +57,11 @@ namespace RJCodeAdvance
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string name = txtVaiTro.Text;
+            int id = int.Parse(id_role.Text);
             if (MessageBox.Show("Bạn có chắc muốn xóa dữ liệu", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                == DialogResult.Yes)
             {
-                if (busRoles.DeleteRoleNhanVien(name))
+                if (busRoles.DeleteRoleNhanVien(id))
                 {
                     ResetValue();
                     ShowData_GridViewVaiTro();
@@ -132,7 +136,7 @@ namespace RJCodeAdvance
                     btnSua.Enabled = true;
                     txtVaiTro.Enabled = true;
                     txtVaiTro.Text = dgv_VaiTro.CurrentRow.Cells["Name"].Value.ToString();
-                    //id_role.Text = dgv_VaiTro.CurrentRow.Cells["Id_role"].Value.ToString();
+                    id_role.Text = dgv_VaiTro.CurrentRow.Cells["Id_role"].Value.ToString();
 
                 }
                 catch
@@ -159,5 +163,7 @@ namespace RJCodeAdvance
             dgv_VaiTro.Columns[0].HeaderText = "Id vai trò";
             dgv_VaiTro.Columns[1].HeaderText = "Tên vai trò";
         }
+
+       
     }
 }

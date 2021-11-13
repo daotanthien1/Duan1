@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace RJCodeAdvance.ControlEmployees
 {
-    public partial class UC_employee : UserControl
+    public partial class UC_employee : Form
     {
         BUS_NhanVien busNV = new BUS_QuanLy.BUS_NhanVien();
         public UC_employee()

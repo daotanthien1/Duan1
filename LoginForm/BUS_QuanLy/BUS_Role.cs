@@ -22,9 +22,9 @@ namespace BUS_QuanLy
         {
             return dalRole.UpdateRoleNhanVien(ro);
         }
-        public bool DeleteRoleNhanVien(string name)
+        public bool DeleteRoleNhanVien(int id_role)
         {
-            return dalRole.DeleteRoleNhanVien(name);
+            return dalRole.DeleteRoleNhanVien(id_role);
         }
         public DataTable HienThiDuLieuRoles()
         {

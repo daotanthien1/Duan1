@@ -48,6 +48,7 @@ namespace RJCodeAdvance
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.id_role = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_VaiTro)).BeginInit();
             this.SuspendLayout();
             // 
@@ -367,12 +368,22 @@ namespace RJCodeAdvance
             // 
             this.guna2Elipse2.TargetControl = this.dgv_VaiTro;
             // 
+            // id_role
+            // 
+            this.id_role.AutoSize = true;
+            this.id_role.Location = new System.Drawing.Point(27, 9);
+            this.id_role.Name = "id_role";
+            this.id_role.Size = new System.Drawing.Size(0, 13);
+            this.id_role.TabIndex = 93;
+            this.id_role.Visible = false;
+            // 
             // FrmVaiTro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlueViolet;
             this.ClientSize = new System.Drawing.Size(861, 512);
+            this.Controls.Add(this.id_role);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.txtTimKiem);
@@ -389,6 +400,7 @@ namespace RJCodeAdvance
             this.Name = "FrmVaiTro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VaiTro";
+            this.Load += new System.EventHandler(this.FrmVaiTro_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_VaiTro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -411,5 +423,6 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private System.Windows.Forms.Label id_role;
     }
 }

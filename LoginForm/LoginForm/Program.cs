@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using RJCodeAdvance;
+using RJCodeAdvance.ControlEmployees;
 using System.Windows.Forms;
 
 namespace LoginForm
@@ -17,7 +18,7 @@ namespace LoginForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmBeverageCP());
+            Application.Run(new UC_employee());
         }
     }
 }
