@@ -124,7 +124,7 @@ namespace RJCodeAdvance.ControlEmployees
                 {
                     ResetValue();
                     ShowData_GridViewNhanVien();
-                    //SendMail(nv.email);
+                    BUS_SendGmail.SendMail(txtEmail.Text, "Đăng ký tài khoản thành công", "mật khẩu mặc định của bạn là:1234");
                 }
                 else
                 {
@@ -253,64 +253,6 @@ namespace RJCodeAdvance.ControlEmployees
             }
         }
 
-        //Gửi mail
-        public void SendMail(string email)
-        {
-            try
-            {
-                //Now we must create a Smtp client to send our mail
-                SmtpClient client = new SmtpClient("stmp.gmail.com", 25);  //smtp.gmail.com // For gmail
-                //Authentication
-                //This is where the valid email account comes into play. You must have a valid email
-                //Account(with password) to give our program a place to send the mail from.
-                NetworkCredential cred = new NetworkCredential("daotanthien1405@gmail.com", "sang0903987105");
-                MailMessage Msg = new MailMessage();
-                Msg.From = new MailAddress("daotanthien1405@gmail.com");//Nothing but above Credentials or your credentials(****@gmail.com)
-                //Recipient e-mail address.
-                Msg.To.Add(email);
-                //Assign the subject of our message
-                Msg.Subject = "Chào mừng thành viên mới";
-                //Create the content(body) of our message
-                Msg.Body = "Chào anh/chị.Mật khẩu cập nhật là 1234. Anh chị vui lòng đăng nhập vào phần mềm để đổi mật khẩu";
-                //Send our account login details to the client.
-                client.Credentials = cred;
-                //Enabling SSL(Secure Sockets Layer, encryption) is reqiured by most email providers to send mail
-                client.EnableSsl = true;
-                client.Send(Msg); // Send our email
-                //Confirmation After click the Button
-                MessageBox.Show("Một email đã gửi tới bạn!");
-            }
-            catch (Exception ex)
-            {
-                //If mail doesn't send error message will be displayed
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            string name = txtTimKiem.Text;
-            DataTable ds = busNV.SearchNhanVien(name);
-            if (ds.Rows.Count > 0)
-            {
-                dgv_NhanVien.DataSource = ds;
-                dgv_NhanVien.Columns[0].HeaderText = "Vai trò";
-                dgv_NhanVien.Columns[1].HeaderText = "Tên nhân viên";
-                dgv_NhanVien.Columns[2].HeaderText = "Giới tính";
-                dgv_NhanVien.Columns[3].HeaderText = "Email";
-                dgv_NhanVien.Columns[4].HeaderText = "Địa chỉ";
-                dgv_NhanVien.Columns[5].HeaderText = "Ngày sinh";
-                dgv_NhanVien.Columns[6].HeaderText = "Lương";
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            txtTimKiem.Text = "Nhập tên nhân viên cần tìm";
-            txtTimKiem.BackColor = Color.LightGray;
-            ResetValue();
-        }
-
         public void ThemVaiTro()
         {
             cbVaiTro.DataSource = busNV.ThemVaiTro();
@@ -355,6 +297,35 @@ namespace RJCodeAdvance.ControlEmployees
                     MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            string name = txtTimKiem.Text;
+            DataTable ds = busNV.SearchNhanVien(name);
+            if (ds.Rows.Count > 0)
+            {
+                dgv_NhanVien.DataSource = ds;
+                dgv_NhanVien.Columns[0].HeaderText = "Vai trò";
+                dgv_NhanVien.Columns[1].HeaderText = "Tên nhân viên";
+                dgv_NhanVien.Columns[2].HeaderText = "Giới tính";
+                dgv_NhanVien.Columns[3].HeaderText = "Email";
+                dgv_NhanVien.Columns[4].HeaderText = "Địa chỉ";
+                dgv_NhanVien.Columns[5].HeaderText = "Ngày sinh";
+                dgv_NhanVien.Columns[6].HeaderText = "Lương";
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            txtTimKiem.Text = "Nhập tên nhân viên cần tìm";
+            txtTimKiem.BackColor = Color.LightGray;
+            ResetValue();
+        }
+
+        private void btLoad_Click(object sender, EventArgs e)
+        {
+            ShowData_GridViewNhanVien();
         }
     }
 }

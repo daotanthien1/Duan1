@@ -87,16 +87,16 @@ namespace RJCodeAdvance
             }
             else
             {
-                //DTO_Role rs = new DTO_Role(int.Parse(id_role.Text), txtVaiTro.Text);
-                //if (busRoles.UpdateRoleNhanVien(rs))
-                //{
-                //    ResetValue();
-                //    ShowData_GridViewVaiTro();
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Sửa thất bại");
-                //}
+                DTO_Role rs = new DTO_Role(int.Parse(id_role.Text), txtVaiTro.Text);
+                if (busRoles.UpdateRoleNhanVien(rs))
+                {
+                    ResetValue();
+                    ShowData_GridViewVaiTro();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa thất bại");
+                }
             }
         }
 
@@ -163,7 +163,5 @@ namespace RJCodeAdvance
             dgv_VaiTro.Columns[0].HeaderText = "Id vai trò";
             dgv_VaiTro.Columns[1].HeaderText = "Tên vai trò";
         }
-
-       
     }
 }

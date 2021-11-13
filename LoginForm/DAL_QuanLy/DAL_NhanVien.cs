@@ -199,7 +199,7 @@ namespace DAL_QuanLy
                 SqlCommand cmd = new SqlCommand();
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "SEARCH_EMPLOYEE";
-                cmd.Parameters.AddWithValue("Employee_Name", name);
+                cmd.Parameters.AddWithValue("Name", name);
                 cmd.Connection = _conn;
                 DataTable dtEmployee = new DataTable();
                 dtEmployee.Load(cmd.ExecuteReader());
