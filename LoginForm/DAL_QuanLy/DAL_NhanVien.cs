@@ -66,8 +66,8 @@ namespace DAL_QuanLy
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "CHANGE_PASSWORD";
                 cmd.Parameters.AddWithValue("EMAIL", email);
-                cmd.Parameters.AddWithValue("OLDPW", oldPassword);
-                cmd.Parameters.AddWithValue("NEWPW", newPassword);
+                cmd.Parameters.AddWithValue("@OLDPASS", oldPassword);
+                cmd.Parameters.AddWithValue("@NEWPASS", newPassword);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }

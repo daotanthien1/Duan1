@@ -53,13 +53,13 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[CHANGE_PASSWORD] 
+alter PROCEDURE [dbo].[CHANGE_PASSWORD] 
 @EMAIL varchar(50),
-@OLDPASS nvarchar(50),
-@NEWPASS nvarchar(50)
+@OLDPASS nvarchar(100),
+@NEWPASS nvarchar(100)
 AS
 BEGIN
-		DECLARE @OP varchar(50)
+		DECLARE @OP varchar(100)
 		SELECT @OP = Password from Employees where Email = @EMAIL
 		IF @OP = @OLDPASS
 		BEGIN 
