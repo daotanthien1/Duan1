@@ -316,7 +316,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
-            this.txtTimKiem.Location = new System.Drawing.Point(371, 516);
+            this.txtTimKiem.Location = new System.Drawing.Point(371, 542);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderText = "Nhập tên nhân viên cần tìm";
@@ -342,7 +342,7 @@ namespace RJCodeAdvance.ControlEmployees
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_NhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_NhanVien.ColumnHeadersHeight = 4;
+            this.dgv_NhanVien.ColumnHeadersHeight = 25;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -353,11 +353,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.dgv_NhanVien.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_NhanVien.EnableHeadersVisualStyles = false;
             this.dgv_NhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_NhanVien.Location = new System.Drawing.Point(28, 261);
+            this.dgv_NhanVien.Location = new System.Drawing.Point(28, 276);
             this.dgv_NhanVien.Name = "dgv_NhanVien";
-            this.dgv_NhanVien.RowHeadersVisible = false;
             this.dgv_NhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_NhanVien.Size = new System.Drawing.Size(1037, 238);
+            this.dgv_NhanVien.Size = new System.Drawing.Size(1037, 247);
             this.dgv_NhanVien.TabIndex = 88;
             this.dgv_NhanVien.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_NhanVien.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -371,7 +370,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.dgv_NhanVien.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgv_NhanVien.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgv_NhanVien.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgv_NhanVien.ThemeStyle.HeaderStyle.Height = 4;
+            this.dgv_NhanVien.ThemeStyle.HeaderStyle.Height = 25;
             this.dgv_NhanVien.ThemeStyle.ReadOnly = false;
             this.dgv_NhanVien.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_NhanVien.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -575,7 +574,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(605, 516);
+            this.btTimKiem.Location = new System.Drawing.Point(605, 542);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
             this.btTimKiem.Size = new System.Drawing.Size(127, 36);
@@ -592,7 +591,6 @@ namespace RJCodeAdvance.ControlEmployees
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1096, 651);
             this.Controls.Add(this.btnThemVaitro);
             this.Controls.Add(this.rbNu);
             this.Controls.Add(this.rbNam);
@@ -616,8 +614,8 @@ namespace RJCodeAdvance.ControlEmployees
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UC_employee";
+            this.Size = new System.Drawing.Size(1096, 651);
             this.Load += new System.EventHandler(this.UC_employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).EndInit();
             this.ResumeLayout(false);

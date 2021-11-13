@@ -564,7 +564,6 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             // guna2Elipse1
             // 
-            this.guna2Elipse1.BorderRadius = 26;
             this.guna2Elipse1.TargetControl = this;
             // 
             // UC_Beverages2

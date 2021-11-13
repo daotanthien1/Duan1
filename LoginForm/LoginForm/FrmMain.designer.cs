@@ -49,7 +49,6 @@ namespace RJCodeAdvance
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.uC_Order1 = new RJCodeAdvance.ControlBeverages.UC_Order();
             this.uC_Beverages21 = new RJCodeAdvance.ControlBeverages.UC_Beverages2();
             this.uC_Voucher1 = new RJCodeAdvance.ControlVouchers.UC_Voucher();
@@ -431,11 +430,6 @@ namespace RJCodeAdvance
             this.panel2.Size = new System.Drawing.Size(1100, 661);
             this.panel2.TabIndex = 6;
             // 
-            // guna2ShadowForm1
-            // 
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(112)))), ((int)(((byte)(212)))));
-            this.guna2ShadowForm1.TargetForm = this;
-            // 
             // uC_Order1
             // 
             this.uC_Order1.BackColor = System.Drawing.Color.White;
@@ -561,7 +555,6 @@ namespace RJCodeAdvance
         private ControlCustomers.UC_Customer uC_Customer1;
         private ControlBeverages.UC_Order uC_Order1;
         private ControlBeverages.UC_Beverages2 uC_Beverages21;
-        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         //private ControlStatistic.UC_Statistic uC_Statistic_bill_beverage1;
         //private BunifuDragControl bunifuDragControl1;

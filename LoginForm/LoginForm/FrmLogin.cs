@@ -46,7 +46,16 @@ namespace RJCodeAdvance
                     builder.Append(RandomString(2, false));
                     string matkhaumoi = busNV.encryption(builder.ToString());
                     busNV.TaoMatKhauMoi(txtEmail.Text, matkhaumoi);
-                    SendMail(txtEmail.Text, builder.ToString());
+                    string subject = "Bạn đã dùng chức năng quên Mật Khẩu";
+                    string body = $"Mật khẩu mới của bạn là:{builder.ToString()}";
+                    if (BUS_SendGmail.SendMail(txtEmail.Text, subject, body))
+                    {
+                        MessageBox.Show("mật khẩu mới đã được gửi đến Gmail của bạn");
+                    }
+                    else
+                    {
+                        MessageBox.Show("không thể gửi");
+                    }
                 }
                 else
                 {
@@ -80,39 +89,6 @@ namespace RJCodeAdvance
             Random random = new Random();
             return random.Next(min, max);
         }
-        //Gửi Email
-        public void SendMail(string email, string matkhau)
-        {
-            try
-            {
-                //Now we must create a Smtp client to send our mail
-                SmtpClient client = new SmtpClient("stmp.gmail.com", 25);  //smtp.gmail.com // For gmail
-                //Authentication
-                //This is where the valid email account comes into play. You must have a valid email
-                //Account(with password) to give our program a place to send the mail from.
-                NetworkCredential cred = new NetworkCredential("sender@gmail.com", "chonduoi");
-                MailMessage Msg = new MailMessage();
-                Msg.From = new MailAddress("sender@gmail.com");//Nothing but above Credentials or your credentials(****@gmail.com)
-                //Recipient e-mail address.
-                Msg.To.Add(email);
-                //Assign the subject of our message
-                Msg.Subject = "Bạn đã sử dụng tính năng quên Mật khẩu";
-                //Create the content(body) of our message
-                Msg.Body = "Chào anh/chị. Mật khẩu mới truy cập vào phần mềm là " + matkhau;
-                //Send our account login details to the client.
-                client.Credentials = cred;
-                //Enabling SSL(Secure Sockets Layer, encryption) is reqiured by most email providers to send mail
-                client.EnableSsl = true;
-                client.Send(Msg); // Send our email
-                //Confirmation After click the Button
-                MessageBox.Show("Một email phục hồi mật khẩu đã gửi tới bạn!");
-            }
-            catch (Exception ex)
-            {
-                //If mail doesn't send error message will be displayed
-                MessageBox.Show(ex.Message);
-            }
-        }
 
         private void btThoat_Click(object sender, EventArgs e)
         {
@@ -123,7 +99,7 @@ namespace RJCodeAdvance
         {
             DTO_NhanVien nv = new DTO_NhanVien();
             nv.email = txtEmail.Text;
-            //nv.password = busNV.encryption(txtPassword.Text);
+            nv.password = busNV.encryption(txtPassword.Text);
             nv.password = txtPassword.Text;
             if (busNV.NhanVienDangNhap(nv)) // khi đăng nhập thành công
             {

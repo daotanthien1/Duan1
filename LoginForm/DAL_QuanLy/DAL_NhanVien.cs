@@ -87,7 +87,7 @@ namespace DAL_QuanLy
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "CREATE_NEW_PASS";
                 cmd.Parameters.AddWithValue("email", email);
-                cmd.Parameters.AddWithValue("matkhaumoi", np);
+                cmd.Parameters.AddWithValue("Password", np);
                 if (Convert.ToInt32(cmd.ExecuteScalar()) > 0)
                     return true;
             }
