@@ -211,7 +211,6 @@ namespace RJCodeAdvance
             // 
             this.rdCoNguoi.AutoSize = true;
             this.rdCoNguoi.BackColor = System.Drawing.Color.BlueViolet;
-            this.rdCoNguoi.Checked = true;
             this.rdCoNguoi.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdCoNguoi.CheckedState.BorderThickness = 0;
             this.rdCoNguoi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -223,7 +222,6 @@ namespace RJCodeAdvance
             this.rdCoNguoi.Name = "rdCoNguoi";
             this.rdCoNguoi.Size = new System.Drawing.Size(77, 20);
             this.rdCoNguoi.TabIndex = 107;
-            this.rdCoNguoi.TabStop = true;
             this.rdCoNguoi.Text = "Có người";
             this.rdCoNguoi.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdCoNguoi.UncheckedState.BorderThickness = 2;
@@ -236,6 +234,7 @@ namespace RJCodeAdvance
             // 
             this.rdTrong.AutoSize = true;
             this.rdTrong.BackColor = System.Drawing.Color.BlueViolet;
+            this.rdTrong.Checked = true;
             this.rdTrong.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdTrong.CheckedState.BorderThickness = 0;
             this.rdTrong.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -247,6 +246,7 @@ namespace RJCodeAdvance
             this.rdTrong.Name = "rdTrong";
             this.rdTrong.Size = new System.Drawing.Size(60, 20);
             this.rdTrong.TabIndex = 106;
+            this.rdTrong.TabStop = true;
             this.rdTrong.Text = "Trống";
             this.rdTrong.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdTrong.UncheckedState.BorderThickness = 2;

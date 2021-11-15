@@ -52,7 +52,7 @@ namespace RJCodeAdvance
                     string matKhauCu = busNV.encryption(txtMatKhauCu.Text);
                     if (busNV.NhanVienDoiMatKhau(txtEmail.Text, matKhauCu, matKhauMoi))
                     {
-                        SendMail(txtEmail.Text, txtNhapLaiMatKhau.Text);
+                        BUS_SendGmail.SendMail(txtEmail.Text, "Bạn đã cập nhật thành công mật khẩu", $"Mật khẩu mới của bạn là:${txtMatKhauMoi.Text}");
                         MessageBox.Show("Cập nhật mật khẩu thành công, bạn phải đăng nhập lại");
                         this.Close();
                     }
@@ -79,37 +79,5 @@ namespace RJCodeAdvance
         }
 
         //Gửi Email
-        public void SendMail(string email, string matkhau)
-        {
-            try
-            {
-                //Now we must create a Smtp client to send our mail
-                SmtpClient client = new SmtpClient("stmp.gmail.com", 25);  //smtp.gmail.com // For gmail
-                //Authentication
-                //This is where the valid email account comes into play. You must have a valid email
-                //Account(with password) to give our program a place to send the mail from.
-                NetworkCredential cred = new NetworkCredential("sender@gmail.com", "chonduoi");
-                MailMessage Msg = new MailMessage();
-                Msg.From = new MailAddress("sender@gmail.com");//Nothing but above Credentials or your credentials(****@gmail.com)
-                //Recipient e-mail address.
-                Msg.To.Add(email);
-                //Assign the subject of our message
-                Msg.Subject = "Bạn đã sử dụng tính năng quên Mật khẩu";
-                //Create the content(body) of our message
-                Msg.Body = "Chào anh/chị. Mật khẩu mới truy cập vào phần mềm là " + matkhau;
-                //Send our account login details to the client.
-                client.Credentials = cred;
-                //Enabling SSL(Secure Sockets Layer, encryption) is reqiured by most email providers to send mail
-                client.EnableSsl = true;
-                client.Send(Msg); // Send our email
-                //Confirmation After click the Button
-                MessageBox.Show("Một email phục hồi mật khẩu đã gửi tới bạn!");
-            }
-            catch (Exception ex)
-            {
-                //If mail doesn't send error message will be displayed
-                MessageBox.Show(ex.Message);
-            }
         }
-    }
 }

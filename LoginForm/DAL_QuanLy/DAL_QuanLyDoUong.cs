@@ -30,6 +30,27 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+
+        public DataTable getBeverage(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_GetBeverageById";
+                cmd.Parameters.AddWithValue("id_type", id);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+
+            finally
+            {
+                _conn.Close();
+            }
+        }
         public bool InsertDoUong(DTO_QuanLyDoUong du)
         {
             try
