@@ -232,5 +232,12 @@ namespace RJCodeAdvance.ControlIngredient
 
             }
         }
+
+        private void btThemDonVi_Click(object sender, EventArgs e)
+        {
+            FrmUnit frm = new FrmUnit();
+            frm.ShowDialog();
+            loadComBoBox();
+        }
     }
 }

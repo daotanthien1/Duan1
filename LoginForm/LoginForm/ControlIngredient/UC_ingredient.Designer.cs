@@ -54,10 +54,13 @@ namespace RJCodeAdvance.ControlIngredient
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btDanhSach = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtKhoiLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbDVT = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.guna2ContextMenuStrip1 = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.btThemDonVi = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -236,12 +239,12 @@ namespace RJCodeAdvance.ControlIngredient
             this.dgv.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv.Location = new System.Drawing.Point(27, 233);
+            this.dgv.Location = new System.Drawing.Point(27, 265);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1037, 285);
+            this.dgv.Size = new System.Drawing.Size(1037, 253);
             this.dgv.TabIndex = 104;
             this.dgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -514,44 +517,6 @@ namespace RJCodeAdvance.ControlIngredient
             this.btDanhSach.Text = "Danh Sách";
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label5.Location = new System.Drawing.Point(618, 195);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 16);
-            this.label5.TabIndex = 118;
-            this.label5.Text = "Khối lượng";
-            // 
-            // txtKhoiLuong
-            // 
-            this.txtKhoiLuong.Animated = true;
-            this.txtKhoiLuong.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtKhoiLuong.BorderRadius = 15;
-            this.txtKhoiLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtKhoiLuong.DefaultText = "";
-            this.txtKhoiLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtKhoiLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtKhoiLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtKhoiLuong.DisabledState.Parent = this.txtKhoiLuong;
-            this.txtKhoiLuong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtKhoiLuong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKhoiLuong.FocusedState.Parent = this.txtKhoiLuong;
-            this.txtKhoiLuong.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtKhoiLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtKhoiLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtKhoiLuong.HoverState.Parent = this.txtKhoiLuong;
-            this.txtKhoiLuong.Location = new System.Drawing.Point(703, 187);
-            this.txtKhoiLuong.Name = "txtKhoiLuong";
-            this.txtKhoiLuong.PasswordChar = '\0';
-            this.txtKhoiLuong.PlaceholderText = "Khối lượng";
-            this.txtKhoiLuong.SelectedText = "";
-            this.txtKhoiLuong.ShadowDecoration.Parent = this.txtKhoiLuong;
-            this.txtKhoiLuong.Size = new System.Drawing.Size(116, 36);
-            this.txtKhoiLuong.TabIndex = 119;
-            // 
             // cbDVT
             // 
             this.cbDVT.BackColor = System.Drawing.Color.Transparent;
@@ -571,20 +536,88 @@ namespace RJCodeAdvance.ControlIngredient
             "Ca 2",
             "Ca 3"});
             this.cbDVT.ItemsAppearance.Parent = this.cbDVT;
-            this.cbDVT.Location = new System.Drawing.Point(825, 187);
+            this.cbDVT.Location = new System.Drawing.Point(142, 206);
             this.cbDVT.Name = "cbDVT";
             this.cbDVT.ShadowDecoration.Parent = this.cbDVT;
-            this.cbDVT.Size = new System.Drawing.Size(109, 36);
+            this.cbDVT.Size = new System.Drawing.Size(119, 36);
             this.cbDVT.TabIndex = 120;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.label5.Location = new System.Drawing.Point(50, 187);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(83, 16);
+            this.label5.TabIndex = 121;
+            this.label5.Text = "Khối lượng:";
+            // 
+            // guna2NumericUpDown1
+            // 
+            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown1.BorderRadius = 3;
+            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown1.DisabledState.Parent = this.guna2NumericUpDown1;
+            this.guna2NumericUpDown1.FocusedState.Parent = this.guna2NumericUpDown1;
+            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(53, 207);
+            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
+            this.guna2NumericUpDown1.ShadowDecoration.Parent = this.guna2NumericUpDown1;
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(80, 35);
+            this.guna2NumericUpDown1.TabIndex = 122;
+            // 
+            // guna2ContextMenuStrip1
+            // 
+            this.guna2ContextMenuStrip1.Name = "guna2ContextMenuStrip1";
+            this.guna2ContextMenuStrip1.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.ColorTable = null;
+            this.guna2ContextMenuStrip1.RenderStyle.RoundedEdges = true;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2ContextMenuStrip1.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.guna2ContextMenuStrip1.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.guna2ContextMenuStrip1.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.guna2ContextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // btThemDonVi
+            // 
+            this.btThemDonVi.Animated = true;
+            this.btThemDonVi.BorderColor = System.Drawing.Color.White;
+            this.btThemDonVi.BorderRadius = 6;
+            this.btThemDonVi.BorderThickness = 1;
+            this.btThemDonVi.CheckedState.Parent = this.btThemDonVi;
+            this.btThemDonVi.CustomBorderColor = System.Drawing.Color.Gray;
+            this.btThemDonVi.CustomImages.Parent = this.btThemDonVi;
+            this.btThemDonVi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btThemDonVi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btThemDonVi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btThemDonVi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btThemDonVi.DisabledState.Parent = this.btThemDonVi;
+            this.btThemDonVi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemDonVi.ForeColor = System.Drawing.Color.White;
+            this.btThemDonVi.HoverState.Parent = this.btThemDonVi;
+            this.btThemDonVi.Image = ((System.Drawing.Image)(resources.GetObject("btThemDonVi.Image")));
+            this.btThemDonVi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btThemDonVi.Location = new System.Drawing.Point(267, 207);
+            this.btThemDonVi.Name = "btThemDonVi";
+            this.btThemDonVi.ShadowDecoration.Parent = this.btThemDonVi;
+            this.btThemDonVi.Size = new System.Drawing.Size(94, 35);
+            this.btThemDonVi.TabIndex = 124;
+            this.btThemDonVi.Text = "Thêm ";
+            this.btThemDonVi.Click += new System.EventHandler(this.btThemDonVi_Click);
             // 
             // UC_ingredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.cbDVT);
-            this.Controls.Add(this.txtKhoiLuong);
+            this.Controls.Add(this.btThemDonVi);
+            this.Controls.Add(this.guna2NumericUpDown1);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbDVT);
             this.Controls.Add(this.btDanhSach);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btLuu);
@@ -607,6 +640,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.Size = new System.Drawing.Size(1100, 651);
             this.Load += new System.EventHandler(this.UC_ingredient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -634,8 +668,10 @@ namespace RJCodeAdvance.ControlIngredient
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btDanhSach;
-        private Guna.UI2.WinForms.Guna2TextBox txtKhoiLuong;
-        private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2ComboBox cbDVT;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip guna2ContextMenuStrip1;
+        private Guna.UI2.WinForms.Guna2Button btThemDonVi;
     }
 }

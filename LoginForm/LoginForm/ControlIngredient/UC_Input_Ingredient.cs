@@ -20,17 +20,13 @@ namespace RJCodeAdvance.ControlIngredient
             InitializeComponent();
         }
         BUS_InputIngredients input = new BUS_InputIngredients();
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            FrmUnit frm = new FrmUnit();
-            frm.ShowDialog();
-        }
+
         DateTime today = DateTime.Now;
         private void UC_Input_Ingredient_Load(object sender, EventArgs e)
         {
             loadData();
             LoadDatagridview();
-            txtSoLuong.Text = "0";
+            nbSoLuong.Text = "0";
             guna2Button3.Enabled = false;
             guna2Button3.Enabled = false;
         }
@@ -68,7 +64,7 @@ namespace RJCodeAdvance.ControlIngredient
                 if(item[0].ToString() == cbLoaiNguyenLieu.Text && item[1].ToString() == cbName.Text)
                 {
                     kt = false;
-                    item[2] = (int.Parse(item[2].ToString()) + int.Parse(txtSoLuong.Text)).ToString();
+                    item[2] = (int.Parse(item[2].ToString()) + int.Parse(nbSoLuong.Text)).ToString();
                     item[3] = (int.Parse(item[3].ToString()) + int.Parse(txtThanhTien.Text)).ToString();
                     guna2DataGridView1.DataSource = dt;
                     break;
@@ -76,7 +72,7 @@ namespace RJCodeAdvance.ControlIngredient
             }
             if (kt)
             {
-                dt.Rows.Add(cbLoaiNguyenLieu.Text, cbName.Text, txtSoLuong.Text, txtThanhTien.Text);
+                dt.Rows.Add(cbLoaiNguyenLieu.Text, cbName.Text, nbSoLuong.Text, txtThanhTien.Text);
                 guna2DataGridView1.DataSource = dt;
             }
         }
@@ -104,7 +100,7 @@ namespace RJCodeAdvance.ControlIngredient
         //load giá tiền
         void loadPrice()
         {
-            DataTable price = input.PriceInputBill(int.Parse(cbName.SelectedValue.ToString()), int.Parse(txtSoLuong.Text));
+            DataTable price = input.PriceInputBill(int.Parse(cbName.SelectedValue.ToString()), int.Parse(nbSoLuong.Text));
             dataGridView1.DataSource = price;
             txtThanhTien.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
         }
