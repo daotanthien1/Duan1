@@ -34,25 +34,42 @@ namespace RJCodeAdvance
         // bt lưu
         private void guna2Button5_Click(object sender, EventArgs e)
         {
+            int so;
+            bool result = int.TryParse(txtSale.Text, out so);
             if (txtSale.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập khuyến mãi");
             }
             else
             {
-                DTO_LoaiVoucher typevouchers = new DTO_LoaiVoucher(float.Parse(txtSale.Text));
-                if (typeVouchers.InsertTypeVoucher(typevouchers))
+                if (result)
                 {
-                    MessageBox.Show("Insert thành công");
-                    LoadData();
-                    resetValue();
+                    if (int.Parse(txtSale.Text) >= 10 && int.Parse(txtSale.Text) <= 100)
+                    {
+                        DTO_LoaiVoucher typevouchers = new DTO_LoaiVoucher(float.Parse(txtSale.Text));
+                        if (typeVouchers.InsertTypeVoucher(typevouchers))
+                        {
+                            MessageBox.Show("Insert thành công");
+                            LoadData();
+                            resetValue();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đã có khuyến mãi: " + txtSale.Text + "%");
+                            resetValue();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sale từ 10% --> 100%");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Đã có khuyến mãi: " + txtSale.Text + "%");
-                    resetValue();
+                    MessageBox.Show("Vui lòng nhập Sale bằng số");
                 }
             }
+
             insert();
         }
         public string id;
@@ -124,19 +141,41 @@ namespace RJCodeAdvance
         //sửa
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            DTO_LoaiVoucher typeVoucher = new DTO_LoaiVoucher(int.Parse(id), float.Parse(txtSale.Text));
+            int so;
+            bool result = int.TryParse(txtSale.Text, out so);
             if (MessageBox.Show("Bạn chắc chắn muốn sửa lịch này", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-
-                if (typeVouchers.UpdateDataTypeVoucher(typeVoucher))
+                if (txtSale.Text == "")
                 {
-                    MessageBox.Show("Sửa thành công");
-                    resetValue();
-                    LoadData();
+                    MessageBox.Show("Vui lòng nhập Sale");
                 }
                 else
                 {
-                    MessageBox.Show("Đã có loại voucher: " + txtSale.Text + "%");
+                    if (result)
+                    {
+                        if (int.Parse(txtSale.Text) >= 10 && int.Parse(txtSale.Text) <= 100)
+                        {
+                            DTO_LoaiVoucher typeVoucher = new DTO_LoaiVoucher(int.Parse(id), float.Parse(txtSale.Text));
+                            if (typeVouchers.UpdateDataTypeVoucher(typeVoucher))
+                            {
+                                MessageBox.Show("Sửa thành công");
+                                resetValue();
+                                LoadData();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Đã có loại voucher: " + txtSale.Text + "%");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Sale từ 10% --> 100%");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Vui lòng nhập Sale bằng số");
+                    }
                 }
             }
             else
