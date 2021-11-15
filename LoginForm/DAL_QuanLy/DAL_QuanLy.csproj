@@ -42,8 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL_Bill.cs" />
-    <Compile Include="DAL_Bill_Detail.cs" />
     <Compile Include="DAL_CaLamViec.cs" />
     <Compile Include="DAL_Customer.cs" />
     <Compile Include="DAL_InputBills.cs" />
@@ -51,7 +49,6 @@
     <Compile Include="DAL_LichLamViec.cs" />
     <Compile Include="DAL_LoaiNguyenLieu.cs" />
     <Compile Include="DAL_LoaiVoucher.cs" />
-    <Compile Include="DAL_Menu.cs" />
     <Compile Include="DAL_NguyenLieu.cs" />
     <Compile Include="DAL_NhaCungCap.cs" />
     <Compile Include="DAL_NhanVien.cs" />

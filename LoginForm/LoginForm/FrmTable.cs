@@ -52,9 +52,8 @@ namespace RJCodeAdvance
         void loadData()
         {
             guna2DataGridView1.DataSource = tables.getData();
-            guna2DataGridView1.Columns[0].HeaderText = "ID bàn";
-            guna2DataGridView1.Columns[1].HeaderText = "Tên bàn";
-            guna2DataGridView1.Columns[2].HeaderText = "Tình trạng";
+            guna2DataGridView1.Columns[0].HeaderText = "Tên bàn";
+            guna2DataGridView1.Columns[1].HeaderText = "Tình trạng";
         }
 
         private void btThem_Click(object sender, EventArgs e)
@@ -177,9 +176,8 @@ namespace RJCodeAdvance
         {
             DataTable dt = tables.SearchTable(txtSearch.Text);
             guna2DataGridView1.DataSource = dt;
-            guna2DataGridView1.Columns[0].HeaderText = "ID bàn";
-            guna2DataGridView1.Columns[1].HeaderText = "Tên bàn";
-            guna2DataGridView1.Columns[2].HeaderText = "Tình trạng";
+            guna2DataGridView1.Columns[0].HeaderText = "Tên bàn";
+            guna2DataGridView1.Columns[1].HeaderText = "Tình trạng";
         }
     }
 }

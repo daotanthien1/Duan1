@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,16 +45,7 @@ namespace DTO_QuanLy
             this.id_Beverage = id_Beverage;
             this.image = image;
         }
-
-        public DTO_QuanLyDoUong(DataRow rows)
-        {
-            this.name = rows["name"].ToString();
-            this.price = (double)rows["price"];
-            this.id_Type = (int)rows["id_type"];
-            this.id_Beverage = (int)rows["id_beverage"];
-            this.image = rows["image"].ToString();
-        }
-
+        
         public string Name { get => name; set => name = value; }
         public double Price { get => price; set => price = value; }
         public int Id_Type { get => id_Type; set => id_Type = value; }

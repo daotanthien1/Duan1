@@ -15,13 +15,8 @@ namespace DAL_QuanLy
         @"Data Source=DESKTOP-KDN9D6V\SQLEXPRESS01;Initial Catalog=DuAnMot;Integrated Security=True");
         //protected SqlConnection _conn = new SqlConnection(@"Data Source=DESKTOP-2V5F3CA\TUNGNH230802;Initial Catalog=D:\database\DUAN1.MDF;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
         //protected SqlConnection _conn = new SqlConnection(@"Data Source=DESKTOP-KDN9D6V\SQLEXPRESS01;Initial Catalog=DuAn1;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
-<<<<<<< HEAD
         //protected SqlConnection _conn = new SqlConnection(
         //@"Data Source=DESKTOP-2V5F3CA\TUNGNH230802;Initial Catalog=D:\database\DUAN1.MDF;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
-=======
-        protected SqlConnection _conn = new SqlConnection(
-        @"Data Source=DESKTOP-2V5F3CA\TUNGNH230802;Initial Catalog=DuAn1;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False");
->>>>>>> 5b61b6584dffadd9aeb61a48a39403e070525850
         //Data Source=DESKTOP-2V5F3CA\TUNGNH230802;Initial Catalog=D:\database\DUAN1.MDF;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=False
     }
 }

@@ -41,8 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO_Bill.cs" />
-    <Compile Include="DTO_Bill_Detail.cs" />
     <Compile Include="DTO_CaLamViec.cs" />
     <Compile Include="DTO_Customer.cs" />
     <Compile Include="DTO_InputBills.cs" />
@@ -50,7 +48,6 @@
     <Compile Include="DTO_LichLamViec.cs" />
     <Compile Include="DTO_LoaiNguyenLieu.cs" />
     <Compile Include="DTO_LoaiVoucher.cs" />
-    <Compile Include="DTO_Menu.cs" />
     <Compile Include="DTO_NguyenLieu.cs" />
     <Compile Include="DTO_NhaCungCap.cs" />
     <Compile Include="DTO_NhanVien.cs" />

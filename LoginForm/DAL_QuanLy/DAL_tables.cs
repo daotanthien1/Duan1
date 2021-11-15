@@ -11,7 +11,6 @@ namespace DAL_QuanLy
 {
     public class DAL_tables : DBConnect
     {
-
         public DataTable getData()
         {
             try
@@ -109,6 +108,5 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
-
     }
 }

@@ -42,8 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUS_Beverage.cs" />
-    <Compile Include="BUS_Bill.cs" />
-    <Compile Include="BUS_Bill_Detail.cs" />
     <Compile Include="BUS_CaLamViec.cs" />
     <Compile Include="BUS_Customer.cs" />
     <Compile Include="BUS_InputBills.cs" />
@@ -51,7 +49,6 @@
     <Compile Include="BUS_LichLamViec.cs" />
     <Compile Include="BUS_LoaiNguyenLieu.cs" />
     <Compile Include="BUS_LoaiVoucher.cs" />
-    <Compile Include="BUS_Menu.cs" />
     <Compile Include="BUS_NguyenLieu.cs" />
     <Compile Include="BUS_NhaCungCap.cs" />
     <Compile Include="BUS_NhanVien.cs" />
