@@ -12,6 +12,10 @@ namespace BUS_QuanLy
     public class BUS_NguyenLieu
     {
         DAL_NguyenLieu quanlyNguyenLieu = new DAL_NguyenLieu();
+        public DataTable getNameUnits()
+        {
+            return quanlyNguyenLieu.getNameUnits();
+        }
         public DataTable getIngredient()
         {
             return quanlyNguyenLieu.getIngredient();

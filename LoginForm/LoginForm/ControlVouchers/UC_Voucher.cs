@@ -83,11 +83,11 @@ namespace RJCodeAdvance.ControlVouchers
                 txtThem.ResetText();
                 if(int.Parse(status) == 0)
                 {
-                    rdDung.Checked.ToString();
+                    rdDung.Checked = true;
                 }
                 else
                 {
-                    rdChua.Checked.ToString();
+                    rdChua.Checked = true;
                 }
             }
 

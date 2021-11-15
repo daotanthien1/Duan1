@@ -13,6 +13,7 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RJCodeAdvance.ControlIngredient;
 
 namespace RJCodeAdvance
 {
@@ -29,6 +30,7 @@ namespace RJCodeAdvance
             string mail = txtEmail.Text;
             UC_Voucher.mail = mail;
             FrmSchedule.mail = mail;
+            UC_Input_Ingredient.mail = mail;
             FrmBeverageCP frm = new FrmBeverageCP();
             this.Hide();
             frm.ShowDialog();

@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="DTO_CaLamViec.cs" />
     <Compile Include="DTO_Customer.cs" />
+    <Compile Include="DTO_InputBills.cs" />
+    <Compile Include="DTO_InputIngredients.cs" />
     <Compile Include="DTO_LichLamViec.cs" />
     <Compile Include="DTO_LoaiNguyenLieu.cs" />
     <Compile Include="DTO_LoaiVoucher.cs" />
@@ -53,6 +55,7 @@
     <Compile Include="DTO_Role.cs" />
     <Compile Include="DTO_tables.cs" />
     <Compile Include="DTO_TypesOfBeverage.cs" />
+    <Compile Include="DTO_units.cs" />
     <Compile Include="DTO_Vouchers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

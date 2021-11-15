@@ -514,10 +514,6 @@ namespace RJCodeAdvance.ControlVouchers
             this.cbSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cbSale.HoverState.Parent = this.cbSale;
             this.cbSale.ItemHeight = 30;
-            this.cbSale.Items.AddRange(new object[] {
-            "20%",
-            "50%",
-            "100%"});
             this.cbSale.ItemsAppearance.Parent = this.cbSale;
             this.cbSale.Location = new System.Drawing.Point(82, 50);
             this.cbSale.Name = "cbSale";

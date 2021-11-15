@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="DAL_CaLamViec.cs" />
     <Compile Include="DAL_Customer.cs" />
+    <Compile Include="DAL_InputBills.cs" />
+    <Compile Include="DAL_InputIngredients.cs" />
     <Compile Include="DAL_LichLamViec.cs" />
     <Compile Include="DAL_LoaiNguyenLieu.cs" />
     <Compile Include="DAL_LoaiVoucher.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="DAL_Role.cs" />
     <Compile Include="DAL_tables.cs" />
     <Compile Include="DAL_TypesOfBeverage.cs" />
+    <Compile Include="DAL_units.cs" />
     <Compile Include="DAL_Vouchers.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

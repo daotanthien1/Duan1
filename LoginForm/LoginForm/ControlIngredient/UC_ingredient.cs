@@ -110,7 +110,7 @@ namespace RJCodeAdvance.ControlIngredient
                 if (checkTextBox())
                 {
                     DTO_NguyenLieu dtoIg = new DTO_NguyenLieu(txtTenIngredient.Text,
-                       Convert.ToInt32(cbNhaCC.SelectedValue), Convert.ToInt32(cbLoaiIngredient.SelectedValue),
+                       Convert.ToInt32(cbNhaCC.SelectedValue.ToString()), Convert.ToInt32(cbLoaiIngredient.SelectedValue.ToString()),
                        float.Parse(txtGia.Text));
                     if (busIg.InsertNguyenLieu(dtoIg))
                     {
@@ -198,6 +198,10 @@ namespace RJCodeAdvance.ControlIngredient
             cbNhaCC.DataSource = busIg.getSupplier();
             cbNhaCC.DisplayMember = "Name";
             cbNhaCC.ValueMember = "Id_supplier";
+
+            cbDVT.DisplayMember = "Name";
+            cbDVT.ValueMember = "ID_unit";
+            cbDVT.DataSource = busIg.getNameUnits();
         }
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)

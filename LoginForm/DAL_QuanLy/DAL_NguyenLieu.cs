@@ -29,6 +29,24 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+        public DataTable getNameUnits()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "getNameForInputBillDetail";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
         public DataTable getIngredientType()
         {
             try

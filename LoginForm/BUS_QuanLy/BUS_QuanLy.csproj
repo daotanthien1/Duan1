@@ -44,6 +44,8 @@
     <Compile Include="BUS_Beverage.cs" />
     <Compile Include="BUS_CaLamViec.cs" />
     <Compile Include="BUS_Customer.cs" />
+    <Compile Include="BUS_InputBills.cs" />
+    <Compile Include="BUS_InputIngredients.cs" />
     <Compile Include="BUS_LichLamViec.cs" />
     <Compile Include="BUS_LoaiNguyenLieu.cs" />
     <Compile Include="BUS_LoaiVoucher.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="BUS_SendGmail.cs" />
     <Compile Include="BUS_tables.cs" />
     <Compile Include="BUS_TypesOfBeverage.cs" />
+    <Compile Include="BUS_units.cs" />
     <Compile Include="BUS_Vouchers.cs" />
     <Compile Include="DAL_QuanLy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
