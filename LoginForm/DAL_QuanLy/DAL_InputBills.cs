@@ -22,7 +22,7 @@ namespace DAL_QuanLy
                 cmd.Parameters.AddWithValue("dayCheck", bills.DateCheckIn);
                 cmd.Parameters.AddWithValue("mail", bills.Email);
                 cmd.Parameters.AddWithValue("sumprice", bills.SumPrice);
-                if (cmd.ExecuteNonQuery() > 0)
+               if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
             finally

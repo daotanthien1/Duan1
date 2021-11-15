@@ -109,10 +109,15 @@ namespace RJCodeAdvance.ControlIngredient
             txtThanhTien.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
         }
         BUS_InputBills bill = new BUS_InputBills();
-        public static string mail = "a";
+        public static string mail = "tungnh230802@gmail.com";
         // thanh toán
         private void btThanhToan_Click(object sender, EventArgs e)
         {
+            // doan nay lam gi vay m
+            // time là lấy ngày
+            // kiểm tra datâtble có dữ liệu không
+            // chạy được chưa
+            // nice
             string time = today.ToString("yyyy-MM-dd hh:mm:ss.fff");
             if(dt.Rows.Count == 0)
             {
@@ -134,6 +139,8 @@ namespace RJCodeAdvance.ControlIngredient
                         {
                         }
                     }
+                    MessageBox.Show("Insert bill thành công");
+                    // để t push lên, rồi m pull về có bị lỗi ghi đè dall ko
                     dt.Rows.Clear();
                     guna2DataGridView1.DataSource = dt;
                 }
