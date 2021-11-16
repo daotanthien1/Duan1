@@ -58,22 +58,38 @@ namespace RJCodeAdvance.ControlIngredient
             loadPrice();
             sumPrice += int.Parse(txtThanhTien.Text);
             txtTongTien.Text = sumPrice.ToString();
+            float so;
+            bool check = float.TryParse(txtSoLuong.Text, out so);
             bool kt = true;
-            foreach (DataRow item in dt.Rows)
+            if (check)
             {
-                if(item[0].ToString() == cbLoaiNguyenLieu.Text && item[1].ToString() == cbName.Text)
+                if (float.Parse(txtSoLuong.Text) >= 1 && float.Parse(txtSoLuong.Text) <= 100)
                 {
-                    kt = false;
-                    item[2] = (int.Parse(item[2].ToString()) + int.Parse(nbSoLuong.Text)).ToString();
-                    item[3] = (int.Parse(item[3].ToString()) + int.Parse(txtThanhTien.Text)).ToString();
-                    guna2DataGridView1.DataSource = dt;
-                    break;
+                    foreach (DataRow item in dt.Rows)
+                    {
+                        if (item[0].ToString() == cbLoaiNguyenLieu.Text && item[1].ToString() == cbName.Text)
+                        {
+                            kt = false;
+                            item[2] = (int.Parse(item[2].ToString()) + int.Parse(txtSoLuong.Text)).ToString();
+                            item[3] = (int.Parse(item[3].ToString()) + int.Parse(txtThanhTien.Text)).ToString();
+                            guna2DataGridView1.DataSource = dt;
+                            break;
+                        }
+                    }
+                    if (kt)
+                    {
+                        dt.Rows.Add(cbLoaiNguyenLieu.Text, cbName.Text, txtSoLuong.Text, txtThanhTien.Text);
+                        guna2DataGridView1.DataSource = dt;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng nhập số lượng từ 1 --> 100");
                 }
             }
-            if (kt)
+            else
             {
-                dt.Rows.Add(cbLoaiNguyenLieu.Text, cbName.Text, nbSoLuong.Text, txtThanhTien.Text);
-                guna2DataGridView1.DataSource = dt;
+                MessageBox.Show("Vui lòng nhập số lượng bằng số");
             }
         }
         // click vào combobox thì load lại data
@@ -100,9 +116,19 @@ namespace RJCodeAdvance.ControlIngredient
         //load giá tiền
         void loadPrice()
         {
-            DataTable price = input.PriceInputBill(int.Parse(cbName.SelectedValue.ToString()), int.Parse(nbSoLuong.Text));
-            dataGridView1.DataSource = price;
-            txtThanhTien.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+            float so;
+            bool check = float.TryParse(txtSoLuong.Text, out so);
+
+            if (check)
+            {
+                DataTable price = input.PriceInputBill(int.Parse(cbName.SelectedValue.ToString()), int.Parse(txtSoLuong.Text));
+                dataGridView1.DataSource = price;
+                txtThanhTien.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+            }
+            else
+            {
+                txtThanhTien.Text = "0";
+            }
         }
         BUS_InputBills bill = new BUS_InputBills();
         public static string mail = "tungnh230802@gmail.com";
