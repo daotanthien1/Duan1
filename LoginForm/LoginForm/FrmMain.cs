@@ -18,7 +18,7 @@ namespace RJCodeAdvance
         public FrmBeverageCP()
         {
             InitializeComponent();
-            uC_Order1.BringToFront();
+            uC_Order2.BringToFront();
         }
         private void moveImage(object sender)
         {
@@ -37,8 +37,8 @@ namespace RJCodeAdvance
             moveImage(sender);
             if (btnDoUong.Checked) 
                 uC_Beverages21.BringToFront();
-            if (btnGoiDoUong.Checked) 
-                uC_Order1.BringToFront();
+            if (btnGoiDoUong.Checked)
+                uC_Order2.BringToFront();
             if (btnNhanVien.Checked) 
                 uC_employee1.BringToFront();
             if (btnKhachHang.Checked)
@@ -56,23 +56,23 @@ namespace RJCodeAdvance
         BUS_Customer customer = new BUS_Customer();
         void sendVoucher()
         {
-            if (Properties.Settings.Default.rewards == "")
-            {
-                Properties.Settings.Default.rewards = "9999";
-            }
-            if (Properties.Settings.Default.vouchers == "")
-            {
-                Properties.Settings.Default.vouchers = "3";
-            }
+            //if (Properties.Settings.Default.rewards == "")
+            //{
+            //    Properties.Settings.Default.rewards = "9999";
+            //}
+            //if (Properties.Settings.Default.voucherType == "")
+            //{
+            //    Properties.Settings.Default.voucherType = "3";
+            //}
             DataTable dt = vouchers.getEmailSendVoucher(int.Parse(Properties.Settings.Default.rewards.ToString()));
             int row = 0;
             string id_voucher;
             string email;
-            DataTable voucher = vouchers.getVoucherSendMail(int.Parse(Properties.Settings.Default.vouchers.ToString()));
+            //DataTable voucher = vouchers.getVoucherSendMail(int.Parse(Properties.Settings.Default.voucherType.ToString()));
             if (dt.Rows.Count > 0)
             {
                 dataGridView1.DataSource = dt;
-                dataGridView2.DataSource = voucher;
+                //dataGridView2.DataSource = voucher;
                 do
                 {
                     email = dataGridView1.Rows[row].Cells[0].Value.ToString();
@@ -83,7 +83,7 @@ namespace RJCodeAdvance
                     string body = $"Vocher:{id_voucher}";
                     if (BUS_SendGmail.SendMail(email, subject, body))
                     {
-                        vouchers.UpdateVoucherForSend(dto);
+                        //vouchers.UpdateVoucherForSend(dto);
                         customer.UpdateCustomerAfterSendVoucher(DTO);
                         row += 1;
                     }

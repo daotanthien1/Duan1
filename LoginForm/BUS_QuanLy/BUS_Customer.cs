@@ -12,6 +12,39 @@ namespace BUS_QuanLy
     public class BUS_Customer
     {
         DAL_Customer Customer = new DAL_Customer();
+
+        public DTO_Customer FindCustomerByEmail(string email)
+        {
+            DataTable data = Customer.FindCustomerByEmail(email);
+            if(data.Rows.Count > 0)
+            {
+                DTO_Customer cus = new DTO_Customer(data.Rows[0]);
+                return cus;
+            }
+            return null;
+        }
+        public bool ChangeReward(int idCustomer, int point)
+        {
+            return Customer.ChangeReward(idCustomer, point);
+        }
+
+        public int getRewardCustomer(int idCustomer)
+        {
+            return Customer.getRewardCustomer(idCustomer);
+        }
+        public int getMaxIdCustomer()
+        {
+            return Customer.getMaxIdCustomer();
+        }
+
+        public int getIdCustomer(string email)
+        {
+            return Customer.getIdCustomer(email);
+        }
+        public bool CreateCustomer(DTO_Customer customer)
+        {
+            return Customer.CreateCustomer(customer);
+        }
         public bool UpdateCustomerAfterSendVoucher(DTO_Customer voucher)
         {
             return Customer.UpdateCustomerAfterSendVoucher(voucher);

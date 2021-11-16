@@ -36,6 +36,44 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+        public bool addCustomer(int idCustomer, int idBill)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "addCustomer";
+                cmd.Parameters.AddWithValue("idBill", idBill);
+                cmd.Parameters.AddWithValue("idcus", idCustomer);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
+        public long  getTotalPriceBill(int idBill)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "getTotalPriceBill";
+                cmd.Parameters.AddWithValue("idBill", idBill);
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
         public bool CheckOut(int id)
         {
             try

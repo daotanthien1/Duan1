@@ -30,9 +30,9 @@ namespace RJCodeAdvance.ControlBeverages
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Order));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -50,7 +50,6 @@ namespace RJCodeAdvance.ControlBeverages
             this.label9 = new System.Windows.Forms.Label();
             this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.pbDiem = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.label7 = new System.Windows.Forms.Label();
             this.rdNu = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdNam = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -71,6 +70,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.pbChangePass = new System.Windows.Forms.PictureBox();
             this.pbDangXuat = new System.Windows.Forms.PictureBox();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.nbDiem = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
@@ -80,6 +80,7 @@ namespace RJCodeAdvance.ControlBeverages
             ((System.ComponentModel.ISupportInitialize)(this.pbScheme)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChangePass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDangXuat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbDiem)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -125,30 +126,30 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             // dgv
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.White;
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dgv.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle30;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -182,6 +183,7 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.nbDiem);
             this.panel3.Controls.Add(this.guna2Button32);
             this.panel3.Controls.Add(this.btnThem);
             this.panel3.Controls.Add(this.label10);
@@ -192,7 +194,6 @@ namespace RJCodeAdvance.ControlBeverages
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.guna2ComboBox3);
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.pbDiem);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.rdNu);
             this.panel3.Controls.Add(this.rdNam);
@@ -403,21 +404,6 @@ namespace RJCodeAdvance.ControlBeverages
             this.label8.TabIndex = 52;
             this.label8.Text = "Chuyển bàn:";
             // 
-            // pbDiem
-            // 
-            this.pbDiem.BorderRadius = 3;
-            this.pbDiem.HoverState.Parent = null;
-            this.pbDiem.InUpdate = false;
-            this.pbDiem.LargeChange = 10;
-            this.pbDiem.Location = new System.Drawing.Point(277, 214);
-            this.pbDiem.Name = "pbDiem";
-            this.pbDiem.PressedState.Parent = this.pbDiem;
-            this.pbDiem.ScrollbarSize = 18;
-            this.pbDiem.Size = new System.Drawing.Size(246, 18);
-            this.pbDiem.TabIndex = 51;
-            this.pbDiem.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.pbDiem.ThumbSize = 90F;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -432,6 +418,7 @@ namespace RJCodeAdvance.ControlBeverages
             // rdNu
             // 
             this.rdNu.AutoSize = true;
+            this.rdNu.Checked = true;
             this.rdNu.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdNu.CheckedState.BorderThickness = 0;
             this.rdNu.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -443,6 +430,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.rdNu.Name = "rdNu";
             this.rdNu.Size = new System.Drawing.Size(43, 20);
             this.rdNu.TabIndex = 49;
+            this.rdNu.TabStop = true;
             this.rdNu.Text = "Nữ";
             this.rdNu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdNu.UncheckedState.BorderThickness = 2;
@@ -452,7 +440,6 @@ namespace RJCodeAdvance.ControlBeverages
             // rdNam
             // 
             this.rdNam.AutoSize = true;
-            this.rdNam.Checked = true;
             this.rdNam.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdNam.CheckedState.BorderThickness = 0;
             this.rdNam.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -464,7 +451,6 @@ namespace RJCodeAdvance.ControlBeverages
             this.rdNam.Name = "rdNam";
             this.rdNam.Size = new System.Drawing.Size(53, 20);
             this.rdNam.TabIndex = 48;
-            this.rdNam.TabStop = true;
             this.rdNam.Text = "Nam";
             this.rdNam.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdNam.UncheckedState.BorderThickness = 2;
@@ -544,6 +530,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.txbEmail.ShadowDecoration.Parent = this.txbEmail;
             this.txbEmail.Size = new System.Drawing.Size(240, 36);
             this.txbEmail.TabIndex = 44;
+            this.txbEmail.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txbEmail_KeyUp);
             // 
             // label4
             // 
@@ -705,6 +692,23 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             this.guna2Elipse2.TargetControl = this.dgv;
             // 
+            // nbDiem
+            // 
+            this.nbDiem.BackColor = System.Drawing.Color.Transparent;
+            this.nbDiem.BorderRadius = 3;
+            this.nbDiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nbDiem.DisabledState.Parent = this.nbDiem;
+            this.nbDiem.Enabled = false;
+            this.nbDiem.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.nbDiem.FocusedState.Parent = this.nbDiem;
+            this.nbDiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nbDiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.nbDiem.Location = new System.Drawing.Point(280, 212);
+            this.nbDiem.Name = "nbDiem";
+            this.nbDiem.ShadowDecoration.Parent = this.nbDiem;
+            this.nbDiem.Size = new System.Drawing.Size(146, 36);
+            this.nbDiem.TabIndex = 62;
+            // 
             // UC_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -731,6 +735,7 @@ namespace RJCodeAdvance.ControlBeverages
             ((System.ComponentModel.ISupportInitialize)(this.pbScheme)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbChangePass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDangXuat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbDiem)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -748,7 +753,6 @@ namespace RJCodeAdvance.ControlBeverages
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2HScrollBar pbDiem;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2RadioButton rdNu;
         private Guna.UI2.WinForms.Guna2RadioButton rdNam;
@@ -774,5 +778,6 @@ namespace RJCodeAdvance.ControlBeverages
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2DataGridView dgv;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nbDiem;
     }
 }

@@ -87,7 +87,7 @@ namespace DAL_QuanLy
             }
         }
 
-        public bool UpdateVoucherForSend(DTO_Vouchers vouchers)
+        public bool UpdateVoucherForSend(string id_vouchers)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace DAL_QuanLy
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "UpdateVoucherForSend";
-                cmd.Parameters.AddWithValue("Id_voucher", vouchers.id_vouchers);
+                cmd.Parameters.AddWithValue("Id_voucher", id_vouchers);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }

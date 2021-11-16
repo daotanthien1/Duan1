@@ -525,7 +525,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.txtTongTien.PlaceholderText = "Tổng tiền";
             this.txtTongTien.SelectedText = "";
             this.txtTongTien.ShadowDecoration.Parent = this.txtTongTien;
-            this.txtTongTien.Size = new System.Drawing.Size(188, 36);
+            this.txtTongTien.Size = new System.Drawing.Size(205, 36);
             this.txtTongTien.TabIndex = 126;
             // 
             // nbSoLuong

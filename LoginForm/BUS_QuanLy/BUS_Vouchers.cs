@@ -44,13 +44,19 @@ namespace BUS_QuanLy
         {
             return vouchers.getEmailSendVoucher(reward);
         }
-        public DataTable getVoucherSendMail(int voucher)
+        public string getVoucherSendMail(int voucher)
         {
-            return vouchers.getVoucherSendMail(voucher);
+            DataTable table = vouchers.getVoucherSendMail(voucher);
+            if(table.Rows.Count > 0)
+            {
+                DTO_Vouchers vou = new DTO_Vouchers(table.Rows[0]);
+                return vou.id_vouchers;
+            }
+            return null;
         }
-        public bool UpdateVoucherForSend(DTO_Vouchers voucher)
+        public bool UpdateVoucherForSend(string id_vouchers)
         {
-            return vouchers.UpdateVoucherForSend(voucher);
+            return vouchers.UpdateVoucherForSend(id_vouchers);
         }
     }
 }

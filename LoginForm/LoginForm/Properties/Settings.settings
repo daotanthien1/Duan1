@@ -6,16 +6,22 @@
       <Value Profile="(Default)">admin</Value>
     </Setting>
     <Setting Name="pass" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">1234</Value>
     </Setting>
     <Setting Name="RememberMe" Type="System.String" Scope="User">
-      <Value Profile="(Default)">true</Value>
+      <Value Profile="(Default)">false</Value>
     </Setting>
-    <Setting Name="rewards" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="rewards" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="vouchers" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+    <Setting Name="voucherType" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="TurnOnSale" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="voucheTypeName" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -92,6 +93,16 @@ namespace DTO_QuanLy
             {
                 Status = value;
             }
+        }
+
+        public DTO_Vouchers(DataRow rows)
+        {
+            this.Id_Vouchers = rows["Id_voucher"].ToString();
+            this.DayBegin = rows["dateBegin"].ToString();
+            this.DayEnd = rows["dateEnd"].ToString();
+            this.Id_employee = (int)rows["id_employee"];
+            this.Id_type = (int)rows["id_Type"];
+            this.status = (int)rows["status"];
         }
         public DTO_Vouchers(string id_Vouchers, string dayBegin, string dayEnd, string mail, int id_Type, int status)
         {

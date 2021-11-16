@@ -62,6 +62,7 @@
     <Compile Include="BUS_units.cs" />
     <Compile Include="BUS_Vouchers.cs" />
     <Compile Include="DAL_QuanLy.cs" />
+    <Compile Include="IsValidEmail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

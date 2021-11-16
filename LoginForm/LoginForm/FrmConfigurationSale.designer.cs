@@ -35,12 +35,13 @@ namespace RJCodeAdvance
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.cbSale = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ToggleSwitch1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.nbDiemYeuCau = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nbDiemYeuCau)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -101,33 +102,6 @@ namespace RJCodeAdvance
             this.cbSale.Size = new System.Drawing.Size(293, 36);
             this.cbSale.TabIndex = 152;
             this.cbSale.Click += new System.EventHandler(this.cbSale_Click);
-            // 
-            // txtLuong
-            // 
-            this.txtLuong.Animated = true;
-            this.txtLuong.BorderColor = System.Drawing.Color.White;
-            this.txtLuong.BorderRadius = 15;
-            this.txtLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLuong.DefaultText = "";
-            this.txtLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLuong.DisabledState.Parent = this.txtLuong;
-            this.txtLuong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLuong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLuong.FocusedState.Parent = this.txtLuong;
-            this.txtLuong.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtLuong.ForeColor = System.Drawing.Color.Black;
-            this.txtLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLuong.HoverState.Parent = this.txtLuong;
-            this.txtLuong.Location = new System.Drawing.Point(165, 120);
-            this.txtLuong.Name = "txtLuong";
-            this.txtLuong.PasswordChar = '\0';
-            this.txtLuong.PlaceholderText = "Điểm tích lũy";
-            this.txtLuong.SelectedText = "";
-            this.txtLuong.ShadowDecoration.Parent = this.txtLuong;
-            this.txtLuong.Size = new System.Drawing.Size(293, 36);
-            this.txtLuong.TabIndex = 151;
             // 
             // label3
             // 
@@ -211,16 +185,31 @@ namespace RJCodeAdvance
             this.guna2Button5.Text = "Lưu";
             this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
+            // nbDiemYeuCau
+            // 
+            this.nbDiemYeuCau.BackColor = System.Drawing.Color.Transparent;
+            this.nbDiemYeuCau.BorderRadius = 16;
+            this.nbDiemYeuCau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nbDiemYeuCau.DisabledState.Parent = this.nbDiemYeuCau;
+            this.nbDiemYeuCau.FocusedState.Parent = this.nbDiemYeuCau;
+            this.nbDiemYeuCau.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nbDiemYeuCau.ForeColor = System.Drawing.Color.Black;
+            this.nbDiemYeuCau.Location = new System.Drawing.Point(165, 120);
+            this.nbDiemYeuCau.Name = "nbDiemYeuCau";
+            this.nbDiemYeuCau.ShadowDecoration.Parent = this.nbDiemYeuCau;
+            this.nbDiemYeuCau.Size = new System.Drawing.Size(293, 36);
+            this.nbDiemYeuCau.TabIndex = 155;
+            // 
             // FrmConfigurationSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlueViolet;
             this.ClientSize = new System.Drawing.Size(538, 277);
+            this.Controls.Add(this.nbDiemYeuCau);
             this.Controls.Add(this.guna2Button5);
             this.Controls.Add(this.guna2ToggleSwitch1);
             this.Controls.Add(this.cbSale);
-            this.Controls.Add(this.txtLuong);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -231,6 +220,7 @@ namespace RJCodeAdvance
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormConfigurationSale";
             this.Load += new System.EventHandler(this.FrmConfigurationSale_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nbDiemYeuCau)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,11 +232,11 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ComboBox cbSale;
-        private Guna.UI2.WinForms.Guna2TextBox txtLuong;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ToggleSwitch guna2ToggleSwitch1;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nbDiemYeuCau;
     }
 }

@@ -59,18 +59,18 @@ namespace RJCodeAdvance.ControlIngredient
             sumPrice += int.Parse(txtThanhTien.Text);
             txtTongTien.Text = sumPrice.ToString();
             float so;
-            bool check = float.TryParse(txtSoLuong.Text, out so);
+            bool check = float.TryParse(nbSoLuong.Text, out so);
             bool kt = true;
             if (check)
             {
-                if (float.Parse(txtSoLuong.Text) >= 1 && float.Parse(txtSoLuong.Text) <= 100)
+                if (float.Parse(nbSoLuong.Text) >= 1 && float.Parse(nbSoLuong.Text) <= 100)
                 {
                     foreach (DataRow item in dt.Rows)
                     {
                         if (item[0].ToString() == cbLoaiNguyenLieu.Text && item[1].ToString() == cbName.Text)
                         {
                             kt = false;
-                            item[2] = (int.Parse(item[2].ToString()) + int.Parse(txtSoLuong.Text)).ToString();
+                            item[2] = (int.Parse(item[2].ToString()) + int.Parse(nbSoLuong.Text)).ToString();
                             item[3] = (int.Parse(item[3].ToString()) + int.Parse(txtThanhTien.Text)).ToString();
                             guna2DataGridView1.DataSource = dt;
                             break;
@@ -78,7 +78,7 @@ namespace RJCodeAdvance.ControlIngredient
                     }
                     if (kt)
                     {
-                        dt.Rows.Add(cbLoaiNguyenLieu.Text, cbName.Text, txtSoLuong.Text, txtThanhTien.Text);
+                        dt.Rows.Add(cbLoaiNguyenLieu.Text, cbName.Text, nbSoLuong.Text, txtThanhTien.Text);
                         guna2DataGridView1.DataSource = dt;
                     }
                 }
@@ -108,8 +108,8 @@ namespace RJCodeAdvance.ControlIngredient
             cbName.DataSource = input.getNameIngredientForInputBillDetail(int.Parse(cbLoaiNguyenLieu.SelectedValue.ToString()));
             loadPrice();
         }
-        // click vào txtSoLuong thì load thành tiền
-        private void txtSoLuong_Click_2(object sender, EventArgs e)
+        // click vào nbSoLuong thì load thành tiền
+        private void nbSoLuong_Click_2(object sender, EventArgs e)
         {
             loadPrice();
         }
@@ -117,11 +117,11 @@ namespace RJCodeAdvance.ControlIngredient
         void loadPrice()
         {
             float so;
-            bool check = float.TryParse(txtSoLuong.Text, out so);
+            bool check = float.TryParse(nbSoLuong.Text, out so);
 
             if (check)
             {
-                DataTable price = input.PriceInputBill(int.Parse(cbName.SelectedValue.ToString()), int.Parse(txtSoLuong.Text));
+                DataTable price = input.PriceInputBill(int.Parse(cbName.SelectedValue.ToString()), int.Parse(nbSoLuong.Text));
                 dataGridView1.DataSource = price;
                 txtThanhTien.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
             }

@@ -12,7 +12,7 @@ namespace RJCodeAdvance.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -37,7 +37,7 @@ namespace RJCodeAdvance.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1234")]
         public string pass {
             get {
                 return ((string)(this["pass"]));
@@ -49,7 +49,7 @@ namespace RJCodeAdvance.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("true")]
+        [global::System.Configuration.DefaultSettingValueAttribute("false")]
         public string RememberMe {
             get {
                 return ((string)(this["RememberMe"]));
@@ -61,10 +61,10 @@ namespace RJCodeAdvance.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string rewards {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int rewards {
             get {
-                return ((string)(this["rewards"]));
+                return ((int)(this["rewards"]));
             }
             set {
                 this["rewards"] = value;
@@ -73,13 +73,37 @@ namespace RJCodeAdvance.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string vouchers {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int voucherType {
             get {
-                return ((string)(this["vouchers"]));
+                return ((int)(this["voucherType"]));
             }
             set {
-                this["vouchers"] = value;
+                this["voucherType"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool TurnOnSale {
+            get {
+                return ((bool)(this["TurnOnSale"]));
+            }
+            set {
+                this["TurnOnSale"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int voucheTypeName {
+            get {
+                return ((int)(this["voucheTypeName"]));
+            }
+            set {
+                this["voucheTypeName"] = value;
             }
         }
     }

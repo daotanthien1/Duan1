@@ -15,6 +15,10 @@ namespace BUS_QuanLy
         {
             return dal_bill.getMaxId();
         }
+        public bool addCustomer(int idCustomer, int idBill)
+        {
+            return dal_bill.addCustomer(idCustomer, idBill);
+        }
         public bool CheckOut(int id)
         {
            return dal_bill.CheckOut(id);
@@ -32,6 +36,12 @@ namespace BUS_QuanLy
         public double getSumPrice(int id_table)
         {
             return dal_bill.getSumPrice(id_table);
+        }
+
+
+        public long getTotalPriceBill(int idBill)
+        {
+            return dal_bill.getTotalPriceBill(idBill);
         }
     }
 }

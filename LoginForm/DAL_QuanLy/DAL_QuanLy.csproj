@@ -61,6 +61,7 @@
     <Compile Include="DAL_TypesOfBeverage.cs" />
     <Compile Include="DAL_units.cs" />
     <Compile Include="DAL_Vouchers.cs" />
+    <Compile Include="DataProvider.cs" />
     <Compile Include="DBConnect.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

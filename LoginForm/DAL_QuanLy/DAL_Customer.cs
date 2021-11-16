@@ -30,6 +30,46 @@ namespace DAL_QuanLy
             }
             return false;
         }
+
+        public int getMaxIdCustomer()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "getMaxIdCustomer";
+                return Convert.ToInt16(cmd.ExecuteScalar());                
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public int getIdCustomer(string email)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "getIdCustomer";
+                cmd.Parameters.AddWithValue("email", email);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                if(dt.Rows.Count > 0)
+                {
+                    return Convert.ToInt16(dt.Rows[0][0].ToString());
+                }
+                return 0;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        } 
         public DataTable getData()
         {
             try
@@ -48,6 +88,29 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+
+        public bool CreateCustomer(DTO_Customer customer)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_CreateCustomer";
+                cmd.Parameters.AddWithValue("Email", customer.Email);
+                cmd.Parameters.AddWithValue("Gender", customer.Gender);
+                cmd.Parameters.AddWithValue("name", customer.Name);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
         public bool UpdateCustomer(DTO_Customer customer)
         {
             try
@@ -71,6 +134,26 @@ namespace DAL_QuanLy
             }
             return false;
         }
+        public DataTable FindCustomerByEmail(string email)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_FindCustomerById";
+                cmd.Parameters.AddWithValue("Email", email);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
         public DataTable SearchCustomer(string email)
         {
             try
@@ -89,6 +172,45 @@ namespace DAL_QuanLy
             {
                 _conn.Close();
             }
+        }
+
+        public int getRewardCustomer(int idCustomer)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "getRewardCustomer";
+                cmd.Parameters.AddWithValue("id_cutomer", idCustomer);
+                return Convert.ToInt16(cmd.ExecuteScalar());                 
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public bool ChangeReward(int idCustomer, int point)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "ChangeReward";
+                cmd.Parameters.AddWithValue("id_Customer", idCustomer);
+                cmd.Parameters.AddWithValue("Point", point);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
         }
     }
 }
