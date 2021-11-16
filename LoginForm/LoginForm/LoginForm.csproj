@@ -177,7 +177,7 @@
       <DependentUpon>UC_Customer.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlEmployees\UC_employee.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ControlEmployees\UC_employee.designer.cs">
       <DependentUpon>UC_employee.cs</DependentUpon>

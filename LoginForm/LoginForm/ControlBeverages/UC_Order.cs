@@ -45,6 +45,19 @@ namespace RJCodeAdvance.ControlBeverages
             cbBeverage.DataSource = listBeverage;
             cbBeverage.DisplayMember = "Name";
         }
+        
+        // load lại 1 bàn
+        private void LoadStatusTable(int idTable)
+        {
+            foreach(Guna2Button btn in flpTables.Controls)
+            {
+                DTO_tables table = btn.Tag as DTO_tables;
+                if(table.Id == idTable)
+                {
+                    btn.FillColor = Color.BlueViolet;
+                }
+            }
+        }
 
         private void LoadTable()
         {
@@ -57,6 +70,7 @@ namespace RJCodeAdvance.ControlBeverages
                 btn.Click += Btn_Click;
                 btn.Tag = table;
                 btn.BorderRadius = 3;               
+                
                 btn.Size = new System.Drawing.Size(75, 75);
                 btn.Text = table.Name + Environment.NewLine + table.status;
                 if(table.status == "Có người")
