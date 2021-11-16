@@ -13,6 +13,17 @@ namespace BUS_QuanLy
     {
         DAL_tables Dal_tables = new DAL_tables();
 
+        public DTO_tables getTable(int idTable)
+        {
+            DataTable data = Dal_tables.getData();
+            foreach(DataRow row in data.Rows)
+            {
+                DTO_tables table = new DTO_tables(row);
+                if (table.Id == idTable)
+                    return table;
+            }
+            return null;
+        }
         public List<DTO_tables> getTableList()
         {
             List<DTO_tables> tablelist = new List<DTO_tables>();

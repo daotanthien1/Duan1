@@ -49,12 +49,23 @@ namespace RJCodeAdvance.ControlBeverages
         // load lại 1 bàn
         private void LoadStatusTable(int idTable)
         {
+            DTO_tables table = bus_table.getTable(idTable);
+
             foreach(Guna2Button btn in flpTables.Controls)
             {
-                DTO_tables table = btn.Tag as DTO_tables;
-                if(table.Id == idTable)
+                DTO_tables btn_table = btn.Tag as DTO_tables;
+                if(table.Id == btn_table.Id)
                 {
-                    btn.FillColor = Color.BlueViolet;
+                    btn.Text = table.Name + Environment.NewLine + table.status;
+                    if (table.status == "Có người")
+                    {
+                        btn.FillColor = Color.BlueViolet;
+                    }
+                    else
+                    {
+                        btn.FillColor = Color.FromArgb(94, 148, 255);
+                    }
+                          
                 }
             }
         }
@@ -171,7 +182,7 @@ namespace RJCodeAdvance.ControlBeverages
             }
 
             ShowBill(table.Id);
-            LoadTable();
+            LoadStatusTable(table.Id);
         }
 
         private void cbBeverage_SelectedIndexChanged(object sender, EventArgs e)
@@ -190,8 +201,7 @@ namespace RJCodeAdvance.ControlBeverages
                 bus_bill.CheckOut(idBill);
                 ShowBill(table.Id);
             }
-
-            LoadTable();
+            LoadStatusTable(table.Id);
         }
     }
 }

@@ -656,7 +656,6 @@ namespace RJCodeAdvance.ControlEmployees
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UC_employee";
             this.Load += new System.EventHandler(this.UC_employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).EndInit();
