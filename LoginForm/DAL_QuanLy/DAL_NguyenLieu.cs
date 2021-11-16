@@ -94,6 +94,8 @@ namespace DAL_QuanLy
                 cmd.Parameters.AddWithValue("Id_supplier", nl.Id_Supplier);
                 cmd.Parameters.AddWithValue("Id_type", nl.Id_Type);
                 cmd.Parameters.AddWithValue("Price", nl.Price);
+                cmd.Parameters.AddWithValue("Mass", nl.Mass);
+                cmd.Parameters.AddWithValue("Id_unit", nl.Id_Unit);
 
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
@@ -117,6 +119,8 @@ namespace DAL_QuanLy
                 cmd.Parameters.AddWithValue("Id_supplier", nl.Id_Supplier);
                 cmd.Parameters.AddWithValue("Id_type", nl.Id_Type);
                 cmd.Parameters.AddWithValue("Price", nl.Price);
+                cmd.Parameters.AddWithValue("Mass", nl.Mass);
+                cmd.Parameters.AddWithValue("Id_unit", nl.Id_Unit);
                 cmd.Parameters.AddWithValue("Id_ingredient", nl.Id_Ingredient);
 
                 if (cmd.ExecuteNonQuery() > 0)

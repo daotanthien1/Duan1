@@ -56,6 +56,8 @@ namespace RJCodeAdvance.ControlIngredient
             cbLoaiIngredient.Enabled = true;
             cbNhaCC.Enabled = true;
             txtGia.Enabled = true;
+            guna2NumericUpDown1.Enabled = true;
+            cbDVT.Enabled = true;
             btLuu.Enabled = true;
         }
 
@@ -86,9 +88,10 @@ namespace RJCodeAdvance.ControlIngredient
             {
                 if (checkTextBox())
                 {
-                    DTO_NguyenLieu dtoBe = new DTO_NguyenLieu(txtTenIngredient.Text,
-                        Convert.ToInt32(cbNhaCC.SelectedValue), Convert.ToInt32(cbLoaiIngredient.SelectedValue),
-                       float.Parse(txtGia.Text), Convert.ToInt32(dgv.CurrentRow.Cells["Id_Ingredient"].Value.ToString()));
+                    DTO_NguyenLieu dtoBe = new DTO_NguyenLieu(txtTenIngredient.Text, Convert.ToInt32(cbNhaCC.SelectedValue),
+                        Convert.ToInt32(cbLoaiIngredient.SelectedValue), float.Parse(txtGia.Text),
+                        int.Parse(guna2NumericUpDown1.Value.ToString()), Convert.ToInt32(cbDVT.SelectedValue),
+                        Convert.ToInt32(dgv.CurrentRow.Cells["Id_Ingredient"].Value.ToString()));
                     if (busIg.UpdateNguyenLieu(dtoBe))
                     {
                         MessageBox.Show("Thành công");
@@ -109,9 +112,9 @@ namespace RJCodeAdvance.ControlIngredient
             {
                 if (checkTextBox())
                 {
-                    DTO_NguyenLieu dtoIg = new DTO_NguyenLieu(txtTenIngredient.Text,
-                       Convert.ToInt32(cbNhaCC.SelectedValue.ToString()), Convert.ToInt32(cbLoaiIngredient.SelectedValue.ToString()),
-                       float.Parse(txtGia.Text));
+                    DTO_NguyenLieu dtoIg = new DTO_NguyenLieu(txtTenIngredient.Text, Convert.ToInt32(cbNhaCC.SelectedValue.ToString()),
+                        Convert.ToInt32(cbLoaiIngredient.SelectedValue.ToString()), float.Parse(txtGia.Text),
+                        int.Parse(guna2NumericUpDown1.Value.ToString()), Convert.ToInt32(cbDVT.SelectedValue));
                     if (busIg.InsertNguyenLieu(dtoIg))
                     {
                         MessageBox.Show("Thành công");
@@ -137,11 +140,12 @@ namespace RJCodeAdvance.ControlIngredient
             txtTenIngredient.Enabled = false;
             txtTenIngredient.Text = "";
             cbLoaiIngredient.Enabled = false;
-            cbLoaiIngredient.Text = "";
             txtGia.Enabled = false;
             txtGia.Text = "";
             cbNhaCC.Enabled = false;
-            cbNhaCC.Text = "";
+            guna2NumericUpDown1.Enabled = false;
+            guna2NumericUpDown1.Value = 0;
+            cbDVT.Enabled = false;
             txtSearch.Text = "";
             btXoa.Enabled = false; ;
             btSua.Enabled = false;
@@ -177,6 +181,20 @@ namespace RJCodeAdvance.ControlIngredient
                 cbNhaCC.Focus();
                 return false;
             }
+            if (int.Parse(guna2NumericUpDown1.Value.ToString()) <= 0)
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin");
+                guna2NumericUpDown1.Value = 0;
+                guna2NumericUpDown1.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbDVT.Text))
+            {
+                MessageBox.Show("Chưa nhập đủ thông tin");
+                cbDVT.Text = "";
+                cbDVT.Focus();
+                return false;
+            }
             return true;
         }
         void loaddgv()
@@ -187,6 +205,8 @@ namespace RJCodeAdvance.ControlIngredient
             dgv.Columns[2].HeaderText = "Id_Supplier";
             dgv.Columns[3].HeaderText = "Id_Type";
             dgv.Columns[4].HeaderText = "Price";
+            dgv.Columns[5].HeaderText = "Mass";
+            dgv.Columns[6].HeaderText = "Id_Unit";
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         void loadComBoBox()
@@ -217,10 +237,14 @@ namespace RJCodeAdvance.ControlIngredient
                     cbLoaiIngredient.Enabled = true;
                     cbNhaCC.Enabled = true;
                     txtGia.Enabled = true;
+                    cbDVT.Enabled = true;
+                    guna2NumericUpDown1.Enabled = true;
                     txtTenIngredient.Text = dgv.CurrentRow.Cells["Name"].Value.ToString();
                     txtGia.Text = dgv.CurrentRow.Cells["Price"].Value.ToString();
                     cbLoaiIngredient.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Id_Type"].Value.ToString()) - 1;
                     cbNhaCC.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Id_Supplier"].Value.ToString()) - 1;
+                    cbDVT.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Id_Unit"].Value.ToString()) - 1;
+                    guna2NumericUpDown1.Value = int.Parse(dgv.CurrentRow.Cells["Mass"].Value.ToString());
                 }
                 else
                 {
