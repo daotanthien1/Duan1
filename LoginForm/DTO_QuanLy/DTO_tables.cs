@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,6 +45,12 @@ namespace DTO_QuanLy
                 Status = value;
             }
         }
+        public DTO_tables(DataRow row)
+        {
+            this.id = (int)row["Id_Table"];
+            this.name = row["name"].ToString();
+            this.status = row["Status"].ToString();
+        }
         public DTO_tables(string name, string status)
         {
             this.name = name;
@@ -55,5 +62,7 @@ namespace DTO_QuanLy
             this.Status = status;
             this.id = id;
         }
+
+ 
     }
 }

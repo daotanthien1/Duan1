@@ -11,26 +11,41 @@ namespace BUS_QuanLy
 {
     public class BUS_tables
     {
-        DAL_tables tables = new DAL_tables();
+        DAL_tables Dal_tables = new DAL_tables();
+
+        public List<DTO_tables> getTableList()
+        {
+            List<DTO_tables> tablelist = new List<DTO_tables>();
+
+            DataTable data = Dal_tables.getData();
+            foreach(DataRow row in data.Rows)
+            {
+                DTO_tables table = new DTO_tables(row);
+                tablelist.Add(table);
+            }
+
+            return tablelist;
+        }
+
         public DataTable getData()
         {
-            return tables.getData();
+            return Dal_tables.getData();
         }
         public bool InsertDataTable(DTO_tables Tables)
         {
-            return tables.InsertDataTable(Tables);
+            return Dal_tables.InsertDataTable(Tables);
         }
         public bool UpdateDataTable(DTO_tables Tables)
         {
-            return tables.UpdateDataTable(Tables);
+            return Dal_tables.UpdateDataTable(Tables);
         }
         public bool DeleteDataTable(int id)
         {
-            return tables.DeleteDataTable(id);
+            return Dal_tables.DeleteDataTable(id);
         }
         public DataTable SearchTable(string name)
         {
-            return tables.SearchTable(name);
+            return Dal_tables.SearchTable(name);
         }
     }
 }

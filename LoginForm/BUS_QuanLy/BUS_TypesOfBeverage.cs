@@ -12,6 +12,18 @@ namespace BUS_QuanLy
     public class BUS_TypesOfBeverage
     {
         DAL_TypesOfBeverage loaiDoLuong = new DAL_TypesOfBeverage();
+        public List<DTO_TypesOfBeverage> listBeverageType()
+        {
+            DataTable dt = loaiDoLuong.getBeverage();
+            List<DTO_TypesOfBeverage> listBeverageType = new List<DTO_TypesOfBeverage>();
+
+            foreach(DataRow row in dt.Rows)
+            {
+                DTO_TypesOfBeverage beverageType = new DTO_TypesOfBeverage(row);
+                listBeverageType.Add(beverageType);
+            }
+            return listBeverageType;
+        }
         public bool InsertDoUong(string name)
         {
             return loaiDoLuong.InsertLoaiDoUong(name);
