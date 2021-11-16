@@ -23,6 +23,7 @@ namespace RJCodeAdvance
         {
             ResetValue();
             ShowData_GridViewVaiTro();
+            
         }
         private void btThem_Click(object sender, EventArgs e)
         {

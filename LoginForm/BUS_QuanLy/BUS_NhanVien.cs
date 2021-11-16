@@ -54,6 +54,14 @@ namespace BUS_QuanLy
         {
             return dalNhanVien.ThemVaiTro();
         }
+        public DataTable KiemTraTrungEmail()
+        {
+            return dalNhanVien.KiemTraTrungEmail();
+        }
+        public DataTable KiemTraTrungEmailTheoID(string email,int id_employee)
+        {
+            return dalNhanVien.KiemTraTrungEmailTheoID(email, id_employee);
+        }
         //Mã hóa MD5
         public string encryption(string password)
         {

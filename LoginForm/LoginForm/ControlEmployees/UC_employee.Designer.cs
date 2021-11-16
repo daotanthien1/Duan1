@@ -60,6 +60,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btDanhSach = new Guna.UI2.WinForms.Guna2Button();
+            this.Id_emloyee = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,6 +161,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtLuong.ShadowDecoration.Parent = this.txtLuong;
             this.txtLuong.Size = new System.Drawing.Size(346, 36);
             this.txtLuong.TabIndex = 62;
+            this.txtLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLuong_KeyPress);
             // 
             // cbVaiTro
             // 
@@ -615,11 +617,21 @@ namespace RJCodeAdvance.ControlEmployees
             this.btDanhSach.Text = "Danh Sách";
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
             // 
+            // Id_emloyee
+            // 
+            this.Id_emloyee.AutoSize = true;
+            this.Id_emloyee.Location = new System.Drawing.Point(37, 9);
+            this.Id_emloyee.Name = "Id_emloyee";
+            this.Id_emloyee.Size = new System.Drawing.Size(0, 13);
+            this.Id_emloyee.TabIndex = 118;
+            // 
             // UC_employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1096, 651);
+            this.Controls.Add(this.Id_emloyee);
             this.Controls.Add(this.btDanhSach);
             this.Controls.Add(this.btnThemVaitro);
             this.Controls.Add(this.rbNu);
@@ -644,8 +656,8 @@ namespace RJCodeAdvance.ControlEmployees
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UC_employee";
-            this.Size = new System.Drawing.Size(1096, 651);
             this.Load += new System.EventHandler(this.UC_employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).EndInit();
             this.ResumeLayout(false);
@@ -680,5 +692,6 @@ namespace RJCodeAdvance.ControlEmployees
         private Guna.UI2.WinForms.Guna2Button btnThemVaitro;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btDanhSach;
+        private System.Windows.Forms.Label Id_emloyee;
     }
 }

@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace RJCodeAdvance.ControlEmployees
 {
-    public partial class UC_employee : UserControl
+    public partial class UC_employee : Form
     {
         BUS_NhanVien busNV = new BUS_QuanLy.BUS_NhanVien();
         public UC_employee()
@@ -22,7 +22,7 @@ namespace RJCodeAdvance.ControlEmployees
             InitializeComponent();
         }
 
-      
+
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             FrmVaiTro frm = new FrmVaiTro();
@@ -34,6 +34,7 @@ namespace RJCodeAdvance.ControlEmployees
             ResetValue();
             ShowData_GridViewNhanVien();
             ThemVaiTro();
+            Id_emloyee.Visible = false;
         }
 
         private void btnThemVaitro_Click(object sender, EventArgs e)
@@ -67,6 +68,16 @@ namespace RJCodeAdvance.ControlEmployees
             int gioitinh = 0;
             int vaitro = 0;
             vaitro = cbVaiTro.SelectedIndex + 1;
+            DataTable dt = busNV.KiemTraTrungEmail();
+            for (int i = 0; i < dt.Rows.Count; i++) // Mở vòng lặp để lấy từng phần tử trong CSDL
+            {
+                if (txtEmail.Text == dt.Rows[i]["Email"].ToString()) // Kiểm tra trùng lặp dữ liệu
+                {
+                    MessageBox.Show("Email này đã có rồi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtEmail.Focus();
+                    return;
+                }
+            }
 
             if (rbNam.Checked)
                 gioitinh = 1;
@@ -116,7 +127,12 @@ namespace RJCodeAdvance.ControlEmployees
                 txtTenNhanVien.Focus();
                 return;
             }
-
+            if (int.Parse(txtLuong.Text) >= 100000000)
+            {
+                MessageBox.Show("Lương quá lớn chỉ được (< 10000000)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenNhanVien.Focus();
+                return;
+            }
             else
             {
                 DTO_NhanVien nv = new DTO_NhanVien(vaitro, txtTenNhanVien.Text, gioitinh, txtEmail.Text, txtDiaChi.Text, dtNgaySinh.Value.ToString(), float.Parse(txtLuong.Text));
@@ -135,8 +151,14 @@ namespace RJCodeAdvance.ControlEmployees
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            if (cbVaiTro.SelectedIndex == 0)
+            {
+                MessageBox.Show("Không được xóa nhân viên có vai trò Quản lý!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenNhanVien.Focus();
+                return;
+            }
             if (MessageBox.Show("Bạn có chắc muốn xóa dữ liệu", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-               == DialogResult.Yes)
+              == DialogResult.Yes)
             {
                 if (busNV.DeleteNhanVien(txtEmail.Text))
                 {
@@ -165,6 +187,7 @@ namespace RJCodeAdvance.ControlEmployees
             else
                 gioitinh = 0;
 
+            
             if (txtEmail.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -191,7 +214,18 @@ namespace RJCodeAdvance.ControlEmployees
             }
             else
             {
-                DTO_NhanVien nv = new DTO_NhanVien(vaitro, txtTenNhanVien.Text, gioitinh, txtEmail.Text, txtDiaChi.Text, dtNgaySinh.Value.ToString(), float.Parse(txtLuong.Text));
+                DataTable dt = busNV.KiemTraTrungEmailTheoID(txtEmail.Text,int.Parse(Id_emloyee.Text));
+                for (int i = 0; i < dt.Rows.Count; i++) // Mở vòng lặp để lấy từng phần tử trong CSDL
+                {
+                    if (txtEmail.Text == dt.Rows[i]["Email"].ToString()) // Kiểm tra trùng lặp dữ liệu
+                    {
+                        MessageBox.Show("Email này đã có rồi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtEmail.Focus();
+                        return;
+                    }
+                }
+
+                DTO_NhanVien nv = new DTO_NhanVien(vaitro, txtTenNhanVien.Text, gioitinh, txtEmail.Text, txtDiaChi.Text, dtNgaySinh.Value.ToString(), float.Parse(txtLuong.Text),int.Parse(Id_emloyee.Text));
                 if (busNV.UpdateNhanVien(nv))
                 {
                     ResetValue();
@@ -236,6 +270,7 @@ namespace RJCodeAdvance.ControlEmployees
             dgv_NhanVien.Columns[4].HeaderText = "Địa chỉ";
             dgv_NhanVien.Columns[5].HeaderText = "Ngày sinh";
             dgv_NhanVien.Columns[6].HeaderText = "Lương";
+            dgv_NhanVien.Columns[7].Visible = false;
             dgv_NhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -262,7 +297,7 @@ namespace RJCodeAdvance.ControlEmployees
 
         private void dgv_NhanVien_Click(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_NhanVien.Rows.Count > 1)
+            if (dgv_NhanVien.Rows.Count > 0)
             {
                 try
                 {
@@ -282,6 +317,8 @@ namespace RJCodeAdvance.ControlEmployees
                     txtTenNhanVien.Text = dgv_NhanVien.CurrentRow.Cells["Name"].Value.ToString();
                     txtDiaChi.Text = dgv_NhanVien.CurrentRow.Cells["Address"].Value.ToString();
                     txtLuong.Text = dgv_NhanVien.CurrentRow.Cells["Salary"].Value.ToString();
+                    dtNgaySinh.Text = dgv_NhanVien.CurrentRow.Cells["DayOfBirth"].Value.ToString();
+                    Id_emloyee.Text = dgv_NhanVien.CurrentRow.Cells["Id_employee"].Value.ToString();
                     if (int.Parse(dgv_NhanVien.CurrentRow.Cells["Id_role"].Value.ToString()) == 1)
                         cbVaiTro.Text = "Quản lý";
                     else
@@ -326,6 +363,21 @@ namespace RJCodeAdvance.ControlEmployees
         private void btLoad_Click(object sender, EventArgs e)
         {
             ShowData_GridViewNhanVien();
+        }
+
+        private void txtLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Nếu bạn muốn, bạn có thể cho phép nhập số thực với dấu chấm
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

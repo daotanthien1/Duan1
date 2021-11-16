@@ -116,16 +116,15 @@ namespace DTO_QuanLy
                 Salary = value;
             }
         }
-        public DTO_NhanVien(string email, int id_role, int gender, string address, string password, string dayofbrith, int id_employee, string name, float salary)
+        public DTO_NhanVien(int id_role, string name, int gender, string email, string address, string dayofbrith, float salary,int id_employee)
         {
-            this.Email = email;
             this.Id_role = id_role;
-            this.Gender = gender;
-            this.Address = address;
-            this.Password = password;
-            this.DayOfBirth = dayofbrith;
             this.Id_employee = id_employee;
             this.Name = name;
+            this.Gender = gender;
+            this.Email = email;
+            this.Address = address;
+            this.DayOfBirth = dayofbrith;
             this.Salary = salary;
         }
         public DTO_NhanVien(int id_role, string name, int gender, string email, string address, string dayofbrith, float salary)
@@ -138,6 +137,7 @@ namespace DTO_QuanLy
             this.DayOfBirth = dayofbrith;
             this.Salary = salary;
         }
+
         public DTO_NhanVien(int id_role)
         {
             this.ID_Role = id_role;

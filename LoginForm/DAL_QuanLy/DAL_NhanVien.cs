@@ -154,6 +154,7 @@ namespace DAL_QuanLy
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "UPDATE_DATA_TO_EMPLOYEE";
                 cmd.Parameters.AddWithValue("Id_role", nv.ID_Role);
+                cmd.Parameters.AddWithValue("@Id_employee", nv.id_employee);
                 cmd.Parameters.AddWithValue("Gender", nv.GenDer);
                 cmd.Parameters.AddWithValue("Email", nv.email);
                 cmd.Parameters.AddWithValue("Address", nv.address);
@@ -228,6 +229,43 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
-
+        public DataTable KiemTraTrungEmail()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "CHECK_EXIST_EMAIL";
+                DataTable dtEmail = new DataTable();
+                dtEmail.Load(cmd.ExecuteReader());
+                return dtEmail;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public DataTable KiemTraTrungEmailTheoID(string email,int id_employee)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "CHECK_EXIST_EMAIL_BY_ID";
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@id_employee", id_employee);
+                DataTable dtEmail = new DataTable();
+                dtEmail.Load(cmd.ExecuteReader());
+                return dtEmail;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }

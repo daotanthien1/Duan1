@@ -100,8 +100,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[UPDATE_DATA_TO_EMPLOYEE] 
+alter PROCEDURE [dbo].[UPDATE_DATA_TO_EMPLOYEE] 
 @Id_role int,
+@Id_employee int,
 @Name nvarchar(50),
 @Gender int,
 @Email varchar(50),
@@ -110,9 +111,9 @@ CREATE PROCEDURE [dbo].[UPDATE_DATA_TO_EMPLOYEE]
 @Salary float
 AS
 BEGIN
-		UPDATE Employees SET Id_role = Id_role,Address =  @Address, Gender = @Gender,
-												Email = @Email, DayOfBirth = @DayOfBirth,Salary = @Salary,Name = @Name
-												where Email = @Email
+		UPDATE Employees SET Id_role = @Id_role, Address =  @Address, Gender = @Gender,
+												  Email = @Email,DayOfBirth = @DayOfBirth,Salary = @Salary,Name = @Name
+												where Id_employee = @Id_employee
 END
 GO
 
@@ -130,7 +131,35 @@ BEGIN
 		where Email = @Email
 END
 GO
+/****** Object:  StoredProcedure [dbo].[CHECK_EXIST_EMAIL]    Script Date: 11/5/2021 1:37:21 PM ******/
 
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[CHECK_EXIST_EMAIL]
+AS
+BEGIN
+		SELECT Email from Employees
+END
+GO
+
+/****** Object:  StoredProcedure [dbo].[CHECK_EXIST_EMAIL_BY_ID]    Script Date: 11/5/2021 1:37:21 PM ******/
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[CHECK_EXIST_EMAIL_BY_ID]
+@email varchar(50),
+@id_employee int
+AS
+BEGIN
+		SELECT * from Employees where Email = @email and Id_employee = @id_employee
+END
+GO
 /****** Object:  StoredProcedure [dbo].[SEARCH_EMPLOYEE]    Script Date: 11/5/2021 1:39:53 PM ******/
 
 SET ANSI_NULLS ON
@@ -157,7 +186,7 @@ GO
 CREATE PROCEDURE [dbo].[GETNHANVIEN]
 AS
 BEGIN
-		Select Id_role,Name,Gender,Email,Address,DayOfBirth,Salary from Employees
+		Select Id_role,Name,Gender,Email,Address,DayOfBirth,Salary,Id_employee from Employees
 END
 GO
 
