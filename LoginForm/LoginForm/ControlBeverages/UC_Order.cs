@@ -35,6 +35,42 @@ namespace RJCodeAdvance.ControlBeverages
             nbDiem.Maximum = 999999;
         }
 
+        void TurnOffInputControl()
+        {
+            txbEmail.Enabled = false;
+            txbName.Enabled = false;
+            btnThem.Enabled = false;
+            btThanhToan.Enabled = false;
+            cbType.Enabled = false;
+            cbBeverage.Enabled = false;
+            nbSoLuong.Enabled = false;
+            cbChuyenBan.Enabled = false;
+            btChuyenBan.Enabled = false;
+            txbVoucher.Enabled = false;
+            btChuyenBan.Enabled = false;
+            rdNam.Enabled = false;
+            rdNu.Enabled = false;
+            btNhap.Enabled = false;
+        }
+
+        void TurnOnInputControl()
+        {
+            txbEmail.Enabled = true;
+            txbName.Enabled = true;
+            btnThem.Enabled = true;
+            btThanhToan.Enabled = true;
+            cbType.Enabled = true;
+            cbBeverage.Enabled = true;
+            nbSoLuong.Enabled = true;
+            cbChuyenBan.Enabled = true;
+            btChuyenBan.Enabled = true;
+            txbVoucher.Enabled = true;
+            btChuyenBan.Enabled = true;
+            rdNam.Enabled = true;
+            rdNu.Enabled = true;
+            btNhap.Enabled = true;
+        }
+
         void loadBeverageType()
         {
             List<DTO_TypesOfBeverage> listType = bus_beverageType.listBeverageType();
@@ -112,6 +148,7 @@ namespace RJCodeAdvance.ControlBeverages
 
         private void Btn_Click(object sender, EventArgs e)
         {
+            TurnOnInputControl();
             int tableId = ((sender as Guna2Button).Tag as DTO_tables).Id;
             ShowBill(tableId);
             dgv.Tag = (sender as Guna2Button).Tag;
@@ -145,18 +182,9 @@ namespace RJCodeAdvance.ControlBeverages
         private void UC_Order_Load(object sender, EventArgs e)
         {
             LoadTable();
+            TurnOffInputControl();
         }
 
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int id = 0;
-            Guna2ComboBox cb = sender as Guna2ComboBox;
-            if (cb.SelectedItem == null)
-                return;
-            DTO_TypesOfBeverage selected = cb.SelectedItem as DTO_TypesOfBeverage;
-            id = selected.ID_Type;
-            loadBeverage(id);
-        }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -198,7 +226,6 @@ namespace RJCodeAdvance.ControlBeverages
             DTO_tables table = dgv.Tag as DTO_tables;
 
             int idBill = bus_bill.GetUncheckBill(table.Id);
-            int idcustomer = bus_customer.getIdCustomer(txbEmail.Text);
 
             // them khach hang
             if (!String.IsNullOrEmpty(txbEmail.Text))
@@ -210,6 +237,8 @@ namespace RJCodeAdvance.ControlBeverages
                 }
                 else
                 {
+                    int idcustomer = bus_customer.getIdCustomer(txbEmail.Text);
+
                     if (idcustomer == 0)
                     {
                         string gender = "Nam";
@@ -223,7 +252,7 @@ namespace RJCodeAdvance.ControlBeverages
                     if(idBill != -1)
                     {
                         bus_bill.addCustomer(idcustomer, idBill);
-                        long point = bus_bill.getTotalPriceBill(idBill);
+                        double point = bus_bill.getTotalPriceBill(idBill);
                         point /= 1000;
                         bus_customer.ChangeReward(idcustomer, (int)point);
 
@@ -236,16 +265,21 @@ namespace RJCodeAdvance.ControlBeverages
                             if (reward >= rewardRequest)
                             {
                                 BUS_Vouchers bus_voucher = new BUS_Vouchers();
-                                string ma_voucher = bus_voucher.getVoucherSendMail(id_voucherType);
-                                if(ma_voucher!=null)
+                                DTO_Vouchers voucher = bus_voucher.getVoucherSendMail(id_voucherType);
+                                if(voucher !=null)
                                 {
                                     string subject = "Bạn đã nhận được voucher khuyến mãi " + Name_voucherType + "% của shop META <3";
-                                    string body = $"Vocher:{ma_voucher}";
+                                    string body = $"Mã voucher của bạn là:{voucher.id_vouchers} dùng đến ngày {voucher.dayend}";
                                     if (BUS_SendGmail.SendMail(txbEmail.Text, subject, body))
                                     {
-                                        bus_voucher.UpdateVoucherForSend(ma_voucher);
+                                        bus_voucher.UpdateVoucherForSend(voucher.id_vouchers);
                                         bus_customer.ChangeReward(idcustomer, -rewardRequest);
                                     }
+                                }
+                                else
+                                {
+                                    MessageBox.Show("đã hết voucher");
+                                    Properties.Settings.Default.TurnOnSale = false;
                                 }
                             }
                         }
@@ -307,6 +341,17 @@ namespace RJCodeAdvance.ControlBeverages
             rdNam.Enabled = true;
             rdNu.Enabled = true;
             txbName.Enabled = true;
+        }
+
+        private void beverageType_selectIndexChange(object sender, EventArgs e)
+        {
+            int id = 0;
+            Guna2ComboBox cb = sender as Guna2ComboBox;
+            if (cb.SelectedItem == null)
+                return;
+            DTO_TypesOfBeverage selected = cb.SelectedItem as DTO_TypesOfBeverage;
+            id = selected.ID_Type;
+            loadBeverage(id);
         }
     }
 }

@@ -39,7 +39,7 @@ namespace BUS_QuanLy
         }
 
 
-        public long getTotalPriceBill(int idBill)
+        public double getTotalPriceBill(int idBill)
         {
             return dal_bill.getTotalPriceBill(idBill);
         }

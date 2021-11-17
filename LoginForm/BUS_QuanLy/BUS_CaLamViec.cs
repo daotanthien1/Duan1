@@ -28,7 +28,7 @@ namespace BUS_QuanLy
         {
             return shifts.UpdateShifts(Shifts);
         }
-        public DataTable SearchShift(int id)
+        public DataTable SearchShift(string id)
         {
             return shifts.SearchShift(id);
         }

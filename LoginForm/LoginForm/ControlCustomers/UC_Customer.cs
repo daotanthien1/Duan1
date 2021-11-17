@@ -17,6 +17,7 @@ namespace RJCodeAdvance.ControlCustomers
         public UC_Customer()
         {
             InitializeComponent();
+            nbDiemTT.Maximum = 999999;
         }
 
         private void guna2RadioButton1_CheckedChanged(object sender, EventArgs e)
@@ -79,22 +80,22 @@ namespace RJCodeAdvance.ControlCustomers
         //datagridview click
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             if (dgv.Rows.Count > 0)
             {
                 txtName.Enabled = true;
-                txbEmail.Enabled = true;
+                txbEmail.Enabled = false;
                 btSua.Enabled = true;
                 txtName.Text = dgv.CurrentRow.Cells[0].Value.ToString();
                 txbEmail.Text = dgv.CurrentRow.Cells[1].Value.ToString();
                 id = dgv.CurrentRow.Cells[3].Value.ToString();
-                nbDiemTT.Value = int.Parse(dgv.CurrentRow.Cells[4].Value.ToString());
+                nbDiemTT.Text = dgv.CurrentRow.Cells[4].Value.ToString();
                 gender = dgv.CurrentRow.Cells[2].Value.ToString();
-                if(gender == "Nam")
+                if (gender == "Nam")
                 {
                     rdNam.Checked = true;
                 }
-                if(gender == "Nữ")
+                if (gender == "Nữ")
                 {
                     rdNu.Checked = true;
                 }
@@ -103,22 +104,42 @@ namespace RJCodeAdvance.ControlCustomers
         // sửa
         private void btSua_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn sửa khách hàng " ,"Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (rdNam.Checked)
             {
-                DTO_Customer Customers = new DTO_Customer(txtName.Text, txbEmail.Text, gender, int.Parse(nbDiemTT.Value.ToString()), int.Parse(id));
-                if (customer.UpdateCustomer(Customers))
-                {
-                    MessageBox.Show("Update thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    loadData();
-                }
-                else
-                {
-                    MessageBox.Show("Email khách hàng đã tồn tại\n"+txbEmail.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                gender = "Nam";
+            }
+            if (rdNu.Checked)
+            {
+                gender = "Nữ";
+            }
+            if (txtName.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên khách hàng", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                if (MessageBox.Show("Bạn chắc chắn muốn sửa khách hàng ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    DTO_Customer Customers = new DTO_Customer(txtName.Text, txbEmail.Text, gender, int.Parse(nbDiemTT.Value.ToString()), int.Parse(id));
+                    if (customer.UpdateCustomer(Customers))
+                    {
+                        MessageBox.Show("Update thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        loadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("ERROR", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                }
             }
+        }
+
+        private void btDanhSach_Click(object sender, EventArgs e)
+        {
+            loadData();
         }
     }
 }

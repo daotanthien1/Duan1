@@ -44,13 +44,13 @@ namespace BUS_QuanLy
         {
             return vouchers.getEmailSendVoucher(reward);
         }
-        public string getVoucherSendMail(int voucher)
+        public DTO_Vouchers getVoucherSendMail(int voucher)
         {
             DataTable table = vouchers.getVoucherSendMail(voucher);
             if(table.Rows.Count > 0)
             {
                 DTO_Vouchers vou = new DTO_Vouchers(table.Rows[0]);
-                return vou.id_vouchers;
+                return vou;
             }
             return null;
         }

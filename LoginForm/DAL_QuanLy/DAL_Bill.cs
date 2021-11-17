@@ -57,7 +57,7 @@ namespace DAL_QuanLy
             return false;
         }
 
-        public long  getTotalPriceBill(int idBill)
+        public double  getTotalPriceBill(int idBill)
         {
             try
             {
@@ -67,7 +67,7 @@ namespace DAL_QuanLy
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "getTotalPriceBill";
                 cmd.Parameters.AddWithValue("idBill", idBill);
-                return Convert.ToInt32(cmd.ExecuteScalar());
+                return Convert.ToDouble(cmd.ExecuteScalar());
             }
             finally
             {

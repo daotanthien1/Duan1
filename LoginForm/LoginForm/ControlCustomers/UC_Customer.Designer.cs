@@ -410,6 +410,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.btDanhSach.TabIndex = 148;
             this.btDanhSach.Text = "Danh Sách";
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
+            this.btDanhSach.Click += new System.EventHandler(this.btDanhSach_Click);
             // 
             // UC_Customer
             // 

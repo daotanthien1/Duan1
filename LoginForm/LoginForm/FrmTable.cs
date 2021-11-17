@@ -129,7 +129,7 @@ namespace RJCodeAdvance
                 }
                 btSua.Enabled = true;
                 btXoa.Enabled = true;
-                txtName.Enabled = true;
+                txtName.Enabled = false;
             }
         }
         // sửa

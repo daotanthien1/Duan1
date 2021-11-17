@@ -47,6 +47,8 @@ namespace RJCodeAdvance.ControlVouchers
         {
             loadData();
             guna2DataGridView1.DataSource = vouchers.getData();
+            guna2DataGridView1.Columns[4].Visible = false;
+
         }
         // load data
         void loadData()
@@ -74,14 +76,14 @@ namespace RJCodeAdvance.ControlVouchers
                 guna2Button5.Enabled = false;
                 dayStart.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
                 dayEnd.Text = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString();
-                cbSale.Text = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
+                cbSale.SelectedValue = guna2DataGridView1.CurrentRow.Cells[5].Value.ToString();
                 string status = guna2DataGridView1.CurrentRow.Cells[4].Value.ToString();
                 id = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
                 int value = int.Parse(cbSale.SelectedValue.ToString());
                 DataTable counts = vouchers.getCountSaleVoucher(value);
                 txtSoLuong.Text = counts.Rows[0][0].ToString();
                 txtThem.ResetText();
-                if(int.Parse(status) == 0)
+                if(int.Parse(status) == 1)
                 {
                     rdDung.Checked = true;
                 }
