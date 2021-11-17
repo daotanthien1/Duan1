@@ -60,7 +60,7 @@ namespace RJCodeAdvance
             // 
             // txtEmail
             // 
-            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtEmail.BorderColor = System.Drawing.Color.BlueViolet;
             this.txtEmail.BorderRadius = 16;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.DefaultText = "";
@@ -86,7 +86,7 @@ namespace RJCodeAdvance
             // 
             // txtNhapLaiMatKhau
             // 
-            this.txtNhapLaiMatKhau.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtNhapLaiMatKhau.BorderColor = System.Drawing.Color.BlueViolet;
             this.txtNhapLaiMatKhau.BorderRadius = 16;
             this.txtNhapLaiMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNhapLaiMatKhau.DefaultText = "";
@@ -112,7 +112,7 @@ namespace RJCodeAdvance
             // 
             // txtMatKhauCu
             // 
-            this.txtMatKhauCu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtMatKhauCu.BorderColor = System.Drawing.Color.BlueViolet;
             this.txtMatKhauCu.BorderRadius = 16;
             this.txtMatKhauCu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMatKhauCu.DefaultText = "";
@@ -223,7 +223,7 @@ namespace RJCodeAdvance
             // 
             // txtMatKhauMoi
             // 
-            this.txtMatKhauMoi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtMatKhauMoi.BorderColor = System.Drawing.Color.BlueViolet;
             this.txtMatKhauMoi.BorderRadius = 16;
             this.txtMatKhauMoi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMatKhauMoi.DefaultText = "";

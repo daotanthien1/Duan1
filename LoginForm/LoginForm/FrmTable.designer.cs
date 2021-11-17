@@ -105,6 +105,7 @@ namespace RJCodeAdvance
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.Location = new System.Drawing.Point(232, 382);
+            this.txtSearch.MaxLength = 50;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập tên bàn cần tìm";
@@ -132,6 +133,7 @@ namespace RJCodeAdvance
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.Location = new System.Drawing.Point(21, 88);
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "nhập tên bàn";
@@ -433,7 +435,7 @@ namespace RJCodeAdvance
             // btDanhSacch
             // 
             this.btDanhSacch.Animated = true;
-            this.btDanhSacch.BorderColor = System.Drawing.Color.White;
+            this.btDanhSacch.BorderColor = System.Drawing.Color.BlueViolet;
             this.btDanhSacch.BorderRadius = 6;
             this.btDanhSacch.BorderThickness = 1;
             this.btDanhSacch.CheckedState.Parent = this.btDanhSacch;

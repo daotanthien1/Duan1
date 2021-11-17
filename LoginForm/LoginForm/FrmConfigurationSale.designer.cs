@@ -188,12 +188,13 @@ namespace RJCodeAdvance
             // nbDiemYeuCau
             // 
             this.nbDiemYeuCau.BackColor = System.Drawing.Color.Transparent;
-            this.nbDiemYeuCau.BorderRadius = 16;
+            this.nbDiemYeuCau.BorderColor = System.Drawing.Color.BlueViolet;
+            this.nbDiemYeuCau.BorderRadius = 6;
             this.nbDiemYeuCau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nbDiemYeuCau.DisabledState.Parent = this.nbDiemYeuCau;
             this.nbDiemYeuCau.FocusedState.Parent = this.nbDiemYeuCau;
             this.nbDiemYeuCau.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nbDiemYeuCau.ForeColor = System.Drawing.Color.Black;
+            this.nbDiemYeuCau.ForeColor = System.Drawing.Color.BlueViolet;
             this.nbDiemYeuCau.Location = new System.Drawing.Point(165, 120);
             this.nbDiemYeuCau.Name = "nbDiemYeuCau";
             this.nbDiemYeuCau.ShadowDecoration.Parent = this.nbDiemYeuCau;

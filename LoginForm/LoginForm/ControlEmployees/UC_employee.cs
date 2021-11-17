@@ -48,11 +48,11 @@ namespace RJCodeAdvance.ControlEmployees
         private void btThem_Click_1(object sender, EventArgs e)
         {
             txtTenNhanVien.Text = null;
-            txtLuong.Text = null;
+            nbLuong.Text = null;
             txtDiaChi.Text = null;
             txtEmail.Text = null;
             txtEmail.Enabled = true;
-            txtLuong.Enabled = true;
+            nbLuong.Enabled = true;
             txtTenNhanVien.Enabled = true;
             txtDiaChi.Enabled = true;
             cbVaiTro.Enabled = true;
@@ -108,10 +108,10 @@ namespace RJCodeAdvance.ControlEmployees
                 txtDiaChi.Focus();
                 return;
             }
-            else if (txtLuong.Text.Trim().Length == 0)
+            else if (nbLuong.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập lương nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtLuong.Focus();
+                nbLuong.Focus();
                 return;
             }
 
@@ -127,7 +127,7 @@ namespace RJCodeAdvance.ControlEmployees
                 txtTenNhanVien.Focus();
                 return;
             }
-            if (int.Parse(txtLuong.Text) >= 100000000)
+            if (int.Parse(nbLuong.Text) >= 100000000)
             {
                 MessageBox.Show("Lương quá lớn chỉ được (< 10000000)", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtTenNhanVien.Focus();
@@ -135,7 +135,7 @@ namespace RJCodeAdvance.ControlEmployees
             }
             else
             {
-                DTO_NhanVien nv = new DTO_NhanVien(vaitro, txtTenNhanVien.Text, gioitinh, txtEmail.Text, txtDiaChi.Text, dtNgaySinh.Value.ToString(), float.Parse(txtLuong.Text));
+                DTO_NhanVien nv = new DTO_NhanVien(vaitro, txtTenNhanVien.Text, gioitinh, txtEmail.Text, txtDiaChi.Text, dtNgaySinh.Value.ToString(), float.Parse(nbLuong.Text));
                 if (busNV.InsertNhanVien(nv))
                 {
                     ResetValue();
@@ -206,15 +206,15 @@ namespace RJCodeAdvance.ControlEmployees
                 txtDiaChi.Focus();
                 return;
             }
-            else if (txtLuong.Text.Trim().Length == 0)
+            else if (nbLuong.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập lương nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtLuong.Focus();
+                nbLuong.Focus();
                 return;
             }
             else
             {
-                DTO_NhanVien nv = new DTO_NhanVien(vaitro, txtTenNhanVien.Text, gioitinh, txtEmail.Text, txtDiaChi.Text, dtNgaySinh.Value.ToString(), float.Parse(txtLuong.Text),int.Parse(Id_emloyee.Text));
+                DTO_NhanVien nv = new DTO_NhanVien(vaitro, txtTenNhanVien.Text, gioitinh, txtEmail.Text, txtDiaChi.Text, dtNgaySinh.Value.ToString(), float.Parse(nbLuong.Text),int.Parse(Id_emloyee.Text));
                 if (busNV.UpdateNhanVien(nv))
                 {
                     ResetValue();
@@ -231,11 +231,11 @@ namespace RJCodeAdvance.ControlEmployees
         {
             txtTimKiem.Text = "Nhập tên nhân viên cần tìm";
             txtTenNhanVien.Text = null;
-            txtLuong.Text = null;
+            nbLuong.Text = null;
             txtDiaChi.Text = null;
             txtEmail.Text = null;
             txtEmail.Enabled = false;
-            txtLuong.Enabled = false;
+            nbLuong.Enabled = false;
             txtTenNhanVien.Enabled = false;
             txtDiaChi.Enabled = false;
             cbVaiTro.Enabled = false;
@@ -294,7 +294,7 @@ namespace RJCodeAdvance.ControlEmployees
                     btnXoa.Enabled = true;
                     btnSua.Enabled = true;
                     txtEmail.Enabled = true;
-                    txtLuong.Enabled = true;
+                    nbLuong.Enabled = true;
                     txtTenNhanVien.Enabled = true;
                     txtDiaChi.Enabled = true;
                     cbVaiTro.Enabled = true;
@@ -305,7 +305,7 @@ namespace RJCodeAdvance.ControlEmployees
                     txtEmail.Text = dgv_NhanVien.CurrentRow.Cells["Email"].Value.ToString();
                     txtTenNhanVien.Text = dgv_NhanVien.CurrentRow.Cells["Name"].Value.ToString();
                     txtDiaChi.Text = dgv_NhanVien.CurrentRow.Cells["Address"].Value.ToString();
-                    txtLuong.Text = dgv_NhanVien.CurrentRow.Cells["Salary"].Value.ToString();
+                    nbLuong.Text = dgv_NhanVien.CurrentRow.Cells["Salary"].Value.ToString();
                     dtNgaySinh.Text = dgv_NhanVien.CurrentRow.Cells["DayOfBirth"].Value.ToString();
                     Id_emloyee.Text = dgv_NhanVien.CurrentRow.Cells["Id_employee"].Value.ToString();
                     if (int.Parse(dgv_NhanVien.CurrentRow.Cells["Id_role"].Value.ToString()) == 1)
@@ -354,7 +354,7 @@ namespace RJCodeAdvance.ControlEmployees
             ShowData_GridViewNhanVien();
         }
 
-        private void txtLuong_KeyPress(object sender, KeyPressEventArgs e)
+        private void nbLuong_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Xác thực rằng phím vừa nhấn không phải CTRL hoặc không phải dạng số
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))

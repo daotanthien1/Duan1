@@ -230,62 +230,54 @@ namespace RJCodeAdvance.ControlBeverages
             // them khach hang
             if (!String.IsNullOrEmpty(txbEmail.Text))
             {
-                if (String.IsNullOrEmpty(txbName.Text))
+                int idcustomer = bus_customer.getIdCustomer(txbEmail.Text);
+
+                if (idcustomer == 0)
                 {
-                    MessageBox.Show("Chưa nhập đủ thông tin");
-                    return;
+                    string gender = "Nam";
+                    if (rdNu.Checked)
+                        gender = "Nữ";
+                    DTO_Customer cus = new DTO_Customer(txbName.Text, txbEmail.Text, gender);
+                    bus_customer.CreateCustomer(cus);
+                    idcustomer = bus_customer.getMaxIdCustomer();
                 }
-                else
+
+                if(idBill != -1)
                 {
-                    int idcustomer = bus_customer.getIdCustomer(txbEmail.Text);
+                    bus_bill.addCustomer(idcustomer, idBill);
+                    double point = bus_bill.getTotalPriceBill(idBill);
+                    point /= 1000;
+                    bus_customer.ChangeReward(idcustomer, (int)point);
 
-                    if (idcustomer == 0)
+                    if(Properties.Settings.Default.TurnOnSale)
                     {
-                        string gender = "Nam";
-                        if (rdNu.Checked)
-                            gender = "Nữ";
-                        DTO_Customer cus = new DTO_Customer(txbName.Text, txbEmail.Text, gender);
-                        bus_customer.CreateCustomer(cus);
-                        idcustomer = bus_customer.getMaxIdCustomer();
-                    }
-
-                    if(idBill != -1)
-                    {
-                        bus_bill.addCustomer(idcustomer, idBill);
-                        double point = bus_bill.getTotalPriceBill(idBill);
-                        point /= 1000;
-                        bus_customer.ChangeReward(idcustomer, (int)point);
-
-                        if(Properties.Settings.Default.TurnOnSale)
+                        int reward = bus_customer.getRewardCustomer(idcustomer);
+                        int rewardRequest = Properties.Settings.Default.rewards;
+                        int id_voucherType = Properties.Settings.Default.voucherType;
+                        int Name_voucherType = Properties.Settings.Default.voucheTypeName;
+                        if (reward >= rewardRequest)
                         {
-                            int reward = bus_customer.getRewardCustomer(idcustomer);
-                            int rewardRequest = Properties.Settings.Default.rewards;
-                            int id_voucherType = Properties.Settings.Default.voucherType;
-                            int Name_voucherType = Properties.Settings.Default.voucheTypeName;
-                            if (reward >= rewardRequest)
+                            BUS_Vouchers bus_voucher = new BUS_Vouchers();
+                            DTO_Vouchers voucher = bus_voucher.getVoucherSendMail(id_voucherType);
+                            if(voucher !=null)
                             {
-                                BUS_Vouchers bus_voucher = new BUS_Vouchers();
-                                DTO_Vouchers voucher = bus_voucher.getVoucherSendMail(id_voucherType);
-                                if(voucher !=null)
+                                string subject = "Bạn đã nhận được voucher khuyến mãi " + Name_voucherType + "% của shop META <3";
+                                string body = $"Mã voucher của bạn là:{voucher.id_vouchers} dùng đến ngày {voucher.dayend}";
+                                if (BUS_SendGmail.SendMail(txbEmail.Text, subject, body))
                                 {
-                                    string subject = "Bạn đã nhận được voucher khuyến mãi " + Name_voucherType + "% của shop META <3";
-                                    string body = $"Mã voucher của bạn là:{voucher.id_vouchers} dùng đến ngày {voucher.dayend}";
-                                    if (BUS_SendGmail.SendMail(txbEmail.Text, subject, body))
-                                    {
-                                        bus_voucher.UpdateVoucherForSend(voucher.id_vouchers);
-                                        bus_customer.ChangeReward(idcustomer, -rewardRequest);
-                                    }
-                                }
-                                else
-                                {
-                                    MessageBox.Show("đã hết voucher");
-                                    Properties.Settings.Default.TurnOnSale = false;
+                                    bus_voucher.UpdateVoucherForSend(voucher.id_vouchers);
+                                    bus_customer.ChangeReward(idcustomer, -rewardRequest);
                                 }
                             }
+                            else
+                            {
+                                MessageBox.Show("đã hết voucher");
+                                Properties.Settings.Default.TurnOnSale = false;
+                            }
                         }
-                        txbEmail.Text = "";
-                        resetControlCustomer();
                     }
+                    txbEmail.Text = "";
+                    resetControlCustomer();
                 }
             }
 

@@ -141,6 +141,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
             this.guna2TextBox3.Location = new System.Drawing.Point(366, 520);
+            this.guna2TextBox3.MaxLength = 50;
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderText = "Nhập tên nhân viên cần tìm";
@@ -456,7 +457,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.cbLoaiNguyenLieu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLoaiNguyenLieu.FocusedState.Parent = this.cbLoaiNguyenLieu;
             this.cbLoaiNguyenLieu.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbLoaiNguyenLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbLoaiNguyenLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.cbLoaiNguyenLieu.HoverState.Parent = this.cbLoaiNguyenLieu;
             this.cbLoaiNguyenLieu.ItemHeight = 30;
             this.cbLoaiNguyenLieu.ItemsAppearance.Parent = this.cbLoaiNguyenLieu;
@@ -478,7 +479,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.cbName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbName.FocusedState.Parent = this.cbName;
             this.cbName.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.cbName.HoverState.Parent = this.cbName;
             this.cbName.ItemHeight = 30;
             this.cbName.ItemsAppearance.Parent = this.cbName;
@@ -531,13 +532,19 @@ namespace RJCodeAdvance.ControlIngredient
             // nbSoLuong
             // 
             this.nbSoLuong.BackColor = System.Drawing.Color.Transparent;
-            this.nbSoLuong.BorderRadius = 3;
+            this.nbSoLuong.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.nbSoLuong.BorderRadius = 6;
             this.nbSoLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nbSoLuong.DisabledState.Parent = this.nbSoLuong;
             this.nbSoLuong.FocusedState.Parent = this.nbSoLuong;
             this.nbSoLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nbSoLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.nbSoLuong.Location = new System.Drawing.Point(636, 42);
+            this.nbSoLuong.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.nbSoLuong.Name = "nbSoLuong";
             this.nbSoLuong.ShadowDecoration.Parent = this.nbSoLuong;
             this.nbSoLuong.Size = new System.Drawing.Size(99, 36);
