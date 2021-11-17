@@ -214,17 +214,6 @@ namespace RJCodeAdvance.ControlEmployees
             }
             else
             {
-                DataTable dt = busNV.KiemTraTrungEmailTheoID(txtEmail.Text,int.Parse(Id_emloyee.Text));
-                for (int i = 0; i < dt.Rows.Count; i++) // Mở vòng lặp để lấy từng phần tử trong CSDL
-                {
-                    if (txtEmail.Text == dt.Rows[i]["Email"].ToString()) // Kiểm tra trùng lặp dữ liệu
-                    {
-                        MessageBox.Show("Email này đã có rồi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtEmail.Focus();
-                        return;
-                    }
-                }
-
                 DTO_NhanVien nv = new DTO_NhanVien(vaitro, txtTenNhanVien.Text, gioitinh, txtEmail.Text, txtDiaChi.Text, dtNgaySinh.Value.ToString(), float.Parse(txtLuong.Text),int.Parse(Id_emloyee.Text));
                 if (busNV.UpdateNhanVien(nv))
                 {

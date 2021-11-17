@@ -37,3 +37,30 @@ BEGIN
 		where Id_role = @id_role 
 END
 GO
+
+/****** Object:  StoredProcedure [dbo].[UPDATE_DATA_TO_EMPLOYEE]    Script Date: 11/5/2021 1:39:53 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+alter PROCEDURE [dbo].[UPDATE_DATA_TO_EMPLOYEE] 
+@Id_role int,
+@Id_employee int,
+@Name nvarchar(50),
+@Gender int,
+@Email varchar(50),
+@Address nvarchar(50),
+@DayOfBirth date,
+@Salary float
+AS
+BEGIN
+		IF EXISTS(select * from  Employees where Email = @Email)
+		UPDATE Employees SET Id_role = @Id_role, Address =  @Address, Gender = @Gender,
+												  Email = @Email,DayOfBirth = @DayOfBirth,Salary = @Salary,Name = @Name
+		ELSE
+		UPDATE Employees SET Id_role = @Id_role, Address =  @Address, Gender = @Gender,
+												  Email = @Email,DayOfBirth = @DayOfBirth,Salary = @Salary,Name = @Name
+												where Id_employee = @Id_employee
+END
+GO
