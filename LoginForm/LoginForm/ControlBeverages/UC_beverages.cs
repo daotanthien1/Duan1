@@ -150,9 +150,14 @@ namespace RJCodeAdvance.ControlBeverages
                 {
 
                     DTO_QuanLyDoUong dtoBe = new DTO_QuanLyDoUong(txtTenDoUong.Text,
-                        float.Parse(nbGia.Text), Convert.ToInt32(cbDoUong.SelectedValue), "Images" + fileName);
+                        float.Parse(nbGia.Text), Convert.ToInt32(cbDoUong.SelectedValue), "Images\\" + fileName);
                     if (busBe.InsertDoUong(dtoBe))
                     {
+                        string path = @"Images";
+                        if (!Directory.Exists(path))
+                        {
+                            Directory.CreateDirectory(path);
+                        }
                         if (txtHinh.Text != checkUrlImage)
                         {
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
