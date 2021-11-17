@@ -190,6 +190,11 @@ namespace RJCodeAdvance.ControlBeverages
                         Convert.ToInt32(dgvBeverage.CurrentRow.Cells["Id_beverage"].Value.ToString()), "Images\\" + fileName);
                     if (busBe.UpdateDoUong(dtoBe))
                     {
+						string path = @"Images";
+                        if (!Directory.Exists(path))
+                        {
+                            Directory.CreateDirectory(path);
+                        }
                         if (txtHinh.Text != checkUrlImage)
                         {
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
