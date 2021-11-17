@@ -148,7 +148,7 @@ namespace RJCodeAdvance.ControlBeverages
             {
                 if (checkTextBox())
                 {
-                    fileName = txtHinh.Text;
+
                     DTO_QuanLyDoUong dtoBe = new DTO_QuanLyDoUong(txtTenDoUong.Text,
                         float.Parse(txtGia.Text), Convert.ToInt32(cbDoUong.SelectedValue), "Images" + fileName);
                     if (busBe.InsertDoUong(dtoBe))
