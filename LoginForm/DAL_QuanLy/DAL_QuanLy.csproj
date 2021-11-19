@@ -57,6 +57,7 @@
     <Compile Include="DAL_NhanVien.cs" />
     <Compile Include="DAL_QuanLyDoUong.cs" />
     <Compile Include="DAL_Role.cs" />
+    <Compile Include="DAL_Static.cs" />
     <Compile Include="DAL_tables.cs" />
     <Compile Include="DAL_TypesOfBeverage.cs" />
     <Compile Include="DAL_units.cs" />
