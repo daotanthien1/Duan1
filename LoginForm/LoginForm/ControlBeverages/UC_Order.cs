@@ -33,11 +33,18 @@ namespace RJCodeAdvance.ControlBeverages
             InitializeComponent();
             loadBeverageType();
             loadCbTable(cbChuyenBan);
+            suggestEmail();
             nbSoLuong.Maximum = 99;
             nbSoLuong.Minimum = -99;
             nbDiem.Maximum = 999999;
         }
 
+        void suggestEmail()
+        {
+            txbEmail.AutoCompleteMode = AutoCompleteMode.Append;
+            txbEmail.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txbEmail.AutoCompleteCustomSource = bus_customer.autoEmail();
+        }
         void TurnOffInputControl()
         {
             txbEmail.Enabled = false;

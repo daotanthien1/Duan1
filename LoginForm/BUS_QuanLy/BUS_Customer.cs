@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS_QuanLy
 {
@@ -13,6 +14,10 @@ namespace BUS_QuanLy
     {
         DAL_Customer Customer = new DAL_Customer();
 
+        public AutoCompleteStringCollection autoEmail()
+        {
+            return Customer.autoEmail();
+        }
         public DTO_Customer FindCustomerByEmail(string email)
         {
             DataTable data = Customer.FindCustomerByEmail(email);

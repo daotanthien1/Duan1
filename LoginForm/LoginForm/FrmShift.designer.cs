@@ -88,7 +88,7 @@ namespace RJCodeAdvance
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(29, 198);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(29, 274);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -279,7 +279,7 @@ namespace RJCodeAdvance
             this.txtNhaptenCa.ForeColor = System.Drawing.Color.BlueViolet;
             this.txtNhaptenCa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhaptenCa.HoverState.Parent = this.txtNhaptenCa;
-            this.txtNhaptenCa.Location = new System.Drawing.Point(240, 381);
+            this.txtNhaptenCa.Location = new System.Drawing.Point(162, 232);
             this.txtNhaptenCa.Name = "txtNhaptenCa";
             this.txtNhaptenCa.PasswordChar = '\0';
             this.txtNhaptenCa.PlaceholderText = "Nhập tên ca cần tìm";
@@ -307,7 +307,7 @@ namespace RJCodeAdvance
             this.guna2Button6.HoverState.Parent = this.guna2Button6;
             this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button6.Location = new System.Drawing.Point(629, 445);
+            this.guna2Button6.Location = new System.Drawing.Point(638, 445);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
             this.guna2Button6.Size = new System.Drawing.Size(128, 45);
@@ -332,7 +332,7 @@ namespace RJCodeAdvance
             this.btLuu2.HoverState.Parent = this.btLuu2;
             this.btLuu2.Image = ((System.Drawing.Image)(resources.GetObject("btLuu2.Image")));
             this.btLuu2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLuu2.Location = new System.Drawing.Point(489, 445);
+            this.btLuu2.Location = new System.Drawing.Point(498, 445);
             this.btLuu2.Name = "btLuu2";
             this.btLuu2.ShadowDecoration.Parent = this.btLuu2;
             this.btLuu2.Size = new System.Drawing.Size(128, 45);
@@ -358,7 +358,7 @@ namespace RJCodeAdvance
             this.btSua2.HoverState.Parent = this.btSua2;
             this.btSua2.Image = ((System.Drawing.Image)(resources.GetObject("btSua2.Image")));
             this.btSua2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua2.Location = new System.Drawing.Point(348, 445);
+            this.btSua2.Location = new System.Drawing.Point(357, 445);
             this.btSua2.Name = "btSua2";
             this.btSua2.ShadowDecoration.Parent = this.btSua2;
             this.btSua2.Size = new System.Drawing.Size(128, 45);
@@ -384,7 +384,7 @@ namespace RJCodeAdvance
             this.btXoa2.HoverState.Parent = this.btXoa2;
             this.btXoa2.Image = ((System.Drawing.Image)(resources.GetObject("btXoa2.Image")));
             this.btXoa2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btXoa2.Location = new System.Drawing.Point(208, 445);
+            this.btXoa2.Location = new System.Drawing.Point(217, 445);
             this.btXoa2.Name = "btXoa2";
             this.btXoa2.ShadowDecoration.Parent = this.btXoa2;
             this.btXoa2.Size = new System.Drawing.Size(128, 45);
@@ -411,7 +411,7 @@ namespace RJCodeAdvance
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(68, 445);
+            this.btThem.Location = new System.Drawing.Point(77, 445);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(128, 45);
@@ -438,7 +438,7 @@ namespace RJCodeAdvance
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(474, 381);
+            this.btTimKiem.Location = new System.Drawing.Point(29, 232);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
             this.btTimKiem.Size = new System.Drawing.Size(127, 36);
@@ -472,7 +472,7 @@ namespace RJCodeAdvance
             this.btDanhSacch.HoverState.Parent = this.btDanhSacch;
             this.btDanhSacch.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSacch.Image")));
             this.btDanhSacch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btDanhSacch.Location = new System.Drawing.Point(100, 381);
+            this.btDanhSacch.Location = new System.Drawing.Point(696, 232);
             this.btDanhSacch.Name = "btDanhSacch";
             this.btDanhSacch.ShadowDecoration.Parent = this.btDanhSacch;
             this.btDanhSacch.Size = new System.Drawing.Size(134, 36);

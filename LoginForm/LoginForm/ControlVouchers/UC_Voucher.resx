@@ -121,6 +121,18 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btTimKiem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAWNJREFUSEvt
+        k08rRFEYh2WHxEjKR7CRhQ+hYTMLSwspimRlZyEpFj6GpQ+ADWGpfAKaREqpKX83HM857+/OuWbmzozc
+        hcU89dSc3/ue99w/c7s6tI1zrog3+FeusaixEcJyKOdDWWMjhJ9WyweNjZB1DviBxkbIvqyUDxobIft3
+        B9ziOo5hQU7iFj5qbITwNwfsY5+21kGtXz8jYVt7HGC39kzhBb7jG57jdBhYC4V2eMBB9W9j1l3vhKFp
+        VGjFhnr9lfvhz7iIA+jfwTK+oqcUBicobMWEek9t6ebD5hRka1ZyJ4oMgjvLm9Kr3hdb2uNKQzZsJVdR
+        ZBDM4H0oZdOj3mYHDFnJPSlqjJoSdhUHWPt/i2dVURWyBSvVPKJa1OTZVFSFbNZK7gNXcARHcQn9i/fM
+        qb0xaqobnkBtz1oyucSC2uuhmDk8gZ4SnqH/0Cp4hP7urtBzrNZ8YbD/Lg6dc+PfWh48cjhv/wMAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
   <data name="guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAQtJREFUSEvd
@@ -318,18 +330,6 @@
         5mWYPbnceAZ7WXwFVU23jBdVHQxObeZH1SovmKjqYHBjMz+qVnnBSlUHg4nN8ij2oto5P4odDP7aLI9i
         L6qdkyh2MLi2mR9VfYueUviJgm9y8N/0CT+z+D4WWHwmEYQ7Ko5QGGTVerxpGT+Uwh7XRyiHuXBOYaK5
         Ms3f9YFL/JPmeYxdrHdlPghRdAC2hsv5Hjp7WgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btTimKiem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAWNJREFUSEvt
-        k08rRFEYh2WHxEjKR7CRhQ+hYTMLSwspimRlZyEpFj6GpQ+ADWGpfAKaREqpKX83HM857+/OuWbmzozc
-        hcU89dSc3/ue99w/c7s6tI1zrog3+FeusaixEcJyKOdDWWMjhJ9WyweNjZB1DviBxkbIvqyUDxobIft3
-        B9ziOo5hQU7iFj5qbITwNwfsY5+21kGtXz8jYVt7HGC39kzhBb7jG57jdBhYC4V2eMBB9W9j1l3vhKFp
-        VGjFhnr9lfvhz7iIA+jfwTK+oqcUBicobMWEek9t6ebD5hRka1ZyJ4oMgjvLm9Kr3hdb2uNKQzZsJVdR
-        ZBDM4H0oZdOj3mYHDFnJPSlqjJoSdhUHWPt/i2dVURWyBSvVPKJa1OTZVFSFbNZK7gNXcARHcQn9i/fM
-        qb0xaqobnkBtz1oyucSC2uuhmDk8gZ4SnqH/0Cp4hP7urtBzrNZ8YbD/Lg6dc+PfWh48cjhv/wMAAAAA
-        SUVORK5CYII=
 </value>
   </data>
   <metadata name="gunaColorTransition1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

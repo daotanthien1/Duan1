@@ -141,7 +141,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv.Location = new System.Drawing.Point(27, 219);
+            this.dgv.Location = new System.Drawing.Point(27, 295);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -187,7 +187,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.txtsearch.ForeColor = System.Drawing.Color.BlueViolet;
             this.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsearch.HoverState.Parent = this.txtsearch;
-            this.txtsearch.Location = new System.Drawing.Point(359, 532);
+            this.txtsearch.Location = new System.Drawing.Point(170, 253);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.PasswordChar = '\0';
             this.txtsearch.PlaceholderText = "Nhập tên Khách hàng cần tìm";
@@ -306,10 +306,10 @@ namespace RJCodeAdvance.ControlCustomers
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(140, 532);
+            this.btThem.Location = new System.Drawing.Point(401, 594);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
-            this.btThem.Size = new System.Drawing.Size(128, 36);
+            this.btThem.Size = new System.Drawing.Size(128, 45);
             this.btThem.TabIndex = 146;
             this.btThem.Text = "Thêm Bàn";
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
@@ -332,7 +332,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.btSua.HoverState.Parent = this.btSua;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua.Location = new System.Drawing.Point(339, 585);
+            this.btSua.Location = new System.Drawing.Point(546, 594);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
             this.btSua.Size = new System.Drawing.Size(128, 45);
@@ -359,7 +359,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(593, 532);
+            this.btTimKiem.Location = new System.Drawing.Point(28, 253);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
             this.btTimKiem.Size = new System.Drawing.Size(127, 36);
@@ -407,10 +407,10 @@ namespace RJCodeAdvance.ControlCustomers
             this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
             this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btDanhSach.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btDanhSach.Location = new System.Drawing.Point(497, 585);
+            this.btDanhSach.Location = new System.Drawing.Point(934, 253);
             this.btDanhSach.Name = "btDanhSach";
             this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
-            this.btDanhSach.Size = new System.Drawing.Size(128, 45);
+            this.btDanhSach.Size = new System.Drawing.Size(128, 36);
             this.btDanhSach.TabIndex = 148;
             this.btDanhSach.Text = "Danh Sách";
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);

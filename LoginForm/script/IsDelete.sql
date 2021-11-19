@@ -2,6 +2,9 @@
 alter table Employees
 add isDelete bit DEFAULT(0)
 
+update Employees set isDelete = 0
+go
+
 /****** Object:  StoredProcedure [dbo].[GETNHANVIEN]    Script Date: 11/5/2021 1:39:53 PM ******/
 SET ANSI_NULLS ON
 GO

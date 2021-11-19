@@ -145,7 +145,7 @@ namespace RJCodeAdvance
             this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv.Location = new System.Drawing.Point(21, 184);
+            this.dgv.Location = new System.Drawing.Point(21, 269);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
@@ -281,7 +281,7 @@ namespace RJCodeAdvance
             this.txtSearch.ForeColor = System.Drawing.Color.BlueViolet;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(255, 391);
+            this.txtSearch.Location = new System.Drawing.Point(134, 227);
             this.txtSearch.MaxLength = 50;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -442,10 +442,10 @@ namespace RJCodeAdvance
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(489, 391);
+            this.btTimKiem.Location = new System.Drawing.Point(21, 227);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
-            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
+            this.btTimKiem.Size = new System.Drawing.Size(107, 36);
             this.btTimKiem.TabIndex = 136;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
@@ -468,7 +468,7 @@ namespace RJCodeAdvance
             this.btDanhSacch.HoverState.Parent = this.btDanhSacch;
             this.btDanhSacch.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSacch.Image")));
             this.btDanhSacch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btDanhSacch.Location = new System.Drawing.Point(115, 391);
+            this.btDanhSacch.Location = new System.Drawing.Point(688, 227);
             this.btDanhSacch.Name = "btDanhSacch";
             this.btDanhSacch.ShadowDecoration.Parent = this.btDanhSacch;
             this.btDanhSacch.Size = new System.Drawing.Size(134, 36);

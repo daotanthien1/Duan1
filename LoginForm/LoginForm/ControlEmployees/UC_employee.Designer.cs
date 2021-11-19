@@ -47,7 +47,6 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtNgaySinh = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv_NhanVien = new Guna.UI2.WinForms.Guna2DataGridView();
             this.rbNam = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbNu = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -56,15 +55,15 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
-            this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btDanhSach = new Guna.UI2.WinForms.Guna2Button();
             this.Id_emloyee = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.isDelete = new System.Windows.Forms.Label();
-=======
             this.nbLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
->>>>>>> 397230a3185e2f53aff224e472e07885515e2796
+            this.cbTimTheoVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
+            this.cbTimVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbLuong)).BeginInit();
             this.SuspendLayout();
@@ -282,33 +281,6 @@ namespace RJCodeAdvance.ControlEmployees
             this.guna2Elipse1.BorderRadius = 26;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtTimKiem.BorderRadius = 16;
-            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimKiem.DefaultText = "";
-            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.DisabledState.Parent = this.txtTimKiem;
-            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.FocusedState.Parent = this.txtTimKiem;
-            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
-            this.txtTimKiem.Location = new System.Drawing.Point(371, 542);
-            this.txtTimKiem.MaxLength = 50;
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.PasswordChar = '\0';
-            this.txtTimKiem.PlaceholderText = "Nhập tên nhân viên cần tìm";
-            this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.ShadowDecoration.Parent = this.txtTimKiem;
-            this.txtTimKiem.Size = new System.Drawing.Size(228, 36);
-            this.txtTimKiem.TabIndex = 87;
-            // 
             // dgv_NhanVien
             // 
             this.dgv_NhanVien.AllowUserToAddRows = false;
@@ -338,7 +310,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.dgv_NhanVien.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_NhanVien.EnableHeadersVisualStyles = false;
             this.dgv_NhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_NhanVien.Location = new System.Drawing.Point(28, 276);
+            this.dgv_NhanVien.Location = new System.Drawing.Point(34, 331);
             this.dgv_NhanVien.Name = "dgv_NhanVien";
             this.dgv_NhanVien.RowHeadersVisible = false;
             this.dgv_NhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -454,7 +426,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnLuu.HoverState.Parent = this.btnLuu;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnLuu.Location = new System.Drawing.Point(612, 584);
+            this.btnLuu.Location = new System.Drawing.Point(612, 594);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
             this.btnLuu.Size = new System.Drawing.Size(128, 45);
@@ -480,7 +452,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnSua.HoverState.Parent = this.btnSua;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnSua.Location = new System.Drawing.Point(471, 584);
+            this.btnSua.Location = new System.Drawing.Point(471, 594);
             this.btnSua.Name = "btnSua";
             this.btnSua.ShadowDecoration.Parent = this.btnSua;
             this.btnSua.Size = new System.Drawing.Size(128, 45);
@@ -506,7 +478,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnXoa.HoverState.Parent = this.btnXoa;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnXoa.Location = new System.Drawing.Point(331, 584);
+            this.btnXoa.Location = new System.Drawing.Point(331, 594);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
             this.btnXoa.Size = new System.Drawing.Size(128, 45);
@@ -533,40 +505,13 @@ namespace RJCodeAdvance.ControlEmployees
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(191, 584);
+            this.btThem.Location = new System.Drawing.Point(191, 594);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(128, 45);
             this.btThem.TabIndex = 82;
             this.btThem.Text = "Thêm";
             this.btThem.Click += new System.EventHandler(this.btThem_Click_1);
-            // 
-            // btTimKiem
-            // 
-            this.btTimKiem.Animated = true;
-            this.btTimKiem.BorderColor = System.Drawing.Color.White;
-            this.btTimKiem.BorderRadius = 6;
-            this.btTimKiem.BorderThickness = 1;
-            this.btTimKiem.CheckedState.Parent = this.btTimKiem;
-            this.btTimKiem.CustomBorderColor = System.Drawing.Color.Black;
-            this.btTimKiem.CustomImages.Parent = this.btTimKiem;
-            this.btTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btTimKiem.DisabledState.Parent = this.btTimKiem;
-            this.btTimKiem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btTimKiem.HoverState.Parent = this.btTimKiem;
-            this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
-            this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(605, 542);
-            this.btTimKiem.Name = "btTimKiem";
-            this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
-            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
-            this.btTimKiem.TabIndex = 81;
-            this.btTimKiem.Text = "Tìm kiếm";
-            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // guna2Elipse2
             // 
@@ -591,7 +536,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
             this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btDanhSach.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btDanhSach.Location = new System.Drawing.Point(758, 584);
+            this.btDanhSach.Location = new System.Drawing.Point(758, 594);
             this.btDanhSach.Name = "btDanhSach";
             this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
             this.btDanhSach.Size = new System.Drawing.Size(128, 45);
@@ -607,7 +552,6 @@ namespace RJCodeAdvance.ControlEmployees
             this.Id_emloyee.Size = new System.Drawing.Size(0, 13);
             this.Id_emloyee.TabIndex = 118;
             // 
-<<<<<<< HEAD
             // isDelete
             // 
             this.isDelete.AutoSize = true;
@@ -616,7 +560,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.isDelete.Size = new System.Drawing.Size(0, 13);
             this.isDelete.TabIndex = 119;
             this.isDelete.Visible = false;
-=======
+            // 
             // nbLuong
             // 
             this.nbLuong.BackColor = System.Drawing.Color.Transparent;
@@ -627,7 +571,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.nbLuong.FocusedState.Parent = this.nbLuong;
             this.nbLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nbLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.nbLuong.Location = new System.Drawing.Point(40, 120);
+            this.nbLuong.Location = new System.Drawing.Point(34, 119);
             this.nbLuong.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -636,33 +580,133 @@ namespace RJCodeAdvance.ControlEmployees
             this.nbLuong.Name = "nbLuong";
             this.nbLuong.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.nbLuong.ShadowDecoration.Parent = this.nbLuong;
-            this.nbLuong.Size = new System.Drawing.Size(340, 36);
+            this.nbLuong.Size = new System.Drawing.Size(346, 36);
             this.nbLuong.TabIndex = 119;
->>>>>>> 397230a3185e2f53aff224e472e07885515e2796
+            // 
+            // cbTimTheoVaiTro
+            // 
+            this.cbTimTheoVaiTro.BackColor = System.Drawing.Color.Transparent;
+            this.cbTimTheoVaiTro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.cbTimTheoVaiTro.BorderRadius = 16;
+            this.cbTimTheoVaiTro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTimTheoVaiTro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTimTheoVaiTro.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTimTheoVaiTro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTimTheoVaiTro.FocusedState.Parent = this.cbTimTheoVaiTro;
+            this.cbTimTheoVaiTro.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbTimTheoVaiTro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.cbTimTheoVaiTro.HoverState.Parent = this.cbTimTheoVaiTro;
+            this.cbTimTheoVaiTro.ItemHeight = 30;
+            this.cbTimTheoVaiTro.Items.AddRange(new object[] {
+            "Nam",
+            "Nữ"});
+            this.cbTimTheoVaiTro.ItemsAppearance.Parent = this.cbTimTheoVaiTro;
+            this.cbTimTheoVaiTro.Location = new System.Drawing.Point(929, 289);
+            this.cbTimTheoVaiTro.MaxLength = 100;
+            this.cbTimTheoVaiTro.Name = "cbTimTheoVaiTro";
+            this.cbTimTheoVaiTro.ShadowDecoration.Parent = this.cbTimTheoVaiTro;
+            this.cbTimTheoVaiTro.Size = new System.Drawing.Size(142, 36);
+            this.cbTimTheoVaiTro.TabIndex = 123;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtTimKiem.BorderRadius = 16;
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.DefaultText = "";
+            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.DisabledState.Parent = this.txtTimKiem;
+            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.FocusedState.Parent = this.txtTimKiem;
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
+            this.txtTimKiem.Location = new System.Drawing.Point(173, 289);
+            this.txtTimKiem.MaxLength = 50;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.PlaceholderText = "Nhập tên nhân viên cần tìm";
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.ShadowDecoration.Parent = this.txtTimKiem;
+            this.txtTimKiem.Size = new System.Drawing.Size(290, 36);
+            this.txtTimKiem.TabIndex = 122;
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.Animated = true;
+            this.btTimKiem.BorderColor = System.Drawing.Color.White;
+            this.btTimKiem.BorderRadius = 6;
+            this.btTimKiem.BorderThickness = 1;
+            this.btTimKiem.CheckedState.Parent = this.btTimKiem;
+            this.btTimKiem.CustomBorderColor = System.Drawing.Color.Black;
+            this.btTimKiem.CustomImages.Parent = this.btTimKiem;
+            this.btTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btTimKiem.DisabledState.Parent = this.btTimKiem;
+            this.btTimKiem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btTimKiem.HoverState.Parent = this.btTimKiem;
+            this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
+            this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btTimKiem.Location = new System.Drawing.Point(40, 289);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
+            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
+            this.btTimKiem.TabIndex = 121;
+            this.btTimKiem.Text = "Tìm kiếm";
+            // 
+            // cbTimVaiTro
+            // 
+            this.cbTimVaiTro.BackColor = System.Drawing.Color.Transparent;
+            this.cbTimVaiTro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.cbTimVaiTro.BorderRadius = 16;
+            this.cbTimVaiTro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTimVaiTro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTimVaiTro.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTimVaiTro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTimVaiTro.FocusedState.Parent = this.cbTimVaiTro;
+            this.cbTimVaiTro.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbTimVaiTro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.cbTimVaiTro.HoverState.Parent = this.cbTimVaiTro;
+            this.cbTimVaiTro.ItemHeight = 30;
+            this.cbTimVaiTro.Items.AddRange(new object[] {
+            "Quản lý",
+            "Nhân viên"});
+            this.cbTimVaiTro.ItemsAppearance.Parent = this.cbTimVaiTro;
+            this.cbTimVaiTro.Location = new System.Drawing.Point(781, 289);
+            this.cbTimVaiTro.MaxLength = 100;
+            this.cbTimVaiTro.Name = "cbTimVaiTro";
+            this.cbTimVaiTro.ShadowDecoration.Parent = this.cbTimVaiTro;
+            this.cbTimVaiTro.Size = new System.Drawing.Size(142, 36);
+            this.cbTimVaiTro.TabIndex = 124;
             // 
             // UC_employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1096, 651);
+            this.Controls.Add(this.cbTimVaiTro);
+            this.Controls.Add(this.cbTimTheoVaiTro);
+            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.isDelete);
-=======
             this.Controls.Add(this.nbLuong);
->>>>>>> 397230a3185e2f53aff224e472e07885515e2796
             this.Controls.Add(this.Id_emloyee);
             this.Controls.Add(this.btDanhSach);
             this.Controls.Add(this.btnThemVaitro);
             this.Controls.Add(this.rbNu);
             this.Controls.Add(this.rbNam);
             this.Controls.Add(this.dgv_NhanVien);
-            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btThem);
-            this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.dtNgaySinh);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtEmail);
@@ -675,7 +719,6 @@ namespace RJCodeAdvance.ControlEmployees
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UC_employee";
             this.Size = new System.Drawing.Size(1096, 651);
             this.Load += new System.EventHandler(this.UC_employee_Load);
@@ -701,22 +744,21 @@ namespace RJCodeAdvance.ControlEmployees
         private Guna.UI2.WinForms.Guna2DateTimePicker dtNgaySinh;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_NhanVien;
-        private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
         private Guna.UI2.WinForms.Guna2Button btnLuu;
         private Guna.UI2.WinForms.Guna2Button btnSua;
         private Guna.UI2.WinForms.Guna2Button btnXoa;
         private Guna.UI2.WinForms.Guna2Button btThem;
-        private Guna.UI2.WinForms.Guna2Button btTimKiem;
         private Guna.UI2.WinForms.Guna2RadioButton rbNu;
         private Guna.UI2.WinForms.Guna2RadioButton rbNam;
         private Guna.UI2.WinForms.Guna2Button btnThemVaitro;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btDanhSach;
         private System.Windows.Forms.Label Id_emloyee;
-<<<<<<< HEAD
         private System.Windows.Forms.Label isDelete;
-=======
         private Guna.UI2.WinForms.Guna2NumericUpDown nbLuong;
->>>>>>> 397230a3185e2f53aff224e472e07885515e2796
+        private Guna.UI2.WinForms.Guna2ComboBox cbTimTheoVaiTro;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
+        private Guna.UI2.WinForms.Guna2Button btTimKiem;
+        private Guna.UI2.WinForms.Guna2ComboBox cbTimVaiTro;
     }
 }

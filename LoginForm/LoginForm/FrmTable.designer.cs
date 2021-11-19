@@ -104,7 +104,7 @@ namespace RJCodeAdvance
             this.txtSearch.ForeColor = System.Drawing.Color.BlueViolet;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(232, 382);
+            this.txtSearch.Location = new System.Drawing.Point(163, 218);
             this.txtSearch.MaxLength = 50;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -169,7 +169,7 @@ namespace RJCodeAdvance
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(21, 184);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(30, 260);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -219,6 +219,7 @@ namespace RJCodeAdvance
             this.rdCoNguoi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdCoNguoi.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdCoNguoi.CheckedState.InnerOffset = -4;
+            this.rdCoNguoi.Enabled = false;
             this.rdCoNguoi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdCoNguoi.ForeColor = System.Drawing.Color.White;
             this.rdCoNguoi.Location = new System.Drawing.Point(542, 104);
@@ -243,6 +244,7 @@ namespace RJCodeAdvance
             this.rdTrong.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdTrong.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdTrong.CheckedState.InnerOffset = -4;
+            this.rdTrong.Enabled = false;
             this.rdTrong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdTrong.ForeColor = System.Drawing.Color.White;
             this.rdTrong.Location = new System.Drawing.Point(441, 104);
@@ -420,7 +422,7 @@ namespace RJCodeAdvance
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(466, 382);
+            this.btTimKiem.Location = new System.Drawing.Point(30, 218);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
             this.btTimKiem.Size = new System.Drawing.Size(127, 36);
@@ -450,7 +452,7 @@ namespace RJCodeAdvance
             this.btDanhSacch.HoverState.Parent = this.btDanhSacch;
             this.btDanhSacch.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSacch.Image")));
             this.btDanhSacch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btDanhSacch.Location = new System.Drawing.Point(92, 382);
+            this.btDanhSacch.Location = new System.Drawing.Point(688, 218);
             this.btDanhSacch.Name = "btDanhSacch";
             this.btDanhSacch.ShadowDecoration.Parent = this.btDanhSacch;
             this.btDanhSacch.Size = new System.Drawing.Size(134, 36);

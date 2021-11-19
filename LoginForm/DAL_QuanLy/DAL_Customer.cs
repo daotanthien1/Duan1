@@ -6,11 +6,28 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL_QuanLy
 {
     public class DAL_Customer : DBConnect
     {
+        public AutoCompleteStringCollection autoEmail()
+        {
+
+            AutoCompleteStringCollection autoEmail = new AutoCompleteStringCollection();
+            _conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = _conn;
+            cmd.CommandText = "select email from customers";
+            SqlDataReader sdr = cmd.ExecuteReader();
+            while(sdr.Read())
+            {
+                autoEmail.Add(sdr.GetString(0));
+            }
+            _conn.Close();
+            return autoEmail;
+        }
         public bool UpdateCustomerAfterSendVoucher(DTO_Customer vouchers)
         {
             try

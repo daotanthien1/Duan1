@@ -106,6 +106,8 @@ namespace RJCodeAdvance.ControlBeverages
             cbDoUong.DataSource = busBe.getBeverageType();        
             cbDoUong.DisplayMember = "Name";
             cbDoUong.ValueMember = "id_type";
+            //cbDoUong.AutoCompleteSource = AutoCompleteSource.ListItems;
+            //cbDoUong.AutoCompleteMode = AutoCompleteMode.Suggest;
         }
 
 

@@ -40,15 +40,15 @@ namespace RJCodeAdvance
             this.txtTenLoaiNL = new Guna.UI2.WinForms.Guna2TextBox();
             this.dgv = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.btThoat = new Guna.UI2.WinForms.Guna2Button();
             this.btLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btSua = new Guna.UI2.WinForms.Guna2Button();
             this.btXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
-            this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btDanhSacch = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -141,7 +141,7 @@ namespace RJCodeAdvance
             this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv.Location = new System.Drawing.Point(28, 184);
+            this.dgv.Location = new System.Drawing.Point(28, 269);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
@@ -182,33 +182,6 @@ namespace RJCodeAdvance
             this.guna2HtmlLabel6.TabIndex = 120;
             this.guna2HtmlLabel6.Text = "Loại Nguyên Liệu:";
             // 
-            // txtSearch
-            // 
-            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtSearch.BorderRadius = 16;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.Parent = this.txtSearch;
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.FocusedState.Parent = this.txtSearch;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.ForeColor = System.Drawing.Color.BlueViolet;
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(234, 391);
-            this.txtSearch.MaxLength = 50;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderText = "Nhập tên nhân viên cần tìm";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(228, 36);
-            this.txtSearch.TabIndex = 138;
-            // 
             // btThoat
             // 
             this.btThoat.Animated = true;
@@ -228,7 +201,7 @@ namespace RJCodeAdvance
             this.btThoat.HoverState.Parent = this.btThoat;
             this.btThoat.Image = ((System.Drawing.Image)(resources.GetObject("btThoat.Image")));
             this.btThoat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThoat.Location = new System.Drawing.Point(623, 455);
+            this.btThoat.Location = new System.Drawing.Point(636, 455);
             this.btThoat.Name = "btThoat";
             this.btThoat.ShadowDecoration.Parent = this.btThoat;
             this.btThoat.Size = new System.Drawing.Size(128, 45);
@@ -254,7 +227,7 @@ namespace RJCodeAdvance
             this.btLuu.HoverState.Parent = this.btLuu;
             this.btLuu.Image = ((System.Drawing.Image)(resources.GetObject("btLuu.Image")));
             this.btLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLuu.Location = new System.Drawing.Point(483, 455);
+            this.btLuu.Location = new System.Drawing.Point(496, 455);
             this.btLuu.Name = "btLuu";
             this.btLuu.ShadowDecoration.Parent = this.btLuu;
             this.btLuu.Size = new System.Drawing.Size(128, 45);
@@ -280,7 +253,7 @@ namespace RJCodeAdvance
             this.btSua.HoverState.Parent = this.btSua;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua.Location = new System.Drawing.Point(342, 455);
+            this.btSua.Location = new System.Drawing.Point(355, 455);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
             this.btSua.Size = new System.Drawing.Size(128, 45);
@@ -306,7 +279,7 @@ namespace RJCodeAdvance
             this.btXoa.HoverState.Parent = this.btXoa;
             this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
             this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btXoa.Location = new System.Drawing.Point(202, 455);
+            this.btXoa.Location = new System.Drawing.Point(215, 455);
             this.btXoa.Name = "btXoa";
             this.btXoa.ShadowDecoration.Parent = this.btXoa;
             this.btXoa.Size = new System.Drawing.Size(128, 45);
@@ -333,40 +306,13 @@ namespace RJCodeAdvance
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(62, 455);
+            this.btThem.Location = new System.Drawing.Point(75, 455);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(128, 45);
             this.btThem.TabIndex = 133;
             this.btThem.Text = "Thêm";
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
-            // 
-            // btTimKiem
-            // 
-            this.btTimKiem.Animated = true;
-            this.btTimKiem.BorderColor = System.Drawing.Color.BlueViolet;
-            this.btTimKiem.BorderRadius = 6;
-            this.btTimKiem.BorderThickness = 1;
-            this.btTimKiem.CheckedState.Parent = this.btTimKiem;
-            this.btTimKiem.CustomBorderColor = System.Drawing.Color.Black;
-            this.btTimKiem.CustomImages.Parent = this.btTimKiem;
-            this.btTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btTimKiem.DisabledState.Parent = this.btTimKiem;
-            this.btTimKiem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btTimKiem.HoverState.Parent = this.btTimKiem;
-            this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
-            this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(468, 391);
-            this.btTimKiem.Name = "btTimKiem";
-            this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
-            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
-            this.btTimKiem.TabIndex = 132;
-            this.btTimKiem.Text = "Tìm kiếm";
-            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
             // guna2Elipse2
             // 
@@ -390,12 +336,65 @@ namespace RJCodeAdvance
             this.btDanhSacch.HoverState.Parent = this.btDanhSacch;
             this.btDanhSacch.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSacch.Image")));
             this.btDanhSacch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btDanhSacch.Location = new System.Drawing.Point(94, 391);
+            this.btDanhSacch.Location = new System.Drawing.Point(694, 227);
             this.btDanhSacch.Name = "btDanhSacch";
             this.btDanhSacch.ShadowDecoration.Parent = this.btDanhSacch;
             this.btDanhSacch.Size = new System.Drawing.Size(134, 36);
             this.btDanhSacch.TabIndex = 139;
             this.btDanhSacch.Text = "Danh sách";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtSearch.BorderRadius = 16;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.Parent = this.txtSearch;
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.FocusedState.Parent = this.txtSearch;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.HoverState.Parent = this.txtSearch;
+            this.txtSearch.Location = new System.Drawing.Point(161, 227);
+            this.txtSearch.MaxLength = 50;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Nhập tên nhân viên cần tìm";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
+            this.txtSearch.Size = new System.Drawing.Size(228, 36);
+            this.txtSearch.TabIndex = 141;
+            // 
+            // btTimKiem
+            // 
+            this.btTimKiem.Animated = true;
+            this.btTimKiem.BorderColor = System.Drawing.Color.BlueViolet;
+            this.btTimKiem.BorderRadius = 6;
+            this.btTimKiem.BorderThickness = 1;
+            this.btTimKiem.CheckedState.Parent = this.btTimKiem;
+            this.btTimKiem.CustomBorderColor = System.Drawing.Color.Black;
+            this.btTimKiem.CustomImages.Parent = this.btTimKiem;
+            this.btTimKiem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btTimKiem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btTimKiem.DisabledState.Parent = this.btTimKiem;
+            this.btTimKiem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTimKiem.ForeColor = System.Drawing.Color.White;
+            this.btTimKiem.HoverState.Parent = this.btTimKiem;
+            this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
+            this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btTimKiem.Location = new System.Drawing.Point(28, 227);
+            this.btTimKiem.Name = "btTimKiem";
+            this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
+            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
+            this.btTimKiem.TabIndex = 140;
+            this.btTimKiem.Text = "Tìm kiếm";
             // 
             // FrmIngredientType
             // 
@@ -403,14 +402,14 @@ namespace RJCodeAdvance
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlueViolet;
             this.ClientSize = new System.Drawing.Size(861, 512);
-            this.Controls.Add(this.btDanhSacch);
             this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btTimKiem);
+            this.Controls.Add(this.btDanhSacch);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.btLuu);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btThem);
-            this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.txtTenLoaiNL);
@@ -435,14 +434,14 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2TextBox txtTenLoaiNL;
         private Guna.UI2.WinForms.Guna2DataGridView dgv;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Button btThoat;
         private Guna.UI2.WinForms.Guna2Button btLuu;
         private Guna.UI2.WinForms.Guna2Button btSua;
         private Guna.UI2.WinForms.Guna2Button btXoa;
         private Guna.UI2.WinForms.Guna2Button btThem;
-        private Guna.UI2.WinForms.Guna2Button btTimKiem;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btDanhSacch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Button btTimKiem;
     }
 }

@@ -130,7 +130,7 @@ namespace RJCodeAdvance
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(50, 180);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(50, 250);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -524,7 +524,7 @@ namespace RJCodeAdvance
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(508, 388);
+            this.btTimKiem.Location = new System.Drawing.Point(50, 208);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
             this.btTimKiem.Size = new System.Drawing.Size(127, 36);
@@ -580,10 +580,10 @@ namespace RJCodeAdvance
             "Ca 2",
             "Ca 3"});
             this.cbSearch.ItemsAppearance.Parent = this.cbSearch;
-            this.cbSearch.Location = new System.Drawing.Point(246, 388);
+            this.cbSearch.Location = new System.Drawing.Point(184, 208);
             this.cbSearch.Name = "cbSearch";
             this.cbSearch.ShadowDecoration.Parent = this.cbSearch;
-            this.cbSearch.Size = new System.Drawing.Size(259, 36);
+            this.cbSearch.Size = new System.Drawing.Size(137, 36);
             this.cbSearch.TabIndex = 76;
             // 
             // guna2DragControl1
@@ -612,7 +612,7 @@ namespace RJCodeAdvance
             this.btDanhSacch.HoverState.Parent = this.btDanhSacch;
             this.btDanhSacch.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSacch.Image")));
             this.btDanhSacch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btDanhSacch.Location = new System.Drawing.Point(102, 388);
+            this.btDanhSacch.Location = new System.Drawing.Point(692, 208);
             this.btDanhSacch.Name = "btDanhSacch";
             this.btDanhSacch.ShadowDecoration.Parent = this.btDanhSacch;
             this.btDanhSacch.Size = new System.Drawing.Size(134, 36);
