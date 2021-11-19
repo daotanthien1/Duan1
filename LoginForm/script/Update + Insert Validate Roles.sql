@@ -58,6 +58,7 @@ BEGIN
 		IF EXISTS(select * from  Employees where Email = @Email)
 		UPDATE Employees SET Id_role = @Id_role, Address =  @Address, Gender = @Gender,
 												  Email = @Email,DayOfBirth = @DayOfBirth,Salary = @Salary,Name = @Name
+												  where Email = @Email and Id_employee = @Id_employee
 		ELSE
 		UPDATE Employees SET Id_role = @Id_role, Address =  @Address, Gender = @Gender,
 												  Email = @Email,DayOfBirth = @DayOfBirth,Salary = @Salary,Name = @Name

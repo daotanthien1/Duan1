@@ -147,6 +147,7 @@ namespace RJCodeAdvance
                 toggleNhoTaiKhoan.Checked = false;
 
             }
+            
         }
         private void SaveSettings()
         {

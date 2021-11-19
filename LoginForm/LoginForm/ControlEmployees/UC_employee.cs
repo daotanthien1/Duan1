@@ -31,6 +31,7 @@ namespace RJCodeAdvance.ControlEmployees
 
         private void UC_employee_Load(object sender, EventArgs e)
         {
+            this.Refresh();
             ResetValue();
             ShowData_GridViewNhanVien();
             ThemVaiTro();
@@ -170,6 +171,7 @@ namespace RJCodeAdvance.ControlEmployees
                     MessageBox.Show("Xóa thất bại");
                 }
             }
+
             else
             {
                 ResetValue();
@@ -260,9 +262,13 @@ namespace RJCodeAdvance.ControlEmployees
             dgv_NhanVien.Columns[5].HeaderText = "Ngày sinh";
             dgv_NhanVien.Columns[6].HeaderText = "Lương";
             dgv_NhanVien.Columns[7].Visible = false;
+            dgv_NhanVien.Columns[8].Visible = false;
             dgv_NhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-
+        public void ShowDuLieu()
+        {
+    
+        }
         //Kiểm tra định dạng email
         public bool IsValid(string emailAddress)
         {
@@ -308,6 +314,10 @@ namespace RJCodeAdvance.ControlEmployees
                     txtLuong.Text = dgv_NhanVien.CurrentRow.Cells["Salary"].Value.ToString();
                     dtNgaySinh.Text = dgv_NhanVien.CurrentRow.Cells["DayOfBirth"].Value.ToString();
                     Id_emloyee.Text = dgv_NhanVien.CurrentRow.Cells["Id_employee"].Value.ToString();
+                    if (dgv_NhanVien.CurrentRow.Cells["isDelete"].Value.ToString() == "True")
+                        isDelete.Text = "True";
+                    else
+                        isDelete.Text = "False";
                     if (int.Parse(dgv_NhanVien.CurrentRow.Cells["Id_role"].Value.ToString()) == 1)
                         cbVaiTro.Text = "Quản lý";
                     else

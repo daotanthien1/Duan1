@@ -267,5 +267,17 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+
+        public DataTable IsDelete()
+        {
+            _conn.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = _conn;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "IS_DELETE";
+            DataTable dtIsDelete = new DataTable();
+            dtIsDelete.Load(cmd.ExecuteReader());
+            return dtIsDelete;
+        }
     }
 }

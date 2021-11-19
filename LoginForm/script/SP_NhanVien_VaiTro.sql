@@ -124,15 +124,22 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[DELETE_DATA_FROM_EMPLOYEE] @Email varchar(50)
+alter PROCEDURE [dbo].[DELETE_DATA_FROM_EMPLOYEE] @Email varchar(50)
 AS
 BEGIN
-		DELETE from Employees 
-		where Email = @Email
+		--DELETE from Employees 
+		--where Email = @Email
+		UPDATE Employees SET isDelete = 1 where Email = @Email
 END
 GO
-/****** Object:  StoredProcedure [dbo].[CHECK_EXIST_EMAIL]    Script Date: 11/5/2021 1:37:21 PM ******/
 
+--CREATE PROC [dbo].[IS_DELETE]
+--AS
+--BEGIN
+--		SELECT isDelete from Employees
+--END
+--GO
+/****** Object:  StoredProcedure [dbo].[CHECK_EXIST_EMAIL]    Script Date: 11/5/2021 1:37:21 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -186,7 +193,8 @@ GO
 CREATE PROCEDURE [dbo].[GETNHANVIEN]
 AS
 BEGIN
-		Select Id_role,Name,Gender,Email,Address,DayOfBirth,Salary,Id_employee from Employees
+		Select Id_role,Name,Gender,Email,Address,DayOfBirth,Salary,Id_employee,isDelete from Employees
+		Where isDelete = 0
 END
 GO
 

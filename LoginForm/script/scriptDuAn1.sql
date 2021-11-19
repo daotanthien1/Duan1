@@ -25,6 +25,8 @@ create table Employees
 	constraint fk_idRole foreign key (Id_role) references Roles (Id_role)
 );
 Go
+alter table Employees
+add isDelete bit DEFAULT(0)
 
 Create table TypesVoucher
 (
