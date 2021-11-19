@@ -56,6 +56,8 @@ namespace RJCodeAdvance
                 guna2ToggleSwitch1.Checked = false;
                 nbDiemYeuCau.Value = 0;
                 cbSale.ResetText();
+                cbSale.Enabled = false;
+                nbDiemYeuCau.Enabled = false;
             }
         }
         void loadData()
@@ -76,6 +78,26 @@ namespace RJCodeAdvance
             cbSale.DisplayMember = "Sale";
             cbSale.ValueMember = "ID_Type";
             cbSale.DataSource = vouchers.getConfigurationSale(0);
+        }
+
+        private void guna2ToggleSwitch1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (guna2ToggleSwitch1.Checked == true)
+            {
+                cbSale.Enabled = true;
+                nbDiemYeuCau.Enabled = true;
+                nbDiemYeuCau.Value = Properties.Settings.Default.rewards;
+                cbSale.Text = Properties.Settings.Default.voucheTypeName.ToString();
+                loadData();
+                loadSale();
+            }
+            else
+            {
+                nbDiemYeuCau.Value = 0;
+                cbSale.ResetText();
+                cbSale.Enabled = false;
+                nbDiemYeuCau.Enabled = false;
+            }
         }
     }
 }

@@ -250,6 +250,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btChuyenBan.Size = new System.Drawing.Size(91, 36);
             this.btChuyenBan.TabIndex = 61;
             this.btChuyenBan.Text = "Chuyển";
+            this.btChuyenBan.Click += new System.EventHandler(this.btChuyenBan_Click);
             // 
             // btnThem
             // 
@@ -352,6 +353,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btNhap.Size = new System.Drawing.Size(91, 36);
             this.btNhap.TabIndex = 56;
             this.btNhap.Text = "Nhập";
+            this.btNhap.Click += new System.EventHandler(this.btNhap_Click);
             // 
             // txbVoucher
             // 
@@ -698,6 +700,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.pbChangePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbChangePass.TabIndex = 59;
             this.pbChangePass.TabStop = false;
+            this.pbChangePass.Click += new System.EventHandler(this.pbChangePass_Click_1);
             // 
             // pbDangXuat
             // 
