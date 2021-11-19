@@ -42,9 +42,10 @@ namespace RJCodeAdvance
         void loadDate()
         {
             guna2DataGridView1.DataSource = shift.getShifts();
-            guna2DataGridView1.Columns[2].HeaderText = "Tên ca";
-            guna2DataGridView1.Columns[0].HeaderText = "Thời gian bắt đầu";
-            guna2DataGridView1.Columns[1].HeaderText = "Thời gian kết thúc";
+            guna2DataGridView1.Columns[0].HeaderText = "Id";
+            guna2DataGridView1.Columns[1].HeaderText = "Tên ca";
+            guna2DataGridView1.Columns[2].HeaderText = "Thời gian bắt đầu";
+            guna2DataGridView1.Columns[3].HeaderText = "Thời gian kết thúc";
         }
         // reset value
         void restValue()
@@ -82,10 +83,9 @@ namespace RJCodeAdvance
             }
             else
             {
-                DTO_CaLamViec shifts = new DTO_CaLamViec(int.Parse(txtTenCa.Text), txtThoiGianBatDau.Text, txtThoiGianKetThuc.Text);
+                DTO_CaLamViec shifts = new DTO_CaLamViec(txtTenCa.Text, txtThoiGianBatDau.Text, txtThoiGianKetThuc.Text);
                 if (shift.InsertShifts(shifts))
                 {
-                    MessageBox.Show("Insert thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     restValue();
                     loadDate();
                 }
@@ -100,9 +100,9 @@ namespace RJCodeAdvance
         //xóa
         private void btXoa2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("\tBạn chắc chắn muốn xóa ca " + txtTenCa.Text + " \n\tThời gian bắt đầu: "+txtThoiGianBatDau.Text+"\n\tThời gian kết thúc: "+txtThoiGianKetThuc.Text, "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("\tBạn chắc chắn muốn xóa ca " + txtTenCa.Text + " \n\tThời gian bắt đầu: " + txtThoiGianBatDau.Text + "\n\tThời gian kết thúc: " + txtThoiGianKetThuc.Text, "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                if (shift.DeleteShifts(int.Parse(txtTenCa.Text)))
+                if (shift.DeleteShifts(id_shift))
                 {
                     MessageBox.Show("Delete thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     restValue();
@@ -119,6 +119,7 @@ namespace RJCodeAdvance
             }
             insert();
         }
+        int id_shift;
         // click datagridview
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -130,9 +131,10 @@ namespace RJCodeAdvance
                 btSua2.Enabled = true;
                 btXoa2.Enabled = true;
 
-                txtTenCa.Text = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString();
-                txtThoiGianBatDau.Text = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
-                txtThoiGianKetThuc.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
+                id_shift = int.Parse(guna2DataGridView1.CurrentRow.Cells[0].Value.ToString());
+                txtTenCa.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtThoiGianBatDau.Text = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString();
+                txtThoiGianKetThuc.Text = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
             }
         }
         //bt sửa
@@ -146,7 +148,7 @@ namespace RJCodeAdvance
                 }
                 else
                 {
-                    DTO_CaLamViec shifts = new DTO_CaLamViec(int.Parse(txtTenCa.Text), txtThoiGianBatDau.Text, txtThoiGianKetThuc.Text);
+                    DTO_CaLamViec shifts = new DTO_CaLamViec(id_shift, txtThoiGianBatDau.Text, txtThoiGianKetThuc.Text);
                     if (shift.UpdateShifts(shifts))
                     {
                         MessageBox.Show("Update thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -168,8 +170,7 @@ namespace RJCodeAdvance
         //tìm kiếm
         private void btTimKiem_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(txtNhaptenCa.Text);
-            DataTable shifts = shift.SearchShift(id);
+            DataTable shifts = shift.SearchShift(txtNhaptenCa.Text);
             if (shifts.Rows.Count > 0)
             {
                 guna2DataGridView1.DataSource = shifts;

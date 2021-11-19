@@ -42,8 +42,8 @@ namespace RJCodeAdvance.ControlBeverages
             txtTenDoUong.Text = "";
             cbDoUong.Enabled = false;
             cbDoUong.Text = "";
-            txtGia.Enabled = false;
-            txtGia.Text = "";
+            nbGia.Enabled = false;
+            nbGia.Text = "";
             txtHinh.Enabled = false;
             txtHinh.Text = "";
             btFile.Enabled = false;
@@ -61,11 +61,11 @@ namespace RJCodeAdvance.ControlBeverages
                 txtTenDoUong.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtGia.Text))
+            if (string.IsNullOrEmpty(nbGia.Text))
             {
                 MessageBox.Show("Chưa nhập đủ thông tin");
-                txtGia.Text = "";
-                txtGia.Focus();
+                nbGia.Text = "";
+                nbGia.Focus();
                 return false;
             }
             if (string.IsNullOrEmpty(cbDoUong.Text))
@@ -114,7 +114,7 @@ namespace RJCodeAdvance.ControlBeverages
             ResetValue();
             txtTenDoUong.Enabled = true;
             cbDoUong.Enabled = true;
-            txtGia.Enabled = true;
+            nbGia.Enabled = true;
             txtHinh.Enabled = true;
             btLuu.Enabled = true;
             btFile.Enabled = true;
@@ -148,17 +148,21 @@ namespace RJCodeAdvance.ControlBeverages
             {
                 if (checkTextBox())
                 {
-                    fileName = txtHinh.Text;
+
                     DTO_QuanLyDoUong dtoBe = new DTO_QuanLyDoUong(txtTenDoUong.Text,
-                        float.Parse(txtGia.Text), Convert.ToInt32(cbDoUong.SelectedValue), "Images" + fileName);
+                        float.Parse(nbGia.Text), Convert.ToInt32(cbDoUong.SelectedValue), "Images\\" + fileName);
                     if (busBe.InsertDoUong(dtoBe))
                     {
+                        string path = @"Images";
+                        if (!Directory.Exists(path))
+                        {
+                            Directory.CreateDirectory(path);
+                        }
                         if (txtHinh.Text != checkUrlImage)
                         {
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
                         }
 
-                        MessageBox.Show("Thành công");
                         loadDGV();
                     }
                 }
@@ -182,15 +186,19 @@ namespace RJCodeAdvance.ControlBeverages
                 if (checkTextBox())
                 {
                     DTO_QuanLyDoUong dtoBe = new DTO_QuanLyDoUong(txtTenDoUong.Text,
-                        float.Parse(txtGia.Text), Convert.ToInt32(cbDoUong.SelectedValue),
+                        float.Parse(nbGia.Text), Convert.ToInt32(cbDoUong.SelectedValue),
                         Convert.ToInt32(dgvBeverage.CurrentRow.Cells["Id_beverage"].Value.ToString()), "Images\\" + fileName);
                     if (busBe.UpdateDoUong(dtoBe))
                     {
+						string path = @"Images";
+                        if (!Directory.Exists(path))
+                        {
+                            Directory.CreateDirectory(path);
+                        }
                         if (txtHinh.Text != checkUrlImage)
                         {
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
                         }
-                        MessageBox.Show("Thành công");
                         loadDGV();
                         ResetValue();
                     }
@@ -202,16 +210,6 @@ namespace RJCodeAdvance.ControlBeverages
             }
         }
 
-        private void btThoat_Click(object sender, EventArgs e)
-        {
-
-            DialogResult dlr = MessageBox.Show("Bạn muốn thoát chương trình?",
-                  "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(dlr == DialogResult.Yes)
-            {
-                Application.Exit();
-            }
-        }
 
         private void btFile_Click_1(object sender, EventArgs e)
         {
@@ -241,11 +239,11 @@ namespace RJCodeAdvance.ControlBeverages
                     btSua.Enabled = true;
                     txtTenDoUong.Enabled = true;
                     cbDoUong.Enabled = true;
-                    txtGia.Enabled = true;
+                    nbGia.Enabled = true;
                     txtHinh.Enabled = true;
                     btFile.Enabled = true;
                     txtTenDoUong.Text = dgvBeverage.CurrentRow.Cells["Name"].Value.ToString();
-                    txtGia.Text = dgvBeverage.CurrentRow.Cells["Price"].Value.ToString();
+                    nbGia.Text = dgvBeverage.CurrentRow.Cells["Price"].Value.ToString();
                     cbDoUong.Text = dgvBeverage.CurrentRow.Cells["Id_Type"].Value.ToString();
                     txtHinh.Text = dgvBeverage.CurrentRow.Cells["Image"].Value.ToString();
                     checkUrlImage = txtHinh.Text;

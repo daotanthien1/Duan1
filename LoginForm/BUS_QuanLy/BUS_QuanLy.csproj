@@ -57,6 +57,7 @@
     <Compile Include="BUS_NhanVien.cs" />
     <Compile Include="BUS_Role.cs" />
     <Compile Include="BUS_SendGmail.cs" />
+    <Compile Include="BUS_Static.cs" />
     <Compile Include="BUS_tables.cs" />
     <Compile Include="BUS_TypesOfBeverage.cs" />
     <Compile Include="BUS_units.cs" />

@@ -12,6 +12,27 @@ namespace DAL_QuanLy
     public class DAL_tables : DBConnect
     {
 
+        public bool SwitchTable(int idTable1, int idTable2, int idEmployee)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "switchTalbe";
+                cmd.Parameters.AddWithValue("idTable1", idTable1);
+                cmd.Parameters.AddWithValue("idTable2", idTable2);
+                cmd.Parameters.AddWithValue("idEmployee", idEmployee);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
         public DataTable getData()
         {
             try

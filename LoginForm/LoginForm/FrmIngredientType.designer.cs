@@ -104,6 +104,7 @@ namespace RJCodeAdvance
             this.txtTenLoaiNL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenLoaiNL.HoverState.Parent = this.txtTenLoaiNL;
             this.txtTenLoaiNL.Location = new System.Drawing.Point(28, 86);
+            this.txtTenLoaiNL.MaxLength = 50;
             this.txtTenLoaiNL.Name = "txtTenLoaiNL";
             this.txtTenLoaiNL.PasswordChar = '\0';
             this.txtTenLoaiNL.PlaceholderText = "Nhập Loại Nguyên Liệu";
@@ -142,6 +143,7 @@ namespace RJCodeAdvance
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv.Location = new System.Drawing.Point(28, 184);
             this.dgv.Name = "dgv";
+            this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv.Size = new System.Drawing.Size(800, 180);
@@ -198,6 +200,7 @@ namespace RJCodeAdvance
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
             this.txtSearch.Location = new System.Drawing.Point(234, 391);
+            this.txtSearch.MaxLength = 50;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập tên nhân viên cần tìm";
@@ -209,7 +212,7 @@ namespace RJCodeAdvance
             // btThoat
             // 
             this.btThoat.Animated = true;
-            this.btThoat.BorderColor = System.Drawing.Color.White;
+            this.btThoat.BorderColor = System.Drawing.Color.BlueViolet;
             this.btThoat.BorderRadius = 6;
             this.btThoat.BorderThickness = 1;
             this.btThoat.CheckedState.Parent = this.btThoat;
@@ -236,7 +239,7 @@ namespace RJCodeAdvance
             // btLuu
             // 
             this.btLuu.Animated = true;
-            this.btLuu.BorderColor = System.Drawing.Color.White;
+            this.btLuu.BorderColor = System.Drawing.Color.BlueViolet;
             this.btLuu.BorderRadius = 6;
             this.btLuu.BorderThickness = 1;
             this.btLuu.CheckedState.Parent = this.btLuu;
@@ -262,7 +265,7 @@ namespace RJCodeAdvance
             // btSua
             // 
             this.btSua.Animated = true;
-            this.btSua.BorderColor = System.Drawing.Color.White;
+            this.btSua.BorderColor = System.Drawing.Color.BlueViolet;
             this.btSua.BorderRadius = 6;
             this.btSua.BorderThickness = 1;
             this.btSua.CheckedState.Parent = this.btSua;
@@ -288,7 +291,7 @@ namespace RJCodeAdvance
             // btXoa
             // 
             this.btXoa.Animated = true;
-            this.btXoa.BorderColor = System.Drawing.Color.White;
+            this.btXoa.BorderColor = System.Drawing.Color.BlueViolet;
             this.btXoa.BorderRadius = 6;
             this.btXoa.BorderThickness = 1;
             this.btXoa.CheckedState.Parent = this.btXoa;
@@ -314,7 +317,7 @@ namespace RJCodeAdvance
             // btThem
             // 
             this.btThem.Animated = true;
-            this.btThem.BorderColor = System.Drawing.Color.White;
+            this.btThem.BorderColor = System.Drawing.Color.BlueViolet;
             this.btThem.BorderRadius = 6;
             this.btThem.BorderThickness = 1;
             this.btThem.CheckedState.Parent = this.btThem;
@@ -341,7 +344,7 @@ namespace RJCodeAdvance
             // btTimKiem
             // 
             this.btTimKiem.Animated = true;
-            this.btTimKiem.BorderColor = System.Drawing.Color.White;
+            this.btTimKiem.BorderColor = System.Drawing.Color.BlueViolet;
             this.btTimKiem.BorderRadius = 6;
             this.btTimKiem.BorderThickness = 1;
             this.btTimKiem.CheckedState.Parent = this.btTimKiem;
@@ -372,7 +375,7 @@ namespace RJCodeAdvance
             // btDanhSacch
             // 
             this.btDanhSacch.Animated = true;
-            this.btDanhSacch.BorderColor = System.Drawing.Color.White;
+            this.btDanhSacch.BorderColor = System.Drawing.Color.BlueViolet;
             this.btDanhSacch.BorderRadius = 6;
             this.btDanhSacch.BorderThickness = 1;
             this.btDanhSacch.CheckedState.Parent = this.btDanhSacch;

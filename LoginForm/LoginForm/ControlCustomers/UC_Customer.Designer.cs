@@ -216,6 +216,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.txbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbEmail.HoverState.Parent = this.txbEmail;
             this.txbEmail.Location = new System.Drawing.Point(617, 71);
+            this.txbEmail.MaxLength = 50;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.PasswordChar = '\0';
             this.txbEmail.PlaceholderText = "Email";
@@ -265,6 +266,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
             this.txtName.Location = new System.Drawing.Point(52, 71);
+            this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Tên khách hàng";
@@ -368,16 +370,18 @@ namespace RJCodeAdvance.ControlCustomers
             // nbDiemTT
             // 
             this.nbDiemTT.BackColor = System.Drawing.Color.Transparent;
-            this.nbDiemTT.BorderRadius = 3;
+            this.nbDiemTT.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.nbDiemTT.BorderRadius = 6;
             this.nbDiemTT.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nbDiemTT.DisabledState.Parent = this.nbDiemTT;
             this.nbDiemTT.FocusedState.Parent = this.nbDiemTT;
             this.nbDiemTT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nbDiemTT.ForeColor = System.Drawing.Color.Black;
+            this.nbDiemTT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.nbDiemTT.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.nbDiemTT.Location = new System.Drawing.Point(620, 150);
             this.nbDiemTT.Name = "nbDiemTT";
             this.nbDiemTT.ShadowDecoration.Parent = this.nbDiemTT;
-            this.nbDiemTT.Size = new System.Drawing.Size(100, 31);
+            this.nbDiemTT.Size = new System.Drawing.Size(327, 35);
             this.nbDiemTT.TabIndex = 147;
             // 
             // guna2Elipse2
@@ -410,6 +414,7 @@ namespace RJCodeAdvance.ControlCustomers
             this.btDanhSach.TabIndex = 148;
             this.btDanhSach.Text = "Danh Sách";
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
+            this.btDanhSach.Click += new System.EventHandler(this.btDanhSach_Click);
             // 
             // UC_Customer
             // 

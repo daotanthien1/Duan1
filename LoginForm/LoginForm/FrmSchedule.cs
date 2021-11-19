@@ -34,7 +34,7 @@ namespace RJCodeAdvance
         private void F2_UpdateEventHandler(object sender, FrmShift.UpdateEventArgs args)
         {
             cbCaLam.DataSource = schedules.getDataId();
-            cbCaLam.DisplayMember = "Id_shift";
+            cbCaLam.DisplayMember = "name";
             cbCaLam.ValueMember = "Id_shift";
         }
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace RJCodeAdvance
             cbTenNhanVien.ValueMember = "Id_employee";
 
             cbCaLam.DataSource = schedules.getDataId();
-            cbCaLam.DisplayMember = "Id_shift";
+            cbCaLam.DisplayMember = "name";
             cbCaLam.ValueMember = "Id_shift";
 
             cbSearch.DataSource = schedules.getDataName();
@@ -148,7 +148,7 @@ namespace RJCodeAdvance
 
                 label1.Text = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
                 cbTenNhanVien.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
-                cbCaLam.Text = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
+                cbCaLam.SelectedValue = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
                 string day = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString();
                 if (day.Contains("2"))
                 {

@@ -136,6 +136,7 @@ namespace RJCodeAdvance
             this.txtThoiGianKetThuc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThoiGianKetThuc.HoverState.Parent = this.txtThoiGianKetThuc;
             this.txtThoiGianKetThuc.Location = new System.Drawing.Point(507, 141);
+            this.txtThoiGianKetThuc.MaxLength = 50;
             this.txtThoiGianKetThuc.Name = "txtThoiGianKetThuc";
             this.txtThoiGianKetThuc.PasswordChar = '\0';
             this.txtThoiGianKetThuc.PlaceholderText = "nhập thời gian kết thúc";
@@ -163,6 +164,7 @@ namespace RJCodeAdvance
             this.txtThoiGianBatDau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThoiGianBatDau.HoverState.Parent = this.txtThoiGianBatDau;
             this.txtThoiGianBatDau.Location = new System.Drawing.Point(507, 67);
+            this.txtThoiGianBatDau.MaxLength = 50;
             this.txtThoiGianBatDau.Name = "txtThoiGianBatDau";
             this.txtThoiGianBatDau.PasswordChar = '\0';
             this.txtThoiGianBatDau.PlaceholderText = "nhập thời gian bắt đầu";
@@ -223,6 +225,7 @@ namespace RJCodeAdvance
             this.txtTenCa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenCa.HoverState.Parent = this.txtTenCa;
             this.txtTenCa.Location = new System.Drawing.Point(29, 65);
+            this.txtTenCa.MaxLength = 50;
             this.txtTenCa.Name = "txtTenCa";
             this.txtTenCa.PasswordChar = '\0';
             this.txtTenCa.PlaceholderText = "nhập tên ca";
@@ -454,7 +457,7 @@ namespace RJCodeAdvance
             // btDanhSacch
             // 
             this.btDanhSacch.Animated = true;
-            this.btDanhSacch.BorderColor = System.Drawing.Color.White;
+            this.btDanhSacch.BorderColor = System.Drawing.Color.BlueViolet;
             this.btDanhSacch.BorderRadius = 6;
             this.btDanhSacch.BorderThickness = 1;
             this.btDanhSacch.CheckedState.Parent = this.btDanhSacch;

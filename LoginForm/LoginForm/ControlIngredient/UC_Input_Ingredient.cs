@@ -33,13 +33,21 @@ namespace RJCodeAdvance.ControlIngredient
         // load data to combobox
         void loadData()
         {
+            int idtype;
             cbLoaiNguyenLieu.DisplayMember = "Name";
             cbLoaiNguyenLieu.ValueMember = "Id_type";
             cbLoaiNguyenLieu.DataSource = input.getTypeIngredientForInputBillDetail();
-
+            if (cbLoaiNguyenLieu.Items.Count == 0)
+            {
+                idtype = 0;
+            }
+            else
+            {
+                idtype = int.Parse(cbLoaiNguyenLieu.SelectedValue.ToString());
+            }
             cbName.DisplayMember = "Name";
             cbName.ValueMember = "Id_ingredient";
-            cbName.DataSource = input.getNameIngredientForInputBillDetail(int.Parse(cbLoaiNguyenLieu.SelectedValue.ToString()));
+            cbName.DataSource = input.getNameIngredientForInputBillDetail(idtype);
         }
         private DataTable dt = new DataTable();
         //load data bill to datafridview
@@ -98,15 +106,22 @@ namespace RJCodeAdvance.ControlIngredient
             cbLoaiNguyenLieu.DisplayMember = "Name";
             cbLoaiNguyenLieu.ValueMember = "Id_type";
             cbLoaiNguyenLieu.DataSource = input.getTypeIngredientForInputBillDetail();
-            loadPrice();
         }
         // click vào combobox thì load lại data
         private void cbName_Click_1(object sender, EventArgs e)
         {
+            int idtype;
+            if (cbLoaiNguyenLieu.Items.Count == 0)
+            {
+                idtype = 0;
+            }
+            else
+            {
+                idtype = int.Parse(cbLoaiNguyenLieu.SelectedValue.ToString());
+            }
             cbName.DisplayMember = "Name";
             cbName.ValueMember = "Id_ingredient";
-            cbName.DataSource = input.getNameIngredientForInputBillDetail(int.Parse(cbLoaiNguyenLieu.SelectedValue.ToString()));
-            loadPrice();
+            cbName.DataSource = input.getNameIngredientForInputBillDetail(idtype);
         }
         // click vào nbSoLuong thì load thành tiền
         private void nbSoLuong_Click_2(object sender, EventArgs e)
@@ -121,9 +136,30 @@ namespace RJCodeAdvance.ControlIngredient
 
             if (check)
             {
-                DataTable price = input.PriceInputBill(int.Parse(cbName.SelectedValue.ToString()), int.Parse(nbSoLuong.Text));
-                dataGridView1.DataSource = price;
-                txtThanhTien.Text = dataGridView1.Rows[0].Cells[0].Value.ToString();
+                if(cbName.Items.Count == 0)
+                {
+                    MessageBox.Show("Nhà cung cấp này chưa cung cấp sản phẩm\nVui lòng chọn nhà sản phẩn khác");
+                    DataTable price = input.PriceInputBill(9999, int.Parse(nbSoLuong.Text));
+                    foreach(DataRow item in price.Rows)
+                    {
+                        if(item[0].ToString() == "")
+                        {
+                            item[0] = "0";
+                        }
+                        txtThanhTien.Text = ""+item[0].ToString();
+                    }
+                }
+                else
+                {
+                    DataTable price = input.PriceInputBill(int.Parse(cbName.SelectedValue.ToString()), int.Parse(nbSoLuong.Text));
+                    foreach (DataRow item in price.Rows)
+                    {
+                        if (item[0].ToString() != "")
+                        {
+                            txtThanhTien.Text = "" + item[0].ToString();
+                        }
+                    }
+                }
             }
             else
             {
@@ -131,7 +167,7 @@ namespace RJCodeAdvance.ControlIngredient
             }
         }
         BUS_InputBills bill = new BUS_InputBills();
-        public static string mail = "tungnh230802@gmail.com";
+        public static string mail = "tranvantiep0805@gmail.com";
         // thanh toán
         private void btThanhToan_Click(object sender, EventArgs e)
         {

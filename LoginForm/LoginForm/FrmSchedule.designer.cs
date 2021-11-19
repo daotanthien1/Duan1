@@ -597,7 +597,7 @@ namespace RJCodeAdvance
             // btDanhSacch
             // 
             this.btDanhSacch.Animated = true;
-            this.btDanhSacch.BorderColor = System.Drawing.Color.White;
+            this.btDanhSacch.BorderColor = System.Drawing.Color.BlueViolet;
             this.btDanhSacch.BorderRadius = 6;
             this.btDanhSacch.BorderThickness = 1;
             this.btDanhSacch.CheckedState.Parent = this.btDanhSacch;

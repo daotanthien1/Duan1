@@ -88,13 +88,9 @@ namespace RJCodeAdvance
             this.cbSale.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbSale.FocusedState.Parent = this.cbSale;
             this.cbSale.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbSale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbSale.ForeColor = System.Drawing.Color.BlueViolet;
             this.cbSale.HoverState.Parent = this.cbSale;
             this.cbSale.ItemHeight = 30;
-            this.cbSale.Items.AddRange(new object[] {
-            "20%",
-            "50%",
-            "100%"});
             this.cbSale.ItemsAppearance.Parent = this.cbSale;
             this.cbSale.Location = new System.Drawing.Point(165, 168);
             this.cbSale.Name = "cbSale";
@@ -158,6 +154,7 @@ namespace RJCodeAdvance
             this.guna2ToggleSwitch1.UncheckedState.InnerBorderColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2ToggleSwitch1.UncheckedState.InnerColor = System.Drawing.Color.DeepSkyBlue;
             this.guna2ToggleSwitch1.UncheckedState.Parent = this.guna2ToggleSwitch1;
+            this.guna2ToggleSwitch1.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged);
             // 
             // guna2Button5
             // 
@@ -188,12 +185,13 @@ namespace RJCodeAdvance
             // nbDiemYeuCau
             // 
             this.nbDiemYeuCau.BackColor = System.Drawing.Color.Transparent;
-            this.nbDiemYeuCau.BorderRadius = 16;
+            this.nbDiemYeuCau.BorderColor = System.Drawing.Color.BlueViolet;
+            this.nbDiemYeuCau.BorderRadius = 6;
             this.nbDiemYeuCau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.nbDiemYeuCau.DisabledState.Parent = this.nbDiemYeuCau;
             this.nbDiemYeuCau.FocusedState.Parent = this.nbDiemYeuCau;
             this.nbDiemYeuCau.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.nbDiemYeuCau.ForeColor = System.Drawing.Color.Black;
+            this.nbDiemYeuCau.ForeColor = System.Drawing.Color.BlueViolet;
             this.nbDiemYeuCau.Location = new System.Drawing.Point(165, 120);
             this.nbDiemYeuCau.Name = "nbDiemYeuCau";
             this.nbDiemYeuCau.ShadowDecoration.Parent = this.nbDiemYeuCau;

@@ -11,6 +11,18 @@ namespace DTO_QuanLy
         private string timeBegin;
         private string timeEnd;
         private int id_Shifts;
+        private string name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
         public string TimeBegin
         {
             get
@@ -19,7 +31,7 @@ namespace DTO_QuanLy
             }
             set
             {
-               timeBegin = value;
+                timeBegin = value;
             }
         }
         public string TimeEnd
@@ -50,8 +62,13 @@ namespace DTO_QuanLy
             this.timeBegin = timebegin;
             this.timeEnd = timeend;
         }
-
-        public DTO_CaLamViec(int v)
+        public DTO_CaLamViec(string name, string timebegin, string timeend)
+        {
+            this.name = name;
+            this.timeBegin = timebegin;
+            this.timeEnd = timeend;
+        }
+        public DTO_CaLamViec(string v)
         {
         }
     }

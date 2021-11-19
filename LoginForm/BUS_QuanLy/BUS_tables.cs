@@ -12,6 +12,10 @@ namespace BUS_QuanLy
     public class BUS_tables
     {
         DAL_tables Dal_tables = new DAL_tables();
+        public bool SwitchTable(int idTable1, int idTable2, int idEmployee)
+        {
+            return Dal_tables.SwitchTable(idTable1, idTable2, idEmployee);
+        }
 
         public DTO_tables getTable(int idTable)
         {

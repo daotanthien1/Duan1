@@ -42,7 +42,7 @@ namespace DAL_QuanLy
                 cmd.CommandText = "InsertDataShifts";
                 cmd.Parameters.AddWithValue("TimeBegin", shifts.TimeBegin);
                 cmd.Parameters.AddWithValue("TimeEnd", shifts.TimeEnd);
-                cmd.Parameters.AddWithValue("Id_shift", shifts.Id_Shifts);
+                cmd.Parameters.AddWithValue("name", shifts.Name);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -95,7 +95,7 @@ namespace DAL_QuanLy
             return false;
         }
         // tìm ca làm việc
-        public DataTable SearchShift(int id)
+        public DataTable SearchShift(string name)
         {
             try
             {
@@ -104,7 +104,7 @@ namespace DAL_QuanLy
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "SearchDataShifts";
-                cmd.Parameters.AddWithValue("Id_shift", id);
+                cmd.Parameters.AddWithValue("name", name);
                 DataTable dtShifts = new DataTable();
                 dtShifts.Load(cmd.ExecuteReader());
                 return dtShifts;

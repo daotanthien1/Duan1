@@ -18,7 +18,7 @@ namespace RJCodeAdvance.ControlVouchers
         {
             InitializeComponent();
         }
-        public static string mail = "tungnh230802@gmail.com";
+        public static string mail = "tranvantiep0805@gmail.com";
         public string id;
         BUS_Vouchers vouchers = new BUS_Vouchers();
         private void F2_UpdateEventHandler(object sender, FrmVoucherType.UpdateEventArgs args)
@@ -46,17 +46,19 @@ namespace RJCodeAdvance.ControlVouchers
         private void UC_Voucher_Load(object sender, EventArgs e)
         {
             loadData();
-            guna2DataGridView1.DataSource = vouchers.getData();
+            txtSoLuong.DataSource = vouchers.getData();
+            txtSoLuong.Columns[4].Visible = false;
+
         }
         // load data
         void loadData()
         {
-            guna2DataGridView1.DataSource = vouchers.getData();
-            guna2DataGridView1.Columns[0].HeaderText = "Mã voucher";
-            guna2DataGridView1.Columns[1].HeaderText = "Ngày bắt đầu";
-            guna2DataGridView1.Columns[2].HeaderText = "Ngày kết thúc";
-            guna2DataGridView1.Columns[3].HeaderText = "Khuyến mãi";
-            guna2DataGridView1.Columns[4].HeaderText = "Ghi chú";
+            txtSoLuong.DataSource = vouchers.getData();
+            txtSoLuong.Columns[0].HeaderText = "Mã voucher";
+            txtSoLuong.Columns[1].HeaderText = "Ngày bắt đầu";
+            txtSoLuong.Columns[2].HeaderText = "Ngày kết thúc";
+            txtSoLuong.Columns[3].HeaderText = "Khuyến mãi";
+            txtSoLuong.Columns[4].HeaderText = "Ghi chú";
 
             cbSale.DisplayMember = "Sale";
             cbSale.ValueMember = "ID_Type";
@@ -68,20 +70,20 @@ namespace RJCodeAdvance.ControlVouchers
         }
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (guna2DataGridView1.Rows.Count > 0)
+            if (txtSoLuong.Rows.Count > 0)
             {
                 guna2Button3.Enabled = true;
                 guna2Button5.Enabled = false;
-                dayStart.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
-                dayEnd.Text = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString();
-                cbSale.Text = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
-                string status = guna2DataGridView1.CurrentRow.Cells[4].Value.ToString();
-                id = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
+                dayStart.Text = txtSoLuong.CurrentRow.Cells[1].Value.ToString();
+                dayEnd.Text = txtSoLuong.CurrentRow.Cells[2].Value.ToString();
+                cbSale.SelectedValue = txtSoLuong.CurrentRow.Cells[5].Value.ToString();
+                string status = txtSoLuong.CurrentRow.Cells[4].Value.ToString();
+                id = txtSoLuong.CurrentRow.Cells[0].Value.ToString();
                 int value = int.Parse(cbSale.SelectedValue.ToString());
                 DataTable counts = vouchers.getCountSaleVoucher(value);
                 txtSoLuong.Text = counts.Rows[0][0].ToString();
                 txtThem.ResetText();
-                if(int.Parse(status) == 0)
+                if(int.Parse(status) == 1)
                 {
                     rdDung.Checked = true;
                 }
@@ -146,11 +148,11 @@ namespace RJCodeAdvance.ControlVouchers
             DataTable voucher = vouchers.searchDataVoucher(id);
             if (voucher.Rows.Count > 0)
             {
-                guna2DataGridView1.DataSource = voucher;
-                guna2DataGridView1.Columns[0].HeaderText = "Mã voucher";
-                guna2DataGridView1.Columns[1].HeaderText = "Ngày bắt đầu";
-                guna2DataGridView1.Columns[2].HeaderText = "Ngày kết thúc";
-                guna2DataGridView1.Columns[3].HeaderText = "Khuyến mãi";
+                txtSoLuong.DataSource = voucher;
+                txtSoLuong.Columns[0].HeaderText = "Mã voucher";
+                txtSoLuong.Columns[1].HeaderText = "Ngày bắt đầu";
+                txtSoLuong.Columns[2].HeaderText = "Ngày kết thúc";
+                txtSoLuong.Columns[3].HeaderText = "Khuyến mãi";
                 DataTable number = vouchers.getCountSaleVoucher(id);
                 txtSoLuong.Text = number.Rows[0][0].ToString();
                 txtThem.ResetText();
@@ -190,6 +192,11 @@ namespace RJCodeAdvance.ControlVouchers
             cbSearch.ResetText();
             txtSoLuong.ResetText();
             txtThem.ResetText();
+        }
+
+        private void guna2NumericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

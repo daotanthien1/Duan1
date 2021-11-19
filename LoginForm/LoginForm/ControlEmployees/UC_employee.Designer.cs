@@ -39,7 +39,6 @@ namespace RJCodeAdvance.ControlEmployees
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtLuong = new Guna.UI2.WinForms.Guna2TextBox();
             this.cbVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,8 +60,13 @@ namespace RJCodeAdvance.ControlEmployees
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btDanhSach = new Guna.UI2.WinForms.Guna2Button();
             this.Id_emloyee = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.isDelete = new System.Windows.Forms.Label();
+=======
+            this.nbLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
+>>>>>>> 397230a3185e2f53aff224e472e07885515e2796
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTenNhanVien
@@ -84,6 +88,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtTenNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenNhanVien.HoverState.Parent = this.txtTenNhanVien;
             this.txtTenNhanVien.Location = new System.Drawing.Point(34, 57);
+            this.txtTenNhanVien.MaxLength = 50;
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.PasswordChar = '\0';
             this.txtTenNhanVien.PlaceholderText = "Tên nhân viên";
@@ -135,34 +140,6 @@ namespace RJCodeAdvance.ControlEmployees
             this.label4.Size = new System.Drawing.Size(67, 16);
             this.label4.TabIndex = 61;
             this.label4.Text = "Giới tính:";
-            // 
-            // txtLuong
-            // 
-            this.txtLuong.Animated = true;
-            this.txtLuong.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtLuong.BorderRadius = 16;
-            this.txtLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLuong.DefaultText = "";
-            this.txtLuong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLuong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLuong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLuong.DisabledState.Parent = this.txtLuong;
-            this.txtLuong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLuong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLuong.FocusedState.Parent = this.txtLuong;
-            this.txtLuong.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtLuong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLuong.HoverState.Parent = this.txtLuong;
-            this.txtLuong.Location = new System.Drawing.Point(34, 119);
-            this.txtLuong.Name = "txtLuong";
-            this.txtLuong.PasswordChar = '\0';
-            this.txtLuong.PlaceholderText = "Lương";
-            this.txtLuong.SelectedText = "";
-            this.txtLuong.ShadowDecoration.Parent = this.txtLuong;
-            this.txtLuong.Size = new System.Drawing.Size(346, 36);
-            this.txtLuong.TabIndex = 62;
-            this.txtLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLuong_KeyPress);
             // 
             // cbVaiTro
             // 
@@ -240,6 +217,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.HoverState.Parent = this.txtEmail;
             this.txtEmail.Location = new System.Drawing.Point(605, 57);
+            this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "Tên nhân viên";
@@ -267,6 +245,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.HoverState.Parent = this.txtDiaChi;
             this.txtDiaChi.Location = new System.Drawing.Point(605, 119);
+            this.txtDiaChi.MaxLength = 50;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "Tên nhân viên";
@@ -321,6 +300,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
             this.txtTimKiem.Location = new System.Drawing.Point(371, 542);
+            this.txtTimKiem.MaxLength = 50;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderText = "Nhập tên nhân viên cần tìm";
@@ -627,6 +607,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.Id_emloyee.Size = new System.Drawing.Size(0, 13);
             this.Id_emloyee.TabIndex = 118;
             // 
+<<<<<<< HEAD
             // isDelete
             // 
             this.isDelete.AutoSize = true;
@@ -635,14 +616,41 @@ namespace RJCodeAdvance.ControlEmployees
             this.isDelete.Size = new System.Drawing.Size(0, 13);
             this.isDelete.TabIndex = 119;
             this.isDelete.Visible = false;
+=======
+            // nbLuong
+            // 
+            this.nbLuong.BackColor = System.Drawing.Color.Transparent;
+            this.nbLuong.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.nbLuong.BorderRadius = 6;
+            this.nbLuong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nbLuong.DisabledState.Parent = this.nbLuong;
+            this.nbLuong.FocusedState.Parent = this.nbLuong;
+            this.nbLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nbLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.nbLuong.Location = new System.Drawing.Point(40, 120);
+            this.nbLuong.Maximum = new decimal(new int[] {
+            100000000,
+            0,
+            0,
+            0});
+            this.nbLuong.Name = "nbLuong";
+            this.nbLuong.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.nbLuong.ShadowDecoration.Parent = this.nbLuong;
+            this.nbLuong.Size = new System.Drawing.Size(340, 36);
+            this.nbLuong.TabIndex = 119;
+>>>>>>> 397230a3185e2f53aff224e472e07885515e2796
             // 
             // UC_employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1096, 651);
             this.Controls.Add(this.isDelete);
+=======
+            this.Controls.Add(this.nbLuong);
+>>>>>>> 397230a3185e2f53aff224e472e07885515e2796
             this.Controls.Add(this.Id_emloyee);
             this.Controls.Add(this.btDanhSach);
             this.Controls.Add(this.btnThemVaitro);
@@ -662,7 +670,6 @@ namespace RJCodeAdvance.ControlEmployees
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbVaiTro);
-            this.Controls.Add(this.txtLuong);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -670,8 +677,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UC_employee";
+            this.Size = new System.Drawing.Size(1096, 651);
             this.Load += new System.EventHandler(this.UC_employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nbLuong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -683,7 +692,6 @@ namespace RJCodeAdvance.ControlEmployees
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtLuong;
         private Guna.UI2.WinForms.Guna2ComboBox cbVaiTro;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -705,6 +713,10 @@ namespace RJCodeAdvance.ControlEmployees
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btDanhSach;
         private System.Windows.Forms.Label Id_emloyee;
+<<<<<<< HEAD
         private System.Windows.Forms.Label isDelete;
+=======
+        private Guna.UI2.WinForms.Guna2NumericUpDown nbLuong;
+>>>>>>> 397230a3185e2f53aff224e472e07885515e2796
     }
 }
