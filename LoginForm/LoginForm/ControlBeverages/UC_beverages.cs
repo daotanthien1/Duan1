@@ -33,6 +33,8 @@ namespace RJCodeAdvance.ControlBeverages
             ResetValue();
             loadComBoBox();
             loadDGV();
+            cbbFilterCol.SelectedIndex = 0;
+            
         }
         BUS_Beverage busBe = new BUS_Beverage();
         void ResetValue()
@@ -99,11 +101,12 @@ namespace RJCodeAdvance.ControlBeverages
             dgvBeverage.Columns[2].HeaderText = "Id_Type";
             dgvBeverage.Columns[3].HeaderText = "Id_beverage";
             dgvBeverage.Columns[4].HeaderText = "Image";
+            dgvBeverage.Columns[5].Visible = false;
             dgvBeverage.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         void loadComBoBox()
         {
-            cbDoUong.DataSource = busBe.getBeverageType();        
+            cbDoUong.DataSource = busBe.getBeverageType();
             cbDoUong.DisplayMember = "Name";
             cbDoUong.ValueMember = "id_type";
             //cbDoUong.AutoCompleteSource = AutoCompleteSource.ListItems;
@@ -274,7 +277,8 @@ namespace RJCodeAdvance.ControlBeverages
         private void btTimKiem_Click(object sender, EventArgs e)
         {
             string tenHang = txtSearchDoUong.Text;
-            DataTable ds = busBe.SearchDoUong(tenHang);
+            string tenCot = cbbFilterCol.Text;
+            DataTable ds = busBe.SearchDoUong(tenHang,tenCot);
             if (ds.Rows.Count > 0)
             {
                 dgvBeverage.DataSource = ds;
@@ -302,6 +306,45 @@ namespace RJCodeAdvance.ControlBeverages
         private void btDanhSach_Click(object sender, EventArgs e)
         {
             loadDGV();
+        }
+
+        private void txtSearchDoUong_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btTimKiem_Click(sender, e);
+            }
+
+        }
+
+        private void btDanhSach_Click_1(object sender, EventArgs e)
+        {
+            loadDGV();
+        }
+
+        private void cbbFilterCol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+         
+            if (cbbFilterCol.SelectedIndex == 0)
+            {
+                txtSearchDoUong.PlaceholderText = "Nhập tên đồ uống cần tìm";
+            }
+            if (cbbFilterCol.SelectedIndex == 1)
+            {
+                txtSearchDoUong.PlaceholderText = "Nhập giá đồ uống cần tìm";
+            }
+            if (cbbFilterCol.SelectedIndex == 2)
+            {
+                txtSearchDoUong.PlaceholderText = "Nhập loại sản phẩm cần tìm";
+            }
+            if (cbbFilterCol.SelectedIndex == 3)
+            {
+                txtSearchDoUong.PlaceholderText = "Nhập id đồ uống cần tìm";
+            }
+            if (cbbFilterCol.SelectedIndex == 4)
+            {
+                txtSearchDoUong.PlaceholderText = "Nhập đường dẫn hình cần tìm";
+            }
         }
     }
 }

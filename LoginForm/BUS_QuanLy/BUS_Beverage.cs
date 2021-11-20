@@ -36,9 +36,9 @@ namespace BUS_QuanLy
         {
             return quanLyDoUong.DeleteDoUong(id);
         }
-        public DataTable SearchDoUong(string name)
+        public DataTable SearchDoUong(string name,string col)
         {
-            return quanLyDoUong.SearchDoUong(name);
+            return quanLyDoUong.SearchDoUong(name, col);
         }
         public DataTable getBeverage()
         {

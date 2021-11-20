@@ -106,5 +106,15 @@ namespace RJCodeAdvance.Properties {
                 this["voucheTypeName"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=vanthanh\\vanthanh;Initial Catalog=DuAn1;Integrated Security=True")]
+        public string DuAn1ConnectionString {
+            get {
+                return ((string)(this["DuAn1ConnectionString"]));
+            }
+        }
     }
 }

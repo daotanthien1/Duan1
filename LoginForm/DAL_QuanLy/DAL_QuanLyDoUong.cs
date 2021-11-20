@@ -119,7 +119,7 @@ namespace DAL_QuanLy
             return false;
         }
 
-        public DataTable SearchDoUong(string name)
+        public DataTable SearchDoUong(string name, string col)
         {
             try
             {
@@ -128,6 +128,7 @@ namespace DAL_QuanLy
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "sp_BeverageSearch";
                 cmd.Parameters.AddWithValue("Name", name);
+                cmd.Parameters.AddWithValue("col", col);
                 cmd.Connection = _conn;
                 DataTable dtDoUong = new DataTable();
                 dtDoUong.Load(cmd.ExecuteReader());

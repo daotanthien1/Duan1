@@ -50,7 +50,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtSearchDoUong = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.nbGia = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cbbFilterCol = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btDanhSach = new Guna.UI2.WinForms.Guna2Button();
             this.bntLoaiDoUong = new Guna.UI2.WinForms.Guna2Button();
             this.btFile = new Guna.UI2.WinForms.Guna2Button();
@@ -98,14 +98,14 @@ namespace RJCodeAdvance.ControlBeverages
             this.dgvBeverage.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBeverage.EnableHeadersVisualStyles = false;
             this.dgvBeverage.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvBeverage.Location = new System.Drawing.Point(48, 317);
-            this.dgvBeverage.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvBeverage.Location = new System.Drawing.Point(64, 390);
+            this.dgvBeverage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvBeverage.Name = "dgvBeverage";
             this.dgvBeverage.RowHeadersVisible = false;
             this.dgvBeverage.RowHeadersWidth = 51;
             this.dgvBeverage.RowTemplate.Height = 24;
             this.dgvBeverage.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBeverage.Size = new System.Drawing.Size(1023, 270);
+            this.dgvBeverage.Size = new System.Drawing.Size(1364, 332);
             this.dgvBeverage.TabIndex = 81;
             this.dgvBeverage.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvBeverage.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -150,10 +150,11 @@ namespace RJCodeAdvance.ControlBeverages
             "Trà đào",
             "Trà tắc"});
             this.cbDoUong.ItemsAppearance.Parent = this.cbDoUong;
-            this.cbDoUong.Location = new System.Drawing.Point(445, 77);
+            this.cbDoUong.Location = new System.Drawing.Point(593, 95);
+            this.cbDoUong.Margin = new System.Windows.Forms.Padding(4);
             this.cbDoUong.Name = "cbDoUong";
             this.cbDoUong.ShadowDecoration.Parent = this.cbDoUong;
-            this.cbDoUong.Size = new System.Drawing.Size(181, 36);
+            this.cbDoUong.Size = new System.Drawing.Size(240, 36);
             this.cbDoUong.TabIndex = 2;
             this.cbDoUong.Click += new System.EventHandler(this.cbDoUong_Click);
             // 
@@ -175,14 +176,15 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtHinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtHinh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHinh.HoverState.Parent = this.txtHinh;
-            this.txtHinh.Location = new System.Drawing.Point(445, 154);
+            this.txtHinh.Location = new System.Drawing.Point(593, 190);
+            this.txtHinh.Margin = new System.Windows.Forms.Padding(4);
             this.txtHinh.Name = "txtHinh";
             this.txtHinh.PasswordChar = '\0';
             this.txtHinh.PlaceholderText = "Hình";
             this.txtHinh.ReadOnly = true;
             this.txtHinh.SelectedText = "";
             this.txtHinh.ShadowDecoration.Parent = this.txtHinh;
-            this.txtHinh.Size = new System.Drawing.Size(315, 36);
+            this.txtHinh.Size = new System.Drawing.Size(420, 44);
             this.txtHinh.TabIndex = 3;
             // 
             // txtTenDoUong
@@ -203,14 +205,15 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtTenDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTenDoUong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDoUong.HoverState.Parent = this.txtTenDoUong;
-            this.txtTenDoUong.Location = new System.Drawing.Point(48, 78);
+            this.txtTenDoUong.Location = new System.Drawing.Point(64, 96);
+            this.txtTenDoUong.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenDoUong.MaxLength = 50;
             this.txtTenDoUong.Name = "txtTenDoUong";
             this.txtTenDoUong.PasswordChar = '\0';
             this.txtTenDoUong.PlaceholderText = "Tên đồ uống";
             this.txtTenDoUong.SelectedText = "";
             this.txtTenDoUong.ShadowDecoration.Parent = this.txtTenDoUong;
-            this.txtTenDoUong.Size = new System.Drawing.Size(283, 36);
+            this.txtTenDoUong.Size = new System.Drawing.Size(377, 44);
             this.txtTenDoUong.TabIndex = 0;
             // 
             // label4
@@ -218,9 +221,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label4.Location = new System.Drawing.Point(445, 135);
+            this.label4.Location = new System.Drawing.Point(593, 166);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 16);
+            this.label4.Size = new System.Drawing.Size(56, 21);
             this.label4.TabIndex = 50;
             this.label4.Text = "Hình:";
             // 
@@ -229,9 +233,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(445, 57);
+            this.label3.Location = new System.Drawing.Point(593, 70);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 16);
+            this.label3.Size = new System.Drawing.Size(128, 21);
             this.label3.TabIndex = 49;
             this.label3.Text = "Loại đồ uống:";
             // 
@@ -240,9 +245,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(48, 135);
+            this.label2.Location = new System.Drawing.Point(64, 166);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 16);
+            this.label2.Size = new System.Drawing.Size(44, 21);
             this.label2.TabIndex = 48;
             this.label2.Text = "Giá:";
             // 
@@ -251,9 +257,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(48, 57);
+            this.label1.Location = new System.Drawing.Point(64, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 16);
+            this.label1.Size = new System.Drawing.Size(123, 21);
             this.label1.TabIndex = 47;
             this.label1.Text = "Tên đồ uống:";
             // 
@@ -285,12 +292,13 @@ namespace RJCodeAdvance.ControlBeverages
             this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView2.EnableHeadersVisualStyles = false;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(509, 352);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(679, 433);
+            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.RowHeadersWidth = 51;
             this.guna2DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(8, 8);
+            this.guna2DataGridView2.Size = new System.Drawing.Size(11, 10);
             this.guna2DataGridView2.TabIndex = 66;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -331,15 +339,17 @@ namespace RJCodeAdvance.ControlBeverages
             this.txtSearchDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtSearchDoUong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchDoUong.HoverState.Parent = this.txtSearchDoUong;
-            this.txtSearchDoUong.Location = new System.Drawing.Point(184, 276);
+            this.txtSearchDoUong.Location = new System.Drawing.Point(245, 340);
+            this.txtSearchDoUong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchDoUong.MaxLength = 50;
             this.txtSearchDoUong.Name = "txtSearchDoUong";
             this.txtSearchDoUong.PasswordChar = '\0';
             this.txtSearchDoUong.PlaceholderText = "Nhập tên đồ uống cần tìm";
             this.txtSearchDoUong.SelectedText = "";
             this.txtSearchDoUong.ShadowDecoration.Parent = this.txtSearchDoUong;
-            this.txtSearchDoUong.Size = new System.Drawing.Size(228, 36);
+            this.txtSearchDoUong.Size = new System.Drawing.Size(304, 44);
             this.txtSearchDoUong.TabIndex = 4;
+            this.txtSearchDoUong.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearchDoUong_KeyDown);
             // 
             // guna2Elipse1
             // 
@@ -356,7 +366,8 @@ namespace RJCodeAdvance.ControlBeverages
             this.nbGia.FocusedState.Parent = this.nbGia;
             this.nbGia.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nbGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.nbGia.Location = new System.Drawing.Point(51, 154);
+            this.nbGia.Location = new System.Drawing.Point(68, 190);
+            this.nbGia.Margin = new System.Windows.Forms.Padding(4);
             this.nbGia.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -364,34 +375,38 @@ namespace RJCodeAdvance.ControlBeverages
             0});
             this.nbGia.Name = "nbGia";
             this.nbGia.ShadowDecoration.Parent = this.nbGia;
-            this.nbGia.Size = new System.Drawing.Size(280, 36);
+            this.nbGia.Size = new System.Drawing.Size(373, 44);
             this.nbGia.TabIndex = 118;
             // 
-            // guna2ComboBox1
+            // cbbFilterCol
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.guna2ComboBox1.BorderRadius = 16;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
-            "Trà sửa chân châu",
-            "Trà đào",
-            "Trà tắc"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(890, 276);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(181, 36);
-            this.guna2ComboBox1.TabIndex = 119;
+            this.cbbFilterCol.BackColor = System.Drawing.Color.Transparent;
+            this.cbbFilterCol.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.cbbFilterCol.BorderRadius = 16;
+            this.cbbFilterCol.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbFilterCol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbFilterCol.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbFilterCol.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbFilterCol.FocusedState.Parent = this.cbbFilterCol;
+            this.cbbFilterCol.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbbFilterCol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.cbbFilterCol.FormattingEnabled = true;
+            this.cbbFilterCol.HoverState.Parent = this.cbbFilterCol;
+            this.cbbFilterCol.ItemHeight = 30;
+            this.cbbFilterCol.Items.AddRange(new object[] {
+            "Name",
+            "Price",
+            "Id_type",
+            "Id_beverage",
+            "Image"});
+            this.cbbFilterCol.ItemsAppearance.Parent = this.cbbFilterCol;
+            this.cbbFilterCol.Location = new System.Drawing.Point(1187, 340);
+            this.cbbFilterCol.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbFilterCol.Name = "cbbFilterCol";
+            this.cbbFilterCol.ShadowDecoration.Parent = this.cbbFilterCol;
+            this.cbbFilterCol.Size = new System.Drawing.Size(240, 36);
+            this.cbbFilterCol.TabIndex = 119;
+            this.cbbFilterCol.SelectedIndexChanged += new System.EventHandler(this.cbbFilterCol_SelectedIndexChanged);
             // 
             // btDanhSach
             // 
@@ -412,13 +427,15 @@ namespace RJCodeAdvance.ControlBeverages
             this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
             this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btDanhSach.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btDanhSach.Location = new System.Drawing.Point(779, 592);
+            this.btDanhSach.Location = new System.Drawing.Point(1039, 729);
+            this.btDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.btDanhSach.Name = "btDanhSach";
             this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
-            this.btDanhSach.Size = new System.Drawing.Size(128, 45);
+            this.btDanhSach.Size = new System.Drawing.Size(171, 55);
             this.btDanhSach.TabIndex = 117;
             this.btDanhSach.Text = "Danh Sách";
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
+            this.btDanhSach.Click += new System.EventHandler(this.btDanhSach_Click_1);
             // 
             // bntLoaiDoUong
             // 
@@ -439,10 +456,11 @@ namespace RJCodeAdvance.ControlBeverages
             this.bntLoaiDoUong.HoverState.Parent = this.bntLoaiDoUong;
             this.bntLoaiDoUong.Image = ((System.Drawing.Image)(resources.GetObject("bntLoaiDoUong.Image")));
             this.bntLoaiDoUong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.bntLoaiDoUong.Location = new System.Drawing.Point(632, 77);
+            this.bntLoaiDoUong.Location = new System.Drawing.Point(843, 95);
+            this.bntLoaiDoUong.Margin = new System.Windows.Forms.Padding(4);
             this.bntLoaiDoUong.Name = "bntLoaiDoUong";
             this.bntLoaiDoUong.ShadowDecoration.Parent = this.bntLoaiDoUong;
-            this.bntLoaiDoUong.Size = new System.Drawing.Size(128, 37);
+            this.bntLoaiDoUong.Size = new System.Drawing.Size(171, 46);
             this.bntLoaiDoUong.TabIndex = 84;
             this.bntLoaiDoUong.Text = "Thêm";
             this.bntLoaiDoUong.Click += new System.EventHandler(this.bntLoaiDoUong_Click);
@@ -467,10 +485,11 @@ namespace RJCodeAdvance.ControlBeverages
             this.btFile.HoverState.Parent = this.btFile;
             this.btFile.Image = ((System.Drawing.Image)(resources.GetObject("btFile.Image")));
             this.btFile.ImageSize = new System.Drawing.Size(35, 35);
-            this.btFile.Location = new System.Drawing.Point(880, 57);
+            this.btFile.Location = new System.Drawing.Point(1173, 70);
+            this.btFile.Margin = new System.Windows.Forms.Padding(4);
             this.btFile.Name = "btFile";
             this.btFile.ShadowDecoration.Parent = this.btFile;
-            this.btFile.Size = new System.Drawing.Size(42, 50);
+            this.btFile.Size = new System.Drawing.Size(56, 62);
             this.btFile.TabIndex = 83;
             this.btFile.Click += new System.EventHandler(this.btFile_Click_1);
             // 
@@ -492,10 +511,11 @@ namespace RJCodeAdvance.ControlBeverages
             this.btLuu.HoverState.Parent = this.btLuu;
             this.btLuu.Image = ((System.Drawing.Image)(resources.GetObject("btLuu.Image")));
             this.btLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLuu.Location = new System.Drawing.Point(639, 592);
+            this.btLuu.Location = new System.Drawing.Point(852, 729);
+            this.btLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btLuu.Name = "btLuu";
             this.btLuu.ShadowDecoration.Parent = this.btLuu;
-            this.btLuu.Size = new System.Drawing.Size(128, 45);
+            this.btLuu.Size = new System.Drawing.Size(171, 55);
             this.btLuu.TabIndex = 9;
             this.btLuu.Text = "Lưu";
             this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
@@ -518,10 +538,11 @@ namespace RJCodeAdvance.ControlBeverages
             this.btSua.HoverState.Parent = this.btSua;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua.Location = new System.Drawing.Point(498, 592);
+            this.btSua.Location = new System.Drawing.Point(664, 729);
+            this.btSua.Margin = new System.Windows.Forms.Padding(4);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
-            this.btSua.Size = new System.Drawing.Size(128, 45);
+            this.btSua.Size = new System.Drawing.Size(171, 55);
             this.btSua.TabIndex = 8;
             this.btSua.Text = "Sửa";
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
@@ -544,10 +565,11 @@ namespace RJCodeAdvance.ControlBeverages
             this.btXoa.HoverState.Parent = this.btXoa;
             this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
             this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btXoa.Location = new System.Drawing.Point(358, 592);
+            this.btXoa.Location = new System.Drawing.Point(477, 729);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btXoa.Name = "btXoa";
             this.btXoa.ShadowDecoration.Parent = this.btXoa;
-            this.btXoa.Size = new System.Drawing.Size(128, 45);
+            this.btXoa.Size = new System.Drawing.Size(171, 55);
             this.btXoa.TabIndex = 7;
             this.btXoa.Text = "Xóa";
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
@@ -571,10 +593,11 @@ namespace RJCodeAdvance.ControlBeverages
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(218, 592);
+            this.btThem.Location = new System.Drawing.Point(291, 729);
+            this.btThem.Margin = new System.Windows.Forms.Padding(4);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
-            this.btThem.Size = new System.Drawing.Size(128, 45);
+            this.btThem.Size = new System.Drawing.Size(171, 55);
             this.btThem.TabIndex = 6;
             this.btThem.Text = "Thêm";
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
@@ -598,10 +621,11 @@ namespace RJCodeAdvance.ControlBeverages
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(51, 276);
+            this.btTimKiem.Location = new System.Drawing.Point(68, 340);
+            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
-            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
+            this.btTimKiem.Size = new System.Drawing.Size(169, 44);
             this.btTimKiem.TabIndex = 5;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
@@ -612,20 +636,21 @@ namespace RJCodeAdvance.ControlBeverages
             this.picHinh.BorderRadius = 5;
             this.picHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picHinh.ImageRotate = 0F;
-            this.picHinh.Location = new System.Drawing.Point(943, 57);
+            this.picHinh.Location = new System.Drawing.Point(1257, 70);
+            this.picHinh.Margin = new System.Windows.Forms.Padding(4);
             this.picHinh.Name = "picHinh";
             this.picHinh.ShadowDecoration.Parent = this.picHinh;
-            this.picHinh.Size = new System.Drawing.Size(128, 133);
+            this.picHinh.Size = new System.Drawing.Size(170, 163);
             this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHinh.TabIndex = 55;
             this.picHinh.TabStop = false;
             // 
             // UC_Beverages2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.cbbFilterCol);
             this.Controls.Add(this.nbGia);
             this.Controls.Add(this.btDanhSach);
             this.Controls.Add(this.bntLoaiDoUong);
@@ -646,8 +671,9 @@ namespace RJCodeAdvance.ControlBeverages
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Beverages2";
-            this.Size = new System.Drawing.Size(1096, 651);
+            this.Size = new System.Drawing.Size(1461, 801);
             this.Load += new System.EventHandler(this.UC_Beverages2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBeverage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
@@ -682,6 +708,6 @@ namespace RJCodeAdvance.ControlBeverages
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2Button btDanhSach;
         private Guna.UI2.WinForms.Guna2NumericUpDown nbGia;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbFilterCol;
     }
 }
