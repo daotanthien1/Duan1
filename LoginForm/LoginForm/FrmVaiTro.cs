@@ -30,7 +30,6 @@ namespace RJCodeAdvance
             txtVaiTro.Text = null;
             txtVaiTro.Enabled = true;
             btnLuu.Enabled = true;
-            btnThoat.Enabled = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -155,7 +154,6 @@ namespace RJCodeAdvance
             btnXoa.Enabled = false;
             btnSua.Enabled = false;
             btnLuu.Enabled = false;
-            btnThoat.Enabled = true;
         }
 
         public void ShowData_GridViewVaiTro()

@@ -35,8 +35,6 @@ namespace RJCodeAdvance
             this.txtNhapLaiMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtMatKhauCu = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btDoiMatKhau = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,6 +43,9 @@ namespace RJCodeAdvance
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btThoat = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -60,7 +61,7 @@ namespace RJCodeAdvance
             // 
             // txtEmail
             // 
-            this.txtEmail.BorderColor = System.Drawing.Color.BlueViolet;
+            this.txtEmail.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtEmail.BorderRadius = 16;
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.DefaultText = "";
@@ -72,7 +73,7 @@ namespace RJCodeAdvance
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.FocusedState.Parent = this.txtEmail;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEmail.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.HoverState.Parent = this.txtEmail;
             this.txtEmail.Location = new System.Drawing.Point(38, 106);
@@ -86,7 +87,7 @@ namespace RJCodeAdvance
             // 
             // txtNhapLaiMatKhau
             // 
-            this.txtNhapLaiMatKhau.BorderColor = System.Drawing.Color.BlueViolet;
+            this.txtNhapLaiMatKhau.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtNhapLaiMatKhau.BorderRadius = 16;
             this.txtNhapLaiMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNhapLaiMatKhau.DefaultText = "";
@@ -98,7 +99,7 @@ namespace RJCodeAdvance
             this.txtNhapLaiMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhapLaiMatKhau.FocusedState.Parent = this.txtNhapLaiMatKhau;
             this.txtNhapLaiMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNhapLaiMatKhau.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtNhapLaiMatKhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtNhapLaiMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhapLaiMatKhau.HoverState.Parent = this.txtNhapLaiMatKhau;
             this.txtNhapLaiMatKhau.Location = new System.Drawing.Point(38, 331);
@@ -112,7 +113,7 @@ namespace RJCodeAdvance
             // 
             // txtMatKhauCu
             // 
-            this.txtMatKhauCu.BorderColor = System.Drawing.Color.BlueViolet;
+            this.txtMatKhauCu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtMatKhauCu.BorderRadius = 16;
             this.txtMatKhauCu.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMatKhauCu.DefaultText = "";
@@ -124,7 +125,7 @@ namespace RJCodeAdvance
             this.txtMatKhauCu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatKhauCu.FocusedState.Parent = this.txtMatKhauCu;
             this.txtMatKhauCu.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMatKhauCu.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtMatKhauCu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtMatKhauCu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatKhauCu.HoverState.Parent = this.txtMatKhauCu;
             this.txtMatKhauCu.Location = new System.Drawing.Point(38, 181);
@@ -141,38 +142,9 @@ namespace RJCodeAdvance
             this.guna2Elipse1.BorderRadius = 3;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.DarkOrchid;
-            this.guna2ControlBox2.BorderRadius = 3;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(373, 12);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(37, 26);
-            this.guna2ControlBox2.TabIndex = 77;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.DarkOrchid;
-            this.guna2ControlBox1.BorderRadius = 3;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(416, 12);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(37, 26);
-            this.guna2ControlBox1.TabIndex = 76;
-            // 
             // btDoiMatKhau
             // 
-            this.btDoiMatKhau.BorderColor = System.Drawing.Color.Empty;
+            this.btDoiMatKhau.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btDoiMatKhau.BorderRadius = 6;
             this.btDoiMatKhau.CheckedState.Parent = this.btDoiMatKhau;
             this.btDoiMatKhau.CustomImages.Parent = this.btDoiMatKhau;
@@ -184,7 +156,7 @@ namespace RJCodeAdvance
             this.btDoiMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btDoiMatKhau.ForeColor = System.Drawing.Color.White;
             this.btDoiMatKhau.HoverState.Parent = this.btDoiMatKhau;
-            this.btDoiMatKhau.Location = new System.Drawing.Point(171, 373);
+            this.btDoiMatKhau.Location = new System.Drawing.Point(158, 373);
             this.btDoiMatKhau.Name = "btDoiMatKhau";
             this.btDoiMatKhau.ShadowDecoration.Parent = this.btDoiMatKhau;
             this.btDoiMatKhau.Size = new System.Drawing.Size(114, 35);
@@ -223,7 +195,7 @@ namespace RJCodeAdvance
             // 
             // txtMatKhauMoi
             // 
-            this.txtMatKhauMoi.BorderColor = System.Drawing.Color.BlueViolet;
+            this.txtMatKhauMoi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtMatKhauMoi.BorderRadius = 16;
             this.txtMatKhauMoi.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtMatKhauMoi.DefaultText = "";
@@ -235,7 +207,7 @@ namespace RJCodeAdvance
             this.txtMatKhauMoi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatKhauMoi.FocusedState.Parent = this.txtMatKhauMoi;
             this.txtMatKhauMoi.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMatKhauMoi.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtMatKhauMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtMatKhauMoi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMatKhauMoi.HoverState.Parent = this.txtMatKhauMoi;
             this.txtMatKhauMoi.Location = new System.Drawing.Point(38, 254);
@@ -280,7 +252,7 @@ namespace RJCodeAdvance
             this.btThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btThoat.DisabledState.Parent = this.btThoat;
-            this.btThoat.FillColor = System.Drawing.Color.Tomato;
+            this.btThoat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
             this.btThoat.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btThoat.ForeColor = System.Drawing.Color.White;
             this.btThoat.HoverState.Parent = this.btThoat;
@@ -292,18 +264,55 @@ namespace RJCodeAdvance
             this.btThoat.Text = "Thoát";
             this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
             // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ControlBox2.BorderRadius = 3;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(373, 12);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(37, 26);
+            this.guna2ControlBox2.TabIndex = 144;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ControlBox1.BorderRadius = 3;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(416, 12);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(37, 26);
+            this.guna2ControlBox1.TabIndex = 143;
+            // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 3;
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
             // FrmChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.BlueViolet;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(465, 435);
+            this.Controls.Add(this.guna2ControlBox2);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.btThoat);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMatKhauMoi);
-            this.Controls.Add(this.guna2ControlBox2);
-            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.btDoiMatKhau);
             this.Controls.Add(this.txtMatKhauCu);
             this.Controls.Add(this.label6);
@@ -330,8 +339,6 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2TextBox txtNhapLaiMatKhau;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Button btDoiMatKhau;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -340,5 +347,8 @@ namespace RJCodeAdvance
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhauMoi;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
     }
 }

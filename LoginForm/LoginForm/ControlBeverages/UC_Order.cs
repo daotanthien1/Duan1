@@ -47,37 +47,19 @@ namespace RJCodeAdvance.ControlBeverages
         }
         void TurnOffInputControl()
         {
-            txbEmail.Enabled = false;
-            txbName.Enabled = false;
             btnThem.Enabled = false;
             btThanhToan.Enabled = false;
-            cbType.Enabled = false;
-            cbBeverage.Enabled = false;
-            nbSoLuong.Enabled = false;
-            cbChuyenBan.Enabled = false;
             btChuyenBan.Enabled = false;
-            txbVoucher.Enabled = false;
             btChuyenBan.Enabled = false;
-            rdNam.Enabled = false;
-            rdNu.Enabled = false;
             btNhap.Enabled = false;
         }
 
         void TurnOnInputControl()
         {
-            txbEmail.Enabled = true;
-            txbName.Enabled = true;
             btnThem.Enabled = true;
             btThanhToan.Enabled = true;
-            cbType.Enabled = true;
-            cbBeverage.Enabled = true;
-            nbSoLuong.Enabled = true;
-            cbChuyenBan.Enabled = true;
             btChuyenBan.Enabled = true;
-            txbVoucher.Enabled = true;
             btChuyenBan.Enabled = true;
-            rdNam.Enabled = true;
-            rdNu.Enabled = true;
             btNhap.Enabled = true;
         }
 

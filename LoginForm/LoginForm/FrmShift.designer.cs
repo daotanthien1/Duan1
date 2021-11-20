@@ -42,18 +42,18 @@ namespace RJCodeAdvance
             this.label2 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTenCa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.txtNhaptenCa = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.btLuu2 = new Guna.UI2.WinForms.Guna2Button();
             this.btSua2 = new Guna.UI2.WinForms.Guna2Button();
             this.btXoa2 = new Guna.UI2.WinForms.Guna2Button();
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btDanhSacch = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +88,11 @@ namespace RJCodeAdvance
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(29, 274);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(29, 252);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(801, 165);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(801, 187);
             this.guna2DataGridView1.TabIndex = 49;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -120,7 +120,7 @@ namespace RJCodeAdvance
             // txtThoiGianKetThuc
             // 
             this.txtThoiGianKetThuc.Animated = true;
-            this.txtThoiGianKetThuc.BorderColor = System.Drawing.Color.DarkOrchid;
+            this.txtThoiGianKetThuc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtThoiGianKetThuc.BorderRadius = 15;
             this.txtThoiGianKetThuc.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtThoiGianKetThuc.DefaultText = "";
@@ -132,7 +132,7 @@ namespace RJCodeAdvance
             this.txtThoiGianKetThuc.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThoiGianKetThuc.FocusedState.Parent = this.txtThoiGianKetThuc;
             this.txtThoiGianKetThuc.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtThoiGianKetThuc.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtThoiGianKetThuc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtThoiGianKetThuc.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThoiGianKetThuc.HoverState.Parent = this.txtThoiGianKetThuc;
             this.txtThoiGianKetThuc.Location = new System.Drawing.Point(507, 141);
@@ -148,7 +148,7 @@ namespace RJCodeAdvance
             // txtThoiGianBatDau
             // 
             this.txtThoiGianBatDau.Animated = true;
-            this.txtThoiGianBatDau.BorderColor = System.Drawing.Color.DarkOrchid;
+            this.txtThoiGianBatDau.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtThoiGianBatDau.BorderRadius = 15;
             this.txtThoiGianBatDau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtThoiGianBatDau.DefaultText = "";
@@ -160,7 +160,7 @@ namespace RJCodeAdvance
             this.txtThoiGianBatDau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThoiGianBatDau.FocusedState.Parent = this.txtThoiGianBatDau;
             this.txtThoiGianBatDau.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtThoiGianBatDau.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtThoiGianBatDau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtThoiGianBatDau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtThoiGianBatDau.HoverState.Parent = this.txtThoiGianBatDau;
             this.txtThoiGianBatDau.Location = new System.Drawing.Point(507, 67);
@@ -209,7 +209,7 @@ namespace RJCodeAdvance
             // txtTenCa
             // 
             this.txtTenCa.Animated = true;
-            this.txtTenCa.BorderColor = System.Drawing.Color.DarkOrchid;
+            this.txtTenCa.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtTenCa.BorderRadius = 15;
             this.txtTenCa.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtTenCa.DefaultText = "";
@@ -221,7 +221,7 @@ namespace RJCodeAdvance
             this.txtTenCa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenCa.FocusedState.Parent = this.txtTenCa;
             this.txtTenCa.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtTenCa.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtTenCa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtTenCa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenCa.HoverState.Parent = this.txtTenCa;
             this.txtTenCa.Location = new System.Drawing.Point(29, 65);
@@ -233,35 +233,6 @@ namespace RJCodeAdvance
             this.txtTenCa.ShadowDecoration.Parent = this.txtTenCa;
             this.txtTenCa.Size = new System.Drawing.Size(302, 36);
             this.txtTenCa.TabIndex = 50;
-            // 
-            // guna2ControlBox2
-            // 
-            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox2.BackColor = System.Drawing.Color.DarkOrchid;
-            this.guna2ControlBox2.BorderRadius = 3;
-            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox2.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(769, 12);
-            this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(37, 26);
-            this.guna2ControlBox2.TabIndex = 73;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.DarkOrchid;
-            this.guna2ControlBox1.BorderRadius = 3;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(812, 12);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(37, 26);
-            this.guna2ControlBox1.TabIndex = 72;
             // 
             // txtNhaptenCa
             // 
@@ -276,10 +247,10 @@ namespace RJCodeAdvance
             this.txtNhaptenCa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhaptenCa.FocusedState.Parent = this.txtNhaptenCa;
             this.txtNhaptenCa.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtNhaptenCa.ForeColor = System.Drawing.Color.BlueViolet;
+            this.txtNhaptenCa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.txtNhaptenCa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNhaptenCa.HoverState.Parent = this.txtNhaptenCa;
-            this.txtNhaptenCa.Location = new System.Drawing.Point(162, 232);
+            this.txtNhaptenCa.Location = new System.Drawing.Point(162, 210);
             this.txtNhaptenCa.Name = "txtNhaptenCa";
             this.txtNhaptenCa.PasswordChar = '\0';
             this.txtNhaptenCa.PlaceholderText = "Nhập tên ca cần tìm";
@@ -288,51 +259,25 @@ namespace RJCodeAdvance
             this.txtNhaptenCa.Size = new System.Drawing.Size(228, 36);
             this.txtNhaptenCa.TabIndex = 80;
             // 
-            // guna2Button6
-            // 
-            this.guna2Button6.Animated = true;
-            this.guna2Button6.BorderColor = System.Drawing.Color.BlueViolet;
-            this.guna2Button6.BorderRadius = 6;
-            this.guna2Button6.BorderThickness = 1;
-            this.guna2Button6.CheckedState.Parent = this.guna2Button6;
-            this.guna2Button6.CustomImages.Parent = this.guna2Button6;
-            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button6.DisabledState.Parent = this.guna2Button6;
-            this.guna2Button6.FillColor = System.Drawing.Color.Tomato;
-            this.guna2Button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.HoverState.Parent = this.guna2Button6;
-            this.guna2Button6.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button6.Image")));
-            this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button6.Location = new System.Drawing.Point(638, 445);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
-            this.guna2Button6.Size = new System.Drawing.Size(128, 45);
-            this.guna2Button6.TabIndex = 79;
-            this.guna2Button6.Text = "Thoát";
-            // 
             // btLuu2
             // 
             this.btLuu2.Animated = true;
-            this.btLuu2.BorderColor = System.Drawing.Color.BlueViolet;
+            this.btLuu2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btLuu2.BorderRadius = 6;
             this.btLuu2.BorderThickness = 1;
             this.btLuu2.CheckedState.Parent = this.btLuu2;
             this.btLuu2.CustomImages.Parent = this.btLuu2;
-            this.btLuu2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btLuu2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btLuu2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btLuu2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btLuu2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btLuu2.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btLuu2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btLuu2.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btLuu2.DisabledState.Parent = this.btLuu2;
             this.btLuu2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuu2.ForeColor = System.Drawing.Color.White;
             this.btLuu2.HoverState.Parent = this.btLuu2;
             this.btLuu2.Image = ((System.Drawing.Image)(resources.GetObject("btLuu2.Image")));
             this.btLuu2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLuu2.Location = new System.Drawing.Point(498, 445);
+            this.btLuu2.Location = new System.Drawing.Point(579, 445);
             this.btLuu2.Name = "btLuu2";
             this.btLuu2.ShadowDecoration.Parent = this.btLuu2;
             this.btLuu2.Size = new System.Drawing.Size(128, 45);
@@ -343,22 +288,22 @@ namespace RJCodeAdvance
             // btSua2
             // 
             this.btSua2.Animated = true;
-            this.btSua2.BorderColor = System.Drawing.Color.BlueViolet;
+            this.btSua2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btSua2.BorderRadius = 6;
             this.btSua2.BorderThickness = 1;
             this.btSua2.CheckedState.Parent = this.btSua2;
             this.btSua2.CustomImages.Parent = this.btSua2;
-            this.btSua2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btSua2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btSua2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btSua2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btSua2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btSua2.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btSua2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btSua2.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btSua2.DisabledState.Parent = this.btSua2;
             this.btSua2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSua2.ForeColor = System.Drawing.Color.White;
             this.btSua2.HoverState.Parent = this.btSua2;
             this.btSua2.Image = ((System.Drawing.Image)(resources.GetObject("btSua2.Image")));
             this.btSua2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua2.Location = new System.Drawing.Point(357, 445);
+            this.btSua2.Location = new System.Drawing.Point(438, 445);
             this.btSua2.Name = "btSua2";
             this.btSua2.ShadowDecoration.Parent = this.btSua2;
             this.btSua2.Size = new System.Drawing.Size(128, 45);
@@ -369,22 +314,22 @@ namespace RJCodeAdvance
             // btXoa2
             // 
             this.btXoa2.Animated = true;
-            this.btXoa2.BorderColor = System.Drawing.Color.BlueViolet;
+            this.btXoa2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btXoa2.BorderRadius = 6;
             this.btXoa2.BorderThickness = 1;
             this.btXoa2.CheckedState.Parent = this.btXoa2;
             this.btXoa2.CustomImages.Parent = this.btXoa2;
-            this.btXoa2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btXoa2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btXoa2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btXoa2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btXoa2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btXoa2.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btXoa2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btXoa2.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btXoa2.DisabledState.Parent = this.btXoa2;
             this.btXoa2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoa2.ForeColor = System.Drawing.Color.White;
             this.btXoa2.HoverState.Parent = this.btXoa2;
             this.btXoa2.Image = ((System.Drawing.Image)(resources.GetObject("btXoa2.Image")));
             this.btXoa2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btXoa2.Location = new System.Drawing.Point(217, 445);
+            this.btXoa2.Location = new System.Drawing.Point(298, 445);
             this.btXoa2.Name = "btXoa2";
             this.btXoa2.ShadowDecoration.Parent = this.btXoa2;
             this.btXoa2.Size = new System.Drawing.Size(128, 45);
@@ -395,23 +340,23 @@ namespace RJCodeAdvance
             // btThem
             // 
             this.btThem.Animated = true;
-            this.btThem.BorderColor = System.Drawing.Color.BlueViolet;
+            this.btThem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btThem.BorderRadius = 6;
             this.btThem.BorderThickness = 1;
             this.btThem.CheckedState.Parent = this.btThem;
             this.btThem.CustomBorderColor = System.Drawing.Color.Gray;
             this.btThem.CustomImages.Parent = this.btThem;
-            this.btThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btThem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btThem.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
+            this.btThem.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btThem.DisabledState.Parent = this.btThem;
             this.btThem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThem.ForeColor = System.Drawing.Color.White;
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(77, 445);
+            this.btThem.Location = new System.Drawing.Point(158, 445);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(128, 45);
@@ -422,7 +367,7 @@ namespace RJCodeAdvance
             // btTimKiem
             // 
             this.btTimKiem.Animated = true;
-            this.btTimKiem.BorderColor = System.Drawing.Color.BlueViolet;
+            this.btTimKiem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btTimKiem.BorderRadius = 6;
             this.btTimKiem.BorderThickness = 1;
             this.btTimKiem.CheckedState.Parent = this.btTimKiem;
@@ -438,17 +383,13 @@ namespace RJCodeAdvance
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(29, 232);
+            this.btTimKiem.Location = new System.Drawing.Point(29, 210);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
             this.btTimKiem.Size = new System.Drawing.Size(127, 36);
             this.btTimKiem.TabIndex = 74;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.TargetControl = this;
             // 
             // guna2Elipse2
             // 
@@ -457,7 +398,7 @@ namespace RJCodeAdvance
             // btDanhSacch
             // 
             this.btDanhSacch.Animated = true;
-            this.btDanhSacch.BorderColor = System.Drawing.Color.BlueViolet;
+            this.btDanhSacch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.btDanhSacch.BorderRadius = 6;
             this.btDanhSacch.BorderThickness = 1;
             this.btDanhSacch.CheckedState.Parent = this.btDanhSacch;
@@ -472,29 +413,75 @@ namespace RJCodeAdvance
             this.btDanhSacch.HoverState.Parent = this.btDanhSacch;
             this.btDanhSacch.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSacch.Image")));
             this.btDanhSacch.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btDanhSacch.Location = new System.Drawing.Point(696, 232);
+            this.btDanhSacch.Location = new System.Drawing.Point(696, 210);
             this.btDanhSacch.Name = "btDanhSacch";
             this.btDanhSacch.ShadowDecoration.Parent = this.btDanhSacch;
             this.btDanhSacch.Size = new System.Drawing.Size(134, 36);
             this.btDanhSacch.TabIndex = 140;
             this.btDanhSacch.Text = "Danh sách";
             // 
+            // guna2ShadowForm1
+            // 
+            this.guna2ShadowForm1.BorderRadius = 3;
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ShadowForm1.TargetForm = this;
+            // 
+            // guna2ControlBox2
+            // 
+            this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ControlBox2.BorderRadius = 3;
+            this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox2.Location = new System.Drawing.Point(769, 12);
+            this.guna2ControlBox2.Name = "guna2ControlBox2";
+            this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
+            this.guna2ControlBox2.Size = new System.Drawing.Size(37, 26);
+            this.guna2ControlBox2.TabIndex = 145;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ControlBox1.BorderRadius = 3;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(812, 12);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(37, 26);
+            this.guna2ControlBox1.TabIndex = 144;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(775, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 143;
+            this.label1.Visible = false;
+            // 
             // FrmShift
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.BlueViolet;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(861, 512);
+            this.Controls.Add(this.guna2ControlBox2);
+            this.Controls.Add(this.guna2ControlBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btDanhSacch);
             this.Controls.Add(this.txtNhaptenCa);
-            this.Controls.Add(this.guna2Button6);
             this.Controls.Add(this.btLuu2);
             this.Controls.Add(this.btSua2);
             this.Controls.Add(this.btXoa2);
             this.Controls.Add(this.btThem);
             this.Controls.Add(this.btTimKiem);
-            this.Controls.Add(this.guna2ControlBox2);
-            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.txtTenCa);
             this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.txtThoiGianKetThuc);
@@ -503,6 +490,7 @@ namespace RJCodeAdvance
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2HtmlLabel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(1366, 768);
             this.Name = "FrmShift";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmShift2";
@@ -523,17 +511,17 @@ namespace RJCodeAdvance
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtNhaptenCa;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button btLuu2;
         private Guna.UI2.WinForms.Guna2Button btSua2;
         private Guna.UI2.WinForms.Guna2Button btXoa2;
         private Guna.UI2.WinForms.Guna2Button btThem;
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
-        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btDanhSacch;
+        private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

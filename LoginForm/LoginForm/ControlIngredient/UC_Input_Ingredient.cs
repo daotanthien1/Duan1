@@ -242,5 +242,10 @@ namespace RJCodeAdvance.ControlIngredient
         {
             
         }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

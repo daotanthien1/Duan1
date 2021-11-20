@@ -193,6 +193,7 @@ namespace RJCodeAdvance
             // guna2ControlBox1
             // 
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.BorderRadius = 3;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Thistle;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
@@ -206,6 +207,8 @@ namespace RJCodeAdvance
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox2.BorderColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.BorderRadius = 3;
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Thistle;
