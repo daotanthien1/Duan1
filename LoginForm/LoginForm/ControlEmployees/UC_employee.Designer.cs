@@ -63,7 +63,6 @@ namespace RJCodeAdvance.ControlEmployees
             this.cbTimTheoVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
-            this.cbTimVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbLuong)).BeginInit();
             this.SuspendLayout();
@@ -601,11 +600,11 @@ namespace RJCodeAdvance.ControlEmployees
             "Nam",
             "Nữ"});
             this.cbTimTheoVaiTro.ItemsAppearance.Parent = this.cbTimTheoVaiTro;
-            this.cbTimTheoVaiTro.Location = new System.Drawing.Point(929, 289);
+            this.cbTimTheoVaiTro.Location = new System.Drawing.Point(901, 289);
             this.cbTimTheoVaiTro.MaxLength = 100;
             this.cbTimTheoVaiTro.Name = "cbTimTheoVaiTro";
             this.cbTimTheoVaiTro.ShadowDecoration.Parent = this.cbTimTheoVaiTro;
-            this.cbTimTheoVaiTro.Size = new System.Drawing.Size(142, 36);
+            this.cbTimTheoVaiTro.Size = new System.Drawing.Size(170, 36);
             this.cbTimTheoVaiTro.TabIndex = 123;
             // 
             // txtTimKiem
@@ -661,37 +660,11 @@ namespace RJCodeAdvance.ControlEmployees
             this.btTimKiem.TabIndex = 121;
             this.btTimKiem.Text = "Tìm kiếm";
             // 
-            // cbTimVaiTro
-            // 
-            this.cbTimVaiTro.BackColor = System.Drawing.Color.Transparent;
-            this.cbTimVaiTro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.cbTimVaiTro.BorderRadius = 16;
-            this.cbTimVaiTro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbTimVaiTro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTimVaiTro.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTimVaiTro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTimVaiTro.FocusedState.Parent = this.cbTimVaiTro;
-            this.cbTimVaiTro.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbTimVaiTro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.cbTimVaiTro.HoverState.Parent = this.cbTimVaiTro;
-            this.cbTimVaiTro.ItemHeight = 30;
-            this.cbTimVaiTro.Items.AddRange(new object[] {
-            "Quản lý",
-            "Nhân viên"});
-            this.cbTimVaiTro.ItemsAppearance.Parent = this.cbTimVaiTro;
-            this.cbTimVaiTro.Location = new System.Drawing.Point(781, 289);
-            this.cbTimVaiTro.MaxLength = 100;
-            this.cbTimVaiTro.Name = "cbTimVaiTro";
-            this.cbTimVaiTro.ShadowDecoration.Parent = this.cbTimVaiTro;
-            this.cbTimVaiTro.Size = new System.Drawing.Size(142, 36);
-            this.cbTimVaiTro.TabIndex = 124;
-            // 
             // UC_employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.cbTimVaiTro);
             this.Controls.Add(this.cbTimTheoVaiTro);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btTimKiem);
@@ -759,6 +732,5 @@ namespace RJCodeAdvance.ControlEmployees
         private Guna.UI2.WinForms.Guna2ComboBox cbTimTheoVaiTro;
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
-        private Guna.UI2.WinForms.Guna2ComboBox cbTimVaiTro;
     }
 }

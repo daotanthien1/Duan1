@@ -1,21 +1,12 @@
 --beverage isdelete
 alter table Beverages
 add isDelete bit DEFAULT(0)
+go
 
 update Beverages set isDelete = 0
 go
 
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-
-
-		--get
-if OBJECT_ID ('sp_GetBeverage') is not null 
-drop proc sp_GetBeverage
-go 
-create proc sp_GetBeverage
+alter proc sp_GetBeverage
 as
 begin
             SELECT name,price,id_type,id_beverage,image,isdelete
@@ -24,18 +15,6 @@ begin
 end
 go
 
-
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-
-
-		
-		--delete
-if OBJECT_ID ('sp_BeverageDelete') is not null 
-drop proc sp_BeverageDelete
-go 
 create PROCEDURE sp_BeverageDelete(@id_beverage   int)
 AS
   BEGIN
@@ -45,10 +24,8 @@ AS
 			where id_beverage = @id_beverage
         END
 	END
-	--search
-if OBJECT_ID ('sp_BeverageSearch') is not null 
-drop proc sp_BeverageSearch
-go 
+go
+
 create PROCEDURE sp_BeverageSearch(@Name   NVARCHAR(55),@Col   NVARCHAR(55))
 AS
   BEGIN
