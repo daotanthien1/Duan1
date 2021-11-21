@@ -33,22 +33,6 @@ namespace RJCodeAdvance.ControlIngredient
             loadComBoBox();
         }
 
-        private void btTimKiem_Click(object sender, EventArgs e)
-        {
-            string tenHang = txtSearch.Text;
-            DataTable ds = busIg.SearchNguyenLieu(tenHang);
-            if (ds.Rows.Count > 0)
-            {
-                dgv.DataSource = ds;
-                dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            ResetValue();
-        }
-
         private void btThem_Click(object sender, EventArgs e)
         {
             ResetValue();
@@ -262,6 +246,27 @@ namespace RJCodeAdvance.ControlIngredient
             FrmUnit frm = new FrmUnit();
             frm.ShowDialog();
             loadComBoBox();
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void btTimKiem_Click_1(object sender, EventArgs e)
+        {
+            string tenHang = txtSearch.Text;
+            DataTable ds = busIg.SearchNguyenLieu(tenHang);
+            if (ds.Rows.Count > 0)
+            {
+                dgv.DataSource = ds;
+                dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            ResetValue();
         }
     }
 }
