@@ -186,11 +186,11 @@ namespace RJCodeAdvance.ControlIngredient
             dgv.DataSource = busIg.getIngredient();
             dgv.Columns[0].HeaderText = "Id_Ingredient";
             dgv.Columns[1].HeaderText = "Name";
-            dgv.Columns[2].HeaderText = "Id_Supplier";
-            dgv.Columns[3].HeaderText = "Id_Type";
+            dgv.Columns[2].HeaderText = "Supplier";
+            dgv.Columns[3].HeaderText = "Type";
             dgv.Columns[4].HeaderText = "Price";
             dgv.Columns[5].HeaderText = "Mass";
-            dgv.Columns[6].HeaderText = "Id_Unit";
+            dgv.Columns[6].HeaderText = "Unit";
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         void loadComBoBox()
@@ -225,9 +225,9 @@ namespace RJCodeAdvance.ControlIngredient
                     guna2NumericUpDown1.Enabled = true;
                     txtTenIngredient.Text = dgv.CurrentRow.Cells["Name"].Value.ToString();
                     txtGia.Text = dgv.CurrentRow.Cells["Price"].Value.ToString();
-                    cbLoaiIngredient.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Id_Type"].Value.ToString()) - 1;
-                    cbNhaCC.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Id_Supplier"].Value.ToString()) - 1;
-                    cbDVT.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Id_Unit"].Value.ToString()) - 1;
+                    cbLoaiIngredient.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Type"].Value.ToString()) - 1;
+                    cbNhaCC.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Supplier"].Value.ToString()) - 1;
+                    cbDVT.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Unit"].Value.ToString()) - 1;
                     guna2NumericUpDown1.Value = int.Parse(dgv.CurrentRow.Cells["Mass"].Value.ToString());
                 }
                 else

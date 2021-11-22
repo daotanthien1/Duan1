@@ -54,7 +54,7 @@ namespace RJCodeAdvance
                 }
                 else
                 {
-                    MessageBox.Show("Xoá không thành công");
+                    MessageBox.Show("Xoá không thành công.");
                 }
             }
             else
