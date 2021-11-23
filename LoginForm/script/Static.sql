@@ -93,3 +93,41 @@ begin
 		end
 end
 GO
+-- danh sách bill nhân viên
+create proc StaticDataEmployee
+as
+	begin
+		select a.Id_employee, count(DISTINCT a.Id_bill), sum(b.totalPrice) from Bills a
+		inner join Bills_detail b on a.Id_bill = b.Id_bill
+		group by a.Id_employee
+	end
+go
+-- thống kê danh sách khách hàng mua hàng
+create proc StaticCustomer
+as
+	begin
+		select a.Id_customer, sum(b.Quantity), sum(b.totalPrice) from Bills a 
+		inner join Bills_detail b on a.Id_bill = b.Id_bill
+		group by a.Id_customer
+	end
+go
+-- danh sách bill nhân viên theo khoảng thời gian
+create proc StaticEmployeeWeek
+@dayStar varchar(50), @dayEnd varchar(50)
+as
+	begin
+		select a.Id_employee, count(DISTINCT a.Id_bill), sum(b.totalPrice) from Bills a
+		inner join Bills_detail b on a.Id_bill = b.Id_bill and a.DateCheckOut between @dayStar and @dayEnd
+		group by a.Id_employee
+	end
+go
+-- thống kê bill khách hàng theo khoảng thời gian
+create proc StaticCustomerWeek
+@dayStar varchar(50), @dayEnd varchar(50)
+as
+	begin
+		select a.Id_customer, sum(b.Quantity), sum(b.totalPrice) from Bills a 
+		inner join Bills_detail b on a.Id_bill = b.Id_bill and a.DateCheckOut between @dayStar and @dayEnd
+		group by a.Id_customer
+	end
+go
