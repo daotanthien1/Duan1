@@ -158,6 +158,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlBeverages\UC_ItemBeverageAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlBeverages\UC_ItemBeverageAdd.Designer.cs">
+      <DependentUpon>UC_ItemBeverageAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlBeverages\UC_ItemBeverage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlBeverages\UC_ItemBeverage.Designer.cs">
+      <DependentUpon>UC_ItemBeverage.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlBeverages\UC_beverages.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -194,6 +206,12 @@
     <Compile Include="ControlIngredient\UC_Input_Ingredient.designer.cs">
       <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlIngredient\UC_ItemIngedient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_ItemIngedient.Designer.cs">
+      <DependentUpon>UC_ItemIngedient.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlStatistic\UC_Statistic.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -205,6 +223,24 @@
     </Compile>
     <Compile Include="ControlVouchers\UC_Voucher.Designer.cs">
       <DependentUpon>UC_Voucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddIngredient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddIngredient.Designer.cs">
+      <DependentUpon>FrmAddIngredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddBeverage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddBeverage.Designer.cs">
+      <DependentUpon>FrmAddBeverage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddCustomer.Designer.cs">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -292,6 +328,12 @@
     <Compile Include="FrmVoucherType.designer.cs">
       <DependentUpon>FrmVoucherType.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ControlBeverages\UC_ItemBeverageAdd.resx">
+      <DependentUpon>UC_ItemBeverageAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlBeverages\UC_ItemBeverage.resx">
+      <DependentUpon>UC_ItemBeverage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlBeverages\UC_beverages.resx">
       <DependentUpon>UC_beverages.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,11 +352,23 @@
     <EmbeddedResource Include="ControlIngredient\UC_Input_Ingredient.resx">
       <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_ItemIngedient.resx">
+      <DependentUpon>UC_ItemIngedient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlStatistic\UC_Statistic.resx">
       <DependentUpon>UC_Statistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlVouchers\UC_Voucher.resx">
       <DependentUpon>UC_Voucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddIngredient.resx">
+      <DependentUpon>FrmAddIngredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddBeverage.resx">
+      <DependentUpon>FrmAddBeverage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddCustomer.resx">
+      <DependentUpon>FrmAddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -352,6 +406,7 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -404,6 +459,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pictureBox1.Image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btThanhToan.Image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

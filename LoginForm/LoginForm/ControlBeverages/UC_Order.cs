@@ -18,65 +18,50 @@ namespace RJCodeAdvance.ControlBeverages
     public partial class UC_Order : UserControl
     {
         public static int idEmployee = 1;
-        public static int sale = 0;
         BUS_tables bus_table = new BUS_tables();
-        BUS_Bill_Detail bus_bill_detail = new BUS_Bill_Detail();
         BUS_Bill bus_bill = new BUS_Bill();
         BUS_Menu bus_menu = new BUS_Menu();
-        BUS_TypesOfBeverage bus_beverageType = new BUS_TypesOfBeverage();
-        BUS_Beverage bus_beverage = new BUS_Beverage();
         BUS_Customer bus_customer = new BUS_Customer();
-        BUS_Vouchers bus_voucher = new BUS_Vouchers();
 
         public UC_Order()
         {
             InitializeComponent();
-            loadBeverageType();
             loadCbTable(cbChuyenBan);
             suggestEmail();
-            nbSoLuong.Maximum = 99;
-            nbSoLuong.Minimum = -99;
-            nbDiem.Maximum = 999999;
         }
 
         void suggestEmail()
         {
-            txbEmail.AutoCompleteMode = AutoCompleteMode.Append;
+            txbEmail.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             txbEmail.AutoCompleteSource = AutoCompleteSource.CustomSource;
             txbEmail.AutoCompleteCustomSource = bus_customer.autoEmail();
         }
         void TurnOffInputControl()
         {
-            btnThem.Enabled = false;
+            btThem.Enabled = false;
+            btXoa.Enabled = false;
+            btSua.Enabled = false;
             btThanhToan.Enabled = false;
             btChuyenBan.Enabled = false;
-            btChuyenBan.Enabled = false;
-            btNhap.Enabled = false;
+            btnGop.Enabled = false;
+            txbDoUong.Enabled = false;
+            txbEmail.Enabled = false;
+            nbSoLuong.Enabled = false;
+            cbChuyenBan.Enabled = false;
+            cbGopBan.Enabled = false;
         }
 
         void TurnOnInputControl()
         {
-            btnThem.Enabled = true;
+            btThem.Enabled = true;
             btThanhToan.Enabled = true;
             btChuyenBan.Enabled = true;
-            btChuyenBan.Enabled = true;
-            btNhap.Enabled = true;
+            btnGop.Enabled = true;
+            txbEmail.Enabled = true;
+            cbChuyenBan.Enabled = true;
+            cbGopBan.Enabled = true;
         }
 
-        void loadBeverageType()
-        {
-            List<DTO_TypesOfBeverage> listType = bus_beverageType.listBeverageType();
-            cbType.DataSource = listType;
-            cbType.DisplayMember = "Name";
-        }
-
-        void loadBeverage(int id)
-        {
-            List<DTO_QuanLyDoUong> listBeverage = bus_beverage.listBeverageType(id);
-            cbBeverage.DataSource = listBeverage;
-            cbBeverage.DisplayMember = "Name";
-        }
-        
         // load lại 1 bàn
         private void LoadStatusTable(int idTable)
         {
@@ -112,8 +97,8 @@ namespace RJCodeAdvance.ControlBeverages
                 btn.Click += Btn_Click;
                 btn.Tag = table;
                 btn.BorderRadius = 3;               
-                
-                btn.Size = new System.Drawing.Size(75, 75);
+              
+                btn.Size = new System.Drawing.Size(80, 80);
                 btn.Text = table.Name + Environment.NewLine + table.status;
                 if(table.status == "Có người")
                 {
@@ -134,15 +119,12 @@ namespace RJCodeAdvance.ControlBeverages
 
             CultureInfo culture = new CultureInfo("vi-VN");
             Thread.CurrentThread.CurrentCulture = culture;
-            txbTongTien.Text = bus_bill.getSumPrice(id).ToString("c");
+            txbTongThanhTien.Text = bus_bill.getSumPrice(id).ToString("c");
 
         }
 
         private void Btn_Click(object sender, EventArgs e)
         {
-            txbVoucher.Text = "";
-            txbVoucher.Enabled = true;
-            sale = 0;
             TurnOnInputControl();
             int tableId = ((sender as Guna2Button).Tag as DTO_tables).Id;
             ShowBill(tableId);
@@ -174,58 +156,6 @@ namespace RJCodeAdvance.ControlBeverages
             TurnOffInputControl();
         }
 
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            DTO_tables table = dgv.Tag as DTO_tables;
-
-            int idbill = bus_bill.GetUncheckBill(table.Id);
-            if(txbVoucher.Text.Length == 6 && sale == 0)
-            {
-                if(MessageBox.Show("bạn chưa xác nhận voucher, vẫn muốn tiếp tục thêm đồ uống?",
-                    "thông báo",MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
-                {
-                    return;
-                }
-            }
-
-            if (idbill == -1)
-            {
-                bus_bill.InsertBill(table.Id, idEmployee);
-                DTO_Bill_Detail billDetail = new DTO_Bill_Detail();
-                billDetail.ID_Bill = bus_bill.getMaxId();
-                billDetail.Id_Beverage = (cbBeverage.SelectedItem as DTO_QuanLyDoUong).Id_Beverage;
-                billDetail.Quantity = (int)nbSoLuong.Value;
-                billDetail.sale = sale;
-                bus_bill_detail.InsertBillDetail(billDetail);
-            }
-            else
-            {
-                DTO_Bill_Detail billDetail = new DTO_Bill_Detail();
-                billDetail.ID_Bill = idbill;
-                billDetail.Id_Beverage = (cbBeverage.SelectedItem as DTO_QuanLyDoUong).Id_Beverage;
-                billDetail.Quantity = (int)nbSoLuong.Value;
-                billDetail.sale = sale;
-                bus_bill_detail.InsertBillDetail(billDetail);
-            }
-
-            ShowBill(table.Id);
-            LoadStatusTable(table.Id);
-            if(sale != 0)
-            {
-                bus_voucher.deleteVoucher(txbVoucher.Text);
-                sale = 0;
-                txbVoucher.Text = "";
-                nbSoLuong.Maximum = 99;
-            }
-            txbVoucher.Enabled = true;
-        }
-
-        private void cbBeverage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            nbSoLuong.Value = 1;
-        }
-
         private void btThanhToan_Click(object sender, EventArgs e)
         {
             DTO_tables table = dgv.Tag as DTO_tables;
@@ -239,12 +169,12 @@ namespace RJCodeAdvance.ControlBeverages
 
                 if (idcustomer == 0)
                 {
-                    string gender = "Nam";
-                    if (rdNu.Checked)
-                        gender = "Nữ";
-                    DTO_Customer cus = new DTO_Customer(txbName.Text, txbEmail.Text, gender);
-                    bus_customer.CreateCustomer(cus);
-                    idcustomer = bus_customer.getMaxIdCustomer();
+                    //string gender = "Nam";
+                    //if (rdNu.Checked)
+                    //    gender = "Nữ";
+                    //DTO_Customer cus = new DTO_Customer(txbName.Text, txbEmail.Text, gender);
+                    //bus_customer.CreateCustomer(cus);
+                    //idcustomer = bus_customer.getMaxIdCustomer();
                 }
 
                 if(idBill != -1)
@@ -281,15 +211,7 @@ namespace RJCodeAdvance.ControlBeverages
                             }
                         }
                     }
-                    if (sale != 0)
-                    {
-                        sale = 0;
-                        txbVoucher.Text = "";
-                        nbSoLuong.Maximum = 99;
-                        txbVoucher.Enabled = true;
-                    }
                     txbEmail.Text = "";
-                    resetControlCustomer();
                 }
             }
 
@@ -299,87 +221,6 @@ namespace RJCodeAdvance.ControlBeverages
                 ShowBill(table.Id);
             }
             LoadStatusTable(table.Id);
-        }
-
-        private void txbEmail_KeyUp(object sender, KeyEventArgs e)
-        {
-            if(!String.IsNullOrEmpty(txbEmail.Text))
-            {
-                if(IsValidEmail.ValidEmail(txbEmail.Text))
-                {
-                    DTO_Customer cus = bus_customer.FindCustomerByEmail(txbEmail.Text);
-                    if(cus!=null)
-                    {
-                        txbName.Text = cus.Name;
-                        if (cus.Gender == "Nữ")
-                            rdNu.Checked = true;
-                        else
-                            rdNam.Checked = true;
-                        nbDiem.Value = cus.Reward;
-
-                        rdNam.Enabled = false;
-                        rdNu.Enabled = false;
-                        txbName.Enabled = false;
-                    }
-                    else
-                    {
-                        resetControlCustomer();
-                    }
-                }
-                else
-                {
-                    resetControlCustomer();
-                }
-            }
-            else
-            {
-                resetControlCustomer();
-            }
-        }
-
-        void resetControlCustomer()
-        {
-            rdNu.Checked = true;
-            txbName.Text = "";
-            nbDiem.Value = 0;
-            rdNam.Enabled = true;
-            rdNu.Enabled = true;
-            txbName.Enabled = true;
-        }
-
-        private void beverageType_selectIndexChange(object sender, EventArgs e)
-        {
-            int id = 0;
-            Guna2ComboBox cb = sender as Guna2ComboBox;
-            if (cb.SelectedItem == null)
-                return;
-            DTO_TypesOfBeverage selected = cb.SelectedItem as DTO_TypesOfBeverage;
-            id = selected.ID_Type;
-            loadBeverage(id);
-        }
-
-        private void btNhap_Click(object sender, EventArgs e)
-        {
-            if(!String.IsNullOrEmpty(txbVoucher.Text))
-            {
-                int typeVoucher = bus_voucher.getTypeVoucherById(txbVoucher.Text);
-                if (typeVoucher == -1)
-                {
-                    MessageBox.Show("voucher này đã hết hạn");
-                    txbVoucher.Text = "";
-                }else if(typeVoucher == 0)
-                {
-                    MessageBox.Show("Voucher sai vui lòng kiểm tra lại");
-                    txbVoucher.Text = "";
-                } else
-                {
-                    MessageBox.Show($"giảm giá {typeVoucher}% đã được áp dụng");
-                    txbVoucher.Enabled = false;
-                    sale = typeVoucher;
-                    nbSoLuong.Value = 1;
-                    nbSoLuong.Maximum = 1;
-                }
-            }
         }
 
         void loadCbTable(Guna2ComboBox cb)
@@ -404,6 +245,38 @@ namespace RJCodeAdvance.ControlBeverages
             LoadStatusTable(idTable1);
             LoadStatusTable(idTable2);
             ShowBill(idTable1);
+        }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+            int idTable = (dgv.Tag as DTO_tables).Id;
+            FrmOrderDetail frm = new FrmOrderDetail(idTable, idEmployee);
+            frm.ShowDialog();
+            ShowBill(idTable);
+            LoadStatusTable(idTable);
+        }
+
+        private void txbEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if (!String.IsNullOrEmpty(txbEmail.Text))
+                {
+                    if (IsValidEmail.ValidEmail(txbEmail.Text))
+                    {
+                        DTO_Customer cus = bus_customer.FindCustomerByEmail(txbEmail.Text);
+                        if (cus != null)
+                        {
+                            
+                        }
+                        else
+                        {
+                            FrmAddCustomer frm = new FrmAddCustomer();
+                            frm.ShowDialog();
+                        }
+                    }
+                }
+            }
         }
     }
 }
