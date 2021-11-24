@@ -19,6 +19,7 @@ namespace RJCodeAdvance
         public int Id_table;
         public int Id_Empoyee;
         BUS_Beverage bus_beverage = new BUS_Beverage();
+        List<DTO_QuanLyDoUong> ListBeverage;
         public FrmOrderDetail(int id_table, int id_employee)
         {
             InitializeComponent();
@@ -33,12 +34,17 @@ namespace RJCodeAdvance
 
         private void FrmOrderDetail_Load(object sender, EventArgs e)
         {
-            List<DTO_QuanLyDoUong> listBeverage = bus_beverage.listBeverage();
+            ListBeverage = bus_beverage.listBeverage();
+            RenderBeverage(ListBeverage);
+        }
 
-            foreach(DTO_QuanLyDoUong item in listBeverage)
+        void RenderBeverage(List<DTO_QuanLyDoUong> listBeverage)
+        {
+            flowLayoutPanel1.Controls.Clear();
+            foreach (DTO_QuanLyDoUong item in listBeverage)
             {
                 UC_ItemBeverage beverage = new UC_ItemBeverage();
-            
+
                 beverage.BeverageId = item.Id_Beverage;
                 beverage.BeverageName = item.Name;
                 beverage.BeveragePrice = item.Price.ToString() + "đ";
@@ -59,6 +65,22 @@ namespace RJCodeAdvance
             
             FrmAddBeverage frm = new FrmAddBeverage(Id_table, beverage, Id_Empoyee);
             frm.ShowDialog();
+        }
+
+        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
+        {
+  
+        }
+
+        private void txbFind_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<DTO_QuanLyDoUong> listFind = (from beverage in ListBeverage
+                                                   where beverage.Name.ToLower().Contains(txbFind.Text.ToLower())
+                                                   select beverage).ToList<DTO_QuanLyDoUong>();
+                RenderBeverage(listFind);
+            }
         }
     }
 }

@@ -184,12 +184,9 @@ namespace RJCodeAdvance.ControlBeverages
 
                 if (idcustomer == 0)
                 {
-                    //string gender = "Nam";
-                    //if (rdNu.Checked)
-                    //    gender = "Nữ";
-                    //DTO_Customer cus = new DTO_Customer(txbName.Text, txbEmail.Text, gender);
-                    //bus_customer.CreateCustomer(cus);
-                    //idcustomer = bus_customer.getMaxIdCustomer();
+                    FrmAddCustomer frm = new FrmAddCustomer(txbEmail.Text);
+                    frm.ShowDialog();
+                    return;
                 }
 
                 if(idBill != -1)
@@ -286,7 +283,7 @@ namespace RJCodeAdvance.ControlBeverages
                         }
                         else
                         {
-                            FrmAddCustomer frm = new FrmAddCustomer();
+                            FrmAddCustomer frm = new FrmAddCustomer(txbEmail.Text);
                             frm.ShowDialog();
                         }
                     }
