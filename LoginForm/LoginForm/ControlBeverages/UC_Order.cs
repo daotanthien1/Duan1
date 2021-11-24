@@ -67,8 +67,9 @@ namespace RJCodeAdvance.ControlBeverages
         {
             DTO_tables table = bus_table.getTable(idTable);
 
-            foreach(Guna2Button btn in flpTables.Controls)
+            for (int i = 0; i < flpTables.Controls.Count - 1; i++)
             {
+                Guna2Button btn = flpTables.Controls[i] as Guna2Button;
                 DTO_tables btn_table = btn.Tag as DTO_tables;
                 if(table.Id == btn_table.Id)
                 {
@@ -106,6 +107,19 @@ namespace RJCodeAdvance.ControlBeverages
                 }
                 flpTables.Controls.Add(btn);
             }
+
+            Guna2PictureBox ptb = new Guna2PictureBox();
+            ptb.Image = Image.FromFile(Application.StartupPath + @"\icons\add_100px.png");
+            ptb.Size = new System.Drawing.Size(80, 80);
+            ptb.SizeMode = PictureBoxSizeMode.Zoom;
+            ptb.Click += Ptb_Click;
+            flpTables.Controls.Add(ptb);
+        }
+
+        private void Ptb_Click(object sender, EventArgs e)
+        {
+            FrmTable frm = new FrmTable();
+            frm.ShowDialog();
         }
 
         void ShowBill(int id)
@@ -130,8 +144,9 @@ namespace RJCodeAdvance.ControlBeverages
             ShowBill(tableId);
             dgv.Tag = (sender as Guna2Button).Tag;
 
-            foreach(Guna2Button btn in flpTables.Controls)
+            for(int i = 0; i < flpTables.Controls.Count - 1;i++)
             {
+                Guna2Button btn = flpTables.Controls[i] as Guna2Button;
                 btn.Checked = false;
             }
 

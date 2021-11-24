@@ -42,7 +42,6 @@ namespace RJCodeAdvance
             this.txtMatKhauMoi = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btThoat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ShadowForm1 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
@@ -156,7 +155,7 @@ namespace RJCodeAdvance
             this.btDoiMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btDoiMatKhau.ForeColor = System.Drawing.Color.White;
             this.btDoiMatKhau.HoverState.Parent = this.btDoiMatKhau;
-            this.btDoiMatKhau.Location = new System.Drawing.Point(158, 373);
+            this.btDoiMatKhau.Location = new System.Drawing.Point(321, 373);
             this.btDoiMatKhau.Name = "btDoiMatKhau";
             this.btDoiMatKhau.ShadowDecoration.Parent = this.btDoiMatKhau;
             this.btDoiMatKhau.Size = new System.Drawing.Size(114, 35);
@@ -241,29 +240,6 @@ namespace RJCodeAdvance
             this.label3.TabIndex = 82;
             this.label3.Text = "Email:";
             // 
-            // btThoat
-            // 
-            this.btThoat.BorderColor = System.Drawing.Color.Empty;
-            this.btThoat.BorderRadius = 6;
-            this.btThoat.CheckedState.Parent = this.btThoat;
-            this.btThoat.CustomImages.Parent = this.btThoat;
-            this.btThoat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btThoat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btThoat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btThoat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btThoat.DisabledState.Parent = this.btThoat;
-            this.btThoat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
-            this.btThoat.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btThoat.ForeColor = System.Drawing.Color.White;
-            this.btThoat.HoverState.Parent = this.btThoat;
-            this.btThoat.Location = new System.Drawing.Point(38, 373);
-            this.btThoat.Name = "btThoat";
-            this.btThoat.ShadowDecoration.Parent = this.btThoat;
-            this.btThoat.Size = new System.Drawing.Size(114, 35);
-            this.btThoat.TabIndex = 83;
-            this.btThoat.Text = "Thoát";
-            this.btThoat.Click += new System.EventHandler(this.btThoat_Click);
-            // 
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -274,7 +250,7 @@ namespace RJCodeAdvance
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(373, 12);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(367, 12);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(37, 26);
@@ -289,7 +265,7 @@ namespace RJCodeAdvance
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(416, 12);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(410, 12);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(37, 26);
@@ -298,7 +274,7 @@ namespace RJCodeAdvance
             // guna2ShadowForm1
             // 
             this.guna2ShadowForm1.BorderRadius = 3;
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.Gray;
             this.guna2ShadowForm1.TargetForm = this;
             // 
             // FrmChangePassword
@@ -306,10 +282,9 @@ namespace RJCodeAdvance
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.ClientSize = new System.Drawing.Size(465, 435);
+            this.ClientSize = new System.Drawing.Size(459, 425);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
-            this.Controls.Add(this.btThoat);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMatKhauMoi);
@@ -343,7 +318,6 @@ namespace RJCodeAdvance
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Button btThoat;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhauMoi;

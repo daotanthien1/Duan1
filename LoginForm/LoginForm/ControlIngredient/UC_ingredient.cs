@@ -12,7 +12,7 @@ using DTO_QuanLy;
 
 namespace RJCodeAdvance.ControlIngredient
 {
-    public partial class UC_ingredient : UserControl
+    public partial class UC_ingredient : Form
     {
         public UC_ingredient()
         {

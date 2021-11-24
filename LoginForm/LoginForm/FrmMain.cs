@@ -35,9 +35,7 @@ namespace RJCodeAdvance
         private void btnGoiDoUong_Click_1(object sender, EventArgs e)
         {
             moveImage(sender);
-            if (btnDoUong.Checked) 
-                uC_Beverages21.BringToFront();
-            if (btnGoiDoUong.Checked)
+             if (btnGoiDoUong.Checked)
                 uC_Order2.BringToFront();
             if (btnNhanVien.Checked) 
                 uC_employee1.BringToFront();
@@ -45,8 +43,6 @@ namespace RJCodeAdvance
                 uC_Customer1.BringToFront();
             if (btnNhapNL.Checked)
                 uC_Input_Ingredient1.BringToFront();
-            if (btnNguyenLieu.Checked)
-                uC_ingredient1.BringToFront();
             if (btnVoucher.Checked)
                 uC_Voucher1.BringToFront();
             if (btnThongKe.Checked) 
@@ -93,6 +89,11 @@ namespace RJCodeAdvance
         private void gunaButton1_Click(object sender, EventArgs e)
         {
             sendVoucher();
+        }
+
+        private void uC_Beverages21_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

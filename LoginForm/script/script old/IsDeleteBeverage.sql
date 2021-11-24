@@ -1,4 +1,32 @@
-﻿alter PROCEDURE sp_BeverageSearch(@Name   NVARCHAR(55),@Col   NVARCHAR(55))
+--beverage isdelete
+alter table Beverages
+add isDelete bit DEFAULT(0)
+go
+
+update Beverages set isDelete = 0
+go
+
+alter proc sp_GetBeverage
+as
+begin
+            SELECT name,price,id_type,id_beverage,image,isdelete
+            FROM   beverages where isdelete = 0
+
+end
+go
+
+create PROCEDURE sp_BeverageDelete(@id_beverage   int)
+AS
+  BEGIN
+
+        BEGIN
+			UPDATE Beverages SET isDelete = 1 
+			where id_beverage = @id_beverage
+        END
+	END
+go
+
+create PROCEDURE sp_BeverageSearch(@Name   NVARCHAR(55),@Col   NVARCHAR(55))
 AS
   BEGIN
 
@@ -31,15 +59,3 @@ AS
 			end
         END
 	END
-
-go
-	alter PROCEDURE sp_BeverageDelete(@id_beverage   int)
-AS
-  BEGIN
-
-        BEGIN
-			UPDATE Beverages SET isDelete = 1 
-			where id_beverage = @id_beverage
-        END
-	END
-go

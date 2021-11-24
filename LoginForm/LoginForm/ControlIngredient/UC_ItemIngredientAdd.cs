@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RJCodeAdvance.ControlIngredient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,27 +11,28 @@ using System.Windows.Forms;
 
 namespace RJCodeAdvance.ControlBeverages
 {
-    public partial class UC_ItemBeverageAdd : UserControl
+    public partial class UC_ItemIngredientAdd : UserControl
     {
         public int BeverageId;
-        public UC_ItemBeverageAdd()
+        public UC_ItemIngredientAdd()
         {
             InitializeComponent();
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            showFrmBeverage();
+            ShowFrmIngredient();
         }
 
-        private void UC_ItemBeverageAdd_Click(object sender, EventArgs e)
+        private void UC_ItemIngredientAdd_Click(object sender, EventArgs e)
         {
-            showFrmBeverage();
+            ShowFrmIngredient();
         }
-        void showFrmBeverage()
+        void ShowFrmIngredient()
         {
-            UC_Beverages2 frm = new UC_Beverages2();
+            UC_ingredient frm = new UC_ingredient();
             frm.ShowDialog();
+            // load loại danh sách nguyên liệu
         }
     }
 }

@@ -171,7 +171,7 @@
       <DependentUpon>UC_ItemBeverage.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlBeverages\UC_beverages.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ControlBeverages\UC_beverages.designer.cs">
       <DependentUpon>UC_beverages.cs</DependentUpon>
@@ -195,7 +195,7 @@
       <DependentUpon>UC_employee.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlIngredient\UC_ingredient.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="ControlIngredient\UC_ingredient.designer.cs">
       <DependentUpon>UC_ingredient.cs</DependentUpon>
@@ -205,6 +205,12 @@
     </Compile>
     <Compile Include="ControlIngredient\UC_Input_Ingredient.designer.cs">
       <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_ItemIngredientAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlIngredient\UC_ItemIngredientAdd.Designer.cs">
+      <DependentUpon>UC_ItemIngredientAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlIngredient\UC_ItemIngedient.cs">
       <SubType>UserControl</SubType>
@@ -351,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ControlIngredient\UC_Input_Ingredient.resx">
       <DependentUpon>UC_Input_Ingredient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlIngredient\UC_ItemIngredientAdd.resx">
+      <DependentUpon>UC_ItemIngredientAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ControlIngredient\UC_ItemIngedient.resx">
       <DependentUpon>UC_ItemIngedient.cs</DependentUpon>

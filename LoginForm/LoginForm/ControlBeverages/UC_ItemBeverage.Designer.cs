@@ -34,8 +34,8 @@ namespace RJCodeAdvance.ControlBeverages
             this.lblName = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lblPrice = new System.Windows.Forms.Label();
-            this.btThem = new Guna.UI2.WinForms.Guna2Button();
             this.ptbImg = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btThem = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,6 +64,19 @@ namespace RJCodeAdvance.ControlBeverages
             this.lblPrice.TabIndex = 5;
             this.lblPrice.Text = "10000đ";
             // 
+            // ptbImg
+            // 
+            this.ptbImg.BorderRadius = 3;
+            this.ptbImg.Image = ((System.Drawing.Image)(resources.GetObject("ptbImg.Image")));
+            this.ptbImg.ImageRotate = 0F;
+            this.ptbImg.Location = new System.Drawing.Point(10, 6);
+            this.ptbImg.Name = "ptbImg";
+            this.ptbImg.ShadowDecoration.Parent = this.ptbImg;
+            this.ptbImg.Size = new System.Drawing.Size(52, 58);
+            this.ptbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbImg.TabIndex = 6;
+            this.ptbImg.TabStop = false;
+            // 
             // btThem
             // 
             this.btThem.Animated = true;
@@ -88,20 +101,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btThem.Size = new System.Drawing.Size(70, 30);
             this.btThem.TabIndex = 50;
             // 
-            // ptbImg
-            // 
-            this.ptbImg.BorderRadius = 3;
-            this.ptbImg.Image = ((System.Drawing.Image)(resources.GetObject("ptbImg.Image")));
-            this.ptbImg.ImageRotate = 0F;
-            this.ptbImg.Location = new System.Drawing.Point(10, 6);
-            this.ptbImg.Name = "ptbImg";
-            this.ptbImg.ShadowDecoration.Parent = this.ptbImg;
-            this.ptbImg.Size = new System.Drawing.Size(52, 58);
-            this.ptbImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbImg.TabIndex = 6;
-            this.ptbImg.TabStop = false;
-            // 
-            // UC_Item
+            // UC_ItemBeverage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +110,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.Controls.Add(this.ptbImg);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblName);
-            this.Name = "UC_Item";
+            this.Name = "UC_ItemBeverage";
             this.Size = new System.Drawing.Size(246, 73);
             ((System.ComponentModel.ISupportInitialize)(this.ptbImg)).EndInit();
             this.ResumeLayout(false);

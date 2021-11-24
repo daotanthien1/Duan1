@@ -38,30 +38,24 @@ namespace RJCodeAdvance
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imageSlide = new System.Windows.Forms.PictureBox();
             this.btnGoiDoUong = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDoUong = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhanVien = new Guna.UI2.WinForms.Guna2Button();
             this.btnNhapNL = new Guna.UI2.WinForms.Guna2Button();
-            this.btnNguyenLieu = new Guna.UI2.WinForms.Guna2Button();
             this.btnVoucher = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.btnKhachHang = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.uC_Beverages21 = new RJCodeAdvance.ControlBeverages.UC_Beverages2();
+            this.uC_Order2 = new RJCodeAdvance.ControlBeverages.UC_Order();
             this.uC_Voucher1 = new RJCodeAdvance.ControlVouchers.UC_Voucher();
             this.uC_Statistic1 = new RJCodeAdvance.ControlStatistic.UC_Statistic();
             this.uC_Input_Ingredient1 = new RJCodeAdvance.ControlIngredient.UC_Input_Ingredient();
-            this.uC_ingredient1 = new RJCodeAdvance.ControlIngredient.UC_ingredient();
             this.uC_employee1 = new RJCodeAdvance.ControlEmployees.UC_employee();
             this.uC_Customer1 = new RJCodeAdvance.ControlCustomers.UC_Customer();
-            //this.uC_Order1 = new RJCodeAdvance.ControlBeverages.UC_Order();
-            this.uC_Order2 = new RJCodeAdvance.ControlBeverages.UC_Order();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSlide)).BeginInit();
             this.panel1.SuspendLayout();
@@ -114,7 +108,7 @@ namespace RJCodeAdvance
             this.btnGoiDoUong.Checked = true;
             this.btnGoiDoUong.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnGoiDoUong.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnGoiDoUong.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.btnGoiDoUong.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btnGoiDoUong.CheckedState.Parent = this.btnGoiDoUong;
             this.btnGoiDoUong.CustomImages.Parent = this.btnGoiDoUong;
             this.btnGoiDoUong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -129,7 +123,7 @@ namespace RJCodeAdvance
             this.btnGoiDoUong.Image = ((System.Drawing.Image)(resources.GetObject("btnGoiDoUong.Image")));
             this.btnGoiDoUong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnGoiDoUong.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnGoiDoUong.Location = new System.Drawing.Point(24, 86);
+            this.btnGoiDoUong.Location = new System.Drawing.Point(27, 86);
             this.btnGoiDoUong.Name = "btnGoiDoUong";
             this.btnGoiDoUong.ShadowDecoration.Parent = this.btnGoiDoUong;
             this.btnGoiDoUong.Size = new System.Drawing.Size(186, 43);
@@ -140,39 +134,6 @@ namespace RJCodeAdvance
             this.btnGoiDoUong.UseTransparentBackground = true;
             this.btnGoiDoUong.Click += new System.EventHandler(this.btnGoiDoUong_Click_1);
             // 
-            // btnDoUong
-            // 
-            this.btnDoUong.BackColor = System.Drawing.Color.Transparent;
-            this.btnDoUong.BorderRadius = 22;
-            this.btnDoUong.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDoUong.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnDoUong.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnDoUong.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
-            this.btnDoUong.CheckedState.Parent = this.btnDoUong;
-            this.btnDoUong.CustomImages.Parent = this.btnDoUong;
-            this.btnDoUong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDoUong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDoUong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDoUong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDoUong.DisabledState.Parent = this.btnDoUong;
-            this.btnDoUong.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnDoUong.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoUong.ForeColor = System.Drawing.Color.White;
-            this.btnDoUong.HoverState.Parent = this.btnDoUong;
-            this.btnDoUong.Image = ((System.Drawing.Image)(resources.GetObject("btnDoUong.Image")));
-            this.btnDoUong.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDoUong.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDoUong.Location = new System.Drawing.Point(24, 145);
-            this.btnDoUong.Name = "btnDoUong";
-            this.btnDoUong.ShadowDecoration.Parent = this.btnDoUong;
-            this.btnDoUong.Size = new System.Drawing.Size(186, 43);
-            this.btnDoUong.TabIndex = 7;
-            this.btnDoUong.Text = "Đồ uống";
-            this.btnDoUong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDoUong.TextOffset = new System.Drawing.Point(10, 0);
-            this.btnDoUong.UseTransparentBackground = true;
-            this.btnDoUong.Click += new System.EventHandler(this.btnGoiDoUong_Click_1);
-            // 
             // btnNhanVien
             // 
             this.btnNhanVien.BackColor = System.Drawing.Color.Transparent;
@@ -180,7 +141,7 @@ namespace RJCodeAdvance
             this.btnNhanVien.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNhanVien.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnNhanVien.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnNhanVien.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.btnNhanVien.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btnNhanVien.CheckedState.Parent = this.btnNhanVien;
             this.btnNhanVien.CustomImages.Parent = this.btnNhanVien;
             this.btnNhanVien.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -195,7 +156,7 @@ namespace RJCodeAdvance
             this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
             this.btnNhanVien.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnNhanVien.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNhanVien.Location = new System.Drawing.Point(24, 203);
+            this.btnNhanVien.Location = new System.Drawing.Point(27, 145);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.ShadowDecoration.Parent = this.btnNhanVien;
             this.btnNhanVien.Size = new System.Drawing.Size(186, 43);
@@ -213,7 +174,7 @@ namespace RJCodeAdvance
             this.btnNhapNL.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNhapNL.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnNhapNL.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnNhapNL.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.btnNhapNL.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btnNhapNL.CheckedState.Parent = this.btnNhapNL;
             this.btnNhapNL.CustomImages.Parent = this.btnNhapNL;
             this.btnNhapNL.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -228,7 +189,7 @@ namespace RJCodeAdvance
             this.btnNhapNL.Image = ((System.Drawing.Image)(resources.GetObject("btnNhapNL.Image")));
             this.btnNhapNL.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnNhapNL.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNhapNL.Location = new System.Drawing.Point(24, 321);
+            this.btnNhapNL.Location = new System.Drawing.Point(27, 263);
             this.btnNhapNL.Name = "btnNhapNL";
             this.btnNhapNL.ShadowDecoration.Parent = this.btnNhapNL;
             this.btnNhapNL.Size = new System.Drawing.Size(186, 43);
@@ -238,39 +199,6 @@ namespace RJCodeAdvance
             this.btnNhapNL.TextOffset = new System.Drawing.Point(10, 0);
             this.btnNhapNL.UseTransparentBackground = true;
             this.btnNhapNL.Click += new System.EventHandler(this.btnGoiDoUong_Click_1);
-            // 
-            // btnNguyenLieu
-            // 
-            this.btnNguyenLieu.BackColor = System.Drawing.Color.Transparent;
-            this.btnNguyenLieu.BorderRadius = 22;
-            this.btnNguyenLieu.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnNguyenLieu.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnNguyenLieu.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnNguyenLieu.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            this.btnNguyenLieu.CheckedState.Parent = this.btnNguyenLieu;
-            this.btnNguyenLieu.CustomImages.Parent = this.btnNguyenLieu;
-            this.btnNguyenLieu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNguyenLieu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNguyenLieu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNguyenLieu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNguyenLieu.DisabledState.Parent = this.btnNguyenLieu;
-            this.btnNguyenLieu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnNguyenLieu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNguyenLieu.ForeColor = System.Drawing.Color.White;
-            this.btnNguyenLieu.HoverState.Parent = this.btnNguyenLieu;
-            this.btnNguyenLieu.Image = ((System.Drawing.Image)(resources.GetObject("btnNguyenLieu.Image")));
-            this.btnNguyenLieu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNguyenLieu.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNguyenLieu.Location = new System.Drawing.Point(24, 380);
-            this.btnNguyenLieu.Name = "btnNguyenLieu";
-            this.btnNguyenLieu.ShadowDecoration.Parent = this.btnNguyenLieu;
-            this.btnNguyenLieu.Size = new System.Drawing.Size(186, 43);
-            this.btnNguyenLieu.TabIndex = 11;
-            this.btnNguyenLieu.Text = "Nguyên Liệu";
-            this.btnNguyenLieu.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNguyenLieu.TextOffset = new System.Drawing.Point(10, 0);
-            this.btnNguyenLieu.UseTransparentBackground = true;
-            this.btnNguyenLieu.Click += new System.EventHandler(this.btnGoiDoUong_Click_1);
             // 
             // btnVoucher
             // 
@@ -294,7 +222,7 @@ namespace RJCodeAdvance
             this.btnVoucher.Image = ((System.Drawing.Image)(resources.GetObject("btnVoucher.Image")));
             this.btnVoucher.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnVoucher.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnVoucher.Location = new System.Drawing.Point(24, 441);
+            this.btnVoucher.Location = new System.Drawing.Point(27, 321);
             this.btnVoucher.Name = "btnVoucher";
             this.btnVoucher.ShadowDecoration.Parent = this.btnVoucher;
             this.btnVoucher.Size = new System.Drawing.Size(186, 43);
@@ -327,7 +255,7 @@ namespace RJCodeAdvance
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnThongKe.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnThongKe.Location = new System.Drawing.Point(24, 500);
+            this.btnThongKe.Location = new System.Drawing.Point(27, 380);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.ShadowDecoration.Parent = this.btnThongKe;
             this.btnThongKe.Size = new System.Drawing.Size(186, 43);
@@ -360,7 +288,7 @@ namespace RJCodeAdvance
             this.btnKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhachHang.Image")));
             this.btnKhachHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnKhachHang.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnKhachHang.Location = new System.Drawing.Point(24, 261);
+            this.btnKhachHang.Location = new System.Drawing.Point(27, 203);
             this.btnKhachHang.Name = "btnKhachHang";
             this.btnKhachHang.ShadowDecoration.Parent = this.btnKhachHang;
             this.btnKhachHang.Size = new System.Drawing.Size(186, 43);
@@ -384,6 +312,25 @@ namespace RJCodeAdvance
             this.guna2ControlBox1.Size = new System.Drawing.Size(41, 23);
             this.guna2ControlBox1.TabIndex = 16;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.guna2ControlBox2);
+            this.panel1.Controls.Add(this.guna2ControlBox1);
+            this.panel1.Controls.Add(this.btnKhachHang);
+            this.panel1.Controls.Add(this.btnThongKe);
+            this.panel1.Controls.Add(this.btnVoucher);
+            this.panel1.Controls.Add(this.btnNhapNL);
+            this.panel1.Controls.Add(this.btnNhanVien);
+            this.panel1.Controls.Add(this.btnGoiDoUong);
+            this.panel1.Controls.Add(this.imageSlide);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(213, 661);
+            this.panel1.TabIndex = 5;
+            // 
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -398,61 +345,12 @@ namespace RJCodeAdvance
             this.guna2ControlBox2.Size = new System.Drawing.Size(41, 23);
             this.guna2ControlBox2.TabIndex = 17;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.gunaButton1);
-            this.panel1.Controls.Add(this.guna2ControlBox2);
-            this.panel1.Controls.Add(this.guna2ControlBox1);
-            this.panel1.Controls.Add(this.btnKhachHang);
-            this.panel1.Controls.Add(this.btnThongKe);
-            this.panel1.Controls.Add(this.btnVoucher);
-            this.panel1.Controls.Add(this.btnNguyenLieu);
-            this.panel1.Controls.Add(this.btnNhapNL);
-            this.panel1.Controls.Add(this.btnNhanVien);
-            this.panel1.Controls.Add(this.btnDoUong);
-            this.panel1.Controls.Add(this.btnGoiDoUong);
-            this.panel1.Controls.Add(this.imageSlide);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(213, 661);
-            this.panel1.TabIndex = 5;
-            // 
-            // gunaButton1
-            // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.White;
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton1.Image")));
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(126, 626);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 3;
-            this.gunaButton1.Size = new System.Drawing.Size(41, 23);
-            this.gunaButton1.TabIndex = 19;
-            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.uC_Order2);
-            this.panel2.Controls.Add(this.uC_Beverages21);
             this.panel2.Controls.Add(this.uC_Voucher1);
             this.panel2.Controls.Add(this.uC_Statistic1);
             this.panel2.Controls.Add(this.uC_Input_Ingredient1);
-            this.panel2.Controls.Add(this.uC_ingredient1);
             this.panel2.Controls.Add(this.uC_employee1);
             this.panel2.Controls.Add(this.uC_Customer1);
             this.panel2.Controls.Add(this.dataGridView2);
@@ -464,34 +362,14 @@ namespace RJCodeAdvance
             this.panel2.Size = new System.Drawing.Size(1100, 661);
             this.panel2.TabIndex = 6;
             // 
-            // dataGridView2
+            // uC_Order2
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(350, 380);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView2.TabIndex = 9;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(313, 203);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.TargetControl = this.label1;
-            // 
-            // uC_Beverages21
-            // 
-            this.uC_Beverages21.BackColor = System.Drawing.Color.White;
-            this.uC_Beverages21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Beverages21.Location = new System.Drawing.Point(0, 10);
-            this.uC_Beverages21.Name = "uC_Beverages21";
-            this.uC_Beverages21.Size = new System.Drawing.Size(1090, 641);
-            this.uC_Beverages21.TabIndex = 0;
+            this.uC_Order2.BackColor = System.Drawing.Color.White;
+            this.uC_Order2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Order2.Location = new System.Drawing.Point(0, 10);
+            this.uC_Order2.Name = "uC_Order2";
+            this.uC_Order2.Size = new System.Drawing.Size(1090, 641);
+            this.uC_Order2.TabIndex = 10;
             // 
             // uC_Voucher1
             // 
@@ -521,15 +399,6 @@ namespace RJCodeAdvance
             this.uC_Input_Ingredient1.Size = new System.Drawing.Size(1090, 641);
             this.uC_Input_Ingredient1.TabIndex = 5;
             // 
-            // uC_ingredient1
-            // 
-            this.uC_ingredient1.BackColor = System.Drawing.Color.White;
-            this.uC_ingredient1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_ingredient1.Location = new System.Drawing.Point(0, 10);
-            this.uC_ingredient1.Name = "uC_ingredient1";
-            this.uC_ingredient1.Size = new System.Drawing.Size(1090, 641);
-            this.uC_ingredient1.TabIndex = 4;
-            // 
             // uC_employee1
             // 
             this.uC_employee1.BackColor = System.Drawing.Color.White;
@@ -548,23 +417,25 @@ namespace RJCodeAdvance
             this.uC_Customer1.Size = new System.Drawing.Size(1090, 641);
             this.uC_Customer1.TabIndex = 2;
             // 
-            // uC_Order1
+            // dataGridView2
             // 
-            //this.uC_Order1.BackColor = System.Drawing.Color.White;
-            //this.uC_Order1.Dock = System.Windows.Forms.DockStyle.Fill;
-            //this.uC_Order1.Location = new System.Drawing.Point(0, 10);
-            //this.uC_Order1.Name = "uC_Order1";
-            //this.uC_Order1.Size = new System.Drawing.Size(1090, 641);
-            //this.uC_Order1.TabIndex = 1;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(350, 380);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.TabIndex = 9;
             // 
-            // uC_Order2
+            // dataGridView1
             // 
-            this.uC_Order2.BackColor = System.Drawing.Color.White;
-            this.uC_Order2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Order2.Location = new System.Drawing.Point(0, 10);
-            this.uC_Order2.Name = "uC_Order2";
-            this.uC_Order2.Size = new System.Drawing.Size(1090, 641);
-            this.uC_Order2.TabIndex = 10;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(313, 203);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this.label1;
             // 
             // FrmBeverageCP
             // 
@@ -594,15 +465,12 @@ namespace RJCodeAdvance
         #endregion
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2Button btnKhachHang;
         private Guna.UI2.WinForms.Guna2Button btnThongKe;
         private Guna.UI2.WinForms.Guna2Button btnVoucher;
-        private Guna.UI2.WinForms.Guna2Button btnNguyenLieu;
         private Guna.UI2.WinForms.Guna2Button btnNhapNL;
         private Guna.UI2.WinForms.Guna2Button btnNhanVien;
-        private Guna.UI2.WinForms.Guna2Button btnDoUong;
         private Guna.UI2.WinForms.Guna2Button btnGoiDoUong;
         private System.Windows.Forms.PictureBox imageSlide;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -611,16 +479,13 @@ namespace RJCodeAdvance
         private ControlVouchers.UC_Voucher uC_Voucher1;
         private ControlStatistic.UC_Statistic uC_Statistic1;
         private ControlIngredient.UC_Input_Ingredient uC_Input_Ingredient1;
-        private ControlIngredient.UC_ingredient uC_ingredient1;
         private ControlEmployees.UC_employee uC_employee1;
         private ControlCustomers.UC_Customer uC_Customer1;
-        //private ControlBeverages.UC_Order uC_Order1;
-        private ControlBeverages.UC_Beverages2 uC_Beverages21;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private ControlBeverages.UC_Order uC_Order2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         //private ControlStatistic.UC_Statistic uC_Statistic_bill_beverage1;
         //private BunifuDragControl bunifuDragControl1;
     }

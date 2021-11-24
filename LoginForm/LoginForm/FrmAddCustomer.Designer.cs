@@ -237,7 +237,7 @@ namespace RJCodeAdvance
             this.btLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btLuu.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btLuu.DisabledState.Parent = this.btLuu;
-            this.btLuu.FillColor = System.Drawing.Color.BlueViolet;
+            this.btLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
             this.btLuu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuu.ForeColor = System.Drawing.Color.White;
             this.btLuu.HoverState.Parent = this.btLuu;
@@ -254,7 +254,7 @@ namespace RJCodeAdvance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(357, 301);
             this.Controls.Add(this.btLuu);
             this.Controls.Add(this.txbEmail);

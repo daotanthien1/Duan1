@@ -482,9 +482,9 @@ namespace RJCodeAdvance.ControlBeverages
             // pbDangXuat
             // 
             this.pbDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("pbDangXuat.Image")));
-            this.pbDangXuat.Location = new System.Drawing.Point(909, 16);
+            this.pbDangXuat.Location = new System.Drawing.Point(902, 13);
             this.pbDangXuat.Name = "pbDangXuat";
-            this.pbDangXuat.Size = new System.Drawing.Size(30, 27);
+            this.pbDangXuat.Size = new System.Drawing.Size(39, 34);
             this.pbDangXuat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDangXuat.TabIndex = 62;
             this.pbDangXuat.TabStop = false;

@@ -57,7 +57,7 @@ namespace RJCodeAdvance
             this.guna2ControlBox1.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(489, 12);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(436, 12);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(37, 26);
@@ -72,7 +72,7 @@ namespace RJCodeAdvance
             this.guna2ControlBox2.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(446, 12);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(393, 12);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(37, 26);
@@ -93,7 +93,7 @@ namespace RJCodeAdvance
             this.cbSale.HoverState.Parent = this.cbSale;
             this.cbSale.ItemHeight = 30;
             this.cbSale.ItemsAppearance.Parent = this.cbSale;
-            this.cbSale.Location = new System.Drawing.Point(165, 168);
+            this.cbSale.Location = new System.Drawing.Point(163, 147);
             this.cbSale.Name = "cbSale";
             this.cbSale.ShadowDecoration.Parent = this.cbSale;
             this.cbSale.Size = new System.Drawing.Size(293, 36);
@@ -106,7 +106,7 @@ namespace RJCodeAdvance
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(86, 178);
+            this.label3.Location = new System.Drawing.Point(84, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 16);
             this.label3.TabIndex = 149;
@@ -118,7 +118,7 @@ namespace RJCodeAdvance
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(48, 129);
+            this.label2.Location = new System.Drawing.Point(46, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(104, 16);
             this.label2.TabIndex = 148;
@@ -130,7 +130,7 @@ namespace RJCodeAdvance
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(80, 89);
+            this.label1.Location = new System.Drawing.Point(78, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 146;
@@ -144,7 +144,7 @@ namespace RJCodeAdvance
             this.guna2ToggleSwitch1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2ToggleSwitch1.CheckedState.Parent = this.guna2ToggleSwitch1;
-            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(165, 85);
+            this.guna2ToggleSwitch1.Location = new System.Drawing.Point(163, 64);
             this.guna2ToggleSwitch1.Name = "guna2ToggleSwitch1";
             this.guna2ToggleSwitch1.ShadowDecoration.Parent = this.guna2ToggleSwitch1;
             this.guna2ToggleSwitch1.Size = new System.Drawing.Size(47, 20);
@@ -175,7 +175,7 @@ namespace RJCodeAdvance
             this.guna2Button5.HoverState.Parent = this.guna2Button5;
             this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button5.Location = new System.Drawing.Point(330, 214);
+            this.guna2Button5.Location = new System.Drawing.Point(328, 193);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
             this.guna2Button5.Size = new System.Drawing.Size(128, 45);
@@ -193,7 +193,7 @@ namespace RJCodeAdvance
             this.nbDiemYeuCau.FocusedState.Parent = this.nbDiemYeuCau;
             this.nbDiemYeuCau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nbDiemYeuCau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.nbDiemYeuCau.Location = new System.Drawing.Point(165, 120);
+            this.nbDiemYeuCau.Location = new System.Drawing.Point(163, 99);
             this.nbDiemYeuCau.Name = "nbDiemYeuCau";
             this.nbDiemYeuCau.ShadowDecoration.Parent = this.nbDiemYeuCau;
             this.nbDiemYeuCau.Size = new System.Drawing.Size(293, 36);
@@ -202,7 +202,7 @@ namespace RJCodeAdvance
             // guna2ShadowForm1
             // 
             this.guna2ShadowForm1.BorderRadius = 3;
-            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(153)))));
+            this.guna2ShadowForm1.ShadowColor = System.Drawing.Color.Gray;
             this.guna2ShadowForm1.TargetForm = this;
             // 
             // FrmConfigurationSale
@@ -210,7 +210,7 @@ namespace RJCodeAdvance
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.ClientSize = new System.Drawing.Size(538, 277);
+            this.ClientSize = new System.Drawing.Size(485, 253);
             this.Controls.Add(this.nbDiemYeuCau);
             this.Controls.Add(this.guna2Button5);
             this.Controls.Add(this.guna2ToggleSwitch1);

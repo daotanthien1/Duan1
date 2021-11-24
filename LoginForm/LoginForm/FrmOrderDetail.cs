@@ -48,6 +48,9 @@ namespace RJCodeAdvance
                 beverage.btThem.Click += BtThem_Click;
                 flowLayoutPanel1.Controls.Add(beverage);
             }
+
+            UC_ItemBeverageAdd beverageAdd = new UC_ItemBeverageAdd();
+            flowLayoutPanel1.Controls.Add(beverageAdd);
         }
 
         private void BtThem_Click(object sender, EventArgs e)

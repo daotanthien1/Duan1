@@ -16,7 +16,7 @@ using System.IO;
 
 namespace RJCodeAdvance.ControlBeverages
 {
-    public partial class UC_Beverages2 : UserControl
+    public partial class UC_Beverages2 : Form
     {
         public UC_Beverages2()
         {
@@ -48,7 +48,7 @@ namespace RJCodeAdvance.ControlBeverages
             nbGia.Text = "";
             txtHinh.Enabled = false;
             txtHinh.Text = "";
-            btFile.Enabled = false;
+            ptbOpen.Enabled = false;
             txtSearchDoUong.Text = "";
             btXoa.Enabled = false; ;
             btSua.Enabled = false;
@@ -122,7 +122,7 @@ namespace RJCodeAdvance.ControlBeverages
             nbGia.Enabled = true;
             txtHinh.Enabled = true;
             btLuu.Enabled = true;
-            btFile.Enabled = true;
+            ptbOpen.Enabled = true;
             picHinh.Image = default;
         }
 
@@ -216,22 +216,6 @@ namespace RJCodeAdvance.ControlBeverages
         }
 
 
-        private void btFile_Click_1(object sender, EventArgs e)
-        {
-            OpenFileDialog dlgOpen = new OpenFileDialog();
-            dlgOpen.Filter = "Bitmap(*.bmp)|.bmp|JPEG(*.jpg)|*.jpg|GIF(*.fig)|*.gif|All files(*.*)|*.*";
-            dlgOpen.FilterIndex = 2;
-            dlgOpen.Title = "Chọn ảnh minh hoạ cho sản phẩm";
-            if (dlgOpen.ShowDialog() == DialogResult.OK)
-            {
-                fileAddress = dlgOpen.FileName;
-                picHinh.Image = Image.FromFile(fileAddress);
-                fileName = Path.GetFileName(dlgOpen.FileName);
-                string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
-                fileSavePath = "Images\\" + fileName;//combine with file name
-                txtHinh.Text = "Images\\" + fileName;
-            }
-        }
 
         private void dgvBeverage_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -246,7 +230,7 @@ namespace RJCodeAdvance.ControlBeverages
                     cbDoUong.Enabled = true;
                     nbGia.Enabled = true;
                     txtHinh.Enabled = true;
-                    btFile.Enabled = true;
+                    ptbOpen.Enabled = true;
                     txtTenDoUong.Text = dgvBeverage.CurrentRow.Cells["Name"].Value.ToString();
                     nbGia.Text = dgvBeverage.CurrentRow.Cells["Price"].Value.ToString();
                     cbDoUong.Text = dgvBeverage.CurrentRow.Cells["Id_Type"].Value.ToString();
@@ -344,6 +328,23 @@ namespace RJCodeAdvance.ControlBeverages
             if (cbbFilterCol.SelectedIndex == 4)
             {
                 txtSearchDoUong.PlaceholderText = "Nhập đường dẫn hình cần tìm";
+            }
+        }
+
+        private void ptbOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlgOpen = new OpenFileDialog();
+            dlgOpen.Filter = "Bitmap(*.bmp)|.bmp|JPEG(*.jpg)|*.jpg|GIF(*.fig)|*.gif|All files(*.*)|*.*";
+            dlgOpen.FilterIndex = 2;
+            dlgOpen.Title = "Chọn ảnh minh hoạ cho sản phẩm";
+            if (dlgOpen.ShowDialog() == DialogResult.OK)
+            {
+                fileAddress = dlgOpen.FileName;
+                picHinh.Image = Image.FromFile(fileAddress);
+                fileName = Path.GetFileName(dlgOpen.FileName);
+                string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                fileSavePath = "Images\\" + fileName;//combine with file name
+                txtHinh.Text = "Images\\" + fileName;
             }
         }
     }

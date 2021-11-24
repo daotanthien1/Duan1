@@ -1,7 +1,7 @@
 ﻿
 namespace RJCodeAdvance.ControlBeverages
 {
-    partial class UC_ItemBeverageAdd
+    partial class UC_ItemIngredientAdd
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace RJCodeAdvance.ControlBeverages
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ItemBeverageAdd));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_ItemIngredientAdd));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -55,15 +55,15 @@ namespace RJCodeAdvance.ControlBeverages
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
-            // UC_ItemBeverageAdd
+            // UC_ItemIngredientAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.Controls.Add(this.guna2PictureBox1);
-            this.Name = "UC_ItemBeverageAdd";
+            this.Name = "UC_ItemIngredientAdd";
             this.Size = new System.Drawing.Size(246, 73);
-            this.Click += new System.EventHandler(this.UC_ItemBeverageAdd_Click);
+            this.Click += new System.EventHandler(this.UC_ItemIngredientAdd_Click);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
