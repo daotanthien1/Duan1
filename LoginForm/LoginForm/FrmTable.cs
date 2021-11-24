@@ -17,6 +17,8 @@ namespace RJCodeAdvance
         public FrmTable()
         {
             InitializeComponent();
+            rdCoNguoi.Enabled = false;
+            rdTrong.Enabled = false;
         }
 
         private void label4_Click(object sender, EventArgs e)

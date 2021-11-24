@@ -249,6 +249,7 @@ namespace RJCodeAdvance
             this.btLuu.Size = new System.Drawing.Size(104, 40);
             this.btLuu.TabIndex = 156;
             this.btLuu.Text = "Lưu";
+            this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
             // 
             // FrmAddCustomer
             // 
