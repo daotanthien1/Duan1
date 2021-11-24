@@ -190,5 +190,85 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+        // thống kê nhân viên, số tiền , số lượng hóa đơn
+        public DataTable StaticEmployee()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "StaticDataEmployee";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        // thống kê khách hàng, tổng tiền mua 
+        public DataTable StaticCustomer()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "StaticCustomer";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        // thống kê hóa đơn nhân viên theo tuần
+        public DataTable StaticEmployeeWeek(string dayStar, string dayEnd)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "StaticEmployeeWeek";
+                cmd.Parameters.AddWithValue("dayStar", dayStar);
+                cmd.Parameters.AddWithValue("dayEnd", dayEnd);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        // Thống kê hóa đơn khách hàng theo tuần
+        public DataTable StaticCustomerWeek(string dayStar, string dayEnd)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "StaticCustomerWeek";
+                cmd.Parameters.AddWithValue("dayStar", dayStar);
+                cmd.Parameters.AddWithValue("dayEnd", dayEnd);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }

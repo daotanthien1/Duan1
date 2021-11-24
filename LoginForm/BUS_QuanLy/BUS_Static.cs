@@ -47,5 +47,21 @@ namespace BUS_QuanLy
         {
             return dAL_Static.SumPriceBillInputBetween(dayStar, dayEnd);
         }
+        public DataTable StaticEmployee()
+        {
+            return dAL_Static.StaticEmployee();
+        }
+        public DataTable StaticCustomer()
+        {
+            return dAL_Static.StaticCustomer();
+        }
+        public DataTable StaticEmployeeWeek(string dayStar, string dayEnd)
+        {
+            return dAL_Static.StaticEmployeeWeek(dayStar, dayEnd);
+        }
+        public DataTable StaticCustomerWeek(string dayStar, string dayEnd)
+        {
+            return dAL_Static.StaticCustomerWeek(dayStar, dayEnd);
+        }
     }
 }
