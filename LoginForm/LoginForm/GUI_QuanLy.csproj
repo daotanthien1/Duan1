@@ -186,6 +186,12 @@
     <Compile Include="ControlBeverages\UC_Order.designer.cs">
       <DependentUpon>UC_Order.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlBills\UC_Bill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlBills\UC_Bill.Designer.cs">
+      <DependentUpon>UC_Bill.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlCustomers\UC_Customer.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -350,6 +356,9 @@
     <EmbeddedResource Include="ControlBeverages\UC_Order.resx">
       <DependentUpon>UC_Order.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlBills\UC_Bill.resx">
+      <DependentUpon>UC_Bill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlCustomers\UC_Customer.resx">
       <DependentUpon>UC_Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -476,8 +485,6 @@
   <ItemGroup>
     <None Include="Resources\btThanhToan.Image.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ControlBills\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -32,22 +32,6 @@ namespace RJCodeAdvance
             Application.Exit();
         }
 
-        private void btnGoiDoUong_Click_1(object sender, EventArgs e)
-        {
-            moveImage(sender);
-             if (btnGoiDoUong.Checked)
-                uC_Order2.BringToFront();
-            if (btnNhanVien.Checked) 
-                uC_employee1.BringToFront();
-            if (btnKhachHang.Checked)
-                uC_Customer1.BringToFront();
-            if (btnNhapNL.Checked)
-                uC_Input_Ingredient1.BringToFront();
-            if (btnVoucher.Checked)
-                uC_Voucher1.BringToFront();
-            if (btnThongKe.Checked) 
-                uC_Statistic1.BringToFront();
-        }
         BUS_Vouchers vouchers = new BUS_Vouchers();
         BUS_Customer customer = new BUS_Customer();
         void sendVoucher()
@@ -94,6 +78,25 @@ namespace RJCodeAdvance
         private void uC_Beverages21_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGoiDoUong_Click(object sender, EventArgs e)
+        {
+            moveImage(sender);
+            if (btnGoiDoUong.Checked)
+                uC_Order2.BringToFront();
+            if (btnNhanVien.Checked)
+                uC_employee1.BringToFront();
+            if (btnKhachHang.Checked)
+                uC_Customer1.BringToFront();
+            if (btnNhapNL.Checked)
+                uC_Input_Ingredient1.BringToFront();
+            if (btnVoucher.Checked)
+                uC_Voucher1.BringToFront();
+            if (btnThongKe.Checked)
+                uC_Statistic1.BringToFront();
+            if (btHoaDon.Checked)
+                uC_Bill1.BringToFront();
         }
     }
 }
