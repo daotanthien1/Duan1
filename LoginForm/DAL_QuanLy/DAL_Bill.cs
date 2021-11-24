@@ -15,7 +15,80 @@ namespace DAL_QuanLy
     /// </summary>
     public class DAL_Bill:DBConnect
     {
+        public DataTable getbillDoUong()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_GetBillsDoUongToday";
+                cmd.Connection = _conn;
+                DataTable dtDoUong = new DataTable();
+                dtDoUong.Load(cmd.ExecuteReader());
+                return dtDoUong;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public DataTable getbillNL()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "sp_GetBillsNguyenLieuToday";
+                cmd.Connection = _conn;
+                DataTable dtDoUong = new DataTable();
+                dtDoUong.Load(cmd.ExecuteReader());
+                return dtDoUong;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public DataTable getbillDetailDoUong(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_GetBillsDetailDoUong";
+                cmd.Parameters.AddWithValue("id_bill", id);
+                DataTable dtDoUong = new DataTable();
+                dtDoUong.Load(cmd.ExecuteReader());
+                return dtDoUong;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+           
+        }
+        public DataTable getbillDetailNL(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_GetBillsDetailNL";
+                cmd.Parameters.AddWithValue("id_bill", id);
+                DataTable dtDoUong = new DataTable();
+                dtDoUong.Load(cmd.ExecuteReader());
+                return dtDoUong;
+            }
+            finally
+            {
+                _conn.Close();
+            }
 
+        }
         public int getMaxId()
         {
             try
@@ -157,6 +230,159 @@ namespace DAL_QuanLy
             catch
             {
                 return 0;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public bool DeleteBillsDoUong(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_BillDeleteDoUong";
+                cmd.Parameters.AddWithValue("@id_bill", id);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+        public bool DeleteBillsNL(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_BillDeleteNL";
+                cmd.Parameters.AddWithValue("@id_bill", id);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }public bool DeleteBillsDetailNL(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_BillsDetailDeleteNL";
+                cmd.Parameters.AddWithValue("@id_bill", id);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }public bool DeleteBillsDetailDoUong(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_BillsDetailDeleteDoUong";
+                cmd.Parameters.AddWithValue("@id_bill", id);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+        public bool UpdateBillsDetailDoUong(DTO_Bill_Detail du)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_UpdateBillsDetailDoUong";
+                cmd.Parameters.AddWithValue("quantity", du.Quantity);
+                cmd.Parameters.AddWithValue("id_bill", du.ID_Bill);
+                cmd.Connection = _conn;
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }public bool UpdateBillsDetailNL(int quantity, int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_UpdateBillsDetailNL";
+                cmd.Parameters.AddWithValue("quantity", quantity);
+                cmd.Parameters.AddWithValue("id_bill", id);
+                cmd.Connection = _conn;
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+        public DataTable BillsDetailSearch(string name, string col)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_BillsDetailSearch";
+                cmd.Parameters.AddWithValue("Name", name);
+                cmd.Parameters.AddWithValue("col", col);
+                cmd.Connection = _conn;
+                DataTable dtDoUong = new DataTable();
+                dtDoUong.Load(cmd.ExecuteReader());
+                return dtDoUong;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        public DataTable InputBillsDetailSearch(string name, string col)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "sp_InputBillsDetailSearch";
+                cmd.Parameters.AddWithValue("Name", name);
+                cmd.Parameters.AddWithValue("col", col);
+                cmd.Connection = _conn;
+                DataTable dtDoUong = new DataTable();
+                dtDoUong.Load(cmd.ExecuteReader());
+                return dtDoUong;
             }
             finally
             {

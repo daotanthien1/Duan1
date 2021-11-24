@@ -41,6 +41,12 @@ namespace DTO_QuanLy
             this.sale = (int)rows["sale"];
         }
 
+        public DTO_Bill_Detail(int iD_Bill, int quantity)
+        {
+            ID_Bill = iD_Bill;
+            Quantity = quantity;
+        }
+
         public int ID_Bill_Detail { get; set; } 
         public int ID_Bill { get; set; }
         public int Id_Beverage { get; set; }
