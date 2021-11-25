@@ -352,5 +352,28 @@ namespace RJCodeAdvance.ControlBills
                 btTimKiem_Click(sender, e);
             }
         }
+
+        private void btDanhSach_Click(object sender, EventArgs e)
+        {
+            if (rdoDoUong.Checked == true)
+            {
+                loadDGVDoUong();
+            }
+            else
+            {
+                loadDGVNL();
+            }
+            cbbFilterCol.Items.Clear();
+
+            dgvBillsDetail.Refresh();
+            cbbFilterCol.Items.Add("Id_Employee");
+            cbbFilterCol.Items.Add("Id_Bill");
+            cbbFilterCol.Items.Add("Id_Customer");
+            cbbFilterCol.Items.Add("Id_Table");
+            cbbFilterCol.Items.Add("DateCheckIn");
+            cbbFilterCol.Items.Add("DateCheckOut");
+            cbbFilterCol.Items.Add("Status");
+            cbbFilterCol.SelectedIndex = 0;
+        }
     }
 }

@@ -127,6 +127,7 @@ namespace RJCodeAdvance
             this.cbSearch.ShadowDecoration.Parent = this.cbSearch;
             this.cbSearch.Size = new System.Drawing.Size(180, 36);
             this.cbSearch.TabIndex = 77;
+            this.cbSearch.SelectedIndexChanged += new System.EventHandler(this.cbSearch_SelectedIndexChanged);
             // 
             // bunifuDragControl1
             // 

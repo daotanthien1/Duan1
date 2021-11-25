@@ -11,7 +11,8 @@ namespace DTO_QuanLy
     {
         private int iD_Type;
         private string name;
-
+        public DTO_TypesOfBeverage()
+        { }
         public DTO_TypesOfBeverage(string name)
         {
             this.name = name;

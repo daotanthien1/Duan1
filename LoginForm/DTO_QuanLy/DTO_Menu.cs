@@ -11,6 +11,9 @@ namespace DTO_QuanLy
     {
         public DTO_Menu(DataRow rows)
         {
+            var IdBillDetailTemp= Convert.ToInt32(rows["id_bill_detail"].ToString());
+            if (IdBillDetailTemp.ToString() != "")
+                this.IdBillDetail = (int)IdBillDetailTemp;
             this.beverageName = rows["name"].ToString();
             this.quantity = (int)rows["quantity"];
             this.price = Convert.ToDouble(rows["Price"].ToString());
@@ -30,7 +33,8 @@ namespace DTO_QuanLy
             this.totalPrice = totalPrice;
             this.sale = sale;
         }
-
+        
+        public int IdBillDetail { get; set; }
         public string beverageName {get;set;}
         public int quantity { get; set; }
         public double price { get; set; }

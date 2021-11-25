@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace BUS_QuanLy
@@ -42,5 +43,6 @@ namespace BUS_QuanLy
                 return false;
             }
         }
+           
     }
 }

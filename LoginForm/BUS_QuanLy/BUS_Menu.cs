@@ -16,5 +16,13 @@ namespace BUS_QuanLy
         {
             return dal.getListMenu(id_table); 
         }
+        public bool changeQuantity(int IdBillDetail, int quantity)
+        {
+            return dal.changeQuantity(IdBillDetail, quantity);
+        }
+        public bool DeleteBillDetail(int IdBillDetail)
+        {
+            return dal.DeleteBillDetail(IdBillDetail);
+        }
     }
 }

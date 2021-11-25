@@ -12,12 +12,16 @@ namespace BUS_QuanLy
     public class BUS_tables
     {
         DAL_tables Dal_tables = new DAL_tables();
+        public bool MercyTable(int idTable1, int? idTable2)
+        {
+            return Dal_tables.MercyTable(idTable1, idTable2);
+        }
         public bool SwitchTable(int idTable1, int idTable2, int idEmployee)
         {
             return Dal_tables.SwitchTable(idTable1, idTable2, idEmployee);
         }
 
-        public DTO_tables getTable(int idTable)
+        public DTO_tables getTable(int? idTable)
         {
             DataTable data = Dal_tables.getData();
             foreach(DataRow row in data.Rows)
@@ -28,7 +32,7 @@ namespace BUS_QuanLy
             }
             return null;
         }
-        public List<DTO_tables> getTableList()
+        public List<DTO_tables> getTableList(string status)
         {
             List<DTO_tables> tablelist = new List<DTO_tables>();
 
@@ -36,9 +40,15 @@ namespace BUS_QuanLy
             foreach(DataRow row in data.Rows)
             {
                 DTO_tables table = new DTO_tables(row);
-                tablelist.Add(table);
+                if("All" == status)
+                {
+                    tablelist.Add(table);
+                }
+                if (status == table.status)
+                {
+                    tablelist.Add(table);
+                }
             }
-
             return tablelist;
         }
 

@@ -30,5 +30,46 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+
+        public bool changeQuantity(int IdBillDetail,int quantity)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "changeQuantityBillDetail";
+                cmd.Parameters.AddWithValue("idBillDetail", IdBillDetail);
+                cmd.Parameters.AddWithValue("quantity", quantity);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
+        public bool DeleteBillDetail(int IdBillDetail)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "DeleteBillDetail";
+                cmd.Parameters.AddWithValue("idBillDetail", IdBillDetail);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
     }
 }

@@ -12,6 +12,27 @@ namespace DAL_QuanLy
     public class DAL_tables : DBConnect
     {
 
+        public bool MercyTable(int idTable1, int? idTable2)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "MercyTable";
+                cmd.Parameters.AddWithValue("idTable1", idTable1);
+                cmd.Parameters.AddWithValue("idTable2", idTable2);                
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+
         public bool SwitchTable(int idTable1, int idTable2, int idEmployee)
         {
             try

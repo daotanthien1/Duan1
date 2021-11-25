@@ -26,7 +26,8 @@ namespace RJCodeAdvance.ControlBeverages
         public UC_Order()
         {
             InitializeComponent();
-            loadCbTable(cbChuyenBan);
+            loadCbTable(cbChuyenBan, "Trống");
+            loadCbTable(cbGopBan, "Có người");
             suggestEmail();
         }
 
@@ -85,12 +86,19 @@ namespace RJCodeAdvance.ControlBeverages
                           
                 }
             }
+            loadCbTable(cbChuyenBan, "Trống");
+            loadCbTable(cbGopBan, "Có người");
+            nbSoLuong.Enabled = true;
+            btSua.Enabled = false;
+            btXoa.Enabled = false;
+            txbDoUong.Text = "";
+            nbSoLuong.Value = 1;
         }
 
         private void LoadTable()
         {
             flpTables.Controls.Clear();
-            List<DTO_tables> tableList = bus_table.getTableList();
+            List<DTO_tables> tableList = bus_table.getTableList("All");
 
             foreach(DTO_tables table in tableList)
             {
@@ -120,6 +128,7 @@ namespace RJCodeAdvance.ControlBeverages
         {
             FrmTable frm = new FrmTable();
             frm.ShowDialog();
+            LoadTable();
         }
 
         void ShowBill(int id)
@@ -130,11 +139,16 @@ namespace RJCodeAdvance.ControlBeverages
             dgv.Columns[2].HeaderText = "Giá";
             dgv.Columns[3].HeaderText = "Thành tiền";
             dgv.Columns[4].HeaderText = "Giảm giá";
+            dgv.Columns[5].Visible = false;
 
             CultureInfo culture = new CultureInfo("vi-VN");
             Thread.CurrentThread.CurrentCulture = culture;
             txbTongThanhTien.Text = bus_bill.getSumPrice(id).ToString("c");
 
+            btSua.Enabled = false;
+            btXoa.Enabled = false;
+            nbSoLuong.Value = 1;
+            txbDoUong.Text = "";
         }
 
         private void Btn_Click(object sender, EventArgs e)
@@ -235,10 +249,11 @@ namespace RJCodeAdvance.ControlBeverages
             LoadStatusTable(table.Id);
         }
 
-        void loadCbTable(Guna2ComboBox cb)
+        void loadCbTable(Guna2ComboBox cb, string status)
         {
-            cb.DataSource = bus_table.getTableList();
+            cb.DataSource = bus_table.getTableList(status);
             cb.DisplayMember = "name";
+         
             //cb.ValueMember = "Id_table";
         }
 
@@ -251,12 +266,16 @@ namespace RJCodeAdvance.ControlBeverages
         private void btChuyenBan_Click(object sender, EventArgs e)
         {
             int idTable1 = (dgv.Tag as DTO_tables).Id;
-            int idTable2 = (cbChuyenBan.SelectedItem as DTO_tables).Id;
-
-            bus_table.SwitchTable(idTable1, idTable2, idEmployee);
-            LoadStatusTable(idTable1);
-            LoadStatusTable(idTable2);
-            ShowBill(idTable1);
+            int idTable2 = -1;
+            if (cbChuyenBan.Items.Count > 0)
+                idTable2 = (cbChuyenBan.SelectedItem as DTO_tables).Id;
+            if (idTable1 != idTable2 && idTable2 != -1)
+            {
+                bus_table.SwitchTable(idTable1, idTable2, idEmployee);
+                LoadStatusTable(idTable1);
+                LoadStatusTable(idTable2);
+                ShowBill(idTable1);
+            }
         }
 
         private void btThem_Click(object sender, EventArgs e)
@@ -288,6 +307,56 @@ namespace RJCodeAdvance.ControlBeverages
                         }
                     }
                 }
+            }
+        }
+
+        private void btnGop_Click(object sender, EventArgs e)
+        {
+            int idTable1 = (dgv.Tag as DTO_tables).Id;
+            int idTable2 = -1;
+            if(cbGopBan.Items.Count > 0)
+                idTable2 = (cbGopBan.SelectedItem as DTO_tables).Id;
+            if (idTable1 != idTable2 && idTable2 != -1)
+            {
+                bus_table.MercyTable(idTable1, idTable2);
+                LoadStatusTable(idTable1);
+                LoadStatusTable(idTable2);
+                ShowBill(idTable1);
+            }
+        }
+
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgv.Rows.Count > 1)
+            {
+                nbSoLuong.Enabled = true;
+                btSua.Enabled = true;
+                btXoa.Enabled = true;
+                txbDoUong.Text = dgv.CurrentRow.Cells["Name"].Value.ToString();
+                nbSoLuong.Text = dgv.CurrentRow.Cells["quantity"].Value.ToString();
+            }
+        }
+
+        private void btSua_Click(object sender, EventArgs e)
+        {
+            if(nbSoLuong.Value != 0)
+            {
+                int idBillDetail = (int)dgv.CurrentRow.Cells["id_Bill_Detaill"].Value;
+                int Quantity = (int)nbSoLuong.Value;
+                bus_menu.changeQuantity(idBillDetail, Quantity);
+                ShowBill((dgv.Tag as DTO_tables).Id);
+            }
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            if (nbSoLuong.Value != 0)
+            {
+                int idTable = (dgv.Tag as DTO_tables).Id;
+                int idBillDetail = (int)dgv.CurrentRow.Cells["id_Bill_Detaill"].Value;
+                bus_menu.DeleteBillDetail(idBillDetail);
+                ShowBill(idTable);
+                LoadStatusTable(idTable);
             }
         }
     }

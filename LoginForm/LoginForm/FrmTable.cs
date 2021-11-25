@@ -87,7 +87,6 @@ namespace RJCodeAdvance
                 DTO_tables Tables = new DTO_tables(txtName.Text, status);
                 if (tables.InsertDataTable(Tables))
                 {
-                    MessageBox.Show("Thêm bàn thành công");
                     resetValue();
                     loadData();
                 }
@@ -137,8 +136,6 @@ namespace RJCodeAdvance
         // sửa
         private void btSua_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn sửa bàn " + name, "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
                 DTO_tables Tables = new DTO_tables(txtName.Text, Status, int.Parse(id));
                 if (tables.UpdateDataTable(Tables))
                 {
@@ -149,10 +146,6 @@ namespace RJCodeAdvance
                 {
                     MessageBox.Show("Tên bàn đã tồn tại", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-            }
         }
         //xóa
         private void btXoa_Click(object sender, EventArgs e)
