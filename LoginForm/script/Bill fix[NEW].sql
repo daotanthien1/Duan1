@@ -2,7 +2,7 @@ INSERT INTO bills (Id_employee, Id_bill, Id_customer, Id_table,DateCheckIn,DateC
 VALUES (1,37,null,2,GETDATE(),GETDATE(),1);
 select * from bills
 INSERT INTO inputbills (ID_Bill,DateCheckIn,ID_employee,SumPrice)
-VALUES (13,GETDATE(),1,1000);
+VALUES (15,GETDATE(),1,1000);
 
 SET IDENTITY_INSERT [dbo].[InputBills] on
 
@@ -17,7 +17,7 @@ begin
     = convert(varchar(10), getdate(), 102) and status = 1
 end
 go
-drop proc sp_GetBillsNguyenLieuToday
+--drop proc sp_GetBillsNguyenLieuToday
 create proc sp_GetBillsNguyenLieuToday
 as
 begin
@@ -25,18 +25,21 @@ begin
     = convert(varchar(10), getdate(), 102) 
 end
 go
-exec sp_GetBillsNguyenLieuToday
+--exec sp_GetBillsNguyenLieuToday
+--drop proc sp_GetBillsDetailDoUong
 create proc sp_GetBillsDetailDoUong( @id_bill int)
 as
 begin
-	select * from Bills_detail where Id_bill = @id_bill
+	select * from Bills_detail where Id_bill = @id_bill 
 end
 go
-
+-- drop proc sp_GetBillsDetailNL
 create proc sp_GetBillsDetailNL( @id_bill int)
 as
 begin
-	select * from InputBillsDetaill where Id_bill = @id_bill
+	
+	select * from InputBillsDetaill 
+	where InputBillsDetaill.Id_bill = @id_bill 
 end
 go
 -- exec sp_GetBillsDetailNL 11
@@ -75,7 +78,7 @@ AS
 
         BEGIN
 			delete InputBillsDetaill
-			where Id_bill = @id_bill
+			where Id_BillDetaill = @id_bill
         END
 END
 
@@ -88,7 +91,7 @@ AS
 
         BEGIN
 			delete Bills_detail
-			where Id_bill = @id_bill
+			where Id_bill_detaill = @id_bill
         END
 END
 --exec sp_BillsDetailDeleteDoUong 33
@@ -118,7 +121,7 @@ AS
         BEGIN
 			update InputBillsDetaill
 			set Quantity = @quantity
-			where Id_bill = @id_bill
+			where Id_BillDetaill = @id_bill
         END
 END
 -- drop proc sp_BillsDetailSearch

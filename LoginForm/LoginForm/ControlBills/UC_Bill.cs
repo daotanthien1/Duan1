@@ -124,7 +124,7 @@ namespace RJCodeAdvance.ControlBills
         {
             try
             {
-                if (dgvBill.Rows.Count > 0 || dgvBillsDetail.Rows.Count > 0)
+                if (dgvBill.Rows.Count > 0 || dgvBillsDetail.Rows.Count >0)
                 {
                     if (rdoDoUong.Checked == true)
                     {
@@ -293,11 +293,11 @@ namespace RJCodeAdvance.ControlBills
                 }
                 else
                 {
-
-                    int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells[0].Value.ToString());
-                    if (BUS_Bill.UpdateBillsDetailNL(Convert.ToInt32(nbSoLuong.Text), id2))
-                    {
-                        MessageBox.Show("Success");
+                    
+                        int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells[0].Value.ToString());
+                        if (BUS_Bill.UpdateBillsDetailNL(Convert.ToInt32(nbSoLuong.Text), id2))
+                        {
+                            MessageBox.Show("Success");
                         int idtemp = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
                         loadBillDetail(idtemp);
                     }
@@ -362,11 +362,11 @@ namespace RJCodeAdvance.ControlBills
                     {
                         int id = int.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
                         DataTable dt = BUS_Bill.getNameDetailDoUong(id);
-                        if (dt.Rows.Count > 0)
+                        if(dt.Rows.Count > 0)
                         {
                             txtDoUong.Text = dt.Rows[0][0].ToString();
                         }
-
+                        
                     }
                     else
                     {
@@ -376,7 +376,7 @@ namespace RJCodeAdvance.ControlBills
                         {
                             txtDoUong.Text = dt.Rows[0][0].ToString();
                         }
-
+                        
                     }
                     btXoa.Enabled = true;
                     btSua.Enabled = true;
