@@ -41,7 +41,7 @@ end
 go
 
 
-alter proc deleteBillDetail
+create proc deleteBillDetail
 @idBillDetail int
 as
 begin
