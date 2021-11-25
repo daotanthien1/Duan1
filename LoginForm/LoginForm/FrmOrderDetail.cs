@@ -46,7 +46,10 @@ namespace RJCodeAdvance
             cbSearch.DisplayMember = "name";
             cbSearch.ValueMember = "id_type";
         }
-
+        // ngon :))) im t test phần hóa đơn của thằng thành
+        // chắc chạy thiếu store roi, nãy máy t chạy cũng không đc
+        // thiếu sp nó hiện ngoài chớ
+        // đây kêu không find , t cũng không bt nãy chạy hoài không đc, cho t mượn máy tý
         void RenderBeverage(List<DTO_QuanLyDoUong> listBeverage)
         {
             flowLayoutPanel1.Controls.Clear();

@@ -335,20 +335,29 @@ namespace RJCodeAdvance.ControlStatistic
             DataTable dt = bUS_Static.getPrice();
             foreach (DataRow item in dt.Rows)
             {
-                txtTienHoaDon.Text = item[0].ToString();
+                if (item[0].ToString() == "")
+                {
+                    txtTienHoaDon.Text = "0";
+                }
+                else
+                {
+                    txtTienHoaDon.Text = item[0].ToString();
+                }
             }
             DataTable dt1 = bUS_Static.getSumPriceBillInput();
             foreach (DataRow item in dt1.Rows)
             {
-                txtTienIngredient.Text = item[0].ToString();
-            }
-            foreach (DataRow item in dt.Rows)
-            {
-                foreach (DataRow item1 in dt1.Rows)
+                if (item[0].ToString() == "")
                 {
-                    txtDanhThu.Text = "" + (float.Parse(item[0].ToString()) - float.Parse(item1[0].ToString()));
+                    txtTienIngredient.Text = "0";
+                }
+                else
+                {
+                    txtTienIngredient.Text = item[0].ToString();
                 }
             }
+
+            txtDanhThu.Text = "" + (float.Parse(txtTienHoaDon.Text) - float.Parse(txtTienIngredient.Text));
         }
         // thồng kê nhân viên, khách hàng
         bool perform1 = false;
