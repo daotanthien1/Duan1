@@ -35,7 +35,7 @@ namespace RJCodeAdvance.ControlBills
                 loadDGVNL();
             }
             cbbFilterCol.Items.Clear();
-            
+
             dgvBillsDetail.Refresh();
             cbbFilterCol.Items.Add("Id_Employee");
             cbbFilterCol.Items.Add("Id_Bill");
@@ -124,7 +124,7 @@ namespace RJCodeAdvance.ControlBills
         {
             try
             {
-                if (dgvBill.Rows.Count > 1)
+                if (dgvBill.Rows.Count > 0 || dgvBillsDetail.Rows.Count > 0)
                 {
                     if (rdoDoUong.Checked == true)
                     {
@@ -242,7 +242,7 @@ namespace RJCodeAdvance.ControlBills
                 }
                 else
                 {
-                    int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["ID_Bill"].Value.ToString());
+                    int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells[0].Value.ToString());
                     if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         if (BUS_Bill.DeleteBillsDetailNL(id2))
@@ -271,7 +271,6 @@ namespace RJCodeAdvance.ControlBills
             }
 
         }
-
         private void btSua_Click(object sender, EventArgs e)
         {
             try
@@ -290,19 +289,19 @@ namespace RJCodeAdvance.ControlBills
                         int idtemp = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
                         loadBillDetail(idtemp);
                     }
-                    
+
                 }
                 else
                 {
-                    
-                        int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["ID_Bill"].Value.ToString());
-                        if (BUS_Bill.UpdateBillsDetailNL(Convert.ToInt32(nbSoLuong.Text), id2))
-                        {
-                            MessageBox.Show("Success");
+
+                    int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells[0].Value.ToString());
+                    if (BUS_Bill.UpdateBillsDetailNL(Convert.ToInt32(nbSoLuong.Text), id2))
+                    {
+                        MessageBox.Show("Success");
                         int idtemp = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
                         loadBillDetail(idtemp);
                     }
-                    
+
                 }
             }
 
@@ -310,7 +309,7 @@ namespace RJCodeAdvance.ControlBills
             {
                 MessageBox.Show(ex.Message);
             }
-               
+
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)
@@ -353,27 +352,50 @@ namespace RJCodeAdvance.ControlBills
             }
         }
 
-        private void btDanhSach_Click(object sender, EventArgs e)
+        private void dgvBillsDetail_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (rdoDoUong.Checked == true)
+            try
             {
-                loadDGVDoUong();
-            }
-            else
-            {
-                loadDGVNL();
-            }
-            cbbFilterCol.Items.Clear();
+                if (dgvBill.Rows.Count > 0 || dgvBillsDetail.Rows.Count > 0)
+                {
+                    if (rdoDoUong.Checked == true)
+                    {
+                        int id = int.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
+                        DataTable dt = BUS_Bill.getNameDetailDoUong(id);
+                        if (dt.Rows.Count > 0)
+                        {
+                            txtDoUong.Text = dt.Rows[0][0].ToString();
+                        }
 
-            dgvBillsDetail.Refresh();
-            cbbFilterCol.Items.Add("Id_Employee");
-            cbbFilterCol.Items.Add("Id_Bill");
-            cbbFilterCol.Items.Add("Id_Customer");
-            cbbFilterCol.Items.Add("Id_Table");
-            cbbFilterCol.Items.Add("DateCheckIn");
-            cbbFilterCol.Items.Add("DateCheckOut");
-            cbbFilterCol.Items.Add("Status");
-            cbbFilterCol.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        int id = int.Parse(dgvBillsDetail.CurrentRow.Cells[2].Value.ToString());
+                        DataTable dt = BUS_Bill.getNameDetailNL(id);
+                        if (dt.Rows.Count > 0)
+                        {
+                            txtDoUong.Text = dt.Rows[0][0].ToString();
+                        }
+
+                    }
+                    btXoa.Enabled = true;
+                    btSua.Enabled = true;
+
+                }
+                else
+                {
+                    MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvBill_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
+        {
+            e.Column.SortMode = DataGridViewColumnSortMode.NotSortable;
         }
     }
 }
