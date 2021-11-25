@@ -85,6 +85,13 @@ namespace BUS_QuanLy
         public DataTable InputBillsDetailSearch(string name, string col)
         {
             return dal_bill.InputBillsDetailSearch(name, col);
+        } public DataTable getNameDetailDoUong(int id)
+        {
+            return dal_bill.getNameDetailDoUong(id);
+        }
+        public DataTable getNameDetailNL(int id)
+        {
+            return dal_bill.getNameDetailNL(id);
         }
     }
 }

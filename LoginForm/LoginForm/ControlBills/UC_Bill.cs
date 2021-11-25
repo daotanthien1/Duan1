@@ -354,7 +354,43 @@ namespace RJCodeAdvance.ControlBills
 
         private void dgvBillsDetail_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                if (dgvBill.Rows.Count > 0 || dgvBillsDetail.Rows.Count > 0)
+                {
+                    if (rdoDoUong.Checked == true)
+                    {
+                        int id = int.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
+                        DataTable dt = BUS_Bill.getNameDetailDoUong(id);
+                        if(dt.Rows.Count > 0)
+                        {
+                            txtDoUong.Text = dt.Rows[0][0].ToString();
+                        }
+                        
+                    }
+                    else
+                    {
+                        int id = int.Parse(dgvBillsDetail.CurrentRow.Cells[2].Value.ToString());
+                        DataTable dt = BUS_Bill.getNameDetailNL(id);
+                        if (dt.Rows.Count > 0)
+                        {
+                            txtDoUong.Text = dt.Rows[0][0].ToString();
+                        }
+                        
+                    }
+                    btXoa.Enabled = true;
+                    btSua.Enabled = true;
 
+                }
+                else
+                {
+                    MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void dgvBill_ColumnAdded(object sender, DataGridViewColumnEventArgs e)

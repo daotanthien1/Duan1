@@ -389,5 +389,43 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+        public DataTable getNameDetailDoUong(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select Name from beverages where id_beverage = " + id;
+                DataTable dtDoUong = new DataTable();
+                dtDoUong.Load(cmd.ExecuteReader());
+                return dtDoUong;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+
+        }
+        public DataTable getNameDetailNL(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select [Name] from Ingredients where Id_ingredient = "+id;
+                DataTable dtDoUong = new DataTable();
+                dtDoUong.Load(cmd.ExecuteReader());
+                return dtDoUong;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+
+        }
     }
 }

@@ -50,7 +50,7 @@ namespace RJCodeAdvance.ControlBills
             this.label1 = new System.Windows.Forms.Label();
             this.nbSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.txbDoUong = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtDoUong = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btSua = new Guna.UI2.WinForms.Guna2Button();
             this.btnXoaBillsDetail = new Guna.UI2.WinForms.Guna2Button();
@@ -316,7 +316,7 @@ namespace RJCodeAdvance.ControlBills
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.nbSoLuong);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.txbDoUong);
+            this.panel2.Controls.Add(this.txtDoUong);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btSua);
             this.panel2.Controls.Add(this.btnXoaBillsDetail);
@@ -374,33 +374,33 @@ namespace RJCodeAdvance.ControlBills
             this.label6.TabIndex = 140;
             this.label6.Text = "Số lượng:";
             // 
-            // txbDoUong
+            // txtDoUong
             // 
-            this.txbDoUong.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbDoUong.BorderRadius = 16;
-            this.txbDoUong.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txbDoUong.DefaultText = "";
-            this.txbDoUong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txbDoUong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txbDoUong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbDoUong.DisabledState.Parent = this.txbDoUong;
-            this.txbDoUong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txbDoUong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbDoUong.FocusedState.Parent = this.txbDoUong;
-            this.txbDoUong.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txbDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txbDoUong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txbDoUong.HoverState.Parent = this.txbDoUong;
-            this.txbDoUong.Location = new System.Drawing.Point(28, 228);
-            this.txbDoUong.Margin = new System.Windows.Forms.Padding(4);
-            this.txbDoUong.MaxLength = 50;
-            this.txbDoUong.Name = "txbDoUong";
-            this.txbDoUong.PasswordChar = '\0';
-            this.txbDoUong.PlaceholderText = "";
-            this.txbDoUong.SelectedText = "";
-            this.txbDoUong.ShadowDecoration.Parent = this.txbDoUong;
-            this.txbDoUong.Size = new System.Drawing.Size(273, 44);
-            this.txbDoUong.TabIndex = 139;
+            this.txtDoUong.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoUong.BorderRadius = 16;
+            this.txtDoUong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDoUong.DefaultText = "";
+            this.txtDoUong.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDoUong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDoUong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDoUong.DisabledState.Parent = this.txtDoUong;
+            this.txtDoUong.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDoUong.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoUong.FocusedState.Parent = this.txtDoUong;
+            this.txtDoUong.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtDoUong.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDoUong.HoverState.Parent = this.txtDoUong;
+            this.txtDoUong.Location = new System.Drawing.Point(28, 228);
+            this.txtDoUong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDoUong.MaxLength = 50;
+            this.txtDoUong.Name = "txtDoUong";
+            this.txtDoUong.PasswordChar = '\0';
+            this.txtDoUong.PlaceholderText = "";
+            this.txtDoUong.SelectedText = "";
+            this.txtDoUong.ShadowDecoration.Parent = this.txtDoUong;
+            this.txtDoUong.Size = new System.Drawing.Size(273, 44);
+            this.txtDoUong.TabIndex = 139;
             // 
             // label2
             // 
@@ -571,7 +571,7 @@ namespace RJCodeAdvance.ControlBills
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2NumericUpDown nbSoLuong;
         private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2TextBox txbDoUong;
+        private Guna.UI2.WinForms.Guna2TextBox txtDoUong;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button btSua;
         private Guna.UI2.WinForms.Guna2Button btnXoaBillsDetail;
