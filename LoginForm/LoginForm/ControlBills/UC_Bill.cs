@@ -215,7 +215,7 @@ namespace RJCodeAdvance.ControlBills
 
             try
             {
-                int id = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["ID_Bill"].Value.ToString());
+                int id = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["ID_Bill_detaill"].Value.ToString());
 
                 if (rdoDoUong.Checked == true)
                 {
