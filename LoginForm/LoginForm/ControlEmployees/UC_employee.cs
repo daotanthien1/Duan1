@@ -205,6 +205,12 @@ namespace RJCodeAdvance.ControlEmployees
                 txtEmail.Focus();
                 return;
             }
+            else if (!IsValid(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Bạn phải nhập đúng định dạng email", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtEmail.Focus();
+                return;
+            }
             else if (txtTenNhanVien.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

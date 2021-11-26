@@ -29,10 +29,7 @@ namespace RJCodeAdvance.ControlBills
         }
         Hashtable hash;
         BindingSource bindingSource;
-<<<<<<< HEAD
 
-=======
->>>>>>> 762709ffa2c2463343f89f67b7bfd2d7bb3ef8ad
         public void UC_Bill_Load(object sender, EventArgs e)
         {
             if (rdoDoUong.Checked == true)
