@@ -184,8 +184,6 @@ namespace RJCodeAdvance.ControlBills
                 if (rdoDoUong.Checked == true)
                 {
                     int id = Convert.ToInt32(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
-                    if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
                         if (BUS_Bill.DeleteBillsDoUong(id))
                         {
                             if (rdoDoUong.Checked == true)
@@ -202,13 +200,11 @@ namespace RJCodeAdvance.ControlBills
                         {
                             MessageBox.Show("Xoá không thành công");
                         }
-                    }
+                    
                 }
                 else
                 {
                     int id2 = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
-                    if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
                         if (BUS_Bill.DeleteBillsNL(id2))
                         {
                             if (rdoDoUong.Checked == true)
@@ -225,7 +221,7 @@ namespace RJCodeAdvance.ControlBills
                         {
                             MessageBox.Show("Xoá không thành công");
                         }
-                    }
+                    
                 }
             }
             catch (Exception ex)
@@ -244,8 +240,6 @@ namespace RJCodeAdvance.ControlBills
 
                 if (rdoDoUong.Checked == true)
                 {
-                    if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
                         if (BUS_Bill.DeleteBillsDetailDoUong(id))
                         {
                             if (rdoDoUong.Checked == true)
@@ -263,13 +257,11 @@ namespace RJCodeAdvance.ControlBills
                         {
                             MessageBox.Show("Xoá không thành công");
                         }
-                    }
+                    
                 }
                 else
                 {
                     int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_BillDetaill"].Value.ToString());
-                    if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
                         if (BUS_Bill.DeleteBillsDetailNL(id2))
                         {
                             if (rdoDoUong.Checked == true)
@@ -287,7 +279,7 @@ namespace RJCodeAdvance.ControlBills
                         {
                             MessageBox.Show("Xoá không thành công");
                         }
-                    }
+                    
                 }
             }
             catch (Exception ex)
@@ -307,7 +299,6 @@ namespace RJCodeAdvance.ControlBills
                     DTO_Bill_Detail dto = new DTO_Bill_Detail(Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_bill_detaill"].Value.ToString()), Convert.ToInt32(nbSoLuong.Text));
                     if (BUS_Bill.UpdateBillsDetailDoUong(dto))
                     {
-                        MessageBox.Show("Success");
                         int idtemp = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
                         loadBillDetail(idtemp);
                     }
@@ -319,7 +310,6 @@ namespace RJCodeAdvance.ControlBills
                     int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_BillDetaill"].Value.ToString());
                     if (BUS_Bill.UpdateBillsDetailNL(Convert.ToInt32(nbSoLuong.Text), id2))
                     {
-                        MessageBox.Show("Success");
                         int idtemp = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
                         loadBillDetailNL(idtemp);
                     }
@@ -389,10 +379,7 @@ namespace RJCodeAdvance.ControlBills
                     }
                     else
                     {
-                        
                             txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
-
-
                     }
                     btXoa.Enabled = true;
                     btSua.Enabled = true;

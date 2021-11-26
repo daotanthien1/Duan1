@@ -370,8 +370,17 @@ namespace RJCodeAdvance.ControlBeverages
 
         private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawString("HOÁ ĐƠN", new Font("Arial", 36, FontStyle.Bold), Brushes.Black, new Point(385, 10));
+            DateTime now = DateTime.Now;
+            e.Graphics.DrawString("HOÁ ĐƠN", new Font("Arial", 36, FontStyle.Bold), Brushes.Black, new Point(300, 30));
 
+            e.Graphics.DrawString("Ngày:" + now.ToString("dd/MM/yyyy"), new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(30, 130));
+            e.Graphics.DrawString("Số:1242", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(600, 130));
+
+            e.Graphics.DrawString("Thu ngân:nguyễn hoàng tùng", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(30, 160));
+            e.Graphics.DrawString("in lúc:" + now.ToString("hh:mm"), new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(600, 160));
+
+            e.Graphics.DrawString("Giờ vào:12:04", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(30, 190));
+            e.Graphics.DrawString("Giờ ra:14:04", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(600, 190));
         }
     }
 }
