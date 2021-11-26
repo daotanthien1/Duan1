@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -16,6 +17,8 @@ namespace RJCodeAdvance.ControlEmployees
 {
     public partial class UC_employee : UserControl
     {
+        public static string mail;
+
         BUS_NhanVien busNV = new BUS_QuanLy.BUS_NhanVien();
         public UC_employee()
         {
@@ -152,6 +155,12 @@ namespace RJCodeAdvance.ControlEmployees
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            if (mail == txtEmail.Text)
+            {
+                MessageBox.Show("Không được xóa nhân viên đang đăng nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTenNhanVien.Focus();
+                return;
+            }
             if (cbVaiTro.SelectedIndex == 0)
             {
                 MessageBox.Show("Không được xóa nhân viên có vai trò Quản lý!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -265,22 +274,18 @@ namespace RJCodeAdvance.ControlEmployees
             dgv_NhanVien.Columns[8].Visible = false;
             dgv_NhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-        public void ShowDuLieu()
-        {
-    
-        }
+
         //Kiểm tra định dạng email
         public bool IsValid(string emailAddress)
         {
-            try
-            {
-                MailAddress m = new MailAddress(emailAddress);
-                return true;
-            }
-            catch (FormatException)
-            {
-                return false;
-            }
+            string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+              @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+              @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(emailAddress))
+                return (true);
+            else
+                return (false);
         }
 
         public void ThemVaiTro()
@@ -335,30 +340,6 @@ namespace RJCodeAdvance.ControlEmployees
             }
         }
 
-        private void btTimKiem_Click(object sender, EventArgs e)
-        {
-            string name = txtTimKiem.Text;
-            DataTable ds = busNV.SearchNhanVien(name);
-            if (ds.Rows.Count > 0)
-            {
-                dgv_NhanVien.DataSource = ds;
-                dgv_NhanVien.Columns[0].HeaderText = "Vai trò";
-                dgv_NhanVien.Columns[1].HeaderText = "Tên nhân viên";
-                dgv_NhanVien.Columns[2].HeaderText = "Giới tính";
-                dgv_NhanVien.Columns[3].HeaderText = "Email";
-                dgv_NhanVien.Columns[4].HeaderText = "Địa chỉ";
-                dgv_NhanVien.Columns[5].HeaderText = "Ngày sinh";
-                dgv_NhanVien.Columns[6].HeaderText = "Lương";
-            }
-            else
-            {
-                MessageBox.Show("Không tìm thấy nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            txtTimKiem.Text = "Nhập tên nhân viên cần tìm";
-            txtTimKiem.BackColor = Color.LightGray;
-            ResetValue();
-        }
-
         private void btLoad_Click(object sender, EventArgs e)
         {
             ShowData_GridViewNhanVien();
@@ -377,6 +358,43 @@ namespace RJCodeAdvance.ControlEmployees
             {
                 e.Handled = true;
             }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            string name = txtTimKiem.Text;
+            int id_role = cbTimKiemTheoVaiTro.SelectedIndex + 1;
+            DataTable ds = busNV.SearchNhanVien(name, id_role);//Test lai di ong
+            if (ds.Rows.Count > 0)
+            {
+                dgv_NhanVien.DataSource = ds;
+                dgv_NhanVien.Columns[0].HeaderText = "Vai trò";
+                dgv_NhanVien.Columns[1].HeaderText = "Tên nhân viên";
+                dgv_NhanVien.Columns[2].HeaderText = "Giới tính";
+                dgv_NhanVien.Columns[3].HeaderText = "Email";
+                dgv_NhanVien.Columns[4].HeaderText = "Địa chỉ";
+                dgv_NhanVien.Columns[5].HeaderText = "Ngày sinh";
+                dgv_NhanVien.Columns[6].HeaderText = "Lương";
+            }
+            else
+            {
+                MessageBox.Show("Không tìm thấy nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            txtTimKiem.Clear();
+            txtTimKiem.BackColor = Color.LightGray;
+            ResetValue();
+        }
+
+        private void cbTimKiemTheoVaiTro_Click(object sender, EventArgs e)
+        {
+            cbTimKiemTheoVaiTro.DataSource = busNV.ThemVaiTro();
+            cbTimKiemTheoVaiTro.DisplayMember = "Name";
+            cbTimKiemTheoVaiTro.ValueMember = "Id_role";
+        }
+
+        private void btDanhSach_Click(object sender, EventArgs e)
+        {
+            ShowData_GridViewNhanVien();
         }
     }
 }
