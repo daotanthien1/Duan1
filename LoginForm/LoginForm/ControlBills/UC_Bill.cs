@@ -5,10 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_QuanLy;
 using DTO_QuanLy;
+
+
 namespace RJCodeAdvance.ControlBills
 {
     public partial class UC_Bill : UserControl
@@ -29,10 +32,12 @@ namespace RJCodeAdvance.ControlBills
             if (rdoDoUong.Checked == true)
             {
                 loadDGVDoUong();
+                label2.Text = "Tên đồ uống";
             }
             else
             {
                 loadDGVNL();
+                label2.Text = "Tên nguyên liệu";
             }
             cbbFilterCol.Items.Clear();
 
@@ -45,7 +50,10 @@ namespace RJCodeAdvance.ControlBills
             cbbFilterCol.Items.Add("DateCheckOut");
             cbbFilterCol.Items.Add("Status");
             cbbFilterCol.SelectedIndex = 0;
+            
+
         }
+        //load dgv cua do uong
         void loadDGVDoUong()
         {
             dgvBill.DataSource = BUS_Bill.getBillDoUong();
@@ -58,6 +66,7 @@ namespace RJCodeAdvance.ControlBills
             dgvBill.Columns[6].HeaderText = "status";
             dgvBill.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+        //load dgv cua nguyen lieu
         void loadDGVNL()
         {
             dgvBill.DataSource = BUS_Bill.getBillNL();
@@ -67,6 +76,7 @@ namespace RJCodeAdvance.ControlBills
             dgvBill.Columns[3].HeaderText = "SumPrice";
             dgvBill.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+        //load dgv cua do uong nhung detail
         void loadBillDetail(int id)
         {
             dgvBillsDetail.DataSource = BUS_Bill.getBillDetailDoUong(id);
@@ -78,6 +88,7 @@ namespace RJCodeAdvance.ControlBills
             dgvBillsDetail.Columns[5].HeaderText = "Sale";
             dgvBillsDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
+        //load dgv cua nguyen lieu nhung detail
         void loadBillDetailNL(int id)
         {
             dgvBillsDetail.DataSource = BUS_Bill.getBillDetailNL(id);
@@ -105,6 +116,7 @@ namespace RJCodeAdvance.ControlBills
             cbbFilterCol.Items.Add("DateCheckOut");
             cbbFilterCol.Items.Add("Status");
             cbbFilterCol.SelectedIndex = 0;
+            label2.Text = "Tên đồ uống";
         }
 
         private void rdoNguyenLieu_CheckedChanged(object sender, EventArgs e)
@@ -118,8 +130,9 @@ namespace RJCodeAdvance.ControlBills
             cbbFilterCol.Items.Add("Id_Employee");
             cbbFilterCol.Items.Add("SumPrice");
             cbbFilterCol.SelectedIndex = 0;
+            label2.Text = "Tên nguyên liệu";
         }
-
+        //click vao dgv
         private void dgvBill_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -150,7 +163,7 @@ namespace RJCodeAdvance.ControlBills
                 MessageBox.Show(ex.Message);
             }
         }
-
+        //click nut xoa
         private void btXoa_Click(object sender, EventArgs e)
         {
 
@@ -209,13 +222,13 @@ namespace RJCodeAdvance.ControlBills
             }
 
         }
-
+        //click nut xoa nhung ben detail
         private void btnXoaBillsDetail_Click(object sender, EventArgs e)
         {
 
             try
             {
-                int id = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["ID_Bill_detaill"].Value.ToString());
+                int id = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells[0].Value.ToString());
 
                 if (rdoDoUong.Checked == true)
                 {
@@ -255,7 +268,7 @@ namespace RJCodeAdvance.ControlBills
                             {
                                 loadDGVNL();
                             }
-                            int idtemp = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
+                            int idtemp = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
                             loadBillDetail(idtemp);
                         }
                         else
@@ -271,6 +284,7 @@ namespace RJCodeAdvance.ControlBills
             }
 
         }
+        //click nut sua
         private void btSua_Click(object sender, EventArgs e)
         {
             try
@@ -279,10 +293,8 @@ namespace RJCodeAdvance.ControlBills
 
                 if (rdoDoUong.Checked == true)
                 {
-                    int id = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["ID_Bill"].Value.ToString());
-
-
-                    DTO_Bill_Detail dto = new DTO_Bill_Detail(Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["ID_Bill"].Value.ToString()), Convert.ToInt32(nbSoLuong.Text));
+                    
+                    DTO_Bill_Detail dto = new DTO_Bill_Detail(Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells[0].Value.ToString()), Convert.ToInt32(nbSoLuong.Text));
                     if (BUS_Bill.UpdateBillsDetailDoUong(dto))
                     {
                         MessageBox.Show("Success");
@@ -298,7 +310,7 @@ namespace RJCodeAdvance.ControlBills
                     if (BUS_Bill.UpdateBillsDetailNL(Convert.ToInt32(nbSoLuong.Text), id2))
                     {
                         MessageBox.Show("Success");
-                        int idtemp = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
+                        int idtemp = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
                         loadBillDetail(idtemp);
                     }
 
@@ -311,7 +323,7 @@ namespace RJCodeAdvance.ControlBills
             }
 
         }
-
+        //click nut tim kiem
         private void btTimKiem_Click(object sender, EventArgs e)
         {
             string tenHang = txtSearchDoUong.Text;
@@ -343,7 +355,7 @@ namespace RJCodeAdvance.ControlBills
                 }
             }
         }
-
+        //thay vi click nut tim kiem thi minh an enter cho nhanh
         private void txtSearchDoUong_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -351,7 +363,7 @@ namespace RJCodeAdvance.ControlBills
                 btTimKiem_Click(sender, e);
             }
         }
-
+        //click vao dgv nhung ben detail
         private void dgvBillsDetail_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -360,7 +372,7 @@ namespace RJCodeAdvance.ControlBills
                 {
                     if (rdoDoUong.Checked == true)
                     {
-                        int id = int.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
+                        int id = int.Parse(dgvBillsDetail.CurrentRow.Cells[3].Value.ToString());
                         DataTable dt = BUS_Bill.getNameDetailDoUong(id);
                         if (dt.Rows.Count > 0)
                         {
@@ -392,10 +404,78 @@ namespace RJCodeAdvance.ControlBills
                 MessageBox.Show(ex.Message);
             }
         }
-
+        //khong biet la gi nhung tren mang chi vay la click vao header khong dc
         private void dgvBill_ColumnAdded(object sender, DataGridViewColumnEventArgs e)
         {
             e.Column.SortMode = DataGridViewColumnSortMode.NotSortable;
+        }
+        //chon cai combobox se doi placeholder cua txt search cho vui
+        private void cbbFilterCol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(rdoDoUong.Checked == true)
+            {
+                if (cbbFilterCol.SelectedIndex == 0)
+                {
+                    txtSearchDoUong.PlaceholderText = "Nhập ID nhân viên cần tìm";
+                }
+                if (cbbFilterCol.SelectedIndex == 1)
+                {
+                    txtSearchDoUong.PlaceholderText = "Nhập ID Bill cần tìm";
+                }
+                if (cbbFilterCol.SelectedIndex == 2)
+                {
+                    txtSearchDoUong.PlaceholderText = "Nhập ID khách cần tìm";
+                }
+                if (cbbFilterCol.SelectedIndex == 3)
+                {
+                    txtSearchDoUong.PlaceholderText = "Nhập ID bàn cần tìm";
+                }
+                if (cbbFilterCol.SelectedIndex == 4)
+                {
+                    txtSearchDoUong.PlaceholderText = "Nhập DateCheckIn cần tìm";
+                }
+                if (cbbFilterCol.SelectedIndex == 5)
+                {
+                    txtSearchDoUong.PlaceholderText = "Nhập DateCheckOut cần tìm";
+                }
+                if (cbbFilterCol.SelectedIndex == 6)
+                {
+                    txtSearchDoUong.PlaceholderText = "Nhập trạng thái cần tìm";
+                }
+            }
+            else
+            {
+                if (cbbFilterCol.SelectedIndex == 0)
+                {
+                    txtSearchDoUong.PlaceholderText = "Nhập ID Bill cần tìm";
+                }
+                if (cbbFilterCol.SelectedIndex == 1)
+                {
+                    txtSearchDoUong.PlaceholderText = "Nhập DateCheckIn cần tìm";
+                }
+                if (cbbFilterCol.SelectedIndex == 2)
+                {
+                    txtSearchDoUong.PlaceholderText = "Nhập SumPrice cần tìm";
+                }
+            }
+        }
+        static int a = 1;
+        static int b = 1;
+        static int c = 1;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+           
+            if(label8.ForeColor == Color.FromArgb(0, 118, 212))
+            {
+                label8.ForeColor = Color.FromArgb(255, 0, 0);
+            }
+            else if(label8.ForeColor == Color.FromArgb(255, 0, 0))
+            {
+                label8.ForeColor = Color.FromArgb(124, 252, 0);
+            }else if(label8.ForeColor == Color.FromArgb(124, 252, 0))
+            {
+                label8.ForeColor = Color.FromArgb(0, 118, 212);
+            }
         }
     }
 }

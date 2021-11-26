@@ -1,10 +1,10 @@
 INSERT INTO bills (Id_employee, Id_bill, Id_customer, Id_table,DateCheckIn,DateCheckOut,status)
-VALUES (1,37,null,2,GETDATE(),GETDATE(),1);
+VALUES (1,41,1,2,GETDATE(),GETDATE(),1);
 select * from bills
 INSERT INTO inputbills (ID_Bill,DateCheckIn,ID_employee,SumPrice)
-VALUES (15,GETDATE(),1,1000);
+VALUES (17,GETDATE(),1,1000);
 
-SET IDENTITY_INSERT [dbo].[InputBills] on
+SET IDENTITY_INSERT [dbo].[Bills] on
 
 select * from bills where convert(varchar(10), DateCheckIn, 102) 
     = convert(varchar(10), getdate(), 102) and status = 1;
@@ -107,7 +107,7 @@ AS
         BEGIN
 			update Bills_detail
 			set Quantity = @quantity
-			where Id_bill = @id_bill
+			where Id_bill_detaill = @id_bill
         END
 END
 
