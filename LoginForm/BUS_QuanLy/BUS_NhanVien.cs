@@ -46,9 +46,9 @@ namespace BUS_QuanLy
         {
             return dalNhanVien.DeleteNhanVien(email);
         }
-        public DataTable SearchNhanVien(string name)
+        public DataTable SearchNhanVien(string name, int id_role)
         {
-            return dalNhanVien.SearchNhanVien(name);
+            return dalNhanVien.SearchNhanVien(name, id_role);
         }
         public DataTable ThemVaiTro()
         {

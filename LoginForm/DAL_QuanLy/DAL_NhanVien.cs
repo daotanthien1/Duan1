@@ -192,7 +192,7 @@ namespace DAL_QuanLy
             return false;
         }
 
-        public DataTable SearchNhanVien(string name)
+        public DataTable SearchNhanVien(string name,int id_role)
         {
             try
             {
@@ -201,6 +201,7 @@ namespace DAL_QuanLy
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "SEARCH_EMPLOYEE";
                 cmd.Parameters.AddWithValue("Name", name);
+                cmd.Parameters.AddWithValue("Id_role", id_role);
                 cmd.Connection = _conn;
                 DataTable dtEmployee = new DataTable();
                 dtEmployee.Load(cmd.ExecuteReader());

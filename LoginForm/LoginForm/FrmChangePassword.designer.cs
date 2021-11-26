@@ -302,6 +302,7 @@ namespace RJCodeAdvance
             this.Name = "FrmChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmChangePassword";
+            this.Load += new System.EventHandler(this.FrmChangePassword_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

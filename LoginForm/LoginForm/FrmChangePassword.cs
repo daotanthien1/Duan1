@@ -44,6 +44,12 @@ namespace RJCodeAdvance
                 txtNhapLaiMatKhau.Focus();
                 return;
             }
+            if(txtMatKhauMoi.Text != txtNhapLaiMatKhau.Text)
+            {
+                MessageBox.Show("Mật khẩu mới nhập không trùng khớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNhapLaiMatKhau.Focus();
+                return;
+            }
             else
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn cập nhật mật khẩu", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -110,6 +116,11 @@ namespace RJCodeAdvance
                 //If mail doesn't send error message will be displayed
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FrmChangePassword_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

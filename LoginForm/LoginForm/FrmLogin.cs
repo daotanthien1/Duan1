@@ -2,6 +2,7 @@
 using DTO_QuanLy;
 using RJCodeAdvance.ControlVouchers;
 using System;
+using RJCodeAdvance.ControlEmployees;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -107,6 +108,7 @@ namespace RJCodeAdvance
             //nv.password = txtPassword.Text;
             if (busNV.NhanVienDangNhap(nv)) // khi đăng nhập thành công
             {
+                UC_employee.mail = nv.email;
                 this.Hide();
                 FrmBeverageCP frmcp = new FrmBeverageCP();
                 frmcp.ShowDialog();
@@ -123,7 +125,7 @@ namespace RJCodeAdvance
 
         private void LoginNew_Load(object sender, EventArgs e)
         {
-
+            
             ReadSettings();
 
             if (txtPassword.PasswordChar == '\0')
