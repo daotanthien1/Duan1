@@ -27,14 +27,9 @@ namespace RJCodeAdvance.ControlBills
         {
 
         }
-<<<<<<< HEAD
         Hashtable hash;
         BindingSource bindingSource;
-        private void UC_Bill_Load(object sender, EventArgs e)
-=======
-
         public void UC_Bill_Load(object sender, EventArgs e)
->>>>>>> bd9a5d9a6ac60e437f0f3d3b50234561ae608864
         {
             if (rdoDoUong.Checked == true)
             {
@@ -389,22 +384,16 @@ namespace RJCodeAdvance.ControlBills
                 {
                     if (rdoDoUong.Checked == true)
                     {
-                        int id = int.Parse(dgvBillsDetail.CurrentRow.Cells["Id_bill_detaill"].Value.ToString());
-                        DataTable dt = BUS_Bill.getNameDetailDoUong(id);
-                        if (dt.Rows.Count > 0)
-                        {
-                            txtDoUong.Text = dt.Rows[0][0].ToString();
-                        }
+                        
+                            txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
+                        
 
                     }
                     else
                     {
-                        int id = int.Parse(dgvBillsDetail.CurrentRow.Cells["Id_BillDetaill"].Value.ToString());
-                        DataTable dt = BUS_Bill.getNameDetailNL(id);
-                        if (dt.Rows.Count > 0)
-                        {
-                            txtDoUong.Text = dt.Rows[0][0].ToString();
-                        }
+                        
+                            txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
+
 
                     }
                     btXoa.Enabled = true;
