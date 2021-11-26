@@ -382,22 +382,16 @@ namespace RJCodeAdvance.ControlBills
                 {
                     if (rdoDoUong.Checked == true)
                     {
-                        int id = int.Parse(dgvBillsDetail.CurrentRow.Cells["Id_bill_detaill"].Value.ToString());
-                        DataTable dt = BUS_Bill.getNameDetailDoUong(id);
-                        if (dt.Rows.Count > 0)
-                        {
-                            txtDoUong.Text = dt.Rows[0][0].ToString();
-                        }
+                        
+                            txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
+                        
 
                     }
                     else
                     {
-                        int id = int.Parse(dgvBillsDetail.CurrentRow.Cells["Id_BillDetaill"].Value.ToString());
-                        DataTable dt = BUS_Bill.getNameDetailNL(id);
-                        if (dt.Rows.Count > 0)
-                        {
-                            txtDoUong.Text = dt.Rows[0][0].ToString();
-                        }
+                        
+                            txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
+
 
                     }
                     btXoa.Enabled = true;
