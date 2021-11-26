@@ -27,7 +27,7 @@ namespace RJCodeAdvance.ControlBills
 
         }
 
-        private void UC_Bill_Load(object sender, EventArgs e)
+        public void UC_Bill_Load(object sender, EventArgs e)
         {
             if (rdoDoUong.Checked == true)
             {
