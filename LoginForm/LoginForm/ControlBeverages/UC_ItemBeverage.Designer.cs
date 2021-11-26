@@ -100,6 +100,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(70, 30);
             this.btThem.TabIndex = 50;
+            this.btThem.Click += new System.EventHandler(this.btThem_Click);
             // 
             // UC_ItemBeverage
             // 

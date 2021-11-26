@@ -44,5 +44,18 @@ namespace BUS_QuanLy
         {
             return quanlyNguyenLieu.SearchNguyenLieu(name);
         }
+        public List<DTO_NguyenLieu> getListIngredient()
+        {
+            List<DTO_NguyenLieu> nlList = new List<DTO_NguyenLieu>();
+
+            DataTable data = quanlyNguyenLieu.getIngredient();
+            foreach (DataRow row in data.Rows)
+            {
+                DTO_NguyenLieu nt = new DTO_NguyenLieu(row);
+                nlList.Add(nt);
+            }
+
+            return nlList;
+        }
     }
 }

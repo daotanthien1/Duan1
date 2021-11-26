@@ -95,7 +95,6 @@ namespace RJCodeAdvance
         void LoadData()
         {
             guna2DataGridView1.DataSource = typeVouchers.getData();
-            guna2DataGridView1.Columns[0].HeaderText = "ID";
             guna2DataGridView1.Columns[1].HeaderText = "Khuyến mãi";
         }
         // reset form

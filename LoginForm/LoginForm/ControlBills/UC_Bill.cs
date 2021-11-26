@@ -398,4 +398,6 @@ namespace RJCodeAdvance.ControlBills
             e.Column.SortMode = DataGridViewColumnSortMode.NotSortable;
         }
     }
-}
+}// thôi m làm đi, ổn hết chưa không t thoát
+// ổn rồi
+// ocode ngon ok

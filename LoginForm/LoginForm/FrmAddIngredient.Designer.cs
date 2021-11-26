@@ -89,6 +89,7 @@ namespace RJCodeAdvance
             0,
             0,
             0});
+            this.nbSoLuong.ValueChanged += new System.EventHandler(this.nbSoLuong_ValueChanged);
             // 
             // label3
             // 
@@ -144,6 +145,7 @@ namespace RJCodeAdvance
             this.btnThem.Size = new System.Drawing.Size(121, 36);
             this.btnThem.TabIndex = 61;
             this.btnThem.Text = "Thêm ";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label10
             // 
@@ -271,6 +273,7 @@ namespace RJCodeAdvance
             this.Name = "FrmAddIngredient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAddBeverage";
+            this.Load += new System.EventHandler(this.FrmAddIngredient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nbSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImg)).EndInit();
             this.ResumeLayout(false);
