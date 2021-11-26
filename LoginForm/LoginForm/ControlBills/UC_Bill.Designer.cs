@@ -163,11 +163,11 @@ namespace RJCodeAdvance.ControlBills
             this.cbbFilterCol.HoverState.Parent = this.cbbFilterCol;
             this.cbbFilterCol.ItemHeight = 30;
             this.cbbFilterCol.ItemsAppearance.Parent = this.cbbFilterCol;
-            this.cbbFilterCol.Location = new System.Drawing.Point(529, 228);
+            this.cbbFilterCol.Location = new System.Drawing.Point(447, 228);
             this.cbbFilterCol.Margin = new System.Windows.Forms.Padding(4);
             this.cbbFilterCol.Name = "cbbFilterCol";
             this.cbbFilterCol.ShadowDecoration.Parent = this.cbbFilterCol;
-            this.cbbFilterCol.Size = new System.Drawing.Size(203, 36);
+            this.cbbFilterCol.Size = new System.Drawing.Size(285, 36);
             this.cbbFilterCol.TabIndex = 120;
             this.cbbFilterCol.SelectedIndexChanged += new System.EventHandler(this.cbbFilterCol_SelectedIndexChanged);
             // 
