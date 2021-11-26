@@ -1,27 +1,30 @@
 INSERT INTO bills (Id_employee, Id_bill, Id_customer, Id_table,DateCheckIn,DateCheckOut,status)
-VALUES (1,37,null,2,GETDATE(),GETDATE(),1);
+VALUES (1,43,1,2,GETDATE(),GETDATE(),1);
 select * from bills
 INSERT INTO inputbills (ID_Bill,DateCheckIn,ID_employee,SumPrice)
-VALUES (15,GETDATE(),1,1000);
+VALUES (17,GETDATE(),1,1000);
 
-SET IDENTITY_INSERT [dbo].[InputBills] on
+SET IDENTITY_INSERT [dbo].[Bills] on
 
 select * from bills where convert(varchar(10), DateCheckIn, 102) 
     = convert(varchar(10), getdate(), 102) and status = 1;
 ---
-drop proc sp_GetBillsNguyenLieuToday
+--drop proc sp_GetBillsNguyenLieuToday
 create proc sp_GetBillsDoUongToday
 as
 begin
-		select * from bills where convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) and status = 1
+		select e.Name,tb.name,b.DateCheckOut,b.Id_bill from bills b  
+inner join Employees e on b.Id_employee = e.Id_employee 
+inner join dbo.tables tb on b.Id_table = tb.ID_Table 
+where convert(varchar(10), b.DateCheckIn, 102) 
+    = convert(varchar(10), getdate(), 102) and b.status = 1
 end
 go
 --drop proc sp_GetBillsNguyenLieuToday
 create proc sp_GetBillsNguyenLieuToday
 as
 begin
-		select * from inputbills where convert(varchar(10), DateCheckIn, 102) 
+		select e.Name,ib.DateCheckIn,ib.SumPrice,ib.ID_Bill from inputbills ib inner join Employees e on ib.ID_employee = e.Id_employee where convert(varchar(10), ib.DateCheckIn, 102) 
     = convert(varchar(10), getdate(), 102) 
 end
 go
@@ -30,7 +33,7 @@ go
 create proc sp_GetBillsDetailDoUong( @id_bill int)
 as
 begin
-	select * from Bills_detail where Id_bill = @id_bill 
+	select b.Name, bd.Quantity,bd.Id_bill_detaill from Bills_detail bd inner join Beverages b on bd.Id_beverage = b.Id_beverage where bd.Id_bill =@id_bill
 end
 go
 -- drop proc sp_GetBillsDetailNL
@@ -38,8 +41,8 @@ create proc sp_GetBillsDetailNL( @id_bill int)
 as
 begin
 	
-	select * from InputBillsDetaill 
-	where InputBillsDetaill.Id_bill = @id_bill 
+	select i.Name,ib.quantity,ib.Id_BillDetaill from InputBillsDetaill ib inner join Ingredients i on ib.Id_Ingredient = i.Id_ingredient
+	where ib.Id_bill = @id_bill 
 end
 go
 -- exec sp_GetBillsDetailNL 11
@@ -107,7 +110,7 @@ AS
         BEGIN
 			update Bills_detail
 			set Quantity = @quantity
-			where Id_bill = @id_bill
+			where Id_bill_detaill = @id_bill
         END
 END
 
@@ -133,79 +136,56 @@ AS
 			set nocount on;
 			if @col = 'Id_Employee'
 			begin
-				select Id_employee,Id_bill,Id_customer,Id_table,DateCheckIn,DateCheckOut,status
-				from Bills where Id_employee like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) and status = 1
+				
+		select e.Name,tb.name,b.DateCheckOut,b.Id_bill from bills b  
+		inner join Employees e on b.Id_employee = e.Id_employee 
+		inner join dbo.tables tb on b.Id_table = tb.ID_Table 
+		where convert(varchar(10), b.DateCheckIn, 102) 
+			= convert(varchar(10), getdate(), 102) and b.status = 1 and e.Name like '%'+@Name+'%'
 			end
-			if @col = 'Id_bill'
-			begin
-				select Id_employee,Id_bill,Id_customer,Id_table,DateCheckIn,DateCheckOut,status
-				from Bills where Id_bill like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) and status = 1
-			end
-			if @col = 'Id_customer'
-			begin
-				select Id_employee,Id_bill,Id_customer,Id_table,DateCheckIn,DateCheckOut,status
-				from Bills where Id_customer like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) and status = 1
-			end
+
 			if @col = 'Id_table'
 			begin
-				select Id_employee,Id_bill,Id_customer,Id_table,DateCheckIn,DateCheckOut,status
-				from Bills where Id_table like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) and status = 1
-			end
-			if @col = 'DateCheckIn'
-			begin
-				select Id_employee,Id_bill,Id_customer,Id_table,DateCheckIn,DateCheckOut,status
-				from Bills where DateCheckIn like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) and status = 1
+				select e.Name,tb.name,b.DateCheckOut,b.Id_bill from bills b  
+		inner join Employees e on b.Id_employee = e.Id_employee 
+		inner join dbo.tables tb on b.Id_table = tb.ID_Table 
+		where convert(varchar(10), b.DateCheckIn, 102) 
+			= convert(varchar(10), getdate(), 102) and b.status = 1 and b.Id_table like '%'+@Name+'%'
 			end
 			if @col = 'DateCheckOut'
 			begin
-				select Id_employee,Id_bill,Id_customer,Id_table,DateCheckIn,DateCheckOut,status
-				from Bills where DateCheckOut like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) and status = 1
-			end
-			if @col = 'status'
-			begin
-				select Id_employee,Id_bill,Id_customer,Id_table,DateCheckIn,DateCheckOut,status
-				from Bills where status like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) and status = 1
+				select e.Name,tb.name,b.DateCheckOut,b.Id_bill from bills b  
+		inner join Employees e on b.Id_employee = e.Id_employee 
+		inner join dbo.tables tb on b.Id_table = tb.ID_Table 
+		where convert(varchar(10), b.DateCheckIn, 102) 
+			= convert(varchar(10), getdate(), 102) and b.status = 1 and b.DateCheckOut like '%'+@Name+'%'
 			end
 			
         END
 	END
-
+-- drop proc sp_InputBillsDetailSearch
 create PROCEDURE sp_InputBillsDetailSearch(@Name   NVARCHAR(55),@Col   NVARCHAR(55))
 AS
   BEGIN
 
         BEGIN
 			set nocount on;
-			if @col = 'ID_Bill'
-			begin
-				select ID_Bill, DateCheckIn,ID_employee,SumPrice
-				from InputBills where ID_Bill like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) 
-			end
+			
 			if @col = 'DateCheckIn'
 			begin
-				select ID_Bill, DateCheckIn,ID_employee,SumPrice
-				from InputBills where DateCheckIn like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) 
+				select e.Name,ib.DateCheckIn,ib.SumPrice,ib.ID_Bill from inputbills ib inner join Employees e on ib.ID_employee = e.Id_employee where convert(varchar(10), ib.DateCheckIn, 102) 
+    = convert(varchar(10), getdate(), 102) and ib.DateCheckIn = @Name
 			end
 			if @col = 'ID_employee'
 			begin
-				select ID_Bill, DateCheckIn,ID_employee,SumPrice
-				from InputBills where ID_employee like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102)  
+				select e.Name,ib.DateCheckIn,ib.SumPrice,ib.ID_Bill from inputbills ib inner join Employees e on ib.ID_employee = e.Id_employee where convert(varchar(10), ib.DateCheckIn, 102) 
+    = convert(varchar(10), getdate(), 102) and e.Id_employee = @Name
 			end
 			if @col = 'SumPrice'
 			begin
-				select ID_Bill, DateCheckIn,ID_employee,SumPrice
-				from InputBills where SumPrice like '%'+@Name+'%' and convert(varchar(10), DateCheckIn, 102) 
-    = convert(varchar(10), getdate(), 102) 
+				select e.Name,ib.DateCheckIn,ib.SumPrice,ib.ID_Bill from inputbills ib inner join Employees e on ib.ID_employee = e.Id_employee where convert(varchar(10), ib.DateCheckIn, 102) 
+    = convert(varchar(10), getdate(), 102) and ib.SumPrice = @Name
 			end
         END
 	END
+

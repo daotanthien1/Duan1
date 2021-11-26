@@ -57,6 +57,7 @@ namespace RJCodeAdvance.ControlBills
             this.dgvBillsDetail = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBill)).BeginInit();
             this.panel2.SuspendLayout();
@@ -162,12 +163,13 @@ namespace RJCodeAdvance.ControlBills
             this.cbbFilterCol.HoverState.Parent = this.cbbFilterCol;
             this.cbbFilterCol.ItemHeight = 30;
             this.cbbFilterCol.ItemsAppearance.Parent = this.cbbFilterCol;
-            this.cbbFilterCol.Location = new System.Drawing.Point(529, 228);
+            this.cbbFilterCol.Location = new System.Drawing.Point(447, 228);
             this.cbbFilterCol.Margin = new System.Windows.Forms.Padding(4);
             this.cbbFilterCol.Name = "cbbFilterCol";
             this.cbbFilterCol.ShadowDecoration.Parent = this.cbbFilterCol;
-            this.cbbFilterCol.Size = new System.Drawing.Size(203, 36);
+            this.cbbFilterCol.Size = new System.Drawing.Size(285, 36);
             this.cbbFilterCol.TabIndex = 120;
+            this.cbbFilterCol.SelectedIndexChanged += new System.EventHandler(this.cbbFilterCol_SelectedIndexChanged);
             // 
             // txtSearchDoUong
             // 
@@ -533,6 +535,12 @@ namespace RJCodeAdvance.ControlBills
             // 
             this.guna2Elipse3.TargetControl = this.dgvBillsDetail;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 30;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // UC_Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -578,5 +586,6 @@ namespace RJCodeAdvance.ControlBills
         private Guna.UI2.WinForms.Guna2DataGridView dgvBillsDetail;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private System.Windows.Forms.Timer timer1;
     }
 }

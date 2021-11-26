@@ -60,9 +60,9 @@ namespace RJCodeAdvance.ControlEmployees
             this.Id_emloyee = new System.Windows.Forms.Label();
             this.isDelete = new System.Windows.Forms.Label();
             this.nbLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.cbTimTheoVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
+            this.cbTimKiemTheoVaiTro = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbLuong)).BeginInit();
             this.SuspendLayout();
@@ -85,14 +85,15 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtTenNhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTenNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenNhanVien.HoverState.Parent = this.txtTenNhanVien;
-            this.txtTenNhanVien.Location = new System.Drawing.Point(34, 57);
+            this.txtTenNhanVien.Location = new System.Drawing.Point(45, 70);
+            this.txtTenNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenNhanVien.MaxLength = 50;
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.PasswordChar = '\0';
             this.txtTenNhanVien.PlaceholderText = "Tên nhân viên";
             this.txtTenNhanVien.SelectedText = "";
             this.txtTenNhanVien.ShadowDecoration.Parent = this.txtTenNhanVien;
-            this.txtTenNhanVien.Size = new System.Drawing.Size(346, 36);
+            this.txtTenNhanVien.Size = new System.Drawing.Size(461, 44);
             this.txtTenNhanVien.TabIndex = 49;
             // 
             // label1
@@ -100,9 +101,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(37, 38);
+            this.label1.Location = new System.Drawing.Point(49, 47);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 16);
+            this.label1.Size = new System.Drawing.Size(128, 19);
             this.label1.TabIndex = 48;
             this.label1.Text = "Tên nhân viên:";
             // 
@@ -111,9 +113,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(37, 100);
+            this.label2.Location = new System.Drawing.Point(49, 123);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(61, 19);
             this.label2.TabIndex = 59;
             this.label2.Text = "Lương:";
             // 
@@ -122,9 +125,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(37, 163);
+            this.label3.Location = new System.Drawing.Point(49, 201);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 16);
+            this.label3.Size = new System.Drawing.Size(66, 19);
             this.label3.TabIndex = 60;
             this.label3.Text = "Vai trò:";
             // 
@@ -133,9 +137,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label4.Location = new System.Drawing.Point(37, 228);
+            this.label4.Location = new System.Drawing.Point(49, 281);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 16);
+            this.label4.Size = new System.Drawing.Size(79, 19);
             this.label4.TabIndex = 61;
             this.label4.Text = "Giới tính:";
             // 
@@ -157,10 +162,11 @@ namespace RJCodeAdvance.ControlEmployees
             "Quản lý",
             "Nhân viên"});
             this.cbVaiTro.ItemsAppearance.Parent = this.cbVaiTro;
-            this.cbVaiTro.Location = new System.Drawing.Point(34, 182);
+            this.cbVaiTro.Location = new System.Drawing.Point(45, 224);
+            this.cbVaiTro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbVaiTro.Name = "cbVaiTro";
             this.cbVaiTro.ShadowDecoration.Parent = this.cbVaiTro;
-            this.cbVaiTro.Size = new System.Drawing.Size(244, 36);
+            this.cbVaiTro.Size = new System.Drawing.Size(324, 36);
             this.cbVaiTro.TabIndex = 63;
             // 
             // label5
@@ -168,9 +174,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label5.Location = new System.Drawing.Point(602, 38);
+            this.label5.Location = new System.Drawing.Point(803, 47);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 16);
+            this.label5.Size = new System.Drawing.Size(58, 19);
             this.label5.TabIndex = 64;
             this.label5.Text = "Email:";
             // 
@@ -179,9 +186,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label6.Location = new System.Drawing.Point(602, 100);
+            this.label6.Location = new System.Drawing.Point(803, 123);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 16);
+            this.label6.Size = new System.Drawing.Size(72, 19);
             this.label6.TabIndex = 65;
             this.label6.Text = "Địa chỉ:";
             // 
@@ -190,9 +198,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label7.Location = new System.Drawing.Point(605, 163);
+            this.label7.Location = new System.Drawing.Point(807, 201);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 16);
+            this.label7.Size = new System.Drawing.Size(96, 19);
             this.label7.TabIndex = 66;
             this.label7.Text = "Ngày sinh:";
             // 
@@ -214,14 +223,15 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.HoverState.Parent = this.txtEmail;
-            this.txtEmail.Location = new System.Drawing.Point(605, 57);
+            this.txtEmail.Location = new System.Drawing.Point(807, 70);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "Tên nhân viên";
             this.txtEmail.SelectedText = "";
             this.txtEmail.ShadowDecoration.Parent = this.txtEmail;
-            this.txtEmail.Size = new System.Drawing.Size(330, 36);
+            this.txtEmail.Size = new System.Drawing.Size(440, 44);
             this.txtEmail.TabIndex = 67;
             // 
             // txtDiaChi
@@ -242,14 +252,15 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtDiaChi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.HoverState.Parent = this.txtDiaChi;
-            this.txtDiaChi.Location = new System.Drawing.Point(605, 119);
+            this.txtDiaChi.Location = new System.Drawing.Point(807, 146);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDiaChi.MaxLength = 50;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "Tên nhân viên";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.ShadowDecoration.Parent = this.txtDiaChi;
-            this.txtDiaChi.Size = new System.Drawing.Size(330, 36);
+            this.txtDiaChi.Size = new System.Drawing.Size(440, 44);
             this.txtDiaChi.TabIndex = 68;
             // 
             // dtNgaySinh
@@ -266,12 +277,13 @@ namespace RJCodeAdvance.ControlEmployees
             this.dtNgaySinh.ForeColor = System.Drawing.Color.White;
             this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtNgaySinh.HoverState.Parent = this.dtNgaySinh;
-            this.dtNgaySinh.Location = new System.Drawing.Point(605, 182);
+            this.dtNgaySinh.Location = new System.Drawing.Point(807, 224);
+            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.ShadowDecoration.Parent = this.dtNgaySinh;
-            this.dtNgaySinh.Size = new System.Drawing.Size(330, 36);
+            this.dtNgaySinh.Size = new System.Drawing.Size(440, 44);
             this.dtNgaySinh.TabIndex = 69;
             this.dtNgaySinh.Value = new System.DateTime(2021, 11, 7, 13, 49, 6, 43);
             // 
@@ -309,11 +321,13 @@ namespace RJCodeAdvance.ControlEmployees
             this.dgv_NhanVien.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_NhanVien.EnableHeadersVisualStyles = false;
             this.dgv_NhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv_NhanVien.Location = new System.Drawing.Point(34, 331);
+            this.dgv_NhanVien.Location = new System.Drawing.Point(45, 407);
+            this.dgv_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_NhanVien.Name = "dgv_NhanVien";
             this.dgv_NhanVien.RowHeadersVisible = false;
+            this.dgv_NhanVien.RowHeadersWidth = 51;
             this.dgv_NhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_NhanVien.Size = new System.Drawing.Size(1037, 247);
+            this.dgv_NhanVien.Size = new System.Drawing.Size(1383, 304);
             this.dgv_NhanVien.TabIndex = 88;
             this.dgv_NhanVien.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv_NhanVien.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -348,9 +362,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.rbNam.CheckedState.InnerOffset = -4;
             this.rbNam.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rbNam.Location = new System.Drawing.Point(141, 224);
+            this.rbNam.Location = new System.Drawing.Point(188, 276);
+            this.rbNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbNam.Name = "rbNam";
-            this.rbNam.Size = new System.Drawing.Size(52, 20);
+            this.rbNam.Size = new System.Drawing.Size(65, 25);
             this.rbNam.TabIndex = 89;
             this.rbNam.Text = "Nam";
             this.rbNam.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -369,9 +384,10 @@ namespace RJCodeAdvance.ControlEmployees
             this.rbNu.CheckedState.InnerOffset = -4;
             this.rbNu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rbNu.Location = new System.Drawing.Point(219, 224);
+            this.rbNu.Location = new System.Drawing.Point(292, 276);
+            this.rbNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbNu.Name = "rbNu";
-            this.rbNu.Size = new System.Drawing.Size(42, 20);
+            this.rbNu.Size = new System.Drawing.Size(52, 25);
             this.rbNu.TabIndex = 90;
             this.rbNu.TabStop = true;
             this.rbNu.Text = "Nữ";
@@ -399,10 +415,11 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnThemVaitro.HoverState.Parent = this.btnThemVaitro;
             this.btnThemVaitro.Image = ((System.Drawing.Image)(resources.GetObject("btnThemVaitro.Image")));
             this.btnThemVaitro.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnThemVaitro.Location = new System.Drawing.Point(284, 182);
+            this.btnThemVaitro.Location = new System.Drawing.Point(379, 224);
+            this.btnThemVaitro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThemVaitro.Name = "btnThemVaitro";
             this.btnThemVaitro.ShadowDecoration.Parent = this.btnThemVaitro;
-            this.btnThemVaitro.Size = new System.Drawing.Size(96, 36);
+            this.btnThemVaitro.Size = new System.Drawing.Size(128, 44);
             this.btnThemVaitro.TabIndex = 91;
             this.btnThemVaitro.Text = "Thêm";
             this.btnThemVaitro.Click += new System.EventHandler(this.btnThemVaitro_Click);
@@ -425,10 +442,11 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnLuu.HoverState.Parent = this.btnLuu;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnLuu.Location = new System.Drawing.Point(612, 594);
+            this.btnLuu.Location = new System.Drawing.Point(816, 731);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
-            this.btnLuu.Size = new System.Drawing.Size(128, 45);
+            this.btnLuu.Size = new System.Drawing.Size(171, 55);
             this.btnLuu.TabIndex = 85;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -451,10 +469,11 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnSua.HoverState.Parent = this.btnSua;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnSua.Location = new System.Drawing.Point(471, 594);
+            this.btnSua.Location = new System.Drawing.Point(628, 731);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSua.Name = "btnSua";
             this.btnSua.ShadowDecoration.Parent = this.btnSua;
-            this.btnSua.Size = new System.Drawing.Size(128, 45);
+            this.btnSua.Size = new System.Drawing.Size(171, 55);
             this.btnSua.TabIndex = 84;
             this.btnSua.Text = "Sửa";
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -477,10 +496,11 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnXoa.HoverState.Parent = this.btnXoa;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnXoa.Location = new System.Drawing.Point(331, 594);
+            this.btnXoa.Location = new System.Drawing.Point(441, 731);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
-            this.btnXoa.Size = new System.Drawing.Size(128, 45);
+            this.btnXoa.Size = new System.Drawing.Size(171, 55);
             this.btnXoa.TabIndex = 83;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -504,10 +524,11 @@ namespace RJCodeAdvance.ControlEmployees
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(191, 594);
+            this.btThem.Location = new System.Drawing.Point(255, 731);
+            this.btThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
-            this.btThem.Size = new System.Drawing.Size(128, 45);
+            this.btThem.Size = new System.Drawing.Size(171, 55);
             this.btThem.TabIndex = 82;
             this.btThem.Text = "Thêm";
             this.btThem.Click += new System.EventHandler(this.btThem_Click_1);
@@ -535,28 +556,32 @@ namespace RJCodeAdvance.ControlEmployees
             this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
             this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btDanhSach.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btDanhSach.Location = new System.Drawing.Point(758, 594);
+            this.btDanhSach.Location = new System.Drawing.Point(1011, 731);
+            this.btDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btDanhSach.Name = "btDanhSach";
             this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
-            this.btDanhSach.Size = new System.Drawing.Size(128, 45);
+            this.btDanhSach.Size = new System.Drawing.Size(171, 55);
             this.btDanhSach.TabIndex = 117;
             this.btDanhSach.Text = "Danh Sách";
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
+            this.btDanhSach.Click += new System.EventHandler(this.btDanhSach_Click);
             // 
             // Id_emloyee
             // 
             this.Id_emloyee.AutoSize = true;
-            this.Id_emloyee.Location = new System.Drawing.Point(37, 9);
+            this.Id_emloyee.Location = new System.Drawing.Point(49, 11);
+            this.Id_emloyee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Id_emloyee.Name = "Id_emloyee";
-            this.Id_emloyee.Size = new System.Drawing.Size(0, 13);
+            this.Id_emloyee.Size = new System.Drawing.Size(0, 17);
             this.Id_emloyee.TabIndex = 118;
             // 
             // isDelete
             // 
             this.isDelete.AutoSize = true;
-            this.isDelete.Location = new System.Drawing.Point(216, 9);
+            this.isDelete.Location = new System.Drawing.Point(288, 11);
+            this.isDelete.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.isDelete.Name = "isDelete";
-            this.isDelete.Size = new System.Drawing.Size(0, 13);
+            this.isDelete.Size = new System.Drawing.Size(0, 17);
             this.isDelete.TabIndex = 119;
             this.isDelete.Visible = false;
             // 
@@ -570,7 +595,8 @@ namespace RJCodeAdvance.ControlEmployees
             this.nbLuong.FocusedState.Parent = this.nbLuong;
             this.nbLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nbLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.nbLuong.Location = new System.Drawing.Point(34, 119);
+            this.nbLuong.Location = new System.Drawing.Point(45, 146);
+            this.nbLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nbLuong.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -579,33 +605,8 @@ namespace RJCodeAdvance.ControlEmployees
             this.nbLuong.Name = "nbLuong";
             this.nbLuong.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.nbLuong.ShadowDecoration.Parent = this.nbLuong;
-            this.nbLuong.Size = new System.Drawing.Size(346, 36);
+            this.nbLuong.Size = new System.Drawing.Size(461, 44);
             this.nbLuong.TabIndex = 119;
-            // 
-            // cbTimTheoVaiTro
-            // 
-            this.cbTimTheoVaiTro.BackColor = System.Drawing.Color.Transparent;
-            this.cbTimTheoVaiTro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.cbTimTheoVaiTro.BorderRadius = 16;
-            this.cbTimTheoVaiTro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbTimTheoVaiTro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTimTheoVaiTro.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTimTheoVaiTro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbTimTheoVaiTro.FocusedState.Parent = this.cbTimTheoVaiTro;
-            this.cbTimTheoVaiTro.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbTimTheoVaiTro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.cbTimTheoVaiTro.HoverState.Parent = this.cbTimTheoVaiTro;
-            this.cbTimTheoVaiTro.ItemHeight = 30;
-            this.cbTimTheoVaiTro.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbTimTheoVaiTro.ItemsAppearance.Parent = this.cbTimTheoVaiTro;
-            this.cbTimTheoVaiTro.Location = new System.Drawing.Point(901, 289);
-            this.cbTimTheoVaiTro.MaxLength = 100;
-            this.cbTimTheoVaiTro.Name = "cbTimTheoVaiTro";
-            this.cbTimTheoVaiTro.ShadowDecoration.Parent = this.cbTimTheoVaiTro;
-            this.cbTimTheoVaiTro.Size = new System.Drawing.Size(170, 36);
-            this.cbTimTheoVaiTro.TabIndex = 123;
             // 
             // txtTimKiem
             // 
@@ -624,14 +625,15 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
-            this.txtTimKiem.Location = new System.Drawing.Point(173, 289);
+            this.txtTimKiem.Location = new System.Drawing.Point(231, 356);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTimKiem.MaxLength = 50;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderText = "Nhập tên nhân viên cần tìm";
             this.txtTimKiem.SelectedText = "";
             this.txtTimKiem.ShadowDecoration.Parent = this.txtTimKiem;
-            this.txtTimKiem.Size = new System.Drawing.Size(290, 36);
+            this.txtTimKiem.Size = new System.Drawing.Size(387, 44);
             this.txtTimKiem.TabIndex = 122;
             // 
             // btTimKiem
@@ -653,19 +655,46 @@ namespace RJCodeAdvance.ControlEmployees
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(40, 289);
+            this.btTimKiem.Location = new System.Drawing.Point(53, 356);
+            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
-            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
+            this.btTimKiem.Size = new System.Drawing.Size(169, 44);
             this.btTimKiem.TabIndex = 121;
             this.btTimKiem.Text = "Tìm kiếm";
+            this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
+            // 
+            // cbTimKiemTheoVaiTro
+            // 
+            this.cbTimKiemTheoVaiTro.BackColor = System.Drawing.Color.Transparent;
+            this.cbTimKiemTheoVaiTro.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.cbTimKiemTheoVaiTro.BorderRadius = 16;
+            this.cbTimKiemTheoVaiTro.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbTimKiemTheoVaiTro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTimKiemTheoVaiTro.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTimKiemTheoVaiTro.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbTimKiemTheoVaiTro.FocusedState.Parent = this.cbTimKiemTheoVaiTro;
+            this.cbTimKiemTheoVaiTro.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbTimKiemTheoVaiTro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.cbTimKiemTheoVaiTro.HoverState.Parent = this.cbTimKiemTheoVaiTro;
+            this.cbTimKiemTheoVaiTro.ItemHeight = 30;
+            this.cbTimKiemTheoVaiTro.Items.AddRange(new object[] {
+            "Quản lý",
+            "Nhân viên"});
+            this.cbTimKiemTheoVaiTro.ItemsAppearance.Parent = this.cbTimKiemTheoVaiTro;
+            this.cbTimKiemTheoVaiTro.Location = new System.Drawing.Point(921, 356);
+            this.cbTimKiemTheoVaiTro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTimKiemTheoVaiTro.Name = "cbTimKiemTheoVaiTro";
+            this.cbTimKiemTheoVaiTro.ShadowDecoration.Parent = this.cbTimKiemTheoVaiTro;
+            this.cbTimKiemTheoVaiTro.Size = new System.Drawing.Size(324, 36);
+            this.cbTimKiemTheoVaiTro.TabIndex = 63;
+            this.cbTimKiemTheoVaiTro.Click += new System.EventHandler(this.cbTimKiemTheoVaiTro_Click);
             // 
             // UC_employee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.cbTimTheoVaiTro);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btTimKiem);
             this.Controls.Add(this.isDelete);
@@ -686,14 +715,16 @@ namespace RJCodeAdvance.ControlEmployees
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbTimKiemTheoVaiTro);
             this.Controls.Add(this.cbVaiTro);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_employee";
-            this.Size = new System.Drawing.Size(1096, 651);
+            this.Size = new System.Drawing.Size(1461, 801);
             this.Load += new System.EventHandler(this.UC_employee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbLuong)).EndInit();
@@ -729,8 +760,8 @@ namespace RJCodeAdvance.ControlEmployees
         private System.Windows.Forms.Label Id_emloyee;
         private System.Windows.Forms.Label isDelete;
         private Guna.UI2.WinForms.Guna2NumericUpDown nbLuong;
-        private Guna.UI2.WinForms.Guna2ComboBox cbTimTheoVaiTro;
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
+        private Guna.UI2.WinForms.Guna2ComboBox cbTimKiemTheoVaiTro;
     }
 }
