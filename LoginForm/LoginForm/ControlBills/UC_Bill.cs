@@ -27,14 +27,9 @@ namespace RJCodeAdvance.ControlBills
         {
 
         }
-<<<<<<< HEAD
         Hashtable hash;
         BindingSource bindingSource;
-        private void UC_Bill_Load(object sender, EventArgs e)
-=======
-
         public void UC_Bill_Load(object sender, EventArgs e)
->>>>>>> bd9a5d9a6ac60e437f0f3d3b50234561ae608864
         {
             if (rdoDoUong.Checked == true)
             {
@@ -154,7 +149,7 @@ namespace RJCodeAdvance.ControlBills
         {
             try
             {
-                if (dgvBill.Rows.Count > 0 || dgvBillsDetail.Rows.Count > 0)
+                if (dgvBill.Rows.Count > 0 )
                 {
                     if (rdoDoUong.Checked == true)
                     {
@@ -306,8 +301,6 @@ namespace RJCodeAdvance.ControlBills
         {
             try
             {
-
-
                 if (rdoDoUong.Checked == true)
                 {
                     

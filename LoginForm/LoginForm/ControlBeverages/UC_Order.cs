@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -358,6 +359,19 @@ namespace RJCodeAdvance.ControlBeverages
                 ShowBill(idTable);
                 LoadStatusTable(idTable);
             }
+        }
+
+
+        private void btIn_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("HOÁ ĐƠN", new Font("Arial", 36, FontStyle.Bold), Brushes.Black, new Point(385, 10));
+
         }
     }
 }
