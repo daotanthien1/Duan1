@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,12 +31,7 @@ namespace RJCodeAdvance
             Id_Empoyee = id_employee;
         }
 
-        private void beverageItem22_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void FrmOrderDetail_Load(object sender, EventArgs e)
+        public void FrmOrderDetail_Load(object sender, EventArgs e)
         {
             ListBeverage = bus_beverage.listBeverage();
             RenderBeverage(ListBeverage);
@@ -46,10 +42,6 @@ namespace RJCodeAdvance
             cbSearch.DisplayMember = "name";
             cbSearch.ValueMember = "id_type";
         }
-        // ngon :))) im t test phần hóa đơn của thằng thành
-        // chắc chạy thiếu store roi, nãy máy t chạy cũng không đc
-        // thiếu sp nó hiện ngoài chớ
-        // đây kêu không find , t cũng không bt nãy chạy hoài không đc, cho t mượn máy tý
         void RenderBeverage(List<DTO_QuanLyDoUong> listBeverage)
         {
             flowLayoutPanel1.Controls.Clear();
@@ -60,14 +52,22 @@ namespace RJCodeAdvance
                 beverage.BeverageId = item.Id_Beverage;
                 beverage.BeverageName = item.Name;
                 beverage.BeveragePrice = item.Price.ToString() + "đ";
-                beverage.BeverageImage = Image.FromFile(Application.StartupPath + "\\" + item.Image);
-
+                if (File.Exists(Application.StartupPath + "\\" + item.Image))
+                {
+                    beverage.BeverageImage = Image.FromFile(Application.StartupPath + "\\" + item.Image);
+                }
+                else
+                {
+                    beverage.BeverageImage = default;
+                }
+                
                 beverage.btThem.Tag = item;
                 beverage.btThem.Click += BtThem_Click;
                 flowLayoutPanel1.Controls.Add(beverage);
             }
 
-            UC_ItemBeverageAdd beverageAdd = new UC_ItemBeverageAdd();
+            UC_ItemBeverageAdd beverageAdd = new UC_ItemBeverageAdd(this);
+                      
             flowLayoutPanel1.Controls.Add(beverageAdd);
         }
 
@@ -79,11 +79,7 @@ namespace RJCodeAdvance
             frm.ShowDialog();
         }
 
-        private void guna2TextBox2_TextChanged(object sender, EventArgs e)
-        {
-  
-        }
-
+ 
         private void txbFind_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)

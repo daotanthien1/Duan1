@@ -36,10 +36,16 @@ namespace RJCodeAdvance.ControlIngredient
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Input_Ingredient));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.txtTongTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtThanhTien = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.nbSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -50,20 +56,9 @@ namespace RJCodeAdvance.ControlIngredient
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.cbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtThanhTien = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.uC_IngeredientItem13 = new RJCodeAdvance.ControlBeverages.UC_IngeredientItem();
-            this.uC_IngeredientItem14 = new RJCodeAdvance.ControlBeverages.UC_IngeredientItem();
-            this.uC_IngeredientItem15 = new RJCodeAdvance.ControlBeverages.UC_IngeredientItem();
-            this.uC_ItemIngredientAdd1 = new RJCodeAdvance.ControlBeverages.UC_ItemIngredientAdd();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoLuong)).BeginInit();
-            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -132,6 +127,26 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView1.Click += new System.EventHandler(this.guna2DataGridView1_Click);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Nguyên liệu";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Số lượng";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Đơn giá";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Thành tiền";
+            this.Column4.Name = "Column4";
+            // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.TargetControl = this.guna2DataGridView1;
@@ -197,6 +212,47 @@ namespace RJCodeAdvance.ControlIngredient
             this.panel1.Size = new System.Drawing.Size(568, 651);
             this.panel1.TabIndex = 97;
             // 
+            // txtThanhTien
+            // 
+            this.txtThanhTien.Animated = true;
+            this.txtThanhTien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtThanhTien.BorderRadius = 15;
+            this.txtThanhTien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtThanhTien.DefaultText = "0";
+            this.txtThanhTien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtThanhTien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtThanhTien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThanhTien.DisabledState.Parent = this.txtThanhTien;
+            this.txtThanhTien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtThanhTien.Enabled = false;
+            this.txtThanhTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThanhTien.FocusedState.Parent = this.txtThanhTien;
+            this.txtThanhTien.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtThanhTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtThanhTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtThanhTien.HoverState.Parent = this.txtThanhTien;
+            this.txtThanhTien.Location = new System.Drawing.Point(317, 154);
+            this.txtThanhTien.Name = "txtThanhTien";
+            this.txtThanhTien.PasswordChar = '\0';
+            this.txtThanhTien.PlaceholderText = "";
+            this.txtThanhTien.SelectedText = "";
+            this.txtThanhTien.SelectionStart = 1;
+            this.txtThanhTien.ShadowDecoration.Parent = this.txtThanhTien;
+            this.txtThanhTien.Size = new System.Drawing.Size(235, 36);
+            this.txtThanhTien.TabIndex = 106;
+            this.txtThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.label2.Location = new System.Drawing.Point(319, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 16);
+            this.label2.TabIndex = 105;
+            this.label2.Text = "Thành tiền:";
+            // 
             // nbSoLuong
             // 
             this.nbSoLuong.BackColor = System.Drawing.Color.Transparent;
@@ -228,7 +284,6 @@ namespace RJCodeAdvance.ControlIngredient
             this.label6.Size = new System.Drawing.Size(69, 16);
             this.label6.TabIndex = 103;
             this.label6.Text = "Số lượng:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtName
             // 
@@ -348,10 +403,6 @@ namespace RJCodeAdvance.ControlIngredient
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Controls.Add(this.uC_IngeredientItem13);
-            this.flowLayoutPanel1.Controls.Add(this.uC_IngeredientItem14);
-            this.flowLayoutPanel1.Controls.Add(this.uC_IngeredientItem15);
-            this.flowLayoutPanel1.Controls.Add(this.uC_ItemIngredientAdd1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 112);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -412,108 +463,6 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2TextBox2.Size = new System.Drawing.Size(219, 34);
             this.guna2TextBox2.TabIndex = 161;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Nguyên liệu";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Số lượng";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Đơn giá";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Thành tiền";
-            this.Column4.Name = "Column4";
-            // 
-            // txtThanhTien
-            // 
-            this.txtThanhTien.Animated = true;
-            this.txtThanhTien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtThanhTien.BorderRadius = 15;
-            this.txtThanhTien.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtThanhTien.DefaultText = "0";
-            this.txtThanhTien.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtThanhTien.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtThanhTien.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThanhTien.DisabledState.Parent = this.txtThanhTien;
-            this.txtThanhTien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtThanhTien.Enabled = false;
-            this.txtThanhTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThanhTien.FocusedState.Parent = this.txtThanhTien;
-            this.txtThanhTien.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtThanhTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.txtThanhTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtThanhTien.HoverState.Parent = this.txtThanhTien;
-            this.txtThanhTien.Location = new System.Drawing.Point(317, 154);
-            this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.PasswordChar = '\0';
-            this.txtThanhTien.PlaceholderText = "";
-            this.txtThanhTien.SelectedText = "";
-            this.txtThanhTien.SelectionStart = 1;
-            this.txtThanhTien.ShadowDecoration.Parent = this.txtThanhTien;
-            this.txtThanhTien.Size = new System.Drawing.Size(235, 36);
-            this.txtThanhTien.TabIndex = 106;
-            this.txtThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(319, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 16);
-            this.label2.TabIndex = 105;
-            this.label2.Text = "Thành tiền:";
-            // 
-            // uC_IngeredientItem13
-            // 
-            this.uC_IngeredientItem13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.uC_IngeredientItem13.IngredientName = "Trân châu";
-            this.uC_IngeredientItem13.IngredientNImage = ((System.Drawing.Image)(resources.GetObject("uC_IngeredientItem13.IngredientNImage")));
-            this.uC_IngeredientItem13.IngredientNPrice = "5000đ";
-            this.uC_IngeredientItem13.Location = new System.Drawing.Point(8, 13);
-            this.uC_IngeredientItem13.Name = "uC_IngeredientItem13";
-            this.uC_IngeredientItem13.Size = new System.Drawing.Size(246, 73);
-            this.uC_IngeredientItem13.TabIndex = 12;
-            // 
-            // uC_IngeredientItem14
-            // 
-            this.uC_IngeredientItem14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.uC_IngeredientItem14.IngredientName = "Trân châu";
-            this.uC_IngeredientItem14.IngredientNImage = ((System.Drawing.Image)(resources.GetObject("uC_IngeredientItem14.IngredientNImage")));
-            this.uC_IngeredientItem14.IngredientNPrice = "5000đ";
-            this.uC_IngeredientItem14.Location = new System.Drawing.Point(260, 13);
-            this.uC_IngeredientItem14.Name = "uC_IngeredientItem14";
-            this.uC_IngeredientItem14.Size = new System.Drawing.Size(246, 73);
-            this.uC_IngeredientItem14.TabIndex = 13;
-            // 
-            // uC_IngeredientItem15
-            // 
-            this.uC_IngeredientItem15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.uC_IngeredientItem15.IngredientName = "Trân châu";
-            this.uC_IngeredientItem15.IngredientNImage = ((System.Drawing.Image)(resources.GetObject("uC_IngeredientItem15.IngredientNImage")));
-            this.uC_IngeredientItem15.IngredientNPrice = "5000đ";
-            this.uC_IngeredientItem15.Location = new System.Drawing.Point(8, 92);
-            this.uC_IngeredientItem15.Name = "uC_IngeredientItem15";
-            this.uC_IngeredientItem15.Size = new System.Drawing.Size(246, 73);
-            this.uC_IngeredientItem15.TabIndex = 14;
-            // 
-            // uC_ItemIngredientAdd1
-            // 
-            this.uC_ItemIngredientAdd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.uC_ItemIngredientAdd1.Location = new System.Drawing.Point(260, 92);
-            this.uC_ItemIngredientAdd1.Name = "uC_ItemIngredientAdd1";
-            this.uC_ItemIngredientAdd1.Size = new System.Drawing.Size(246, 73);
-            this.uC_ItemIngredientAdd1.TabIndex = 15;
-            // 
             // UC_Input_Ingredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,7 +481,6 @@ namespace RJCodeAdvance.ControlIngredient
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoLuong)).EndInit();
-            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -553,10 +501,6 @@ namespace RJCodeAdvance.ControlIngredient
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Guna.UI2.WinForms.Guna2ComboBox cbSearch;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private ControlBeverages.UC_IngeredientItem uC_IngeredientItem13;
-        private ControlBeverages.UC_IngeredientItem uC_IngeredientItem14;
-        private ControlBeverages.UC_IngeredientItem uC_IngeredientItem15;
-        private ControlBeverages.UC_ItemIngredientAdd uC_ItemIngredientAdd1;
         public Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

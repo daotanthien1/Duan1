@@ -163,7 +163,6 @@ namespace RJCodeAdvance
             this.txbFind.ShadowDecoration.Parent = this.txbFind;
             this.txbFind.Size = new System.Drawing.Size(271, 34);
             this.txbFind.TabIndex = 159;
-            this.txbFind.TextChanged += new System.EventHandler(this.guna2TextBox2_TextChanged);
             this.txbFind.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txbFind_KeyUp);
             // 
             // FrmOrderDetail

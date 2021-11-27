@@ -283,6 +283,7 @@ namespace RJCodeAdvance.ControlBeverages
         {
             int idTable = (dgv.Tag as DTO_tables).Id;
             FrmOrderDetail frm = new FrmOrderDetail(idTable, idEmployee);
+            
             frm.ShowDialog();
             ShowBill(idTable);
             LoadStatusTable(idTable);

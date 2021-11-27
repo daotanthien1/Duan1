@@ -119,6 +119,8 @@ namespace RJCodeAdvance.ControlBills
             cbbFilterCol.DisplayMember = "Value";
             cbbFilterCol.SelectedIndex = 2;
             label2.Text = "Tên đồ uống";
+            txtDoUong.Text = null;
+            nbSoLuong.Value = 1;
         }
 
         private void rdoNguyenLieu_CheckedChanged(object sender, EventArgs e)
@@ -144,6 +146,8 @@ namespace RJCodeAdvance.ControlBills
             //cbbFilterCol.Items.Add("Tổng giá");
             //cbbFilterCol.SelectedIndex = 0;
             label2.Text = "Tên nguyên liệu";
+            txtDoUong.Text = null;
+            nbSoLuong.Value = 1;
         }
         //click vao dgv
         private void dgvBill_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -164,7 +168,8 @@ namespace RJCodeAdvance.ControlBills
                     }
                     btXoa.Enabled = true;
                     btSua.Enabled = true;
-
+                    nbSoLuong.Value = 1;
+                    txtDoUong.Text = null;
                 }
                 else
                 {
@@ -224,6 +229,8 @@ namespace RJCodeAdvance.ControlBills
                         }
                     
                 }
+                nbSoLuong.Value = 1;
+                txtDoUong.Text = null;
             }
             catch (Exception ex)
             {
@@ -237,11 +244,12 @@ namespace RJCodeAdvance.ControlBills
 
             try
             {
-                int id = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_bill_detaill"].Value.ToString());
 
                 if (rdoDoUong.Checked == true)
                 {
-                        if (BUS_Bill.DeleteBillsDetailDoUong(id))
+                    int id = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_bill_detaill"].Value.ToString());
+
+                    if (BUS_Bill.DeleteBillsDetailDoUong(id))
                         {
                             if (rdoDoUong.Checked == true)
                             {
@@ -282,6 +290,8 @@ namespace RJCodeAdvance.ControlBills
                         }
                     
                 }
+                nbSoLuong.Value = 1;
+                txtDoUong.Text = null;
             }
             catch (Exception ex)
             {
@@ -302,6 +312,7 @@ namespace RJCodeAdvance.ControlBills
                     {
                         int idtemp = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
                         loadBillDetail(idtemp);
+
                     }
 
                 }
@@ -316,6 +327,8 @@ namespace RJCodeAdvance.ControlBills
                     }
 
                 }
+                nbSoLuong.Value = 1;
+                txtDoUong.Text = null;
             }
 
             catch (Exception ex)
@@ -374,13 +387,14 @@ namespace RJCodeAdvance.ControlBills
                     if (rdoDoUong.Checked == true)
                     {
                         
-                            txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
-                        
+                        txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
+                        nbSoLuong.Value = decimal.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
 
                     }
                     else
                     {
-                            txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
+                        txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
+                        nbSoLuong.Value = decimal.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
                     }
                     btXoa.Enabled = true;
                     btSua.Enabled = true;
