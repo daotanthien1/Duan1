@@ -33,5 +33,10 @@ namespace RJCodeAdvance.ControlBeverages
             get { return ptbImg.Image; }
             set { ptbImg.Image = value; }
         }
+
+        private void btThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

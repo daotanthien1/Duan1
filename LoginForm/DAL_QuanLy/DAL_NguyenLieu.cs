@@ -96,7 +96,7 @@ namespace DAL_QuanLy
                 cmd.Parameters.AddWithValue("Price", nl.Price);
                 cmd.Parameters.AddWithValue("Mass", nl.Mass);
                 cmd.Parameters.AddWithValue("Id_unit", nl.Id_Unit);
-
+                cmd.Parameters.AddWithValue("Images", nl.Images);
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;
             }
@@ -122,6 +122,7 @@ namespace DAL_QuanLy
                 cmd.Parameters.AddWithValue("Mass", nl.Mass);
                 cmd.Parameters.AddWithValue("Id_unit", nl.Id_Unit);
                 cmd.Parameters.AddWithValue("Id_ingredient", nl.Id_Ingredient);
+                cmd.Parameters.AddWithValue("Images", nl.Images);
 
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;

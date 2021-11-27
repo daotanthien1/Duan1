@@ -18,7 +18,7 @@ namespace RJCodeAdvance.ControlVouchers
         {
             InitializeComponent();
         }
-        public static string mail = "tranvantiep0805@gmail.com";
+        public static string mail = "tungdz0001@gmail.com";
         public string id;
         BUS_Vouchers vouchers = new BUS_Vouchers();
         private void F2_UpdateEventHandler(object sender, FrmVoucherType.UpdateEventArgs args)

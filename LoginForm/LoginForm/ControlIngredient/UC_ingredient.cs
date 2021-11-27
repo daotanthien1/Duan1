@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_QuanLy;
 using DTO_QuanLy;
+using RJCodeAdvance.ControlBeverages;
 
 namespace RJCodeAdvance.ControlIngredient
 {
@@ -19,11 +21,16 @@ namespace RJCodeAdvance.ControlIngredient
             InitializeComponent();
         }
         BUS_NguyenLieu busIg = new BUS_NguyenLieu();
+        public class UpdateEventArgs : EventArgs
+        {
+            public string Data { get; set; }
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             FrmIngredientType frm = new FrmIngredientType();
             frm.ShowDialog();
             loadComBoBox();
+
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -75,9 +82,18 @@ namespace RJCodeAdvance.ControlIngredient
                     DTO_NguyenLieu dtoBe = new DTO_NguyenLieu(txtTenIngredient.Text, Convert.ToInt32(cbNhaCC.SelectedValue),
                         Convert.ToInt32(cbLoaiIngredient.SelectedValue), float.Parse(txtGia.Text),
                         int.Parse(guna2NumericUpDown1.Value.ToString()), Convert.ToInt32(cbDVT.SelectedValue),
-                        Convert.ToInt32(dgv.CurrentRow.Cells["Id_Ingredient"].Value.ToString()));
+                        Convert.ToInt32(dgv.CurrentRow.Cells["Id_Ingredient"].Value.ToString()), "Images\\" + fileName);
                     if (busIg.UpdateNguyenLieu(dtoBe))
                     {
+                        string path = @"Images";
+                        if (!Directory.Exists(path))
+                        {
+                            Directory.CreateDirectory(path);
+                        }
+                        if (txtHinh.Text != checkUrlImage)
+                        {
+                            File.Copy(fileAddress, fileSavePath, true);//copy file hinh
+                        }
                         MessageBox.Show("Thành công");
                         loaddgv();
                         ResetValue();
@@ -98,9 +114,18 @@ namespace RJCodeAdvance.ControlIngredient
                 {
                     DTO_NguyenLieu dtoIg = new DTO_NguyenLieu(txtTenIngredient.Text, Convert.ToInt32(cbNhaCC.SelectedValue.ToString()),
                         Convert.ToInt32(cbLoaiIngredient.SelectedValue.ToString()), float.Parse(txtGia.Text),
-                        int.Parse(guna2NumericUpDown1.Value.ToString()), Convert.ToInt32(cbDVT.SelectedValue));
+                        int.Parse(guna2NumericUpDown1.Value.ToString()), Convert.ToInt32(cbDVT.SelectedValue), "Images\\" + fileName);
                     if (busIg.InsertNguyenLieu(dtoIg))
                     {
+                        string path = @"Images";
+                        if (!Directory.Exists(path))
+                        {
+                            Directory.CreateDirectory(path);
+                        }
+                        if (txtHinh.Text != checkUrlImage)
+                        {
+                            File.Copy(fileAddress, fileSavePath, true);//copy file hinh
+                        }
                         MessageBox.Show("Thành công");
                         loaddgv();
                     }
@@ -117,6 +142,7 @@ namespace RJCodeAdvance.ControlIngredient
         {
             ResetValue();
             loadComBoBox();
+            txtHinh.Enabled = false;
             loaddgv();
         }
         void ResetValue()
@@ -191,6 +217,7 @@ namespace RJCodeAdvance.ControlIngredient
             dgv.Columns[4].HeaderText = "Price";
             dgv.Columns[5].HeaderText = "Mass";
             dgv.Columns[6].HeaderText = "Unit";
+            dgv.Columns[7].HeaderText = "Images";
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         void loadComBoBox()
@@ -210,34 +237,39 @@ namespace RJCodeAdvance.ControlIngredient
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
+            if (dgv.Rows.Count > 1)
             {
-                if (dgv.Rows.Count > 1)
+                btLuu.Enabled = false;
+                btXoa.Enabled = true;
+                btSua.Enabled = true;
+                txtTenIngredient.Enabled = true;
+                cbLoaiIngredient.Enabled = true;
+                cbNhaCC.Enabled = true;
+                txtGia.Enabled = true;
+                cbDVT.Enabled = true;
+                guna2NumericUpDown1.Enabled = true;
+                txtTenIngredient.Text = dgv.CurrentRow.Cells["Name"].Value.ToString();
+                txtGia.Text = dgv.CurrentRow.Cells["Price"].Value.ToString();
+                cbLoaiIngredient.SelectedValue = dgv.CurrentRow.Cells[3].Value.ToString();
+                cbNhaCC.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[2].Value.ToString());
+                cbDVT.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[6].Value.ToString());
+                guna2NumericUpDown1.Text = dgv.CurrentRow.Cells[5].Value.ToString();
+                MessageBox.Show("" + dgv.CurrentRow.Cells[7].Value.ToString());
+                txtHinh.Text = dgv.CurrentRow.Cells["Images"].Value.ToString();
+                checkUrlImage = txtHinh.Text;
+                fileName = Path.GetFileName(dgv.CurrentRow.Cells["Images"].Value.ToString());
+                if (File.Exists(dgv.CurrentRow.Cells["Images"].Value.ToString()))
                 {
-                    btLuu.Enabled = false;
-                    btXoa.Enabled = true;
-                    btSua.Enabled = true;
-                    txtTenIngredient.Enabled = true;
-                    cbLoaiIngredient.Enabled = true;
-                    cbNhaCC.Enabled = true;
-                    txtGia.Enabled = true;
-                    cbDVT.Enabled = true;
-                    guna2NumericUpDown1.Enabled = true;
-                    txtTenIngredient.Text = dgv.CurrentRow.Cells["Name"].Value.ToString();
-                    txtGia.Text = dgv.CurrentRow.Cells["Price"].Value.ToString();
-                    cbLoaiIngredient.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Type"].Value.ToString()) - 1;
-                    cbNhaCC.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Supplier"].Value.ToString()) - 1;
-                    cbDVT.SelectedIndex = Convert.ToInt32(dgv.CurrentRow.Cells["Unit"].Value.ToString()) - 1;
-                    guna2NumericUpDown1.Value = int.Parse(dgv.CurrentRow.Cells["Mass"].Value.ToString());
+                    picHinh.Image = Image.FromFile(dgv.CurrentRow.Cells["Images"].Value.ToString());
                 }
                 else
                 {
-                    MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    picHinh.Image = default;
                 }
             }
-            catch
+            else
             {
-
+                MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -250,7 +282,7 @@ namespace RJCodeAdvance.ControlIngredient
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
         }
 
         private void btTimKiem_Click_1(object sender, EventArgs e)
@@ -267,6 +299,31 @@ namespace RJCodeAdvance.ControlIngredient
                 MessageBox.Show("Không tìm thấy sản phẩm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             ResetValue();
+        }
+        // lấy đường dẫn hình
+        string checkUrlImage;// kiểm tra hình khi cập nhật
+        string fileName;//tên file
+        string fileSavePath;//url store image
+        string fileAddress;// url load images
+        private void ptbOpen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlgOpen = new OpenFileDialog();
+            dlgOpen.Filter = "Bitmap(*.bmp)|.bmp|JPEG(*.jpg)|*.jpg|GIF(*.fig)|*.gif|All files(*.*)|*.*";
+            dlgOpen.FilterIndex = 2;
+            dlgOpen.Title = "Chọn ảnh minh hoạ cho sản phẩm";
+            if (dlgOpen.ShowDialog() == DialogResult.OK)
+            {
+                fileAddress = dlgOpen.FileName;
+                picHinh.Image = Image.FromFile(fileAddress);
+                fileName = Path.GetFileName(dlgOpen.FileName);
+                string saveDirectory = Application.StartupPath.Substring(0, (Application.StartupPath.Length - 10));
+                fileSavePath = "Images\\" + fileName;//combine with file name
+                txtHinh.Text = "Images\\" + fileName;
+            }
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
         }
     }
 }
