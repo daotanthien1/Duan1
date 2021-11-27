@@ -22,8 +22,6 @@ namespace RJCodeAdvance
             InitializeComponent();
             ingredients = ingredient;
             this.a = A;
-            
-            
         }
 
         private void FrmAddIngredient_Load(object sender, EventArgs e)
@@ -51,6 +49,7 @@ namespace RJCodeAdvance
             {
                 a.guna2DataGridView1.Rows.Add(item[0].ToString(), int.Parse(item[1].ToString()), item[2].ToString(), int.Parse(item[3].ToString()));
             }
+            this.Close();
         }
     }
 }

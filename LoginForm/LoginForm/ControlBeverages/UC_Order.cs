@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -282,6 +283,7 @@ namespace RJCodeAdvance.ControlBeverages
         {
             int idTable = (dgv.Tag as DTO_tables).Id;
             FrmOrderDetail frm = new FrmOrderDetail(idTable, idEmployee);
+            
             frm.ShowDialog();
             ShowBill(idTable);
             LoadStatusTable(idTable);
@@ -358,6 +360,28 @@ namespace RJCodeAdvance.ControlBeverages
                 ShowBill(idTable);
                 LoadStatusTable(idTable);
             }
+        }
+
+
+        private void btIn_Click(object sender, EventArgs e)
+        {
+            printPreviewDialog1.Document = printDocument1;
+            printPreviewDialog1.ShowDialog();
+        }
+
+        private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            e.Graphics.DrawString("HOÁ ĐƠN", new Font("Arial", 36, FontStyle.Bold), Brushes.Black, new Point(300, 30));
+
+            e.Graphics.DrawString("Ngày:" + now.ToString("dd/MM/yyyy"), new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(30, 130));
+            e.Graphics.DrawString("Số:1242", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(600, 130));
+
+            e.Graphics.DrawString("Thu ngân:nguyễn hoàng tùng", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(30, 160));
+            e.Graphics.DrawString("in lúc:" + now.ToString("hh:mm"), new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(600, 160));
+
+            e.Graphics.DrawString("Giờ vào:12:04", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(30, 190));
+            e.Graphics.DrawString("Giờ ra:14:04", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(600, 190));
         }
     }
 }

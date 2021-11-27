@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -25,7 +26,7 @@ namespace RJCodeAdvance.ControlIngredient
         BUS_NguyenLieu BUS_NguyenLieu = new BUS_NguyenLieu();
         DateTime today = DateTime.Now;
         List<DTO_NguyenLieu> ListNl;
-        private void UC_Input_Ingredient_Load(object sender, EventArgs e)
+        public void UC_Input_Ingredient_Load(object sender, EventArgs e)
         {
             ListNl = BUS_NguyenLieu.getListIngredient();
             RenderBeverage(ListNl);
@@ -40,14 +41,22 @@ namespace RJCodeAdvance.ControlIngredient
 
                 ingredients.IngredientName = item.Name;
                 ingredients.IngredientNPrice = item.Price.ToString() + "vnđ";
-                ingredients.IngredientNImage = Image.FromFile(Application.StartupPath + "\\" + item.Images);
+
+                if (File.Exists(Application.StartupPath + "\\" + item.Images))
+                {
+                    ingredients.IngredientNImage = Image.FromFile(Application.StartupPath + "\\" + item.Images);
+                }
+                else
+                {
+                    ingredients.IngredientNImage = default;
+                }
 
                 ingredients.btThem.Tag = item;
                 ingredients.btThem.Click += BtThem_Click;
                 flowLayoutPanel1.Controls.Add(ingredients);
             }
 
-            UC_ItemIngredientAdd b = new UC_ItemIngredientAdd();
+            UC_ItemIngredientAdd b = new UC_ItemIngredientAdd(this);
             flowLayoutPanel1.Controls.Add(b);
         }
         DataTable a = new DataTable();
@@ -116,11 +125,6 @@ namespace RJCodeAdvance.ControlIngredient
             nbSoLuong.Text = "" + 0;
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btThanhToan_Click_1(object sender, EventArgs e)
         {
             string time = today.ToString("yyyy-MM-dd hh:mm:ss.fff");
@@ -144,7 +148,6 @@ namespace RJCodeAdvance.ControlIngredient
                         {
                         }
                     }
-                    MessageBox.Show("Insert bill thành công");
                     // để t push lên, rồi m pull về có bị lỗi ghi đè dall ko
                     guna2DataGridView1.Rows.Clear();
                     txtName.Text = null;

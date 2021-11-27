@@ -119,6 +119,8 @@ namespace RJCodeAdvance.ControlBills
             cbbFilterCol.DisplayMember = "Value";
             cbbFilterCol.SelectedIndex = 2;
             label2.Text = "Tên đồ uống";
+            txtDoUong.Text = null;
+            nbSoLuong.Value = 1;
         }
 
         private void rdoNguyenLieu_CheckedChanged(object sender, EventArgs e)
@@ -144,13 +146,15 @@ namespace RJCodeAdvance.ControlBills
             //cbbFilterCol.Items.Add("Tổng giá");
             //cbbFilterCol.SelectedIndex = 0;
             label2.Text = "Tên nguyên liệu";
+            txtDoUong.Text = null;
+            nbSoLuong.Value = 1;
         }
         //click vao dgv
         private void dgvBill_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                if (dgvBill.Rows.Count > 0 || dgvBillsDetail.Rows.Count > 0)
+                if (dgvBill.Rows.Count > 0 )
                 {
                     if (rdoDoUong.Checked == true)
                     {
@@ -164,7 +168,8 @@ namespace RJCodeAdvance.ControlBills
                     }
                     btXoa.Enabled = true;
                     btSua.Enabled = true;
-
+                    nbSoLuong.Value = 1;
+                    txtDoUong.Text = null;
                 }
                 else
                 {
@@ -185,8 +190,6 @@ namespace RJCodeAdvance.ControlBills
                 if (rdoDoUong.Checked == true)
                 {
                     int id = Convert.ToInt32(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
-                    if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
                         if (BUS_Bill.DeleteBillsDoUong(id))
                         {
                             if (rdoDoUong.Checked == true)
@@ -203,13 +206,11 @@ namespace RJCodeAdvance.ControlBills
                         {
                             MessageBox.Show("Xoá không thành công");
                         }
-                    }
+                    
                 }
                 else
                 {
                     int id2 = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
-                    if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
                         if (BUS_Bill.DeleteBillsNL(id2))
                         {
                             if (rdoDoUong.Checked == true)
@@ -226,8 +227,10 @@ namespace RJCodeAdvance.ControlBills
                         {
                             MessageBox.Show("Xoá không thành công");
                         }
-                    }
+                    
                 }
+                nbSoLuong.Value = 1;
+                txtDoUong.Text = null;
             }
             catch (Exception ex)
             {
@@ -241,13 +244,12 @@ namespace RJCodeAdvance.ControlBills
 
             try
             {
-                int id = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_bill_detaill"].Value.ToString());
 
                 if (rdoDoUong.Checked == true)
                 {
-                    if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        if (BUS_Bill.DeleteBillsDetailDoUong(id))
+                    int id = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_bill_detaill"].Value.ToString());
+
+                    if (BUS_Bill.DeleteBillsDetailDoUong(id))
                         {
                             if (rdoDoUong.Checked == true)
                             {
@@ -264,13 +266,11 @@ namespace RJCodeAdvance.ControlBills
                         {
                             MessageBox.Show("Xoá không thành công");
                         }
-                    }
+                    
                 }
                 else
                 {
                     int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_BillDetaill"].Value.ToString());
-                    if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
                         if (BUS_Bill.DeleteBillsDetailNL(id2))
                         {
                             if (rdoDoUong.Checked == true)
@@ -288,8 +288,10 @@ namespace RJCodeAdvance.ControlBills
                         {
                             MessageBox.Show("Xoá không thành công");
                         }
-                    }
+                    
                 }
+                nbSoLuong.Value = 1;
+                txtDoUong.Text = null;
             }
             catch (Exception ex)
             {
@@ -302,17 +304,15 @@ namespace RJCodeAdvance.ControlBills
         {
             try
             {
-
-
                 if (rdoDoUong.Checked == true)
                 {
                     
                     DTO_Bill_Detail dto = new DTO_Bill_Detail(Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_bill_detaill"].Value.ToString()), Convert.ToInt32(nbSoLuong.Text));
                     if (BUS_Bill.UpdateBillsDetailDoUong(dto))
                     {
-                        MessageBox.Show("Success");
                         int idtemp = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
                         loadBillDetail(idtemp);
+
                     }
 
                 }
@@ -322,12 +322,13 @@ namespace RJCodeAdvance.ControlBills
                     int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_BillDetaill"].Value.ToString());
                     if (BUS_Bill.UpdateBillsDetailNL(Convert.ToInt32(nbSoLuong.Text), id2))
                     {
-                        MessageBox.Show("Success");
                         int idtemp = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
                         loadBillDetailNL(idtemp);
                     }
 
                 }
+                nbSoLuong.Value = 1;
+                txtDoUong.Text = null;
             }
 
             catch (Exception ex)
@@ -386,16 +387,14 @@ namespace RJCodeAdvance.ControlBills
                     if (rdoDoUong.Checked == true)
                     {
                         
-                            txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
-                        
+                        txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
+                        nbSoLuong.Value = decimal.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
 
                     }
                     else
                     {
-                        
-                            txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
-
-
+                        txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
+                        nbSoLuong.Value = decimal.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
                     }
                     btXoa.Enabled = true;
                     btSua.Enabled = true;

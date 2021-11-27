@@ -55,8 +55,6 @@ namespace RJCodeAdvance.ControlIngredient
         private void btXoa_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(dgv.CurrentRow.Cells["Id_Ingredient"].Value.ToString());
-            if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
                 if (busIg.DeleteNguyenLieu(id))
                 {
                     ResetValue();
@@ -66,11 +64,6 @@ namespace RJCodeAdvance.ControlIngredient
                 {
                     MessageBox.Show("Xoá không thành công");
                 }
-            }
-            else
-            {
-                ResetValue();
-            }
         }
 
         private void btSua_Click(object sender, EventArgs e)
@@ -94,7 +87,6 @@ namespace RJCodeAdvance.ControlIngredient
                         {
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
                         }
-                        MessageBox.Show("Thành công");
                         loaddgv();
                         ResetValue();
                     }
@@ -126,7 +118,6 @@ namespace RJCodeAdvance.ControlIngredient
                         {
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
                         }
-                        MessageBox.Show("Thành công");
                         loaddgv();
                     }
                 }
@@ -280,10 +271,6 @@ namespace RJCodeAdvance.ControlIngredient
             loadComBoBox();
         }
 
-        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
-        {
-
-        }
 
         private void btTimKiem_Click_1(object sender, EventArgs e)
         {
@@ -305,7 +292,6 @@ namespace RJCodeAdvance.ControlIngredient
         string fileName;//tên file
         string fileSavePath;//url store image
         string fileAddress;// url load images
-
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {

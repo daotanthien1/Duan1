@@ -13,9 +13,11 @@ namespace RJCodeAdvance.ControlBeverages
     public partial class UC_ItemBeverageAdd : UserControl
     {
         public int BeverageId;
-        public UC_ItemBeverageAdd()
+        FrmOrderDetail frmDetail;
+        public UC_ItemBeverageAdd(FrmOrderDetail frmDetail)
         {
             InitializeComponent();
+            this.frmDetail = frmDetail;
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
@@ -30,7 +32,13 @@ namespace RJCodeAdvance.ControlBeverages
         void showFrmBeverage()
         {
             UC_Beverages2 frm = new UC_Beverages2();
+            frm.FormClosing += Frm_FormClosing;
             frm.ShowDialog();
+        }
+
+        public void Frm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            frmDetail.FrmOrderDetail_Load(this, new EventArgs()); 
         }
     }
 }

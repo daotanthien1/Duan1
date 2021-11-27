@@ -599,7 +599,6 @@ namespace RJCodeAdvance.ControlIngredient
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
             this.txtSearch.Size = new System.Drawing.Size(228, 36);
             this.txtSearch.TabIndex = 126;
-            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // btTimKiem
             // 
