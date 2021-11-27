@@ -651,6 +651,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.ptbOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbOpen.TabIndex = 150;
             this.ptbOpen.TabStop = false;
+            this.ptbOpen.Click += new System.EventHandler(this.ptbOpen_Click_1);
             // 
             // guna2ControlBox2
             // 

@@ -305,7 +305,13 @@ namespace RJCodeAdvance.ControlIngredient
         string fileName;//tên file
         string fileSavePath;//url store image
         string fileAddress;// url load images
-        private void ptbOpen_Click(object sender, EventArgs e)
+
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void ptbOpen_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog dlgOpen = new OpenFileDialog();
             dlgOpen.Filter = "Bitmap(*.bmp)|.bmp|JPEG(*.jpg)|*.jpg|GIF(*.fig)|*.gif|All files(*.*)|*.*";
@@ -320,10 +326,6 @@ namespace RJCodeAdvance.ControlIngredient
                 fileSavePath = "Images\\" + fileName;//combine with file name
                 txtHinh.Text = "Images\\" + fileName;
             }
-        }
-
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
         }
     }
 }

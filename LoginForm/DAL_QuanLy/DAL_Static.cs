@@ -270,5 +270,45 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+        //Thống kê tổng thể hóa đơn theo tháng
+        public DataTable StaticOverAllBillsMonth(string year, string month)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "StaticOverAllBillsMonth";
+                cmd.Parameters.AddWithValue("YearNow", year);
+                cmd.Parameters.AddWithValue("Month", month);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        //thống kê tổng thể theo năm
+        public DataTable StaticOverAllBillsYears()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "StaticOverAllBillsYears";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }
