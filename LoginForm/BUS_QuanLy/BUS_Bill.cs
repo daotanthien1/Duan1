@@ -16,6 +16,10 @@ namespace BUS_QuanLy
         {
             return dal_bill.getMaxId();
         }
+        public DataTable getbill(int id)
+        {
+            return dal_bill.getbill(id);
+        }
         public bool addCustomer(int idCustomer, int idBill)
         {
             return dal_bill.addCustomer(idCustomer, idBill);

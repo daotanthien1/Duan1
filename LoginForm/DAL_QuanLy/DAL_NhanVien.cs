@@ -117,7 +117,24 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
-
+        public string GetNameNhanVienById(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "select name from employees where id_employee = "+id;
+                cmd.Connection = _conn;
+                DataTable dtNV = new DataTable();
+                dtNV.Load(cmd.ExecuteReader());
+                return (string)dtNV.Rows[0][0];
+            }
+            finally
+            {
+                //Đóng kết nối
+                _conn.Close();
+            }
+        }
         public bool InsertNhanVien(DTO_NhanVien nv)
         {
             try
@@ -280,5 +297,7 @@ namespace DAL_QuanLy
             dtIsDelete.Load(cmd.ExecuteReader());
             return dtIsDelete;
         }
+
+
     }
 }

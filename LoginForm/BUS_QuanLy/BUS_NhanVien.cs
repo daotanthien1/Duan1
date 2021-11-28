@@ -66,6 +66,10 @@ namespace BUS_QuanLy
         {
             return dalNhanVien.IsDelete();
         }
+        public string GetNameNhanVienById(int id)
+        {
+            return dalNhanVien.GetNameNhanVienById(id);
+        }
         //Mã hóa MD5
         public string encryption(string password)
         {

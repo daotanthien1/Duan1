@@ -15,6 +15,23 @@ namespace DAL_QuanLy
     /// </summary>
     public class DAL_Bill:DBConnect
     {
+        public DataTable getbill(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "select * from bills where id_bill = " + id;
+                cmd.Connection = _conn;
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
         public DataTable getbillDoUong()
         {
             try

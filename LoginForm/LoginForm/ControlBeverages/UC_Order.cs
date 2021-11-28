@@ -19,6 +19,7 @@ namespace RJCodeAdvance.ControlBeverages
     public partial class UC_Order : UserControl
     {
         public static int idEmployee = 1;
+
         BUS_tables bus_table = new BUS_tables();
         BUS_Bill bus_bill = new BUS_Bill();
         BUS_Menu bus_menu = new BUS_Menu();
@@ -141,7 +142,7 @@ namespace RJCodeAdvance.ControlBeverages
             dgv.Columns[3].HeaderText = "Thành tiền";
             dgv.Columns[4].HeaderText = "Giảm giá";
             dgv.Columns[5].Visible = false;
-
+           
             CultureInfo culture = new CultureInfo("vi-VN");
             Thread.CurrentThread.CurrentCulture = culture;
             txbTongThanhTien.Text = bus_bill.getSumPrice(id).ToString("c");
@@ -336,6 +337,7 @@ namespace RJCodeAdvance.ControlBeverages
                 btXoa.Enabled = true;
                 txbDoUong.Text = dgv.CurrentRow.Cells["Name"].Value.ToString();
                 nbSoLuong.Text = dgv.CurrentRow.Cells["quantity"].Value.ToString();
+                
             }
         }
 
@@ -371,17 +373,29 @@ namespace RJCodeAdvance.ControlBeverages
 
         private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)
         {
+            DTO_tables table = dgv.Tag as DTO_tables;
+            BUS_NhanVien bus_nhanvien = new BUS_NhanVien();
+            int idBill = bus_bill.GetUncheckBill(table.Id);
+            DataTable bill = bus_bill.getbill(idBill);
+            DateTime datecheckin = (DateTime)bill.Rows[0][4];
+            string name = bus_nhanvien.GetNameNhanVienById(idEmployee);
+
             DateTime now = DateTime.Now;
-            e.Graphics.DrawString("HOÁ ĐƠN", new Font("Arial", 36, FontStyle.Bold), Brushes.Black, new Point(300, 30));
+            e.Graphics.DrawString("HOÁ ĐƠN BÁN HÀNG", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(280, 60));
+            e.Graphics.DrawString("_____________________________________________________________________________________________________________________________________", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(0,100));
+            
+            e.Graphics.DrawString("Ngày: " + now.ToString("dd/MM/yyyy"), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 160));
+            e.Graphics.DrawString("Số: " + idBill, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(600, 160));
 
-            e.Graphics.DrawString("Ngày:" + now.ToString("dd/MM/yyyy"), new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(30, 130));
-            e.Graphics.DrawString("Số:1242", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(600, 130));
+            e.Graphics.DrawString("Thu ngân: " + name, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 190));
+            e.Graphics.DrawString("in lúc: " + now.ToString("hh:mm"), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(600, 190));
 
-            e.Graphics.DrawString("Thu ngân:nguyễn hoàng tùng", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(30, 160));
-            e.Graphics.DrawString("in lúc:" + now.ToString("hh:mm"), new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(600, 160));
+            e.Graphics.DrawString("Giờ vào: " + datecheckin.ToString("hh:mm"), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 220));
+            e.Graphics.DrawString("Giờ ra: " + now.ToString("hh:mm"), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(600, 220));
 
-            e.Graphics.DrawString("Giờ vào:12:04", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(30, 190));
-            e.Graphics.DrawString("Giờ ra:14:04", new Font("Arial", 16, FontStyle.Regular), Brushes.Black, new Point(600, 190));
+            e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 270));
+            e.Graphics.DrawString("Mặt Hàng\t\t\t\tSố lượng\tGiá\thành Tiền\tGiảm giá\t", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 295));
+            e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 310));
         }
     }
 }
