@@ -293,6 +293,10 @@ namespace RJCodeAdvance.ControlIngredient
         string fileSavePath;//url store image
         string fileAddress;// url load images
 
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+        }
+
         private void ptbOpen_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog dlgOpen = new OpenFileDialog();

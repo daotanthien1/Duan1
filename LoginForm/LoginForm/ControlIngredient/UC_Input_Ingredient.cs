@@ -31,6 +31,13 @@ namespace RJCodeAdvance.ControlIngredient
             ListNl = BUS_NguyenLieu.getListIngredient();
             RenderBeverage(ListNl);
             nbSoLuong.Enabled = false;
+
+            List<DTO_LoaiNguyenLieu> listBeverageType = bus_typeIngredients.listIngredientType();
+            listBeverageType.Add(all);
+            cbSearch.DataSource = listBeverageType;
+            cbSearch.SelectedItem = all;
+            cbSearch.DisplayMember = "Name";
+            cbSearch.ValueMember = "Id_type";
         }
         void RenderBeverage(List<DTO_NguyenLieu> nl)
         {
@@ -176,6 +183,39 @@ namespace RJCodeAdvance.ControlIngredient
             txtName.Text = null;
             txtThanhTien.Text = null;
             nbSoLuong.Text = ""+0;
+        }
+        BUS_LoaiNguyenLieu bus_typeIngredients = new BUS_LoaiNguyenLieu();
+        DTO_LoaiNguyenLieu all = new DTO_LoaiNguyenLieu() { Name = "Tất cả", Id_Type = 9999 };
+        List<DTO_NguyenLieu> SearchIngredient(string name, int idType)
+        {
+            List<DTO_NguyenLieu> listFind;
+            if (idType == 9999)
+            {
+                listFind = (from ingredients in ListNl
+                            where ingredients.Name.ToLower().Contains(name.ToLower())
+                            select ingredients).ToList<DTO_NguyenLieu>();
+            }
+            else
+            {
+                listFind = (from ingredients in ListNl
+                            where ingredients.Name.ToLower().Contains(name.ToLower()) && ingredients.Id_Type == idType
+                            select ingredients).ToList<DTO_NguyenLieu>();
+            }
+            return listFind;
+        }
+        private void guna2TextBox2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                List<DTO_NguyenLieu> listFind = SearchIngredient(guna2TextBox2.Text, (cbSearch.SelectedItem as DTO_LoaiNguyenLieu).Id_Type);
+                RenderBeverage(listFind);
+            }
+        }
+
+        private void cbSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<DTO_NguyenLieu> listFind = SearchIngredient(guna2TextBox2.Text, (cbSearch.SelectedItem as DTO_LoaiNguyenLieu).Id_Type);
+            RenderBeverage(listFind);
         }
     }
 }

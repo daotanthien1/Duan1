@@ -63,5 +63,13 @@ namespace BUS_QuanLy
         {
             return dAL_Static.StaticCustomerWeek(dayStar, dayEnd);
         }
+        public DataTable StaticOverAllBillsMonth(string year, string month)
+        {
+            return dAL_Static.StaticOverAllBillsMonth(year, month);
+        }
+        public DataTable StaticOverAllBillsYears()
+        {
+            return dAL_Static.StaticOverAllBillsYears();
+        }
     }
 }
