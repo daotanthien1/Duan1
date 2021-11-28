@@ -45,12 +45,12 @@ namespace RJCodeAdvance.ControlStatistic
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Statistic));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Statistic));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -78,8 +78,8 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2DataGridView3 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2DataGridView4 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btIn3 = new Guna.UI2.WinForms.Guna2Button();
             this.btIn2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btIn3 = new Guna.UI2.WinForms.Guna2Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
@@ -95,6 +95,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTongTien1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button9 = new Guna.UI2.WinForms.Guna2Button();
@@ -111,6 +112,10 @@ namespace RJCodeAdvance.ControlStatistic
             this.label8 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.txtTienHoaDon = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -123,13 +128,8 @@ namespace RJCodeAdvance.ControlStatistic
             this.printPreviewDialog3 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument4 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog4 = new System.Windows.Forms.PrintPreviewDialog();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.printDocument5 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog5 = new System.Windows.Forms.PrintPreviewDialog();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -139,8 +139,8 @@ namespace RJCodeAdvance.ControlStatistic
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -253,7 +253,7 @@ namespace RJCodeAdvance.ControlStatistic
             series1.Legend = "Legend1";
             series1.Name = "Total";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(310, 259);
+            this.chart1.Size = new System.Drawing.Size(332, 259);
             this.chart1.TabIndex = 133;
             this.chart1.Text = "chart1";
             // 
@@ -878,33 +878,6 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView4.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView4.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // btIn3
-            // 
-            this.btIn3.Animated = true;
-            this.btIn3.BorderColor = System.Drawing.Color.White;
-            this.btIn3.BorderRadius = 15;
-            this.btIn3.BorderThickness = 1;
-            this.btIn3.CheckedState.Parent = this.btIn3;
-            this.btIn3.CustomBorderColor = System.Drawing.Color.Black;
-            this.btIn3.CustomImages.Parent = this.btIn3;
-            this.btIn3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btIn3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btIn3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btIn3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btIn3.DisabledState.Parent = this.btIn3;
-            this.btIn3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btIn3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btIn3.ForeColor = System.Drawing.Color.White;
-            this.btIn3.HoverState.Parent = this.btIn3;
-            this.btIn3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btIn3.Location = new System.Drawing.Point(871, 124);
-            this.btIn3.Name = "btIn3";
-            this.btIn3.ShadowDecoration.Parent = this.btIn3;
-            this.btIn3.Size = new System.Drawing.Size(127, 35);
-            this.btIn3.TabIndex = 136;
-            this.btIn3.Text = "In";
-            this.btIn3.Click += new System.EventHandler(this.btIn3_Click);
-            // 
             // btIn2
             // 
             this.btIn2.Animated = true;
@@ -931,6 +904,33 @@ namespace RJCodeAdvance.ControlStatistic
             this.btIn2.TabIndex = 135;
             this.btIn2.Text = "In";
             this.btIn2.Click += new System.EventHandler(this.btIn2_Click);
+            // 
+            // btIn3
+            // 
+            this.btIn3.Animated = true;
+            this.btIn3.BorderColor = System.Drawing.Color.White;
+            this.btIn3.BorderRadius = 15;
+            this.btIn3.BorderThickness = 1;
+            this.btIn3.CheckedState.Parent = this.btIn3;
+            this.btIn3.CustomBorderColor = System.Drawing.Color.Black;
+            this.btIn3.CustomImages.Parent = this.btIn3;
+            this.btIn3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btIn3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btIn3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btIn3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btIn3.DisabledState.Parent = this.btIn3;
+            this.btIn3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btIn3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btIn3.ForeColor = System.Drawing.Color.White;
+            this.btIn3.HoverState.Parent = this.btIn3;
+            this.btIn3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btIn3.Location = new System.Drawing.Point(871, 124);
+            this.btIn3.Name = "btIn3";
+            this.btIn3.ShadowDecoration.Parent = this.btIn3;
+            this.btIn3.Size = new System.Drawing.Size(127, 35);
+            this.btIn3.TabIndex = 136;
+            this.btIn3.Text = "In";
+            this.btIn3.Click += new System.EventHandler(this.btIn3_Click);
             // 
             // tabPage2
             // 
@@ -1307,6 +1307,30 @@ namespace RJCodeAdvance.ControlStatistic
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Doanh Thu";
             // 
+            // chart2
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
+            this.chart2.Location = new System.Drawing.Point(445, 161);
+            this.chart2.Name = "chart2";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Tổng tiền hóa đơn";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Tổng tiền nguyên liệu";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Danh thu";
+            this.chart2.Series.Add(series2);
+            this.chart2.Series.Add(series3);
+            this.chart2.Series.Add(series4);
+            this.chart2.Size = new System.Drawing.Size(426, 330);
+            this.chart2.TabIndex = 162;
+            this.chart2.Text = "chart2";
+            // 
             // guna2Button7
             // 
             this.guna2Button7.Animated = true;
@@ -1653,6 +1677,36 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTienHoaDon.Size = new System.Drawing.Size(311, 36);
             this.txtTienHoaDon.TabIndex = 127;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Enabled = false;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
+            this.dataGridView1.Location = new System.Drawing.Point(445, 100);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(426, 150);
+            this.dataGridView1.TabIndex = 161;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Tổng tiền hóa đơn";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tổng tiền nguyên liệu";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Danh thu";
+            this.Column3.Name = "Column3";
+            // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.TargetControl = this.guna2TabControl1;
@@ -1729,36 +1783,6 @@ namespace RJCodeAdvance.ControlStatistic
             this.printPreviewDialog4.Name = "printPreviewDialog4";
             this.printPreviewDialog4.Visible = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.dataGridView1.Enabled = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(445, 100);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(426, 150);
-            this.dataGridView1.TabIndex = 161;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tổng tiền hóa đơn";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tổng tiền nguyên liệu";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Danh thu";
-            this.Column3.Name = "Column3";
-            // 
             // printDocument5
             // 
             this.printDocument5.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument5_PrintPage);
@@ -1773,30 +1797,6 @@ namespace RJCodeAdvance.ControlStatistic
             this.printPreviewDialog5.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog5.Icon")));
             this.printPreviewDialog5.Name = "printPreviewDialog5";
             this.printPreviewDialog5.Visible = false;
-            // 
-            // chart2
-            // 
-            chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(445, 161);
-            this.chart2.Name = "chart2";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Tổng tiền hóa đơn";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Tổng tiền nguyên liệu";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Danh thu";
-            this.chart2.Series.Add(series2);
-            this.chart2.Series.Add(series3);
-            this.chart2.Series.Add(series4);
-            this.chart2.Size = new System.Drawing.Size(426, 330);
-            this.chart2.TabIndex = 162;
-            this.chart2.Text = "chart2";
             // 
             // UC_Statistic
             // 
@@ -1819,8 +1819,8 @@ namespace RJCodeAdvance.ControlStatistic
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

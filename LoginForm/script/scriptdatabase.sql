@@ -2460,7 +2460,6 @@ AS
 		delete Ingredients
 		where Id_ingredient = @Id_ingredient
 	END
-
 GO
 /****** Object:  StoredProcedure [dbo].[sp_IngredientInsert]    Script Date: 11/27/2021 4:48:05 PM ******/
 SET ANSI_NULLS ON

@@ -379,6 +379,7 @@ namespace RJCodeAdvance.ControlBeverages
             DataTable bill = bus_bill.getbill(idBill);
             DateTime datecheckin = (DateTime)bill.Rows[0][4];
             string name = bus_nhanvien.GetNameNhanVienById(idEmployee);
+            List<DTO_Menu> listMenu = bus_menu.listMenu(table.Id);
 
             DateTime now = DateTime.Now;
             e.Graphics.DrawString("HOÁ ĐƠN BÁN HÀNG", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(280, 60));
@@ -394,8 +395,27 @@ namespace RJCodeAdvance.ControlBeverages
             e.Graphics.DrawString("Giờ ra: " + now.ToString("hh:mm"), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(600, 220));
 
             e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 270));
-            e.Graphics.DrawString("Mặt Hàng\t\t\t\tSố lượng\tGiá\thành Tiền\tGiảm giá\t", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 295));
+            e.Graphics.DrawString("Mặt Hàng\t\t\t\tSL\tGiá\t\tthành Tiền\t\tSale", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 295));
             e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 310));
+            int pointY = 310;
+            double totalPrice = 0;
+            foreach(var item in listMenu)
+            {
+                pointY += 25;
+                totalPrice += item.totalPrice;
+                e.Graphics.DrawString($"{item.beverageName}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, pointY));
+                e.Graphics.DrawString($"{item.quantity}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(362, pointY));
+                e.Graphics.DrawString($"{item.price}đ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(430, pointY));
+                e.Graphics.DrawString($"{item.totalPrice}đ", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(565, pointY));
+                e.Graphics.DrawString($"{item.sale}%", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(765, pointY));
+            }
+            pointY += 25;
+            e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, pointY));
+            pointY += 25;
+            e.Graphics.DrawString($"Tổng tiền: ", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(35, pointY));
+            e.Graphics.DrawString($"{totalPrice}đ", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(650, pointY));
+            pointY += 25;
+            e.Graphics.DrawString($"Cảm ơn Quý khách, hẹn gặp lại!", new Font("Arial", 12, FontStyle.Italic), Brushes.Black, new Point(300, pointY));
         }
     }
 }

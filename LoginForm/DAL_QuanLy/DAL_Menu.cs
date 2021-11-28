@@ -31,6 +31,26 @@ namespace DAL_QuanLy
             }
         }
 
+        public DataTable getListMenuNotVnd(int id_table)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "getListMenuNotVnd";
+                cmd.Parameters.AddWithValue("Id_table", id_table);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+
         public bool changeQuantity(int IdBillDetail,int quantity)
         {
             try

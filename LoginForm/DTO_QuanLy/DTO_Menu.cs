@@ -11,7 +11,7 @@ namespace DTO_QuanLy
     {
         public DTO_Menu(DataRow rows)
         {
-            var IdBillDetailTemp= Convert.ToInt32(rows["id_bill_detail"].ToString());
+            var IdBillDetailTemp= Convert.ToInt32(rows["id_bill_detaill"].ToString());
             if (IdBillDetailTemp.ToString() != "")
                 this.IdBillDetail = (int)IdBillDetailTemp;
             this.beverageName = rows["name"].ToString();
