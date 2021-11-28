@@ -36,7 +36,7 @@ namespace RJCodeAdvance.ControlStatistic
             dt.Rows.Add(dataGridView1.Rows[0].Cells[0].Value.ToString(), dataGridView1.Rows[0].Cells[1].Value.ToString(), dataGridView1.Rows[0].Cells[2].Value.ToString());
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                chart2.Series["Tổng tiền hóa đơn"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][2]);
+                chart2.Series["Tổng tiền hóa đơn"].Points.AddY(dt.Rows[i][0]);
                 chart2.Series["Tổng tiền nguyên liệu"].Points.AddY(dt.Rows[i][1]);
                 chart2.Series["Danh thu"].Points.AddY(dt.Rows[i][2]);
             }
@@ -70,6 +70,7 @@ namespace RJCodeAdvance.ControlStatistic
         {
             guna2DataGridView3.SendToBack();
             guna2DataGridView4.SendToBack();
+            rdChiTiet.Checked = true;
             //btTuan3.SendToBack();
             //btTuan4.SendToBack();
             btThang3.SendToBack();
@@ -96,6 +97,8 @@ namespace RJCodeAdvance.ControlStatistic
             {
                 txtTongTien.Text = item[0].ToString();
             }
+
+            chart1.Series["Total"].Points.Clear();
         }
         DateTime dayNow = DateTime.Now;
         //Click bt tuần hóa đơn
@@ -244,6 +247,16 @@ namespace RJCodeAdvance.ControlStatistic
                     chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][2]);
                 }
                 guna2DataGridView1.DataSource = dt;
+                int money = 0;
+                for(int i =0; i < guna2DataGridView1.Rows.Count; i++)
+                {
+                    if(guna2DataGridView1.Rows[i].Cells[2].Value.ToString() == "")
+                    {
+                        guna2DataGridView1.Rows[i].Cells[2].Value = "0";
+                    }
+                    money += int.Parse(guna2DataGridView1.Rows[i].Cells[2].Value.ToString());
+                }
+                txtTongTien.Text = "" + money;
             }
             
         }
@@ -282,8 +295,12 @@ namespace RJCodeAdvance.ControlStatistic
                 DataTable dt = bUS_Static.StaticOverAllBillsYears();
                 guna2DataGridView1.DataSource = dt;
                 float money = 0;
-                for(int i = 0; i < guna2DataGridView1.Rows.Count - 1; i++)
+                for(int i = 0; i < guna2DataGridView1.Rows.Count; i++)
                 {
+                    if(guna2DataGridView1.Rows[i].Cells[2].Value.ToString() == "")
+                    {
+                        guna2DataGridView1.Rows[i].Cells[2].Value = "0";
+                    }
                     money += int.Parse(guna2DataGridView1.Rows[i].Cells[2].Value.ToString());
                 }
                 txtTongTien.Text = "" + money;
@@ -1407,6 +1424,9 @@ namespace RJCodeAdvance.ControlStatistic
             dayEnd2.Text = "" + date;
             dataGridView1.Rows.Clear();
             dataGridView1.Rows.Add(txtTienHoaDon.Text, txtTienIngredient.Text, txtDanhThu.Text);
+            chart2.Series["Tổng tiền hóa đơn"].Points.Clear();
+            chart2.Series["Tổng tiền nguyên liệu"].Points.Clear();
+            chart2.Series["Danh thu"].Points.Clear();
             DataTable dt2 = new DataTable();
             dt2.Columns.Add("", typeof(string));
             dt2.Columns.Add("", typeof(string));
@@ -1414,7 +1434,7 @@ namespace RJCodeAdvance.ControlStatistic
             dt2.Rows.Add(dataGridView1.Rows[0].Cells[0].Value.ToString(), dataGridView1.Rows[0].Cells[1].Value.ToString(), dataGridView1.Rows[0].Cells[2].Value.ToString());
             for (int i = 0; i < dt2.Rows.Count; i++)
             {
-                chart2.Series["Tổng tiền hóa đơn"].Points.AddXY(dt2.Rows[i][0], dt2.Rows[i][2]);
+                chart2.Series["Tổng tiền hóa đơn"].Points.AddY(dt2.Rows[i][0]);
                 chart2.Series["Tổng tiền nguyên liệu"].Points.AddY(dt2.Rows[i][1]);
                 chart2.Series["Danh thu"].Points.AddY(dt2.Rows[i][2]);
             }
@@ -1454,13 +1474,16 @@ namespace RJCodeAdvance.ControlStatistic
             dataGridView1.Rows.Clear();
             dataGridView1.Rows.Add(txtTienHoaDon.Text, txtTienIngredient.Text, txtDanhThu.Text);
             DataTable dt2 = new DataTable();
+            chart2.Series["Tổng tiền hóa đơn"].Points.Clear();
+            chart2.Series["Tổng tiền nguyên liệu"].Points.Clear();
+            chart2.Series["Danh thu"].Points.Clear();
             dt2.Columns.Add("", typeof(string));
             dt2.Columns.Add("", typeof(string));
             dt2.Columns.Add("", typeof(string));
             dt2.Rows.Add(dataGridView1.Rows[0].Cells[0].Value.ToString(), dataGridView1.Rows[0].Cells[1].Value.ToString(), dataGridView1.Rows[0].Cells[2].Value.ToString());
             for (int i = 0; i < dt2.Rows.Count; i++)
             {
-                chart2.Series["Tổng tiền hóa đơn"].Points.AddXY(dt2.Rows[i][0], dt2.Rows[i][2]);
+                chart2.Series["Tổng tiền hóa đơn"].Points.AddY(dt2.Rows[i][0]);
                 chart2.Series["Tổng tiền nguyên liệu"].Points.AddY(dt2.Rows[i][1]);
                 chart2.Series["Danh thu"].Points.AddY(dt2.Rows[i][2]);
             }
@@ -1500,13 +1523,16 @@ namespace RJCodeAdvance.ControlStatistic
             chart2.ChartAreas["ChartArea1"].AxisX.Title = "Static";
             chart2.ChartAreas["ChartArea1"].AxisY.Title = "Total";
             DataTable dt2 = new DataTable();
+            chart2.Series["Tổng tiền hóa đơn"].Points.Clear();
+            chart2.Series["Tổng tiền nguyên liệu"].Points.Clear();
+            chart2.Series["Danh thu"].Points.Clear();
             dt2.Columns.Add("", typeof(string));
             dt2.Columns.Add("", typeof(string));
             dt2.Columns.Add("", typeof(string));
             dt2.Rows.Add(dataGridView1.Rows[0].Cells[0].Value.ToString(), dataGridView1.Rows[0].Cells[1].Value.ToString(), dataGridView1.Rows[0].Cells[2].Value.ToString());
             for (int i = 0; i < dt2.Rows.Count; i++)
             {
-                chart2.Series["Tổng tiền hóa đơn"].Points.AddXY(dt2.Rows[i][0], dt2.Rows[i][2]);
+                chart2.Series["Tổng tiền hóa đơn"].Points.AddY(dt2.Rows[i][0]);
                 chart2.Series["Tổng tiền nguyên liệu"].Points.AddY(dt2.Rows[i][1]);
                 chart2.Series["Danh thu"].Points.AddY(dt2.Rows[i][2]);
             }

@@ -10,9 +10,15 @@ namespace DTO_QuanLy
     {
         private int id_Type;
         private string name;
+
         public DTO_LoaiNguyenLieu()
         {
+        }
 
+        public DTO_LoaiNguyenLieu(System.Data.DataRow row)
+        {
+            this.id_Type = (int)row["Id_type"];
+            this.name = row["Name"].ToString();
         }
         public DTO_LoaiNguyenLieu(string name)
         {
