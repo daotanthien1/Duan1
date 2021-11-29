@@ -298,6 +298,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThemNCC.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btThemNCC.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btThemNCC.DisabledState.Parent = this.btThemNCC;
+            this.btThemNCC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btThemNCC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemNCC.ForeColor = System.Drawing.Color.White;
             this.btThemNCC.HoverState.Parent = this.btThemNCC;
@@ -325,6 +326,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThemNL.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btThemNL.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btThemNL.DisabledState.Parent = this.btThemNL;
+            this.btThemNL.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btThemNL.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemNL.ForeColor = System.Drawing.Color.White;
             this.btThemNL.HoverState.Parent = this.btThemNL;
@@ -351,6 +353,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btLuu.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btLuu.DisabledState.Parent = this.btLuu;
+            this.btLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btLuu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuu.ForeColor = System.Drawing.Color.White;
             this.btLuu.HoverState.Parent = this.btLuu;
@@ -377,6 +380,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btSua.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btSua.DisabledState.Parent = this.btSua;
+            this.btSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btSua.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSua.ForeColor = System.Drawing.Color.White;
             this.btSua.HoverState.Parent = this.btSua;
@@ -403,6 +407,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btXoa.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btXoa.DisabledState.Parent = this.btXoa;
+            this.btXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btXoa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoa.ForeColor = System.Drawing.Color.White;
             this.btXoa.HoverState.Parent = this.btXoa;
@@ -430,6 +435,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btThem.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btThem.DisabledState.Parent = this.btThem;
+            this.btThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btThem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThem.ForeColor = System.Drawing.Color.White;
             this.btThem.HoverState.Parent = this.btThem;
@@ -460,6 +466,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btDanhSach.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btDanhSach.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btDanhSach.DisabledState.Parent = this.btDanhSach;
+            this.btDanhSach.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btDanhSach.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDanhSach.ForeColor = System.Drawing.Color.White;
             this.btDanhSach.HoverState.Parent = this.btDanhSach;
@@ -560,6 +567,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThemDonVi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btThemDonVi.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btThemDonVi.DisabledState.Parent = this.btThemDonVi;
+            this.btThemDonVi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btThemDonVi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemDonVi.ForeColor = System.Drawing.Color.White;
             this.btThemDonVi.HoverState.Parent = this.btThemDonVi;
@@ -614,6 +622,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btTimKiem.DisabledState.Parent = this.btTimKiem;
+            this.btTimKiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btTimKiem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTimKiem.ForeColor = System.Drawing.Color.White;
             this.btTimKiem.HoverState.Parent = this.btTimKiem;

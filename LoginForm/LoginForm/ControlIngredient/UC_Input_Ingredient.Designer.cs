@@ -51,11 +51,11 @@ namespace RJCodeAdvance.ControlIngredient
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btSua = new Guna.UI2.WinForms.Guna2Button();
-            this.btThanhToan = new Guna.UI2.WinForms.Guna2Button();
             this.btXoa = new Guna.UI2.WinForms.Guna2Button();
+            this.cbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbSearch = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btThanhToan = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoLuong)).BeginInit();
@@ -194,6 +194,7 @@ namespace RJCodeAdvance.ControlIngredient
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btThanhToan);
             this.panel1.Controls.Add(this.txtThanhTien);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.nbSoLuong);
@@ -203,7 +204,6 @@ namespace RJCodeAdvance.ControlIngredient
             this.panel1.Controls.Add(this.btSua);
             this.panel1.Controls.Add(this.txtTongTien);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.btThanhToan);
             this.panel1.Controls.Add(this.btXoa);
             this.panel1.Controls.Add(this.guna2DataGridView1);
             this.panel1.Controls.Add(this.cbSearch);
@@ -339,6 +339,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btSua.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btSua.DisabledState.Parent = this.btSua;
+            this.btSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btSua.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSua.ForeColor = System.Drawing.Color.White;
             this.btSua.HoverState.Parent = this.btSua;
@@ -351,29 +352,6 @@ namespace RJCodeAdvance.ControlIngredient
             this.btSua.TabIndex = 100;
             this.btSua.Text = "Sửa";
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
-            // 
-            // btThanhToan
-            // 
-            this.btThanhToan.BorderColor = System.Drawing.Color.White;
-            this.btThanhToan.BorderRadius = 3;
-            this.btThanhToan.CheckedState.Parent = this.btThanhToan;
-            this.btThanhToan.CustomImages.Parent = this.btThanhToan;
-            this.btThanhToan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
-            this.btThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
-            this.btThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
-            this.btThanhToan.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btThanhToan.DisabledState.Parent = this.btThanhToan;
-            this.btThanhToan.FillColor = System.Drawing.Color.BlueViolet;
-            this.btThanhToan.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btThanhToan.ForeColor = System.Drawing.Color.White;
-            this.btThanhToan.HoverState.Parent = this.btThanhToan;
-            this.btThanhToan.Location = new System.Drawing.Point(431, 582);
-            this.btThanhToan.Name = "btThanhToan";
-            this.btThanhToan.ShadowDecoration.Parent = this.btThanhToan;
-            this.btThanhToan.Size = new System.Drawing.Size(121, 40);
-            this.btThanhToan.TabIndex = 97;
-            this.btThanhToan.Text = "Thanh toán";
-            this.btThanhToan.Click += new System.EventHandler(this.btThanhToan_Click_1);
             // 
             // btXoa
             // 
@@ -388,6 +366,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btXoa.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btXoa.DisabledState.Parent = this.btXoa;
+            this.btXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btXoa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoa.ForeColor = System.Drawing.Color.White;
             this.btXoa.HoverState.Parent = this.btXoa;
@@ -400,6 +379,32 @@ namespace RJCodeAdvance.ControlIngredient
             this.btXoa.TabIndex = 99;
             this.btXoa.Text = "Xóa";
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
+            // 
+            // cbSearch
+            // 
+            this.cbSearch.BackColor = System.Drawing.Color.Transparent;
+            this.cbSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.cbSearch.BorderRadius = 15;
+            this.cbSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbSearch.FocusedState.Parent = this.cbSearch;
+            this.cbSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
+            this.cbSearch.HoverState.Parent = this.cbSearch;
+            this.cbSearch.ItemHeight = 30;
+            this.cbSearch.Items.AddRange(new object[] {
+            "Ca 1",
+            "Ca 2",
+            "Ca 3"});
+            this.cbSearch.ItemsAppearance.Parent = this.cbSearch;
+            this.cbSearch.Location = new System.Drawing.Point(37, 385);
+            this.cbSearch.Name = "cbSearch";
+            this.cbSearch.ShadowDecoration.Parent = this.cbSearch;
+            this.cbSearch.Size = new System.Drawing.Size(161, 36);
+            this.cbSearch.TabIndex = 160;
+            this.cbSearch.SelectedIndexChanged += new System.EventHandler(this.cbSearch_SelectedIndexChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -440,31 +445,31 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2TextBox2.TabIndex = 161;
             this.guna2TextBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.guna2TextBox2_KeyUp);
             // 
-            // cbSearch
+            // btThanhToan
             // 
-            this.cbSearch.BackColor = System.Drawing.Color.Transparent;
-            this.cbSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.cbSearch.BorderRadius = 15;
-            this.cbSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSearch.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbSearch.FocusedState.Parent = this.cbSearch;
-            this.cbSearch.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.cbSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
-            this.cbSearch.HoverState.Parent = this.cbSearch;
-            this.cbSearch.ItemHeight = 30;
-            this.cbSearch.Items.AddRange(new object[] {
-            "Ca 1",
-            "Ca 2",
-            "Ca 3"});
-            this.cbSearch.ItemsAppearance.Parent = this.cbSearch;
-            this.cbSearch.Location = new System.Drawing.Point(37, 385);
-            this.cbSearch.Name = "cbSearch";
-            this.cbSearch.ShadowDecoration.Parent = this.cbSearch;
-            this.cbSearch.Size = new System.Drawing.Size(161, 36);
-            this.cbSearch.TabIndex = 160;
-            this.cbSearch.SelectedIndexChanged += new System.EventHandler(this.cbSearch_SelectedIndexChanged);
+            this.btThanhToan.BorderColor = System.Drawing.Color.White;
+            this.btThanhToan.BorderRadius = 3;
+            this.btThanhToan.CheckedState.Parent = this.btThanhToan;
+            this.btThanhToan.CustomImages.Parent = this.btThanhToan;
+            this.btThanhToan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btThanhToan.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btThanhToan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btThanhToan.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btThanhToan.DisabledState.Parent = this.btThanhToan;
+            this.btThanhToan.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btThanhToan.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btThanhToan.HoverState.Parent = this.btThanhToan;
+            this.btThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btThanhToan.Image")));
+            this.btThanhToan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btThanhToan.Location = new System.Drawing.Point(426, 582);
+            this.btThanhToan.Name = "btThanhToan";
+            this.btThanhToan.ShadowDecoration.Parent = this.btThanhToan;
+            this.btThanhToan.Size = new System.Drawing.Size(126, 40);
+            this.btThanhToan.TabIndex = 161;
+            this.btThanhToan.Text = "Thanh toán";
+            this.btThanhToan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btThanhToan.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // UC_Input_Ingredient
             // 
@@ -494,7 +499,6 @@ namespace RJCodeAdvance.ControlIngredient
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btSua;
-        private Guna.UI2.WinForms.Guna2Button btThanhToan;
         private Guna.UI2.WinForms.Guna2Button btXoa;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private System.Windows.Forms.Label label1;
@@ -510,5 +514,6 @@ namespace RJCodeAdvance.ControlIngredient
         private Guna.UI2.WinForms.Guna2TextBox txtThanhTien;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2ComboBox cbSearch;
+        private Guna.UI2.WinForms.Guna2Button btThanhToan;
     }
 }

@@ -91,6 +91,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.btThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
             this.btThem.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btThem.DisabledState.Parent = this.btThem;
+            this.btThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btThem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btThem.ForeColor = System.Drawing.Color.White;
             this.btThem.HoverState.Parent = this.btThem;

@@ -371,11 +371,6 @@ namespace RJCodeAdvance.ControlBeverages
         }
 
 
-        private void btIn_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)
         {
             DTO_tables table = dgv.Tag as DTO_tables;

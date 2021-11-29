@@ -49,7 +49,6 @@ namespace RJCodeAdvance
                         DTO_LoaiVoucher typevouchers = new DTO_LoaiVoucher(float.Parse(txtSale.Text));
                         if (typeVouchers.InsertTypeVoucher(typevouchers))
                         {
-                            MessageBox.Show("Insert thành công");
                             LoadData();
                             resetValue();
                         }
