@@ -217,5 +217,43 @@ namespace RJCodeAdvance.ControlIngredient
             List<DTO_NguyenLieu> listFind = SearchIngredient(guna2TextBox2.Text, (cbSearch.SelectedItem as DTO_LoaiNguyenLieu).Id_Type);
             RenderBeverage(listFind);
         }
+
+        private void btThanhToan_Click(object sender, EventArgs e)
+        {
+            string time = today.ToString("yyyy-MM-dd hh:mm:ss.fff");
+            if (guna2DataGridView1.Rows.Count == 1)
+            {
+                MessageBox.Show("Không có mặc hàng nào cần thanh toán");
+            }
+            else
+            {
+                // tạo insert vào inputBill
+                DTO_InputBills dTO_InputBills = new DTO_InputBills(time, mail, float.Parse(txtTongTien.Text));
+                if (bill.insertBillIngredient(dTO_InputBills))
+                {
+                    //vằng lặp lấy giá trị trong datagridview để insert vào inputBillsDetails
+                    for (int i = 0; i < guna2DataGridView1.Rows.Count - 1; i++)
+                    {
+                        string nameType = guna2DataGridView1.Rows[i].Cells[0].Value.ToString();
+                        string soLuong = guna2DataGridView1.Rows[i].Cells[1].Value.ToString();
+                        DTO_InputIngredients dTO_InputIngredients = new DTO_InputIngredients(soLuong, nameType, time);
+                        if (input.insertBillDetailIngredient(dTO_InputIngredients))
+                        {
+                            MessageBox.Show("Thành công");
+                        }
+                    }
+                    // để t push lên, rồi m pull về có bị lỗi ghi đè dall ko
+                    guna2DataGridView1.Rows.Clear();
+                    txtName.Text = null;
+                    txtThanhTien.Text = "" + 0;
+                    txtTongTien.Text = "" + 0;
+                    nbSoLuong.Text = "" + 0;
+                }
+                else
+                {
+                    MessageBox.Show("Thao tác chậm lại :)))");
+                }
+            }
+        }
     }
 }

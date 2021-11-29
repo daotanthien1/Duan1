@@ -55,21 +55,37 @@ namespace BUS_QuanLy
         {
             return dAL_Static.StaticCustomer();
         }
-        public DataTable StaticEmployeeWeek(string dayStar, string dayEnd)
+        public DataTable StaticEmployeeWeek()
         {
-            return dAL_Static.StaticEmployeeWeek(dayStar, dayEnd);
+            return dAL_Static.StaticEmployeeWeek();
         }
         public DataTable StaticCustomerWeek(string dayStar, string dayEnd)
         {
             return dAL_Static.StaticCustomerWeek(dayStar, dayEnd);
         }
-        public DataTable StaticOverAllBillsMonth(string year, string month)
+        public DataTable StaticOverAllBillsMonth()
         {
-            return dAL_Static.StaticOverAllBillsMonth(year, month);
+            return dAL_Static.StaticOverAllBillsMonth();
         }
         public DataTable StaticOverAllBillsYears()
         {
             return dAL_Static.StaticOverAllBillsYears();
+        }
+        public DataTable StaticOverAllDate(string dayStar, string dayEnd)
+        {
+            return dAL_Static.StaticOverAllDate(dayStar, dayEnd);
+        }
+        public DataTable StaticEmployeeYears()
+        {
+            return dAL_Static.StaticEmployeeYears();
+        }
+        public DataTable StaticCustomerYears()
+        {
+            return dAL_Static.StaticCustomerYears();
+        }
+        public DataTable StaticCustomerMonth()
+        {
+            return dAL_Static.StaticCustomerMonth();
         }
     }
 }

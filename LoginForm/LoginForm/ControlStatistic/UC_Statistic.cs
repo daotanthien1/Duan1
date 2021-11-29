@@ -40,6 +40,8 @@ namespace RJCodeAdvance.ControlStatistic
                 chart2.Series["Tổng tiền nguyên liệu"].Points.AddY(dt.Rows[i][1]);
                 chart2.Series["Danh thu"].Points.AddY(dt.Rows[i][2]);
             }
+
+            btTK.Visible = false;
         }
         void loadPill()
         {
@@ -68,37 +70,73 @@ namespace RJCodeAdvance.ControlStatistic
         //click vào thống kê hóa đơn
         private void btThongKe_Click(object sender, EventArgs e)
         {
-            guna2DataGridView3.SendToBack();
-            guna2DataGridView4.SendToBack();
-            rdChiTiet.Checked = true;
-            //btTuan3.SendToBack();
-            //btTuan4.SendToBack();
-            btThang3.SendToBack();
-            btThang4.SendToBack();
-            btNam3.SendToBack();
-            btNam4.SendToBack();
-            btEx1.SendToBack();
-            btEx2.SendToBack();
-            btIn2.SendToBack();
-            btIn3.SendToBack();
-            string dayStar = dayStart.Text;
-            string dayend = dayEnd.Text;
-            DataTable dt = bUS_Static.getDataBillDetailDate(dayStar, dayend);
-            guna2DataGridView1.DataSource = dt;
-            foreach (DataRow item in dt.Rows)
+            if (rdChiTiet.Checked)
             {
-                if (item[1].ToString() == "")
+                guna2DataGridView3.SendToBack();
+                guna2DataGridView4.SendToBack();
+                //btTuan3.SendToBack();
+                //btTuan4.SendToBack();
+                btThang3.SendToBack();
+                btThang4.SendToBack();
+                btNam3.SendToBack();
+                btNam4.SendToBack();
+                btEx1.SendToBack();
+                btEx2.SendToBack();
+                btIn2.SendToBack();
+                btIn3.SendToBack();
+                string dayStar = dayStart.Text;
+                string dayend = dayEnd.Text;
+                DataTable dt = bUS_Static.getDataBillDetailDate(dayStar, dayend);
+                guna2DataGridView1.DataSource = dt;
+                foreach (DataRow item in dt.Rows)
                 {
-                    item[1] = "0";
+                    if (item[1].ToString() == "")
+                    {
+                        item[1] = "0";
+                    }
+                }
+                DataTable dt1 = bUS_Static.SumPriceDateTime(dayStar, dayend);
+                foreach (DataRow item in dt1.Rows)
+                {
+                    txtTongTien.Text = item[0].ToString();
+                }
+
+                chart1.Series["Total"].Points.Clear();
+            }
+            if (rbTongThe.Checked)
+            {
+                chart1.Visible = true;
+                btTK.FillColor = Color.FromArgb(0, 118, 212);
+                guna2DataGridView3.SendToBack();
+                guna2DataGridView4.SendToBack();
+                //btTuan3.SendToBack();
+                //btTuan4.SendToBack();
+                btThang3.SendToBack();
+                btThang4.SendToBack();
+                btNam3.SendToBack();
+                btNam4.SendToBack();
+                btEx1.SendToBack();
+                btEx2.SendToBack();
+                btIn2.SendToBack();
+                btIn3.SendToBack();
+                string dayStar = dayStart.Text;
+                string dayend = dayEnd.Text;
+                DataTable dt = bUS_Static.StaticOverAllDate(dayStar, dayend);
+                guna2DataGridView1.DataSource = dt;
+                DataTable dt1 = bUS_Static.SumPriceDateTime(dayStar, dayend);
+                foreach (DataRow item in dt1.Rows)
+                {
+                    txtTongTien.Text = item[0].ToString();
+                }
+
+                chart1.Series["Total"].Points.Clear();
+                chart1.ChartAreas["ChartArea1"].AxisX.Title = "Day";
+                chart1.ChartAreas["ChartArea1"].AxisY.Title = "Total";
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][2]);
                 }
             }
-            DataTable dt1 = bUS_Static.SumPriceDateTime(dayStar, dayend);
-            foreach (DataRow item in dt1.Rows)
-            {
-                txtTongTien.Text = item[0].ToString();
-            }
-
-            chart1.Series["Total"].Points.Clear();
         }
         DateTime dayNow = DateTime.Now;
         //Click bt tuần hóa đơn
@@ -228,25 +266,14 @@ namespace RJCodeAdvance.ControlStatistic
                 string year = dayNow.ToString("yyyy");
                 //MessageBox.Show("" + year);
                 DataTable dt = new DataTable();
-                dt.Columns.Add("Tháng", typeof(string));
-                dt.Columns.Add("Tổng số bill", typeof(string));
-                dt.Columns.Add("Tổng tiền", typeof(string));
-                DataTable a = new DataTable();
-                for (int i = 1; i <= 12; i++)
-                {
-                    a = bUS_Static.StaticOverAllBillsMonth(year, i.ToString());
-                    foreach(DataRow item in a.Rows)
-                    {
-                        dt.Rows.Add(item[0].ToString(), item[1].ToString(), item[2].ToString());
-                    }
-                }
+                dt = bUS_Static.StaticOverAllBillsMonth();
+                guna2DataGridView1.DataSource = dt;
                 chart1.ChartAreas["ChartArea1"].AxisX.Title = "Month";
                 chart1.ChartAreas["ChartArea1"].AxisY.Title = "Total";
                 for(int i = 0; i < dt.Rows.Count; i++)
                 {
                     chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][2]);
                 }
-                guna2DataGridView1.DataSource = dt;
                 int money = 0;
                 for(int i =0; i < guna2DataGridView1.Rows.Count; i++)
                 {
@@ -456,9 +483,11 @@ namespace RJCodeAdvance.ControlStatistic
         bool perform1 = false;
         private void btTK_Click(object sender, EventArgs e)
         {
+            chart1.Visible = false;
             guna2DataGridView1.SendToBack();
             btEx.SendToBack();
             btIn1.SendToBack();
+            btTK.FillColor = Color.FromArgb(255, 128, 0); //255, 128, 0
             if (perform1 == false)
             {
                 //btTuan.SendToBack();
@@ -507,224 +536,68 @@ namespace RJCodeAdvance.ControlStatistic
         // thống kê nhân viên theo tháng
         private void btThang3_Click(object sender, EventArgs e)
         {
-            string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
-            DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-            if (date.Day != 1)
+            DataTable dt = bUS_Static.StaticEmployeeWeek();
+            guna2DataGridView3.DataSource = dt;
+            float money = 0;
+            foreach(DataRow item in dt.Rows)
             {
-                DataTable dt = bUS_Static.StaticEmployeeWeek(date.ToString("yyyy-MM-01 00:00:00"), time);
-                guna2DataGridView3.DataSource = dt;
-                DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("yyyy-MM-01 00:00:00"), time);
-                foreach (DataRow item in dt1.Rows)
+                if(item[4].ToString() == "")
                 {
-                    txtTongTien.Text = item[0].ToString();
+                    item[4] = "0";
                 }
-                dayStart.Text = date.ToString("yyyy-MM-01");
-                dayEnd.Text = time;
+                money += float.Parse(item[4].ToString());
             }
-            else
-            {
-                DataTable dt = bUS_Static.StaticEmployeeWeek(time1, time);
-                guna2DataGridView3.DataSource = dt;
-                foreach (DataRow item in dt.Rows)
-                {
-                    if (item[1].ToString() == "")
-                    {
-                        item[1] = "0";
-                    }
-                }
-                DataTable dt1 = bUS_Static.SumPriceDateTime(time1, time);
-                foreach (DataRow item in dt1.Rows)
-                {
-                    txtTongTien.Text = item[0].ToString();
-                }
-                dayStart.Text = time1;
-                dayEnd.Text = time;
-            }
+            txtTongTien.Text = "" + money;
         }
         // thống kê khách hàng theo tháng
         private void btThang4_Click(object sender, EventArgs e)
         {
-            string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
-            DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-            if (date.Day != 1)
+            DataTable dt = bUS_Static.StaticCustomerMonth();
+            guna2DataGridView4.DataSource = dt;
+            float money = 0;
+            foreach (DataRow item in dt.Rows)
             {
-                DataTable dt = bUS_Static.StaticCustomerWeek(date.ToString("yyyy-MM-01 00:00:00"), time);
-                guna2DataGridView4.DataSource = dt;
-                DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("yyyy-MM-01 00:00:00"), time);
-                foreach (DataRow item in dt1.Rows)
+                if (item[4].ToString() == "")
                 {
-                    txtTongTien.Text = item[0].ToString();
+                    item[4] = "0";
                 }
-                dayStart.Text = date.ToString("yyyy-MM-01");
-                dayEnd.Text = time;
+                money += float.Parse(item[4].ToString());
             }
-            else
-            {
-                DataTable dt = bUS_Static.StaticCustomerWeek(time1, time);
-                guna2DataGridView4.DataSource = dt;
-                DataTable dt1 = bUS_Static.SumPriceDateTime(time1, time);
-                foreach (DataRow item in dt1.Rows)
-                {
-                    txtTongTien.Text = item[0].ToString();
-                }
-                dayStart.Text = time1;
-                dayEnd.Text = time;
-            }
+            txtTongTien.Text = "" + money;
         }
         // thống kê nhân viên theo năm
         private void btNam3_Click(object sender, EventArgs e)
         {
-            string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
-            DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-            DataTable dt = bUS_Static.StaticEmployeeWeek(date.ToString("yyyy-01-01 00:00:00"), time);
+            DataTable dt = bUS_Static.StaticEmployeeYears();
             guna2DataGridView3.DataSource = dt;
+            float money = 0;
             foreach (DataRow item in dt.Rows)
             {
-                if (item[1].ToString() == "")
+                if (item[4].ToString() == "")
                 {
-                    item[1] = "0";
+                    item[4] = "0";
                 }
+                money += float.Parse(item[4].ToString());
             }
-            DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("yyyy-01-01 00:00:00"), time);
-            foreach (DataRow item in dt1.Rows)
-            {
-                txtTongTien.Text = item[0].ToString();
-            }
-            dayStart.Text = date.ToString("yyyy-01-01");
-            dayEnd.Text = time;
+            txtTongTien.Text = "" + money;
         }
         // thống kê khách hàng theo năm
         private void btNam4_Click(object sender, EventArgs e)
         {
-            string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
-            DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-            DataTable dt = bUS_Static.StaticCustomerWeek(date.ToString("yyyy-01-01 00:00:00"), time);
+            DataTable dt = bUS_Static.StaticCustomerYears();
             guna2DataGridView4.DataSource = dt;
-            DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("yyyy-01-01 00:00:00"), time);
-            foreach (DataRow item in dt1.Rows)
+            float money = 0;
+            foreach (DataRow item in dt.Rows)
             {
-                txtTongTien.Text = item[0].ToString();
+                if (item[4].ToString() == "")
+                {
+                    item[4] = "0";
+                }
+                money += float.Parse(item[4].ToString());
             }
-            dayStart.Text = date.ToString("yyyy-01-01");
-            dayEnd.Text = time;
+            txtTongTien.Text = "" + money;
         }
-        // thống kê nhân viên theo tuần
-        private void btTuan3_Click_1(object sender, EventArgs e)
-        {
-            int dem;
-            string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
-            DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-            MessageBox.Show("" + date.AddDays(-6).ToString("yyyy-MM-dd 00:00:00"));
-            if (date.DayOfWeek == DayOfWeek.Sunday)
-            {
-                DataTable dt2 = bUS_Static.StaticEmployeeWeek(date.AddDays(-6).ToString("yyyy-MM-dd 00:00:01"), time);
-                guna2DataGridView3.DataSource = dt2;
-                foreach (DataRow item in dt2.Rows)
-                {
-                    if (item[1].ToString() == "")
-                    {
-                        item[1] = "0";
-                    }
-                }
-                DataTable dt3 = bUS_Static.SumPriceDateTime(date.AddDays(-6).ToString("yyyy-MM-dd 00:00:00"), time);
-                foreach (DataRow item in dt3.Rows)
-                {
-                    txtTongTien.Text = item[0].ToString();
-                }
-                dayStart.Text = date.AddDays(-6).ToString("yyyy-MM-dd");
-                dayEnd.Text = time;
-            }
-            if (date.DayOfWeek != DayOfWeek.Monday && date.DayOfWeek != DayOfWeek.Sunday)
-            {
-                dem = date.DayOfWeek - DayOfWeek.Monday;
-                DataTable dt = bUS_Static.StaticEmployeeWeek(date.AddDays(-dem).ToString("yyyy-MM-dd 00:00:01"), time);
-                guna2DataGridView3.DataSource = dt;
-                foreach (DataRow item in dt.Rows)
-                {
-                    if (item[1].ToString() == "")
-                    {
-                        item[1] = "0";
-                    }
-                }
-                DataTable dt1 = bUS_Static.SumPriceDateTime(date.AddDays(-dem).ToString("yyyy-MM-dd 00:00:00"), time);
-                foreach (DataRow item in dt1.Rows)
-                {
-                    txtTongTien.Text = item[0].ToString();
-                }
-                dayStart.Text = date.AddDays(-dem).ToString("yyyy-MM-dd");
-                dayEnd.Text = time;
-            }
-            if (date.DayOfWeek == DayOfWeek.Monday)
-            {
-                DataTable dt = bUS_Static.StaticEmployeeWeek(time1, time);
-                guna2DataGridView3.DataSource = dt;
-                foreach (DataRow item in dt.Rows)
-                {
-                    if (item[1].ToString() == "")
-                    {
-                        item[1] = "0";
-                    }
-                }
-                DataTable dt1 = bUS_Static.SumPriceDateTime(time1, time);
-                foreach (DataRow item in dt1.Rows)
-                {
-                    txtTongTien.Text = item[0].ToString();
-                }
-                dayStart.Text = time1;
-                dayEnd.Text = time;
-            }
-        }
-        // thống kê khách hàng theo tuần
-        private void btTuan4_Click_1(object sender, EventArgs e)
-        {
-            int dem;
-            string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
-            DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-            //MessageBox.Show("" + date.AddDays(-6).ToString("yyyy-MM-dd 00:00:00"));
-            if (date.DayOfWeek == DayOfWeek.Sunday)
-            {
-                DataTable dt2 = bUS_Static.StaticCustomerWeek(date.AddDays(-6).ToString("yyyy-MM-dd 00:00:01"), time);
-                guna2DataGridView4.DataSource = dt2;
-                DataTable dt3 = bUS_Static.SumPriceDateTime(date.AddDays(-6).ToString("yyyy-MM-dd 00:00:00"), time);
-                foreach (DataRow item in dt3.Rows)
-                {
-                    txtTongTien.Text = item[0].ToString();
-                }
-                dayStart.Text = date.AddDays(-6).ToString("yyyy-MM-dd");
-                dayEnd.Text = time;
-            }
-            if (date.DayOfWeek != DayOfWeek.Monday && date.DayOfWeek != DayOfWeek.Sunday)
-            {
-                dem = date.DayOfWeek - DayOfWeek.Monday;
-                DataTable dt = bUS_Static.StaticCustomerWeek(date.AddDays(-dem).ToString("yyyy-MM-dd 00:00:01"), time);
-                guna2DataGridView4.DataSource = dt;
-                DataTable dt1 = bUS_Static.SumPriceDateTime(date.AddDays(-dem).ToString("yyyy-MM-dd 00:00:00"), time);
-                foreach (DataRow item in dt1.Rows)
-                {
-                    txtTongTien.Text = item[0].ToString();
-                }
-                dayStart.Text = date.AddDays(-dem).ToString("yyyy-MM-dd");
-                dayEnd.Text = time;
-            }
-            if (date.DayOfWeek == DayOfWeek.Monday)
-            {
-                DataTable dt = bUS_Static.StaticCustomerWeek(time1, time);
-                guna2DataGridView4.DataSource = dt;
-                DataTable dt1 = bUS_Static.SumPriceDateTime(time1, time);
-                foreach (DataRow item in dt1.Rows)
-                {
-                    txtTongTien.Text = item[0].ToString();
-                }
-                dayStart.Text = time1;
-                dayEnd.Text = time;
-            }
-        }
+
         // Xuất excel hóa đơn chi tiết
         private void btEx_Click_1(object sender, EventArgs e)
         {
@@ -1541,20 +1414,13 @@ namespace RJCodeAdvance.ControlStatistic
         private void rdChiTiet_CheckedChanged(object sender, EventArgs e)
         {
             chart1.Visible = false;
-            btTK.Visible = true;
+            btTK.Visible = false;
             btEx1.Enabled = true;
-            btEx2.Enabled = true;
-            btIn2.Enabled = true;
-            btIn3.Enabled = true;
         }
 
         private void rbTongThe_CheckedChanged(object sender, EventArgs e)
         {
-            btTK.Visible = false;
-            btEx1.Enabled = false;
-            btEx2.Enabled = false;
-            btIn2.Enabled = false;
-            btIn3.Enabled = false;
+            btTK.Visible = true;
         }
 
         private void rbTongThe_Click(object sender, EventArgs e)

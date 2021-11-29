@@ -229,7 +229,7 @@ namespace DAL_QuanLy
             }
         }
         // thống kê hóa đơn nhân viên theo tuần
-        public DataTable StaticEmployeeWeek(string dayStar, string dayEnd)
+        public DataTable StaticEmployeeWeek()
         {
             try
             {
@@ -238,8 +238,25 @@ namespace DAL_QuanLy
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "StaticEmployeeWeek";
-                cmd.Parameters.AddWithValue("dayStar", dayStar);
-                cmd.Parameters.AddWithValue("dayEnd", dayEnd);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        // tổng thể nhân viên theo năm
+        public DataTable StaticEmployeeYears()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "StaticEmployeeYears";
                 DataTable dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
                 return dt;
@@ -271,7 +288,7 @@ namespace DAL_QuanLy
             }
         }
         //Thống kê tổng thể hóa đơn theo tháng
-        public DataTable StaticOverAllBillsMonth(string year, string month)
+        public DataTable StaticOverAllBillsMonth()
         {
             try
             {
@@ -280,8 +297,6 @@ namespace DAL_QuanLy
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "StaticOverAllBillsMonth";
-                cmd.Parameters.AddWithValue("YearNow", year);
-                cmd.Parameters.AddWithValue("Month", month);
                 DataTable dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
                 return dt;
@@ -301,6 +316,65 @@ namespace DAL_QuanLy
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "StaticOverAllBillsYears";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        // thống kê tổng thể hóa đơn theo ngày
+        public DataTable StaticOverAllDate(string dayStar, string dayEnd)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "StaticOverAllDate";
+                cmd.Parameters.AddWithValue("dayStar", dayStar);
+                cmd.Parameters.AddWithValue("dayEnd", dayEnd);
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        // tổng thể khách hàng theo năm
+        public DataTable StaticCustomerYears()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "StaticCustomerYears";
+                DataTable dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
+        // tổng thể khách hàng theo tháng
+        public DataTable StaticCustomerMonth()
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "StaticCustomerMonth";
                 DataTable dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
                 return dt;
