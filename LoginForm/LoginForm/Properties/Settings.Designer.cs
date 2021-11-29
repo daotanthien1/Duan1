@@ -116,5 +116,17 @@ namespace RJCodeAdvance.Properties {
                 return ((string)(this["DuAn1ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AutoPrint {
+            get {
+                return ((bool)(this["AutoPrint"]));
+            }
+            set {
+                this["AutoPrint"] = value;
+            }
+        }
     }
 }

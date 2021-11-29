@@ -203,7 +203,6 @@ namespace RJCodeAdvance
             this.rdCoNguoi.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdCoNguoi.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rdCoNguoi.UseVisualStyleBackColor = false;
-            this.rdCoNguoi.CheckedChanged += new System.EventHandler(this.guna2RadioButton2_CheckedChanged);
             // 
             // rdTrong
             // 
@@ -229,7 +228,6 @@ namespace RJCodeAdvance
             this.rdTrong.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.rdTrong.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rdTrong.UseVisualStyleBackColor = false;
-            this.rdTrong.CheckedChanged += new System.EventHandler(this.guna2RadioButton1_CheckedChanged);
             // 
             // label4
             // 
@@ -242,7 +240,6 @@ namespace RJCodeAdvance
             this.label4.Size = new System.Drawing.Size(78, 16);
             this.label4.TabIndex = 105;
             this.label4.Text = "Tình Trạng:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btLuu
             // 

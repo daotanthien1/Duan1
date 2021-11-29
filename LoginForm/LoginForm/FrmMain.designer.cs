@@ -37,11 +37,8 @@ namespace RJCodeAdvance
             this.label1 = new System.Windows.Forms.Label();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btHoaDon = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.btnKhachHang = new Guna.UI2.WinForms.Guna2Button();
             this.btnThongKe = new Guna.UI2.WinForms.Guna2Button();
             this.btnVoucher = new Guna.UI2.WinForms.Guna2Button();
@@ -50,20 +47,23 @@ namespace RJCodeAdvance
             this.btnGoiDoUong = new Guna.UI2.WinForms.Guna2Button();
             this.imageSlide = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.uC_Bill1 = new RJCodeAdvance.ControlBills.UC_Bill();
             this.uC_Order2 = new RJCodeAdvance.ControlBeverages.UC_Order();
             this.uC_Voucher1 = new RJCodeAdvance.ControlVouchers.UC_Voucher();
             this.uC_Statistic1 = new RJCodeAdvance.ControlStatistic.UC_Statistic();
             this.uC_Input_Ingredient1 = new RJCodeAdvance.ControlIngredient.UC_Input_Ingredient();
             this.uC_employee1 = new RJCodeAdvance.ControlEmployees.UC_employee();
             this.uC_Customer1 = new RJCodeAdvance.ControlCustomers.UC_Customer();
-            this.uC_Bill1 = new RJCodeAdvance.ControlBills.UC_Bill();
-            this.btHoaDon = new Guna.UI2.WinForms.Guna2Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageSlide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageSlide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
@@ -115,6 +115,39 @@ namespace RJCodeAdvance
             this.panel1.Size = new System.Drawing.Size(213, 661);
             this.panel1.TabIndex = 5;
             // 
+            // btHoaDon
+            // 
+            this.btHoaDon.BackColor = System.Drawing.Color.Transparent;
+            this.btHoaDon.BorderRadius = 22;
+            this.btHoaDon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btHoaDon.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btHoaDon.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btHoaDon.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btHoaDon.CheckedState.Parent = this.btHoaDon;
+            this.btHoaDon.CustomImages.Parent = this.btHoaDon;
+            this.btHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btHoaDon.DisabledState.Parent = this.btHoaDon;
+            this.btHoaDon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btHoaDon.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btHoaDon.HoverState.Parent = this.btHoaDon;
+            this.btHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btHoaDon.Image")));
+            this.btHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btHoaDon.ImageSize = new System.Drawing.Size(25, 25);
+            this.btHoaDon.Location = new System.Drawing.Point(27, 380);
+            this.btHoaDon.Name = "btHoaDon";
+            this.btHoaDon.ShadowDecoration.Parent = this.btHoaDon;
+            this.btHoaDon.Size = new System.Drawing.Size(186, 43);
+            this.btHoaDon.TabIndex = 18;
+            this.btHoaDon.Text = "Hoá đơn";
+            this.btHoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btHoaDon.TextOffset = new System.Drawing.Point(10, 0);
+            this.btHoaDon.UseTransparentBackground = true;
+            this.btHoaDon.Click += new System.EventHandler(this.btnGoiDoUong_Click);
+            // 
             // guna2ControlBox2
             // 
             this.guna2ControlBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -128,44 +161,6 @@ namespace RJCodeAdvance
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.Size = new System.Drawing.Size(41, 23);
             this.guna2ControlBox2.TabIndex = 17;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.uC_Bill1);
-            this.panel2.Controls.Add(this.uC_Order2);
-            this.panel2.Controls.Add(this.uC_Voucher1);
-            this.panel2.Controls.Add(this.uC_Statistic1);
-            this.panel2.Controls.Add(this.uC_Input_Ingredient1);
-            this.panel2.Controls.Add(this.uC_employee1);
-            this.panel2.Controls.Add(this.uC_Customer1);
-            this.panel2.Controls.Add(this.dataGridView2);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(213, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
-            this.panel2.Size = new System.Drawing.Size(1100, 661);
-            this.panel2.TabIndex = 6;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(350, 380);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView2.TabIndex = 9;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(313, 203);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 8;
-            // 
-            // guna2DragControl1
-            // 
-            this.guna2DragControl1.TargetControl = this.label1;
             // 
             // btnKhachHang
             // 
@@ -386,6 +381,33 @@ namespace RJCodeAdvance
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.uC_Bill1);
+            this.panel2.Controls.Add(this.uC_Order2);
+            this.panel2.Controls.Add(this.uC_Voucher1);
+            this.panel2.Controls.Add(this.uC_Statistic1);
+            this.panel2.Controls.Add(this.uC_Input_Ingredient1);
+            this.panel2.Controls.Add(this.uC_employee1);
+            this.panel2.Controls.Add(this.uC_Customer1);
+            this.panel2.Controls.Add(this.dataGridView2);
+            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(213, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 10, 10);
+            this.panel2.Size = new System.Drawing.Size(1100, 661);
+            this.panel2.TabIndex = 6;
+            // 
+            // uC_Bill1
+            // 
+            this.uC_Bill1.BackColor = System.Drawing.Color.White;
+            this.uC_Bill1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC_Bill1.Location = new System.Drawing.Point(0, 10);
+            this.uC_Bill1.Name = "uC_Bill1";
+            this.uC_Bill1.Size = new System.Drawing.Size(1090, 641);
+            this.uC_Bill1.TabIndex = 11;
+            // 
             // uC_Order2
             // 
             this.uC_Order2.BackColor = System.Drawing.Color.White;
@@ -441,47 +463,25 @@ namespace RJCodeAdvance
             this.uC_Customer1.Size = new System.Drawing.Size(1090, 641);
             this.uC_Customer1.TabIndex = 2;
             // 
-            // uC_Bill1
+            // dataGridView2
             // 
-            this.uC_Bill1.BackColor = System.Drawing.Color.White;
-            this.uC_Bill1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC_Bill1.Location = new System.Drawing.Point(0, 10);
-            this.uC_Bill1.Name = "uC_Bill1";
-            this.uC_Bill1.Size = new System.Drawing.Size(1090, 641);
-            this.uC_Bill1.TabIndex = 11;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(350, 380);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView2.TabIndex = 9;
             // 
-            // btHoaDon
+            // dataGridView1
             // 
-            this.btHoaDon.BackColor = System.Drawing.Color.Transparent;
-            this.btHoaDon.BorderRadius = 22;
-            this.btHoaDon.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btHoaDon.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btHoaDon.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btHoaDon.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btHoaDon.CheckedState.Parent = this.btHoaDon;
-            this.btHoaDon.CustomImages.Parent = this.btHoaDon;
-            this.btHoaDon.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btHoaDon.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btHoaDon.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btHoaDon.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btHoaDon.DisabledState.Parent = this.btHoaDon;
-            this.btHoaDon.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btHoaDon.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btHoaDon.HoverState.Parent = this.btHoaDon;
-            this.btHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btHoaDon.Image")));
-            this.btHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btHoaDon.ImageSize = new System.Drawing.Size(25, 25);
-            this.btHoaDon.Location = new System.Drawing.Point(27, 380);
-            this.btHoaDon.Name = "btHoaDon";
-            this.btHoaDon.ShadowDecoration.Parent = this.btHoaDon;
-            this.btHoaDon.Size = new System.Drawing.Size(186, 43);
-            this.btHoaDon.TabIndex = 18;
-            this.btHoaDon.Text = "Hoá đơn";
-            this.btHoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btHoaDon.TextOffset = new System.Drawing.Point(10, 0);
-            this.btHoaDon.UseTransparentBackground = true;
-            this.btHoaDon.Click += new System.EventHandler(this.btnGoiDoUong_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(313, 203);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.TargetControl = this.label1;
             // 
             // FrmBeverageCP
             // 
@@ -499,11 +499,11 @@ namespace RJCodeAdvance
             this.Text = "FrmBeverageCP";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageSlide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageSlide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

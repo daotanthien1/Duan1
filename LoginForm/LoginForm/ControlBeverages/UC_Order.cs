@@ -245,8 +245,14 @@ namespace RJCodeAdvance.ControlBeverages
 
             if (idBill != -1)
             {
+                if (Properties.Settings.Default.AutoPrint)
+                {
+                    printPreviewDialog1.Document = printDocument1;
+                    printPreviewDialog1.ShowDialog();
+                }
                 bus_bill.CheckOut(idBill);
                 ShowBill(table.Id);
+               
             }
             LoadStatusTable(table.Id);
         }
@@ -367,8 +373,7 @@ namespace RJCodeAdvance.ControlBeverages
 
         private void btIn_Click(object sender, EventArgs e)
         {
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
+            
         }
 
         private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)

@@ -489,8 +489,6 @@
   <ItemGroup>
     <None Include="Resources\btThanhToan.Image.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Report\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,20 +21,6 @@ namespace RJCodeAdvance
             rdTrong.Enabled = false;
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2RadioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2RadioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
         BUS_tables tables = new BUS_tables();
         private void FrmTable_Load(object sender, EventArgs e)
         {
@@ -130,7 +116,7 @@ namespace RJCodeAdvance
                 }
                 btSua.Enabled = true;
                 btXoa.Enabled = true;
-                txtName.Enabled = false;
+                txtName.Enabled = true;
             }
         }
         // sửa
@@ -139,7 +125,6 @@ namespace RJCodeAdvance
                 DTO_tables Tables = new DTO_tables(txtName.Text, Status, int.Parse(id));
                 if (tables.UpdateDataTable(Tables))
                 {
-                    MessageBox.Show("Update thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loadData();
                 }
                 else
@@ -150,21 +135,14 @@ namespace RJCodeAdvance
         //xóa
         private void btXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn sửa bàn " + name, "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
                 if (tables.DeleteDataTable(int.Parse(id)))
                 {
-                    MessageBox.Show("Delete thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loadData();
                 }
                 else
                 {
                     MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-            }
         }
         // tìm kiếm
         private void btTimKiem_Click(object sender, EventArgs e)

@@ -29,7 +29,6 @@ namespace RJCodeAdvance
                 Properties.Settings.Default.voucherType = Convert.ToInt32(cbSale.SelectedValue.ToString());
                 Properties.Settings.Default.voucheTypeName = Convert.ToInt16(cbSale.Text); 
                 Properties.Settings.Default.TurnOnSale = true;
-                Properties.Settings.Default.Save();
             }
             else
             {
@@ -37,8 +36,16 @@ namespace RJCodeAdvance
                 Properties.Settings.Default.voucherType = 0;
                 Properties.Settings.Default.voucheTypeName = 0;
                 Properties.Settings.Default.TurnOnSale = false;
-                Properties.Settings.Default.Save();
             }
+
+            if(toggleSwitchPrint.Checked)
+            {
+                Properties.Settings.Default.AutoPrint = true;
+            } else
+            {
+                Properties.Settings.Default.AutoPrint = false;
+            }
+            Properties.Settings.Default.Save();
         }
         public static string Sale;
         private void FrmConfigurationSale_Load(object sender, EventArgs e)
@@ -58,6 +65,11 @@ namespace RJCodeAdvance
                 cbSale.ResetText();
                 cbSale.Enabled = false;
                 nbDiemYeuCau.Enabled = false;
+            }
+
+            if(Properties.Settings.Default.AutoPrint)
+            {
+                toggleSwitchPrint.Checked = true;
             }
         }
         void loadData()
