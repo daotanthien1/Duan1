@@ -56,7 +56,7 @@ namespace DAL_QuanLy
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = _conn;
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "LoadBillInBetweenDate";
+                cmd.CommandText = "LoadBillInDayOfWeek";
                 cmd.Parameters.AddWithValue("dayStar", DayStar);
                 cmd.Parameters.AddWithValue("dayEnd", DayEnd);
                 DataTable dt = new DataTable();

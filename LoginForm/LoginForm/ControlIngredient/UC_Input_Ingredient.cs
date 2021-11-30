@@ -7,10 +7,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -38,6 +40,8 @@ namespace RJCodeAdvance.ControlIngredient
             cbSearch.SelectedItem = all;
             cbSearch.DisplayMember = "Name";
             cbSearch.ValueMember = "Id_type";
+            guna2DataGridView1.Rows[0].Cells[2].Value = "";
+            guna2DataGridView1.Rows[0].Cells[3].Value = "";
         }
         void RenderBeverage(List<DTO_NguyenLieu> nl)
         {
@@ -47,7 +51,7 @@ namespace RJCodeAdvance.ControlIngredient
                 UC_IngeredientItem ingredients = new UC_IngeredientItem();
 
                 ingredients.IngredientName = item.Name;
-                ingredients.IngredientNPrice = item.Price.ToString() + "vnđ";
+                ingredients.IngredientNPrice = item.Price.ToString("#,###") + "VNĐ";
 
                 if (File.Exists(Application.StartupPath + "\\" + item.Images))
                 {
@@ -73,11 +77,13 @@ namespace RJCodeAdvance.ControlIngredient
             DTO_NguyenLieu Ingredients = (DTO_NguyenLieu)(sender as Guna2Button).Tag;
             FrmAddIngredient frm = new FrmAddIngredient(Ingredients,this);
             frm.ShowDialog();
-            for(int i = 0; i < guna2DataGridView1.Rows.Count - 1; i++)
+            guna2DataGridView1.Columns[3].DefaultCellStyle.Format = "#,### VNĐ";
+            for (int i = 0; i < guna2DataGridView1.Rows.Count - 1; i++)
             {
                 string tmp = guna2DataGridView1.Rows[i].Cells[0].Value.ToString();
                 for (int j = guna2DataGridView1.Rows.Count - 1; j > i; j--)
                 {
+                    
                     if (guna2DataGridView1.Rows[j].IsNewRow) continue;
                     if (tmp == guna2DataGridView1.Rows[j].Cells[0].Value.ToString())
                     {
@@ -85,6 +91,7 @@ namespace RJCodeAdvance.ControlIngredient
                         guna2DataGridView1.Rows[i].Cells[3].Value = (int.Parse(guna2DataGridView1.Rows[i].Cells[3].Value.ToString()) + int.Parse(guna2DataGridView1.Rows[j].Cells[3].Value.ToString()));
                         guna2DataGridView1.Rows.RemoveAt(j);
                     }
+                    //guna2DataGridView1.Rows[i].Cells[3].Value = String.Format("{0:0,0 vnđ}", guna2DataGridView1.Rows[i].Cells[3].Value);
                 }
             }
             int money = 0;
@@ -92,7 +99,7 @@ namespace RJCodeAdvance.ControlIngredient
             for(int i = 0; i < guna2DataGridView1.Rows.Count - 1; i++)
             {
                 money += int.Parse(guna2DataGridView1.Rows[i].Cells[3].Value.ToString());
-                txtTongTien.Text = " " + money;
+                txtTongTien.Text = "" + money;
             }
         }
         BUS_InputBills bill = new BUS_InputBills();
@@ -125,10 +132,10 @@ namespace RJCodeAdvance.ControlIngredient
             for (int i = 0; i < guna2DataGridView1.Rows.Count - 1; i++)
             {
                 money += int.Parse(guna2DataGridView1.Rows[i].Cells[3].Value.ToString());
-                txtTongTien.Text = " " + money;
+                txtTongTien.Text = "" + money;
             }
             txtName.Text = null;
-            txtThanhTien.Text = null;
+            txtThanhTien.Text = ""+0;
             nbSoLuong.Text = "" + 0;
         }
 
@@ -178,10 +185,10 @@ namespace RJCodeAdvance.ControlIngredient
             for (int i = 0; i < guna2DataGridView1.Rows.Count - 1; i++)
             {
                 money += int.Parse(guna2DataGridView1.Rows[i].Cells[3].Value.ToString());
-                txtTongTien.Text = " " + money;
+                txtTongTien.Text = "" + money;
             }
             txtName.Text = null;
-            txtThanhTien.Text = null;
+            txtThanhTien.Text = ""+0;
             nbSoLuong.Text = ""+0;
         }
         BUS_LoaiNguyenLieu bus_typeIngredients = new BUS_LoaiNguyenLieu();
@@ -221,6 +228,7 @@ namespace RJCodeAdvance.ControlIngredient
         private void btThanhToan_Click(object sender, EventArgs e)
         {
             string time = today.ToString("yyyy-MM-dd hh:mm:ss.fff");
+            //vi-VN
             if (guna2DataGridView1.Rows.Count == 1)
             {
                 MessageBox.Show("Không có mặc hàng nào cần thanh toán");
@@ -239,7 +247,7 @@ namespace RJCodeAdvance.ControlIngredient
                         DTO_InputIngredients dTO_InputIngredients = new DTO_InputIngredients(soLuong, nameType, time);
                         if (input.insertBillDetailIngredient(dTO_InputIngredients))
                         {
-                            MessageBox.Show("Thành công");
+                            //MessageBox.Show("Thành công");
                         }
                     }
                     // để t push lên, rồi m pull về có bị lỗi ghi đè dall ko
@@ -254,6 +262,22 @@ namespace RJCodeAdvance.ControlIngredient
                     MessageBox.Show("Thao tác chậm lại :)))");
                 }
             }
+        }
+
+        private void txtThanhTien_TextChanged(object sender, EventArgs e)
+        {
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = decimal.Parse(txtThanhTien.Text, System.Globalization.NumberStyles.AllowThousands);
+            txtThanhTien.Text = String.Format(culture, "{0:N0}", value);
+            txtThanhTien.Select(txtThanhTien.Text.Length, 0);
+        }
+
+        private void txtTongTien_TextChanged(object sender, EventArgs e)
+        {
+            System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+            decimal value = decimal.Parse(txtTongTien.Text, System.Globalization.NumberStyles.AllowThousands);
+            txtTongTien.Text = String.Format(culture, "{0:N0}", value);
+            txtTongTien.Select(txtTongTien.Text.Length, 0);
         }
     }
 }

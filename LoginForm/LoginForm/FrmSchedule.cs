@@ -76,6 +76,16 @@ namespace RJCodeAdvance
             guna2Button3.Enabled = false;
             guna2Button4.Enabled = false;
             guna2Button5.Enabled = false;
+
+            cbCaLam.Enabled = false;
+            cbTenNhanVien.Enabled = false;
+            t2.Checked = false;
+            t3.Checked = false;
+            t4.Checked = false;
+            t5.Checked = false;
+            t6.Checked = false;
+            t7.Checked = false;
+            cn.Checked = false;
         }
         // lưu lịch 
         private void guna2Button5_Click(object sender, EventArgs e)
@@ -122,6 +132,7 @@ namespace RJCodeAdvance
                 {
                     MessageBox.Show("Insert thành công");
                     loadData();
+                    resetForm();
                 }
                 else
                 {
@@ -135,6 +146,16 @@ namespace RJCodeAdvance
             guna2Button3.Enabled = false;
             guna2Button4.Enabled = false;
             guna2Button5.Enabled = true;
+
+            cbCaLam.Enabled = true;
+            cbTenNhanVien.Enabled = true;
+            t2.Checked = false;
+            t3.Checked = false;
+            t4.Checked = false;
+            t5.Checked = false;
+            t6.Checked = false;
+            t7.Checked = false;
+            cn.Checked = false;
         }
         // click datagridview
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

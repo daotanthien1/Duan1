@@ -533,10 +533,20 @@ namespace RJCodeAdvance.ControlIngredient
             0,
             0,
             0});
+            this.guna2NumericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
             this.guna2NumericUpDown1.ShadowDecoration.Parent = this.guna2NumericUpDown1;
             this.guna2NumericUpDown1.Size = new System.Drawing.Size(97, 35);
             this.guna2NumericUpDown1.TabIndex = 122;
+            this.guna2NumericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // guna2ContextMenuStrip1
             // 

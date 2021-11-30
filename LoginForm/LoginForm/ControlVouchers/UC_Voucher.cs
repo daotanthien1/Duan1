@@ -41,6 +41,9 @@ namespace RJCodeAdvance.ControlVouchers
         private void btThem_Click(object sender, EventArgs e)
         {
             guna2Button5.Enabled = true;
+            cbSale.Enabled = true;
+            dayStart.Enabled = true;
+            dayEnd.Enabled = true;
         }
 
         private void UC_Voucher_Load(object sender, EventArgs e)
@@ -48,7 +51,13 @@ namespace RJCodeAdvance.ControlVouchers
             loadData();
             txtSoLuong.DataSource = vouchers.getData();
             txtSoLuong.Columns[4].Visible = false;
-
+            ResetValue();
+        }
+        void ResetValue()
+        {
+            cbSale.Enabled = false;
+            dayStart.Enabled = false;
+            dayEnd.Enabled = false;
         }
         // load data
         void loadData()
@@ -124,6 +133,7 @@ namespace RJCodeAdvance.ControlVouchers
                         continue;
                     }
                 } while (number > 0);
+                ResetValue();
             }
         }
         // tạo mã voucher ngẫu nhiên
@@ -174,6 +184,7 @@ namespace RJCodeAdvance.ControlVouchers
                 {
                     MessageBox.Show("Delete thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loadData();
+                    ResetValue();
                 }
                 else
                 {

@@ -145,7 +145,7 @@ namespace RJCodeAdvance.ControlIngredient
             txtGia.Text = "";
             cbNhaCC.Enabled = false;
             guna2NumericUpDown1.Enabled = false;
-            guna2NumericUpDown1.Value = 0;
+            guna2NumericUpDown1.Value = 1;
             cbDVT.Enabled = false;
             txtSearch.Text = "";
             btXoa.Enabled = false; ;
@@ -205,10 +205,12 @@ namespace RJCodeAdvance.ControlIngredient
             dgv.Columns[1].HeaderText = "Name";
             dgv.Columns[2].HeaderText = "Supplier";
             dgv.Columns[3].HeaderText = "Type";
-            dgv.Columns[4].HeaderText = "Price";
-            dgv.Columns[5].HeaderText = "Mass";
-            dgv.Columns[6].HeaderText = "Unit";
-            dgv.Columns[7].HeaderText = "Images";
+            dgv.Columns[4].HeaderText = "Mass";
+            dgv.Columns[5].HeaderText = "Unit";
+            dgv.Columns[6].HeaderText = "Images";
+            dgv.Columns[7].HeaderText = "Price";
+            dgv.Columns[7].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgv.Columns[8].Visible = false;
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         void loadComBoBox()
@@ -243,9 +245,9 @@ namespace RJCodeAdvance.ControlIngredient
                 txtGia.Text = dgv.CurrentRow.Cells["Price"].Value.ToString();
                 cbLoaiIngredient.SelectedValue = dgv.CurrentRow.Cells[3].Value.ToString();
                 cbNhaCC.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[2].Value.ToString());
-                cbDVT.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[6].Value.ToString());
-                guna2NumericUpDown1.Text = dgv.CurrentRow.Cells[5].Value.ToString();
-                MessageBox.Show("" + dgv.CurrentRow.Cells[7].Value.ToString());
+                cbDVT.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[5].Value.ToString());
+                guna2NumericUpDown1.Text = dgv.CurrentRow.Cells[4].Value.ToString();
+                //MessageBox.Show("" + dgv.CurrentRow.Cells[7].Value.ToString());
                 txtHinh.Text = dgv.CurrentRow.Cells["Images"].Value.ToString();
                 checkUrlImage = txtHinh.Text;
                 fileName = Path.GetFileName(dgv.CurrentRow.Cells["Images"].Value.ToString());

@@ -30,9 +30,6 @@ namespace RJCodeAdvance.ControlStatistic
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -42,21 +39,24 @@ namespace RJCodeAdvance.ControlStatistic
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Statistic));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.rdChart = new Guna.UI2.WinForms.Guna2RadioButton();
             this.btEx = new Guna.UI2.WinForms.Guna2Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btIn1 = new Guna.UI2.WinForms.Guna2Button();
             this.rbTongThe = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdChiTiet = new Guna.UI2.WinForms.Guna2RadioButton();
             this.btEx2 = new Guna.UI2.WinForms.Guna2Button();
@@ -78,8 +78,10 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2DataGridView3 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2DataGridView4 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btIn1 = new Guna.UI2.WinForms.Guna2Button();
             this.btIn2 = new Guna.UI2.WinForms.Guna2Button();
             this.btIn3 = new Guna.UI2.WinForms.Guna2Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
@@ -130,12 +132,16 @@ namespace RJCodeAdvance.ControlStatistic
             this.printPreviewDialog4 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument5 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog5 = new System.Windows.Forms.PrintPreviewDialog();
+            this.label13 = new System.Windows.Forms.Label();
+            this.VNĐ = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -181,9 +187,9 @@ namespace RJCodeAdvance.ControlStatistic
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.rdChart);
             this.tabPage1.Controls.Add(this.btEx);
-            this.tabPage1.Controls.Add(this.chart1);
-            this.tabPage1.Controls.Add(this.btIn1);
             this.tabPage1.Controls.Add(this.rbTongThe);
             this.tabPage1.Controls.Add(this.rdChiTiet);
             this.tabPage1.Controls.Add(this.btEx2);
@@ -205,14 +211,50 @@ namespace RJCodeAdvance.ControlStatistic
             this.tabPage1.Controls.Add(this.guna2DataGridView1);
             this.tabPage1.Controls.Add(this.guna2DataGridView3);
             this.tabPage1.Controls.Add(this.guna2DataGridView4);
+            this.tabPage1.Controls.Add(this.btIn1);
             this.tabPage1.Controls.Add(this.btIn2);
             this.tabPage1.Controls.Add(this.btIn3);
+            this.tabPage1.Controls.Add(this.chart1);
             this.tabPage1.Location = new System.Drawing.Point(4, 44);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1048, 550);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hoá Đơn";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.label11.Location = new System.Drawing.Point(326, 506);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(37, 16);
+            this.label11.TabIndex = 164;
+            this.label11.Text = "VNĐ";
+            // 
+            // rdChart
+            // 
+            this.rdChart.AutoSize = true;
+            this.rdChart.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdChart.CheckedState.BorderThickness = 0;
+            this.rdChart.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdChart.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdChart.CheckedState.InnerOffset = -4;
+            this.rdChart.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.rdChart.Location = new System.Drawing.Point(195, 116);
+            this.rdChart.Name = "rdChart";
+            this.rdChart.Size = new System.Drawing.Size(77, 20);
+            this.rdChart.TabIndex = 137;
+            this.rdChart.Text = "Biểu đồ";
+            this.rdChart.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdChart.UncheckedState.BorderThickness = 2;
+            this.rdChart.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdChart.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdChart.Visible = false;
+            this.rdChart.CheckedChanged += new System.EventHandler(this.rdChart_CheckedChanged);
             // 
             // btEx
             // 
@@ -233,56 +275,13 @@ namespace RJCodeAdvance.ControlStatistic
             this.btEx.ForeColor = System.Drawing.Color.White;
             this.btEx.HoverState.Parent = this.btEx;
             this.btEx.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btEx.Location = new System.Drawing.Point(871, 165);
+            this.btEx.Location = new System.Drawing.Point(536, 496);
             this.btEx.Name = "btEx";
             this.btEx.ShadowDecoration.Parent = this.btEx;
             this.btEx.Size = new System.Drawing.Size(127, 35);
             this.btEx.TabIndex = 134;
             this.btEx.Text = "Excel";
             this.btEx.Click += new System.EventHandler(this.btEx_Click_1);
-            // 
-            // chart1
-            // 
-            chartArea7.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea7);
-            legend7.Name = "Legend1";
-            this.chart1.Legends.Add(legend7);
-            this.chart1.Location = new System.Drawing.Point(696, 206);
-            this.chart1.Name = "chart1";
-            series13.ChartArea = "ChartArea1";
-            series13.Legend = "Legend1";
-            series13.Name = "Total";
-            this.chart1.Series.Add(series13);
-            this.chart1.Size = new System.Drawing.Size(310, 259);
-            this.chart1.TabIndex = 133;
-            this.chart1.Text = "chart1";
-            // 
-            // btIn1
-            // 
-            this.btIn1.Animated = true;
-            this.btIn1.BorderColor = System.Drawing.Color.White;
-            this.btIn1.BorderRadius = 15;
-            this.btIn1.BorderThickness = 1;
-            this.btIn1.CheckedState.Parent = this.btIn1;
-            this.btIn1.CustomBorderColor = System.Drawing.Color.Black;
-            this.btIn1.CustomImages.Parent = this.btIn1;
-            this.btIn1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btIn1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btIn1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btIn1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btIn1.DisabledState.Parent = this.btIn1;
-            this.btIn1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btIn1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btIn1.ForeColor = System.Drawing.Color.White;
-            this.btIn1.HoverState.Parent = this.btIn1;
-            this.btIn1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btIn1.Location = new System.Drawing.Point(871, 124);
-            this.btIn1.Name = "btIn1";
-            this.btIn1.ShadowDecoration.Parent = this.btIn1;
-            this.btIn1.Size = new System.Drawing.Size(127, 35);
-            this.btIn1.TabIndex = 132;
-            this.btIn1.Text = "In";
-            this.btIn1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // rbTongThe
             // 
@@ -294,7 +293,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.rbTongThe.CheckedState.InnerOffset = -4;
             this.rbTongThe.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbTongThe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rbTongThe.Location = new System.Drawing.Point(117, 139);
+            this.rbTongThe.Location = new System.Drawing.Point(100, 116);
             this.rbTongThe.Name = "rbTongThe";
             this.rbTongThe.Size = new System.Drawing.Size(83, 20);
             this.rbTongThe.TabIndex = 131;
@@ -317,7 +316,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.rdChiTiet.CheckedState.InnerOffset = -4;
             this.rdChiTiet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdChiTiet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rdChiTiet.Location = new System.Drawing.Point(18, 139);
+            this.rdChiTiet.Location = new System.Drawing.Point(21, 116);
             this.rdChiTiet.Name = "rdChiTiet";
             this.rdChiTiet.Size = new System.Drawing.Size(73, 20);
             this.rdChiTiet.TabIndex = 130;
@@ -349,7 +348,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.btEx2.ForeColor = System.Drawing.Color.White;
             this.btEx2.HoverState.Parent = this.btEx2;
             this.btEx2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btEx2.Location = new System.Drawing.Point(871, 165);
+            this.btEx2.Location = new System.Drawing.Point(536, 496);
             this.btEx2.Name = "btEx2";
             this.btEx2.ShadowDecoration.Parent = this.btEx2;
             this.btEx2.Size = new System.Drawing.Size(127, 35);
@@ -376,7 +375,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.btEx1.ForeColor = System.Drawing.Color.White;
             this.btEx1.HoverState.Parent = this.btEx1;
             this.btEx1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btEx1.Location = new System.Drawing.Point(871, 165);
+            this.btEx1.Location = new System.Drawing.Point(536, 496);
             this.btEx1.Name = "btEx1";
             this.btEx1.ShadowDecoration.Parent = this.btEx1;
             this.btEx1.Size = new System.Drawing.Size(127, 35);
@@ -416,7 +415,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(668, 508);
+            this.label2.Location = new System.Drawing.Point(15, 506);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(132, 16);
             this.label2.TabIndex = 112;
@@ -495,7 +494,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThongKe.ForeColor = System.Drawing.Color.White;
             this.btThongKe.HoverState.Parent = this.btThongKe;
             this.btThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThongKe.Location = new System.Drawing.Point(871, 60);
+            this.btThongKe.Location = new System.Drawing.Point(646, 60);
             this.btThongKe.Name = "btThongKe";
             this.btThongKe.ShadowDecoration.Parent = this.btThongKe;
             this.btThongKe.Size = new System.Drawing.Size(127, 35);
@@ -511,13 +510,13 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayEnd.BorderThickness = 1;
             this.dayEnd.Checked = true;
             this.dayEnd.CheckedState.Parent = this.dayEnd;
-            this.dayEnd.CustomFormat = "yyyy/MM/dd 23:59:59";
+            this.dayEnd.CustomFormat = "dd/MM/yyyy 23:59:59";
             this.dayEnd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.dayEnd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayEnd.ForeColor = System.Drawing.Color.White;
             this.dayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dayEnd.HoverState.Parent = this.dayEnd;
-            this.dayEnd.Location = new System.Drawing.Point(538, 59);
+            this.dayEnd.Location = new System.Drawing.Point(347, 59);
             this.dayEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dayEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dayEnd.Name = "dayEnd";
@@ -531,7 +530,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(538, 30);
+            this.label3.Location = new System.Drawing.Point(344, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 106;
@@ -545,7 +544,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayStart.BorderThickness = 1;
             this.dayStart.Checked = true;
             this.dayStart.CheckedState.Parent = this.dayStart;
-            this.dayStart.CustomFormat = "yyyy/MM/dd";
+            this.dayStart.CustomFormat = "dd/MM/yyyy";
             this.dayStart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.dayStart.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayStart.ForeColor = System.Drawing.Color.White;
@@ -578,7 +577,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTongTien.ForeColor = System.Drawing.Color.Black;
             this.txtTongTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTongTien.HoverState.Parent = this.txtTongTien;
-            this.txtTongTien.Location = new System.Drawing.Point(806, 497);
+            this.txtTongTien.Location = new System.Drawing.Point(153, 496);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.PasswordChar = '\0';
             this.txtTongTien.PlaceholderText = "";
@@ -586,6 +585,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTongTien.ShadowDecoration.Parent = this.txtTongTien;
             this.txtTongTien.Size = new System.Drawing.Size(222, 36);
             this.txtTongTien.TabIndex = 104;
+            this.txtTongTien.TextChanged += new System.EventHandler(this.txtTongTien_TextChanged);
             // 
             // label1
             // 
@@ -740,7 +740,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(676, 259);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(850, 259);
             this.guna2DataGridView1.TabIndex = 113;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -797,7 +797,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView3.RowHeadersVisible = false;
             this.guna2DataGridView3.RowHeadersWidth = 51;
             this.guna2DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView3.Size = new System.Drawing.Size(676, 259);
+            this.guna2DataGridView3.Size = new System.Drawing.Size(850, 259);
             this.guna2DataGridView3.TabIndex = 116;
             this.guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -854,7 +854,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView4.RowHeadersVisible = false;
             this.guna2DataGridView4.RowHeadersWidth = 51;
             this.guna2DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView4.Size = new System.Drawing.Size(676, 259);
+            this.guna2DataGridView4.Size = new System.Drawing.Size(850, 259);
             this.guna2DataGridView4.TabIndex = 120;
             this.guna2DataGridView4.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView4.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -878,6 +878,33 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView4.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView4.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // btIn1
+            // 
+            this.btIn1.Animated = true;
+            this.btIn1.BorderColor = System.Drawing.Color.White;
+            this.btIn1.BorderRadius = 15;
+            this.btIn1.BorderThickness = 1;
+            this.btIn1.CheckedState.Parent = this.btIn1;
+            this.btIn1.CustomBorderColor = System.Drawing.Color.Black;
+            this.btIn1.CustomImages.Parent = this.btIn1;
+            this.btIn1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btIn1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btIn1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btIn1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btIn1.DisabledState.Parent = this.btIn1;
+            this.btIn1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btIn1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btIn1.ForeColor = System.Drawing.Color.White;
+            this.btIn1.HoverState.Parent = this.btIn1;
+            this.btIn1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btIn1.Location = new System.Drawing.Point(403, 496);
+            this.btIn1.Name = "btIn1";
+            this.btIn1.ShadowDecoration.Parent = this.btIn1;
+            this.btIn1.Size = new System.Drawing.Size(127, 35);
+            this.btIn1.TabIndex = 132;
+            this.btIn1.Text = "In";
+            this.btIn1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // btIn2
             // 
             this.btIn2.Animated = true;
@@ -897,7 +924,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.btIn2.ForeColor = System.Drawing.Color.White;
             this.btIn2.HoverState.Parent = this.btIn2;
             this.btIn2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btIn2.Location = new System.Drawing.Point(871, 124);
+            this.btIn2.Location = new System.Drawing.Point(403, 497);
             this.btIn2.Name = "btIn2";
             this.btIn2.ShadowDecoration.Parent = this.btIn2;
             this.btIn2.Size = new System.Drawing.Size(127, 35);
@@ -924,7 +951,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.btIn3.ForeColor = System.Drawing.Color.White;
             this.btIn3.HoverState.Parent = this.btIn3;
             this.btIn3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btIn3.Location = new System.Drawing.Point(871, 124);
+            this.btIn3.Location = new System.Drawing.Point(403, 497);
             this.btIn3.Name = "btIn3";
             this.btIn3.ShadowDecoration.Parent = this.btIn3;
             this.btIn3.Size = new System.Drawing.Size(127, 35);
@@ -932,9 +959,27 @@ namespace RJCodeAdvance.ControlStatistic
             this.btIn3.Text = "In";
             this.btIn3.Click += new System.EventHandler(this.btIn3_Click);
             // 
+            // chart1
+            // 
+            chartArea8.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea8);
+            legend8.Name = "Legend1";
+            this.chart1.Legends.Add(legend8);
+            this.chart1.Location = new System.Drawing.Point(14, 206);
+            this.chart1.Name = "chart1";
+            series16.ChartArea = "ChartArea1";
+            series16.Legend = "Legend1";
+            series16.Name = "Total";
+            this.chart1.Series.Add(series16);
+            this.chart1.Size = new System.Drawing.Size(992, 259);
+            this.chart1.TabIndex = 133;
+            this.chart1.Text = "chart1";
+            this.chart1.Visible = false;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.label13);
             this.tabPage2.Controls.Add(this.guna2Button3);
             this.tabPage2.Controls.Add(this.guna2Button4);
             this.tabPage2.Controls.Add(this.guna2Button5);
@@ -1193,7 +1238,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayEnd1.BorderThickness = 1;
             this.dayEnd1.Checked = true;
             this.dayEnd1.CheckedState.Parent = this.dayEnd1;
-            this.dayEnd1.CustomFormat = "yyyy/MM/dd 23:59:59";
+            this.dayEnd1.CustomFormat = "dd/MM/yyyy 23:59:59";
             this.dayEnd1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.dayEnd1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayEnd1.ForeColor = System.Drawing.Color.White;
@@ -1227,7 +1272,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayStar1.BorderThickness = 1;
             this.dayStar1.Checked = true;
             this.dayStar1.CheckedState.Parent = this.dayStar1;
-            this.dayStar1.CustomFormat = "yyyy/MM/dd";
+            this.dayStar1.CustomFormat = "dd/MM/yyyy";
             this.dayStar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.dayStar1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayStar1.ForeColor = System.Drawing.Color.White;
@@ -1268,6 +1313,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTongTien1.ShadowDecoration.Parent = this.txtTongTien1;
             this.txtTongTien1.Size = new System.Drawing.Size(222, 36);
             this.txtTongTien1.TabIndex = 115;
+            this.txtTongTien1.TextChanged += new System.EventHandler(this.txtTongTien1_TextChanged);
             // 
             // label5
             // 
@@ -1283,6 +1329,9 @@ namespace RJCodeAdvance.ControlStatistic
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.Transparent;
+            this.tabPage3.Controls.Add(this.label15);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.VNĐ);
             this.tabPage3.Controls.Add(this.chart2);
             this.tabPage3.Controls.Add(this.guna2Button7);
             this.tabPage3.Controls.Add(this.guna2Button8);
@@ -1309,25 +1358,25 @@ namespace RJCodeAdvance.ControlStatistic
             // 
             // chart2
             // 
-            chartArea8.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea8);
-            legend8.Name = "Legend1";
-            this.chart2.Legends.Add(legend8);
-            this.chart2.Location = new System.Drawing.Point(445, 161);
+            chartArea7.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea7);
+            legend7.Name = "Legend1";
+            this.chart2.Legends.Add(legend7);
+            this.chart2.Location = new System.Drawing.Point(386, 100);
             this.chart2.Name = "chart2";
+            series13.ChartArea = "ChartArea1";
+            series13.Legend = "Legend1";
+            series13.Name = "Tổng tiền hóa đơn";
             series14.ChartArea = "ChartArea1";
             series14.Legend = "Legend1";
-            series14.Name = "Tổng tiền hóa đơn";
+            series14.Name = "Tổng tiền nguyên liệu";
             series15.ChartArea = "ChartArea1";
             series15.Legend = "Legend1";
-            series15.Name = "Tổng tiền nguyên liệu";
-            series16.ChartArea = "ChartArea1";
-            series16.Legend = "Legend1";
-            series16.Name = "Danh thu";
+            series15.Name = "Danh thu";
+            this.chart2.Series.Add(series13);
             this.chart2.Series.Add(series14);
             this.chart2.Series.Add(series15);
-            this.chart2.Series.Add(series16);
-            this.chart2.Size = new System.Drawing.Size(426, 330);
+            this.chart2.Size = new System.Drawing.Size(621, 391);
             this.chart2.TabIndex = 162;
             this.chart2.Text = "chart2";
             // 
@@ -1350,7 +1399,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.HoverState.Parent = this.guna2Button7;
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button7.Location = new System.Drawing.Point(887, 120);
+            this.guna2Button7.Location = new System.Drawing.Point(782, 507);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
             this.guna2Button7.Size = new System.Drawing.Size(127, 35);
@@ -1377,7 +1426,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
             this.guna2Button8.HoverState.Parent = this.guna2Button8;
             this.guna2Button8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button8.Location = new System.Drawing.Point(887, 161);
+            this.guna2Button8.Location = new System.Drawing.Point(915, 507);
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.ShadowDecoration.Parent = this.guna2Button8;
             this.guna2Button8.Size = new System.Drawing.Size(127, 35);
@@ -1404,7 +1453,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button9.ForeColor = System.Drawing.Color.White;
             this.guna2Button9.HoverState.Parent = this.guna2Button9;
             this.guna2Button9.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button9.Location = new System.Drawing.Point(887, 161);
+            this.guna2Button9.Location = new System.Drawing.Point(915, 507);
             this.guna2Button9.Name = "guna2Button9";
             this.guna2Button9.ShadowDecoration.Parent = this.guna2Button9;
             this.guna2Button9.Size = new System.Drawing.Size(127, 35);
@@ -1484,7 +1533,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThongKe2.ForeColor = System.Drawing.Color.White;
             this.btThongKe2.HoverState.Parent = this.btThongKe2;
             this.btThongKe2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThongKe2.Location = new System.Drawing.Point(887, 56);
+            this.btThongKe2.Location = new System.Drawing.Point(669, 55);
             this.btThongKe2.Name = "btThongKe2";
             this.btThongKe2.ShadowDecoration.Parent = this.btThongKe2;
             this.btThongKe2.Size = new System.Drawing.Size(127, 35);
@@ -1500,13 +1549,13 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayEnd2.BorderThickness = 1;
             this.dayEnd2.Checked = true;
             this.dayEnd2.CheckedState.Parent = this.dayEnd2;
-            this.dayEnd2.CustomFormat = "yyyy/MM/dd 23:59:59";
+            this.dayEnd2.CustomFormat = "dd/MM/yyyy 23:59:59";
             this.dayEnd2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.dayEnd2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayEnd2.ForeColor = System.Drawing.Color.White;
             this.dayEnd2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dayEnd2.HoverState.Parent = this.dayEnd2;
-            this.dayEnd2.Location = new System.Drawing.Point(554, 55);
+            this.dayEnd2.Location = new System.Drawing.Point(361, 55);
             this.dayEnd2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dayEnd2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dayEnd2.Name = "dayEnd2";
@@ -1520,7 +1569,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label9.Location = new System.Drawing.Point(554, 26);
+            this.label9.Location = new System.Drawing.Point(358, 26);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 16);
             this.label9.TabIndex = 150;
@@ -1534,7 +1583,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayStar2.BorderThickness = 1;
             this.dayStar2.Checked = true;
             this.dayStar2.CheckedState.Parent = this.dayStar2;
-            this.dayStar2.CustomFormat = "yyyy/MM/dd";
+            this.dayStar2.CustomFormat = "dd/MM/yyyy";
             this.dayStar2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.dayStar2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayStar2.ForeColor = System.Drawing.Color.White;
@@ -1587,6 +1636,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtDanhThu.ShadowDecoration.Parent = this.txtDanhThu;
             this.txtDanhThu.Size = new System.Drawing.Size(311, 36);
             this.txtDanhThu.TabIndex = 147;
+            this.txtDanhThu.TextChanged += new System.EventHandler(this.txtDanhThu_TextChanged);
             // 
             // label7
             // 
@@ -1626,6 +1676,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTienIngredient.ShadowDecoration.Parent = this.txtTienIngredient;
             this.txtTienIngredient.Size = new System.Drawing.Size(311, 36);
             this.txtTienIngredient.TabIndex = 139;
+            this.txtTienIngredient.TextChanged += new System.EventHandler(this.txtTienIngredient_TextChanged);
             // 
             // label8
             // 
@@ -1676,6 +1727,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTienHoaDon.ShadowDecoration.Parent = this.txtTienHoaDon;
             this.txtTienHoaDon.Size = new System.Drawing.Size(311, 36);
             this.txtTienHoaDon.TabIndex = 127;
+            this.txtTienHoaDon.TextChanged += new System.EventHandler(this.txtTienHoaDon_TextChanged);
             // 
             // dataGridView1
             // 
@@ -1798,6 +1850,50 @@ namespace RJCodeAdvance.ControlStatistic
             this.printPreviewDialog5.Name = "printPreviewDialog5";
             this.printPreviewDialog5.Visible = false;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.label13.Location = new System.Drawing.Point(985, 501);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 16);
+            this.label13.TabIndex = 138;
+            this.label13.Text = "VNĐ";
+            // 
+            // VNĐ
+            // 
+            this.VNĐ.AutoSize = true;
+            this.VNĐ.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VNĐ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.VNĐ.Location = new System.Drawing.Point(317, 290);
+            this.VNĐ.Name = "VNĐ";
+            this.VNĐ.Size = new System.Drawing.Size(37, 16);
+            this.VNĐ.TabIndex = 163;
+            this.VNĐ.Text = "VNĐ";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.label14.Location = new System.Drawing.Point(317, 379);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 16);
+            this.label14.TabIndex = 164;
+            this.label14.Text = "VNĐ";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.label15.Location = new System.Drawing.Point(317, 465);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(37, 16);
+            this.label15.TabIndex = 165;
+            this.label15.Text = "VNĐ";
+            // 
             // UC_Statistic
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1810,10 +1906,10 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
@@ -1906,5 +2002,11 @@ namespace RJCodeAdvance.ControlStatistic
         private System.Drawing.Printing.PrintDocument printDocument5;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog5;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private Guna.UI2.WinForms.Guna2RadioButton rdChart;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label VNĐ;
     }
 }

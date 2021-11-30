@@ -47,14 +47,16 @@ namespace RJCodeAdvance.ControlStatistic
         {
             DataTable dt = bUS_Static.getDataBillDetail();
             guna2DataGridView1.DataSource = dt;
-            guna2DataGridView1.Columns[0].HeaderText = "Mã nhân viên";
+            guna2DataGridView1.Columns[0].HeaderText = "Nhân viên";
             guna2DataGridView1.Columns[1].HeaderText = "Mã khách hàng";
             guna2DataGridView1.Columns[2].HeaderText = "Mã bill";
             guna2DataGridView1.Columns[3].HeaderText = "Mã bàn";
-            guna2DataGridView1.Columns[4].HeaderText = "Tổng tiền";
-            guna2DataGridView1.Columns[5].HeaderText = "Ngày tạo";
-            guna2DataGridView1.Columns[6].HeaderText = "Ngày xuất";
-            foreach(DataRow item in dt.Rows)
+            
+            guna2DataGridView1.Columns[4].HeaderText = "Ngày tạo";
+            guna2DataGridView1.Columns[5].HeaderText = "Ngày xuất";
+            guna2DataGridView1.Columns[6].HeaderText = "Tổng tiền";
+            guna2DataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            foreach (DataRow item in dt.Rows)
             {
                 if(item[1].ToString() == "")
                 {
@@ -64,7 +66,8 @@ namespace RJCodeAdvance.ControlStatistic
             DataTable dt1 = bUS_Static.getPrice();
             foreach(DataRow item in dt1.Rows)
             {
-                txtTongTien.Text = item[0].ToString()+" VND";
+                int a = int.Parse(item[0].ToString());
+                txtTongTien.Text = "" + a.ToString();
             }
         }
         //click vào thống kê hóa đơn
@@ -100,12 +103,12 @@ namespace RJCodeAdvance.ControlStatistic
                 {
                     txtTongTien.Text = item[0].ToString();
                 }
-
+                guna2DataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 chart1.Series["Total"].Points.Clear();
             }
             if (rbTongThe.Checked)
             {
-                chart1.Visible = true;
+                rdChart.Visible = true;
                 btTK.FillColor = Color.FromArgb(0, 118, 212);
                 guna2DataGridView3.SendToBack();
                 guna2DataGridView4.SendToBack();
@@ -123,6 +126,8 @@ namespace RJCodeAdvance.ControlStatistic
                 string dayend = dayEnd.Text;
                 DataTable dt = bUS_Static.StaticOverAllDate(dayStar, dayend);
                 guna2DataGridView1.DataSource = dt;
+                guna2DataGridView1.Columns[3].Visible = false;
+                guna2DataGridView1.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 DataTable dt1 = bUS_Static.SumPriceDateTime(dayStar, dayend);
                 foreach (DataRow item in dt1.Rows)
                 {
@@ -134,7 +139,7 @@ namespace RJCodeAdvance.ControlStatistic
                 chart1.ChartAreas["ChartArea1"].AxisY.Title = "Total";
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][2]);
+                    chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][3]);
                 }
             }
         }
@@ -216,11 +221,12 @@ namespace RJCodeAdvance.ControlStatistic
                 guna2DataGridView3.SendToBack();
                 guna2DataGridView4.SendToBack();
                 string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-                string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
+                string time2 = dayNow.ToString("dd-MM-yyyy 23:59:59");
+                string time1 = dayNow.ToString("dd-MM-yyyy 00:00:00");
                 DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
                 if (date.Day != 1)
                 {
-                    DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(date.ToString("yyyy-MM-01 00:00:00"), time);
+                    DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(date.ToString("01-MM-yyyy 00:00:00"), time2);
                     guna2DataGridView1.DataSource = dt;
                     foreach (DataRow item in dt.Rows)
                     {
@@ -229,17 +235,18 @@ namespace RJCodeAdvance.ControlStatistic
                             item[1] = "0";
                         }
                     }
-                    DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("yyyy-MM-01 00:00:00"), time);
+                    DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("01-MM-yyyy 00:00:00"), time2);
                     foreach (DataRow item in dt1.Rows)
                     {
                         txtTongTien.Text = item[0].ToString();
                     }
+                    guna2DataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                     dayStart.Text = date.ToString("yyyy-MM-01");
                     dayEnd.Text = time;
                 }
                 else
                 {
-                    DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(time1, time);
+                    DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(time1, time2);
                     guna2DataGridView1.DataSource = dt;
                     foreach (DataRow item in dt.Rows)
                     {
@@ -248,18 +255,18 @@ namespace RJCodeAdvance.ControlStatistic
                             item[1] = "0";
                         }
                     }
-                    DataTable dt1 = bUS_Static.SumPriceDateTime(time1, time);
+                    DataTable dt1 = bUS_Static.SumPriceDateTime(time1, time2);
                     foreach (DataRow item in dt1.Rows)
                     {
                         txtTongTien.Text = item[0].ToString();
                     }
+                    guna2DataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                     dayStart.Text = time1;
                     dayEnd.Text = time;
                 }
             }
             if (rbTongThe.Checked)
             {
-                chart1.Visible = true;
                 chart1.Series["Total"].Points.Clear();
                 guna2DataGridView3.SendToBack();
                 guna2DataGridView4.SendToBack();
@@ -268,22 +275,27 @@ namespace RJCodeAdvance.ControlStatistic
                 DataTable dt = new DataTable();
                 dt = bUS_Static.StaticOverAllBillsMonth();
                 guna2DataGridView1.DataSource = dt;
+                guna2DataGridView1.Columns[3].Visible = false;
                 chart1.ChartAreas["ChartArea1"].AxisX.Title = "Month";
                 chart1.ChartAreas["ChartArea1"].AxisY.Title = "Total";
                 for(int i = 0; i < dt.Rows.Count; i++)
                 {
-                    chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][2]);
+                    if(dt.Rows[i][0].ToString() != "")
+                    {
+                        chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][3]);
+                    }
                 }
                 int money = 0;
                 for(int i =0; i < guna2DataGridView1.Rows.Count; i++)
                 {
-                    if(guna2DataGridView1.Rows[i].Cells[2].Value.ToString() == "")
+                    if(guna2DataGridView1.Rows[i].Cells[3].Value.ToString() == "")
                     {
-                        guna2DataGridView1.Rows[i].Cells[2].Value = "0";
+                        guna2DataGridView1.Rows[i].Cells[3].Value = "0";
                     }
-                    money += int.Parse(guna2DataGridView1.Rows[i].Cells[2].Value.ToString());
+                    money += int.Parse(guna2DataGridView1.Rows[i].Cells[3].Value.ToString());
                 }
                 txtTongTien.Text = "" + money;
+                guna2DataGridView1.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }
             
         }
@@ -295,9 +307,9 @@ namespace RJCodeAdvance.ControlStatistic
                 guna2DataGridView3.SendToBack();
                 guna2DataGridView4.SendToBack();
                 string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-                string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
+                string time2 = dayNow.ToString("dd/MM/yyyy 23:59:59");
                 DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-                DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(date.ToString("yyyy-01-01 00:00:00"), time);
+                DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(date.ToString("01-01-yyyy 00:00:00"), time2);
                 guna2DataGridView1.DataSource = dt;
                 foreach (DataRow item in dt.Rows)
                 {
@@ -306,38 +318,43 @@ namespace RJCodeAdvance.ControlStatistic
                         item[1] = "0";
                     }
                 }
-                DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("yyyy-01-01 00:00:00"), time);
+                DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("01-01-yyyy 00:00:00"), time2);
                 foreach (DataRow item in dt1.Rows)
                 {
                     txtTongTien.Text = item[0].ToString();
                 }
+                guna2DataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 dayStart.Text = date.ToString("yyyy-01-01");
                 dayEnd.Text = time;
             }
             if (rbTongThe.Checked)
             {
-                chart1.Visible = true;
                 guna2DataGridView3.SendToBack();
                 guna2DataGridView4.SendToBack();
+                chart1.Series["Total"].Points.Clear();
                 DataTable dt = bUS_Static.StaticOverAllBillsYears();
                 guna2DataGridView1.DataSource = dt;
                 float money = 0;
-                for(int i = 0; i < guna2DataGridView1.Rows.Count; i++)
+                for (int i = 0; i < guna2DataGridView1.Rows.Count; i++)
                 {
-                    if(guna2DataGridView1.Rows[i].Cells[2].Value.ToString() == "")
+                    if (guna2DataGridView1.Rows[i].Cells[3].Value.ToString() == "")
                     {
-                        guna2DataGridView1.Rows[i].Cells[2].Value = "0";
+                        guna2DataGridView1.Rows[i].Cells[3].Value = "0";
                     }
-                    money += int.Parse(guna2DataGridView1.Rows[i].Cells[2].Value.ToString());
+                    money += int.Parse(guna2DataGridView1.Rows[i].Cells[3].Value.ToString());
                 }
                 txtTongTien.Text = "" + money;
-                chart1.Series["Total"].Points.Clear();
                 chart1.ChartAreas["ChartArea1"].AxisX.Title = "Years";
                 chart1.ChartAreas["ChartArea1"].AxisY.Title = "Total";
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][2]);
+                    if (dt.Rows[i][0].ToString() != "")
+                    {
+                        chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][3]);
+                    }
                 }
+                guna2DataGridView1.Columns[3].Visible = false;
+                guna2DataGridView1.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }
         }
         //load danh sách bill nhập nguyên liệu
@@ -346,13 +363,14 @@ namespace RJCodeAdvance.ControlStatistic
             DataTable dt = bUS_Static.getAllBillInput();
             guna2DataGridView2.DataSource = dt;
             guna2DataGridView2.Columns[0].HeaderText = "Mã bill";
-            guna2DataGridView2.Columns[1].HeaderText = "Ngày xuất bill";
-            guna2DataGridView2.Columns[2].HeaderText = "Mã nhân viên";
+            guna2DataGridView2.Columns[1].HeaderText = "Tên nhân viên";
+            guna2DataGridView2.Columns[2].HeaderText = "Ngày xuất";
             guna2DataGridView2.Columns[3].HeaderText = "Tổng tiền";
+            guna2DataGridView2.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             DataTable dt1 = bUS_Static.getSumPriceBillInput();
             foreach (DataRow item in dt1.Rows)
             {
-                txtTongTien1.Text = item[0].ToString() + " VND";
+                txtTongTien1.Text = item[0].ToString();
             }
         }
         // thống kê bill nhập ngyên liệu trong khoảng thời gian
@@ -404,14 +422,15 @@ namespace RJCodeAdvance.ControlStatistic
         // click bt tháng bill nhập nguyên liệu
         private void btThang1_Click(object sender, EventArgs e)
         {
-            string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
+            string time = dayNow.ToString("yyyy/MM/dd 23:59:59");
+            string time2 = dayNow.ToString("dd/MM/yyyy 23:59:59");
+            string time1 = dayNow.ToString("dd/MM/yyyy 00:00:00");
             DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
             if (date.Day != 1)
             {
-                DataTable dt = bUS_Static.getBillInputBetween(date.ToString("yyyy-MM-01 00:00:00"), time);
+                DataTable dt = bUS_Static.getBillInputBetween(date.ToString("01-MM-yyyy 00:00:00"), time2);
                 guna2DataGridView2.DataSource = dt;
-                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-MM-01 00:00:00"), time);
+                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("01-MM-yyyy 00:00:00"), time2);
                 foreach (DataRow item in dt1.Rows)
                 {
                     txtTongTien1.Text = item[0].ToString();
@@ -421,9 +440,9 @@ namespace RJCodeAdvance.ControlStatistic
             }
             else
             {
-                DataTable dt = bUS_Static.getBillInputBetween(time1, time);
+                DataTable dt = bUS_Static.getBillInputBetween(time1, time2);
                 guna2DataGridView2.DataSource = dt;
-                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(time1, time);
+                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(time1, time2);
                 foreach (DataRow item in dt1.Rows)
                 {
                     txtTongTien1.Text = item[0].ToString();
@@ -435,12 +454,12 @@ namespace RJCodeAdvance.ControlStatistic
         // click bt năm bill nhập nguyên liệu
         private void btNam1_Click(object sender, EventArgs e)
         {
-            string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
+            string time = dayNow.ToString("yyyy/MM/dd 23:59:59");
+            string time2 = dayNow.ToString("dd/MM/yyyy 23:59:59");
             DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-            DataTable dt = bUS_Static.getBillInputBetween(date.ToString("yyyy-01-01 00:00:00"), time);
+            DataTable dt = bUS_Static.getBillInputBetween(date.ToString("01-01-yyyy 00:00:00"), time2);
             guna2DataGridView2.DataSource = dt;
-            DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-01-01 00:00:00"), time);
+            DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("01-01-yyyy 00:00:00"), time2);
             foreach (DataRow item in dt1.Rows)
             {
                 txtTongTien1.Text = item[0].ToString();
@@ -484,6 +503,7 @@ namespace RJCodeAdvance.ControlStatistic
         private void btTK_Click(object sender, EventArgs e)
         {
             chart1.Visible = false;
+            rdChart.Visible = false;
             guna2DataGridView1.SendToBack();
             btEx.SendToBack();
             btIn1.SendToBack();
@@ -501,9 +521,10 @@ namespace RJCodeAdvance.ControlStatistic
                 btIn3.SendToBack();
                 DataTable dt = bUS_Static.StaticEmployee();
                 guna2DataGridView3.DataSource = dt;
-                guna2DataGridView3.Columns[0].HeaderText = "Mã nhân viên";
+                guna2DataGridView3.Columns[0].HeaderText = "Tên nhân viên";
                 guna2DataGridView3.Columns[1].HeaderText = "Số lượng hóa đơn";
                 guna2DataGridView3.Columns[2].HeaderText = "Tổng tiền hóa đơn";
+                guna2DataGridView3.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 btTK.Text = "Nhân viên";
                 perform1 = true;
             }
@@ -520,16 +541,17 @@ namespace RJCodeAdvance.ControlStatistic
                 btIn2.SendToBack();
                 DataTable dt = bUS_Static.StaticCustomer();
                 guna2DataGridView4.DataSource = dt;
-                guna2DataGridView4.Columns[0].HeaderText = "Mã khách hàng";
+                guna2DataGridView4.Columns[0].HeaderText = "Tên khách hàng";
                 guna2DataGridView4.Columns[1].HeaderText = "Số lượng sản phẩm";
                 guna2DataGridView4.Columns[2].HeaderText = "Tổng tiền hóa đơn";
                 btTK.Text = "Khách hàng";
+                guna2DataGridView4.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 perform1 = false;
             }
             DataTable dt1 = bUS_Static.getPrice();
             foreach (DataRow item in dt1.Rows)
             {
-                txtTongTien.Text = item[0].ToString() + " VND";
+                txtTongTien.Text = ""+item[0].ToString();
             }
 
         }
@@ -541,12 +563,14 @@ namespace RJCodeAdvance.ControlStatistic
             float money = 0;
             foreach(DataRow item in dt.Rows)
             {
-                if(item[4].ToString() == "")
+                if(item[5].ToString() == "")
                 {
-                    item[4] = "0";
+                    item[5] = "0";
                 }
-                money += float.Parse(item[4].ToString());
+                money += float.Parse(item[5].ToString());
             }
+            guna2DataGridView3.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            guna2DataGridView3.Columns[5].Visible = false;
             txtTongTien.Text = "" + money;
         }
         // thống kê khách hàng theo tháng
@@ -557,12 +581,14 @@ namespace RJCodeAdvance.ControlStatistic
             float money = 0;
             foreach (DataRow item in dt.Rows)
             {
-                if (item[4].ToString() == "")
+                if (item[5].ToString() == "")
                 {
-                    item[4] = "0";
+                    item[5] = "0";
                 }
-                money += float.Parse(item[4].ToString());
+                money += float.Parse(item[5].ToString());
             }
+            guna2DataGridView4.Columns[5].Visible = false;
+            guna2DataGridView4.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             txtTongTien.Text = "" + money;
         }
         // thống kê nhân viên theo năm
@@ -573,12 +599,14 @@ namespace RJCodeAdvance.ControlStatistic
             float money = 0;
             foreach (DataRow item in dt.Rows)
             {
-                if (item[4].ToString() == "")
+                if (item[5].ToString() == "")
                 {
-                    item[4] = "0";
+                    item[5] = "0";
                 }
-                money += float.Parse(item[4].ToString());
+                money += float.Parse(item[5].ToString());
             }
+            guna2DataGridView3.Columns[5].Visible = false;
+            guna2DataGridView3.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             txtTongTien.Text = "" + money;
         }
         // thống kê khách hàng theo năm
@@ -589,12 +617,14 @@ namespace RJCodeAdvance.ControlStatistic
             float money = 0;
             foreach (DataRow item in dt.Rows)
             {
-                if (item[4].ToString() == "")
+                if (item[5].ToString() == "")
                 {
-                    item[4] = "0";
+                    item[5] = "0";
                 }
-                money += float.Parse(item[4].ToString());
+                money += float.Parse(item[5].ToString());
             }
+            guna2DataGridView4.Columns[5].Visible = false;
+            guna2DataGridView4.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             txtTongTien.Text = "" + money;
         }
 
@@ -1236,11 +1266,12 @@ namespace RJCodeAdvance.ControlStatistic
         private void btThang2_Click(object sender, EventArgs e)
         {
             string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
+            string time2 = dayNow.ToString("dd/MM/yyyy 23:59:59");
+            string time1 = dayNow.ToString("dd/MM/yyyy 00:00:00");
             DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
             if (date.Day != 1)
             {
-                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-MM-01 00:00:00"), time);
+                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("01-MM-yyyy 00:00:00"), time2);
                 foreach (DataRow item in dt1.Rows)
                 {
                     if(item[0].ToString() == "")
@@ -1252,7 +1283,7 @@ namespace RJCodeAdvance.ControlStatistic
                         txtTienIngredient.Text = item[0].ToString();
                     }
                 }
-                DataTable dt = bUS_Static.SumPriceDateTime(date.ToString("yyyy-MM-01 00:00:00"), time);
+                DataTable dt = bUS_Static.SumPriceDateTime(date.ToString("01-MM-yyyy 00:00:00"), time2);
                 foreach (DataRow item in dt.Rows)
                 {
                     if (item[0].ToString() == "")
@@ -1267,7 +1298,7 @@ namespace RJCodeAdvance.ControlStatistic
             }
             else
             {
-                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(time1, time);
+                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(time1, time2);
                 foreach (DataRow item in dt1.Rows)
                 {
                     if(item[0].ToString() == "")
@@ -1279,7 +1310,7 @@ namespace RJCodeAdvance.ControlStatistic
                         txtTienIngredient.Text = item[0].ToString();
                     }
                 }
-                DataTable dt = bUS_Static.SumPriceDateTime(time1, time);
+                DataTable dt = bUS_Static.SumPriceDateTime(time1, time2);
                 foreach (DataRow item in dt.Rows)
                 {
                     if (item[0].ToString() == "")
@@ -1316,8 +1347,9 @@ namespace RJCodeAdvance.ControlStatistic
         private void btNam2_Click(object sender, EventArgs e)
         {
             string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
+            string time1 = dayNow.ToString("dd/MM/yyyy 23:59:59");
             DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-            DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-01-01 00:00:00"), time);
+            DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("01-01-yyyy 00:00:00"), time1);
             foreach (DataRow item in dt1.Rows)
             {
                 if (item[0].ToString() == "")
@@ -1329,7 +1361,7 @@ namespace RJCodeAdvance.ControlStatistic
                     txtTienIngredient.Text = item[0].ToString();
                 }
             }
-            DataTable dt = bUS_Static.SumPriceDateTime(date.ToString("yyyy-01-01 00:00:00"), time);
+            DataTable dt = bUS_Static.SumPriceDateTime(date.ToString("01-01-yyyy 00:00:00"), time1);
             foreach (DataRow item in dt.Rows)
             {
                 if (item[0].ToString() == "")
@@ -1416,11 +1448,19 @@ namespace RJCodeAdvance.ControlStatistic
             chart1.Visible = false;
             btTK.Visible = false;
             btEx1.Enabled = true;
+            guna2DataGridView1.Visible = true;
+            guna2DataGridView3.Visible = true;
+            guna2DataGridView4.Visible = true;
         }
 
         private void rbTongThe_CheckedChanged(object sender, EventArgs e)
         {
             btTK.Visible = true;
+            chart1.Visible = false;
+            rdChart.Visible = true;
+            guna2DataGridView1.Visible = true;
+            guna2DataGridView3.Visible = true;
+            guna2DataGridView4.Visible = true;
         }
 
         private void rbTongThe_Click(object sender, EventArgs e)
@@ -1826,6 +1866,90 @@ namespace RJCodeAdvance.ControlStatistic
         private void printDocument5_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(btm5, 0, 0);
+        }
+
+        private void rdChart_CheckedChanged(object sender, EventArgs e)
+        {
+            chart1.Visible = true;
+            btTK.Visible = false;
+            guna2DataGridView1.Visible = false;
+            guna2DataGridView3.Visible = false;
+            guna2DataGridView4.Visible = false;
+        }
+
+        private void txtTongTien_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                decimal value = decimal.Parse(txtTongTien.Text, System.Globalization.NumberStyles.AllowThousands);
+                txtTongTien.Text = String.Format(culture, "{0:N0}", value);
+                txtTongTien.Select(txtTongTien.Text.Length, 0);
+            }
+            catch
+            {
+                txtTongTien.Text = "0";
+            }
+        }
+
+        private void txtTongTien1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                decimal value = decimal.Parse(txtTongTien1.Text, System.Globalization.NumberStyles.AllowThousands);
+                txtTongTien1.Text = String.Format(culture, "{0:N0}", value);
+                txtTongTien1.Select(txtTongTien1.Text.Length, 0);
+            }
+            catch
+            {
+                txtTongTien1.Text = "0";
+            }
+        }
+
+        private void txtTienHoaDon_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                decimal value = decimal.Parse(txtTienHoaDon.Text, System.Globalization.NumberStyles.AllowThousands);
+                txtTienHoaDon.Text = String.Format(culture, "{0:N0}", value);
+                txtTienHoaDon.Select(txtTienHoaDon.Text.Length, 0);
+            }
+            catch
+            {
+                txtTienHoaDon.Text = "0";
+            }
+        }
+
+        private void txtTienIngredient_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                decimal value = decimal.Parse(txtTienIngredient.Text, System.Globalization.NumberStyles.AllowThousands);
+                txtTienIngredient.Text = String.Format(culture, "{0:N0}", value);
+                txtTienIngredient.Select(txtTienIngredient.Text.Length, 0);
+            }
+            catch
+            {
+                txtTienIngredient.Text = "0";
+            }
+        }
+
+        private void txtDanhThu_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("en-US");
+                decimal value = decimal.Parse(txtDanhThu.Text, System.Globalization.NumberStyles.AllowThousands);
+                txtDanhThu.Text = String.Format(culture, "{0:N0}", value);
+                txtDanhThu.Select(txtDanhThu.Text.Length, 0);
+            }
+            catch
+            {
+                txtDanhThu.Text = "0";
+            }
         }
     }
 }
