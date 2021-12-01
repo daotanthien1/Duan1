@@ -139,12 +139,14 @@ create table Beverages
 	constraint FK_Id_type_Beverages foreign key (Id_type) references TypesOfBeverage (Id_type)
 );
 Go
-
 create table Bills_detail
 (
-	Id_bill int primary key identity,
+	Id_bill_detaill int IDENTITY(1,1) NOT NULL primary key,
+	Id_bill int not null,
 	Quantity int not null,
 	Id_beverage int not null,
+	totalPrice float not null,
+	sale int not null,
 	constraint FK_Id_beverage_Bill_detail foreign key(Id_beverage) references Beverages(Id_beverage)
 );
 Go
@@ -177,6 +179,7 @@ create table Bills(
 	constraint FK_Id_customer foreign key(Id_customer) references Customers(Id_customer),
 	constraint FK_Id_table foreign key(Id_table) references tables(Id_table)
 );
+
 go
 
 -- drop proc dbo.LOGIN

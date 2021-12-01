@@ -20,7 +20,9 @@ namespace RJCodeAdvance
 {
     public partial class FrmLogin : Form
     {
+        public static int id_emp;
         BUS_NhanVien busNV = new BUS_NhanVien();
+        public string vaitro { get; set; }
         public FrmLogin()
         {
             InitializeComponent();
@@ -106,13 +108,21 @@ namespace RJCodeAdvance
             nv.email = txtEmail.Text;
             nv.password = busNV.encryption(txtPassword.Text);
             //nv.password = txtPassword.Text;
+
             if (busNV.NhanVienDangNhap(nv)) // khi đăng nhập thành công
             {
+                
+                DataTable dt = busNV.VaiTroNhanVien(nv.email);
+                DataTable dt2 = busNV.LayIdEmp(nv.email);
+                nv.id_employee = int.Parse(dt2.Rows[0][0].ToString());
+                vaitro = dt.Rows[0][0].ToString();
                 UC_employee.mail = nv.email;
+                UC_employee.idEmployee = nv.id_employee;
                 this.Hide();
                 FrmBeverageCP frmcp = new FrmBeverageCP();
                 frmcp.ShowDialog();
                 this.Show();
+                FrmBeverageCP.session = 1;
             }
             else
             {
@@ -127,11 +137,11 @@ namespace RJCodeAdvance
         {
             
             ReadSettings();
-
             if (txtPassword.PasswordChar == '\0')
             {
                 txtPassword.PasswordChar = '*';
             }
+            FrmBeverageCP.session = 0;
         }
 
         private void ReadSettings()

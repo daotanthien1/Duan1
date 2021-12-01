@@ -66,6 +66,14 @@ namespace BUS_QuanLy
         {
             return dalNhanVien.IsDelete();
         }
+        public DataTable VaiTroNhanVien(string email)
+        {
+            return dalNhanVien.VaiTroNhanVien(email);
+        }
+        public DataTable LayIdEmp(string email)
+        {
+            return dalNhanVien.LayId_EMP(email);
+        }
         //Mã hóa MD5
         public string encryption(string password)
         {

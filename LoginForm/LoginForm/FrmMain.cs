@@ -15,10 +15,17 @@ namespace RJCodeAdvance
 {
     public partial class FrmBeverageCP : Form
     {
+        public static int session = 0;  // kiểm tra tình trạng login
+        FrmLogin dn;
         public FrmBeverageCP()
         {
             InitializeComponent();
             uC_Order2.BringToFront();
+        }
+
+        private void FrmBeverageCP_Load(object sender, EventArgs e)
+        {
+            PhanQuyen();
         }
         private void moveImage(object sender)
         {
@@ -31,7 +38,7 @@ namespace RJCodeAdvance
         {
             Application.Exit();
         }
-        
+
         private void btnGoiDoUong_Click(object sender, EventArgs e)
         {
             moveImage(sender);
@@ -51,6 +58,48 @@ namespace RJCodeAdvance
             {
                 uC_Bill1.BringToFront();
                 uC_Bill1.UC_Bill_Load(this, new EventArgs());
+            }
+        }
+
+        private void Employee_permission()
+        {
+
+        }
+
+        private void PhanQuyen()
+        {
+            if (session == 1)
+            {
+                if(int.Parse(dn.vaitro) == 1)
+                {
+                    btnKhachHang.Enabled = true;
+                    btnNhanVien.Enabled = true;
+                    btnNhapNL.Enabled = true;
+                    btnThongKe.Enabled = true;
+                    btnVoucher.Enabled = true;
+                    btHoaDon.Enabled = true;
+                    btnGoiDoUong.Enabled = true;
+                }
+                else
+                {
+                    btnKhachHang.Enabled = false;
+                    btnNhanVien.Enabled = false;
+                    btnNhapNL.Enabled = false;
+                    btnThongKe.Enabled = false;
+                    btnVoucher.Enabled = false;
+                    btHoaDon.Enabled = false;
+                    btnGoiDoUong.Enabled = true;
+                }
+            }
+            else
+            {
+                btnGoiDoUong.Enabled = false;
+                btnKhachHang.Enabled = false;
+                btnNhanVien.Enabled = false;
+                btnNhapNL.Enabled = false;
+                btnThongKe.Enabled = false;
+                btnVoucher.Enabled = false;
+                btHoaDon.Enabled = false;
             }
         }
     }

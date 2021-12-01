@@ -43,6 +43,7 @@ namespace RJCodeAdvance
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.id_employee = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -246,12 +247,22 @@ namespace RJCodeAdvance
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // id_employee
+            // 
+            this.id_employee.AutoSize = true;
+            this.id_employee.Location = new System.Drawing.Point(428, 10);
+            this.id_employee.Name = "id_employee";
+            this.id_employee.Size = new System.Drawing.Size(0, 13);
+            this.id_employee.TabIndex = 11;
+            this.id_employee.Visible = false;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(710, 407);
+            this.Controls.Add(this.id_employee);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
@@ -290,6 +301,7 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label id_employee;
         //private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

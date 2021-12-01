@@ -33,7 +33,29 @@ namespace DAL_QuanLy
             }
             return false;
         }
+        public DataTable VaiTroNhanVien(string email)
+        {
+            //use stored procedure
+            try
+            {
+                // Kết nối
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "LayVaiTroNV";
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Connection = _conn;
+                DataTable dtNhanVien = new DataTable();
+                dtNhanVien.Load(cmd.ExecuteReader());
+                return dtNhanVien;
+            }
+            finally
+            {
+                // Đóng kết nối
+                _conn.Close();
 
+            }
+        }
         public bool NhanVienQuenMatKhau(string email)
         {
             try
@@ -271,14 +293,42 @@ namespace DAL_QuanLy
 
         public DataTable IsDelete()
         {
-            _conn.Open();
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = _conn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "IS_DELETE";
-            DataTable dtIsDelete = new DataTable();
-            dtIsDelete.Load(cmd.ExecuteReader());
-            return dtIsDelete;
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "IS_DELETE";
+                DataTable dtIsDelete = new DataTable();
+                dtIsDelete.Load(cmd.ExecuteReader());
+                return dtIsDelete;
+            }  
+             finally
+            {
+                _conn.Close();
+            }
+        }
+
+        public DataTable LayId_EMP(string email)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "LayId_EMP";
+                cmd.Parameters.AddWithValue("@email", email);
+                DataTable dtemP = new DataTable();
+                dtemP.Load(cmd.ExecuteReader());
+                return dtemP;
+            }
+           
+             finally
+            {
+                _conn.Close();
+            }
         }
     }
 }

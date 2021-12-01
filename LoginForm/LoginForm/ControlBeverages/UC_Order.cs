@@ -3,6 +3,7 @@ using DTO_QuanLy;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
+using RJCodeAdvance.ControlEmployees;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -17,7 +18,7 @@ namespace RJCodeAdvance.ControlBeverages
 {
     public partial class UC_Order : UserControl
     {
-        public static int idEmployee = 1;
+        public static int idEmployee = UC_employee.idEmployee;
         BUS_tables bus_table = new BUS_tables();
         BUS_Bill bus_bill = new BUS_Bill();
         BUS_Menu bus_menu = new BUS_Menu();
