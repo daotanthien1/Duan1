@@ -87,6 +87,10 @@ namespace RJCodeAdvance.ControlStatistic
                 btEx2.SendToBack();
                 btIn2.SendToBack();
                 btIn3.SendToBack();
+                dayStart.Format = DateTimePickerFormat.Custom;
+                dayStart.CustomFormat = "yyyy/MM/dd";
+                dayEnd.Format = DateTimePickerFormat.Custom;
+                dayEnd.CustomFormat = "yyyy/MM/dd 23:59:59";
                 string dayStar = dayStart.Text;
                 string dayend = dayEnd.Text;
                 DataTable dt = bUS_Static.getDataBillDetailDate(dayStar, dayend);
@@ -105,9 +109,18 @@ namespace RJCodeAdvance.ControlStatistic
                 }
                 guna2DataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 chart1.Series["Total"].Points.Clear();
+
+                dayStart.Format = DateTimePickerFormat.Custom;
+                dayStart.CustomFormat = "dd/MM/yyyy";
+                dayEnd.Format = DateTimePickerFormat.Custom;
+                dayEnd.CustomFormat = "dd/MM/yyyy 23:59:59";
             }
             if (rbTongThe.Checked)
             {
+                dayStart.Format = DateTimePickerFormat.Custom;
+                dayStart.CustomFormat = "yyyy/MM/dd";
+                dayEnd.Format = DateTimePickerFormat.Custom;
+                dayEnd.CustomFormat = "yyyy/MM/dd 23:59:59";
                 rdChart.Visible = true;
                 btTK.FillColor = Color.FromArgb(0, 118, 212);
                 guna2DataGridView3.SendToBack();
@@ -141,6 +154,11 @@ namespace RJCodeAdvance.ControlStatistic
                 {
                     chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][3]);
                 }
+
+                dayStart.Format = DateTimePickerFormat.Custom;
+                dayStart.CustomFormat = "dd/MM/yyyy";
+                dayEnd.Format = DateTimePickerFormat.Custom;
+                dayEnd.CustomFormat = "dd/MM/yyyy 23:59:59";
             }
         }
         DateTime dayNow = DateTime.Now;
@@ -221,12 +239,12 @@ namespace RJCodeAdvance.ControlStatistic
                 guna2DataGridView3.SendToBack();
                 guna2DataGridView4.SendToBack();
                 string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-                string time2 = dayNow.ToString("dd-MM-yyyy 23:59:59");
-                string time1 = dayNow.ToString("dd-MM-yyyy 00:00:00");
+                string time2 = dayNow.ToString("yyyy-MM-dd 23:59:59");
+                string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
                 DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
                 if (date.Day != 1)
                 {
-                    DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(date.ToString("01-MM-yyyy 00:00:00"), time2);
+                    DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(date.ToString("yyyy-MM-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
                     guna2DataGridView1.DataSource = dt;
                     foreach (DataRow item in dt.Rows)
                     {
@@ -235,14 +253,14 @@ namespace RJCodeAdvance.ControlStatistic
                             item[1] = "0";
                         }
                     }
-                    DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("01-MM-yyyy 00:00:00"), time2);
+                    DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("yyyy-MM-dd 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
                     foreach (DataRow item in dt1.Rows)
                     {
                         txtTongTien.Text = item[0].ToString();
                     }
                     guna2DataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                    dayStart.Text = date.ToString("yyyy-MM-01");
-                    dayEnd.Text = time;
+                    dayStart.Text = date.ToString("01-MM-yyyy");
+                    dayEnd.Text = dayNow.ToString("yyyy-MM-dd 23:59:59");
                 }
                 else
                 {
@@ -309,7 +327,7 @@ namespace RJCodeAdvance.ControlStatistic
                 string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
                 string time2 = dayNow.ToString("dd/MM/yyyy 23:59:59");
                 DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-                DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(date.ToString("01-01-yyyy 00:00:00"), time2);
+                DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(date.ToString("yyyy-01-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
                 guna2DataGridView1.DataSource = dt;
                 foreach (DataRow item in dt.Rows)
                 {
@@ -318,14 +336,14 @@ namespace RJCodeAdvance.ControlStatistic
                         item[1] = "0";
                     }
                 }
-                DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("01-01-yyyy 00:00:00"), time2);
+                DataTable dt1 = bUS_Static.SumPriceDateTime(date.ToString("yyyy-01-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
                 foreach (DataRow item in dt1.Rows)
                 {
                     txtTongTien.Text = item[0].ToString();
                 }
                 guna2DataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dayStart.Text = date.ToString("yyyy-01-01");
-                dayEnd.Text = time;
+                dayStart.Text = date.ToString("01-01-yyyy");
+                dayEnd.Text = dayNow.ToString("yyyy/MM/dd 23:59:59");
             }
             if (rbTongThe.Checked)
             {
@@ -376,6 +394,11 @@ namespace RJCodeAdvance.ControlStatistic
         // thống kê bill nhập ngyên liệu trong khoảng thời gian
         private void btThongKe1_Click(object sender, EventArgs e)
         {
+            dayStar1.Format = DateTimePickerFormat.Custom;
+            dayStar1.CustomFormat = "yyyy/MM/dd";
+            dayEnd1.Format = DateTimePickerFormat.Custom;
+            dayEnd1.CustomFormat = "yyyy/MM/dd 23:59:59";
+
             string dayStar = dayStar1.Text;
             string dayend = dayEnd1.Text;
             DataTable dt = bUS_Static.getBillInputBetween(dayStar, dayend);
@@ -385,6 +408,11 @@ namespace RJCodeAdvance.ControlStatistic
             {
                 txtTongTien1.Text = item[0].ToString();
             }
+
+            dayStar1.Format = DateTimePickerFormat.Custom;
+            dayStar1.CustomFormat = "dd/MM/yyyy";
+            dayEnd1.Format = DateTimePickerFormat.Custom;
+            dayEnd1.CustomFormat = "dd/MM/yyyy 23:59:59";
         }
         // click bt tuần bill nhập nguyên liệu
         private void btTuan1_Click(object sender, EventArgs e)
@@ -423,20 +451,20 @@ namespace RJCodeAdvance.ControlStatistic
         private void btThang1_Click(object sender, EventArgs e)
         {
             string time = dayNow.ToString("yyyy/MM/dd 23:59:59");
-            string time2 = dayNow.ToString("dd/MM/yyyy 23:59:59");
-            string time1 = dayNow.ToString("dd/MM/yyyy 00:00:00");
+            string time2 = dayNow.ToString("yyyy-MM-dd 23:59:59");
+            string time1 = dayNow.ToString("yyyy-MM-01 00:00:00");
             DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
             if (date.Day != 1)
             {
-                DataTable dt = bUS_Static.getBillInputBetween(date.ToString("01-MM-yyyy 00:00:00"), time2);
+                DataTable dt = bUS_Static.getBillInputBetween(date.ToString("yyyy-MM-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
                 guna2DataGridView2.DataSource = dt;
-                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("01-MM-yyyy 00:00:00"), time2);
+                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-MM-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
                 foreach (DataRow item in dt1.Rows)
                 {
                     txtTongTien1.Text = item[0].ToString();
                 }
-                dayStar1.Text = date.ToString("yyyy-MM-01");
-                dayEnd1.Text = time;
+                dayStar1.Text = date.ToString("01-MM-yyyy");
+                dayEnd1.Text = dayNow.ToString("dd-MM-yyyy 23:59:59");
             }
             else
             {
@@ -447,8 +475,8 @@ namespace RJCodeAdvance.ControlStatistic
                 {
                     txtTongTien1.Text = item[0].ToString();
                 }
-                dayStar1.Text = time1;
-                dayEnd1.Text = time;
+                dayStar1.Text = date.ToString("01-MM-yyyy");
+                dayEnd1.Text = dayNow.ToString("01-MM-yyyy 23:59:59"); 
             }
         }
         // click bt năm bill nhập nguyên liệu
@@ -457,15 +485,15 @@ namespace RJCodeAdvance.ControlStatistic
             string time = dayNow.ToString("yyyy/MM/dd 23:59:59");
             string time2 = dayNow.ToString("dd/MM/yyyy 23:59:59");
             DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-            DataTable dt = bUS_Static.getBillInputBetween(date.ToString("01-01-yyyy 00:00:00"), time2);
+            DataTable dt = bUS_Static.getBillInputBetween(date.ToString("yyyy-01-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
             guna2DataGridView2.DataSource = dt;
-            DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("01-01-yyyy 00:00:00"), time2);
+            DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-01-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
             foreach (DataRow item in dt1.Rows)
             {
                 txtTongTien1.Text = item[0].ToString();
             }
-            dayStar1.Text = date.ToString("yyyy-01-01");
-            dayEnd1.Text = time;
+            dayStar1.Text = date.ToString("01-01-yyyy");
+            dayEnd1.Text = dayNow.ToString("dd-MM-yyyy 23:59:59");
         }
         // load danh thu tất cả 
         void LoadDanhThu()
@@ -1266,12 +1294,12 @@ namespace RJCodeAdvance.ControlStatistic
         private void btThang2_Click(object sender, EventArgs e)
         {
             string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time2 = dayNow.ToString("dd/MM/yyyy 23:59:59");
-            string time1 = dayNow.ToString("dd/MM/yyyy 00:00:00");
+            string time2 = dayNow.ToString("yyyy-MM-dd 23:59:59");
+            string time1 = dayNow.ToString("yyyy-MM-dd 00:00:00");
             DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
             if (date.Day != 1)
             {
-                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("01-MM-yyyy 00:00:00"), time2);
+                DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-MM-01 00:00:00"), time2);
                 foreach (DataRow item in dt1.Rows)
                 {
                     if(item[0].ToString() == "")
@@ -1283,7 +1311,7 @@ namespace RJCodeAdvance.ControlStatistic
                         txtTienIngredient.Text = item[0].ToString();
                     }
                 }
-                DataTable dt = bUS_Static.SumPriceDateTime(date.ToString("01-MM-yyyy 00:00:00"), time2);
+                DataTable dt = bUS_Static.SumPriceDateTime(date.ToString("yyyy-MM-dd 00:00:00"), time2);
                 foreach (DataRow item in dt.Rows)
                 {
                     if (item[0].ToString() == "")
@@ -1347,9 +1375,9 @@ namespace RJCodeAdvance.ControlStatistic
         private void btNam2_Click(object sender, EventArgs e)
         {
             string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
-            string time1 = dayNow.ToString("dd/MM/yyyy 23:59:59");
+            string time1 = dayNow.ToString("yyyy-MM-dd 23:59:59");
             DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
-            DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("01-01-yyyy 00:00:00"), time1);
+            DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-01-01 00:00:00"), time1);
             foreach (DataRow item in dt1.Rows)
             {
                 if (item[0].ToString() == "")
@@ -1361,7 +1389,7 @@ namespace RJCodeAdvance.ControlStatistic
                     txtTienIngredient.Text = item[0].ToString();
                 }
             }
-            DataTable dt = bUS_Static.SumPriceDateTime(date.ToString("01-01-yyyy 00:00:00"), time1);
+            DataTable dt = bUS_Static.SumPriceDateTime(date.ToString("yyyy-01-01 00:00:00"), time1);
             foreach (DataRow item in dt.Rows)
             {
                 if (item[0].ToString() == "")
@@ -1396,6 +1424,11 @@ namespace RJCodeAdvance.ControlStatistic
 
         private void btThongKe2_Click(object sender, EventArgs e)
         {
+            dayStar2.Format = DateTimePickerFormat.Custom;
+            dayStar2.CustomFormat = "yyyy-MM-dd 00:00:00";
+            dayEnd2.Format = DateTimePickerFormat.Custom;
+            dayEnd2.CustomFormat = "yyyy-MM-dd 23:59:59";
+
             string dayStar = dayStar2.Text;
             string dayend = dayEnd2.Text;
             DataTable dt1 = bUS_Static.SumPriceBillInputBetween(dayStar, dayend);
@@ -1422,6 +1455,12 @@ namespace RJCodeAdvance.ControlStatistic
                     txtTienHoaDon.Text = item[0].ToString();
                 }
             }
+
+            dayStar2.Format = DateTimePickerFormat.Custom;
+            dayStar2.CustomFormat = "dd-MM-yyyy";
+            dayEnd2.Format = DateTimePickerFormat.Custom;
+            dayEnd2.CustomFormat = "dd-MM-yyy";
+
             txtDanhThu.Text = "" + (float.Parse(txtTienHoaDon.Text) - float.Parse(txtTienIngredient.Text));
             dataGridView1.Rows.Clear();
             dataGridView1.Rows.Add(txtTienHoaDon.Text, txtTienIngredient.Text, txtDanhThu.Text);
