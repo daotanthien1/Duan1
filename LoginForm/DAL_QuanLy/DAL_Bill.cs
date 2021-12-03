@@ -346,7 +346,8 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
             return false;
-        }public bool UpdateBillsDetailNL(int quantity, int id)
+        }
+        public bool UpdateBillsDetailNL(int quantity, int id)
         {
             try
             {
@@ -443,6 +444,45 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
 
+        }
+        public bool updateInputBill(int id, float sum)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "updateInputBill";
+                cmd.Parameters.AddWithValue("sumPrice", sum);
+                cmd.Parameters.AddWithValue("id", id);
+                cmd.Connection = _conn;
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+        public DataTable priceAfterUpdate(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "priceAfterUpdate";
+                cmd.Parameters.AddWithValue("id", id);
+                DataTable dtDoUong = new DataTable();
+                dtDoUong.Load(cmd.ExecuteReader());
+                return dtDoUong;
+            }
+            finally
+            {
+                _conn.Close();
+            }
         }
     }
 }

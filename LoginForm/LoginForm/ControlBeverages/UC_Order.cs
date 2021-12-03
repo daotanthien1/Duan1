@@ -180,11 +180,15 @@ namespace RJCodeAdvance.ControlBeverages
             FrmSchedule Frm = new FrmSchedule();
             Frm.ShowDialog();
         }
-
+        public static int a = 0;
         private void UC_Order_Load(object sender, EventArgs e)
         {
             LoadTable();
             TurnOffInputControl();
+            if(a == 2)
+            {
+                pictureBox3.Enabled = false;
+            }
         }
 
         private void btThanhToan_Click(object sender, EventArgs e)
@@ -416,6 +420,16 @@ namespace RJCodeAdvance.ControlBeverages
             e.Graphics.DrawString($"{totalPrice}đ", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(650, pointY));
             pointY += 25;
             e.Graphics.DrawString($"Cảm ơn Quý khách, hẹn gặp lại!", new Font("Arial", 12, FontStyle.Italic), Brushes.Black, new Point(300, pointY));
+        }
+
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -12,6 +12,14 @@ namespace BUS_QuanLy
     public class BUS_Bill
     {
         DAL_Bill dal_bill = new DAL_Bill();
+        public DataTable priceAfterUpdate(int id)
+        {
+            return dal_bill.priceAfterUpdate(id);
+        }
+        public bool updateInputBill(int id, float sum)
+        {
+            return dal_bill.updateInputBill(id, sum);
+        }
         public int getMaxId()
         {
             return dal_bill.getMaxId();

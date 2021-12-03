@@ -49,7 +49,9 @@ namespace RJCodeAdvance
         private void btnThem_Click(object sender, EventArgs e)
         {
             dt.Clear();
-            dt.Rows.Add(lblBeverageName.Text, int.Parse(nbSoLuong.Value.ToString()), lblPrice.Text, int.Parse(guna2TextBox1.Text));
+            int index = lblPrice.Text.IndexOf(" ");
+            string price = lblPrice.Text.Substring(0, index);
+            dt.Rows.Add(lblBeverageName.Text, int.Parse(nbSoLuong.Value.ToString()), price, int.Parse(guna2TextBox1.Text));
             foreach (DataRow item in dt.Rows)
             {
                 a.guna2DataGridView1.Rows.Add(item[0].ToString(), int.Parse(item[1].ToString()), item[2].ToString(), int.Parse(item[3].ToString()));

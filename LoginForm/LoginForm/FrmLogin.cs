@@ -21,6 +21,7 @@ namespace RJCodeAdvance
     public partial class FrmLogin : Form
     {
         BUS_NhanVien busNV = new BUS_NhanVien();
+        public static int id_emp;
         public FrmLogin()
         {
             InitializeComponent();
@@ -98,21 +99,32 @@ namespace RJCodeAdvance
         {
             Environment.Exit(0);
         }
-
         private void btLogin_Click(object sender, EventArgs e)
         {
             SaveSettings();
             DTO_NhanVien nv = new DTO_NhanVien();
             nv.email = txtEmail.Text;
             nv.password = busNV.encryption(txtPassword.Text);
-            //nv.password = txtPassword.Text;
+
             if (busNV.NhanVienDangNhap(nv)) // khi đăng nhập thành công
             {
+
+                DataTable dt = busNV.VaiTroNhanVien(nv.email);
+                DataTable dt2 = busNV.LayIdEmp(nv.email);
+                nv.id_employee = int.Parse(dt2.Rows[0][0].ToString());
+                foreach (DataRow item in dt.Rows)
+                {
+                    FrmBeverageCP.vaitro = int.Parse(item[0].ToString());
+                }
+                FrmBeverageCP.session = 1;
                 UC_employee.mail = nv.email;
+                UC_employee.idEmployee = nv.id_employee;
+                
                 this.Hide();
                 FrmBeverageCP frmcp = new FrmBeverageCP();
                 frmcp.ShowDialog();
                 this.Show();
+
             }
             else
             {
@@ -120,12 +132,12 @@ namespace RJCodeAdvance
                 txtPassword.Text = null;
                 txtPassword.Focus();
             }
-          
+
         } 
 
         private void LoginNew_Load(object sender, EventArgs e)
         {
-            
+            FrmBeverageCP.session = 0;
             ReadSettings();
 
             if (txtPassword.PasswordChar == '\0')

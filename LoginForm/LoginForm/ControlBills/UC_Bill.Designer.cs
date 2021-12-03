@@ -33,6 +33,7 @@ namespace RJCodeAdvance.ControlBills
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Bill));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -110,9 +111,9 @@ namespace RJCodeAdvance.ControlBills
             this.rdoNguyenLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.rdoNguyenLieu.Location = new System.Drawing.Point(113, 146);
             this.rdoNguyenLieu.Name = "rdoNguyenLieu";
-            this.rdoNguyenLieu.Size = new System.Drawing.Size(99, 21);
+            this.rdoNguyenLieu.Size = new System.Drawing.Size(101, 21);
             this.rdoNguyenLieu.TabIndex = 133;
-            this.rdoNguyenLieu.Text = "nguyên liệu";
+            this.rdoNguyenLieu.Text = "Nguyên liệu";
             this.rdoNguyenLieu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdoNguyenLieu.UncheckedState.BorderThickness = 2;
             this.rdoNguyenLieu.UncheckedState.FillColor = System.Drawing.Color.Transparent;
@@ -132,10 +133,10 @@ namespace RJCodeAdvance.ControlBills
             this.rdoDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.rdoDoUong.Location = new System.Drawing.Point(14, 146);
             this.rdoDoUong.Name = "rdoDoUong";
-            this.rdoDoUong.Size = new System.Drawing.Size(80, 21);
+            this.rdoDoUong.Size = new System.Drawing.Size(81, 21);
             this.rdoDoUong.TabIndex = 132;
             this.rdoDoUong.TabStop = true;
-            this.rdoDoUong.Text = "đồ uống";
+            this.rdoDoUong.Text = "Đồ uống";
             this.rdoDoUong.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.rdoDoUong.UncheckedState.BorderThickness = 2;
             this.rdoDoUong.UncheckedState.FillColor = System.Drawing.Color.Transparent;
@@ -212,7 +213,8 @@ namespace RJCodeAdvance.ControlBills
             this.btTimKiem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTimKiem.ForeColor = System.Drawing.Color.White;
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
-            this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
+            this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btTimKiem.Location = new System.Drawing.Point(14, 185);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
@@ -238,7 +240,9 @@ namespace RJCodeAdvance.ControlBills
             this.btXoa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoa.ForeColor = System.Drawing.Color.White;
             this.btXoa.HoverState.Parent = this.btXoa;
-            this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
+            this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btXoa.ImageSize = new System.Drawing.Size(35, 35);
             this.btXoa.Location = new System.Drawing.Point(15, 592);
             this.btXoa.Name = "btXoa";
             this.btXoa.ShadowDecoration.Parent = this.btXoa;
@@ -275,7 +279,7 @@ namespace RJCodeAdvance.ControlBills
             this.dgvBill.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBill.EnableHeadersVisualStyles = false;
             this.dgvBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvBill.Location = new System.Drawing.Point(15, 227);
+            this.dgvBill.Location = new System.Drawing.Point(14, 227);
             this.dgvBill.Name = "dgvBill";
             this.dgvBill.RowHeadersVisible = false;
             this.dgvBill.RowHeadersWidth = 51;
@@ -421,7 +425,9 @@ namespace RJCodeAdvance.ControlBills
             this.btSua.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSua.ForeColor = System.Drawing.Color.White;
             this.btSua.HoverState.Parent = this.btSua;
-            this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
+            this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btSua.ImageSize = new System.Drawing.Size(35, 35);
             this.btSua.Location = new System.Drawing.Point(152, 592);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
@@ -447,7 +453,9 @@ namespace RJCodeAdvance.ControlBills
             this.btnXoaBillsDetail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaBillsDetail.ForeColor = System.Drawing.Color.White;
             this.btnXoaBillsDetail.HoverState.Parent = this.btnXoaBillsDetail;
-            this.btnXoaBillsDetail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnXoaBillsDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaBillsDetail.Image")));
+            this.btnXoaBillsDetail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnXoaBillsDetail.ImageSize = new System.Drawing.Size(35, 35);
             this.btnXoaBillsDetail.Location = new System.Drawing.Point(15, 592);
             this.btnXoaBillsDetail.Name = "btnXoaBillsDetail";
             this.btnXoaBillsDetail.ShadowDecoration.Parent = this.btnXoaBillsDetail;

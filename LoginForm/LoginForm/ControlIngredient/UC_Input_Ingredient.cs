@@ -40,8 +40,6 @@ namespace RJCodeAdvance.ControlIngredient
             cbSearch.SelectedItem = all;
             cbSearch.DisplayMember = "Name";
             cbSearch.ValueMember = "Id_type";
-            guna2DataGridView1.Rows[0].Cells[2].Value = "";
-            guna2DataGridView1.Rows[0].Cells[3].Value = "";
         }
         void RenderBeverage(List<DTO_NguyenLieu> nl)
         {
@@ -77,7 +75,7 @@ namespace RJCodeAdvance.ControlIngredient
             DTO_NguyenLieu Ingredients = (DTO_NguyenLieu)(sender as Guna2Button).Tag;
             FrmAddIngredient frm = new FrmAddIngredient(Ingredients,this);
             frm.ShowDialog();
-            guna2DataGridView1.Columns[3].DefaultCellStyle.Format = "#,### VNĐ";
+            guna2DataGridView1.Columns[3].DefaultCellStyle.Format = "#,###";
             for (int i = 0; i < guna2DataGridView1.Rows.Count - 1; i++)
             {
                 string tmp = guna2DataGridView1.Rows[i].Cells[0].Value.ToString();

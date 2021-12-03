@@ -204,7 +204,7 @@ namespace RJCodeAdvance.ControlVouchers
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(855, 293);
+            this.label3.Location = new System.Drawing.Point(855, 267);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 16);
             this.label3.TabIndex = 111;
@@ -238,11 +238,11 @@ namespace RJCodeAdvance.ControlVouchers
             this.txtSoLuong.DefaultCellStyle = dataGridViewCellStyle3;
             this.txtSoLuong.EnableHeadersVisualStyles = false;
             this.txtSoLuong.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.txtSoLuong.Location = new System.Drawing.Point(40, 321);
+            this.txtSoLuong.Location = new System.Drawing.Point(40, 295);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.RowHeadersVisible = false;
             this.txtSoLuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.txtSoLuong.Size = new System.Drawing.Size(1037, 266);
+            this.txtSoLuong.Size = new System.Drawing.Size(1037, 292);
             this.txtSoLuong.TabIndex = 120;
             this.txtSoLuong.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.txtSoLuong.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -486,7 +486,7 @@ namespace RJCodeAdvance.ControlVouchers
             this.guna2NumericUpDown1.FocusedState.Parent = this.guna2NumericUpDown1;
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(980, 279);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(980, 253);
             this.guna2NumericUpDown1.Maximum = new decimal(new int[] {
             100000,
             0,
@@ -517,7 +517,7 @@ namespace RJCodeAdvance.ControlVouchers
             "50%",
             "100%"});
             this.cbSearch.ItemsAppearance.Parent = this.cbSearch;
-            this.cbSearch.Location = new System.Drawing.Point(162, 279);
+            this.cbSearch.Location = new System.Drawing.Point(162, 253);
             this.cbSearch.Name = "cbSearch";
             this.cbSearch.ShadowDecoration.Parent = this.cbSearch;
             this.cbSearch.Size = new System.Drawing.Size(172, 36);
@@ -543,7 +543,7 @@ namespace RJCodeAdvance.ControlVouchers
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(40, 280);
+            this.btTimKiem.Location = new System.Drawing.Point(40, 254);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
             this.btTimKiem.Size = new System.Drawing.Size(116, 35);

@@ -18,6 +18,7 @@ namespace RJCodeAdvance.ControlEmployees
     public partial class UC_employee : UserControl
     {
         public static string mail;
+        public static int idEmployee;
 
         BUS_NhanVien busNV = new BUS_QuanLy.BUS_NhanVien();
         public UC_employee()
@@ -276,8 +277,10 @@ namespace RJCodeAdvance.ControlEmployees
             dgv_NhanVien.Columns[4].HeaderText = "Địa chỉ";
             dgv_NhanVien.Columns[5].HeaderText = "Ngày sinh";
             dgv_NhanVien.Columns[6].HeaderText = "Lương";
+            dgv_NhanVien.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgv_NhanVien.Columns[7].Visible = false;
             dgv_NhanVien.Columns[8].Visible = false;
+            dgv_NhanVien.Columns[9].Visible = false;
             dgv_NhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -294,7 +297,7 @@ namespace RJCodeAdvance.ControlEmployees
                 return (false);
         }
 
-        public void ThemVaiTro()
+        void ThemVaiTro()
         {
             cbVaiTro.DataSource = busNV.ThemVaiTro();
             cbVaiTro.DisplayMember = "Name";
@@ -401,6 +404,11 @@ namespace RJCodeAdvance.ControlEmployees
         private void btDanhSach_Click(object sender, EventArgs e)
         {
             ShowData_GridViewNhanVien();
+        }
+
+        private void cbTimKiemTheoVaiTro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

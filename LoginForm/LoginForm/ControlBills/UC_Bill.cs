@@ -78,6 +78,7 @@ namespace RJCodeAdvance.ControlBills
             dgvBill.Columns[2].HeaderText = "Tổng giá";
             dgvBill.Columns[3].HeaderText = "ID_Bill";
             dgvBill.Columns[3].Visible = false;
+            dgvBill.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgvBill.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         //load dgv cua do uong nhung detail
@@ -98,7 +99,13 @@ namespace RJCodeAdvance.ControlBills
             dgvBillsDetail.Columns[0].HeaderText = "Tên nguyên liệu";
             dgvBillsDetail.Columns[1].HeaderText = "Số lượng";
             dgvBillsDetail.Columns[2].HeaderText = "Id_BillDetaill";
+            dgvBillsDetail.Columns[3].HeaderText = "Đơn giá";
+            dgvBillsDetail.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvBillsDetail.Columns[4].HeaderText = "Tổng tiền";
+            dgvBillsDetail.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgvBillsDetail.Columns[2].Visible = false;
+            dgvBillsDetail.Columns[5].Visible = false;
+            dgvBillsDetail.Columns[6].Visible = false;
             dgvBillsDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void rdoDoUong_Click(object sender, EventArgs e)
@@ -141,15 +148,14 @@ namespace RJCodeAdvance.ControlBills
             cbbFilterCol.ValueMember = "Key";
             cbbFilterCol.DisplayMember = "Value";
             cbbFilterCol.SelectedIndex = 2;
-            //cbbFilterCol.Items.Add("Tên nhân viên");
-            //cbbFilterCol.Items.Add("Ngày nhập hoá đơn");
-            //cbbFilterCol.Items.Add("Tổng giá");
-            //cbbFilterCol.SelectedIndex = 0;
+
             label2.Text = "Tên nguyên liệu";
             txtDoUong.Text = null;
             nbSoLuong.Value = 1;
         }
         //click vao dgv
+        int idInputBill = 0;
+        float sum = 0;
         private void dgvBill_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -163,8 +169,9 @@ namespace RJCodeAdvance.ControlBills
                     }
                     else
                     {
-                        int id = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
-                        loadBillDetailNL(id);
+                        idInputBill = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
+                        sum = float.Parse(dgvBill.CurrentRow.Cells[2].Value.ToString());
+                        loadBillDetailNL(idInputBill);
                     }
                     btXoa.Enabled = true;
                     btSua.Enabled = true;
@@ -324,6 +331,19 @@ namespace RJCodeAdvance.ControlBills
                     {
                         int idtemp = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
                         loadBillDetailNL(idtemp);
+                        DataTable a = (DataTable)dgvBillsDetail.DataSource;
+                        float b = 0;
+                        foreach(DataRow item in a.Rows)
+                        {
+                            b += float.Parse(item[6].ToString());
+                        }
+                        BUS_Bill.updateInputBill(idtemp, b);
+                        loadDGVNL();
+                        //MessageBox.Show("" + dgvBillsDetail.CurrentRow.Cells[6].Value.ToString());
+                        //MessageBox.Show("" + sumprice);
+                        //MessageBox.Show("" + idInputBill);
+                        //float sum = f(dgvBillsDetail.CurrentRow.Cells[6].Value.ToString());
+                        //if()
                     }
 
                 }
@@ -378,6 +398,8 @@ namespace RJCodeAdvance.ControlBills
             }
         }
         //click vao dgv nhung ben detail
+        float donGia = 0;
+        float sumprice = 0;
         private void dgvBillsDetail_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -389,12 +411,13 @@ namespace RJCodeAdvance.ControlBills
                         
                         txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
                         nbSoLuong.Value = decimal.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
-
+                        donGia = float.Parse(dgvBillsDetail.CurrentRow.Cells[2].Value.ToString());
                     }
                     else
                     {
                         txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
                         nbSoLuong.Value = decimal.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
+                        sumprice = float.Parse(dgvBillsDetail.CurrentRow.Cells[6].Value.ToString());
                     }
                     btXoa.Enabled = true;
                     btSua.Enabled = true;

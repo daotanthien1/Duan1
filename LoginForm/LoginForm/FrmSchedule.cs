@@ -44,10 +44,18 @@ namespace RJCodeAdvance
             frm.ShowDialog();
         }
         // load form
+        public static int a = 0;
         private void FrmSchedule2_Load(object sender, EventArgs e)
         {
             resetForm();
             loadData();
+            if(a == 2)
+            {
+                btThem.Enabled = false;
+                guna2Button3.Enabled = false;
+                guna2Button4.Enabled = false;
+                guna2Button5.Enabled = false;
+            }
         }
         // load data
         void loadData()

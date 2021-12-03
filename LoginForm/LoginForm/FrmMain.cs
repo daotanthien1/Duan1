@@ -1,6 +1,7 @@
 ﻿using BUS_QuanLy;
 using DTO_QuanLy;
 using Guna.UI2.WinForms;
+using RJCodeAdvance.ControlBeverages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace RJCodeAdvance
         {
             InitializeComponent();
             uC_Order2.BringToFront();
+            PhanQuyen();
         }
         private void moveImage(object sender)
         {
@@ -52,6 +54,37 @@ namespace RJCodeAdvance
                 uC_Bill1.BringToFront();
                 uC_Bill1.UC_Bill_Load(this, new EventArgs());
             }
+        }
+
+        //FrmLogin login = new FrmLogin();
+        public static int vaitro = 0; 
+
+        public static int session = 0;  // kiểm tra tình trạng login
+        private void PhanQuyen()
+        {
+            UC_Order.a = vaitro;
+            FrmSchedule.a = vaitro;
+            if (session == 1)
+            {
+                btnKhachHang.Enabled = true;
+                btnNhanVien.Enabled = true;
+                btnNhapNL.Enabled = true;
+                btnThongKe.Enabled = true;
+                btnVoucher.Enabled = true;
+                btHoaDon.Enabled = true;
+                btnGoiDoUong.Enabled = true;
+                if (vaitro != 1)
+                {
+                    btnKhachHang.Enabled = false;
+                    btnNhanVien.Enabled = false;
+                    btnNhapNL.Enabled = false;
+                    btnThongKe.Enabled = false;
+                    btnVoucher.Enabled = false;
+                    btHoaDon.Enabled = false;
+                    btnGoiDoUong.Enabled = true;
+                }
+            }
+            
         }
     }
 }
