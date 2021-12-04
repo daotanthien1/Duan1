@@ -49,13 +49,6 @@ namespace RJCodeAdvance
         {
             resetForm();
             loadData();
-            if(a == 2)
-            {
-                btThem.Enabled = false;
-                guna2Button3.Enabled = false;
-                guna2Button4.Enabled = false;
-                guna2Button5.Enabled = false;
-            }
         }
         // load data
         void loadData()
@@ -81,12 +74,14 @@ namespace RJCodeAdvance
         // reset form
         void resetForm()
         {
-            guna2Button3.Enabled = false;
-            guna2Button4.Enabled = false;
-            guna2Button5.Enabled = false;
+
+            btXoa.Enabled = false;
+            btSua.Enabled = false;
+            btLuu.Enabled = false;
 
             cbCaLam.Enabled = false;
             cbTenNhanVien.Enabled = false;
+
             t2.Checked = false;
             t3.Checked = false;
             t4.Checked = false;
@@ -94,6 +89,14 @@ namespace RJCodeAdvance
             t6.Checked = false;
             t7.Checked = false;
             cn.Checked = false;
+            if (a == 1)
+            {
+                btThem.Enabled = true;
+            }
+            else
+            {
+                btThem.Enabled = false;
+            }
         }
         // lưu lịch 
         private void guna2Button5_Click(object sender, EventArgs e)
@@ -151,9 +154,10 @@ namespace RJCodeAdvance
         //thêm
         private void btThem_Click(object sender, EventArgs e)
         {
-            guna2Button3.Enabled = false;
-            guna2Button4.Enabled = false;
-            guna2Button5.Enabled = true;
+            btXoa.Enabled = false;
+            btSua.Enabled = false;
+            btLuu.Enabled = true;
+            btThemCa.Enabled = true;
 
             cbCaLam.Enabled = true;
             cbTenNhanVien.Enabled = true;
@@ -171,9 +175,21 @@ namespace RJCodeAdvance
             t2.Checked = t3.Checked = t4.Checked = t5.Checked = t6.Checked = t7.Checked = cn.Checked = false;
             if (guna2DataGridView1.Rows.Count > 1)
             {
-                guna2Button5.Enabled = false;
-                guna2Button3.Enabled = true;
-                guna2Button4.Enabled = true;
+                if (a == 1)
+                {
+                    btThem.Enabled = true;
+                    btLuu.Enabled = false;
+                    btXoa.Enabled = true;
+                    btSua.Enabled = true;
+                    cbCaLam.Enabled = true;
+                }
+                else
+                {
+                    btThem.Enabled = false;
+                    btLuu.Enabled = false;
+                    btXoa.Enabled = false;
+                    btSua.Enabled = false;
+                }
 
                 label1.Text = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
                 cbTenNhanVien.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();

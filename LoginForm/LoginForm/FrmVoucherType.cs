@@ -119,7 +119,7 @@ namespace RJCodeAdvance
             if (MessageBox.Show("Bạn chắc chắn muốn Xóa loại voucher này", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
-                if (typeVouchers.DeleteDataTypeVoucher(int.Parse(id)))
+                if (typeVouchers.DeleteDataTypeVoucher(int.Parse(guna2DataGridView1.CurrentRow.Cells[0].Value.ToString())))
                 {
                     MessageBox.Show("Xóa thành công");
                     resetValue();

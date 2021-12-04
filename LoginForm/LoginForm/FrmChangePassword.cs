@@ -17,10 +17,13 @@ namespace RJCodeAdvance
     public partial class FrmChangePassword : Form
     {
         BUS_NhanVien busNV = new BUS_QuanLy.BUS_NhanVien();
+        public static string mail;
 
         public FrmChangePassword()
         {
             InitializeComponent();
+            txtEmail.ReadOnly = true;
+            txtEmail.Text = mail;
         }
 
 

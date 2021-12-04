@@ -31,7 +31,7 @@ namespace RJCodeAdvance
             DataTable dt = units.getData();
             guna2DataGridView1.DataSource = dt;
             guna2DataGridView1.Columns[0].HeaderText = "Id";
-            guna2DataGridView1.Columns[1].HeaderText = "Tên đơn vị";
+            guna2DataGridView1.Columns[1].HeaderText = "Đơn vị tính";
         }
         // reset value
         void resetValue()
@@ -96,6 +96,40 @@ namespace RJCodeAdvance
                 btXoa.Enabled = true;
                 btSua.Enabled = true;
             }
+        }
+
+        private void btXoa_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Bạn chắc chắn muốn sửa units ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (units.deleteDataUnit(int.Parse(guna2DataGridView1.CurrentRow.Cells[0].Value.ToString())))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    loadData();
+                    resetValue();
+                }
+                else
+                {
+                    MessageBox.Show("Không được xóa !!!");
+                    resetValue();
+                }
+            }
+            else
+            {
+            }
+        }
+
+        private void btTimKiem_Click(object sender, EventArgs e)
+        {
+            DataTable a = units.searchDataUnit(txtSearch.Text);
+            guna2DataGridView1.DataSource = a;
+            guna2DataGridView1.Columns[0].HeaderText = "Id";
+            guna2DataGridView1.Columns[0].HeaderText = "Đơn vị tính";
+        }
+
+        private void btDanhSacch_Click(object sender, EventArgs e)
+        {
+            loadData();
         }
     }
 }

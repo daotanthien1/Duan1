@@ -53,7 +53,7 @@ namespace DAL_QuanLy
             {
                 _conn.Open();
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "select Id_type, Name from TypesOfIngredient";
+                cmd.CommandText = "select Id_type, Name from TypesOfIngredient where isDelete = 1";
                 cmd.Connection = _conn;
                 DataTable dtLNL = new DataTable();
                 dtLNL.Load(cmd.ExecuteReader());

@@ -15,28 +15,18 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RJCodeAdvance.ControlIngredient;
+using RJCodeAdvance.ControlBeverages;
 
 namespace RJCodeAdvance
 {
     public partial class FrmLogin : Form
     {
         BUS_NhanVien busNV = new BUS_NhanVien();
+        DTO_NhanVien nv = new DTO_NhanVien();
         public static int id_emp;
         public FrmLogin()
         {
             InitializeComponent();
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            string mail = txtEmail.Text;
-            UC_Voucher.mail = mail;
-            FrmSchedule.mail = mail;
-            UC_Input_Ingredient.mail = mail;
-            FrmBeverageCP frm = new FrmBeverageCP();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
         }
 
         private void btGuiMatKhau_Click(object sender, EventArgs e)
@@ -102,7 +92,7 @@ namespace RJCodeAdvance
         private void btLogin_Click(object sender, EventArgs e)
         {
             SaveSettings();
-            DTO_NhanVien nv = new DTO_NhanVien();
+            
             nv.email = txtEmail.Text;
             nv.password = busNV.encryption(txtPassword.Text);
 
@@ -119,12 +109,16 @@ namespace RJCodeAdvance
                 FrmBeverageCP.session = 1;
                 UC_employee.mail = nv.email;
                 UC_employee.idEmployee = nv.id_employee;
-                
+                UC_Order.idEmployee = nv.id_employee;
+                UC_Voucher.mail = nv.email;
+                FrmSchedule.mail = nv.email;
+                FrmChangePassword.mail = nv.email;
+                UC_Input_Ingredient.mail = nv.email;
+
                 this.Hide();
                 FrmBeverageCP frmcp = new FrmBeverageCP();
                 frmcp.ShowDialog();
                 this.Show();
-
             }
             else
             {

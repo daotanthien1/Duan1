@@ -18,13 +18,12 @@ namespace RJCodeAdvance.ControlBeverages
 {
     public partial class UC_Order : UserControl
     {
-        public static int idEmployee = 1;
-
         BUS_tables bus_table = new BUS_tables();
         BUS_Bill bus_bill = new BUS_Bill();
         BUS_Menu bus_menu = new BUS_Menu();
         BUS_Customer bus_customer = new BUS_Customer();
 
+        public static int idEmployee;
         public UC_Order()
         {
             InitializeComponent();
@@ -139,13 +138,16 @@ namespace RJCodeAdvance.ControlBeverages
             dgv.Columns[0].HeaderText = "Đồ uống";
             dgv.Columns[1].HeaderText = "Số lượng";
             dgv.Columns[2].HeaderText = "Giá";
+            dgv.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgv.Columns[3].HeaderText = "Thành tiền";
+            dgv.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgv.Columns[4].HeaderText = "Giảm giá";
+            dgv.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgv.Columns[5].Visible = false;
            
-            CultureInfo culture = new CultureInfo("vi-VN");
-            Thread.CurrentThread.CurrentCulture = culture;
-            txbTongThanhTien.Text = bus_bill.getSumPrice(id).ToString("c");
+            //CultureInfo culture = new CultureInfo("vi-VN");
+            //Thread.CurrentThread.CurrentCulture = culture;
+            txbTongThanhTien.Text = bus_bill.getSumPrice(id).ToString("#,###");
 
             btSua.Enabled = false;
             btXoa.Enabled = false;
@@ -251,12 +253,11 @@ namespace RJCodeAdvance.ControlBeverages
             {
                 if (Properties.Settings.Default.AutoPrint)
                 {
-                    printPreviewDialog1.Document = printDocument1;
                     printPreviewDialog1.ShowDialog();
                 }
+
                 bus_bill.CheckOut(idBill);
                 ShowBill(table.Id);
-               
             }
             LoadStatusTable(table.Id);
         }
@@ -374,7 +375,6 @@ namespace RJCodeAdvance.ControlBeverages
             }
         }
 
-
         private void printDocument1_PrintPage_1(object sender, PrintPageEventArgs e)
         {
             DTO_tables table = dgv.Tag as DTO_tables;
@@ -416,8 +416,7 @@ namespace RJCodeAdvance.ControlBeverages
             pointY += 25;
             e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, pointY));
             pointY += 25;
-            e.Graphics.DrawString($"Tổng tiền: ", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(35, pointY));
-            e.Graphics.DrawString($"{totalPrice}đ", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(650, pointY));
+            e.Graphics.DrawString($"Tổng tiền: {totalPrice.ToString("#,###")}đ", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(640, pointY));
             pointY += 25;
             e.Graphics.DrawString($"Cảm ơn Quý khách, hẹn gặp lại!", new Font("Arial", 12, FontStyle.Italic), Brushes.Black, new Point(300, pointY));
         }
@@ -430,6 +429,17 @@ namespace RJCodeAdvance.ControlBeverages
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void pbDangXuat_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.user = "";
+            Properties.Settings.Default.pass = "";
+            Properties.Settings.Default.RememberMe = "false";
+            Properties.Settings.Default.Save();
         }
     }
 }

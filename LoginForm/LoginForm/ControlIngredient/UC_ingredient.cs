@@ -118,6 +118,7 @@ namespace RJCodeAdvance.ControlIngredient
                         {
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
                         }
+
                         loaddgv();
                     }
                 }
@@ -247,7 +248,6 @@ namespace RJCodeAdvance.ControlIngredient
                 cbNhaCC.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[2].Value.ToString());
                 cbDVT.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[5].Value.ToString());
                 guna2NumericUpDown1.Text = dgv.CurrentRow.Cells[4].Value.ToString();
-                //MessageBox.Show("" + dgv.CurrentRow.Cells[7].Value.ToString());
                 txtHinh.Text = dgv.CurrentRow.Cells["Images"].Value.ToString();
                 checkUrlImage = txtHinh.Text;
                 fileName = Path.GetFileName(dgv.CurrentRow.Cells["Images"].Value.ToString());
@@ -314,6 +314,16 @@ namespace RJCodeAdvance.ControlIngredient
                 fileSavePath = "Images\\" + fileName;//combine with file name
                 txtHinh.Text = "Images\\" + fileName;
             }
+        }
+
+        private void cbLoaiIngredient_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btDanhSach_Click(object sender, EventArgs e)
+        {
+            loaddgv();
         }
     }
 }

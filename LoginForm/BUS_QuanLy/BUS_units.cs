@@ -12,6 +12,11 @@ namespace BUS_QuanLy
     public class BUS_units
     {
         DAL_units units = new DAL_units();
+
+        public DataTable searchDataUnit(string unit)
+        {
+            return units.searchDataUnit(unit);
+        }
         public DataTable getData()
         {
             return units.getData();
@@ -23,6 +28,10 @@ namespace BUS_QuanLy
         public bool UpdateDataUnits(DTO_units unit)
         {
             return units.UpdateDataUnits(unit);
+        }
+        public bool deleteDataUnit(int id)
+        {
+            return units.deleteDataUnit(id);
         }
     }
 }

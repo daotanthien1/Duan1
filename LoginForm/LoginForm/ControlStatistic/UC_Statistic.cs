@@ -299,6 +299,7 @@ namespace RJCodeAdvance.ControlStatistic
             }
             if (rbTongThe.Checked)
             {
+                rdChart.Visible = true;
                 chart1.Series["Total"].Points.Clear();
                 guna2DataGridView3.SendToBack();
                 guna2DataGridView4.SendToBack();
@@ -367,6 +368,7 @@ namespace RJCodeAdvance.ControlStatistic
             }
             if (rbTongThe.Checked)
             {
+                rdChart.Visible = true;
                 guna2DataGridView3.SendToBack();
                 guna2DataGridView4.SendToBack();
                 chart1.Series["Total"].Points.Clear();
@@ -550,6 +552,8 @@ namespace RJCodeAdvance.ControlStatistic
         bool perform1 = false;
         private void btTK_Click(object sender, EventArgs e)
         {
+            btTK.FillColor = Color.Orange;
+
             ktMonth = false;
             ktYear = false;
             btEx.Enabled = true;
@@ -2026,18 +2030,22 @@ namespace RJCodeAdvance.ControlStatistic
             }
         }
         //In pdf hóa đơn
+        Bitmap btm;
         Image image = Image.FromFile(Application.StartupPath + "\\Images\\pictureBox1.Image.jpg");
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             
             if(guna2DataGridView1.Rows.Count > 1)
             {
-                //int height = guna2DataGridView1.Height;
-                //guna2DataGridView1.Height = guna2DataGridView1.RowCount * guna2DataGridView1.RowTemplate.Height * 2;
-                //btm = new Bitmap(guna2DataGridView1.Width, guna2DataGridView1.Height);
-                //guna2DataGridView1.DrawToBitmap(btm, new Rectangle(0, 0, guna2DataGridView1.Width, guna2DataGridView1.Height));
-                //guna2DataGridView1.Height = height;
+                int height = guna2DataGridView1.Height;
+                guna2DataGridView1.Width = 820;
+                guna2DataGridView1.Height = guna2DataGridView1.RowCount * guna2DataGridView1.RowTemplate.Height * 2;
+                btm = new Bitmap(guna2DataGridView1.Width, guna2DataGridView1.Height);
+                guna2DataGridView1.DrawToBitmap(btm, new Rectangle(0, 0, guna2DataGridView1.Width, guna2DataGridView1.Height));
+                guna2DataGridView1.Height = height;
                 printPreviewDialog1.ShowDialog();
+
+                guna2DataGridView1.Width = 1011;
             }
             else
             {
@@ -2052,51 +2060,19 @@ namespace RJCodeAdvance.ControlStatistic
                 e.Graphics.DrawImageUnscaled(image, 30, 10);
                 e.Graphics.DrawString("SHOP META", new Font("Arial", 22, FontStyle.Bold), Brushes.Black, new Point(330, 60));
                 e.Graphics.DrawString("THỐNG KÊ CHI TIẾT HÓA ĐƠN", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(280, 120));
-                e.Graphics.DrawString("Ngày xuất: "+DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss"), new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, 250));
-                e.Graphics.DrawString("_____________________________________________________________________________________________________________________________________", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(0, 245));
-                
-                e.Graphics.DrawString("Nhân viên\t\tMã khách hàng\tMã bill\tMã bàn\tNgày tạo\tNgày Xuất\tTổng tiền", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 295));
-                e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 310));
-
-                int pointY = 310;
-                foreach (DataRow item in a.Rows)
-                {
-                    pointY += 25;
-                    e.Graphics.DrawString($"{item[0].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, pointY));
-                    e.Graphics.DrawString($"{item[1].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(285, pointY));
-                    e.Graphics.DrawString($"{item[2].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(380, pointY));
-                    e.Graphics.DrawString($"{item[3].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(445, pointY));
-                    e.Graphics.DrawString($"{item[4].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(495, pointY));
-                    e.Graphics.DrawString($"{item[5].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(630, pointY));
-                    e.Graphics.DrawString($"{item[6].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(760, pointY));
-                }
-                pointY += 25;
-                e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, pointY));
-                e.Graphics.DrawString("TỔNG TIỀN: "+txtTongTien.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, pointY+35));
+                e.Graphics.DrawString("Ngày xuất: "+DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss"), new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, 200));
+                e.Graphics.DrawString("_____________________________________________________________________________________________________________________________________", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(0, 205));
+                e.Graphics.DrawImageUnscaled(btm, 0, 230);
             }
             if (rbTongThe.Checked)
             {
                 DataTable a = (DataTable)guna2DataGridView1.DataSource;
                 e.Graphics.DrawImageUnscaled(image, 30, 10);
                 e.Graphics.DrawString("SHOP META", new Font("Arial", 22, FontStyle.Bold), Brushes.Black, new Point(330, 60));
-                e.Graphics.DrawString("THỐNG KÊ TỔNG HỢP HÓA ĐƠN", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(280, 120));
-                e.Graphics.DrawString("Ngày xuất: " + DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss"), new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, 250));
-                e.Graphics.DrawString("_____________________________________________________________________________________________________________________________________", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(0, 245));
-
-                e.Graphics.DrawString("Thời gian\t\tTổng số bill\t\t\t\tTổng tiền", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 295));
-                e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 310));
-
-                int pointY = 310;
-                foreach (DataRow item in a.Rows)
-                {
-                    pointY += 25;
-                    e.Graphics.DrawString($"{item[0].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, pointY));
-                    e.Graphics.DrawString($"{item[1].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(265, pointY));
-                    e.Graphics.DrawString($"{item[2].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(595, pointY));
-                }
-                pointY += 25;
-                e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, pointY));
-                e.Graphics.DrawString("TỔNG TIỀN: " + txtTongTien.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, pointY + 35));
+                e.Graphics.DrawString("THỐNG KÊ TỔNG THỂ HÓA ĐƠN", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(280, 120));
+                e.Graphics.DrawString("Ngày xuất: " + DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss"), new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, 200));
+                e.Graphics.DrawString("_____________________________________________________________________________________________________________________________________", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(0, 205));
+                e.Graphics.DrawImageUnscaled(btm, 0, 230);
             }
         }
         private void btThang2_Click(object sender, EventArgs e)
@@ -2292,6 +2268,9 @@ namespace RJCodeAdvance.ControlStatistic
 
         private void rdChiTiet_CheckedChanged(object sender, EventArgs e)
         {
+            btThang.Enabled = true;
+            btNam.Enabled = true;
+
             chart1.Visible = false;
             btTK.Visible = false;
             btEx1.Enabled = true;
@@ -2310,14 +2289,18 @@ namespace RJCodeAdvance.ControlStatistic
             btThang4.SendToBack();
             btNam3.SendToBack();
             btNam4.SendToBack();
+
+            rdChart.Visible = false;
         }
 
         private void rbTongThe_CheckedChanged(object sender, EventArgs e)
         {
+            btThang.Enabled = true;
+            btNam.Enabled = true;
             btTK.FillColor = Color.FromArgb(0, 118, 212);
             btTK.Visible = true;
             chart1.Visible = false;
-            rdChart.Visible = true;
+            rdChart.Visible = false;
             guna2DataGridView1.Visible = true;
             guna2DataGridView3.Visible = true;
             guna2DataGridView4.Visible = true;
@@ -2340,11 +2323,13 @@ namespace RJCodeAdvance.ControlStatistic
             if(guna2DataGridView4.Rows.Count > 1)
             {
                 int height = guna2DataGridView4.Height;
-                guna2DataGridView4.Height = guna2DataGridView4.RowCount * guna2DataGridView4.RowTemplate.Height * 13;
+                guna2DataGridView4.Width = 820;
+                guna2DataGridView4.Height = guna2DataGridView4.RowCount * guna2DataGridView4.RowTemplate.Height * 2;
                 btm2 = new Bitmap(guna2DataGridView4.Width, guna2DataGridView4.Height);
                 guna2DataGridView4.DrawToBitmap(btm2, new Rectangle(0, 0, guna2DataGridView4.Width, guna2DataGridView4.Height));
                 guna2DataGridView4.Height = height;
                 printPreviewDialog3.ShowDialog();
+                guna2DataGridView4.Width = 1011;
             }
             else
             {
@@ -2357,11 +2342,13 @@ namespace RJCodeAdvance.ControlStatistic
             if(guna2DataGridView3.Rows.Count > 1)
             {
                 int height = guna2DataGridView3.Height;
+                guna2DataGridView3.Width = 820;
                 guna2DataGridView3.Height = guna2DataGridView3.RowCount * guna2DataGridView3.RowTemplate.Height * 2;
                 btm1 = new Bitmap(guna2DataGridView3.Width, guna2DataGridView3.Height);
                 guna2DataGridView3.DrawToBitmap(btm1, new Rectangle(0, 0, guna2DataGridView3.Width, guna2DataGridView3.Height));
                 guna2DataGridView3.Height = height;
                 printPreviewDialog2.ShowDialog();
+                guna2DataGridView3.Width = 1011;
             }
             else
             {
@@ -2550,12 +2537,14 @@ namespace RJCodeAdvance.ControlStatistic
         {
             if (guna2DataGridView2.Rows.Count > 1)
             {
-                //int height = guna2DataGridView2.Height;
-                //guna2DataGridView2.Height = guna2DataGridView2.RowCount * guna2DataGridView2.RowTemplate.Height * 2;
-                //btm4 = new Bitmap(guna2DataGridView2.Width, guna2DataGridView2.Height);
-                //guna2DataGridView2.DrawToBitmap(btm4, new Rectangle(0, 0, guna2DataGridView2.Width, guna2DataGridView2.Height));
-                //guna2DataGridView2.Height = height;
+                int height = guna2DataGridView2.Height;
+                guna2DataGridView2.Width = 820;
+                guna2DataGridView2.Height = guna2DataGridView2.RowCount * guna2DataGridView2.RowTemplate.Height * 2;
+                btm4 = new Bitmap(guna2DataGridView2.Width, guna2DataGridView2.Height);
+                guna2DataGridView2.DrawToBitmap(btm4, new Rectangle(0, 0, guna2DataGridView2.Width, guna2DataGridView2.Height));
+                guna2DataGridView2.Height = height;
                 printPreviewDialog4.ShowDialog();
+                guna2DataGridView2.Width = 1011;
             }
             else
             {
@@ -2573,25 +2562,10 @@ namespace RJCodeAdvance.ControlStatistic
             e.Graphics.DrawImageUnscaled(image, 30, 10);
             e.Graphics.DrawString("SHOP META", new Font("Arial", 22, FontStyle.Bold), Brushes.Black, new Point(330, 60));
             e.Graphics.DrawString("THỐNG KÊ NGUYÊN LIỆU", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(280, 120));
-            e.Graphics.DrawString("Ngày xuất: " + DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss"), new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, 250));
-            e.Graphics.DrawString("_____________________________________________________________________________________________________________________________________", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(0, 245));
+            e.Graphics.DrawString("Ngày xuất: " + DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss"), new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, 200));
+            e.Graphics.DrawString("_____________________________________________________________________________________________________________________________________", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(0, 205));
 
-            e.Graphics.DrawString("Mã bill\tTên nhân viên\t\t\tNgày xuất\t\t\t\tTổng tiền", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 295));
-            e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, 310));
-
-            int pointY = 310;
-            foreach (DataRow item in a.Rows)
-            {
-                pointY += 25;
-                e.Graphics.DrawString($"{item[0].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, pointY));
-                e.Graphics.DrawString($"{item[1].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(100, pointY));
-                e.Graphics.DrawString($"{item[2].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(365, pointY));
-                e.Graphics.DrawString($"{item[3].ToString()}", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(725, pointY));
-                
-            }
-            pointY += 25;
-            e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, pointY));
-            e.Graphics.DrawString("TỔNG TIỀN: " + txtTongTien1.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, pointY + 35));
+            e.Graphics.DrawImageUnscaled(btm4, 0, 230);
         }
         // xuất excel danh thu
         private void guna2Button8_Click(object sender, EventArgs e)
@@ -2793,6 +2767,17 @@ namespace RJCodeAdvance.ControlStatistic
             guna2DataGridView1.Visible = false;
             guna2DataGridView3.Visible = false;
             guna2DataGridView4.Visible = false;
+
+            btEx.Enabled = false;
+            btEx1.Enabled = false;
+            btEx2.Enabled = false;
+
+            btIn1.Enabled = false;
+            btIn2.Enabled = false;
+            btIn3.Enabled = false;
+
+            btThang.Enabled = false;
+            btNam.Enabled = false;
         }
 
         private void txtTongTien_TextChanged(object sender, EventArgs e)

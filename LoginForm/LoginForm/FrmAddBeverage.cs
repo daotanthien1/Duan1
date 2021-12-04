@@ -31,13 +31,14 @@ namespace RJCodeAdvance
 
         private void FrmAddBeverage_Load(object sender, EventArgs e)
         {
+            label1.Text = Beverage.Price.ToString("#,###") + " VNĐ";
             lblBeverageName.Text = Beverage.Name;
             lblPrice.Text = Beverage.Price + "đ";
             ptbImg.Image = Image.FromFile(Application.StartupPath + "\\" + Beverage.Image);
-            txbTongTien.Text = Beverage.Price.ToString("c");
+            txbTongTien.Text = Beverage.Price.ToString("#,###");
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             int idbill = bus_bill.GetUncheckBill(IdTable);
             if (txbVoucher.Text.Length == 6 && sale == 0)
@@ -108,7 +109,7 @@ namespace RJCodeAdvance
 
         private void nbSoLuong_ValueChanged(object sender, EventArgs e)
         {
-            txbTongTien.Text = (Beverage.Price * int.Parse(nbSoLuong.Value.ToString())).ToString("c");
+            txbTongTien.Text = (Beverage.Price * int.Parse(nbSoLuong.Value.ToString())).ToString("#,###");
         }
     }
 }

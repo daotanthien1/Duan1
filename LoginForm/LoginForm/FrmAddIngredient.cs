@@ -46,7 +46,7 @@ namespace RJCodeAdvance
             guna2TextBox1.Text = (ingredients.Price * int.Parse(nbSoLuong.Value.ToString())).ToString();
         }
         public DataTable dt = new DataTable();
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             dt.Clear();
             int index = lblPrice.Text.IndexOf(" ");

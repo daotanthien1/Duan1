@@ -30,31 +30,31 @@ namespace RJCodeAdvance.ControlBills
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Bill));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btXoa = new Guna.UI2.WinForms.Guna2Button();
             this.label8 = new System.Windows.Forms.Label();
             this.rdoNguyenLieu = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdoDoUong = new Guna.UI2.WinForms.Guna2RadioButton();
             this.cbbFilterCol = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtSearchDoUong = new Guna.UI2.WinForms.Guna2TextBox();
             this.btTimKiem = new Guna.UI2.WinForms.Guna2Button();
-            this.btXoa = new Guna.UI2.WinForms.Guna2Button();
             this.dgvBill = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btSua = new Guna.UI2.WinForms.Guna2Button();
+            this.btnXoaBillsDetail = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.nbSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.txtDoUong = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btSua = new Guna.UI2.WinForms.Guna2Button();
-            this.btnXoaBillsDetail = new Guna.UI2.WinForms.Guna2Button();
             this.dgvBillsDetail = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
@@ -73,13 +73,13 @@ namespace RJCodeAdvance.ControlBills
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btXoa);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.rdoNguyenLieu);
             this.panel1.Controls.Add(this.rdoDoUong);
             this.panel1.Controls.Add(this.cbbFilterCol);
             this.panel1.Controls.Add(this.txtSearchDoUong);
             this.panel1.Controls.Add(this.btTimKiem);
-            this.panel1.Controls.Add(this.btXoa);
             this.panel1.Controls.Add(this.dgvBill);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -87,6 +87,33 @@ namespace RJCodeAdvance.ControlBills
             this.panel1.Size = new System.Drawing.Size(561, 651);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btXoa
+            // 
+            this.btXoa.Animated = true;
+            this.btXoa.BorderColor = System.Drawing.Color.White;
+            this.btXoa.BorderRadius = 6;
+            this.btXoa.BorderThickness = 1;
+            this.btXoa.CheckedState.Parent = this.btXoa;
+            this.btXoa.CustomImages.Parent = this.btXoa;
+            this.btXoa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btXoa.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btXoa.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btXoa.DisabledState.Parent = this.btXoa;
+            this.btXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btXoa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.ForeColor = System.Drawing.Color.White;
+            this.btXoa.HoverState.Parent = this.btXoa;
+            this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
+            this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btXoa.Location = new System.Drawing.Point(14, 592);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.ShadowDecoration.Parent = this.btXoa;
+            this.btXoa.Size = new System.Drawing.Size(122, 34);
+            this.btXoa.TabIndex = 142;
+            this.btXoa.Text = "Xóa";
+            this.btXoa.Click += new System.EventHandler(this.btXoa_Click_1);
             // 
             // label8
             // 
@@ -223,60 +250,32 @@ namespace RJCodeAdvance.ControlBills
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
             // 
-            // btXoa
-            // 
-            this.btXoa.Animated = true;
-            this.btXoa.BorderColor = System.Drawing.Color.White;
-            this.btXoa.BorderRadius = 6;
-            this.btXoa.BorderThickness = 1;
-            this.btXoa.CheckedState.Parent = this.btXoa;
-            this.btXoa.CustomImages.Parent = this.btXoa;
-            this.btXoa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
-            this.btXoa.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
-            this.btXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
-            this.btXoa.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btXoa.DisabledState.Parent = this.btXoa;
-            this.btXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btXoa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btXoa.ForeColor = System.Drawing.Color.White;
-            this.btXoa.HoverState.Parent = this.btXoa;
-            this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
-            this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btXoa.ImageSize = new System.Drawing.Size(35, 35);
-            this.btXoa.Location = new System.Drawing.Point(15, 592);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.ShadowDecoration.Parent = this.btXoa;
-            this.btXoa.Size = new System.Drawing.Size(122, 34);
-            this.btXoa.TabIndex = 115;
-            this.btXoa.Text = "Xóa";
-            this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
-            // 
             // dgvBill
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dgvBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBill.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvBill.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBill.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBill.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvBill.EnableHeadersVisualStyles = false;
             this.dgvBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvBill.Location = new System.Drawing.Point(14, 227);
@@ -312,19 +311,73 @@ namespace RJCodeAdvance.ControlBills
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btSua);
+            this.panel2.Controls.Add(this.btnXoaBillsDetail);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.nbSoLuong);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtDoUong);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.btSua);
-            this.panel2.Controls.Add(this.btnXoaBillsDetail);
             this.panel2.Controls.Add(this.dgvBillsDetail);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(567, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(533, 651);
             this.panel2.TabIndex = 2;
+            // 
+            // btSua
+            // 
+            this.btSua.Animated = true;
+            this.btSua.BorderColor = System.Drawing.Color.White;
+            this.btSua.BorderRadius = 6;
+            this.btSua.BorderThickness = 1;
+            this.btSua.CheckedState.Parent = this.btSua;
+            this.btSua.CustomImages.Parent = this.btSua;
+            this.btSua.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btSua.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btSua.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btSua.DisabledState.Parent = this.btSua;
+            this.btSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btSua.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSua.ForeColor = System.Drawing.Color.White;
+            this.btSua.HoverState.Parent = this.btSua;
+            this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
+            this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btSua.Location = new System.Drawing.Point(145, 592);
+            this.btSua.Name = "btSua";
+            this.btSua.ShadowDecoration.Parent = this.btSua;
+            this.btSua.Size = new System.Drawing.Size(122, 34);
+            this.btSua.TabIndex = 144;
+            this.btSua.Text = "Sửa";
+            this.btSua.Click += new System.EventHandler(this.btSua_Click_1);
+            // 
+            // btnXoaBillsDetail
+            // 
+            this.btnXoaBillsDetail.Animated = true;
+            this.btnXoaBillsDetail.BorderColor = System.Drawing.Color.White;
+            this.btnXoaBillsDetail.BorderRadius = 6;
+            this.btnXoaBillsDetail.BorderThickness = 1;
+            this.btnXoaBillsDetail.CheckedState.Parent = this.btnXoaBillsDetail;
+            this.btnXoaBillsDetail.CustomImages.Parent = this.btnXoaBillsDetail;
+            this.btnXoaBillsDetail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btnXoaBillsDetail.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btnXoaBillsDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btnXoaBillsDetail.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnXoaBillsDetail.DisabledState.Parent = this.btnXoaBillsDetail;
+            this.btnXoaBillsDetail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnXoaBillsDetail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaBillsDetail.ForeColor = System.Drawing.Color.White;
+            this.btnXoaBillsDetail.HoverState.Parent = this.btnXoaBillsDetail;
+            this.btnXoaBillsDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaBillsDetail.Image")));
+            this.btnXoaBillsDetail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnXoaBillsDetail.Location = new System.Drawing.Point(17, 592);
+            this.btnXoaBillsDetail.Name = "btnXoaBillsDetail";
+            this.btnXoaBillsDetail.ShadowDecoration.Parent = this.btnXoaBillsDetail;
+            this.btnXoaBillsDetail.Size = new System.Drawing.Size(122, 34);
+            this.btnXoaBillsDetail.TabIndex = 143;
+            this.btnXoaBillsDetail.Text = "Xóa";
+            this.btnXoaBillsDetail.Click += new System.EventHandler(this.btnXoaBillsDetail_Click_1);
             // 
             // label1
             // 
@@ -408,88 +461,32 @@ namespace RJCodeAdvance.ControlBills
             this.label2.TabIndex = 138;
             this.label2.Text = "Tên đồ uống:";
             // 
-            // btSua
-            // 
-            this.btSua.Animated = true;
-            this.btSua.BorderColor = System.Drawing.Color.White;
-            this.btSua.BorderRadius = 6;
-            this.btSua.BorderThickness = 1;
-            this.btSua.CheckedState.Parent = this.btSua;
-            this.btSua.CustomImages.Parent = this.btSua;
-            this.btSua.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
-            this.btSua.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
-            this.btSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
-            this.btSua.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btSua.DisabledState.Parent = this.btSua;
-            this.btSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btSua.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSua.ForeColor = System.Drawing.Color.White;
-            this.btSua.HoverState.Parent = this.btSua;
-            this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
-            this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btSua.ImageSize = new System.Drawing.Size(35, 35);
-            this.btSua.Location = new System.Drawing.Point(152, 592);
-            this.btSua.Name = "btSua";
-            this.btSua.ShadowDecoration.Parent = this.btSua;
-            this.btSua.Size = new System.Drawing.Size(122, 34);
-            this.btSua.TabIndex = 137;
-            this.btSua.Text = "Sửa";
-            this.btSua.Click += new System.EventHandler(this.btSua_Click);
-            // 
-            // btnXoaBillsDetail
-            // 
-            this.btnXoaBillsDetail.Animated = true;
-            this.btnXoaBillsDetail.BorderColor = System.Drawing.Color.White;
-            this.btnXoaBillsDetail.BorderRadius = 6;
-            this.btnXoaBillsDetail.BorderThickness = 1;
-            this.btnXoaBillsDetail.CheckedState.Parent = this.btnXoaBillsDetail;
-            this.btnXoaBillsDetail.CustomImages.Parent = this.btnXoaBillsDetail;
-            this.btnXoaBillsDetail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
-            this.btnXoaBillsDetail.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
-            this.btnXoaBillsDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(190)))));
-            this.btnXoaBillsDetail.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnXoaBillsDetail.DisabledState.Parent = this.btnXoaBillsDetail;
-            this.btnXoaBillsDetail.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnXoaBillsDetail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaBillsDetail.ForeColor = System.Drawing.Color.White;
-            this.btnXoaBillsDetail.HoverState.Parent = this.btnXoaBillsDetail;
-            this.btnXoaBillsDetail.Image = ((System.Drawing.Image)(resources.GetObject("btnXoaBillsDetail.Image")));
-            this.btnXoaBillsDetail.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXoaBillsDetail.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnXoaBillsDetail.Location = new System.Drawing.Point(15, 592);
-            this.btnXoaBillsDetail.Name = "btnXoaBillsDetail";
-            this.btnXoaBillsDetail.ShadowDecoration.Parent = this.btnXoaBillsDetail;
-            this.btnXoaBillsDetail.Size = new System.Drawing.Size(122, 34);
-            this.btnXoaBillsDetail.TabIndex = 136;
-            this.btnXoaBillsDetail.Text = "Xóa";
-            this.btnXoaBillsDetail.Click += new System.EventHandler(this.btnXoaBillsDetail_Click);
-            // 
             // dgvBillsDetail
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvBillsDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.dgvBillsDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvBillsDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBillsDetail.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvBillsDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBillsDetail.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBillsDetail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBillsDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBillsDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvBillsDetail.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBillsDetail.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBillsDetail.DefaultCellStyle = dataGridViewCellStyle18;
             this.dgvBillsDetail.EnableHeadersVisualStyles = false;
             this.dgvBillsDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvBillsDetail.Location = new System.Drawing.Point(17, 227);
@@ -567,7 +564,6 @@ namespace RJCodeAdvance.ControlBills
         private Guna.UI2.WinForms.Guna2ComboBox cbbFilterCol;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchDoUong;
         private Guna.UI2.WinForms.Guna2Button btTimKiem;
-        private Guna.UI2.WinForms.Guna2Button btXoa;
         private Guna.UI2.WinForms.Guna2DataGridView dgvBill;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
@@ -575,11 +571,12 @@ namespace RJCodeAdvance.ControlBills
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txtDoUong;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button btSua;
-        private Guna.UI2.WinForms.Guna2Button btnXoaBillsDetail;
         private Guna.UI2.WinForms.Guna2DataGridView dgvBillsDetail;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2Button btnXoaBillsDetail;
+        private Guna.UI2.WinForms.Guna2Button btXoa;
+        private Guna.UI2.WinForms.Guna2Button btSua;
     }
 }

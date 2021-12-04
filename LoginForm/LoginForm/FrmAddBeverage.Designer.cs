@@ -39,7 +39,6 @@ namespace RJCodeAdvance
             this.txbVoucher = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.lblBeverageName = new System.Windows.Forms.Label();
-            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txbTongTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -49,6 +48,8 @@ namespace RJCodeAdvance
             this.guna2ShadowForm2 = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbImg)).BeginInit();
             this.SuspendLayout();
@@ -177,27 +178,6 @@ namespace RJCodeAdvance
             this.lblBeverageName.Text = "trà sữa trân châu";
             this.lblBeverageName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnThem
-            // 
-            this.btnThem.BorderRadius = 3;
-            this.btnThem.CheckedState.Parent = this.btnThem;
-            this.btnThem.CustomImages.Parent = this.btnThem;
-            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
-            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
-            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
-            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.White;
-            this.btnThem.DisabledState.Parent = this.btnThem;
-            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.HoverState.Parent = this.btnThem;
-            this.btnThem.Location = new System.Drawing.Point(446, 249);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.ShadowDecoration.Parent = this.btnThem;
-            this.btnThem.Size = new System.Drawing.Size(121, 36);
-            this.btnThem.TabIndex = 61;
-            this.btnThem.Text = "Thêm ";
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -265,7 +245,7 @@ namespace RJCodeAdvance
             this.lblPrice.AutoSize = true;
             this.lblPrice.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.lblPrice.Location = new System.Drawing.Point(259, 71);
+            this.lblPrice.Location = new System.Drawing.Point(167, 85);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(50, 16);
             this.lblPrice.TabIndex = 151;
@@ -320,26 +300,66 @@ namespace RJCodeAdvance
             this.guna2ControlBox1.Size = new System.Drawing.Size(37, 26);
             this.guna2ControlBox1.TabIndex = 153;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.label1.Location = new System.Drawing.Point(260, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 16);
+            this.label1.TabIndex = 155;
+            this.label1.Text = "10000đ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Animated = true;
+            this.btnThem.BorderColor = System.Drawing.Color.White;
+            this.btnThem.BorderRadius = 3;
+            this.btnThem.BorderThickness = 1;
+            this.btnThem.CheckedState.Parent = this.btnThem;
+            this.btnThem.CustomBorderColor = System.Drawing.Color.Gray;
+            this.btnThem.CustomImages.Parent = this.btnThem;
+            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(199)))));
+            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.White;
+            this.btnThem.DisabledState.Parent = this.btnThem;
+            this.btnThem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.HoverState.Parent = this.btnThem;
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.btnThem.Location = new System.Drawing.Point(446, 249);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.ShadowDecoration.Parent = this.btnThem;
+            this.btnThem.Size = new System.Drawing.Size(122, 36);
+            this.btnThem.TabIndex = 156;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
+            // 
             // FrmAddBeverage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(586, 304);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.ptbImg);
             this.Controls.Add(this.txbTongTien);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.lblBeverageName);
             this.Controls.Add(this.btNhap);
             this.Controls.Add(this.txbVoucher);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.nbSoLuong);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblPrice);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAddBeverage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -362,7 +382,6 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2TextBox txbVoucher;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblBeverageName;
-        private Guna.UI2.WinForms.Guna2Button btnThem;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txbTongTien;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
@@ -372,5 +391,7 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2ShadowForm guna2ShadowForm2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Button btnThem;
     }
 }

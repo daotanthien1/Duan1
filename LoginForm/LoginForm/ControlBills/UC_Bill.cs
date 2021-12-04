@@ -189,7 +189,7 @@ namespace RJCodeAdvance.ControlBills
             }
         }
         //click nut xoa
-        private void btXoa_Click(object sender, EventArgs e)
+        private void btXoa_Click_1(object sender, EventArgs e)
         {
 
             try
@@ -246,7 +246,7 @@ namespace RJCodeAdvance.ControlBills
 
         }
         //click nut xoa nhung ben detail
-        private void btnXoaBillsDetail_Click(object sender, EventArgs e)
+        private void btnXoaBillsDetail_Click_1(object sender, EventArgs e)
         {
 
             try
@@ -307,7 +307,7 @@ namespace RJCodeAdvance.ControlBills
 
         }
         //click nut sua
-        private void btSua_Click(object sender, EventArgs e)
+        private void btSua_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -503,7 +503,6 @@ namespace RJCodeAdvance.ControlBills
                 label8.ForeColor = Color.FromArgb(0, 118, 212);
             }
         }
+
     }
-}// thôi m làm đi, ổn hết chưa không t thoát
-// ổn rồi
-// ocode ngon ok
+}

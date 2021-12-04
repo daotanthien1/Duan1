@@ -101,7 +101,7 @@ namespace RJCodeAdvance.ControlIngredient
             }
         }
         BUS_InputBills bill = new BUS_InputBills();
-        public static string mail = "tungdz0001@gmail.com";
+        public static string mail;
         private void UC_Input_Ingredient_Click(object sender, EventArgs e)
         {
         }

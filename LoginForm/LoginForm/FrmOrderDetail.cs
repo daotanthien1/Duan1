@@ -51,7 +51,7 @@ namespace RJCodeAdvance
 
                 beverage.BeverageId = item.Id_Beverage;
                 beverage.BeverageName = item.Name;
-                beverage.BeveragePrice = item.Price.ToString() + "đ";
+                beverage.BeveragePrice = item.Price.ToString("#,###") + " VNĐ";
                 if (File.Exists(Application.StartupPath + "\\" + item.Image))
                 {
                     beverage.BeverageImage = Image.FromFile(Application.StartupPath + "\\" + item.Image);

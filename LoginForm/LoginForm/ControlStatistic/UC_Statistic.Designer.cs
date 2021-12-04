@@ -590,7 +590,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTongTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTongTien.FocusedState.Parent = this.txtTongTien;
             this.txtTongTien.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtTongTien.ForeColor = System.Drawing.Color.Black;
+            this.txtTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTongTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTongTien.HoverState.Parent = this.txtTongTien;
             this.txtTongTien.Location = new System.Drawing.Point(155, 495);
@@ -1329,7 +1329,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTongTien1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTongTien1.FocusedState.Parent = this.txtTongTien1;
             this.txtTongTien1.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.txtTongTien1.ForeColor = System.Drawing.Color.Black;
+            this.txtTongTien1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTongTien1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTongTien1.HoverState.Parent = this.txtTongTien1;
             this.txtTongTien1.Location = new System.Drawing.Point(200, 501);

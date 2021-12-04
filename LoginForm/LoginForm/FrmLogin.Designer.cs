@@ -36,7 +36,6 @@ namespace RJCodeAdvance
             this.toggleNhoTaiKhoan = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.label1 = new System.Windows.Forms.Label();
             this.btGuiMatKhau = new System.Windows.Forms.Label();
-            this.btDangNhap = new Guna.UI2.WinForms.Guna2Button();
             this.btThoat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -44,6 +43,7 @@ namespace RJCodeAdvance
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.btDangNhap = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,28 +147,6 @@ namespace RJCodeAdvance
             this.btGuiMatKhau.Text = "Quên mật khẩu";
             this.btGuiMatKhau.Click += new System.EventHandler(this.btGuiMatKhau_Click);
             // 
-            // btDangNhap
-            // 
-            this.btDangNhap.BorderRadius = 10;
-            this.btDangNhap.CheckedState.Parent = this.btDangNhap;
-            this.btDangNhap.CustomImages.Parent = this.btDangNhap;
-            this.btDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btDangNhap.DisabledState.Parent = this.btDangNhap;
-            this.btDangNhap.FillColor = System.Drawing.Color.SlateBlue;
-            this.btDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btDangNhap.ForeColor = System.Drawing.Color.White;
-            this.btDangNhap.HoverState.Parent = this.btDangNhap;
-            this.btDangNhap.Location = new System.Drawing.Point(38, 241);
-            this.btDangNhap.Name = "btDangNhap";
-            this.btDangNhap.ShadowDecoration.Parent = this.btDangNhap;
-            this.btDangNhap.Size = new System.Drawing.Size(101, 35);
-            this.btDangNhap.TabIndex = 6;
-            this.btDangNhap.Text = "Đăng nhập";
-            this.btDangNhap.Click += new System.EventHandler(this.btLogin_Click);
-            // 
             // btThoat
             // 
             this.btThoat.BorderRadius = 10;
@@ -251,6 +229,28 @@ namespace RJCodeAdvance
             // 
             this.guna2DragControl1.TargetControl = this;
             // 
+            // btDangNhap
+            // 
+            this.btDangNhap.BorderRadius = 10;
+            this.btDangNhap.CheckedState.Parent = this.btDangNhap;
+            this.btDangNhap.CustomImages.Parent = this.btDangNhap;
+            this.btDangNhap.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btDangNhap.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btDangNhap.DisabledState.Parent = this.btDangNhap;
+            this.btDangNhap.FillColor = System.Drawing.Color.SlateBlue;
+            this.btDangNhap.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btDangNhap.ForeColor = System.Drawing.Color.White;
+            this.btDangNhap.HoverState.Parent = this.btDangNhap;
+            this.btDangNhap.Location = new System.Drawing.Point(38, 241);
+            this.btDangNhap.Name = "btDangNhap";
+            this.btDangNhap.ShadowDecoration.Parent = this.btDangNhap;
+            this.btDangNhap.Size = new System.Drawing.Size(101, 35);
+            this.btDangNhap.TabIndex = 6;
+            this.btDangNhap.Text = "Đăng nhập";
+            this.btDangNhap.Click += new System.EventHandler(this.btLogin_Click);
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,17 +285,17 @@ namespace RJCodeAdvance
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2ToggleSwitch toggleNhoTaiKhoan;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label btGuiMatKhau;
-        private Guna.UI2.WinForms.Guna2Button btDangNhap;
         private Guna.UI2.WinForms.Guna2Button btThoat;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        public Guna.UI2.WinForms.Guna2TextBox txtPassword;
+        private Guna.UI2.WinForms.Guna2Button btDangNhap;
         //private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

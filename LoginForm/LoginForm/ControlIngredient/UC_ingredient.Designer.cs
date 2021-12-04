@@ -182,7 +182,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.cbLoaiIngredient.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLoaiIngredient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLoaiIngredient.FocusedState.Parent = this.cbLoaiIngredient;
-            this.cbLoaiIngredient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbLoaiIngredient.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cbLoaiIngredient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.cbLoaiIngredient.HoverState.Parent = this.cbLoaiIngredient;
             this.cbLoaiIngredient.ItemHeight = 30;
@@ -196,6 +196,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.cbLoaiIngredient.ShadowDecoration.Parent = this.cbLoaiIngredient;
             this.cbLoaiIngredient.Size = new System.Drawing.Size(271, 36);
             this.cbLoaiIngredient.TabIndex = 34;
+            this.cbLoaiIngredient.SelectedIndexChanged += new System.EventHandler(this.cbLoaiIngredient_SelectedIndexChanged);
             // 
             // cbNhaCC
             // 
@@ -480,6 +481,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.btDanhSach.TabIndex = 117;
             this.btDanhSach.Text = "Danh Sách";
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
+            this.btDanhSach.Click += new System.EventHandler(this.btDanhSach_Click);
             // 
             // cbDVT
             // 

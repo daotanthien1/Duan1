@@ -66,22 +66,22 @@ namespace RJCodeAdvance
             FrmSchedule.a = vaitro;
             if (session == 1)
             {
-                btnKhachHang.Enabled = true;
-                btnNhanVien.Enabled = true;
-                btnNhapNL.Enabled = true;
-                btnThongKe.Enabled = true;
-                btnVoucher.Enabled = true;
-                btHoaDon.Enabled = true;
-                btnGoiDoUong.Enabled = true;
+                btnKhachHang.Visible = true;
+                btnNhanVien.Visible = true;
+                btnNhapNL.Visible = true;
+                btnThongKe.Visible = true;
+                btnVoucher.Visible = true;
+                btHoaDon.Visible = true;
+                btnGoiDoUong.Visible = true;
                 if (vaitro != 1)
                 {
-                    btnKhachHang.Enabled = false;
-                    btnNhanVien.Enabled = false;
-                    btnNhapNL.Enabled = false;
-                    btnThongKe.Enabled = false;
-                    btnVoucher.Enabled = false;
-                    btHoaDon.Enabled = false;
-                    btnGoiDoUong.Enabled = true;
+                    btnKhachHang.Visible = false;
+                    btnNhanVien.Visible = false;
+                    btnNhapNL.Visible = false;
+                    btnThongKe.Visible = false;
+                    btnVoucher.Visible = false;
+                    btHoaDon.Visible = false;
+                    btnGoiDoUong.Visible = true;
                 }
             }
             

@@ -59,7 +59,7 @@ namespace DAL_QuanLy
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = "sp_TypeOfIngredientUpdate";
                 cmd.Parameters.AddWithValue("Name", lnl.Name);
-                cmd.Parameters.AddWithValue("Id_ingredient", lnl.Id_Type);
+                cmd.Parameters.AddWithValue("Id_type", lnl.Id_Type);
 
                 if (cmd.ExecuteNonQuery() > 0)
                     return true;

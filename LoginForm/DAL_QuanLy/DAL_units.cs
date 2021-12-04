@@ -68,5 +68,43 @@ namespace DAL_QuanLy
             }
             return false;
         }
+        public bool deleteDataUnit(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "deleteDataUnit";
+                cmd.Parameters.AddWithValue("id", id);
+                if (cmd.ExecuteNonQuery() > 0)
+                    return true;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+            return false;
+        }
+        public DataTable searchDataUnit(string units)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SearchUnit";
+                cmd.Parameters.AddWithValue("name", units);
+                DataTable a = new DataTable();
+                a.Load(cmd.ExecuteReader());
+                return a;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }

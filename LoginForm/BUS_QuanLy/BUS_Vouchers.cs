@@ -12,7 +12,10 @@ namespace BUS_QuanLy
     public class BUS_Vouchers
     {
         DAL_Vouchers vouchers = new DAL_Vouchers();
-
+        public DataTable searchVoucher(int id)
+        {
+            return vouchers.searchVoucher(id);
+        }
         public bool deleteVoucher(string id_voucher)
         {
             return vouchers.deleteVoucher(id_voucher);

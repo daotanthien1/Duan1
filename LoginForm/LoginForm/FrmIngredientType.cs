@@ -55,7 +55,7 @@ namespace RJCodeAdvance
                 if (checkTextBox())
                 {
                     DTO_LoaiNguyenLieu dtoTI = new DTO_LoaiNguyenLieu(txtTenLoaiNL.Text,
-                        Convert.ToInt32(dgv.CurrentRow.Cells["Id_Type"].Value.ToString()));
+                        Convert.ToInt32(dgv.CurrentRow.Cells[0].Value.ToString()));
                     if (busLNL.UpdateLoaiNguyenLieu(dtoTI))
                     {
                         MessageBox.Show("Thành công");

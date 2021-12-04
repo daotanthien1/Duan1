@@ -308,7 +308,8 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
             return false;
-        }public bool DeleteBillsDetailDoUong(int id)
+        }
+        public bool DeleteBillsDetailDoUong(int id)
         {
             try
             {

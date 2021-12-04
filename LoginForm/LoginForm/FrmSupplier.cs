@@ -99,6 +99,10 @@ namespace RJCodeAdvance
                         MessageBox.Show("Thành công");
                         loaddgv();
                     }
+                    else
+                    {
+                        MessageBox.Show("Nhà cung cấp đã trùng email");
+                    }
                 }
             }
             catch (Exception ex)
@@ -177,7 +181,7 @@ namespace RJCodeAdvance
                     btXoa.Enabled = true;
                     btSua.Enabled = true;
                     txtTenNCC.Enabled = true;
-                    txtEmail.Enabled = true;
+                    txtEmail.Enabled = false;
                     txtDiaChi.Enabled = true;
                     txtTenNCC.Text = dgv.CurrentRow.Cells["Name"].Value.ToString();
                     txtEmail.Text = dgv.CurrentRow.Cells["Email"].Value.ToString();

@@ -18,7 +18,7 @@ namespace RJCodeAdvance.ControlVouchers
         {
             InitializeComponent();
         }
-        public static string mail = "tungdz0001@gmail.com";
+        public static string mail;
         public string id;
         BUS_Vouchers vouchers = new BUS_Vouchers();
         private void F2_UpdateEventHandler(object sender, FrmVoucherType.UpdateEventArgs args)
@@ -89,8 +89,9 @@ namespace RJCodeAdvance.ControlVouchers
                 string status = txtSoLuong.CurrentRow.Cells[4].Value.ToString();
                 id = txtSoLuong.CurrentRow.Cells[0].Value.ToString();
                 int value = int.Parse(cbSale.SelectedValue.ToString());
+
                 DataTable counts = vouchers.getCountSaleVoucher(value);
-                txtSoLuong.Text = counts.Rows[0][0].ToString();
+                guna2TextBox1.Text = ""+ counts.Rows[0][0].ToString();
                 txtThem.ResetText();
                 if(int.Parse(status) == 1)
                 {
@@ -154,26 +155,7 @@ namespace RJCodeAdvance.ControlVouchers
 
         private void btTimKiem_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(cbSearch.SelectedValue.ToString());
-            DataTable voucher = vouchers.searchDataVoucher(id);
-            if (voucher.Rows.Count > 0)
-            {
-                txtSoLuong.DataSource = voucher;
-                txtSoLuong.Columns[0].HeaderText = "Mã voucher";
-                txtSoLuong.Columns[1].HeaderText = "Ngày bắt đầu";
-                txtSoLuong.Columns[2].HeaderText = "Ngày kết thúc";
-                txtSoLuong.Columns[3].HeaderText = "Khuyến mãi";
-                DataTable number = vouchers.getCountSaleVoucher(id);
-                txtSoLuong.Text = number.Rows[0][0].ToString();
-                txtThem.ResetText();
-            }
-            else
-            {
-                MessageBox.Show("Chưa có khuyến mãi " + cbSearch.Text + "%");
-                loadData();
-            }
-            DataTable counts = vouchers.getCountSaleVoucher(id);
-            txtSoLuong.Text = counts.Rows[0][0].ToString();
+            
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -208,6 +190,30 @@ namespace RJCodeAdvance.ControlVouchers
         private void guna2NumericUpDown1_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btTimKiem_Click_1(object sender, EventArgs e)
+        {
+            int id = int.Parse(cbSearch.SelectedValue.ToString());
+            DataTable voucher = vouchers.searchDataVoucher(id);
+            if (voucher.Rows.Count > 0)
+            {
+                txtSoLuong.DataSource = voucher;
+                txtSoLuong.Columns[0].HeaderText = "Mã voucher";
+                txtSoLuong.Columns[1].HeaderText = "Ngày bắt đầu";
+                txtSoLuong.Columns[2].HeaderText = "Ngày kết thúc";
+                txtSoLuong.Columns[3].HeaderText = "Khuyến mãi";
+                DataTable number = vouchers.getCountSaleVoucher(id);
+                txtSoLuong.Text = number.Rows[0][0].ToString();
+                txtThem.ResetText();
+            }
+            else
+            {
+                MessageBox.Show("Chưa có khuyến mãi " + cbSearch.Text + "%");
+                loadData();
+            }
+            DataTable counts = vouchers.getCountSaleVoucher(id);
+            txtSoLuong.Text = counts.Rows[0][0].ToString();
         }
     }
 }

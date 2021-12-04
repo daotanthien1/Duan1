@@ -11,6 +11,25 @@ namespace DAL_QuanLy
 {
     public class DAL_Vouchers : DBConnect
     {
+        public DataTable searchVoucher(int id)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "SearchVoucher";
+                cmd.Parameters.AddWithValue("id", id);
+                DataTable a = new DataTable();
+                a.Load(cmd.ExecuteReader());
+                return a;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
         public bool deleteVoucher(string id_voucher)
         {
             try
