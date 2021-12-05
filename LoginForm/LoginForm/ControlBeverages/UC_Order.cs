@@ -231,7 +231,7 @@ namespace RJCodeAdvance.ControlBeverages
                             if(voucher !=null)
                             {
                                 string subject = "Bạn đã nhận được voucher khuyến mãi " + Name_voucherType + "% của shop META <3";
-                                string body = $"Mã voucher của bạn là:{voucher.id_vouchers} dùng đến ngày {voucher.dayend}";
+                                string body = $"Mã voucher của bạn là:{voucher.id_vouchers} dùng đến ngày {voucher.dayend} \nÁp dụng cho 1 sản phẩm";
                                 if (BUS_SendGmail.SendMail(txbEmail.Text, subject, body))
                                 {
                                     bus_voucher.UpdateVoucherForSend(voucher.id_vouchers);

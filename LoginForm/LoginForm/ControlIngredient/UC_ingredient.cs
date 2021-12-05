@@ -100,8 +100,6 @@ namespace RJCodeAdvance.ControlIngredient
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-            try
-            {
                 if (checkTextBox())
                 {
                     DTO_NguyenLieu dtoIg = new DTO_NguyenLieu(txtTenIngredient.Text, Convert.ToInt32(cbNhaCC.SelectedValue.ToString()),
@@ -118,15 +116,9 @@ namespace RJCodeAdvance.ControlIngredient
                         {
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
                         }
-
                         loaddgv();
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
 
