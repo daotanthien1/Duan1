@@ -346,5 +346,10 @@ namespace RJCodeAdvance
                 MessageBox.Show("Không tìm thấy lịch làm nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btDanhSacch_Click(object sender, EventArgs e)
+        {
+            loadData();
+        }
     }
 }

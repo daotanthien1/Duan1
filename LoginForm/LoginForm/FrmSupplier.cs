@@ -197,5 +197,10 @@ namespace RJCodeAdvance
 
             }
         }
+
+        private void btDanhSacch_Click(object sender, EventArgs e)
+        {
+            loaddgv();
+        }
     }
 }

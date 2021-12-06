@@ -167,5 +167,10 @@ namespace RJCodeAdvance
             }
             ResetValue();
         }
+
+        private void btDanhSacch_Click(object sender, EventArgs e)
+        {
+            loaddgv();
+        }
     }
 }
