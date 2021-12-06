@@ -136,19 +136,13 @@ namespace RJCodeAdvance.ControlIngredient
             // Column1
             // 
             this.Column1.HeaderText = "Nguyên liệu";
-<<<<<<< HEAD
             this.Column1.MinimumWidth = 6;
-=======
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Số lượng";
-<<<<<<< HEAD
             this.Column2.MinimumWidth = 6;
-=======
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.Column2.Name = "Column2";
             // 
             // Column3
@@ -156,10 +150,7 @@ namespace RJCodeAdvance.ControlIngredient
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column3.HeaderText = "Đơn giá";
-<<<<<<< HEAD
             this.Column3.MinimumWidth = 6;
-=======
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.Column3.Name = "Column3";
             // 
             // Column4
@@ -167,10 +158,7 @@ namespace RJCodeAdvance.ControlIngredient
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column4.HeaderText = "Thành tiền";
-<<<<<<< HEAD
             this.Column4.MinimumWidth = 6;
-=======
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.Column4.Name = "Column4";
             // 
             // guna2Elipse2

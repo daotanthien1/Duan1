@@ -30,7 +30,6 @@ namespace RJCodeAdvance.ControlBills
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-<<<<<<< HEAD
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,15 +37,6 @@ namespace RJCodeAdvance.ControlBills
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-=======
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Bill));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btXoa = new Guna.UI2.WinForms.Guna2Button();
@@ -140,20 +130,12 @@ namespace RJCodeAdvance.ControlBills
             this.rdoNguyenLieu.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdoNguyenLieu.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdoNguyenLieu.CheckedState.InnerOffset = -4;
-<<<<<<< HEAD
             this.rdoNguyenLieu.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoNguyenLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.rdoNguyenLieu.Location = new System.Drawing.Point(243, 236);
             this.rdoNguyenLieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdoNguyenLieu.Name = "rdoNguyenLieu";
             this.rdoNguyenLieu.Size = new System.Drawing.Size(133, 25);
-=======
-            this.rdoNguyenLieu.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoNguyenLieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rdoNguyenLieu.Location = new System.Drawing.Point(147, 185);
-            this.rdoNguyenLieu.Name = "rdoNguyenLieu";
-            this.rdoNguyenLieu.Size = new System.Drawing.Size(120, 23);
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.rdoNguyenLieu.TabIndex = 133;
             this.rdoNguyenLieu.Text = "Nguyên liệu";
             this.rdoNguyenLieu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -171,20 +153,12 @@ namespace RJCodeAdvance.ControlBills
             this.rdoDoUong.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdoDoUong.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdoDoUong.CheckedState.InnerOffset = -4;
-<<<<<<< HEAD
             this.rdoDoUong.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.rdoDoUong.Location = new System.Drawing.Point(19, 236);
             this.rdoDoUong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdoDoUong.Name = "rdoDoUong";
             this.rdoDoUong.Size = new System.Drawing.Size(104, 25);
-=======
-            this.rdoDoUong.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoDoUong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rdoDoUong.Location = new System.Drawing.Point(14, 185);
-            this.rdoDoUong.Name = "rdoDoUong";
-            this.rdoDoUong.Size = new System.Drawing.Size(94, 23);
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.rdoDoUong.TabIndex = 132;
             this.rdoDoUong.TabStop = true;
             this.rdoDoUong.Text = "Đồ uống";
@@ -197,19 +171,13 @@ namespace RJCodeAdvance.ControlBills
             // 
             // dgvBill
             // 
-<<<<<<< HEAD
             dataGridViewCellStyle40.BackColor = System.Drawing.Color.White;
             this.dgvBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle40;
-=======
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvBill.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.dgvBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBill.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBill.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBill.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-<<<<<<< HEAD
             dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle41.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -227,25 +195,6 @@ namespace RJCodeAdvance.ControlBills
             dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBill.DefaultCellStyle = dataGridViewCellStyle42;
-=======
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBill.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvBill.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBill.DefaultCellStyle = dataGridViewCellStyle6;
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.dgvBill.EnableHeadersVisualStyles = false;
             this.dgvBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvBill.Location = new System.Drawing.Point(19, 279);
@@ -447,19 +396,13 @@ namespace RJCodeAdvance.ControlBills
             // 
             // dgvBillsDetail
             // 
-<<<<<<< HEAD
             dataGridViewCellStyle37.BackColor = System.Drawing.Color.White;
             this.dgvBillsDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
-=======
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvBillsDetail.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.dgvBillsDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBillsDetail.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvBillsDetail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBillsDetail.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvBillsDetail.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-<<<<<<< HEAD
             dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -477,25 +420,6 @@ namespace RJCodeAdvance.ControlBills
             dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvBillsDetail.DefaultCellStyle = dataGridViewCellStyle39;
-=======
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBillsDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBillsDetail.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBillsDetail.DefaultCellStyle = dataGridViewCellStyle3;
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.dgvBillsDetail.EnableHeadersVisualStyles = false;
             this.dgvBillsDetail.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvBillsDetail.Location = new System.Drawing.Point(23, 279);

@@ -112,8 +112,7 @@ namespace RJCodeAdvance.ControlIngredient
                     string path = @"Images";
                     if (!Directory.Exists(path))
                     {
-<<<<<<< HEAD
-                        string path = @"Images";
+
                         if (!Directory.Exists(path))
                         {
                             Directory.CreateDirectory(path);
@@ -131,9 +130,6 @@ namespace RJCodeAdvance.ControlIngredient
                             
                         }
                         loaddgv();
-=======
-                        Directory.CreateDirectory(path);
->>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
                     }
                     if (txtHinh.Text != checkUrlImage)
                     {

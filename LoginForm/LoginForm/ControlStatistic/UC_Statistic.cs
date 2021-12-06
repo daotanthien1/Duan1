@@ -52,20 +52,20 @@ namespace RJCodeAdvance.ControlStatistic
             guna2DataGridView1.Columns[1].HeaderText = "Mã khách hàng";
             guna2DataGridView1.Columns[2].HeaderText = "Mã bill";
             guna2DataGridView1.Columns[3].HeaderText = "Mã bàn";
-            
+
             guna2DataGridView1.Columns[4].HeaderText = "Ngày tạo";
             guna2DataGridView1.Columns[5].HeaderText = "Ngày xuất";
             guna2DataGridView1.Columns[6].HeaderText = "Tổng tiền";
             guna2DataGridView1.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             foreach (DataRow item in dt.Rows)
             {
-                if(item[1].ToString() == "")
+                if (item[1].ToString() == "")
                 {
                     item[1] = "0";
                 }
             }
             DataTable dt1 = bUS_Static.getPrice();
-            foreach(DataRow item in dt1.Rows)
+            foreach (DataRow item in dt1.Rows)
             {
                 int a = int.Parse(item[0].ToString());
                 txtTongTien.Text = "" + a.ToString();
@@ -311,17 +311,17 @@ namespace RJCodeAdvance.ControlStatistic
                 guna2DataGridView1.Columns[3].Visible = false;
                 chart1.ChartAreas["ChartArea1"].AxisX.Title = "Month";
                 chart1.ChartAreas["ChartArea1"].AxisY.Title = "Total";
-                for(int i = 0; i < dt.Rows.Count; i++)
+                for (int i = 0; i < dt.Rows.Count; i++)
                 {
-                    if(dt.Rows[i][0].ToString() != "")
+                    if (dt.Rows[i][0].ToString() != "")
                     {
                         chart1.Series["Total"].Points.AddXY(dt.Rows[i][0], dt.Rows[i][3]);
                     }
                 }
                 int money = 0;
-                for(int i =0; i < guna2DataGridView1.Rows.Count; i++)
+                for (int i = 0; i < guna2DataGridView1.Rows.Count; i++)
                 {
-                    if(guna2DataGridView1.Rows[i].Cells[3].Value.ToString() == "")
+                    if (guna2DataGridView1.Rows[i].Cells[3].Value.ToString() == "")
                     {
                         guna2DataGridView1.Rows[i].Cells[3].Value = "0";
                     }
@@ -330,7 +330,7 @@ namespace RJCodeAdvance.ControlStatistic
                 txtTongTien.Text = "" + money;
                 guna2DataGridView1.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }
-            
+
         }
         // click bt năm hóa đơn
         private void btNam_Click(object sender, EventArgs e)
@@ -498,7 +498,7 @@ namespace RJCodeAdvance.ControlStatistic
                     txtTongTien1.Text = item[0].ToString();
                 }
                 dayStar1.Text = date.ToString("01-MM-yyyy");
-                dayEnd1.Text = dayNow.ToString("01-MM-yyyy 23:59:59"); 
+                dayEnd1.Text = dayNow.ToString("01-MM-yyyy 23:59:59");
             }
         }
         // click bt năm bill nhập nguyên liệu
@@ -588,9 +588,9 @@ namespace RJCodeAdvance.ControlStatistic
                 guna2DataGridView3.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
                 guna2DataGridView3.Columns[3].Visible = false;
                 float a = 0;
-                foreach(DataRow item in dt.Rows)
+                foreach (DataRow item in dt.Rows)
                 {
-                    if(item[3].ToString() == "")
+                    if (item[3].ToString() == "")
                     {
                         item[3] = "0";
                     }
@@ -654,9 +654,9 @@ namespace RJCodeAdvance.ControlStatistic
             DataTable dt = bUS_Static.StaticEmployeeWeek();
             guna2DataGridView3.DataSource = dt;
             float money = 0;
-            foreach(DataRow item in dt.Rows)
+            foreach (DataRow item in dt.Rows)
             {
-                if(item[5].ToString() == "")
+                if (item[5].ToString() == "")
                 {
                     item[5] = "0";
                 }
@@ -781,7 +781,7 @@ namespace RJCodeAdvance.ControlStatistic
         // xuất excel hóa đơn theo khách hàng
         private void btEx2_Click(object sender, EventArgs e)
         {
-            if(ktMonth == false && ktYear == false)
+            if (ktMonth == false && ktYear == false)
             {
                 DataTable dt = (DataTable)guna2DataGridView4.DataSource;
                 dt.Columns.RemoveAt(3);
@@ -1129,7 +1129,7 @@ namespace RJCodeAdvance.ControlStatistic
         }
         public void Export1(DataTable dt, string sheetName, string title)
         {
-            if(ktMonth == false && ktYear == false)
+            if (ktMonth == false && ktYear == false)
             {
                 //Tạo các đối tượng Excel
 
@@ -1270,7 +1270,7 @@ namespace RJCodeAdvance.ControlStatistic
 
                 oSheet.get_Range(c3, c4).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignRight;
             }
-            if(ktMonth == true)
+            if (ktMonth == true)
             {
                 //Tạo các đối tượng Excel
 
@@ -2034,17 +2034,20 @@ namespace RJCodeAdvance.ControlStatistic
         Image image = Image.FromFile(Application.StartupPath + "\\Images\\pictureBox1.Image.jpg");
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
-            if(guna2DataGridView1.Rows.Count > 1)
+
+            if (guna2DataGridView1.Rows.Count > 1)
             {
                 int height = guna2DataGridView1.Height;
-                guna2DataGridView1.Width = 820;
+                guna2DataGridView1.Width = 810;
+                guna2DataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
                 guna2DataGridView1.Height = guna2DataGridView1.RowCount * guna2DataGridView1.RowTemplate.Height * 2;
                 btm = new Bitmap(guna2DataGridView1.Width, guna2DataGridView1.Height);
                 guna2DataGridView1.DrawToBitmap(btm, new Rectangle(0, 0, guna2DataGridView1.Width, guna2DataGridView1.Height));
                 guna2DataGridView1.Height = height;
+
                 printPreviewDialog1.ShowDialog();
 
+                guna2DataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
                 guna2DataGridView1.Width = 1011;
             }
             else
@@ -2060,9 +2063,10 @@ namespace RJCodeAdvance.ControlStatistic
                 e.Graphics.DrawImageUnscaled(image, 30, 10);
                 e.Graphics.DrawString("SHOP META", new Font("Arial", 22, FontStyle.Bold), Brushes.Black, new Point(330, 60));
                 e.Graphics.DrawString("THỐNG KÊ CHI TIẾT HÓA ĐƠN", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(280, 120));
-                e.Graphics.DrawString("Ngày xuất: "+DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss"), new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, 200));
+                e.Graphics.DrawString("Ngày xuất: " + DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss"), new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, 200));
                 e.Graphics.DrawString("_____________________________________________________________________________________________________________________________________", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(0, 205));
                 e.Graphics.DrawImageUnscaled(btm, 0, 230);
+
             }
             if (rbTongThe.Checked)
             {
@@ -2086,7 +2090,7 @@ namespace RJCodeAdvance.ControlStatistic
                 DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-MM-01 00:00:00"), time2);
                 foreach (DataRow item in dt1.Rows)
                 {
-                    if(item[0].ToString() == "")
+                    if (item[0].ToString() == "")
                     {
                         txtTienIngredient.Text = "0";
                     }
@@ -2113,7 +2117,7 @@ namespace RJCodeAdvance.ControlStatistic
                 DataTable dt1 = bUS_Static.SumPriceBillInputBetween(time1, time2);
                 foreach (DataRow item in dt1.Rows)
                 {
-                    if(item[0].ToString() == "")
+                    if (item[0].ToString() == "")
                     {
                         txtTienIngredient.Text = "0";
                     }
@@ -2315,20 +2319,22 @@ namespace RJCodeAdvance.ControlStatistic
 
         private void rdChiTiet_Click(object sender, EventArgs e)
         {
-           
+
         }
         Bitmap btm1;
         private void btIn3_Click(object sender, EventArgs e)
         {
-            if(guna2DataGridView4.Rows.Count > 1)
+            if (guna2DataGridView4.Rows.Count > 1)
             {
                 int height = guna2DataGridView4.Height;
-                guna2DataGridView4.Width = 820;
+                guna2DataGridView4.Width = 810;
+                guna2DataGridView4.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
                 guna2DataGridView4.Height = guna2DataGridView4.RowCount * guna2DataGridView4.RowTemplate.Height * 2;
                 btm2 = new Bitmap(guna2DataGridView4.Width, guna2DataGridView4.Height);
                 guna2DataGridView4.DrawToBitmap(btm2, new Rectangle(0, 0, guna2DataGridView4.Width, guna2DataGridView4.Height));
                 guna2DataGridView4.Height = height;
                 printPreviewDialog3.ShowDialog();
+                guna2DataGridView4.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
                 guna2DataGridView4.Width = 1011;
             }
             else
@@ -2339,15 +2345,17 @@ namespace RJCodeAdvance.ControlStatistic
         Bitmap btm2;
         private void btIn2_Click(object sender, EventArgs e)
         {
-            if(guna2DataGridView3.Rows.Count > 1)
+            if (guna2DataGridView3.Rows.Count > 1)
             {
                 int height = guna2DataGridView3.Height;
-                guna2DataGridView3.Width = 820;
+                guna2DataGridView3.Width = 810;
+                guna2DataGridView2.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
                 guna2DataGridView3.Height = guna2DataGridView3.RowCount * guna2DataGridView3.RowTemplate.Height * 2;
                 btm1 = new Bitmap(guna2DataGridView3.Width, guna2DataGridView3.Height);
                 guna2DataGridView3.DrawToBitmap(btm1, new Rectangle(0, 0, guna2DataGridView3.Width, guna2DataGridView3.Height));
                 guna2DataGridView3.Height = height;
                 printPreviewDialog2.ShowDialog();
+                guna2DataGridView3.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
                 guna2DataGridView3.Width = 1011;
             }
             else
@@ -2364,7 +2372,7 @@ namespace RJCodeAdvance.ControlStatistic
             e.Graphics.DrawString("Ngày xuất: " + DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss"), new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, 200));
             e.Graphics.DrawString("_____________________________________________________________________________________________________________________________________", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(0, 245));
             e.Graphics.DrawImage(btm1, 0, 300);
-            e.Graphics.DrawString("Tổng tiền: " +txtTongTien.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550,250));
+            e.Graphics.DrawString("Tổng tiền: " + txtTongTien.Text, new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(550, 250));
         }
 
         private void printDocument3_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -2442,13 +2450,13 @@ namespace RJCodeAdvance.ControlStatistic
 
             Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
 
-            cl2.Value2 = "Ngày xuất bill";
+            cl2.Value2 = "Tên nhân viên";
 
             cl2.ColumnWidth = 25.0;
 
             Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
 
-            cl3.Value2 = "Mã nhân viên";
+            cl3.Value2 = "Ngày xuất";
 
             cl3.ColumnWidth = 40.0;
 
@@ -2457,7 +2465,7 @@ namespace RJCodeAdvance.ControlStatistic
             cl4.Value2 = "Tổng tiền";
 
             cl4.ColumnWidth = 40.0;
-           
+
             Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "D3");
 
             rowHead.Font.Bold = true;
@@ -2538,20 +2546,21 @@ namespace RJCodeAdvance.ControlStatistic
             if (guna2DataGridView2.Rows.Count > 1)
             {
                 int height = guna2DataGridView2.Height;
-                guna2DataGridView2.Width = 820;
+                guna2DataGridView2.Width = 810;
+                guna2DataGridView2.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
                 guna2DataGridView2.Height = guna2DataGridView2.RowCount * guna2DataGridView2.RowTemplate.Height * 2;
                 btm4 = new Bitmap(guna2DataGridView2.Width, guna2DataGridView2.Height);
                 guna2DataGridView2.DrawToBitmap(btm4, new Rectangle(0, 0, guna2DataGridView2.Width, guna2DataGridView2.Height));
                 guna2DataGridView2.Height = height;
                 printPreviewDialog4.ShowDialog();
                 guna2DataGridView2.Width = 1011;
+                guna2DataGridView2.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
             }
             else
             {
                 MessageBox.Show("Không có dữ liệu cần in");
             }
         }
-
         private void printDocument4_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             PaperSize paperSize = new PaperSize("My Envelope", 1000, 630);
@@ -2566,6 +2575,7 @@ namespace RJCodeAdvance.ControlStatistic
             e.Graphics.DrawString("_____________________________________________________________________________________________________________________________________", new Font("Arial", 20, FontStyle.Bold), Brushes.Black, new Point(0, 205));
 
             e.Graphics.DrawImageUnscaled(btm4, 0, 230);
+
         }
         // xuất excel danh thu
         private void guna2Button8_Click(object sender, EventArgs e)
@@ -2575,7 +2585,7 @@ namespace RJCodeAdvance.ControlStatistic
             dt.Columns.Add("", typeof(string));
             dt.Columns.Add("", typeof(string));
             dt.Rows.Add(dataGridView1.Rows[0].Cells[0].Value.ToString(), dataGridView1.Rows[0].Cells[1].Value.ToString(), dataGridView1.Rows[0].Cells[2].Value.ToString());
-            Export4(dt, "Danh sach", "DANH THU");
+            Export4(dt, "Danh sach", "DOANH THU");
         }
         public void Export4(DataTable dt, string sheetName, string title)
         {
@@ -2642,7 +2652,7 @@ namespace RJCodeAdvance.ControlStatistic
 
             Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
 
-            cl3.Value2 = "Danh thu";
+            cl3.Value2 = "Doanh thu";
 
             cl3.ColumnWidth = 25;
 
