@@ -136,13 +136,19 @@ namespace RJCodeAdvance.ControlIngredient
             // Column1
             // 
             this.Column1.HeaderText = "Nguyên liệu";
+<<<<<<< HEAD
             this.Column1.MinimumWidth = 6;
+=======
+>>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Số lượng";
+<<<<<<< HEAD
             this.Column2.MinimumWidth = 6;
+=======
+>>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.Column2.Name = "Column2";
             // 
             // Column3
@@ -150,7 +156,10 @@ namespace RJCodeAdvance.ControlIngredient
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.Column3.DefaultCellStyle = dataGridViewCellStyle3;
             this.Column3.HeaderText = "Đơn giá";
+<<<<<<< HEAD
             this.Column3.MinimumWidth = 6;
+=======
+>>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.Column3.Name = "Column3";
             // 
             // Column4
@@ -158,7 +167,10 @@ namespace RJCodeAdvance.ControlIngredient
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
             this.Column4.DefaultCellStyle = dataGridViewCellStyle4;
             this.Column4.HeaderText = "Thành tiền";
+<<<<<<< HEAD
             this.Column4.MinimumWidth = 6;
+=======
+>>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
             this.Column4.Name = "Column4";
             // 
             // guna2Elipse2
@@ -235,7 +247,7 @@ namespace RJCodeAdvance.ControlIngredient
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Gainsboro;
+            this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Enabled = false;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
@@ -249,7 +261,7 @@ namespace RJCodeAdvance.ControlIngredient
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Gainsboro;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Enabled = false;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));

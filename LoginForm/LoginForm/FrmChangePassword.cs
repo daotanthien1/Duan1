@@ -25,8 +25,7 @@ namespace RJCodeAdvance
             txtEmail.ReadOnly = true;
             txtEmail.Text = mail;
         }
-
-
+        public static int a;
         private void btDoiMatKhau_Click(object sender, EventArgs e)
         {
             if (txtMatKhauCu.Text.Trim().Length == 0) // kiểm tra phải nhập data
@@ -71,6 +70,8 @@ namespace RJCodeAdvance
                         txtMatKhauCu.Text = null;
                         txtMatKhauMoi.Text = null;
                         txtNhapLaiMatKhau.Text = null;
+                        this.Close();
+                        a = 1;
                     }
                 }
                 else

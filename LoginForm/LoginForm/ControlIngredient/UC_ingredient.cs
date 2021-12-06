@@ -100,13 +100,19 @@ namespace RJCodeAdvance.ControlIngredient
 
         private void btLuu_Click(object sender, EventArgs e)
         {
-                if (checkTextBox())
+
+            if (checkTextBox())
+            {
+                DTO_NguyenLieu dtoBe = new DTO_NguyenLieu(txtTenIngredient.Text, Convert.ToInt32(cbNhaCC.SelectedValue),
+                        Convert.ToInt32(cbLoaiIngredient.SelectedValue), float.Parse(txtGia.Text),
+                        int.Parse(guna2NumericUpDown1.Value.ToString()), Convert.ToInt32(cbDVT.SelectedValue),
+                        Convert.ToInt32(dgv.CurrentRow.Cells["Id_Ingredient"].Value.ToString()), "Images\\" + fileName);
+                if (busIg.InsertNguyenLieu(dtoBe))
                 {
-                    DTO_NguyenLieu dtoIg = new DTO_NguyenLieu(txtTenIngredient.Text, Convert.ToInt32(cbNhaCC.SelectedValue.ToString()),
-                        Convert.ToInt32(cbLoaiIngredient.SelectedValue.ToString()), float.Parse(txtGia.Text),
-                        int.Parse(guna2NumericUpDown1.Value.ToString()), Convert.ToInt32(cbDVT.SelectedValue), "Images\\" + fileName);
-                    if (busIg.InsertNguyenLieu(dtoIg))
+                    string path = @"Images";
+                    if (!Directory.Exists(path))
                     {
+<<<<<<< HEAD
                         string path = @"Images";
                         if (!Directory.Exists(path))
                         {
@@ -125,8 +131,18 @@ namespace RJCodeAdvance.ControlIngredient
                             
                         }
                         loaddgv();
+=======
+                        Directory.CreateDirectory(path);
+>>>>>>> fcc6d86ddedb9acc2b3e498baf60d00210dcfbd5
                     }
+                    if (txtHinh.Text != checkUrlImage)
+                    {
+                        File.Copy(fileAddress, fileSavePath, true);//copy file hinh
+                    }
+                    loaddgv();
+                    ResetValue();
                 }
+            }           
         }
 
 
@@ -162,11 +178,29 @@ namespace RJCodeAdvance.ControlIngredient
                 txtTenIngredient.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtGia.Text))
+
+            if(txtGia.Text == "")
             {
-                MessageBox.Show("Chưa nhập đủ thông tin");
-                txtGia.Text = "";
-                txtGia.Focus();
+                MessageBox.Show("Vui lòng nhập giá");
+                return false;
+            }
+            float price;
+            bool result = float.TryParse(txtGia.Text, out price);
+            if (!result)
+            {
+                MessageBox.Show("vui lòng nhập giá nguyên liệu bằng số");
+                return false;
+            }
+            if (float.Parse(txtGia.Text) < 10000 || float.Parse(txtGia.Text) > 500000)
+            {
+                MessageBox.Show("Giá nguyên liệu từ 10,000 vnđ --> 500,000 vnđ");
+                return false;
+            }
+
+
+            if (string.IsNullOrEmpty(txtHinh.Text))
+            {
+                MessageBox.Show("Vui lòng chọn ảnh cho nguyên liệu");
                 return false;
             }
             if (string.IsNullOrEmpty(cbLoaiIngredient.Text))

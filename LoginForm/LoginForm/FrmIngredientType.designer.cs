@@ -184,6 +184,7 @@ namespace RJCodeAdvance
             this.btDanhSacch.Size = new System.Drawing.Size(134, 36);
             this.btDanhSacch.TabIndex = 139;
             this.btDanhSacch.Text = "Danh sách";
+            this.btDanhSacch.Click += new System.EventHandler(this.btDanhSacch_Click);
             // 
             // txtSearch
             // 
