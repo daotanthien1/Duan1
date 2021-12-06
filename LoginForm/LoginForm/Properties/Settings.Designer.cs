@@ -25,7 +25,7 @@ namespace RJCodeAdvance.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("admin")]
+        [global::System.Configuration.DefaultSettingValueAttribute("chinhchu@gmail.com")]
         public string user {
             get {
                 return ((string)(this["user"]));
@@ -37,7 +37,7 @@ namespace RJCodeAdvance.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1234")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public string pass {
             get {
                 return ((string)(this["pass"]));
@@ -49,7 +49,7 @@ namespace RJCodeAdvance.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("false")]
+        [global::System.Configuration.DefaultSettingValueAttribute("true")]
         public string RememberMe {
             get {
                 return ((string)(this["RememberMe"]));

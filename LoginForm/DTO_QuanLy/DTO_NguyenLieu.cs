@@ -37,17 +37,17 @@ namespace DTO_QuanLy
             this.id_Unit = id_Unit;
             this.images = images;
         }
-        public DTO_NguyenLieu(string name, int id_Supplier, int id_Type, float price, int mass, int id_Unit, int id_Ingredient, string images)
-        {
-            this.name = name;
-            this.id_Supplier = id_Supplier;
-            this.id_Type = id_Type;
-            this.price = price;
-            this.mass = mass;
-            this.id_Unit = id_Unit;
-            this.id_Ingredient = id_Ingredient;
-            this.images = images;
-        }
+        //public DTO_NguyenLieu(string name, int id_Supplier, int id_Type, float price, int mass, int id_Unit, int id_Ingredient, string images)
+        //{
+        //    this.name = name;
+        //    this.id_Supplier = id_Supplier;
+        //    this.id_Type = id_Type;
+        //    this.price = price;
+        //    this.mass = mass;
+        //    this.id_Unit = id_Unit;
+        //    this.id_Ingredient = id_Ingredient;
+        //    this.images = images;
+        //}
         public int Id_Ingredient { get => id_Ingredient; set => id_Ingredient = value; }
         public string Name { get => name; set => name = value; }
         public string Images { get => images; set => images = value; }

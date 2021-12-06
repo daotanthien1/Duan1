@@ -75,7 +75,7 @@ namespace RJCodeAdvance.ControlIngredient
                     DTO_NguyenLieu dtoBe = new DTO_NguyenLieu(txtTenIngredient.Text, Convert.ToInt32(cbNhaCC.SelectedValue),
                         Convert.ToInt32(cbLoaiIngredient.SelectedValue), float.Parse(txtGia.Text),
                         int.Parse(guna2NumericUpDown1.Value.ToString()), Convert.ToInt32(cbDVT.SelectedValue),
-                        Convert.ToInt32(dgv.CurrentRow.Cells["Id_Ingredient"].Value.ToString()), "Images\\" + fileName);
+                         "Images\\" + fileName);
                     if (busIg.UpdateNguyenLieu(dtoBe))
                     {
                         string path = @"Images";
@@ -106,7 +106,7 @@ namespace RJCodeAdvance.ControlIngredient
                 DTO_NguyenLieu dtoBe = new DTO_NguyenLieu(txtTenIngredient.Text, Convert.ToInt32(cbNhaCC.SelectedValue),
                         Convert.ToInt32(cbLoaiIngredient.SelectedValue), float.Parse(txtGia.Text),
                         int.Parse(guna2NumericUpDown1.Value.ToString()), Convert.ToInt32(cbDVT.SelectedValue),
-                        Convert.ToInt32(dgv.CurrentRow.Cells["Id_Ingredient"].Value.ToString()), "Images\\" + fileName);
+                        "Images\\" + fileName);
                 if (busIg.InsertNguyenLieu(dtoBe))
                 {
                     string path = @"Images";
