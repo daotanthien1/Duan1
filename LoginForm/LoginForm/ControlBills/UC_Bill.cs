@@ -162,12 +162,14 @@ namespace RJCodeAdvance.ControlBills
                     {
                         int id = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
                         loadBillDetail(id);
+                        txtDoUong.Text = dgvBill.CurrentRow.Cells[0].Value.ToString();
                     }
                     else
                     {
                         idInputBill = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
                         sum = float.Parse(dgvBill.CurrentRow.Cells[2].Value.ToString());
                         loadBillDetailNL(idInputBill);
+                        txtDoUong.Text = dgvBill.CurrentRow.Cells[0].Value.ToString();
                     }
                     btXoa.Enabled = true;
                     btSua.Enabled = true;

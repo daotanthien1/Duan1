@@ -114,7 +114,15 @@ namespace RJCodeAdvance.ControlIngredient
                         }
                         if (txtHinh.Text != checkUrlImage)
                         {
+                        //try
+                        //{
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
+                        //}
+                        //catch
+                        //{
+
+                        //}
+                            
                         }
                         loaddgv();
                     }

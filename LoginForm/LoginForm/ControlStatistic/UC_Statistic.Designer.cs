@@ -159,10 +159,11 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2TabControl1.Controls.Add(this.tabPage2);
             this.guna2TabControl1.Controls.Add(this.tabPage3);
             this.guna2TabControl1.ItemSize = new System.Drawing.Size(180, 40);
-            this.guna2TabControl1.Location = new System.Drawing.Point(20, 31);
+            this.guna2TabControl1.Location = new System.Drawing.Point(27, 38);
+            this.guna2TabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TabControl1.Name = "guna2TabControl1";
             this.guna2TabControl1.SelectedIndex = 0;
-            this.guna2TabControl1.Size = new System.Drawing.Size(1056, 598);
+            this.guna2TabControl1.Size = new System.Drawing.Size(1408, 736);
             this.guna2TabControl1.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.guna2TabControl1.TabButtonHoverState.FillColor = System.Drawing.Color.DodgerBlue;
             this.guna2TabControl1.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -215,9 +216,10 @@ namespace RJCodeAdvance.ControlStatistic
             this.tabPage1.Controls.Add(this.btIn3);
             this.tabPage1.Controls.Add(this.chart1);
             this.tabPage1.Location = new System.Drawing.Point(4, 44);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1048, 550);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Size = new System.Drawing.Size(1400, 688);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hoá Đơn";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
@@ -226,11 +228,12 @@ namespace RJCodeAdvance.ControlStatistic
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label11.Location = new System.Drawing.Point(328, 505);
+            this.label11.Location = new System.Drawing.Point(437, 622);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 16);
+            this.label11.Size = new System.Drawing.Size(47, 20);
             this.label11.TabIndex = 164;
             this.label11.Text = "VNĐ";
             // 
@@ -242,11 +245,12 @@ namespace RJCodeAdvance.ControlStatistic
             this.rdChart.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdChart.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdChart.CheckedState.InnerOffset = -4;
-            this.rdChart.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdChart.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rdChart.Location = new System.Drawing.Point(195, 116);
+            this.rdChart.Location = new System.Drawing.Point(260, 143);
+            this.rdChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdChart.Name = "rdChart";
-            this.rdChart.Size = new System.Drawing.Size(77, 20);
+            this.rdChart.Size = new System.Drawing.Size(96, 25);
             this.rdChart.TabIndex = 137;
             this.rdChart.Text = "Biểu đồ";
             this.rdChart.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -271,16 +275,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btEx.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btEx.DisabledState.Parent = this.btEx;
             this.btEx.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btEx.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEx.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEx.ForeColor = System.Drawing.Color.White;
             this.btEx.HoverState.Parent = this.btEx;
             this.btEx.Image = ((System.Drawing.Image)(resources.GetObject("btEx.Image")));
             this.btEx.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btEx.ImageSize = new System.Drawing.Size(35, 35);
-            this.btEx.Location = new System.Drawing.Point(902, 165);
+            this.btEx.Location = new System.Drawing.Point(1203, 203);
+            this.btEx.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btEx.Name = "btEx";
             this.btEx.ShadowDecoration.Parent = this.btEx;
-            this.btEx.Size = new System.Drawing.Size(127, 35);
+            this.btEx.Size = new System.Drawing.Size(169, 43);
             this.btEx.TabIndex = 134;
             this.btEx.Text = "Excel";
             this.btEx.Click += new System.EventHandler(this.btEx_Click_1);
@@ -293,11 +298,12 @@ namespace RJCodeAdvance.ControlStatistic
             this.rbTongThe.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbTongThe.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbTongThe.CheckedState.InnerOffset = -4;
-            this.rbTongThe.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbTongThe.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbTongThe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rbTongThe.Location = new System.Drawing.Point(100, 116);
+            this.rbTongThe.Location = new System.Drawing.Point(133, 143);
+            this.rbTongThe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbTongThe.Name = "rbTongThe";
-            this.rbTongThe.Size = new System.Drawing.Size(83, 20);
+            this.rbTongThe.Size = new System.Drawing.Size(107, 25);
             this.rbTongThe.TabIndex = 131;
             this.rbTongThe.Text = "Tổng thể";
             this.rbTongThe.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -316,11 +322,12 @@ namespace RJCodeAdvance.ControlStatistic
             this.rdChiTiet.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rdChiTiet.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rdChiTiet.CheckedState.InnerOffset = -4;
-            this.rdChiTiet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdChiTiet.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdChiTiet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rdChiTiet.Location = new System.Drawing.Point(21, 116);
+            this.rdChiTiet.Location = new System.Drawing.Point(28, 143);
+            this.rdChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdChiTiet.Name = "rdChiTiet";
-            this.rdChiTiet.Size = new System.Drawing.Size(73, 20);
+            this.rdChiTiet.Size = new System.Drawing.Size(92, 25);
             this.rdChiTiet.TabIndex = 130;
             this.rdChiTiet.TabStop = true;
             this.rdChiTiet.Text = "Chi tiết";
@@ -346,16 +353,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btEx2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btEx2.DisabledState.Parent = this.btEx2;
             this.btEx2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btEx2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEx2.ForeColor = System.Drawing.Color.White;
             this.btEx2.HoverState.Parent = this.btEx2;
             this.btEx2.Image = ((System.Drawing.Image)(resources.GetObject("btEx2.Image")));
             this.btEx2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btEx2.ImageSize = new System.Drawing.Size(35, 35);
-            this.btEx2.Location = new System.Drawing.Point(902, 165);
+            this.btEx2.Location = new System.Drawing.Point(1203, 203);
+            this.btEx2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btEx2.Name = "btEx2";
             this.btEx2.ShadowDecoration.Parent = this.btEx2;
-            this.btEx2.Size = new System.Drawing.Size(127, 35);
+            this.btEx2.Size = new System.Drawing.Size(169, 43);
             this.btEx2.TabIndex = 129;
             this.btEx2.Text = "Excel";
             this.btEx2.Click += new System.EventHandler(this.btEx2_Click);
@@ -375,16 +383,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btEx1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btEx1.DisabledState.Parent = this.btEx1;
             this.btEx1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btEx1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btEx1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEx1.ForeColor = System.Drawing.Color.White;
             this.btEx1.HoverState.Parent = this.btEx1;
             this.btEx1.Image = ((System.Drawing.Image)(resources.GetObject("btEx1.Image")));
             this.btEx1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btEx1.ImageSize = new System.Drawing.Size(35, 35);
-            this.btEx1.Location = new System.Drawing.Point(902, 165);
+            this.btEx1.Location = new System.Drawing.Point(1203, 203);
+            this.btEx1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btEx1.Name = "btEx1";
             this.btEx1.ShadowDecoration.Parent = this.btEx1;
-            this.btEx1.Size = new System.Drawing.Size(127, 36);
+            this.btEx1.Size = new System.Drawing.Size(169, 44);
             this.btEx1.TabIndex = 128;
             this.btEx1.Text = "Excel";
             this.btEx1.Click += new System.EventHandler(this.btEx1_Click);
@@ -404,16 +413,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btTK.DisabledState.Parent = this.btTK;
             this.btTK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btTK.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTK.ForeColor = System.Drawing.Color.White;
             this.btTK.HoverState.Parent = this.btTK;
             this.btTK.Image = ((System.Drawing.Image)(resources.GetObject("btTK.Image")));
             this.btTK.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btTK.ImageSize = new System.Drawing.Size(25, 25);
-            this.btTK.Location = new System.Drawing.Point(284, 165);
+            this.btTK.Location = new System.Drawing.Point(379, 203);
+            this.btTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btTK.Name = "btTK";
             this.btTK.ShadowDecoration.Parent = this.btTK;
-            this.btTK.Size = new System.Drawing.Size(127, 35);
+            this.btTK.Size = new System.Drawing.Size(169, 43);
             this.btTK.TabIndex = 115;
             this.btTK.Text = "Nhân viên";
             this.btTK.TextOffset = new System.Drawing.Point(10, 0);
@@ -422,11 +432,12 @@ namespace RJCodeAdvance.ControlStatistic
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(17, 505);
+            this.label2.Location = new System.Drawing.Point(23, 622);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(132, 16);
+            this.label2.Size = new System.Drawing.Size(165, 20);
             this.label2.TabIndex = 112;
             this.label2.Text = "Tổng tiền hóa đơn:";
             // 
@@ -445,16 +456,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThang.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btThang.DisabledState.Parent = this.btThang;
             this.btThang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThang.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThang.ForeColor = System.Drawing.Color.White;
             this.btThang.HoverState.Parent = this.btThang;
             this.btThang.Image = ((System.Drawing.Image)(resources.GetObject("btThang.Image")));
             this.btThang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btThang.ImageSize = new System.Drawing.Size(35, 35);
-            this.btThang.Location = new System.Drawing.Point(18, 165);
+            this.btThang.Location = new System.Drawing.Point(24, 203);
+            this.btThang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThang.Name = "btThang";
             this.btThang.ShadowDecoration.Parent = this.btThang;
-            this.btThang.Size = new System.Drawing.Size(127, 35);
+            this.btThang.Size = new System.Drawing.Size(169, 43);
             this.btThang.TabIndex = 110;
             this.btThang.Text = "Tháng";
             this.btThang.Click += new System.EventHandler(this.btThang_Click);
@@ -474,16 +486,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btNam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btNam.DisabledState.Parent = this.btNam;
             this.btNam.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btNam.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNam.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btNam.ForeColor = System.Drawing.Color.White;
             this.btNam.HoverState.Parent = this.btNam;
             this.btNam.Image = ((System.Drawing.Image)(resources.GetObject("btNam.Image")));
             this.btNam.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btNam.ImageSize = new System.Drawing.Size(35, 35);
-            this.btNam.Location = new System.Drawing.Point(151, 165);
+            this.btNam.Location = new System.Drawing.Point(201, 203);
+            this.btNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btNam.Name = "btNam";
             this.btNam.ShadowDecoration.Parent = this.btNam;
-            this.btNam.Size = new System.Drawing.Size(127, 35);
+            this.btNam.Size = new System.Drawing.Size(169, 43);
             this.btNam.TabIndex = 109;
             this.btNam.Text = "Năm";
             this.btNam.Click += new System.EventHandler(this.btNam_Click);
@@ -503,16 +516,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btThongKe.DisabledState.Parent = this.btThongKe;
             this.btThongKe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThongKe.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThongKe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThongKe.ForeColor = System.Drawing.Color.White;
             this.btThongKe.HoverState.Parent = this.btThongKe;
             this.btThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btThongKe.Image")));
             this.btThongKe.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btThongKe.ImageSize = new System.Drawing.Size(35, 35);
-            this.btThongKe.Location = new System.Drawing.Point(646, 60);
+            this.btThongKe.Location = new System.Drawing.Point(861, 74);
+            this.btThongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThongKe.Name = "btThongKe";
             this.btThongKe.ShadowDecoration.Parent = this.btThongKe;
-            this.btThongKe.Size = new System.Drawing.Size(127, 35);
+            this.btThongKe.Size = new System.Drawing.Size(169, 43);
             this.btThongKe.TabIndex = 108;
             this.btThongKe.Text = "Thống kê";
             this.btThongKe.TextOffset = new System.Drawing.Point(10, 0);
@@ -528,27 +542,29 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayEnd.CheckedState.Parent = this.dayEnd;
             this.dayEnd.CustomFormat = "dd/MM/yyyy 23:59:59";
             this.dayEnd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.dayEnd.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayEnd.ForeColor = System.Drawing.Color.White;
             this.dayEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dayEnd.HoverState.Parent = this.dayEnd;
-            this.dayEnd.Location = new System.Drawing.Point(347, 59);
+            this.dayEnd.Location = new System.Drawing.Point(463, 73);
+            this.dayEnd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dayEnd.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dayEnd.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dayEnd.Name = "dayEnd";
             this.dayEnd.ShadowDecoration.Parent = this.dayEnd;
-            this.dayEnd.Size = new System.Drawing.Size(293, 36);
+            this.dayEnd.Size = new System.Drawing.Size(391, 44);
             this.dayEnd.TabIndex = 107;
             this.dayEnd.Value = new System.DateTime(2021, 11, 7, 13, 49, 6, 43);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(344, 30);
+            this.label3.Location = new System.Drawing.Point(459, 37);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 16);
+            this.label3.Size = new System.Drawing.Size(97, 21);
             this.label3.TabIndex = 106;
             this.label3.Text = "Đến ngày:";
             // 
@@ -562,16 +578,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayStart.CheckedState.Parent = this.dayStart;
             this.dayStart.CustomFormat = "dd/MM/yyyy";
             this.dayStart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.dayStart.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayStart.ForeColor = System.Drawing.Color.White;
             this.dayStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dayStart.HoverState.Parent = this.dayStart;
-            this.dayStart.Location = new System.Drawing.Point(18, 59);
+            this.dayStart.Location = new System.Drawing.Point(24, 73);
+            this.dayStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dayStart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dayStart.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dayStart.Name = "dayStart";
             this.dayStart.ShadowDecoration.Parent = this.dayStart;
-            this.dayStart.Size = new System.Drawing.Size(293, 36);
+            this.dayStart.Size = new System.Drawing.Size(391, 44);
             this.dayStart.TabIndex = 105;
             this.dayStart.Value = new System.DateTime(2021, 11, 7, 13, 49, 6, 43);
             // 
@@ -589,28 +606,30 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTongTien.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTongTien.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTongTien.FocusedState.Parent = this.txtTongTien;
-            this.txtTongTien.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTongTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTongTien.HoverState.Parent = this.txtTongTien;
-            this.txtTongTien.Location = new System.Drawing.Point(155, 495);
+            this.txtTongTien.Location = new System.Drawing.Point(207, 609);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.PasswordChar = '\0';
             this.txtTongTien.PlaceholderText = "";
             this.txtTongTien.SelectedText = "";
             this.txtTongTien.ShadowDecoration.Parent = this.txtTongTien;
-            this.txtTongTien.Size = new System.Drawing.Size(222, 36);
+            this.txtTongTien.Size = new System.Drawing.Size(296, 44);
             this.txtTongTien.TabIndex = 104;
             this.txtTongTien.TextChanged += new System.EventHandler(this.txtTongTien_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(18, 30);
+            this.label1.Location = new System.Drawing.Point(24, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 16);
+            this.label1.Size = new System.Drawing.Size(85, 21);
             this.label1.TabIndex = 103;
             this.label1.Text = "Từ ngày:";
             // 
@@ -629,16 +648,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThang3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btThang3.DisabledState.Parent = this.btThang3;
             this.btThang3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThang3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThang3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThang3.ForeColor = System.Drawing.Color.White;
             this.btThang3.HoverState.Parent = this.btThang3;
             this.btThang3.Image = ((System.Drawing.Image)(resources.GetObject("btThang3.Image")));
             this.btThang3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btThang3.ImageSize = new System.Drawing.Size(35, 35);
-            this.btThang3.Location = new System.Drawing.Point(18, 165);
+            this.btThang3.Location = new System.Drawing.Point(24, 203);
+            this.btThang3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThang3.Name = "btThang3";
             this.btThang3.ShadowDecoration.Parent = this.btThang3;
-            this.btThang3.Size = new System.Drawing.Size(127, 35);
+            this.btThang3.Size = new System.Drawing.Size(169, 43);
             this.btThang3.TabIndex = 123;
             this.btThang3.Text = "Tháng";
             this.btThang3.Click += new System.EventHandler(this.btThang3_Click);
@@ -658,16 +678,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThang4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btThang4.DisabledState.Parent = this.btThang4;
             this.btThang4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThang4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThang4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThang4.ForeColor = System.Drawing.Color.White;
             this.btThang4.HoverState.Parent = this.btThang4;
             this.btThang4.Image = ((System.Drawing.Image)(resources.GetObject("btThang4.Image")));
             this.btThang4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btThang4.ImageSize = new System.Drawing.Size(35, 35);
-            this.btThang4.Location = new System.Drawing.Point(18, 165);
+            this.btThang4.Location = new System.Drawing.Point(24, 203);
+            this.btThang4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThang4.Name = "btThang4";
             this.btThang4.ShadowDecoration.Parent = this.btThang4;
-            this.btThang4.Size = new System.Drawing.Size(127, 35);
+            this.btThang4.Size = new System.Drawing.Size(169, 43);
             this.btThang4.TabIndex = 124;
             this.btThang4.Text = "Tháng";
             this.btThang4.Click += new System.EventHandler(this.btThang4_Click);
@@ -687,16 +708,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btNam3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btNam3.DisabledState.Parent = this.btNam3;
             this.btNam3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btNam3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNam3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btNam3.ForeColor = System.Drawing.Color.White;
             this.btNam3.HoverState.Parent = this.btNam3;
             this.btNam3.Image = ((System.Drawing.Image)(resources.GetObject("btNam3.Image")));
             this.btNam3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btNam3.ImageSize = new System.Drawing.Size(35, 35);
-            this.btNam3.Location = new System.Drawing.Point(151, 165);
+            this.btNam3.Location = new System.Drawing.Point(201, 203);
+            this.btNam3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btNam3.Name = "btNam3";
             this.btNam3.ShadowDecoration.Parent = this.btNam3;
-            this.btNam3.Size = new System.Drawing.Size(127, 35);
+            this.btNam3.Size = new System.Drawing.Size(169, 43);
             this.btNam3.TabIndex = 125;
             this.btNam3.Text = "Năm";
             this.btNam3.Click += new System.EventHandler(this.btNam3_Click);
@@ -716,16 +738,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btNam4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btNam4.DisabledState.Parent = this.btNam4;
             this.btNam4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btNam4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNam4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btNam4.ForeColor = System.Drawing.Color.White;
             this.btNam4.HoverState.Parent = this.btNam4;
             this.btNam4.Image = ((System.Drawing.Image)(resources.GetObject("btNam4.Image")));
             this.btNam4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btNam4.ImageSize = new System.Drawing.Size(35, 35);
-            this.btNam4.Location = new System.Drawing.Point(151, 165);
+            this.btNam4.Location = new System.Drawing.Point(201, 203);
+            this.btNam4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btNam4.Name = "btNam4";
             this.btNam4.ShadowDecoration.Parent = this.btNam4;
-            this.btNam4.Size = new System.Drawing.Size(127, 35);
+            this.btNam4.Size = new System.Drawing.Size(169, 43);
             this.btNam4.TabIndex = 126;
             this.btNam4.Text = "Năm";
             this.btNam4.Click += new System.EventHandler(this.btNam4_Click);
@@ -759,12 +782,13 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(18, 206);
+            this.guna2DataGridView1.Location = new System.Drawing.Point(24, 254);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(1011, 281);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1348, 346);
             this.guna2DataGridView1.TabIndex = 113;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -816,12 +840,13 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView3.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView3.EnableHeadersVisualStyles = false;
             this.guna2DataGridView3.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView3.Location = new System.Drawing.Point(18, 206);
+            this.guna2DataGridView3.Location = new System.Drawing.Point(24, 254);
+            this.guna2DataGridView3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2DataGridView3.Name = "guna2DataGridView3";
             this.guna2DataGridView3.RowHeadersVisible = false;
             this.guna2DataGridView3.RowHeadersWidth = 51;
             this.guna2DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView3.Size = new System.Drawing.Size(1015, 281);
+            this.guna2DataGridView3.Size = new System.Drawing.Size(1353, 346);
             this.guna2DataGridView3.TabIndex = 116;
             this.guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView3.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -873,12 +898,13 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView4.DefaultCellStyle = dataGridViewCellStyle9;
             this.guna2DataGridView4.EnableHeadersVisualStyles = false;
             this.guna2DataGridView4.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView4.Location = new System.Drawing.Point(18, 205);
+            this.guna2DataGridView4.Location = new System.Drawing.Point(24, 252);
+            this.guna2DataGridView4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2DataGridView4.Name = "guna2DataGridView4";
             this.guna2DataGridView4.RowHeadersVisible = false;
             this.guna2DataGridView4.RowHeadersWidth = 51;
             this.guna2DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView4.Size = new System.Drawing.Size(1015, 283);
+            this.guna2DataGridView4.Size = new System.Drawing.Size(1353, 348);
             this.guna2DataGridView4.TabIndex = 120;
             this.guna2DataGridView4.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView4.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -918,16 +944,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btIn1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btIn1.DisabledState.Parent = this.btIn1;
             this.btIn1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btIn1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btIn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btIn1.ForeColor = System.Drawing.Color.White;
             this.btIn1.HoverState.Parent = this.btIn1;
             this.btIn1.Image = ((System.Drawing.Image)(resources.GetObject("btIn1.Image")));
             this.btIn1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btIn1.ImageSize = new System.Drawing.Size(35, 35);
-            this.btIn1.Location = new System.Drawing.Point(769, 165);
+            this.btIn1.Location = new System.Drawing.Point(1025, 203);
+            this.btIn1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btIn1.Name = "btIn1";
             this.btIn1.ShadowDecoration.Parent = this.btIn1;
-            this.btIn1.Size = new System.Drawing.Size(127, 35);
+            this.btIn1.Size = new System.Drawing.Size(169, 43);
             this.btIn1.TabIndex = 132;
             this.btIn1.Text = "In";
             this.btIn1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -947,16 +974,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btIn2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btIn2.DisabledState.Parent = this.btIn2;
             this.btIn2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btIn2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btIn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btIn2.ForeColor = System.Drawing.Color.White;
             this.btIn2.HoverState.Parent = this.btIn2;
             this.btIn2.Image = ((System.Drawing.Image)(resources.GetObject("btIn2.Image")));
             this.btIn2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btIn2.ImageSize = new System.Drawing.Size(35, 35);
-            this.btIn2.Location = new System.Drawing.Point(769, 166);
+            this.btIn2.Location = new System.Drawing.Point(1025, 204);
+            this.btIn2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btIn2.Name = "btIn2";
             this.btIn2.ShadowDecoration.Parent = this.btIn2;
-            this.btIn2.Size = new System.Drawing.Size(127, 35);
+            this.btIn2.Size = new System.Drawing.Size(169, 43);
             this.btIn2.TabIndex = 135;
             this.btIn2.Text = "In";
             this.btIn2.Click += new System.EventHandler(this.btIn2_Click);
@@ -976,16 +1004,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btIn3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btIn3.DisabledState.Parent = this.btIn3;
             this.btIn3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btIn3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btIn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btIn3.ForeColor = System.Drawing.Color.White;
             this.btIn3.HoverState.Parent = this.btIn3;
             this.btIn3.Image = ((System.Drawing.Image)(resources.GetObject("btIn3.Image")));
             this.btIn3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btIn3.ImageSize = new System.Drawing.Size(35, 35);
-            this.btIn3.Location = new System.Drawing.Point(769, 165);
+            this.btIn3.Location = new System.Drawing.Point(1025, 203);
+            this.btIn3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btIn3.Name = "btIn3";
             this.btIn3.ShadowDecoration.Parent = this.btIn3;
-            this.btIn3.Size = new System.Drawing.Size(127, 37);
+            this.btIn3.Size = new System.Drawing.Size(169, 46);
             this.btIn3.TabIndex = 136;
             this.btIn3.Text = "In";
             this.btIn3.Click += new System.EventHandler(this.btIn3_Click);
@@ -996,14 +1025,15 @@ namespace RJCodeAdvance.ControlStatistic
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(18, 205);
+            this.chart1.Location = new System.Drawing.Point(24, 252);
+            this.chart1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Total";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(1009, 283);
+            this.chart1.Size = new System.Drawing.Size(1345, 348);
             this.chart1.TabIndex = 133;
             this.chart1.Text = "chart1";
             this.chart1.Visible = false;
@@ -1025,20 +1055,22 @@ namespace RJCodeAdvance.ControlStatistic
             this.tabPage2.Controls.Add(this.txtTongTien1);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1048, 550);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Size = new System.Drawing.Size(1400, 688);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Nguyên Liệu";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label13.Location = new System.Drawing.Point(376, 511);
+            this.label13.Location = new System.Drawing.Point(501, 629);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 16);
+            this.label13.Size = new System.Drawing.Size(47, 20);
             this.label13.TabIndex = 138;
             this.label13.Text = "VNĐ";
             // 
@@ -1057,16 +1089,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button3.DisabledState.Parent = this.guna2Button3;
             this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.HoverState.Parent = this.guna2Button3;
             this.guna2Button3.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button3.Image")));
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button3.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Button3.Location = new System.Drawing.Point(769, 125);
+            this.guna2Button3.Location = new System.Drawing.Point(1025, 154);
+            this.guna2Button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(127, 35);
+            this.guna2Button3.Size = new System.Drawing.Size(169, 43);
             this.guna2Button3.TabIndex = 137;
             this.guna2Button3.Text = "In";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -1086,16 +1119,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button4.DisabledState.Parent = this.guna2Button4;
             this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
             this.guna2Button4.HoverState.Parent = this.guna2Button4;
             this.guna2Button4.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button4.Image")));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button4.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Button4.Location = new System.Drawing.Point(904, 125);
+            this.guna2Button4.Location = new System.Drawing.Point(1205, 154);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
-            this.guna2Button4.Size = new System.Drawing.Size(127, 35);
+            this.guna2Button4.Size = new System.Drawing.Size(169, 43);
             this.guna2Button4.TabIndex = 136;
             this.guna2Button4.Text = "Excel";
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
@@ -1128,12 +1162,13 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView2.DefaultCellStyle = dataGridViewCellStyle12;
             this.guna2DataGridView2.EnableHeadersVisualStyles = false;
             this.guna2DataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView2.Location = new System.Drawing.Point(40, 166);
+            this.guna2DataGridView2.Location = new System.Drawing.Point(53, 204);
+            this.guna2DataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2DataGridView2.Name = "guna2DataGridView2";
             this.guna2DataGridView2.RowHeadersVisible = false;
             this.guna2DataGridView2.RowHeadersWidth = 51;
             this.guna2DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView2.Size = new System.Drawing.Size(991, 293);
+            this.guna2DataGridView2.Size = new System.Drawing.Size(1321, 361);
             this.guna2DataGridView2.TabIndex = 125;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView2.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -1161,11 +1196,12 @@ namespace RJCodeAdvance.ControlStatistic
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label6.Location = new System.Drawing.Point(37, 511);
+            this.label6.Location = new System.Drawing.Point(49, 629);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(157, 16);
+            this.label6.Size = new System.Drawing.Size(197, 20);
             this.label6.TabIndex = 124;
             this.label6.Text = "Tổng tiền Nguyên liệu:";
             // 
@@ -1184,16 +1220,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThang1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btThang1.DisabledState.Parent = this.btThang1;
             this.btThang1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThang1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThang1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThang1.ForeColor = System.Drawing.Color.White;
             this.btThang1.HoverState.Parent = this.btThang1;
             this.btThang1.Image = ((System.Drawing.Image)(resources.GetObject("btThang1.Image")));
             this.btThang1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btThang1.ImageSize = new System.Drawing.Size(35, 35);
-            this.btThang1.Location = new System.Drawing.Point(37, 125);
+            this.btThang1.Location = new System.Drawing.Point(49, 154);
+            this.btThang1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThang1.Name = "btThang1";
             this.btThang1.ShadowDecoration.Parent = this.btThang1;
-            this.btThang1.Size = new System.Drawing.Size(127, 35);
+            this.btThang1.Size = new System.Drawing.Size(169, 43);
             this.btThang1.TabIndex = 121;
             this.btThang1.Text = "Tháng";
             this.btThang1.Click += new System.EventHandler(this.btThang1_Click);
@@ -1213,16 +1250,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btNam1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btNam1.DisabledState.Parent = this.btNam1;
             this.btNam1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btNam1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btNam1.ForeColor = System.Drawing.Color.White;
             this.btNam1.HoverState.Parent = this.btNam1;
             this.btNam1.Image = ((System.Drawing.Image)(resources.GetObject("btNam1.Image")));
             this.btNam1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btNam1.ImageSize = new System.Drawing.Size(35, 35);
-            this.btNam1.Location = new System.Drawing.Point(184, 125);
+            this.btNam1.Location = new System.Drawing.Point(245, 154);
+            this.btNam1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btNam1.Name = "btNam1";
             this.btNam1.ShadowDecoration.Parent = this.btNam1;
-            this.btNam1.Size = new System.Drawing.Size(127, 35);
+            this.btNam1.Size = new System.Drawing.Size(169, 43);
             this.btNam1.TabIndex = 120;
             this.btNam1.Text = "Năm";
             this.btNam1.Click += new System.EventHandler(this.btNam1_Click);
@@ -1242,16 +1280,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThongKe1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btThongKe1.DisabledState.Parent = this.btThongKe1;
             this.btThongKe1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThongKe1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThongKe1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThongKe1.ForeColor = System.Drawing.Color.White;
             this.btThongKe1.HoverState.Parent = this.btThongKe1;
             this.btThongKe1.Image = ((System.Drawing.Image)(resources.GetObject("btThongKe1.Image")));
             this.btThongKe1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btThongKe1.ImageSize = new System.Drawing.Size(35, 35);
-            this.btThongKe1.Location = new System.Drawing.Point(658, 55);
+            this.btThongKe1.Location = new System.Drawing.Point(877, 68);
+            this.btThongKe1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThongKe1.Name = "btThongKe1";
             this.btThongKe1.ShadowDecoration.Parent = this.btThongKe1;
-            this.btThongKe1.Size = new System.Drawing.Size(127, 35);
+            this.btThongKe1.Size = new System.Drawing.Size(169, 43);
             this.btThongKe1.TabIndex = 119;
             this.btThongKe1.Text = "Thống kê";
             this.btThongKe1.TextOffset = new System.Drawing.Point(10, 0);
@@ -1267,27 +1306,29 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayEnd1.CheckedState.Parent = this.dayEnd1;
             this.dayEnd1.CustomFormat = "dd/MM/yyyy 23:59:59";
             this.dayEnd1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.dayEnd1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayEnd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayEnd1.ForeColor = System.Drawing.Color.White;
             this.dayEnd1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dayEnd1.HoverState.Parent = this.dayEnd1;
-            this.dayEnd1.Location = new System.Drawing.Point(359, 54);
+            this.dayEnd1.Location = new System.Drawing.Point(479, 66);
+            this.dayEnd1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dayEnd1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dayEnd1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dayEnd1.Name = "dayEnd1";
             this.dayEnd1.ShadowDecoration.Parent = this.dayEnd1;
-            this.dayEnd1.Size = new System.Drawing.Size(293, 36);
+            this.dayEnd1.Size = new System.Drawing.Size(391, 44);
             this.dayEnd1.TabIndex = 118;
             this.dayEnd1.Value = new System.DateTime(2021, 11, 7, 13, 49, 6, 43);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label4.Location = new System.Drawing.Point(356, 24);
+            this.label4.Location = new System.Drawing.Point(475, 30);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 16);
+            this.label4.Size = new System.Drawing.Size(93, 20);
             this.label4.TabIndex = 117;
             this.label4.Text = "Đến ngày:";
             // 
@@ -1301,16 +1342,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayStar1.CheckedState.Parent = this.dayStar1;
             this.dayStar1.CustomFormat = "dd/MM/yyyy";
             this.dayStar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.dayStar1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayStar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayStar1.ForeColor = System.Drawing.Color.White;
             this.dayStar1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dayStar1.HoverState.Parent = this.dayStar1;
-            this.dayStar1.Location = new System.Drawing.Point(37, 54);
+            this.dayStar1.Location = new System.Drawing.Point(49, 66);
+            this.dayStar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dayStar1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dayStar1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dayStar1.Name = "dayStar1";
             this.dayStar1.ShadowDecoration.Parent = this.dayStar1;
-            this.dayStar1.Size = new System.Drawing.Size(293, 36);
+            this.dayStar1.Size = new System.Drawing.Size(391, 44);
             this.dayStar1.TabIndex = 116;
             this.dayStar1.Value = new System.DateTime(2021, 11, 7, 13, 49, 6, 43);
             // 
@@ -1328,28 +1370,30 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTongTien1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTongTien1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTongTien1.FocusedState.Parent = this.txtTongTien1;
-            this.txtTongTien1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtTongTien1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtTongTien1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTongTien1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTongTien1.HoverState.Parent = this.txtTongTien1;
-            this.txtTongTien1.Location = new System.Drawing.Point(200, 501);
+            this.txtTongTien1.Location = new System.Drawing.Point(267, 617);
+            this.txtTongTien1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTongTien1.Name = "txtTongTien1";
             this.txtTongTien1.PasswordChar = '\0';
             this.txtTongTien1.PlaceholderText = "";
             this.txtTongTien1.SelectedText = "";
             this.txtTongTien1.ShadowDecoration.Parent = this.txtTongTien1;
-            this.txtTongTien1.Size = new System.Drawing.Size(222, 36);
+            this.txtTongTien1.Size = new System.Drawing.Size(296, 44);
             this.txtTongTien1.TabIndex = 115;
             this.txtTongTien1.TextChanged += new System.EventHandler(this.txtTongTien1_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label5.Location = new System.Drawing.Point(37, 24);
+            this.label5.Location = new System.Drawing.Point(49, 30);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 16);
+            this.label5.Size = new System.Drawing.Size(81, 20);
             this.label5.TabIndex = 114;
             this.label5.Text = "Từ ngày:";
             // 
@@ -1378,41 +1422,45 @@ namespace RJCodeAdvance.ControlStatistic
             this.tabPage3.Controls.Add(this.txtTienHoaDon);
             this.tabPage3.Controls.Add(this.dataGridView1);
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1048, 550);
+            this.tabPage3.Size = new System.Drawing.Size(1400, 688);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Doanh Thu";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label15.Location = new System.Drawing.Point(310, 202);
+            this.label15.Location = new System.Drawing.Point(413, 249);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 16);
+            this.label15.Size = new System.Drawing.Size(47, 20);
             this.label15.TabIndex = 165;
             this.label15.Text = "VNĐ";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label14.Location = new System.Drawing.Point(310, 379);
+            this.label14.Location = new System.Drawing.Point(413, 466);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 16);
+            this.label14.Size = new System.Drawing.Size(47, 20);
             this.label14.TabIndex = 164;
             this.label14.Text = "VNĐ";
             // 
             // VNĐ
             // 
             this.VNĐ.AutoSize = true;
-            this.VNĐ.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VNĐ.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VNĐ.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.VNĐ.Location = new System.Drawing.Point(310, 290);
+            this.VNĐ.Location = new System.Drawing.Point(413, 357);
+            this.VNĐ.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.VNĐ.Name = "VNĐ";
-            this.VNĐ.Size = new System.Drawing.Size(37, 16);
+            this.VNĐ.Size = new System.Drawing.Size(47, 20);
             this.VNĐ.TabIndex = 163;
             this.VNĐ.Text = "VNĐ";
             // 
@@ -1422,7 +1470,8 @@ namespace RJCodeAdvance.ControlStatistic
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(361, 138);
+            this.chart2.Location = new System.Drawing.Point(481, 170);
+            this.chart2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
             series2.ChartArea = "ChartArea1";
@@ -1437,7 +1486,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.chart2.Series.Add(series2);
             this.chart2.Series.Add(series3);
             this.chart2.Series.Add(series4);
-            this.chart2.Size = new System.Drawing.Size(677, 409);
+            this.chart2.Size = new System.Drawing.Size(903, 503);
             this.chart2.TabIndex = 162;
             this.chart2.Text = "chart2";
             // 
@@ -1456,16 +1505,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button7.DisabledState.Parent = this.guna2Button7;
             this.guna2Button7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.guna2Button7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.HoverState.Parent = this.guna2Button7;
             this.guna2Button7.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button7.Image")));
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button7.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Button7.Location = new System.Drawing.Point(918, 97);
+            this.guna2Button7.Location = new System.Drawing.Point(1224, 119);
+            this.guna2Button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
-            this.guna2Button7.Size = new System.Drawing.Size(127, 35);
+            this.guna2Button7.Size = new System.Drawing.Size(169, 43);
             this.guna2Button7.TabIndex = 160;
             this.guna2Button7.Text = "In";
             this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
@@ -1485,16 +1535,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button8.DisabledState.Parent = this.guna2Button8;
             this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.guna2Button8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
             this.guna2Button8.HoverState.Parent = this.guna2Button8;
             this.guna2Button8.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button8.Image")));
             this.guna2Button8.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button8.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Button8.Location = new System.Drawing.Point(918, 56);
+            this.guna2Button8.Location = new System.Drawing.Point(1224, 69);
+            this.guna2Button8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.ShadowDecoration.Parent = this.guna2Button8;
-            this.guna2Button8.Size = new System.Drawing.Size(127, 35);
+            this.guna2Button8.Size = new System.Drawing.Size(169, 43);
             this.guna2Button8.TabIndex = 159;
             this.guna2Button8.Text = "Excel";
             this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
@@ -1514,14 +1565,15 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2Button9.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button9.DisabledState.Parent = this.guna2Button9;
             this.guna2Button9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2Button9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button9.ForeColor = System.Drawing.Color.White;
             this.guna2Button9.HoverState.Parent = this.guna2Button9;
             this.guna2Button9.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.guna2Button9.Location = new System.Drawing.Point(918, 55);
+            this.guna2Button9.Location = new System.Drawing.Point(1224, 68);
+            this.guna2Button9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Button9.Name = "guna2Button9";
             this.guna2Button9.ShadowDecoration.Parent = this.guna2Button9;
-            this.guna2Button9.Size = new System.Drawing.Size(127, 35);
+            this.guna2Button9.Size = new System.Drawing.Size(169, 43);
             this.guna2Button9.TabIndex = 158;
             this.guna2Button9.Text = "Export";
             // 
@@ -1540,16 +1592,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThang2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btThang2.DisabledState.Parent = this.btThang2;
             this.btThang2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThang2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThang2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThang2.ForeColor = System.Drawing.Color.White;
             this.btThang2.HoverState.Parent = this.btThang2;
             this.btThang2.Image = ((System.Drawing.Image)(resources.GetObject("btThang2.Image")));
             this.btThang2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btThang2.ImageSize = new System.Drawing.Size(35, 35);
-            this.btThang2.Location = new System.Drawing.Point(44, 148);
+            this.btThang2.Location = new System.Drawing.Point(59, 182);
+            this.btThang2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThang2.Name = "btThang2";
             this.btThang2.ShadowDecoration.Parent = this.btThang2;
-            this.btThang2.Size = new System.Drawing.Size(118, 35);
+            this.btThang2.Size = new System.Drawing.Size(157, 43);
             this.btThang2.TabIndex = 154;
             this.btThang2.Text = "Tháng";
             this.btThang2.TextOffset = new System.Drawing.Point(15, 0);
@@ -1570,16 +1623,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btNam2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btNam2.DisabledState.Parent = this.btNam2;
             this.btNam2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btNam2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btNam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btNam2.ForeColor = System.Drawing.Color.White;
             this.btNam2.HoverState.Parent = this.btNam2;
             this.btNam2.Image = ((System.Drawing.Image)(resources.GetObject("btNam2.Image")));
             this.btNam2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btNam2.ImageSize = new System.Drawing.Size(35, 35);
-            this.btNam2.Location = new System.Drawing.Point(168, 148);
+            this.btNam2.Location = new System.Drawing.Point(224, 182);
+            this.btNam2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btNam2.Name = "btNam2";
             this.btNam2.ShadowDecoration.Parent = this.btNam2;
-            this.btNam2.Size = new System.Drawing.Size(118, 35);
+            this.btNam2.Size = new System.Drawing.Size(157, 43);
             this.btNam2.TabIndex = 153;
             this.btNam2.Text = "Năm";
             this.btNam2.TextOffset = new System.Drawing.Point(10, 0);
@@ -1600,16 +1654,17 @@ namespace RJCodeAdvance.ControlStatistic
             this.btThongKe2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btThongKe2.DisabledState.Parent = this.btThongKe2;
             this.btThongKe2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThongKe2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThongKe2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThongKe2.ForeColor = System.Drawing.Color.White;
             this.btThongKe2.HoverState.Parent = this.btThongKe2;
             this.btThongKe2.Image = ((System.Drawing.Image)(resources.GetObject("btThongKe2.Image")));
             this.btThongKe2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btThongKe2.ImageSize = new System.Drawing.Size(35, 35);
-            this.btThongKe2.Location = new System.Drawing.Point(660, 56);
+            this.btThongKe2.Location = new System.Drawing.Point(880, 69);
+            this.btThongKe2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThongKe2.Name = "btThongKe2";
             this.btThongKe2.ShadowDecoration.Parent = this.btThongKe2;
-            this.btThongKe2.Size = new System.Drawing.Size(127, 35);
+            this.btThongKe2.Size = new System.Drawing.Size(169, 43);
             this.btThongKe2.TabIndex = 152;
             this.btThongKe2.Text = "Thống kê";
             this.btThongKe2.TextOffset = new System.Drawing.Point(10, 0);
@@ -1625,27 +1680,29 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayEnd2.CheckedState.Parent = this.dayEnd2;
             this.dayEnd2.CustomFormat = "dd/MM/yyyy 23:59:59";
             this.dayEnd2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.dayEnd2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayEnd2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayEnd2.ForeColor = System.Drawing.Color.White;
             this.dayEnd2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dayEnd2.HoverState.Parent = this.dayEnd2;
-            this.dayEnd2.Location = new System.Drawing.Point(361, 55);
+            this.dayEnd2.Location = new System.Drawing.Point(481, 68);
+            this.dayEnd2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dayEnd2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dayEnd2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dayEnd2.Name = "dayEnd2";
             this.dayEnd2.ShadowDecoration.Parent = this.dayEnd2;
-            this.dayEnd2.Size = new System.Drawing.Size(293, 36);
+            this.dayEnd2.Size = new System.Drawing.Size(391, 44);
             this.dayEnd2.TabIndex = 151;
             this.dayEnd2.Value = new System.DateTime(2021, 11, 7, 13, 49, 6, 43);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label9.Location = new System.Drawing.Point(358, 26);
+            this.label9.Location = new System.Drawing.Point(477, 32);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 16);
+            this.label9.Size = new System.Drawing.Size(93, 20);
             this.label9.TabIndex = 150;
             this.label9.Text = "Đến ngày:";
             // 
@@ -1659,27 +1716,29 @@ namespace RJCodeAdvance.ControlStatistic
             this.dayStar2.CheckedState.Parent = this.dayStar2;
             this.dayStar2.CustomFormat = "dd/MM/yyyy";
             this.dayStar2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.dayStar2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayStar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dayStar2.ForeColor = System.Drawing.Color.White;
             this.dayStar2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dayStar2.HoverState.Parent = this.dayStar2;
-            this.dayStar2.Location = new System.Drawing.Point(44, 55);
+            this.dayStar2.Location = new System.Drawing.Point(59, 68);
+            this.dayStar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dayStar2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dayStar2.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dayStar2.Name = "dayStar2";
             this.dayStar2.ShadowDecoration.Parent = this.dayStar2;
-            this.dayStar2.Size = new System.Drawing.Size(293, 36);
+            this.dayStar2.Size = new System.Drawing.Size(391, 44);
             this.dayStar2.TabIndex = 149;
             this.dayStar2.Value = new System.DateTime(2021, 11, 7, 13, 49, 6, 43);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label10.Location = new System.Drawing.Point(44, 26);
+            this.label10.Location = new System.Drawing.Point(59, 32);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 16);
+            this.label10.Size = new System.Drawing.Size(81, 20);
             this.label10.TabIndex = 148;
             this.label10.Text = "Từ ngày:";
             // 
@@ -1697,29 +1756,31 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtDanhThu.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDanhThu.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDanhThu.FocusedState.Parent = this.txtDanhThu;
-            this.txtDanhThu.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtDanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtDanhThu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtDanhThu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDanhThu.HoverState.Parent = this.txtDanhThu;
-            this.txtDanhThu.Location = new System.Drawing.Point(44, 398);
+            this.txtDanhThu.Location = new System.Drawing.Point(59, 490);
+            this.txtDanhThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDanhThu.Name = "txtDanhThu";
             this.txtDanhThu.PasswordChar = '\0';
             this.txtDanhThu.PlaceholderText = "Tổng danh thu";
             this.txtDanhThu.SelectedText = "";
             this.txtDanhThu.SelectionStart = 1;
             this.txtDanhThu.ShadowDecoration.Parent = this.txtDanhThu;
-            this.txtDanhThu.Size = new System.Drawing.Size(311, 36);
+            this.txtDanhThu.Size = new System.Drawing.Size(415, 44);
             this.txtDanhThu.TabIndex = 147;
             this.txtDanhThu.TextChanged += new System.EventHandler(this.txtDanhThu_TextChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label7.Location = new System.Drawing.Point(44, 379);
+            this.label7.Location = new System.Drawing.Point(59, 466);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 32);
+            this.label7.Size = new System.Drawing.Size(128, 40);
             this.label7.TabIndex = 146;
             this.label7.Text = "Tổng danh thu\r\n:";
             // 
@@ -1737,40 +1798,43 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTienIngredient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTienIngredient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienIngredient.FocusedState.Parent = this.txtTienIngredient;
-            this.txtTienIngredient.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtTienIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtTienIngredient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTienIngredient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienIngredient.HoverState.Parent = this.txtTienIngredient;
-            this.txtTienIngredient.Location = new System.Drawing.Point(44, 312);
+            this.txtTienIngredient.Location = new System.Drawing.Point(59, 384);
+            this.txtTienIngredient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTienIngredient.Name = "txtTienIngredient";
             this.txtTienIngredient.PasswordChar = '\0';
             this.txtTienIngredient.PlaceholderText = "Tổng tiền nguyên liệu";
             this.txtTienIngredient.SelectedText = "";
             this.txtTienIngredient.SelectionStart = 1;
             this.txtTienIngredient.ShadowDecoration.Parent = this.txtTienIngredient;
-            this.txtTienIngredient.Size = new System.Drawing.Size(311, 36);
+            this.txtTienIngredient.Size = new System.Drawing.Size(415, 44);
             this.txtTienIngredient.TabIndex = 139;
             this.txtTienIngredient.TextChanged += new System.EventHandler(this.txtTienIngredient_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label8.Location = new System.Drawing.Point(44, 291);
+            this.label8.Location = new System.Drawing.Point(59, 358);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(155, 16);
+            this.label8.Size = new System.Drawing.Size(194, 20);
             this.label8.TabIndex = 138;
             this.label8.Text = "Tổng tiền nguyên liệu:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label12.Location = new System.Drawing.Point(44, 202);
+            this.label12.Location = new System.Drawing.Point(59, 249);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(132, 16);
+            this.label12.Size = new System.Drawing.Size(165, 20);
             this.label12.TabIndex = 135;
             this.label12.Text = "Tổng tiền hóa đơn:";
             // 
@@ -1788,18 +1852,19 @@ namespace RJCodeAdvance.ControlStatistic
             this.txtTienHoaDon.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTienHoaDon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienHoaDon.FocusedState.Parent = this.txtTienHoaDon;
-            this.txtTienHoaDon.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtTienHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtTienHoaDon.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTienHoaDon.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienHoaDon.HoverState.Parent = this.txtTienHoaDon;
-            this.txtTienHoaDon.Location = new System.Drawing.Point(44, 222);
+            this.txtTienHoaDon.Location = new System.Drawing.Point(59, 273);
+            this.txtTienHoaDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTienHoaDon.Name = "txtTienHoaDon";
             this.txtTienHoaDon.PasswordChar = '\0';
             this.txtTienHoaDon.PlaceholderText = "Tổng tiền hóa đơn";
             this.txtTienHoaDon.SelectedText = "";
             this.txtTienHoaDon.SelectionStart = 1;
             this.txtTienHoaDon.ShadowDecoration.Parent = this.txtTienHoaDon;
-            this.txtTienHoaDon.Size = new System.Drawing.Size(311, 36);
+            this.txtTienHoaDon.Size = new System.Drawing.Size(415, 44);
             this.txtTienHoaDon.TabIndex = 127;
             this.txtTienHoaDon.TextChanged += new System.EventHandler(this.txtTienHoaDon_TextChanged);
             // 
@@ -1813,25 +1878,33 @@ namespace RJCodeAdvance.ControlStatistic
             this.Column3});
             this.dataGridView1.Enabled = false;
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.Location = new System.Drawing.Point(483, 214);
+            this.dataGridView1.Location = new System.Drawing.Point(644, 263);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(426, 150);
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(568, 185);
             this.dataGridView1.TabIndex = 161;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Tổng tiền hóa đơn";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Tổng tiền nguyên liệu";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Danh thu";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // guna2Elipse2
             // 
@@ -1927,12 +2000,13 @@ namespace RJCodeAdvance.ControlStatistic
             // 
             // UC_Statistic
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2TabControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_Statistic";
-            this.Size = new System.Drawing.Size(1100, 651);
+            this.Size = new System.Drawing.Size(1467, 801);
             this.Load += new System.EventHandler(this.UC_Statistic_Load);
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

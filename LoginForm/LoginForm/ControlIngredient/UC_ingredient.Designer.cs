@@ -75,44 +75,48 @@ namespace RJCodeAdvance.ControlIngredient
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(29, 45);
+            this.label1.Location = new System.Drawing.Point(39, 55);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 16);
+            this.label1.Size = new System.Drawing.Size(152, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên nguyên liệu:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label2.Location = new System.Drawing.Point(29, 132);
+            this.label2.Location = new System.Drawing.Point(39, 162);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 16);
+            this.label2.Size = new System.Drawing.Size(44, 21);
             this.label2.TabIndex = 1;
             this.label2.Text = "Giá:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label3.Location = new System.Drawing.Point(414, 46);
+            this.label3.Location = new System.Drawing.Point(552, 57);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 16);
+            this.label3.Size = new System.Drawing.Size(157, 21);
             this.label3.TabIndex = 2;
             this.label3.Text = "Loại nguyên liệu:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label4.Location = new System.Drawing.Point(417, 133);
+            this.label4.Location = new System.Drawing.Point(556, 164);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 16);
+            this.label4.Size = new System.Drawing.Size(132, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "Nhà cung cấp:";
             // 
@@ -130,18 +134,19 @@ namespace RJCodeAdvance.ControlIngredient
             this.txtTenIngredient.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenIngredient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenIngredient.FocusedState.Parent = this.txtTenIngredient;
-            this.txtTenIngredient.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtTenIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtTenIngredient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtTenIngredient.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenIngredient.HoverState.Parent = this.txtTenIngredient;
-            this.txtTenIngredient.Location = new System.Drawing.Point(32, 74);
+            this.txtTenIngredient.Location = new System.Drawing.Point(43, 91);
+            this.txtTenIngredient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenIngredient.MaxLength = 50;
             this.txtTenIngredient.Name = "txtTenIngredient";
             this.txtTenIngredient.PasswordChar = '\0';
             this.txtTenIngredient.PlaceholderText = "Tên nguyên liệu";
             this.txtTenIngredient.SelectedText = "";
             this.txtTenIngredient.ShadowDecoration.Parent = this.txtTenIngredient;
-            this.txtTenIngredient.Size = new System.Drawing.Size(308, 36);
+            this.txtTenIngredient.Size = new System.Drawing.Size(411, 44);
             this.txtTenIngredient.TabIndex = 32;
             // 
             // txtGia
@@ -158,18 +163,19 @@ namespace RJCodeAdvance.ControlIngredient
             this.txtGia.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGia.FocusedState.Parent = this.txtGia;
-            this.txtGia.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGia.HoverState.Parent = this.txtGia;
-            this.txtGia.Location = new System.Drawing.Point(32, 154);
+            this.txtGia.Location = new System.Drawing.Point(43, 190);
+            this.txtGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGia.MaxLength = 50;
             this.txtGia.Name = "txtGia";
             this.txtGia.PasswordChar = '\0';
             this.txtGia.PlaceholderText = "Giá";
             this.txtGia.SelectedText = "";
             this.txtGia.ShadowDecoration.Parent = this.txtGia;
-            this.txtGia.Size = new System.Drawing.Size(308, 36);
+            this.txtGia.Size = new System.Drawing.Size(411, 44);
             this.txtGia.TabIndex = 33;
             // 
             // cbLoaiIngredient
@@ -182,7 +188,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.cbLoaiIngredient.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLoaiIngredient.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbLoaiIngredient.FocusedState.Parent = this.cbLoaiIngredient;
-            this.cbLoaiIngredient.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cbLoaiIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.cbLoaiIngredient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.cbLoaiIngredient.HoverState.Parent = this.cbLoaiIngredient;
             this.cbLoaiIngredient.ItemHeight = 30;
@@ -191,10 +197,11 @@ namespace RJCodeAdvance.ControlIngredient
             "Ca 2",
             "Ca 3"});
             this.cbLoaiIngredient.ItemsAppearance.Parent = this.cbLoaiIngredient;
-            this.cbLoaiIngredient.Location = new System.Drawing.Point(414, 75);
+            this.cbLoaiIngredient.Location = new System.Drawing.Point(552, 92);
+            this.cbLoaiIngredient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbLoaiIngredient.Name = "cbLoaiIngredient";
             this.cbLoaiIngredient.ShadowDecoration.Parent = this.cbLoaiIngredient;
-            this.cbLoaiIngredient.Size = new System.Drawing.Size(271, 36);
+            this.cbLoaiIngredient.Size = new System.Drawing.Size(360, 36);
             this.cbLoaiIngredient.TabIndex = 34;
             this.cbLoaiIngredient.SelectedIndexChanged += new System.EventHandler(this.cbLoaiIngredient_SelectedIndexChanged);
             // 
@@ -208,7 +215,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.cbNhaCC.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbNhaCC.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbNhaCC.FocusedState.Parent = this.cbNhaCC;
-            this.cbNhaCC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNhaCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNhaCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.cbNhaCC.HoverState.Parent = this.cbNhaCC;
             this.cbNhaCC.ItemHeight = 30;
@@ -217,10 +224,11 @@ namespace RJCodeAdvance.ControlIngredient
             "Ca 2",
             "Ca 3"});
             this.cbNhaCC.ItemsAppearance.Parent = this.cbNhaCC;
-            this.cbNhaCC.Location = new System.Drawing.Point(414, 155);
+            this.cbNhaCC.Location = new System.Drawing.Point(552, 191);
+            this.cbNhaCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbNhaCC.Name = "cbNhaCC";
             this.cbNhaCC.ShadowDecoration.Parent = this.cbNhaCC;
-            this.cbNhaCC.Size = new System.Drawing.Size(271, 36);
+            this.cbNhaCC.Size = new System.Drawing.Size(360, 36);
             this.cbNhaCC.TabIndex = 35;
             // 
             // dgv
@@ -251,12 +259,13 @@ namespace RJCodeAdvance.ControlIngredient
             this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv.Location = new System.Drawing.Point(34, 335);
+            this.dgv.Location = new System.Drawing.Point(45, 412);
+            this.dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
             this.dgv.RowHeadersWidth = 51;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1037, 253);
+            this.dgv.Size = new System.Drawing.Size(1383, 311);
             this.dgv.TabIndex = 104;
             this.dgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -300,15 +309,16 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThemNCC.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btThemNCC.DisabledState.Parent = this.btThemNCC;
             this.btThemNCC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThemNCC.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemNCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemNCC.ForeColor = System.Drawing.Color.White;
             this.btThemNCC.HoverState.Parent = this.btThemNCC;
             this.btThemNCC.Image = ((System.Drawing.Image)(resources.GetObject("btThemNCC.Image")));
             this.btThemNCC.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThemNCC.Location = new System.Drawing.Point(700, 155);
+            this.btThemNCC.Location = new System.Drawing.Point(933, 191);
+            this.btThemNCC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThemNCC.Name = "btThemNCC";
             this.btThemNCC.ShadowDecoration.Parent = this.btThemNCC;
-            this.btThemNCC.Size = new System.Drawing.Size(128, 36);
+            this.btThemNCC.Size = new System.Drawing.Size(171, 44);
             this.btThemNCC.TabIndex = 106;
             this.btThemNCC.Text = "Thêm";
             this.btThemNCC.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -328,15 +338,16 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThemNL.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btThemNL.DisabledState.Parent = this.btThemNL;
             this.btThemNL.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThemNL.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemNL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemNL.ForeColor = System.Drawing.Color.White;
             this.btThemNL.HoverState.Parent = this.btThemNL;
             this.btThemNL.Image = ((System.Drawing.Image)(resources.GetObject("btThemNL.Image")));
             this.btThemNL.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThemNL.Location = new System.Drawing.Point(700, 75);
+            this.btThemNL.Location = new System.Drawing.Point(933, 92);
+            this.btThemNL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThemNL.Name = "btThemNL";
             this.btThemNL.ShadowDecoration.Parent = this.btThemNL;
-            this.btThemNL.Size = new System.Drawing.Size(128, 36);
+            this.btThemNL.Size = new System.Drawing.Size(171, 44);
             this.btThemNL.TabIndex = 105;
             this.btThemNL.Text = "Thêm";
             this.btThemNL.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -355,15 +366,16 @@ namespace RJCodeAdvance.ControlIngredient
             this.btLuu.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btLuu.DisabledState.Parent = this.btLuu;
             this.btLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btLuu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLuu.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLuu.ForeColor = System.Drawing.Color.White;
             this.btLuu.HoverState.Parent = this.btLuu;
             this.btLuu.Image = ((System.Drawing.Image)(resources.GetObject("btLuu.Image")));
             this.btLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btLuu.Location = new System.Drawing.Point(713, 594);
+            this.btLuu.Location = new System.Drawing.Point(951, 731);
+            this.btLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btLuu.Name = "btLuu";
             this.btLuu.ShadowDecoration.Parent = this.btLuu;
-            this.btLuu.Size = new System.Drawing.Size(128, 45);
+            this.btLuu.Size = new System.Drawing.Size(171, 55);
             this.btLuu.TabIndex = 111;
             this.btLuu.Text = "Lưu";
             this.btLuu.Click += new System.EventHandler(this.btLuu_Click);
@@ -382,15 +394,16 @@ namespace RJCodeAdvance.ControlIngredient
             this.btSua.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btSua.DisabledState.Parent = this.btSua;
             this.btSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btSua.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSua.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSua.ForeColor = System.Drawing.Color.White;
             this.btSua.HoverState.Parent = this.btSua;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua.Location = new System.Drawing.Point(572, 594);
+            this.btSua.Location = new System.Drawing.Point(763, 731);
+            this.btSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
-            this.btSua.Size = new System.Drawing.Size(128, 45);
+            this.btSua.Size = new System.Drawing.Size(171, 55);
             this.btSua.TabIndex = 110;
             this.btSua.Text = "Sửa";
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
@@ -409,15 +422,16 @@ namespace RJCodeAdvance.ControlIngredient
             this.btXoa.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btXoa.DisabledState.Parent = this.btXoa;
             this.btXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btXoa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btXoa.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXoa.ForeColor = System.Drawing.Color.White;
             this.btXoa.HoverState.Parent = this.btXoa;
             this.btXoa.Image = ((System.Drawing.Image)(resources.GetObject("btXoa.Image")));
             this.btXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btXoa.Location = new System.Drawing.Point(432, 594);
+            this.btXoa.Location = new System.Drawing.Point(576, 731);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btXoa.Name = "btXoa";
             this.btXoa.ShadowDecoration.Parent = this.btXoa;
-            this.btXoa.Size = new System.Drawing.Size(128, 45);
+            this.btXoa.Size = new System.Drawing.Size(171, 55);
             this.btXoa.TabIndex = 109;
             this.btXoa.Text = "Xóa";
             this.btXoa.Click += new System.EventHandler(this.btXoa_Click);
@@ -437,15 +451,16 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThem.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btThem.DisabledState.Parent = this.btThem;
             this.btThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThem.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThem.ForeColor = System.Drawing.Color.White;
             this.btThem.HoverState.Parent = this.btThem;
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThem.Location = new System.Drawing.Point(292, 594);
+            this.btThem.Location = new System.Drawing.Point(389, 731);
+            this.btThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
-            this.btThem.Size = new System.Drawing.Size(128, 45);
+            this.btThem.Size = new System.Drawing.Size(171, 55);
             this.btThem.TabIndex = 108;
             this.btThem.Text = "Thêm";
             this.btThem.Click += new System.EventHandler(this.btThem_Click);
@@ -468,16 +483,17 @@ namespace RJCodeAdvance.ControlIngredient
             this.btDanhSach.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btDanhSach.DisabledState.Parent = this.btDanhSach;
             this.btDanhSach.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btDanhSach.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDanhSach.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDanhSach.ForeColor = System.Drawing.Color.White;
             this.btDanhSach.HoverState.Parent = this.btDanhSach;
             this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
             this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btDanhSach.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btDanhSach.Location = new System.Drawing.Point(943, 293);
+            this.btDanhSach.Location = new System.Drawing.Point(1257, 361);
+            this.btDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btDanhSach.Name = "btDanhSach";
             this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
-            this.btDanhSach.Size = new System.Drawing.Size(128, 36);
+            this.btDanhSach.Size = new System.Drawing.Size(171, 44);
             this.btDanhSach.TabIndex = 117;
             this.btDanhSach.Text = "Danh Sách";
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
@@ -493,7 +509,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.cbDVT.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbDVT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbDVT.FocusedState.Parent = this.cbDVT;
-            this.cbDVT.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbDVT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDVT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.cbDVT.HoverState.Parent = this.cbDVT;
             this.cbDVT.ItemHeight = 30;
@@ -502,20 +518,22 @@ namespace RJCodeAdvance.ControlIngredient
             "Ca 2",
             "Ca 3"});
             this.cbDVT.ItemsAppearance.Parent = this.cbDVT;
-            this.cbDVT.Location = new System.Drawing.Point(135, 226);
+            this.cbDVT.Location = new System.Drawing.Point(180, 278);
+            this.cbDVT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbDVT.Name = "cbDVT";
             this.cbDVT.ShadowDecoration.Parent = this.cbDVT;
-            this.cbDVT.Size = new System.Drawing.Size(105, 36);
+            this.cbDVT.Size = new System.Drawing.Size(139, 36);
             this.cbDVT.TabIndex = 120;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label5.Location = new System.Drawing.Point(29, 207);
+            this.label5.Location = new System.Drawing.Point(39, 255);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(83, 16);
+            this.label5.Size = new System.Drawing.Size(110, 21);
             this.label5.TabIndex = 121;
             this.label5.Text = "Khối lượng:";
             // 
@@ -529,7 +547,8 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2NumericUpDown1.FocusedState.Parent = this.guna2NumericUpDown1;
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(32, 227);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(43, 279);
+            this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2NumericUpDown1.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -542,7 +561,7 @@ namespace RJCodeAdvance.ControlIngredient
             0});
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
             this.guna2NumericUpDown1.ShadowDecoration.Parent = this.guna2NumericUpDown1;
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(97, 35);
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(129, 43);
             this.guna2NumericUpDown1.TabIndex = 122;
             this.guna2NumericUpDown1.Value = new decimal(new int[] {
             1,
@@ -580,15 +599,16 @@ namespace RJCodeAdvance.ControlIngredient
             this.btThemDonVi.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btThemDonVi.DisabledState.Parent = this.btThemDonVi;
             this.btThemDonVi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btThemDonVi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btThemDonVi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btThemDonVi.ForeColor = System.Drawing.Color.White;
             this.btThemDonVi.HoverState.Parent = this.btThemDonVi;
             this.btThemDonVi.Image = ((System.Drawing.Image)(resources.GetObject("btThemDonVi.Image")));
             this.btThemDonVi.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btThemDonVi.Location = new System.Drawing.Point(246, 227);
+            this.btThemDonVi.Location = new System.Drawing.Point(328, 279);
+            this.btThemDonVi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btThemDonVi.Name = "btThemDonVi";
             this.btThemDonVi.ShadowDecoration.Parent = this.btThemDonVi;
-            this.btThemDonVi.Size = new System.Drawing.Size(94, 35);
+            this.btThemDonVi.Size = new System.Drawing.Size(125, 43);
             this.btThemDonVi.TabIndex = 124;
             this.btThemDonVi.Text = "Thêm ";
             this.btThemDonVi.Click += new System.EventHandler(this.btThemDonVi_Click);
@@ -610,14 +630,15 @@ namespace RJCodeAdvance.ControlIngredient
             this.txtSearch.ForeColor = System.Drawing.Color.BlueViolet;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.HoverState.Parent = this.txtSearch;
-            this.txtSearch.Location = new System.Drawing.Point(167, 293);
+            this.txtSearch.Location = new System.Drawing.Point(223, 361);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.MaxLength = 50;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Nhập tên nguyên liệu cần tìm";
             this.txtSearch.SelectedText = "";
             this.txtSearch.ShadowDecoration.Parent = this.txtSearch;
-            this.txtSearch.Size = new System.Drawing.Size(228, 36);
+            this.txtSearch.Size = new System.Drawing.Size(304, 44);
             this.txtSearch.TabIndex = 126;
             // 
             // btTimKiem
@@ -635,15 +656,16 @@ namespace RJCodeAdvance.ControlIngredient
             this.btTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btTimKiem.DisabledState.Parent = this.btTimKiem;
             this.btTimKiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btTimKiem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTimKiem.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTimKiem.ForeColor = System.Drawing.Color.White;
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(34, 293);
+            this.btTimKiem.Location = new System.Drawing.Point(45, 361);
+            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
-            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
+            this.btTimKiem.Size = new System.Drawing.Size(169, 44);
             this.btTimKiem.TabIndex = 125;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click_1);
@@ -654,10 +676,11 @@ namespace RJCodeAdvance.ControlIngredient
             this.picHinh.BorderRadius = 3;
             this.picHinh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picHinh.ImageRotate = 0F;
-            this.picHinh.Location = new System.Drawing.Point(920, 58);
+            this.picHinh.Location = new System.Drawing.Point(1227, 71);
+            this.picHinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picHinh.Name = "picHinh";
             this.picHinh.ShadowDecoration.Parent = this.picHinh;
-            this.picHinh.Size = new System.Drawing.Size(128, 133);
+            this.picHinh.Size = new System.Drawing.Size(170, 163);
             this.picHinh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picHinh.TabIndex = 127;
             this.picHinh.TabStop = false;
@@ -665,9 +688,10 @@ namespace RJCodeAdvance.ControlIngredient
             // ptbOpen
             // 
             this.ptbOpen.Image = ((System.Drawing.Image)(resources.GetObject("ptbOpen.Image")));
-            this.ptbOpen.Location = new System.Drawing.Point(881, 58);
+            this.ptbOpen.Location = new System.Drawing.Point(1175, 71);
+            this.ptbOpen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ptbOpen.Name = "ptbOpen";
-            this.ptbOpen.Size = new System.Drawing.Size(33, 27);
+            this.ptbOpen.Size = new System.Drawing.Size(44, 33);
             this.ptbOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbOpen.TabIndex = 150;
             this.ptbOpen.TabStop = false;
@@ -683,10 +707,11 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
             this.guna2ControlBox2.HoverState.Parent = this.guna2ControlBox2;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1003, 14);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1337, 17);
+            this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.ShadowDecoration.Parent = this.guna2ControlBox2;
-            this.guna2ControlBox2.Size = new System.Drawing.Size(37, 26);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(49, 32);
             this.guna2ControlBox2.TabIndex = 152;
             // 
             // guna2ControlBox1
@@ -698,10 +723,11 @@ namespace RJCodeAdvance.ControlIngredient
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(199)))), ((int)(((byte)(210)))));
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1046, 14);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1395, 17);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(37, 26);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(49, 32);
             this.guna2ControlBox1.TabIndex = 151;
             // 
             // guna2ShadowForm1
@@ -724,37 +750,39 @@ namespace RJCodeAdvance.ControlIngredient
             this.txtHinh.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtHinh.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHinh.FocusedState.Parent = this.txtHinh;
-            this.txtHinh.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtHinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtHinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.txtHinh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtHinh.HoverState.Parent = this.txtHinh;
-            this.txtHinh.Location = new System.Drawing.Point(414, 227);
+            this.txtHinh.Location = new System.Drawing.Point(552, 279);
+            this.txtHinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtHinh.MaxLength = 50;
             this.txtHinh.Name = "txtHinh";
             this.txtHinh.PasswordChar = '\0';
             this.txtHinh.PlaceholderText = "Hình";
             this.txtHinh.SelectedText = "";
             this.txtHinh.ShadowDecoration.Parent = this.txtHinh;
-            this.txtHinh.Size = new System.Drawing.Size(271, 36);
+            this.txtHinh.Size = new System.Drawing.Size(361, 44);
             this.txtHinh.TabIndex = 154;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label6.Location = new System.Drawing.Point(417, 207);
+            this.label6.Location = new System.Drawing.Point(556, 255);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 16);
+            this.label6.Size = new System.Drawing.Size(50, 21);
             this.label6.TabIndex = 153;
             this.label6.Text = "Hình";
             // 
             // UC_ingredient
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1100, 651);
+            this.ClientSize = new System.Drawing.Size(1467, 801);
             this.Controls.Add(this.txtHinh);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.guna2ControlBox2);
@@ -784,6 +812,7 @@ namespace RJCodeAdvance.ControlIngredient
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_ingredient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.UC_ingredient_Load);

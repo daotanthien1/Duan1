@@ -64,11 +64,12 @@ namespace RJCodeAdvance.ControlCustomers
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label7.Location = new System.Drawing.Point(617, 130);
+            this.label7.Location = new System.Drawing.Point(823, 160);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 16);
+            this.label7.Size = new System.Drawing.Size(149, 21);
             this.label7.TabIndex = 141;
-            this.label7.Text = "điểm thân thiết:";
+            this.label7.Text = "Điểm thân thiết:";
             // 
             // rdNu
             // 
@@ -81,9 +82,10 @@ namespace RJCodeAdvance.ControlCustomers
             this.rdNu.CheckedState.InnerOffset = -4;
             this.rdNu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdNu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rdNu.Location = new System.Drawing.Point(103, 161);
+            this.rdNu.Location = new System.Drawing.Point(137, 198);
+            this.rdNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdNu.Name = "rdNu";
-            this.rdNu.Size = new System.Drawing.Size(42, 20);
+            this.rdNu.Size = new System.Drawing.Size(52, 25);
             this.rdNu.TabIndex = 140;
             this.rdNu.TabStop = true;
             this.rdNu.Text = "Nữ";
@@ -102,9 +104,10 @@ namespace RJCodeAdvance.ControlCustomers
             this.rdNam.CheckedState.InnerOffset = -4;
             this.rdNam.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rdNam.Location = new System.Drawing.Point(28, 161);
+            this.rdNam.Location = new System.Drawing.Point(37, 198);
+            this.rdNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdNam.Name = "rdNam";
-            this.rdNam.Size = new System.Drawing.Size(52, 20);
+            this.rdNam.Size = new System.Drawing.Size(65, 25);
             this.rdNam.TabIndex = 139;
             this.rdNam.Text = "Nam";
             this.rdNam.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -140,11 +143,13 @@ namespace RJCodeAdvance.ControlCustomers
             this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgv.Location = new System.Drawing.Point(27, 295);
+            this.dgv.Location = new System.Drawing.Point(36, 363);
+            this.dgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv.Name = "dgv";
             this.dgv.RowHeadersVisible = false;
+            this.dgv.RowHeadersWidth = 51;
             this.dgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv.Size = new System.Drawing.Size(1035, 284);
+            this.dgv.Size = new System.Drawing.Size(1380, 350);
             this.dgv.TabIndex = 138;
             this.dgv.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgv.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -186,13 +191,14 @@ namespace RJCodeAdvance.ControlCustomers
             this.txtsearch.ForeColor = System.Drawing.Color.BlueViolet;
             this.txtsearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtsearch.HoverState.Parent = this.txtsearch;
-            this.txtsearch.Location = new System.Drawing.Point(170, 253);
+            this.txtsearch.Location = new System.Drawing.Point(227, 311);
+            this.txtsearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtsearch.Name = "txtsearch";
             this.txtsearch.PasswordChar = '\0';
-            this.txtsearch.PlaceholderText = "Nhập tên Khách hàng cần tìm";
+            this.txtsearch.PlaceholderText = "Nhập tên khách hàng cần tìm";
             this.txtsearch.SelectedText = "";
             this.txtsearch.ShadowDecoration.Parent = this.txtsearch;
-            this.txtsearch.Size = new System.Drawing.Size(228, 36);
+            this.txtsearch.Size = new System.Drawing.Size(304, 44);
             this.txtsearch.TabIndex = 137;
             this.txtsearch.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             // 
@@ -210,39 +216,42 @@ namespace RJCodeAdvance.ControlCustomers
             this.txbEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txbEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbEmail.FocusedState.Parent = this.txbEmail;
-            this.txbEmail.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txbEmail.ForeColor = System.Drawing.Color.Black;
             this.txbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbEmail.HoverState.Parent = this.txbEmail;
-            this.txbEmail.Location = new System.Drawing.Point(617, 71);
+            this.txbEmail.Location = new System.Drawing.Point(823, 87);
+            this.txbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txbEmail.MaxLength = 50;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.PasswordChar = '\0';
             this.txbEmail.PlaceholderText = "Email";
             this.txbEmail.SelectedText = "";
             this.txbEmail.ShadowDecoration.Parent = this.txbEmail;
-            this.txbEmail.Size = new System.Drawing.Size(330, 36);
+            this.txbEmail.Size = new System.Drawing.Size(440, 44);
             this.txbEmail.TabIndex = 135;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label5.Location = new System.Drawing.Point(617, 52);
+            this.label5.Location = new System.Drawing.Point(823, 64);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 16);
+            this.label5.Size = new System.Drawing.Size(62, 21);
             this.label5.TabIndex = 134;
             this.label5.Text = "Email:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label4.Location = new System.Drawing.Point(28, 130);
+            this.label4.Location = new System.Drawing.Point(37, 160);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 16);
+            this.label4.Size = new System.Drawing.Size(89, 21);
             this.label4.TabIndex = 133;
             this.label4.Text = "Giới tính:";
             // 
@@ -260,28 +269,30 @@ namespace RJCodeAdvance.ControlCustomers
             this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.FocusedState.Parent = this.txtName;
-            this.txtName.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.txtName.ForeColor = System.Drawing.Color.Black;
             this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtName.HoverState.Parent = this.txtName;
-            this.txtName.Location = new System.Drawing.Point(28, 71);
+            this.txtName.Location = new System.Drawing.Point(37, 87);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
             this.txtName.PlaceholderText = "Tên khách hàng";
             this.txtName.SelectedText = "";
             this.txtName.ShadowDecoration.Parent = this.txtName;
-            this.txtName.Size = new System.Drawing.Size(346, 36);
+            this.txtName.Size = new System.Drawing.Size(461, 44);
             this.txtName.TabIndex = 132;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label1.Location = new System.Drawing.Point(28, 52);
+            this.label1.Location = new System.Drawing.Point(37, 64);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 16);
+            this.label1.Size = new System.Drawing.Size(153, 21);
             this.label1.TabIndex = 131;
             this.label1.Text = "Tên Khách hàng:";
             // 
@@ -299,15 +310,16 @@ namespace RJCodeAdvance.ControlCustomers
             this.btSua.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btSua.DisabledState.Parent = this.btSua;
             this.btSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btSua.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSua.ForeColor = System.Drawing.Color.White;
             this.btSua.HoverState.Parent = this.btSua;
             this.btSua.Image = ((System.Drawing.Image)(resources.GetObject("btSua.Image")));
             this.btSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btSua.Location = new System.Drawing.Point(934, 585);
+            this.btSua.Location = new System.Drawing.Point(1245, 720);
+            this.btSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btSua.Name = "btSua";
             this.btSua.ShadowDecoration.Parent = this.btSua;
-            this.btSua.Size = new System.Drawing.Size(128, 45);
+            this.btSua.Size = new System.Drawing.Size(171, 55);
             this.btSua.TabIndex = 144;
             this.btSua.Text = "Sửa";
             this.btSua.Click += new System.EventHandler(this.btSua_Click);
@@ -327,15 +339,16 @@ namespace RJCodeAdvance.ControlCustomers
             this.btTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btTimKiem.DisabledState.Parent = this.btTimKiem;
             this.btTimKiem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btTimKiem.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTimKiem.ForeColor = System.Drawing.Color.White;
             this.btTimKiem.HoverState.Parent = this.btTimKiem;
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btTimKiem.Location = new System.Drawing.Point(28, 253);
+            this.btTimKiem.Location = new System.Drawing.Point(37, 311);
+            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
-            this.btTimKiem.Size = new System.Drawing.Size(127, 36);
+            this.btTimKiem.Size = new System.Drawing.Size(169, 44);
             this.btTimKiem.TabIndex = 136;
             this.btTimKiem.Text = "Tìm kiếm";
             this.btTimKiem.Click += new System.EventHandler(this.btTimKiem_Click);
@@ -351,10 +364,11 @@ namespace RJCodeAdvance.ControlCustomers
             this.nbDiemTT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nbDiemTT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.nbDiemTT.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.nbDiemTT.Location = new System.Drawing.Point(620, 150);
+            this.nbDiemTT.Location = new System.Drawing.Point(827, 185);
+            this.nbDiemTT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nbDiemTT.Name = "nbDiemTT";
             this.nbDiemTT.ShadowDecoration.Parent = this.nbDiemTT;
-            this.nbDiemTT.Size = new System.Drawing.Size(327, 35);
+            this.nbDiemTT.Size = new System.Drawing.Size(436, 43);
             this.nbDiemTT.TabIndex = 147;
             // 
             // guna2Elipse2
@@ -375,16 +389,17 @@ namespace RJCodeAdvance.ControlCustomers
             this.btDanhSach.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btDanhSach.DisabledState.Parent = this.btDanhSach;
             this.btDanhSach.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btDanhSach.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btDanhSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDanhSach.ForeColor = System.Drawing.Color.White;
             this.btDanhSach.HoverState.Parent = this.btDanhSach;
             this.btDanhSach.Image = ((System.Drawing.Image)(resources.GetObject("btDanhSach.Image")));
             this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btDanhSach.ImageOffset = new System.Drawing.Point(-2, 0);
-            this.btDanhSach.Location = new System.Drawing.Point(934, 253);
+            this.btDanhSach.Location = new System.Drawing.Point(1245, 311);
+            this.btDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btDanhSach.Name = "btDanhSach";
             this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
-            this.btDanhSach.Size = new System.Drawing.Size(128, 36);
+            this.btDanhSach.Size = new System.Drawing.Size(171, 44);
             this.btDanhSach.TabIndex = 148;
             this.btDanhSach.Text = "Danh Sách";
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
@@ -392,7 +407,7 @@ namespace RJCodeAdvance.ControlCustomers
             // 
             // UC_Customer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btDanhSach);
@@ -409,8 +424,9 @@ namespace RJCodeAdvance.ControlCustomers
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UC_Customer";
-            this.Size = new System.Drawing.Size(1096, 651);
+            this.Size = new System.Drawing.Size(1461, 801);
             this.Load += new System.EventHandler(this.UC_Customer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbDiemTT)).EndInit();
