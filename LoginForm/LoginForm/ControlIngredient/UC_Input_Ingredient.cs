@@ -112,7 +112,7 @@ namespace RJCodeAdvance.ControlIngredient
         {
             btSua.Enabled = true;
             nbSoLuong.Enabled = true;
-            if (guna2DataGridView1.Rows.Count > 0)
+            if (guna2DataGridView1.Rows.Count > 1)
             {
                 rows = guna2DataGridView1.CurrentRow.Index;
                 txtName.Text = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();

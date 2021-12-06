@@ -77,6 +77,7 @@ namespace RJCodeAdvance
         {
             if (guna2DataGridView1.Rows.Count > 1)
             {
+                txtSale.Enabled = true;
                 id = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
                 txtSale.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
 
@@ -102,7 +103,7 @@ namespace RJCodeAdvance
             guna2Button3.Enabled = false;
             guna2Button4.Enabled = false;
             guna2Button5.Enabled = false;
-
+            txtSale.Enabled = false;
             txtSale.Text = null;
         }
 
@@ -111,17 +112,15 @@ namespace RJCodeAdvance
             guna2Button3.Enabled = false;
             guna2Button4.Enabled = false;
             guna2Button5.Enabled = true;
+            txtSale.Enabled = true;
             txtSale.Text = null;
         }
         //xóa
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn Xóa loại voucher này", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-
+         
                 if (typeVouchers.DeleteDataTypeVoucher(int.Parse(guna2DataGridView1.CurrentRow.Cells[0].Value.ToString())))
                 {
-                    MessageBox.Show("Xóa thành công");
                     resetValue();
                     LoadData();
                 }
@@ -129,21 +128,14 @@ namespace RJCodeAdvance
                 {
                     MessageBox.Show("Xóa thất bại");
                 }
-            }
-            else
-            {
-                resetValue();
-            }
-            insert();
+                        insert();
         }
         //sửa
         private void guna2Button4_Click(object sender, EventArgs e)
         {
             int so;
             bool result = int.TryParse(txtSale.Text, out so);
-            if (MessageBox.Show("Bạn chắc chắn muốn sửa lịch này", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                if (txtSale.Text == "")
+                   if (txtSale.Text == "")
                 {
                     MessageBox.Show("Vui lòng nhập Sale");
                 }
@@ -156,7 +148,6 @@ namespace RJCodeAdvance
                             DTO_LoaiVoucher typeVoucher = new DTO_LoaiVoucher(int.Parse(id), float.Parse(txtSale.Text));
                             if (typeVouchers.UpdateDataTypeVoucher(typeVoucher))
                             {
-                                MessageBox.Show("Sửa thành công");
                                 resetValue();
                                 LoadData();
                             }
@@ -175,12 +166,7 @@ namespace RJCodeAdvance
                         MessageBox.Show("Vui lòng nhập Sale bằng số");
                     }
                 }
-            }
-            else
-            {
-                resetValue();
-            }
-            insert();
+                       insert();
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)

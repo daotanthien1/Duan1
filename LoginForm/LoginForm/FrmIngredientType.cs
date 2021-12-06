@@ -30,7 +30,6 @@ namespace RJCodeAdvance
         private void btXoa_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(dgv.CurrentRow.Cells["Id_Type"].Value.ToString());
-            if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (busLNL.DeleteLoaiNguyenLieu(id))
                 {
@@ -42,11 +41,7 @@ namespace RJCodeAdvance
                     MessageBox.Show("Xoá không thành công.");
                 }
             }
-            else
-            {
-                ResetValue();
-            }
-        }
+                    }
 
         private void btSua_Click(object sender, EventArgs e)
         {
@@ -58,7 +53,6 @@ namespace RJCodeAdvance
                         Convert.ToInt32(dgv.CurrentRow.Cells[0].Value.ToString()));
                     if (busLNL.UpdateLoaiNguyenLieu(dtoTI))
                     {
-                        MessageBox.Show("Thành công");
                         loaddgv();
                         ResetValue();
                     }
@@ -79,8 +73,8 @@ namespace RJCodeAdvance
                     DTO_LoaiNguyenLieu dtoIT = new DTO_LoaiNguyenLieu(txtTenLoaiNL.Text);
                     if (busLNL.InsertLoaiNguyenLieu(dtoIT))
                     {
-                        MessageBox.Show("Thành công");
                         loaddgv();
+                        ResetValue();
                     }
                 }
             }

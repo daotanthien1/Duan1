@@ -41,6 +41,7 @@ namespace RJCodeAdvance.ControlVouchers
         private void btThem_Click(object sender, EventArgs e)
         {
             guna2Button5.Enabled = true;
+            guna2Button1.Enabled = true;
             cbSale.Enabled = true;
             dayStart.Enabled = true;
             dayEnd.Enabled = true;
@@ -81,6 +82,7 @@ namespace RJCodeAdvance.ControlVouchers
         {
             if (txtSoLuong.Rows.Count > 0)
             {
+                guna2Button1.Enabled = true;
                 guna2Button3.Enabled = true;
                 guna2Button5.Enabled = false;
                 dayStart.Text = txtSoLuong.CurrentRow.Cells[1].Value.ToString();

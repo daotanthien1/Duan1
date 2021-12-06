@@ -19,6 +19,7 @@ namespace RJCodeAdvance.ControlIngredient
         public UC_ingredient()
         {
             InitializeComponent();
+            btThemDonVi.Enabled = false;
         }
         BUS_NguyenLieu busIg = new BUS_NguyenLieu();
         public class UpdateEventArgs : EventArgs
@@ -50,6 +51,9 @@ namespace RJCodeAdvance.ControlIngredient
             guna2NumericUpDown1.Enabled = true;
             cbDVT.Enabled = true;
             btLuu.Enabled = true;
+            btThemNL.Enabled = true;
+            btThemNCC.Enabled = true;
+            btThemDonVi.Enabled = true;
         }
 
         private void btXoa_Click(object sender, EventArgs e)
@@ -75,6 +79,7 @@ namespace RJCodeAdvance.ControlIngredient
                     DTO_NguyenLieu dtoBe = new DTO_NguyenLieu(txtTenIngredient.Text, Convert.ToInt32(cbNhaCC.SelectedValue),
                         Convert.ToInt32(cbLoaiIngredient.SelectedValue), float.Parse(txtGia.Text),
                         int.Parse(guna2NumericUpDown1.Value.ToString()), Convert.ToInt32(cbDVT.SelectedValue),
+                        int.Parse(dgv.CurrentRow.Cells[0].Value.ToString()),
                          "Images\\" + fileName);
                     if (busIg.UpdateNguyenLieu(dtoBe))
                     {
@@ -155,7 +160,7 @@ namespace RJCodeAdvance.ControlIngredient
             txtTenIngredient.Text = "";
             cbLoaiIngredient.Enabled = false;
             txtGia.Enabled = false;
-            txtGia.Text = "";
+            txtGia.Value = 1;
             cbNhaCC.Enabled = false;
             guna2NumericUpDown1.Enabled = false;
             guna2NumericUpDown1.Value = 1;
@@ -187,9 +192,9 @@ namespace RJCodeAdvance.ControlIngredient
                 MessageBox.Show("vui lòng nhập giá nguyên liệu bằng số");
                 return false;
             }
-            if (float.Parse(txtGia.Text) < 10000 || float.Parse(txtGia.Text) > 500000)
+            if (float.Parse(txtGia.Text) < 10000 || float.Parse(txtGia.Text) > 5000000)
             {
-                MessageBox.Show("Giá nguyên liệu từ 10,000 vnđ --> 500,000 vnđ");
+                MessageBox.Show("Giá nguyên liệu từ 10,000 vnđ --> 5,000,000 vnđ");
                 return false;
             }
 

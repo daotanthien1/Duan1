@@ -47,7 +47,6 @@ namespace RJCodeAdvance
             DTO_units unit = new DTO_units(txtName.Text);
             if (units.InsertDataUnits(unit))
             {
-                MessageBox.Show("Insert thành công");
                 loadData();
                 resetValue();
             }
@@ -67,7 +66,6 @@ namespace RJCodeAdvance
         // sửa data units
         private void btSua_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn sửa units ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 DTO_units unit = new DTO_units(txtName.Text, id);
                 if (units.UpdateDataUnits(unit))
@@ -82,10 +80,7 @@ namespace RJCodeAdvance
                     resetValue();
                 }
             }
-            else
-            {
-            }
-        }
+                    }
 
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -100,11 +95,9 @@ namespace RJCodeAdvance
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn chắc chắn muốn sửa units ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (units.deleteDataUnit(int.Parse(guna2DataGridView1.CurrentRow.Cells[0].Value.ToString())))
                 {
-                    MessageBox.Show("Xóa thành công");
                     loadData();
                     resetValue();
                 }
@@ -114,10 +107,7 @@ namespace RJCodeAdvance
                     resetValue();
                 }
             }
-            else
-            {
-            }
-        }
+                    }
 
         private void btTimKiem_Click(object sender, EventArgs e)
         {

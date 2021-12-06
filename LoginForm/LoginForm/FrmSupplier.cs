@@ -47,7 +47,6 @@ namespace RJCodeAdvance
         private void btXoa_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(dgv.CurrentRow.Cells["Id_Supplier"].Value.ToString());
-            if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (busNCC.DeleteNhaCungCap(id))
                 {
@@ -59,11 +58,7 @@ namespace RJCodeAdvance
                     MessageBox.Show("Xoá không thành công");
                 }
             }
-            else
-            {
-                ResetValue();
-            }
-        }
+                   }
 
         private void btSua_Click(object sender, EventArgs e)
         {
@@ -75,7 +70,6 @@ namespace RJCodeAdvance
                         txtDiaChi.Text, Convert.ToInt32(dgv.CurrentRow.Cells["Id_Supplier"].Value.ToString()));
                     if (busNCC.UpdateNhaCungCap(dtoNCC))
                     {
-                        MessageBox.Show("Thành công");
                         loaddgv();
                         ResetValue();
                     }
@@ -96,8 +90,8 @@ namespace RJCodeAdvance
                     DTO_NhaCungCap dtoNCC = new DTO_NhaCungCap(txtTenNCC.Text, txtEmail.Text, txtDiaChi.Text);
                     if (busNCC.InsertNhaCungCap(dtoNCC))
                     {
-                        MessageBox.Show("Thành công");
                         loaddgv();
+                        ResetValue();
                     }
                     else
                     {
@@ -144,21 +138,7 @@ namespace RJCodeAdvance
                 txtTenNCC.Focus();
                 return false;
             }
-            if (string.IsNullOrEmpty(txtEmail.Text))
-            {
-                MessageBox.Show("Chưa nhập đủ thông tin");
-                txtEmail.Text = "";
-                txtEmail.Focus();
-                return false;
-            }
-            if (string.IsNullOrEmpty(txtDiaChi.Text))
-            {
-                MessageBox.Show("Chưa nhập đủ thông tin");
-                txtDiaChi.Text = "";
-                txtDiaChi.Focus();
-                return false;
-            }
-            return true;
+                        return true;
         }
 
         void loaddgv()
