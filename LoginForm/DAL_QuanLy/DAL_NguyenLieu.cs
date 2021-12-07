@@ -70,7 +70,7 @@ namespace DAL_QuanLy
             {
                 _conn.Open();
                 SqlCommand cmd = new SqlCommand();
-                cmd.CommandText = "select Id_supplier, Name from Suppliers";
+                cmd.CommandText = "select Id_supplier, Name from Suppliers where isDelete = 1";
                 cmd.Connection = _conn;
                 DataTable dtNCC = new DataTable();
                 dtNCC.Load(cmd.ExecuteReader());
