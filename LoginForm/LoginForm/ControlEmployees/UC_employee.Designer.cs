@@ -86,7 +86,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtTenNhanVien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenNhanVien.HoverState.Parent = this.txtTenNhanVien;
             this.txtTenNhanVien.Location = new System.Drawing.Point(45, 70);
-            this.txtTenNhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNhanVien.MaxLength = 50;
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.PasswordChar = '\0';
@@ -163,7 +163,7 @@ namespace RJCodeAdvance.ControlEmployees
             "Nhân viên"});
             this.cbVaiTro.ItemsAppearance.Parent = this.cbVaiTro;
             this.cbVaiTro.Location = new System.Drawing.Point(45, 224);
-            this.cbVaiTro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbVaiTro.Margin = new System.Windows.Forms.Padding(4);
             this.cbVaiTro.Name = "cbVaiTro";
             this.cbVaiTro.ShadowDecoration.Parent = this.cbVaiTro;
             this.cbVaiTro.Size = new System.Drawing.Size(324, 36);
@@ -224,7 +224,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.HoverState.Parent = this.txtEmail;
             this.txtEmail.Location = new System.Drawing.Point(807, 70);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -253,7 +253,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.HoverState.Parent = this.txtDiaChi;
             this.txtDiaChi.Location = new System.Drawing.Point(807, 146);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.MaxLength = 50;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
@@ -279,7 +279,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNgaySinh.HoverState.Parent = this.dtNgaySinh;
             this.dtNgaySinh.Location = new System.Drawing.Point(807, 224);
-            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtNgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtNgaySinh.Name = "dtNgaySinh";
@@ -323,7 +323,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.dgv_NhanVien.EnableHeadersVisualStyles = false;
             this.dgv_NhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_NhanVien.Location = new System.Drawing.Point(45, 407);
-            this.dgv_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_NhanVien.Name = "dgv_NhanVien";
             this.dgv_NhanVien.RowHeadersVisible = false;
             this.dgv_NhanVien.RowHeadersWidth = 51;
@@ -351,6 +351,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.dgv_NhanVien.ThemeStyle.RowsStyle.Height = 22;
             this.dgv_NhanVien.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_NhanVien.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgv_NhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NhanVien_CellClick);
             this.dgv_NhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NhanVien_Click);
             // 
             // rbNam
@@ -364,7 +365,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.rbNam.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.rbNam.Location = new System.Drawing.Point(188, 276);
-            this.rbNam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbNam.Margin = new System.Windows.Forms.Padding(4);
             this.rbNam.Name = "rbNam";
             this.rbNam.Size = new System.Drawing.Size(65, 25);
             this.rbNam.TabIndex = 89;
@@ -386,7 +387,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.rbNu.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rbNu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.rbNu.Location = new System.Drawing.Point(292, 276);
-            this.rbNu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbNu.Margin = new System.Windows.Forms.Padding(4);
             this.rbNu.Name = "rbNu";
             this.rbNu.Size = new System.Drawing.Size(52, 25);
             this.rbNu.TabIndex = 90;
@@ -418,7 +419,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnThemVaitro.Image = ((System.Drawing.Image)(resources.GetObject("btnThemVaitro.Image")));
             this.btnThemVaitro.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnThemVaitro.Location = new System.Drawing.Point(379, 224);
-            this.btnThemVaitro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThemVaitro.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemVaitro.Name = "btnThemVaitro";
             this.btnThemVaitro.ShadowDecoration.Parent = this.btnThemVaitro;
             this.btnThemVaitro.Size = new System.Drawing.Size(128, 44);
@@ -446,7 +447,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnLuu.Location = new System.Drawing.Point(816, 731);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
             this.btnLuu.Size = new System.Drawing.Size(171, 55);
@@ -474,7 +475,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnSua.Location = new System.Drawing.Point(628, 731);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.ShadowDecoration.Parent = this.btnSua;
             this.btnSua.Size = new System.Drawing.Size(171, 55);
@@ -502,7 +503,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnXoa.Location = new System.Drawing.Point(441, 731);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
             this.btnXoa.Size = new System.Drawing.Size(171, 55);
@@ -531,7 +532,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btThem.Image = ((System.Drawing.Image)(resources.GetObject("btThem.Image")));
             this.btThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btThem.Location = new System.Drawing.Point(255, 731);
-            this.btThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btThem.Margin = new System.Windows.Forms.Padding(4);
             this.btThem.Name = "btThem";
             this.btThem.ShadowDecoration.Parent = this.btThem;
             this.btThem.Size = new System.Drawing.Size(171, 55);
@@ -564,7 +565,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btDanhSach.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btDanhSach.ImageOffset = new System.Drawing.Point(-2, 0);
             this.btDanhSach.Location = new System.Drawing.Point(1011, 731);
-            this.btDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.btDanhSach.Name = "btDanhSach";
             this.btDanhSach.ShadowDecoration.Parent = this.btDanhSach;
             this.btDanhSach.Size = new System.Drawing.Size(171, 55);
@@ -603,7 +604,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.nbLuong.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.nbLuong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.nbLuong.Location = new System.Drawing.Point(45, 146);
-            this.nbLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nbLuong.Margin = new System.Windows.Forms.Padding(4);
             this.nbLuong.Maximum = new decimal(new int[] {
             100000000,
             0,
@@ -633,7 +634,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
             this.txtTimKiem.Location = new System.Drawing.Point(231, 356);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimKiem.MaxLength = 50;
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
@@ -664,7 +665,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.btTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btTimKiem.Image")));
             this.btTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btTimKiem.Location = new System.Drawing.Point(53, 356);
-            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btTimKiem.Margin = new System.Windows.Forms.Padding(4);
             this.btTimKiem.Name = "btTimKiem";
             this.btTimKiem.ShadowDecoration.Parent = this.btTimKiem;
             this.btTimKiem.Size = new System.Drawing.Size(169, 44);
@@ -691,7 +692,7 @@ namespace RJCodeAdvance.ControlEmployees
             "Nhân viên"});
             this.cbTimKiemTheoVaiTro.ItemsAppearance.Parent = this.cbTimKiemTheoVaiTro;
             this.cbTimKiemTheoVaiTro.Location = new System.Drawing.Point(811, 356);
-            this.cbTimKiemTheoVaiTro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTimKiemTheoVaiTro.Margin = new System.Windows.Forms.Padding(4);
             this.cbTimKiemTheoVaiTro.Name = "cbTimKiemTheoVaiTro";
             this.cbTimKiemTheoVaiTro.ShadowDecoration.Parent = this.cbTimKiemTheoVaiTro;
             this.cbTimKiemTheoVaiTro.Size = new System.Drawing.Size(324, 36);
@@ -731,7 +732,7 @@ namespace RJCodeAdvance.ControlEmployees
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtTenNhanVien);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_employee";
             this.Size = new System.Drawing.Size(1461, 801);
             this.Load += new System.EventHandler(this.UC_employee_Load);

@@ -13,6 +13,7 @@ using DAL_QuanLy;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.IO;
+using System.Collections;
 
 namespace RJCodeAdvance.ControlBeverages
 {
@@ -32,9 +33,27 @@ namespace RJCodeAdvance.ControlBeverages
         {
             ResetValue();
             loadComBoBox();
+            loadComBoBoxSearch();
             loadDGV();
-            cbbFilterCol.SelectedIndex = 0;
+            cbbFilterCol.SelectedIndex = 4;
             
+        }
+        Hashtable hash;
+        BindingSource bindingSource;
+        void loadComBoBoxSearch()
+        {
+            cbbFilterCol.DataSource = null;
+            cbbFilterCol.Items.Clear();
+            hash = new Hashtable();
+            hash.Add("Name", "Tên đồ uống");
+            hash.Add("Price", "Giá");
+            hash.Add("Id_type", "ID loại đồ uống");
+            hash.Add("Id_beverage", "ID đồ uống");
+            hash.Add("all", "Tất cả");
+            bindingSource = new BindingSource(hash, null);
+            cbbFilterCol.DataSource = bindingSource;
+            cbbFilterCol.ValueMember = "Key";
+            cbbFilterCol.DisplayMember = "Value";
         }
         BUS_Beverage busBe = new BUS_Beverage();
         void ResetValue()
@@ -96,11 +115,11 @@ namespace RJCodeAdvance.ControlBeverages
         void loadDGV()
         {
             dgvBeverage.DataSource = busBe.getBeverage();
-            dgvBeverage.Columns[0].HeaderText = "Name";
-            dgvBeverage.Columns[1].HeaderText = "Price";
-            dgvBeverage.Columns[2].HeaderText = "Id_Type";
-            dgvBeverage.Columns[3].HeaderText = "Id_beverage";
-            dgvBeverage.Columns[4].HeaderText = "Image";
+            dgvBeverage.Columns[0].HeaderText = "Tên đồ uống";
+            dgvBeverage.Columns[1].HeaderText = "Giá";
+            dgvBeverage.Columns[2].HeaderText = "ID loại";
+            dgvBeverage.Columns[3].HeaderText = "ID đồ uống";
+            dgvBeverage.Columns[4].HeaderText = "Đường dẫn hình";
             dgvBeverage.Columns[5].Visible = false;
             dgvBeverage.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
@@ -128,7 +147,7 @@ namespace RJCodeAdvance.ControlBeverages
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(dgvBeverage.CurrentRow.Cells["Id_beverage"].Value.ToString());
+            int id = Convert.ToInt32(dgvBeverage.CurrentRow.Cells[3].Value.ToString());
             if (MessageBox.Show("Bạn có chắc muốn xoá dữ liệu", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (busBe.DeleteDoUong(id))
@@ -192,7 +211,7 @@ namespace RJCodeAdvance.ControlBeverages
                 {
                     DTO_QuanLyDoUong dtoBe = new DTO_QuanLyDoUong(txtTenDoUong.Text,
                         float.Parse(nbGia.Text), Convert.ToInt32(cbDoUong.SelectedValue),
-                        Convert.ToInt32(dgvBeverage.CurrentRow.Cells["Id_beverage"].Value.ToString()), "Images\\" + fileName);
+                        Convert.ToInt32(dgvBeverage.CurrentRow.Cells[3].Value.ToString()), "Images\\" + fileName);
                     if (busBe.UpdateDoUong(dtoBe))
                     {
 						string path = @"Images";
@@ -231,15 +250,15 @@ namespace RJCodeAdvance.ControlBeverages
                     nbGia.Enabled = true;
                     txtHinh.Enabled = true;
                     ptbOpen.Enabled = true;
-                    txtTenDoUong.Text = dgvBeverage.CurrentRow.Cells["Name"].Value.ToString();
-                    nbGia.Text = dgvBeverage.CurrentRow.Cells["Price"].Value.ToString();
-                    cbDoUong.Text = dgvBeverage.CurrentRow.Cells["Id_Type"].Value.ToString();
-                    txtHinh.Text = dgvBeverage.CurrentRow.Cells["Image"].Value.ToString();
+                    txtTenDoUong.Text = dgvBeverage.CurrentRow.Cells[0].Value.ToString();
+                    nbGia.Text = dgvBeverage.CurrentRow.Cells[1].Value.ToString();
+                    cbDoUong.SelectedValue = dgvBeverage.CurrentRow.Cells[2].Value.ToString();
+                    txtHinh.Text = dgvBeverage.CurrentRow.Cells[4].Value.ToString();
                     checkUrlImage = txtHinh.Text;
-                    fileName = Path.GetFileName(dgvBeverage.CurrentRow.Cells["Image"].Value.ToString());
-                    if (File.Exists(dgvBeverage.CurrentRow.Cells["Image"].Value.ToString()))
+                    fileName = Path.GetFileName(dgvBeverage.CurrentRow.Cells[4].Value.ToString());
+                    if (File.Exists(dgvBeverage.CurrentRow.Cells[4].Value.ToString()))
                     {
-                        picHinh.Image = Image.FromFile(dgvBeverage.CurrentRow.Cells["Image"].Value.ToString());
+                        picHinh.Image = Image.FromFile(dgvBeverage.CurrentRow.Cells[4].Value.ToString());
                     }
                     else
                     {
@@ -261,7 +280,7 @@ namespace RJCodeAdvance.ControlBeverages
         private void btTimKiem_Click(object sender, EventArgs e)
         {
             string tenHang = txtSearchDoUong.Text;
-            string tenCot = cbbFilterCol.Text;
+            string tenCot = cbbFilterCol.SelectedValue.ToString();
             DataTable ds = busBe.SearchDoUong(tenHang,tenCot);
             if (ds.Rows.Count > 0)
             {
@@ -315,19 +334,19 @@ namespace RJCodeAdvance.ControlBeverages
             }
             if (cbbFilterCol.SelectedIndex == 1)
             {
-                txtSearchDoUong.PlaceholderText = "Nhập giá đồ uống cần tìm";
+                txtSearchDoUong.PlaceholderText = "Nhập ID loại đồ uống cần tìm";
             }
             if (cbbFilterCol.SelectedIndex == 2)
             {
-                txtSearchDoUong.PlaceholderText = "Nhập loại sản phẩm cần tìm";
+                txtSearchDoUong.PlaceholderText = "Nhập ID đồ uống cần tìm";
             }
             if (cbbFilterCol.SelectedIndex == 3)
             {
-                txtSearchDoUong.PlaceholderText = "Nhập id đồ uống cần tìm";
+                txtSearchDoUong.PlaceholderText = "Nhập giá đồ uống cần tìm";
             }
             if (cbbFilterCol.SelectedIndex == 4)
             {
-                txtSearchDoUong.PlaceholderText = "Nhập đường dẫn hình cần tìm";
+                txtSearchDoUong.PlaceholderText = "Tìm kiếm tất cả các cột";
             }
         }
 

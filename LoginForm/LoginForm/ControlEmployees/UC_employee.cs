@@ -306,47 +306,7 @@ namespace RJCodeAdvance.ControlEmployees
 
         private void dgv_NhanVien_Click(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv_NhanVien.Rows.Count > 0)
-            {
-                try
-                {
-                    btnLuu.Enabled = false;
-                    btnXoa.Enabled = true;
-                    btnSua.Enabled = true;
-                    txtEmail.Enabled = true;
-                    nbLuong.Enabled = true;
-                    txtTenNhanVien.Enabled = true;
-                    txtDiaChi.Enabled = true;
-                    cbVaiTro.Enabled = true;
-                    dtNgaySinh.Enabled = true;
-                    rbNam.Enabled = true;
-                    rbNu.Enabled = true;
-                    btnThemVaitro.Enabled = true;
-                    txtEmail.Text = dgv_NhanVien.CurrentRow.Cells["Email"].Value.ToString();
-                    txtTenNhanVien.Text = dgv_NhanVien.CurrentRow.Cells["Name"].Value.ToString();
-                    txtDiaChi.Text = dgv_NhanVien.CurrentRow.Cells["Address"].Value.ToString();
-                    nbLuong.Text = dgv_NhanVien.CurrentRow.Cells["Salary"].Value.ToString();
-                    dtNgaySinh.Text = dgv_NhanVien.CurrentRow.Cells["DayOfBirth"].Value.ToString();
-                    Id_emloyee.Text = dgv_NhanVien.CurrentRow.Cells["Id_employee"].Value.ToString();
-                    if (dgv_NhanVien.CurrentRow.Cells["isDelete"].Value.ToString() == "True")
-                        isDelete.Text = "True";
-                    else
-                        isDelete.Text = "False";
-                    if (int.Parse(dgv_NhanVien.CurrentRow.Cells["Id_role"].Value.ToString()) == 1)
-                        cbVaiTro.Text = "Quản lý";
-                    else
-                        cbVaiTro.Text = "Nhân viên";
-                    if (int.Parse(dgv_NhanVien.CurrentRow.Cells["Gender"].Value.ToString()) == 1)
-                        rbNam.Checked = true;
-                    else
-                        rbNu.Checked = true;
-                }
-                catch
-                {
-                    ResetValue();
-                    MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
+            
         }
 
         private void btLoad_Click(object sender, EventArgs e)
@@ -409,6 +369,52 @@ namespace RJCodeAdvance.ControlEmployees
         private void cbTimKiemTheoVaiTro_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgv_NhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgv_NhanVien.Rows.Count > 0)
+            {
+                try
+                {
+                    btnLuu.Enabled = false;
+                    btnXoa.Enabled = true;
+                    btnSua.Enabled = true;
+                    txtEmail.Enabled = true;
+                    nbLuong.Enabled = true;
+                    txtTenNhanVien.Enabled = true;
+                    txtDiaChi.Enabled = true;
+                    cbVaiTro.Enabled = true;
+                    dtNgaySinh.Enabled = true;
+                    rbNam.Enabled = true;
+                    rbNu.Enabled = true;
+                    btnThemVaitro.Enabled = true;
+                    txtEmail.Text = dgv_NhanVien.CurrentRow.Cells["Email"].Value.ToString();
+                    txtTenNhanVien.Text = dgv_NhanVien.CurrentRow.Cells["Name"].Value.ToString();
+                    txtDiaChi.Text = dgv_NhanVien.CurrentRow.Cells["Address"].Value.ToString();
+                    nbLuong.Text = dgv_NhanVien.CurrentRow.Cells["Salary"].Value.ToString();
+                    dtNgaySinh.Text = dgv_NhanVien.CurrentRow.Cells["DayOfBirth"].Value.ToString();
+                    Id_emloyee.Text = dgv_NhanVien.CurrentRow.Cells["Id_employee"].Value.ToString();
+                    cbVaiTro.SelectedValue = dgv_NhanVien.CurrentRow.Cells["Id_role"].Value.ToString();
+                    if (dgv_NhanVien.CurrentRow.Cells["isDelete"].Value.ToString() == "True")
+                        isDelete.Text = "True";
+                    else
+                        isDelete.Text = "False";
+                    //if (int.Parse(dgv_NhanVien.CurrentRow.Cells["Id_role"].Value.ToString()) == 1)
+                    //    cbVaiTro.Text = "Quản lý";
+                    //else
+                    //    cbVaiTro.Text = "Nhân viên";
+                    if (int.Parse(dgv_NhanVien.CurrentRow.Cells["Gender"].Value.ToString()) == 1)
+                        rbNam.Checked = true;
+                    else
+                        rbNu.Checked = true;
+                }
+                catch
+                {
+                    ResetValue();
+                    MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }
