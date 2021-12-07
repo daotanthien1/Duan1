@@ -416,7 +416,7 @@ namespace RJCodeAdvance.ControlBeverages
             pointY += 25;
             e.Graphics.DrawString("==============================================================================", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, pointY));
             pointY += 25;
-            e.Graphics.DrawString($"Tổng tiền: {totalPrice.ToString("#,###")}đ", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(640, pointY));
+            e.Graphics.DrawString($"Tổng tiền: {totalPrice.ToString("#,###")}đ", new Font("Arial", 16, FontStyle.Bold), Brushes.Black, new Point(500, pointY));
             pointY += 25;
             e.Graphics.DrawString($"Cảm ơn Quý khách, hẹn gặp lại!", new Font("Arial", 12, FontStyle.Italic), Brushes.Black, new Point(300, pointY));
         }

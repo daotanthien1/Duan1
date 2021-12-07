@@ -30,17 +30,15 @@ namespace RJCodeAdvance
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmTable));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.rdCoNguoi = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rdTrong = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.btLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btSua = new Guna.UI2.WinForms.Guna2Button();
@@ -53,6 +51,8 @@ namespace RJCodeAdvance
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.rdCoNguoi = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdTrong = new Guna.UI2.WinForms.Guna2RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,29 +116,29 @@ namespace RJCodeAdvance
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(29, 178);
@@ -173,71 +173,23 @@ namespace RJCodeAdvance
             // guna2HtmlLabel6
             // 
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.White;
             this.guna2HtmlLabel6.Location = new System.Drawing.Point(27, 49);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(59, 18);
+            this.guna2HtmlLabel6.Size = new System.Drawing.Size(67, 20);
             this.guna2HtmlLabel6.TabIndex = 93;
             this.guna2HtmlLabel6.Text = "Tên Bàn:";
-            // 
-            // rdCoNguoi
-            // 
-            this.rdCoNguoi.AutoSize = true;
-            this.rdCoNguoi.BackColor = System.Drawing.Color.Transparent;
-            this.rdCoNguoi.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdCoNguoi.CheckedState.BorderThickness = 0;
-            this.rdCoNguoi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdCoNguoi.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdCoNguoi.CheckedState.InnerOffset = -4;
-            this.rdCoNguoi.Enabled = false;
-            this.rdCoNguoi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdCoNguoi.ForeColor = System.Drawing.Color.White;
-            this.rdCoNguoi.Location = new System.Drawing.Point(540, 89);
-            this.rdCoNguoi.Name = "rdCoNguoi";
-            this.rdCoNguoi.Size = new System.Drawing.Size(77, 20);
-            this.rdCoNguoi.TabIndex = 107;
-            this.rdCoNguoi.Text = "Có người";
-            this.rdCoNguoi.UncheckedState.BorderColor = System.Drawing.Color.Silver;
-            this.rdCoNguoi.UncheckedState.BorderThickness = 2;
-            this.rdCoNguoi.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdCoNguoi.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdCoNguoi.UseVisualStyleBackColor = false;
-            // 
-            // rdTrong
-            // 
-            this.rdTrong.AutoSize = true;
-            this.rdTrong.BackColor = System.Drawing.Color.Transparent;
-            this.rdTrong.Checked = true;
-            this.rdTrong.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdTrong.CheckedState.BorderThickness = 0;
-            this.rdTrong.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdTrong.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdTrong.CheckedState.InnerOffset = -4;
-            this.rdTrong.Enabled = false;
-            this.rdTrong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdTrong.ForeColor = System.Drawing.Color.White;
-            this.rdTrong.Location = new System.Drawing.Point(439, 89);
-            this.rdTrong.Name = "rdTrong";
-            this.rdTrong.Size = new System.Drawing.Size(60, 20);
-            this.rdTrong.TabIndex = 106;
-            this.rdTrong.TabStop = true;
-            this.rdTrong.Text = "Trống";
-            this.rdTrong.UncheckedState.BorderColor = System.Drawing.Color.Silver;
-            this.rdTrong.UncheckedState.BorderThickness = 2;
-            this.rdTrong.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdTrong.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdTrong.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(437, 53);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(78, 16);
+            this.label4.Size = new System.Drawing.Size(92, 18);
             this.label4.TabIndex = 105;
             this.label4.Text = "Tình Trạng:";
             // 
@@ -449,18 +401,62 @@ namespace RJCodeAdvance
             this.label1.TabIndex = 146;
             this.label1.Visible = false;
             // 
+            // rdCoNguoi
+            // 
+            this.rdCoNguoi.AutoSize = true;
+            this.rdCoNguoi.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdCoNguoi.CheckedState.BorderThickness = 0;
+            this.rdCoNguoi.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdCoNguoi.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdCoNguoi.CheckedState.InnerOffset = -4;
+            this.rdCoNguoi.Enabled = false;
+            this.rdCoNguoi.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdCoNguoi.ForeColor = System.Drawing.Color.White;
+            this.rdCoNguoi.Location = new System.Drawing.Point(525, 88);
+            this.rdCoNguoi.Name = "rdCoNguoi";
+            this.rdCoNguoi.Size = new System.Drawing.Size(82, 20);
+            this.rdCoNguoi.TabIndex = 150;
+            this.rdCoNguoi.Text = "Có người";
+            this.rdCoNguoi.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdCoNguoi.UncheckedState.BorderThickness = 2;
+            this.rdCoNguoi.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdCoNguoi.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // rdTrong
+            // 
+            this.rdTrong.AutoSize = true;
+            this.rdTrong.Checked = true;
+            this.rdTrong.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdTrong.CheckedState.BorderThickness = 0;
+            this.rdTrong.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdTrong.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdTrong.CheckedState.InnerOffset = -4;
+            this.rdTrong.Enabled = false;
+            this.rdTrong.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdTrong.ForeColor = System.Drawing.Color.White;
+            this.rdTrong.Location = new System.Drawing.Point(440, 88);
+            this.rdTrong.Name = "rdTrong";
+            this.rdTrong.Size = new System.Drawing.Size(63, 20);
+            this.rdTrong.TabIndex = 149;
+            this.rdTrong.TabStop = true;
+            this.rdTrong.Text = "Trống";
+            this.rdTrong.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdTrong.UncheckedState.BorderThickness = 2;
+            this.rdTrong.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdTrong.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
             // FrmTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(204)))));
             this.ClientSize = new System.Drawing.Size(861, 468);
+            this.Controls.Add(this.rdCoNguoi);
+            this.Controls.Add(this.rdTrong);
             this.Controls.Add(this.guna2ControlBox2);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btDanhSacch);
-            this.Controls.Add(this.rdCoNguoi);
-            this.Controls.Add(this.rdTrong);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btLuu);
@@ -494,8 +490,6 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2RadioButton rdCoNguoi;
-        private Guna.UI2.WinForms.Guna2RadioButton rdTrong;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btDanhSacch;
@@ -503,5 +497,7 @@ namespace RJCodeAdvance
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2RadioButton rdCoNguoi;
+        private Guna.UI2.WinForms.Guna2RadioButton rdTrong;
     }
 }
