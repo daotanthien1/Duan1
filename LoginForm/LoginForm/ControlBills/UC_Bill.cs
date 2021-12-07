@@ -278,11 +278,17 @@ namespace RJCodeAdvance.ControlBills
                     MessageBox.Show("" + dgvBillsDetail.CurrentRow.Cells[6].Value.ToString());
                     MessageBox.Show("" + dgvBill.CurrentRow.Cells[4].Value.ToString());
                     float b = float.Parse(dgvBill.CurrentRow.Cells[4].Value.ToString()) - float.Parse(dgvBillsDetail.CurrentRow.Cells[6].Value.ToString());
+                    if(b <= 0)
+                    {
+                        BUS_Bill.DeleteBillsNL(idtemp);
+                        dgvBillsDetail.DataSource = null;
+                    }
                     BUS_Bill.updateInputBill(idtemp, b);
                     loadDGVNL();
                     if (BUS_Bill.DeleteBillsDetailNL(id2))
                     {
                         loadBillDetailNL(idtemp);
+                        dgvBillsDetail.DataSource = null;
                     }
                     else
                     {
