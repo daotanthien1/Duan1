@@ -57,24 +57,32 @@ namespace RJCodeAdvance
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(id_role.Text);
-            if (MessageBox.Show("Bạn có chắc muốn xóa dữ liệu", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-               == DialogResult.Yes)
+            try
             {
-                if (busRoles.DeleteRoleNhanVien(id))
+                int id = int.Parse(id_role.Text);
+                if (MessageBox.Show("Bạn có chắc muốn xóa dữ liệu", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                   == DialogResult.Yes)
                 {
-                    ResetValue();
-                    ShowData_GridViewVaiTro();
+                    if (busRoles.DeleteRoleNhanVien(id))
+                    {
+                        ResetValue();
+                        ShowData_GridViewVaiTro();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thất bại");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Xóa thất bại");
+                    ResetValue();
                 }
             }
-            else
+            catch(Exception ex)
             {
-                ResetValue();
+                MessageBox.Show(ex.Message);
             }
+            
         }
 
         private void btnSua_Click(object sender, EventArgs e)
