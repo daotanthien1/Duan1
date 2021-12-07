@@ -44,16 +44,23 @@ namespace RJCodeAdvance
         // thêm units
         private void btLuu_Click(object sender, EventArgs e)
         {
-            DTO_units unit = new DTO_units(txtName.Text);
-            if (units.InsertDataUnits(unit))
+            if(txtName.Text == "")
             {
-                loadData();
-                resetValue();
+                MessageBox.Show("Chưa nhập tên đơn vị tính");
             }
             else
             {
-                MessageBox.Show("Insert thất bại");
-                resetValue();
+                DTO_units unit = new DTO_units(txtName.Text);
+                if (units.InsertDataUnits(unit))
+                {
+                    loadData();
+                    resetValue();
+                }
+                else
+                {
+                    MessageBox.Show("Insert thất bại");
+                    resetValue();
+                }
             }
         }
         private void btThem_Click(object sender, EventArgs e)

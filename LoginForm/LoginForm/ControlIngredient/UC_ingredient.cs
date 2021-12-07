@@ -63,6 +63,7 @@ namespace RJCodeAdvance.ControlIngredient
                 {
                     ResetValue();
                     loaddgv();
+                    ResetValue();
                 }
                 else
                 {
@@ -135,6 +136,7 @@ namespace RJCodeAdvance.ControlIngredient
                             
                         }
                         loaddgv();
+                        ResetValue();
                     }
                     if (txtHinh.Text != checkUrlImage)
                     {
@@ -266,38 +268,44 @@ namespace RJCodeAdvance.ControlIngredient
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgv.Rows.Count > 1)
+            try
             {
-                btLuu.Enabled = false;
-                btXoa.Enabled = true;
-                btSua.Enabled = true;
-                txtTenIngredient.Enabled = true;
-                cbLoaiIngredient.Enabled = true;
-                cbNhaCC.Enabled = true;
-                txtGia.Enabled = true;
-                cbDVT.Enabled = true;
-                guna2NumericUpDown1.Enabled = true;
-                txtTenIngredient.Text = dgv.CurrentRow.Cells["Name"].Value.ToString();
-                txtGia.Text = dgv.CurrentRow.Cells["Price"].Value.ToString();
-                cbLoaiIngredient.SelectedValue = dgv.CurrentRow.Cells[3].Value.ToString();
-                cbNhaCC.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[2].Value.ToString());
-                cbDVT.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[5].Value.ToString());
-                guna2NumericUpDown1.Text = dgv.CurrentRow.Cells[4].Value.ToString();
-                txtHinh.Text = dgv.CurrentRow.Cells["Images"].Value.ToString();
-                checkUrlImage = txtHinh.Text;
-                fileName = Path.GetFileName(dgv.CurrentRow.Cells["Images"].Value.ToString());
-                if (File.Exists(dgv.CurrentRow.Cells["Images"].Value.ToString()))
+                if (dgv.Rows.Count > 1)
                 {
-                    picHinh.Image = Image.FromFile(dgv.CurrentRow.Cells["Images"].Value.ToString());
+                    btLuu.Enabled = false;
+                    btXoa.Enabled = true;
+                    btSua.Enabled = true;
+                    txtTenIngredient.Enabled = true;
+                    cbLoaiIngredient.Enabled = true;
+                    cbNhaCC.Enabled = true;
+                    txtGia.Enabled = true;
+                    cbDVT.Enabled = true;
+                    guna2NumericUpDown1.Enabled = true;
+                    txtTenIngredient.Text = dgv.CurrentRow.Cells["Name"].Value.ToString();
+                    txtGia.Text = dgv.CurrentRow.Cells["Price"].Value.ToString();
+                    cbLoaiIngredient.SelectedValue = dgv.CurrentRow.Cells[3].Value.ToString();
+                    cbNhaCC.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[2].Value.ToString());
+                    cbDVT.SelectedValue = Convert.ToInt32(dgv.CurrentRow.Cells[5].Value.ToString());
+                    guna2NumericUpDown1.Text = dgv.CurrentRow.Cells[4].Value.ToString();
+                    txtHinh.Text = dgv.CurrentRow.Cells["Images"].Value.ToString();
+                    checkUrlImage = txtHinh.Text;
+                    fileName = Path.GetFileName(dgv.CurrentRow.Cells["Images"].Value.ToString());
+                    if (File.Exists(dgv.CurrentRow.Cells["Images"].Value.ToString()))
+                    {
+                        picHinh.Image = Image.FromFile(dgv.CurrentRow.Cells["Images"].Value.ToString());
+                    }
+                    else
+                    {
+                        picHinh.Image = default;
+                    }
                 }
                 else
                 {
-                    picHinh.Image = default;
+                    MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            else
+            catch
             {
-                MessageBox.Show("Bảng không tồn tại dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
