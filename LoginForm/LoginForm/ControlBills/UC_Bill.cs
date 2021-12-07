@@ -87,8 +87,11 @@ namespace RJCodeAdvance.ControlBills
             dgvBillsDetail.Columns[0].HeaderText = "Tên đồ uống";
             dgvBillsDetail.Columns[1].HeaderText = "Số lượng";
             dgvBillsDetail.Columns[2].HeaderText = "Id_bill_detaill";
+            dgvBillsDetail.Columns[4].HeaderText = "Total";
             dgvBillsDetail.Columns[2].Visible = true ;
-            
+            dgvBillsDetail.Columns[3].Visible = false;
+            dgvBillsDetail.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
             dgvBillsDetail.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         //load dgv cua nguyen lieu nhung detail
@@ -125,6 +128,7 @@ namespace RJCodeAdvance.ControlBills
             label2.Text = "Tên đồ uống";
             txtDoUong.Text = null;
             nbSoLuong.Value = 1;
+            dgvBillsDetail.DataSource = null;
         }
 
         private void rdoNguyenLieu_CheckedChanged(object sender, EventArgs e)
@@ -146,10 +150,13 @@ namespace RJCodeAdvance.ControlBills
             label2.Text = "Tên nguyên liệu";
             txtDoUong.Text = null;
             nbSoLuong.Value = 1;
+
+            dgvBillsDetail.DataSource = null;
         }
         //click vao dgv
         int idInputBill = 0;
         float sum = 0;
+        int id = 0;
         private void dgvBill_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btXoa.Enabled = true;
@@ -160,7 +167,7 @@ namespace RJCodeAdvance.ControlBills
                 {
                     if (rdoDoUong.Checked == true)
                     {
-                        int id = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
+                        id = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
                         loadBillDetail(id);
                         txtDoUong.Text = dgvBill.CurrentRow.Cells[0].Value.ToString();
                     }
@@ -251,8 +258,18 @@ namespace RJCodeAdvance.ControlBills
                 {
                     int id = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_bill_detaill"].Value.ToString());
 
+                    int id1 = Convert.ToInt32(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
+                    float price = float.Parse(dgvBillsDetail.CurrentRow.Cells[3].Value.ToString());
                     if (BUS_Bill.DeleteBillsDetailDoUong(id))
                         {
+
+                        priceDoUong = priceDoUong - price;
+                        if(priceDoUong == 0)
+                        {
+                            BUS_Bill.DeleteBillsDoUong(id1);
+                            dgvBillsDetail.DataSource = null;
+                        }
+                            
                             if (rdoDoUong.Checked == true)
                             {
                                 loadDGVDoUong();
@@ -261,12 +278,7 @@ namespace RJCodeAdvance.ControlBills
                             {
                                 loadDGVNL();
                             }
-                            int idtemp = int.Parse(dgvBill.CurrentRow.Cells["Id_bill"].Value.ToString());
-                            loadBillDetail(idtemp);
-                        }
-                        else
-                        {
-                            MessageBox.Show("Xoá không thành công");
+                            loadBillDetail(id);
                         }
                     
                 }
@@ -275,26 +287,19 @@ namespace RJCodeAdvance.ControlBills
                     int idtemp = int.Parse(dgvBill.CurrentRow.Cells["ID_Bill"].Value.ToString());
 
                     int id2 = Convert.ToInt32(dgvBillsDetail.CurrentRow.Cells["Id_BillDetaill"].Value.ToString());
-                    MessageBox.Show("" + dgvBillsDetail.CurrentRow.Cells[6].Value.ToString());
-                    MessageBox.Show("" + dgvBill.CurrentRow.Cells[4].Value.ToString());
                     float b = float.Parse(dgvBill.CurrentRow.Cells[4].Value.ToString()) - float.Parse(dgvBillsDetail.CurrentRow.Cells[6].Value.ToString());
                     if(b <= 0)
                     {
-                        BUS_Bill.DeleteBillsNL(idtemp);
+                        BUS_Bill.DeleteBillsNL(idInputBill);
                         dgvBillsDetail.DataSource = null;
                     }
-                    BUS_Bill.updateInputBill(idtemp, b);
+                    BUS_Bill.updateInputBill(idInputBill, b);
                     loadDGVNL();
                     if (BUS_Bill.DeleteBillsDetailNL(id2))
                     {
                         loadBillDetailNL(idtemp);
-                        dgvBillsDetail.DataSource = null;
+                        txtDoUong.ResetText();
                     }
-                    else
-                    {
-                        MessageBox.Show("Xoá không thành công");
-                    }
-
                 }
                 nbSoLuong.Value = 1;
                 txtDoUong.Text = null;
@@ -368,6 +373,7 @@ namespace RJCodeAdvance.ControlBills
         //click vao dgv nhung ben detail
         float donGia = 0;
         float sumprice = 0;
+        float priceDoUong = 0;
         private void dgvBillsDetail_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btSua.Enabled = true;
@@ -378,10 +384,15 @@ namespace RJCodeAdvance.ControlBills
                 {
                     if (rdoDoUong.Checked == true)
                     {
-                        
+                        priceDoUong = 0;
                         txtDoUong.Text = dgvBillsDetail.CurrentRow.Cells[0].Value.ToString();
                         nbSoLuong.Value = decimal.Parse(dgvBillsDetail.CurrentRow.Cells[1].Value.ToString());
                         donGia = float.Parse(dgvBillsDetail.CurrentRow.Cells[2].Value.ToString());
+
+                        for(int i = 0; i < dgvBillsDetail.Rows.Count - 1; i++)
+                        {
+                            priceDoUong += float.Parse(dgvBillsDetail.Rows[i].Cells[3].Value.ToString());
+                        }
                     }
                     else
                     {
