@@ -22,6 +22,7 @@ namespace DTO_QuanLy
             this.name = row["Name"].ToString();
             this.price = (float)(double)row["Price"];
             this.images = row["images"].ToString();
+            this.id_Type = int.Parse(row["Id_type"].ToString());
         }
         public DTO_NguyenLieu(string name)
         {

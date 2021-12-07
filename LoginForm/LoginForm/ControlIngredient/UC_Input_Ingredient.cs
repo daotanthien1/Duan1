@@ -25,12 +25,12 @@ namespace RJCodeAdvance.ControlIngredient
             InitializeComponent();
         }
         BUS_InputIngredients input = new BUS_InputIngredients();
-        BUS_NguyenLieu BUS_NguyenLieu = new BUS_NguyenLieu();
+        BUS_NguyenLieu bus_NguyenLieu = new BUS_NguyenLieu();
         DateTime today = DateTime.Now;
         List<DTO_NguyenLieu> ListNl;
         public void UC_Input_Ingredient_Load(object sender, EventArgs e)
         {
-            ListNl = BUS_NguyenLieu.getListIngredient();
+            ListNl = bus_NguyenLieu.getListIngredient();
             RenderBeverage(ListNl);
             nbSoLuong.Enabled = false;
 
@@ -110,17 +110,7 @@ namespace RJCodeAdvance.ControlIngredient
         int donGia;
         private void guna2DataGridView1_Click(object sender, EventArgs e)
         {
-            btSua.Enabled = true;
-            nbSoLuong.Enabled = true;
-            if (guna2DataGridView1.Rows.Count > 1)
-            {
-                rows = guna2DataGridView1.CurrentRow.Index;
-                txtName.Text = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
-                nbSoLuong.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
-                txtThanhTien.Text = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
-                rows = guna2DataGridView1.CurrentRow.Index;
-                donGia = int.Parse(guna2DataGridView1.CurrentRow.Cells[3].Value.ToString()) / int.Parse(guna2DataGridView1.CurrentRow.Cells[1].Value.ToString());
-            }
+            
         }
         private void btXoa_Click(object sender, EventArgs e)
         {
@@ -202,9 +192,9 @@ namespace RJCodeAdvance.ControlIngredient
             }
             else
             {
-                listFind = (from ingredients in ListNl
-                            where ingredients.Name.ToLower().Contains(name.ToLower()) && ingredients.Id_Type == idType
-                            select ingredients).ToList<DTO_NguyenLieu>();
+                listFind = (from ingredient in ListNl
+                            where ingredient.Name.ToLower().Contains(name.ToLower()) && ingredient.Id_Type == idType
+                            select ingredient).ToList<DTO_NguyenLieu>();
             }
             return listFind;
         }
@@ -276,6 +266,21 @@ namespace RJCodeAdvance.ControlIngredient
             decimal value = decimal.Parse(txtTongTien.Text, System.Globalization.NumberStyles.AllowThousands);
             txtTongTien.Text = String.Format(culture, "{0:N0}", value);
             txtTongTien.Select(txtTongTien.Text.Length, 0);
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btSua.Enabled = true;
+            nbSoLuong.Enabled = true;
+            if (guna2DataGridView1.Rows.Count > 1)
+            {
+                rows = guna2DataGridView1.CurrentRow.Index;
+                txtName.Text = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
+                nbSoLuong.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
+                txtThanhTien.Text = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
+                rows = guna2DataGridView1.CurrentRow.Index;
+                donGia = int.Parse(guna2DataGridView1.CurrentRow.Cells[3].Value.ToString()) / int.Parse(guna2DataGridView1.CurrentRow.Cells[1].Value.ToString());
+            }
         }
     }
 }
