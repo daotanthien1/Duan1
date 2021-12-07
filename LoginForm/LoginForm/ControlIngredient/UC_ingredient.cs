@@ -125,22 +125,18 @@ namespace RJCodeAdvance.ControlIngredient
                         }
                         if (txtHinh.Text != checkUrlImage)
                         {
-                        //try
-                        //{
+                        try
+                        {
                             File.Copy(fileAddress, fileSavePath, true);//copy file hinh
-                        //}
-                        //catch
-                        //{
+                        }
+                        catch
+                        {
 
-                        //}
+                        }
                             
                         }
                         loaddgv();
                         ResetValue();
-                    }
-                    if (txtHinh.Text != checkUrlImage)
-                    {
-                        File.Copy(fileAddress, fileSavePath, true);//copy file hinh
                     }
                     loaddgv();
                     ResetValue();
