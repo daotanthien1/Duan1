@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[sp_BeverageSearch](@Name   NVARCHAR(55),@Col   NVARCHAR(55))
+alter PROCEDURE [dbo].[sp_BeverageSearch](@Name   NVARCHAR(55),@Col   NVARCHAR(55))
 AS
   BEGIN
 
