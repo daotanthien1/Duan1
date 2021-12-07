@@ -630,7 +630,7 @@ namespace RJCodeAdvance.ControlBeverages
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(904, 13);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(910, 13);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.ShowIcon = false;

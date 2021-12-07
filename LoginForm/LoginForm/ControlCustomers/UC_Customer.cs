@@ -69,7 +69,6 @@ namespace RJCodeAdvance.ControlCustomers
         //datagridview click
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             if (dgv.Rows.Count > 0)
             {
                 txtName.Enabled = true;

@@ -59,6 +59,7 @@ namespace RJCodeAdvance.ControlVouchers
             cbSale.Enabled = false;
             dayStart.Enabled = false;
             dayEnd.Enabled = false;
+            btThem.Enabled = false;
         }
         // load data
         void loadData()
@@ -85,6 +86,7 @@ namespace RJCodeAdvance.ControlVouchers
                 guna2Button1.Enabled = true;
                 guna2Button3.Enabled = true;
                 guna2Button5.Enabled = false;
+                btThem.Enabled = true;
                 dayStart.Text = txtSoLuong.CurrentRow.Cells[1].Value.ToString();
                 dayEnd.Text = txtSoLuong.CurrentRow.Cells[2].Value.ToString();
                 cbSale.SelectedValue = txtSoLuong.CurrentRow.Cells[5].Value.ToString();
