@@ -304,11 +304,6 @@ namespace RJCodeAdvance.ControlEmployees
             cbVaiTro.ValueMember = "Id_role";
         }
 
-        private void dgv_NhanVien_Click(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void btLoad_Click(object sender, EventArgs e)
         {
             ShowData_GridViewNhanVien();
