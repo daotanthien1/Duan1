@@ -18,21 +18,7 @@ namespace RJCodeAdvance.ControlCustomers
         {
             InitializeComponent();
             nbDiemTT.Maximum = 999999;
-        }
-
-        private void guna2RadioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2RadioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TextBox3_TextChanged(object sender, EventArgs e)
-        {
-
+            nbDiemTT.Enabled = false;
         }
 
         private void btTimKiem_Click(object sender, EventArgs e)
@@ -49,6 +35,7 @@ namespace RJCodeAdvance.ControlCustomers
         private void btThem_Click(object sender, EventArgs e)
         {
             FrmTable frm = new FrmTable();
+
             frm.ShowDialog();
         }
         BUS_Customer customer = new BUS_Customer();
@@ -65,6 +52,8 @@ namespace RJCodeAdvance.ControlCustomers
             txtName.Text = "";
             txbEmail.Text = "";
             btSua.Enabled = false;
+            rbNam.Enabled = false;
+            rbNu.Enabled = false;
         }
         void loadData()
         {
@@ -84,8 +73,10 @@ namespace RJCodeAdvance.ControlCustomers
             if (dgv.Rows.Count > 0)
             {
                 txtName.Enabled = true;
-                txbEmail.Enabled = false;
+                txbEmail.Enabled = true;
                 btSua.Enabled = true;
+                rbNam.Enabled = true;
+                rbNu.Enabled = true;
                 txtName.Text = dgv.CurrentRow.Cells[0].Value.ToString();
                 txbEmail.Text = dgv.CurrentRow.Cells[1].Value.ToString();
                 id = dgv.CurrentRow.Cells[3].Value.ToString();
@@ -93,22 +84,22 @@ namespace RJCodeAdvance.ControlCustomers
                 gender = dgv.CurrentRow.Cells[2].Value.ToString();
                 if (gender == "Nam")
                 {
-                    rdNam.Checked = true;
+                    rbNam.Checked = true;
                 }
                 if (gender == "Nữ")
                 {
-                    rdNu.Checked = true;
+                    rbNu.Checked = true;
                 }
             }
         }
         // sửa
         private void btSua_Click(object sender, EventArgs e)
         {
-            if (rdNam.Checked)
+            if (rbNam.Checked)
             {
                 gender = "Nam";
             }
-            if (rdNu.Checked)
+            if (rbNu.Checked)
             {
                 gender = "Nữ";
             }
@@ -118,28 +109,23 @@ namespace RJCodeAdvance.ControlCustomers
             }
             else
             {
-                if (MessageBox.Show("Bạn chắc chắn muốn sửa khách hàng ", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
                     DTO_Customer Customers = new DTO_Customer(txtName.Text, txbEmail.Text, gender, int.Parse(nbDiemTT.Value.ToString()), int.Parse(id));
                     if (customer.UpdateCustomer(Customers))
                     {
-                        MessageBox.Show("Update thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         loadData();
+                        restValue();
                     }
                     else
                     {
                         MessageBox.Show("ERROR", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                }
-            }
+                          }
         }
 
         private void btDanhSach_Click(object sender, EventArgs e)
         {
             loadData();
+            
         }
     }
 }

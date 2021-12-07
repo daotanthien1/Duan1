@@ -48,8 +48,8 @@ namespace RJCodeAdvance.ControlCustomers
             this.nbDiemTT = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btDanhSach = new Guna.UI2.WinForms.Guna2Button();
-            this.rdNu = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rdNam = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbNu = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rbNam = new Guna.UI2.WinForms.Guna2RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbDiemTT)).BeginInit();
             this.SuspendLayout();
@@ -153,7 +153,6 @@ namespace RJCodeAdvance.ControlCustomers
             this.txtsearch.ShadowDecoration.Parent = this.txtsearch;
             this.txtsearch.Size = new System.Drawing.Size(228, 36);
             this.txtsearch.TabIndex = 137;
-            this.txtsearch.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             // 
             // txbEmail
             // 
@@ -349,55 +348,57 @@ namespace RJCodeAdvance.ControlCustomers
             this.btDanhSach.TextOffset = new System.Drawing.Point(-2, 0);
             this.btDanhSach.Click += new System.EventHandler(this.btDanhSach_Click);
             // 
-            // rdNu
+            // rbNu
             // 
-            this.rdNu.AutoSize = true;
-            this.rdNu.Checked = true;
-            this.rdNu.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdNu.CheckedState.BorderThickness = 0;
-            this.rdNu.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdNu.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdNu.CheckedState.InnerOffset = -4;
-            this.rdNu.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdNu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rdNu.Location = new System.Drawing.Point(117, 164);
-            this.rdNu.Name = "rdNu";
-            this.rdNu.Size = new System.Drawing.Size(47, 21);
-            this.rdNu.TabIndex = 150;
-            this.rdNu.TabStop = true;
-            this.rdNu.Text = "Nữ";
-            this.rdNu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdNu.UncheckedState.BorderThickness = 2;
-            this.rdNu.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdNu.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbNu.AutoSize = true;
+            this.rbNu.Checked = true;
+            this.rbNu.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbNu.CheckedState.BorderThickness = 0;
+            this.rbNu.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbNu.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbNu.CheckedState.InnerOffset = -4;
+            this.rbNu.Enabled = false;
+            this.rbNu.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.rbNu.Location = new System.Drawing.Point(117, 164);
+            this.rbNu.Name = "rbNu";
+            this.rbNu.Size = new System.Drawing.Size(47, 21);
+            this.rbNu.TabIndex = 150;
+            this.rbNu.TabStop = true;
+            this.rbNu.Text = "Nữ";
+            this.rbNu.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbNu.UncheckedState.BorderThickness = 2;
+            this.rbNu.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbNu.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
-            // rdNam
+            // rbNam
             // 
-            this.rdNam.AutoSize = true;
-            this.rdNam.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdNam.CheckedState.BorderThickness = 0;
-            this.rdNam.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdNam.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdNam.CheckedState.InnerOffset = -4;
-            this.rdNam.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.rdNam.Location = new System.Drawing.Point(32, 164);
-            this.rdNam.Name = "rdNam";
-            this.rdNam.Size = new System.Drawing.Size(58, 21);
-            this.rdNam.TabIndex = 149;
-            this.rdNam.Text = "Nam";
-            this.rdNam.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdNam.UncheckedState.BorderThickness = 2;
-            this.rdNam.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdNam.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rbNam.AutoSize = true;
+            this.rbNam.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbNam.CheckedState.BorderThickness = 0;
+            this.rbNam.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rbNam.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rbNam.CheckedState.InnerOffset = -4;
+            this.rbNam.Enabled = false;
+            this.rbNam.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.rbNam.Location = new System.Drawing.Point(32, 164);
+            this.rbNam.Name = "rbNam";
+            this.rbNam.Size = new System.Drawing.Size(58, 21);
+            this.rbNam.TabIndex = 149;
+            this.rbNam.Text = "Nam";
+            this.rbNam.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rbNam.UncheckedState.BorderThickness = 2;
+            this.rbNam.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rbNam.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             // 
             // UC_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.rdNu);
-            this.Controls.Add(this.rdNam);
+            this.Controls.Add(this.rbNu);
+            this.Controls.Add(this.rbNam);
             this.Controls.Add(this.btDanhSach);
             this.Controls.Add(this.nbDiemTT);
             this.Controls.Add(this.btSua);
@@ -436,7 +437,7 @@ namespace RJCodeAdvance.ControlCustomers
         private Guna.UI2.WinForms.Guna2NumericUpDown nbDiemTT;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btDanhSach;
-        private Guna.UI2.WinForms.Guna2RadioButton rdNu;
-        private Guna.UI2.WinForms.Guna2RadioButton rdNam;
+        private Guna.UI2.WinForms.Guna2RadioButton rbNu;
+        private Guna.UI2.WinForms.Guna2RadioButton rbNam;
     }
 }
