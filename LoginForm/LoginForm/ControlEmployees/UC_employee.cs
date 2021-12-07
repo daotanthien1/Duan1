@@ -371,7 +371,7 @@ namespace RJCodeAdvance.ControlEmployees
 
         }
 
-        private void dgv_NhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_NhanVien_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (dgv_NhanVien.Rows.Count > 0)
             {
