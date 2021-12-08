@@ -30,9 +30,9 @@ namespace RJCodeAdvance.ControlBeverages
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_Order));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -57,24 +57,24 @@ namespace RJCodeAdvance.ControlBeverages
             this.btThanhToan = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pbScheme = new System.Windows.Forms.PictureBox();
-            this.pbChangePass = new System.Windows.Forms.PictureBox();
             this.btSua = new Guna.UI2.WinForms.Guna2Button();
             this.btXoa = new Guna.UI2.WinForms.Guna2Button();
             this.btThem = new Guna.UI2.WinForms.Guna2Button();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ColorTransition1 = new Guna.UI2.WinForms.Guna2ColorTransition(this.components);
+            this.logout = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.setting = new Guna.UI.WinForms.GunaPictureBox();
+            this.calender = new Guna.UI.WinForms.GunaPictureBox();
+            this.changepass = new Guna.UI.WinForms.GunaPictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoLuong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbScheme)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbChangePass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setting)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calender)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changepass)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -86,7 +86,6 @@ namespace RJCodeAdvance.ControlBeverages
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(531, 651);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblTitle
             // 
@@ -120,30 +119,30 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             // dgv
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgv.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgv.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgv.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv.EnableHeadersVisualStyles = false;
             this.dgv.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -485,39 +484,6 @@ namespace RJCodeAdvance.ControlBeverages
             // 
             this.guna2Elipse2.TargetControl = this.dgv;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(958, 16);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(30, 27);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 61;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pbSetting_Click);
-            // 
-            // pbScheme
-            // 
-            this.pbScheme.Image = ((System.Drawing.Image)(resources.GetObject("pbScheme.Image")));
-            this.pbScheme.Location = new System.Drawing.Point(1003, 16);
-            this.pbScheme.Name = "pbScheme";
-            this.pbScheme.Size = new System.Drawing.Size(30, 27);
-            this.pbScheme.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbScheme.TabIndex = 60;
-            this.pbScheme.TabStop = false;
-            this.pbScheme.Click += new System.EventHandler(this.pbScheme_Click);
-            // 
-            // pbChangePass
-            // 
-            this.pbChangePass.Image = ((System.Drawing.Image)(resources.GetObject("pbChangePass.Image")));
-            this.pbChangePass.Location = new System.Drawing.Point(1049, 16);
-            this.pbChangePass.Name = "pbChangePass";
-            this.pbChangePass.Size = new System.Drawing.Size(30, 27);
-            this.pbChangePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbChangePass.TabIndex = 59;
-            this.pbChangePass.TabStop = false;
-            this.pbChangePass.Click += new System.EventHandler(this.pbChangePass_Click_1);
-            // 
             // btSua
             // 
             this.btSua.Animated = true;
@@ -610,33 +576,10 @@ namespace RJCodeAdvance.ControlBeverages
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
-            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
             // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage_1);
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("guna2ControlBox1.BackgroundImage")));
-            this.guna2ControlBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.BorderRadius = 3;
-            this.guna2ControlBox1.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.HoverState.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(910, 13);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.ShowIcon = false;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(37, 34);
-            this.guna2ControlBox1.TabIndex = 66;
-            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // guna2ColorTransition1
             // 
@@ -645,19 +588,77 @@ namespace RJCodeAdvance.ControlBeverages
         System.Drawing.Color.Blue,
         System.Drawing.Color.Orange};
             // 
+            // logout
+            // 
+            this.logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.logout.BackColor = System.Drawing.Color.White;
+            this.logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logout.BackgroundImage")));
+            this.logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.logout.BorderColor = System.Drawing.Color.Transparent;
+            this.logout.BorderRadius = 3;
+            this.logout.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
+            this.logout.FillColor = System.Drawing.Color.Transparent;
+            this.logout.HoverState.IconColor = System.Drawing.Color.White;
+            this.logout.HoverState.Parent = this.logout;
+            this.logout.IconColor = System.Drawing.Color.White;
+            this.logout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.logout.Location = new System.Drawing.Point(910, 12);
+            this.logout.Name = "logout";
+            this.logout.ShadowDecoration.Parent = this.logout;
+            this.logout.ShowIcon = false;
+            this.logout.Size = new System.Drawing.Size(42, 35);
+            this.logout.TabIndex = 70;
+            this.logout.Click += new System.EventHandler(this.guna2ControlBox4_Click);
+            // 
+            // setting
+            // 
+            this.setting.BaseColor = System.Drawing.Color.White;
+            this.setting.Image = ((System.Drawing.Image)(resources.GetObject("setting.Image")));
+            this.setting.Location = new System.Drawing.Point(958, 12);
+            this.setting.Name = "setting";
+            this.setting.Size = new System.Drawing.Size(37, 35);
+            this.setting.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.setting.TabIndex = 71;
+            this.setting.TabStop = false;
+            this.setting.Click += new System.EventHandler(this.setting_Click);
+            // 
+            // calender
+            // 
+            this.calender.BaseColor = System.Drawing.Color.White;
+            this.calender.Image = ((System.Drawing.Image)(resources.GetObject("calender.Image")));
+            this.calender.Location = new System.Drawing.Point(1003, 12);
+            this.calender.Name = "calender";
+            this.calender.Size = new System.Drawing.Size(37, 35);
+            this.calender.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.calender.TabIndex = 72;
+            this.calender.TabStop = false;
+            this.calender.Click += new System.EventHandler(this.calender_Click);
+            // 
+            // changepass
+            // 
+            this.changepass.BaseColor = System.Drawing.Color.White;
+            this.changepass.Image = ((System.Drawing.Image)(resources.GetObject("changepass.Image")));
+            this.changepass.Location = new System.Drawing.Point(1046, 12);
+            this.changepass.Name = "changepass";
+            this.changepass.Size = new System.Drawing.Size(37, 35);
+            this.changepass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.changepass.TabIndex = 73;
+            this.changepass.TabStop = false;
+            this.changepass.Click += new System.EventHandler(this.changepass_Click);
+            // 
             // UC_Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2ControlBox1);
+            this.Controls.Add(this.changepass);
+            this.Controls.Add(this.calender);
+            this.Controls.Add(this.setting);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.btSua);
             this.Controls.Add(this.btThanhToan);
             this.Controls.Add(this.btXoa);
             this.Controls.Add(this.btThem);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pbScheme);
-            this.Controls.Add(this.pbChangePass);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -671,9 +672,9 @@ namespace RJCodeAdvance.ControlBeverages
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbSoLuong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbScheme)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbChangePass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.setting)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.calender)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.changepass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -691,10 +692,7 @@ namespace RJCodeAdvance.ControlBeverages
         private Guna.UI2.WinForms.Guna2TextBox txbEmail;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.PictureBox pbChangePass;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pbScheme;
         private Guna.UI2.WinForms.Guna2Button btChuyenBan;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private System.Windows.Forms.Label lblTitle;
@@ -711,7 +709,10 @@ namespace RJCodeAdvance.ControlBeverages
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ColorTransition guna2ColorTransition1;
+        private Guna.UI2.WinForms.Guna2ControlBox logout;
+        private Guna.UI.WinForms.GunaPictureBox changepass;
+        private Guna.UI.WinForms.GunaPictureBox calender;
+        private Guna.UI.WinForms.GunaPictureBox setting;
     }
 }

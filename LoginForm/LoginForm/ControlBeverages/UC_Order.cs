@@ -171,17 +171,6 @@ namespace RJCodeAdvance.ControlBeverages
             (sender as Guna2Button).Checked = true;
         }
 
-        private void pbSetting_Click(object sender, EventArgs e)
-        {
-            FrmConfigurationSale frm = new FrmConfigurationSale();
-            frm.ShowDialog();
-        }
-
-        private void pbScheme_Click(object sender, EventArgs e)
-        {
-            FrmSchedule Frm = new FrmSchedule();
-            Frm.ShowDialog();
-        }
         public static int a = 0;
         private void UC_Order_Load(object sender, EventArgs e)
         {
@@ -189,7 +178,7 @@ namespace RJCodeAdvance.ControlBeverages
             TurnOffInputControl();
             if(a == 2)
             {
-                pictureBox3.Enabled = false;
+               setting.Enabled = false;
             }
         }
 
@@ -270,12 +259,7 @@ namespace RJCodeAdvance.ControlBeverages
             //cb.ValueMember = "Id_table";
         }
 
-        private void pbChangePass_Click_1(object sender, EventArgs e)
-        {
-            FrmChangePassword Frm = new FrmChangePassword();
-            Frm.ShowDialog();
-        }
-
+ 
         private void btChuyenBan_Click(object sender, EventArgs e)
         {
             int idTable1 = (dgv.Tag as DTO_tables).Id;
@@ -421,25 +405,31 @@ namespace RJCodeAdvance.ControlBeverages
             e.Graphics.DrawString($"Cảm ơn Quý khách, hẹn gặp lại!", new Font("Arial", 12, FontStyle.Italic), Brushes.Black, new Point(300, pointY));
         }
 
-        private void printPreviewDialog1_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void pbDangXuat_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        private void guna2ControlBox4_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.user = "";
             Properties.Settings.Default.pass = "";
             Properties.Settings.Default.RememberMe = "false";
             Properties.Settings.Default.Save();
+        }
+
+        private void setting_Click(object sender, EventArgs e)
+        {
+            FrmConfigurationSale frm = new FrmConfigurationSale();
+            frm.ShowDialog();
+        }
+
+        private void calender_Click(object sender, EventArgs e)
+        {
+            FrmSchedule Frm = new FrmSchedule();
+            Frm.ShowDialog();
+        }
+
+        private void changepass_Click(object sender, EventArgs e)
+        {
+            FrmChangePassword Frm = new FrmChangePassword();
+            Frm.ShowDialog();
         }
     }
 }
