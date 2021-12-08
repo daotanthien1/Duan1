@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS_QuanLy;
@@ -133,12 +134,43 @@ namespace RJCodeAdvance
         {
             if (string.IsNullOrEmpty(txtTenNCC.Text))
             {
-                MessageBox.Show("Chưa nhập đủ thông tin");
+                MessageBox.Show("Vui lòng nhập tên nhà cung cấp");
                 txtTenNCC.Text = "";
                 txtTenNCC.Focus();
                 return false;
             }
-                        return true;
+            if (string.IsNullOrEmpty(txtEmail.Text))
+            {
+                MessageBox.Show("Vui lòng nhập email");
+                txtEmail.Text = "";
+                txtEmail.Focus();
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtDiaChi.Text))
+            {
+                MessageBox.Show("Vui lòng nhập địa chỉ");
+                txtTenNCC.Text = "";
+                txtTenNCC.Focus();
+                return false;
+            }
+            if (!IsValid(txtEmail.Text.Trim()))
+            {
+                MessageBox.Show("Nhập sai định dạng email");
+                return false;
+            }
+            return true;
+        }
+
+        public bool IsValid(string emailAddress)
+        {
+            string strRegex = @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+              @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+              @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$";
+            Regex re = new Regex(strRegex);
+            if (re.IsMatch(emailAddress))
+                return (true);
+            else
+                return (false);
         }
 
         void loaddgv()
