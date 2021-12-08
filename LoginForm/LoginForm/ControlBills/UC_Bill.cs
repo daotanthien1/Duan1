@@ -268,8 +268,7 @@ namespace RJCodeAdvance.ControlBills
                         {
                             BUS_Bill.DeleteBillsDoUong(id1);
                             dgvBillsDetail.DataSource = null;
-                        }
-                            
+
                             if (rdoDoUong.Checked == true)
                             {
                                 loadDGVDoUong();
@@ -278,7 +277,10 @@ namespace RJCodeAdvance.ControlBills
                             {
                                 loadDGVNL();
                             }
-                            loadBillDetail(id);
+                        }
+
+
+                        loadBillDetail(id1);
                         }
                     
                 }
