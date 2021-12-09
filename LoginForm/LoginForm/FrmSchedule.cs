@@ -19,15 +19,11 @@ namespace RJCodeAdvance
             InitializeComponent();
         }
 
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button6_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
         public string id;
         public static string mail;
         BUS_LichLamViec schedules = new BUS_LichLamViec();
@@ -67,9 +63,9 @@ namespace RJCodeAdvance
             cbCaLam.DisplayMember = "name";
             cbCaLam.ValueMember = "Id_shift";
 
-            cbSearch.DataSource = schedules.getDataName();
-            cbSearch.DisplayMember = "Name";
-            cbSearch.ValueMember = "Id_employee";
+            //cbSearch.DataSource = schedules.getDataName();
+            //cbSearch.DisplayMember = "Name";
+            //cbSearch.ValueMember = "Id_employee";
         }
         // reset form
         void resetForm()
@@ -141,7 +137,6 @@ namespace RJCodeAdvance
                 DTO_LichLamViec schedule = new DTO_LichLamViec(int.Parse(cbTenNhanVien.SelectedValue.ToString()), int.Parse(cbCaLam.SelectedValue.ToString()), int.Parse(day));
                 if (schedules.InsertSchedule(schedule))
                 {
-                    MessageBox.Show("Insert thành công");
                     loadData();
                     resetForm();
                 }
@@ -192,7 +187,7 @@ namespace RJCodeAdvance
                 }
 
                 label1.Text = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
-                cbTenNhanVien.Text = guna2DataGridView1.CurrentRow.Cells[1].Value.ToString();
+                cbTenNhanVien.SelectedValue = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
                 cbCaLam.SelectedValue = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
                 string day = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString();
                 if (day.Contains("2"))
@@ -258,11 +253,8 @@ namespace RJCodeAdvance
             {
                 day += "8";
             }
-            if (MessageBox.Show("Bạn chắc chắn muốn xóa lịch này", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
                 if (schedules.DeleteDataSchedule(int.Parse(cbCaLam.SelectedValue.ToString()), int.Parse(cbTenNhanVien.SelectedValue.ToString()), int.Parse(day)))
                 {
-                    MessageBox.Show("Xóa thành công");
                     resetForm();
                     loadData();
                 }
@@ -270,11 +262,6 @@ namespace RJCodeAdvance
                 {
                     MessageBox.Show("Xóa thất bại");
                 }
-            }
-            else
-            {
-                resetForm();
-            }
         }
         // sửa
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -309,12 +296,9 @@ namespace RJCodeAdvance
                 day += "8";
             }
             DTO_LichLamViec schedule = new DTO_LichLamViec(int.Parse(label1.Text), int.Parse(cbTenNhanVien.SelectedValue.ToString()), int.Parse(cbCaLam.SelectedValue.ToString()), int.Parse(day));
-            if (MessageBox.Show("Bạn chắc chắn muốn sửa lịch này", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
 
                 if (schedules.UpdateSchedule(schedule))
                 {
-                    MessageBox.Show("Sửa thành công");
                     resetForm();
                     loadData();
                 }
@@ -322,17 +306,12 @@ namespace RJCodeAdvance
                 {
                     MessageBox.Show("Sửa thất bại");
                 }
-            }
-            else
-            {
-                resetForm();
-            }
-        }
+             }
 
         private void btTimKiem_Click(object sender, EventArgs e)
         {
-            int id = int.Parse(cbSearch.SelectedValue.ToString());
-            DataTable schedule = schedules.searchSchedules(id);
+            string name = txtNhaptennv.Text;
+            DataTable schedule = schedules.searchSchedules(name);
             if (schedule.Rows.Count > 0)
             {
                 guna2DataGridView1.DataSource = schedule;
@@ -350,6 +329,12 @@ namespace RJCodeAdvance
         private void btDanhSacch_Click(object sender, EventArgs e)
         {
             loadData();
+            txtNhaptennv.Text = "";
+        }
+
+        private void cbTenNhanVien_EnabledChanged(object sender, EventArgs e)
+        {
+            //cbTenNhanVien.FillColor = Color.White;
         }
     }
 }

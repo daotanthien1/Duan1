@@ -747,7 +747,7 @@ namespace RJCodeAdvance.ControlStatistic
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(575, 281);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1009, 281);
             this.guna2DataGridView1.TabIndex = 113;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
