@@ -189,6 +189,8 @@ namespace RJCodeAdvance
                 label1.Text = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
                 cbTenNhanVien.SelectedValue = guna2DataGridView1.CurrentRow.Cells[0].Value.ToString();
                 cbCaLam.SelectedValue = guna2DataGridView1.CurrentRow.Cells[3].Value.ToString();
+                cbCaLam.BorderRadius = 16;
+                cbTenNhanVien.BorderRadius = 15;
                 string day = guna2DataGridView1.CurrentRow.Cells[2].Value.ToString();
                 if (day.Contains("2"))
                 {
