@@ -72,6 +72,9 @@ namespace RJCodeAdvance.ControlStatistic
             }
         }
         //click vào thống kê hóa đơn
+
+        string day1 = "2015-01-01 00:00:00";
+        string day2 = DateTime.Now.ToString("yyyy-MM-dd 23:59:59");
         private void btThongKe_Click(object sender, EventArgs e)
         {
             btEx.Enabled = true;
@@ -101,6 +104,8 @@ namespace RJCodeAdvance.ControlStatistic
                 dayEnd.CustomFormat = "yyyy/MM/dd 23:59:59";
                 string dayStar = dayStart.Text;
                 string dayend = dayEnd.Text;
+                day1 = dayStar;
+                day2 = dayend;
                 DataTable dt = bUS_Static.getDataBillDetailDate(dayStar, dayend);
                 guna2DataGridView1.DataSource = dt;
                 foreach (DataRow item in dt.Rows)
@@ -260,6 +265,8 @@ namespace RJCodeAdvance.ControlStatistic
                 {
                     DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(date.ToString("yyyy-MM-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
                     guna2DataGridView1.DataSource = dt;
+                    day1 = date.ToString("yyyy-MM-01 00:00:00");
+                    day2 = dayNow.ToString("yyyy-MM-dd 23:59:59");
                     foreach (DataRow item in dt.Rows)
                     {
                         if (item[1].ToString() == "")
@@ -279,6 +286,8 @@ namespace RJCodeAdvance.ControlStatistic
                 else
                 {
                     DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(time1, time2);
+                    day1 = time1;
+                    day2 = time2;
                     guna2DataGridView1.DataSource = dt;
                     foreach (DataRow item in dt.Rows)
                     {
@@ -350,6 +359,8 @@ namespace RJCodeAdvance.ControlStatistic
                 DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
                 DataTable dt = bUS_Static.getDataBillDetailDayOfWeek(date.ToString("yyyy-01-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
                 guna2DataGridView1.DataSource = dt;
+                day1 = date.ToString("yyyy-01-01 00:00:00");
+                day2 = dayNow.ToString("yyyy-MM-dd 23:59:59");
                 foreach (DataRow item in dt.Rows)
                 {
                     if (item[1].ToString() == "")
@@ -2034,26 +2045,32 @@ namespace RJCodeAdvance.ControlStatistic
         Image image = Image.FromFile(Application.StartupPath + "\\Images\\pictureBox1.Image.jpg");
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
+            dt = bUS_Static.getDataBillDetailDayOfWeek(day1, day2);
+            CrystalReport1 crystalReport1 = new CrystalReport1();
+            crystalReport1.SetDataSource(dt);
+            Report report = new Report();
+            report.crystalReportViewer1.ReportSource = crystalReport1;
+            report.ShowDialog();
+            //if (guna2DataGridView1.Rows.Count > 1)
+            //{
+            //    int height = guna2DataGridView1.Height;
+            //    guna2DataGridView1.Width = 810;
+            //    guna2DataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
+            //    guna2DataGridView1.Height = guna2DataGridView1.RowCount * guna2DataGridView1.RowTemplate.Height * 2;
+            //    btm = new Bitmap(guna2DataGridView1.Width, guna2DataGridView1.Height);
+            //    guna2DataGridView1.DrawToBitmap(btm, new Rectangle(0, 0, guna2DataGridView1.Width, guna2DataGridView1.Height));
+            //    guna2DataGridView1.Height = height;
 
-            if (guna2DataGridView1.Rows.Count > 1)
-            {
-                int height = guna2DataGridView1.Height;
-                guna2DataGridView1.Width = 810;
-                guna2DataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
-                guna2DataGridView1.Height = guna2DataGridView1.RowCount * guna2DataGridView1.RowTemplate.Height * 2;
-                btm = new Bitmap(guna2DataGridView1.Width, guna2DataGridView1.Height);
-                guna2DataGridView1.DrawToBitmap(btm, new Rectangle(0, 0, guna2DataGridView1.Width, guna2DataGridView1.Height));
-                guna2DataGridView1.Height = height;
+            //    printPreviewDialog1.ShowDialog();
 
-                printPreviewDialog1.ShowDialog();
-
-                guna2DataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
-                guna2DataGridView1.Width = 1011;
-            }
-            else
-            {
-                MessageBox.Show("Không có dữ liệu cần in");
-            }
+            //    guna2DataGridView1.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
+            //    guna2DataGridView1.Width = 1011;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Không có dữ liệu cần in");
+            //}
         }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
