@@ -73,7 +73,7 @@ namespace RJCodeAdvance.ControlStatistic
         }
         //click vào thống kê hóa đơn
 
-        string day1 = "2015-01-01 00:00:00";
+        string day1 = "2000-01-01 00:00:00";
         string day2 = DateTime.Now.ToString("yyyy-MM-dd 23:59:59");
         private void btThongKe_Click(object sender, EventArgs e)
         {
@@ -355,6 +355,7 @@ namespace RJCodeAdvance.ControlStatistic
             btIn3.Enabled = true;
             if (rdChiTiet.Checked)
             {
+                check = 1;
                 guna2DataGridView3.SendToBack();
                 guna2DataGridView4.SendToBack();
                 string time = dayNow.ToString("yyyy-MM-dd 23:59:59");
@@ -412,6 +413,9 @@ namespace RJCodeAdvance.ControlStatistic
                 guna2DataGridView1.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             }
         }
+        string ngay1 = "2000-01-01 00:00:00";
+        string ngay2 = DateTime.Now.ToString("yyyy-MM-dd 23:59:59");
+        int kt = 0;
         //load danh sách bill nhập nguyên liệu
         void LoadBillInput()
         {
@@ -440,6 +444,8 @@ namespace RJCodeAdvance.ControlStatistic
             string dayend = dayEnd1.Text;
             DataTable dt = bUS_Static.getBillInputBetween(dayStar, dayend);
             guna2DataGridView2.DataSource = dt;
+            ngay1 = dayStar;
+            ngay2 = dayend;
             DataTable dt1 = bUS_Static.SumPriceBillInputBetween(dayStar, dayend);
             foreach (DataRow item in dt1.Rows)
             {
@@ -495,6 +501,8 @@ namespace RJCodeAdvance.ControlStatistic
             {
                 DataTable dt = bUS_Static.getBillInputBetween(date.ToString("yyyy-MM-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
                 guna2DataGridView2.DataSource = dt;
+                ngay1 = date.ToString("yyyy-MM-01 00:00:00");
+                ngay2 = dayNow.ToString("yyyy-MM-dd 23:59:59");
                 DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-MM-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
                 foreach (DataRow item in dt1.Rows)
                 {
@@ -507,6 +515,8 @@ namespace RJCodeAdvance.ControlStatistic
             {
                 DataTable dt = bUS_Static.getBillInputBetween(time1, time2);
                 guna2DataGridView2.DataSource = dt;
+                ngay1 = time1;
+                ngay2 = time2;
                 DataTable dt1 = bUS_Static.SumPriceBillInputBetween(time1, time2);
                 foreach (DataRow item in dt1.Rows)
                 {
@@ -524,6 +534,8 @@ namespace RJCodeAdvance.ControlStatistic
             DateTime date = new DateTime(DateTime.Parse(time).Year, DateTime.Parse(time).Month, DateTime.Parse(time).Day);
             DataTable dt = bUS_Static.getBillInputBetween(date.ToString("yyyy-01-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
             guna2DataGridView2.DataSource = dt;
+            ngay1 = date.ToString("yyyy-01-01 00:00:00");
+            ngay2 = dayNow.ToString("yyyy-MM-dd 23:59:59");
             DataTable dt1 = bUS_Static.SumPriceBillInputBetween(date.ToString("yyyy-01-01 00:00:00"), dayNow.ToString("yyyy-MM-dd 23:59:59"));
             foreach (DataRow item in dt1.Rows)
             {
@@ -2669,23 +2681,30 @@ namespace RJCodeAdvance.ControlStatistic
         Bitmap btm4;
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-            if (guna2DataGridView2.Rows.Count > 1)
-            {
-                int height = guna2DataGridView2.Height;
-                guna2DataGridView2.Width = 810;
-                guna2DataGridView2.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
-                guna2DataGridView2.Height = guna2DataGridView2.RowCount * guna2DataGridView2.RowTemplate.Height * 2;
-                btm4 = new Bitmap(guna2DataGridView2.Width, guna2DataGridView2.Height);
-                guna2DataGridView2.DrawToBitmap(btm4, new Rectangle(0, 0, guna2DataGridView2.Width, guna2DataGridView2.Height));
-                guna2DataGridView2.Height = height;
-                printPreviewDialog4.ShowDialog();
-                guna2DataGridView2.Width = 1011;
-                guna2DataGridView2.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
-            }
-            else
-            {
-                MessageBox.Show("Không có dữ liệu cần in");
-            }
+            DataTable dt = new DataTable();
+            dt = bUS_Static.getBillInputBetween(ngay1,ngay2);
+            CrystalReport11 crystalReport5 = new CrystalReport11();
+            crystalReport5.SetDataSource(dt);
+            Report report = new Report();
+            report.crystalReportViewer1.ReportSource = crystalReport5;
+            report.ShowDialog();
+            //if (guna2DataGridView2.Rows.Count > 1)
+            //{
+            //    int height = guna2DataGridView2.Height;
+            //    guna2DataGridView2.Width = 810;
+            //    guna2DataGridView2.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
+            //    guna2DataGridView2.Height = guna2DataGridView2.RowCount * guna2DataGridView2.RowTemplate.Height * 2;
+            //    btm4 = new Bitmap(guna2DataGridView2.Width, guna2DataGridView2.Height);
+            //    guna2DataGridView2.DrawToBitmap(btm4, new Rectangle(0, 0, guna2DataGridView2.Width, guna2DataGridView2.Height));
+            //    guna2DataGridView2.Height = height;
+            //    printPreviewDialog4.ShowDialog();
+            //    guna2DataGridView2.Width = 1011;
+            //    guna2DataGridView2.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Không có dữ liệu cần in");
+            //}
         }
         private void printDocument4_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
