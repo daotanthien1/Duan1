@@ -89,7 +89,7 @@ namespace RJCodeAdvance
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
         {
-            if(DialogResult.Yes == MessageBox.Show("Bạn Có chắc muốn thoát!", "thông báo", MessageBoxButtons.YesNo))
+            if(DialogResult.Yes == MessageBox.Show("Bạn có chắc muốn thoát!", "Thông báo", MessageBoxButtons.YesNo))
             {
                 Environment.Exit(0);
             }
