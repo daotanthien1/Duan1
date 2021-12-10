@@ -583,6 +583,8 @@ namespace RJCodeAdvance.ControlStatistic
             guna2DataGridView1.SendToBack();
             btEx.SendToBack();
             btIn1.SendToBack();
+
+            check = 0;
             if (perform1 == false)
             {
                 //btTuan.SendToBack();
@@ -653,6 +655,7 @@ namespace RJCodeAdvance.ControlStatistic
         // thống kê nhân viên theo tháng
         private void btThang3_Click(object sender, EventArgs e)
         {
+            check = 1;
             btEx.Enabled = true;
             btEx1.Enabled = true;
             btEx2.Enabled = true;
@@ -684,6 +687,7 @@ namespace RJCodeAdvance.ControlStatistic
         // thống kê khách hàng theo tháng
         private void btThang4_Click(object sender, EventArgs e)
         {
+            check = 1;
             btEx.Enabled = true;
             btEx1.Enabled = true;
             btEx2.Enabled = true;
@@ -715,6 +719,7 @@ namespace RJCodeAdvance.ControlStatistic
         // thống kê nhân viên theo năm
         private void btNam3_Click(object sender, EventArgs e)
         {
+            check = 2;
             ktMonth = false;
             ktYear = true;
             btEx.Enabled = true;
@@ -746,6 +751,7 @@ namespace RJCodeAdvance.ControlStatistic
         // thống kê khách hàng theo năm
         private void btNam4_Click(object sender, EventArgs e)
         {
+            check = 2;
             btEx.Enabled = true;
             btEx1.Enabled = true;
             btEx2.Enabled = true;
@@ -2381,44 +2387,107 @@ namespace RJCodeAdvance.ControlStatistic
         Bitmap btm1;
         private void btIn3_Click(object sender, EventArgs e)
         {
-            if (guna2DataGridView4.Rows.Count > 1)
+
+            if(check == 0)
             {
-                int height = guna2DataGridView4.Height;
-                guna2DataGridView4.Width = 810;
-                guna2DataGridView4.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
-                guna2DataGridView4.Height = guna2DataGridView4.RowCount * guna2DataGridView4.RowTemplate.Height * 2;
-                btm2 = new Bitmap(guna2DataGridView4.Width, guna2DataGridView4.Height);
-                guna2DataGridView4.DrawToBitmap(btm2, new Rectangle(0, 0, guna2DataGridView4.Width, guna2DataGridView4.Height));
-                guna2DataGridView4.Height = height;
-                printPreviewDialog3.ShowDialog();
-                guna2DataGridView4.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
-                guna2DataGridView4.Width = 1011;
+                DataTable dt = new DataTable();
+                dt = bUS_Static.StaticCustomer();
+                CrystalReport8 crystalReport5 = new CrystalReport8();
+                crystalReport5.SetDataSource(dt);
+                Report report = new Report();
+                report.crystalReportViewer1.ReportSource = crystalReport5;
+                report.ShowDialog();
             }
-            else
+            if(check == 1)
             {
-                MessageBox.Show("Không có dữ liệu cần in");
+                DataTable dt = new DataTable();
+                dt = bUS_Static.StaticCustomerMonth();
+                CrystalReport9 crystalReport5 = new CrystalReport9();
+                crystalReport5.SetDataSource(dt);
+                Report report = new Report();
+                report.crystalReportViewer1.ReportSource = crystalReport5;
+                report.ShowDialog();
             }
+            if (check == 2)
+            {
+                DataTable dt = new DataTable();
+                dt = bUS_Static.StaticCustomerYears();
+                CrystalReport10 crystalReport5 = new CrystalReport10();
+                crystalReport5.SetDataSource(dt);
+                Report report = new Report();
+                report.crystalReportViewer1.ReportSource = crystalReport5;
+                report.ShowDialog();
+            }
+            //if (guna2DataGridView4.Rows.Count > 1)
+            //{
+            //    int height = guna2DataGridView4.Height;
+            //    guna2DataGridView4.Width = 810;
+            //    guna2DataGridView4.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
+            //    guna2DataGridView4.Height = guna2DataGridView4.RowCount * guna2DataGridView4.RowTemplate.Height * 2;
+            //    btm2 = new Bitmap(guna2DataGridView4.Width, guna2DataGridView4.Height);
+            //    guna2DataGridView4.DrawToBitmap(btm2, new Rectangle(0, 0, guna2DataGridView4.Width, guna2DataGridView4.Height));
+            //    guna2DataGridView4.Height = height;
+            //    printPreviewDialog3.ShowDialog();
+            //    guna2DataGridView4.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
+            //    guna2DataGridView4.Width = 1011;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Không có dữ liệu cần in");
+            //}
         }
         Bitmap btm2;
         private void btIn2_Click(object sender, EventArgs e)
         {
-            if (guna2DataGridView3.Rows.Count > 1)
+
+            if(check == 0)
             {
-                int height = guna2DataGridView3.Height;
-                guna2DataGridView3.Width = 810;
-                guna2DataGridView2.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
-                guna2DataGridView3.Height = guna2DataGridView3.RowCount * guna2DataGridView3.RowTemplate.Height * 2;
-                btm1 = new Bitmap(guna2DataGridView3.Width, guna2DataGridView3.Height);
-                guna2DataGridView3.DrawToBitmap(btm1, new Rectangle(0, 0, guna2DataGridView3.Width, guna2DataGridView3.Height));
-                guna2DataGridView3.Height = height;
-                printPreviewDialog2.ShowDialog();
-                guna2DataGridView3.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
-                guna2DataGridView3.Width = 1011;
+                DataTable dt = new DataTable();
+                dt = bUS_Static.StaticEmployee();
+                CrystalReport5 crystalReport5 = new CrystalReport5();
+                crystalReport5.SetDataSource(dt);
+                Report report = new Report();
+                report.crystalReportViewer1.ReportSource = crystalReport5;
+                report.ShowDialog();
             }
-            else
+
+            if (check == 1)
             {
-                MessageBox.Show("Không có dữ liệu cần in");
+                DataTable dt = new DataTable();
+                dt = bUS_Static.StaticEmployeeWeek();
+                CrystalReport6 crystalReport5 = new CrystalReport6();
+                crystalReport5.SetDataSource(dt);
+                Report report = new Report();
+                report.crystalReportViewer1.ReportSource = crystalReport5;
+                report.ShowDialog();
             }
+            if (check == 2)
+            {
+                DataTable dt = new DataTable();
+                dt = bUS_Static.StaticEmployeeYears();
+                CrystalReport7 crystalReport5 = new CrystalReport7();
+                crystalReport5.SetDataSource(dt);
+                Report report = new Report();
+                report.crystalReportViewer1.ReportSource = crystalReport5;
+                report.ShowDialog();
+            }
+            //if (guna2DataGridView3.Rows.Count > 1)
+            //{
+            //    int height = guna2DataGridView3.Height;
+            //    guna2DataGridView3.Width = 810;
+            //    guna2DataGridView2.DefaultCellStyle.Font = new Font("Segoe UI", 7, FontStyle.Regular);
+            //    guna2DataGridView3.Height = guna2DataGridView3.RowCount * guna2DataGridView3.RowTemplate.Height * 2;
+            //    btm1 = new Bitmap(guna2DataGridView3.Width, guna2DataGridView3.Height);
+            //    guna2DataGridView3.DrawToBitmap(btm1, new Rectangle(0, 0, guna2DataGridView3.Width, guna2DataGridView3.Height));
+            //    guna2DataGridView3.Height = height;
+            //    printPreviewDialog2.ShowDialog();
+            //    guna2DataGridView3.DefaultCellStyle.Font = new Font("Segoe UI", 11, FontStyle.Regular);
+            //    guna2DataGridView3.Width = 1011;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Không có dữ liệu cần in");
+            //}
         }
 
         private void printDocument2_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
