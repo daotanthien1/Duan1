@@ -100,11 +100,8 @@ namespace RJCodeAdvance
         //xóa
         private void btXoa2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("\tBạn chắc chắn muốn xóa ca " + txtTenCa.Text + " \n\tThời gian bắt đầu: " + txtThoiGianBatDau.Text + "\n\tThời gian kết thúc: " + txtThoiGianKetThuc.Text, "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
                 if (shift.DeleteShifts(id_shift))
                 {
-                    MessageBox.Show("Delete thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     restValue();
                     loadDate();
                 }
@@ -113,11 +110,7 @@ namespace RJCodeAdvance
                     MessageBox.Show("Delete không thành công", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     restValue();
                 }
-            }
-            else
-            {
-            }
-            insert();
+                insert();
         }
         int id_shift;
         // click datagridview
@@ -151,7 +144,6 @@ namespace RJCodeAdvance
                     DTO_CaLamViec shifts = new DTO_CaLamViec(id_shift, txtThoiGianBatDau.Text, txtThoiGianKetThuc.Text);
                     if (shift.UpdateShifts(shifts))
                     {
-                        MessageBox.Show("Update thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         restValue();
                         loadDate();
                     }
@@ -188,6 +180,7 @@ namespace RJCodeAdvance
         private void btDanhSacch_Click(object sender, EventArgs e)
         {
             loadDate();
+            txtNhaptenCa.Text = "";
         }
     }
 }

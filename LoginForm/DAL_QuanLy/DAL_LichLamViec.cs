@@ -156,5 +156,24 @@ namespace DAL_QuanLy
                 _conn.Close();
             }
         }
+        public DataTable searchSchedules(string name)
+        {
+            try
+            {
+                _conn.Open();
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = _conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "searchScheduleByName";
+                cmd.Parameters.AddWithValue("namenv", name);
+                DataTable dtSchedule = new DataTable();
+                dtSchedule.Load(cmd.ExecuteReader());
+                return dtSchedule;
+            }
+            finally
+            {
+                _conn.Close();
+            }
+        }
     }
 }

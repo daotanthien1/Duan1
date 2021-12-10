@@ -40,5 +40,9 @@ namespace BUS_QuanLy
         {
             return schedules.searchSchedules(id);
         }
+        public DataTable searchSchedules(string name)
+        {
+            return schedules.searchSchedules(name);
+        }
     }
 }

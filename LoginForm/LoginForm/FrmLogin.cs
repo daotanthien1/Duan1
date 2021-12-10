@@ -153,7 +153,6 @@ namespace RJCodeAdvance
                 txtEmail.Text = "";
                 txtPassword.Text = "";
                 toggleNhoTaiKhoan.Checked = false;
-
             }
             
         }
