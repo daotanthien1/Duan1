@@ -20,7 +20,7 @@ namespace RJCodeAdvance.ControlStatistic
         {
             InitializeComponent();
         }
-
+        int check = 0;
         private void UC_Statistic_Load(object sender, EventArgs e)
         {
             loadPill();
@@ -83,7 +83,7 @@ namespace RJCodeAdvance.ControlStatistic
             btIn1.Enabled = true;
             btIn2.Enabled = true;
             btIn3.Enabled = true;
-
+            check = 0;
             if (rdChiTiet.Checked)
             {
                 guna2DataGridView3.SendToBack();
@@ -151,6 +151,8 @@ namespace RJCodeAdvance.ControlStatistic
                 string dayStar = dayStart.Text;
                 string dayend = dayEnd.Text;
                 DataTable dt = bUS_Static.StaticOverAllDate(dayStar, dayend);
+                day1 = dayStar;
+                day2 = dayend;
                 guna2DataGridView1.DataSource = dt;
                 guna2DataGridView1.Columns[3].Visible = false;
                 guna2DataGridView1.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
@@ -308,6 +310,7 @@ namespace RJCodeAdvance.ControlStatistic
             }
             if (rbTongThe.Checked)
             {
+                check = 1;
                 rdChart.Visible = true;
                 chart1.Series["Total"].Points.Clear();
                 guna2DataGridView3.SendToBack();
@@ -379,6 +382,7 @@ namespace RJCodeAdvance.ControlStatistic
             }
             if (rbTongThe.Checked)
             {
+                check = 2;
                 rdChart.Visible = true;
                 guna2DataGridView3.SendToBack();
                 guna2DataGridView4.SendToBack();
@@ -2045,13 +2049,49 @@ namespace RJCodeAdvance.ControlStatistic
         Image image = Image.FromFile(Application.StartupPath + "\\Images\\pictureBox1.Image.jpg");
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt = bUS_Static.getDataBillDetailDayOfWeek(day1, day2);
-            CrystalReport1 crystalReport1 = new CrystalReport1();
-            crystalReport1.SetDataSource(dt);
-            Report report = new Report();
-            report.crystalReportViewer1.ReportSource = crystalReport1;
-            report.ShowDialog();
+            if (rdChiTiet.Checked)
+            {
+                DataTable dt = new DataTable();
+                dt = bUS_Static.getDataBillDetailDayOfWeek(day1, day2);
+                CrystalReport1 crystalReport1 = new CrystalReport1();
+                crystalReport1.SetDataSource(dt);
+                Report report = new Report();
+                report.crystalReportViewer1.ReportSource = crystalReport1;
+                report.ShowDialog();
+            }
+            if (rbTongThe.Checked)
+            {
+                if(check == 0)
+                {
+                    DataTable dt = new DataTable();
+                    dt = bUS_Static.StaticOverAllDate(day1, day2);
+                    CrystalReport2 crystalReport1 = new CrystalReport2();
+                    crystalReport1.SetDataSource(dt);
+                    Report report = new Report();
+                    report.crystalReportViewer1.ReportSource = crystalReport1;
+                    report.ShowDialog();
+                }
+                if(check == 1)
+                {
+                    DataTable dt = new DataTable();
+                    dt = bUS_Static.StaticOverAllBillsMonth();
+                    CrystalReport3 crystalReport1 = new CrystalReport3();
+                    crystalReport1.SetDataSource(dt);
+                    Report report = new Report();
+                    report.crystalReportViewer1.ReportSource = crystalReport1;
+                    report.ShowDialog();
+                }
+                if(check == 2)
+                {
+                    DataTable dt = new DataTable();
+                    dt = bUS_Static.StaticOverAllBillsYears();
+                    CrystalReport4 crystalReport1 = new CrystalReport4();
+                    crystalReport1.SetDataSource(dt);
+                    Report report = new Report();
+                    report.crystalReportViewer1.ReportSource = crystalReport1;
+                    report.ShowDialog();
+                }
+            }
             //if (guna2DataGridView1.Rows.Count > 1)
             //{
             //    int height = guna2DataGridView1.Height;
